@@ -1,0 +1,172 @@
+Case: D2N117
+
+Problem List and Visit State Tracking
+
+Problem List
+- right elbow pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=doctor,patient | evidence=T2,T43,T46,T8
+  Summary: The patient reports moderate lateral epicondylar tenderness in the right elbow.
+  ClusterId: CL1
+  TemporalProfile: current
+  Updates:
+  - CAP5: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T2 :: The patient reports sharp, stabbing, and shooting pain in the right elbow.
+  - CAP3: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T8 :: The patient describes the pain as 8/10 when using the elbow and 3 when resting.
+  - CAP2: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T43,T43 :: The patient reports moderate lateral epicondylar tenderness in the right elbow.
+  - CAP7: content_source=doctor modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T43 :: The physician notes moderate lateral epicondylar tenderness in the patient's right elbow.
+  - CAP13: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T46 :: The patient reports pain in the right elbow.
+- tennis | verification_status=unconfirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T3
+  Summary: The patient has been playing tennis recently.
+  ClusterId: CL2
+  TemporalProfile: recent
+  Updates:
+  - CAP31: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=recent turns=T3 :: The patient has been playing tennis recently.
+- country club | verification_status=unconfirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T3
+  Summary: The patient joined a country club recently.
+  ClusterId: CL3
+  TemporalProfile: recent
+  Updates:
+  - CAP32: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=recent turns=T3 :: The patient joined a country club recently.
+- hand pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T11
+  Summary: The patient reports shooting, stabbing, and very sharp pain in the left hand.
+  ClusterId: CL4
+  TemporalProfile: current
+  Updates:
+  - CAP1: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T11,T11,T11 :: The patient reports shooting, stabbing, and very sharp pain in the left hand.
+- pain relief | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T15
+  Summary: The patient reports that Tylenol and ibuprofen do not provide lasting relief.
+  ClusterId: CL5
+  TemporalProfile: current
+  Updates:
+  - CAP6: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T15 :: The patient reports that Tylenol and ibuprofen do not provide lasting relief.
+- ice application | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T17
+  Summary: The patient reports that ice application did not provide significant relief.
+  ClusterId: CL6
+  TemporalProfile: current
+  Updates:
+  - CAP8: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T17 :: The patient reports that ice application did not provide significant relief.
+- diabetes | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T18
+  Summary: The patient has diabetes.
+  ClusterId: CL7
+  TemporalProfile: current
+  Updates:
+  - CAP16: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T18 :: The patient has diabetes.
+- tennis-related hand pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T19
+  Summary: The patient's hand pain is related to tennis activity.
+  ClusterId: CL8
+  TemporalProfile: current
+  Updates:
+  - CAP10: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T19 :: The patient's hand pain is related to tennis activity.
+- left hand pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T21
+  Summary: The patient reports pain in the left hand.
+  ClusterId: CL9
+  TemporalProfile: current
+  Updates:
+  - CAP12: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T21 :: The patient reports pain in the left hand.
+- blood sugar | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T38
+  Summary: The patient's blood sugars are 150-160.
+  ClusterId: CL11
+  TemporalProfile: current
+  Updates:
+  - CAP14: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T38 :: The patient's blood sugars are 150-160.
+- penicillin | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T40
+  Summary: The patient reports an allergy to penicillin.
+  ClusterId: CL14
+  TemporalProfile: current
+  Updates:
+  - CAP33: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T40 :: The patient reports an allergy to penicillin.
+- fever | verification_status=unconfirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T48
+  Summary: The patient denies fever.
+  ClusterId: CL15
+  TemporalProfile: recent
+  Updates:
+  - CAP17: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=recent turns=T48 :: The patient denies fever.
+- type 2 diabetes | verification_status=confirmed | clinical_status=active | modalities=assessment | speakers=doctor | evidence=T49
+  Summary: The patient has type 2 diabetes.
+  ClusterId: CL16
+  TemporalProfile: current
+  Updates:
+  - CAP15: content_source=doctor modality=assessment verification_status=confirmed clinical_status=active temporality=current turns=T49 :: The patient has type 2 diabetes.
+- lateral epicondylitis | verification_status=confirmed | clinical_status=active | modalities=assessment | speakers=doctor | evidence=T50
+  Summary: The doctor assesses the patient has acute lateral epicondylitis of the right elbow.
+  ClusterId: CL17
+  TemporalProfile: acute, current
+  Updates:
+  - CAP4: content_source=doctor modality=assessment verification_status=confirmed clinical_status=active temporality=acute turns=T50 :: The doctor assesses the patient has acute lateral epicondylitis of the right elbow.
+  - CAP9: content_source=doctor modality=assessment verification_status=confirmed clinical_status=active temporality=current turns=T50 :: The patient has acute lateral epicondylitis of the right elbow.
+- tennis elbow | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T51
+  Summary: The patient reports feeling like they have tennis elbow.
+  ClusterId: CL24
+  TemporalProfile: current
+  Updates:
+  - CAP11: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T51 :: The patient reports feeling like they have tennis elbow.
+
+Medication Tracking
+- [MedicationState] metformin | verification_status=confirmed | clinical_status=active | modalities=assessment,interview | speakers=doctor | evidence=T36
+  Summary: The patient is taking metformin 500 mg twice a day.
+  ClusterId: CL10
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient is currently taking metformin 500 milligrams once a day. (T36)
+  - The patient is currently taking metformin 500 milligrams twice a day. (T36)
+  - The patient is taking metformin 500 mg twice a day. (T36)
+  Updates:
+  - CAP21: content_source=doctor modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T36 :: The patient is currently taking metformin 500 milligrams once a day.
+  - CAP22: content_source=doctor modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T36 :: The patient is currently taking metformin 500 milligrams twice a day.
+  - CAP23: content_source=doctor modality=assessment verification_status=confirmed clinical_status=active temporality=current turns=T36 :: The patient is taking metformin 500 mg twice a day.
+- [MedicationState] flovent | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=doctor | evidence=T38
+  Summary: The patient is currently taking flovent twice a day.
+  ClusterId: CL12
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient is currently taking flovent twice a day. (T38)
+  Updates:
+  - CAP26: content_source=doctor modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T38 :: The patient is currently taking flovent twice a day.
+- [MedicationState] albuterol | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=doctor | evidence=T38
+  Summary: The patient is currently taking albuterol as needed.
+  ClusterId: CL13
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient is currently taking albuterol as needed. (T38)
+  Updates:
+  - CAP27: content_source=doctor modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T38 :: The patient is currently taking albuterol as needed.
+- [MedicationChange] ultram | verification_status=confirmed | clinical_status=planned | modalities=plan,unknown | speakers=doctor | evidence=T50
+  Summary: The doctor prescribes ultram at 50 mg once per day.
+  ClusterId: CL21
+  TemporalProfile: daily, future
+  PlannedChanges:
+  - The doctor prescribes ultram at 50 mg once per day. (T50)
+  - The doctor prescribed ultram. (T50)
+  Updates:
+  - CAP24: content_source=doctor modality=plan verification_status=unconfirmed clinical_status=planned temporality=daily turns=T50 :: The doctor prescribes ultram at 50 mg once per day.
+  - CAP30: content_source=doctor modality=unknown verification_status=confirmed clinical_status=planned temporality=future turns=T50 :: The doctor prescribed ultram.
+- [MedicationChange] metformin | verification_status=confirmed | clinical_status=planned | modalities=plan,unknown | speakers=doctor | evidence=T50
+  Summary: The doctor increases metformin to 1000 mg twice per day.
+  ClusterId: CL22
+  TemporalProfile: future, twice daily
+  PlannedChanges:
+  - The doctor increases metformin to 1000 mg twice per day. (T50)
+  - The doctor increased metformin dosage. (T50)
+  Updates:
+  - CAP25: content_source=doctor modality=plan verification_status=unconfirmed clinical_status=planned temporality=twice daily turns=T50 :: The doctor increases metformin to 1000 mg twice per day.
+  - CAP29: content_source=doctor modality=unknown verification_status=confirmed clinical_status=planned temporality=future turns=T50 :: The doctor increased metformin dosage.
+- [MedicationChange] albuterol | verification_status=confirmed | clinical_status=planned | modalities=unknown | speakers=doctor | evidence=T50
+  Summary: The doctor prescribed a refill of albuterol.
+  ClusterId: CL23
+  TemporalProfile: future
+  PlannedChanges:
+  - The doctor prescribed a refill of albuterol. (T50)
+  Updates:
+  - CAP28: content_source=doctor modality=unknown verification_status=confirmed clinical_status=planned temporality=future turns=T50 :: The doctor prescribed a refill of albuterol.
+
+Other Structured States
+- [Plan] hemoglobin a1c test | verification_status=confirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T50
+  Summary: The doctor ordered a hemoglobin a1c test.
+  ClusterId: CL18
+  TemporalProfile: future
+- [Plan] cbc blood test | verification_status=confirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T50
+  Summary: The doctor ordered a cbc blood test.
+  ClusterId: CL19
+  TemporalProfile: future
+- [Plan] chem-12 blood test | verification_status=confirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T50
+  Summary: The doctor ordered a chem-12 blood test.
+  ClusterId: CL20
+  TemporalProfile: future

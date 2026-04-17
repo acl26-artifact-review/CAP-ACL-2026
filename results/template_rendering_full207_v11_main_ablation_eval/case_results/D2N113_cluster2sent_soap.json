@@ -1,0 +1,1380 @@
+{
+  "case_id": "D2N113",
+  "method": "cluster2sent",
+  "template": "soap",
+  "summary_text": "S:\nThe patient reports anxiety regarding recent blood work results, including a positive HCV antibody test and elevated AST. He states he has been feeling fine but is experiencing fatigue. He denies a history of intravenous drug use or known hepatitis C positive partners. He reports previously being able to function well but has recently been feeling tired at the end of the day.\n\nO:\nPhysical exam reveals clear lung sounds with no wheezes or rales. Abdominal exam shows soft abdomen with normal bowel sounds and no hepatosplenomegaly. Heart sounds are regular rate and rhythm with a two out of six systolic murmur. Gait is normal and there is no edema.\n\nA:\nThe patient has been diagnosed with hepatitis C. He also reports symptoms consistent with depression.\n\nP:\nOrder HCV RNA testing and HCV genotype testing. Order a liver ultrasound to assess for liver fibrosis. Counsel the patient on the importance of adherence to treatment and discuss potential side effects. Schedule a follow-up appointment in 4 weeks to monitor treatment response and liver function.",
+  "reference_summary": "CHIEF COMPLAINT\n\nHepatitis C.\n\nSOCIAL HISTORY\n\nPatient reports personal history of intravenous drug use over 15 years ago. She is currently smoking 1-2 cigarettes per day, previously 1 to 1.5 packs per day. She also has a history of heavy alcohol use, but now drinks approximately 1 beer per day, more on the weekends.\n\nFAMILY HISTORY\n\nPatient reports family history significant for hypertension, diabetes, and depression.\n\nREVIEW OF SYSTEMS\n\nConstitutional: Reports fatigue.\n\nAll other systems were reviewed and are negative.\n\nVITALS\n\nVitals look good today.\n\nPHYSICAL EXAM\n\nConstitutional\n- General Appearance: in no apparent distress.\n\nRespiratory\n- Auscultation of Lungs: No wheezes, rales, or rhonchi.\n\nCardiovascular\n- Auscultation of Heart: Regular rate. 2/6 systolic ejection murmur, unchanged.\n\nGastrointestinal\n- Examination of Abdomen: No masses or tenderness. No hepatosplenomegaly.\n- Auscultation: Bowel sounds normal.\n\nMusculoskeletal\n- Examination: No edema.\n\nIntegumentary\n- Examination: No signs of jaundice.\n\nRESULTS\n\nHCV antibody: Positive\nAST: 39\nALT: Within normal limits\nAlbumin: Within normal limits\nBilirubin, total: Within normal limits\n\nASSESSMENT AND PLAN\n\n1. Hepatitis C.\n- Medical Reasoning: Her recent blood work revealed a positive HCV antibody. She does have a history of intravenous drug use, but she has not used drugs in over 15 years.\n- Patient Education and Counseling: We discussed the nature of hepatitis C in detail. I advised the patient to have her spouse and children tested for hepatitis C as well.\n- Medical Treatment: I'm going to order additional labs including a hepatitis C RNA and HCV genotype to confirm the diagnosis, as well as a Fibroscan to assess the severity of the condition.\n\nPatient Agreements: The patient understands and agrees with the recommended medical treatment plan.\n\nINSTRUCTIONS\n\nThe patient will follow up in 3 weeks.",
+  "source_cap": {
+    "atomic_propositions": [
+      {
+        "prop_id": "CAP1",
+        "cap_type": "Problem",
+        "canonical_concept": "hepatitis c",
+        "category": "Problem",
+        "speaker": "patient",
+        "status": "uncertain",
+        "visit_state": "historical",
+        "temporality": "past",
+        "proposition_text": "The patient was surprised to learn they have hepatitis c."
+      },
+      {
+        "prop_id": "CAP2",
+        "cap_type": "Problem",
+        "canonical_concept": "positive HCV antibody test",
+        "category": "Problem",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "past",
+        "proposition_text": "The patient's HCV antibody test is positive."
+      },
+      {
+        "prop_id": "CAP3",
+        "cap_type": "Problem",
+        "canonical_concept": "decreased smoking",
+        "category": "Problem",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "recent",
+        "proposition_text": "The patient has decreased their smoking."
+      },
+      {
+        "prop_id": "CAP4",
+        "cap_type": "Symptom",
+        "canonical_concept": "anxiety",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports feeling anxious."
+      },
+      {
+        "prop_id": "CAP5",
+        "cap_type": "Symptom",
+        "canonical_concept": "fatigue",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports feeling tired."
+      },
+      {
+        "prop_id": "CAP6",
+        "cap_type": "Problem",
+        "canonical_concept": "insomnia",
+        "category": "Problem",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient reports difficulty sleeping."
+      },
+      {
+        "prop_id": "CAP7",
+        "cap_type": "Problem",
+        "canonical_concept": "hepatitis C",
+        "category": "Problem",
+        "speaker": "doctor",
+        "status": "uncertain",
+        "visit_state": "historical",
+        "temporality": "past",
+        "proposition_text": "The doctor assesses hepatitis C."
+      },
+      {
+        "prop_id": "CAP8",
+        "cap_type": "Problem",
+        "canonical_concept": "depression",
+        "category": "Problem",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient reports depression."
+      },
+      {
+        "prop_id": "CAP9",
+        "cap_type": "Problem",
+        "canonical_concept": "hypertension",
+        "category": "Problem",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient reports hypertension."
+      },
+      {
+        "prop_id": "CAP10",
+        "cap_type": "Problem",
+        "canonical_concept": "diabetes",
+        "category": "Problem",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient reports diabetes."
+      },
+      {
+        "prop_id": "CAP11",
+        "cap_type": "Symptom",
+        "canonical_concept": "hypertension",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports hypertension."
+      },
+      {
+        "prop_id": "CAP12",
+        "cap_type": "Symptom",
+        "canonical_concept": "depression",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports depression."
+      },
+      {
+        "prop_id": "CAP13",
+        "cap_type": "ExamFinding",
+        "canonical_concept": "murmur",
+        "category": "ExamFinding",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "stable",
+        "temporality": "current",
+        "proposition_text": "The patient has a two out of six systolic murmur."
+      },
+      {
+        "prop_id": "CAP14",
+        "cap_type": "TestResult",
+        "canonical_concept": "elevated AST",
+        "category": "TestResult",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "quantitative"
+        ],
+        "proposition_text": "The patient's AST is elevated at 39."
+      },
+      {
+        "prop_id": "CAP15",
+        "cap_type": "Order",
+        "canonical_concept": "MRI",
+        "category": "Order",
+        "speaker": "doctor",
+        "status": "uncertain",
+        "visit_state": "planned",
+        "temporality": "future",
+        "proposition_text": "A cervical MRI is planned."
+      },
+      {
+        "prop_id": "CAP16",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "Hepc RNA",
+        "category": "MedicationStatement",
+        "speaker": "doctor",
+        "predicate": "orders",
+        "status": "uncertain",
+        "visit_state": "planned",
+        "temporality": "future",
+        "claim_type_tags": [
+          "plan"
+        ],
+        "proposition_text": "The doctor orders Hepc RNA testing."
+      },
+      {
+        "prop_id": "CAP17",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "HCV genotype",
+        "category": "MedicationStatement",
+        "speaker": "doctor",
+        "predicate": "orders",
+        "status": "uncertain",
+        "visit_state": "planned",
+        "temporality": "future",
+        "claim_type_tags": [
+          "plan"
+        ],
+        "proposition_text": "The doctor orders HCV genotype testing."
+      },
+      {
+        "prop_id": "CAP18",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "Fibrosis ultrasound",
+        "category": "MedicationStatement",
+        "speaker": "doctor",
+        "predicate": "orders",
+        "status": "uncertain",
+        "visit_state": "planned",
+        "temporality": "future",
+        "claim_type_tags": [
+          "plan"
+        ],
+        "proposition_text": "The doctor orders a fibrosis ultrasound."
+      },
+      {
+        "prop_id": "CAP19",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "current medication",
+        "category": "MedicationStatement",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient is feeling good."
+      },
+      {
+        "prop_id": "CAP20",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "beer",
+        "category": "MedicationStatement",
+        "speaker": "patient",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient drinks beer."
+      },
+      {
+        "prop_id": "CAP21",
+        "cap_type": "ProblemHistory",
+        "canonical_concept": "iv drug use",
+        "category": "ProblemHistory",
+        "speaker": "patient",
+        "status": "uncertain",
+        "visit_state": "historical",
+        "temporality": "years ago",
+        "proposition_text": "The patient used to party and use iv drugs."
+      },
+      {
+        "prop_id": "CAP22",
+        "cap_type": "ProblemHistory",
+        "canonical_concept": "smoking",
+        "category": "ProblemHistory",
+        "speaker": "patient",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient smokes one to two cigarettes a day."
+      },
+      {
+        "prop_id": "CAP23",
+        "cap_type": "ProblemHistory",
+        "canonical_concept": "alcohol use",
+        "category": "ProblemHistory",
+        "speaker": "patient",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient drinks about a beer a day."
+      }
+    ],
+    "filtered_nonverifiable_units": []
+  },
+  "event_plan": null,
+  "summary_cap": {
+    "atomic_propositions": [],
+    "filtered_nonverifiable_units": [],
+    "runtime_seconds": 0.532
+  },
+  "cap_alignment": {
+    "cap_precision": 0.0,
+    "cap_recall": 0.0,
+    "cap_f1": 0.0,
+    "matched_count": 0,
+    "summary_prop_count": 0,
+    "source_prop_count": 23,
+    "matched_pairs": [],
+    "unsupported_summary_props": [],
+    "missing_source_props": [
+      {
+        "prop_id": "CAP1",
+        "cap_type": "Problem",
+        "canonical_concept": "hepatitis c",
+        "category": "Problem",
+        "speaker": "patient",
+        "status": "uncertain",
+        "visit_state": "historical",
+        "temporality": "past",
+        "proposition_text": "The patient was surprised to learn they have hepatitis c."
+      },
+      {
+        "prop_id": "CAP2",
+        "cap_type": "Problem",
+        "canonical_concept": "positive HCV antibody test",
+        "category": "Problem",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "past",
+        "proposition_text": "The patient's HCV antibody test is positive."
+      },
+      {
+        "prop_id": "CAP3",
+        "cap_type": "Problem",
+        "canonical_concept": "decreased smoking",
+        "category": "Problem",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "recent",
+        "proposition_text": "The patient has decreased their smoking."
+      },
+      {
+        "prop_id": "CAP4",
+        "cap_type": "Symptom",
+        "canonical_concept": "anxiety",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports feeling anxious."
+      },
+      {
+        "prop_id": "CAP5",
+        "cap_type": "Symptom",
+        "canonical_concept": "fatigue",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports feeling tired."
+      },
+      {
+        "prop_id": "CAP6",
+        "cap_type": "Problem",
+        "canonical_concept": "insomnia",
+        "category": "Problem",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient reports difficulty sleeping."
+      },
+      {
+        "prop_id": "CAP7",
+        "cap_type": "Problem",
+        "canonical_concept": "hepatitis C",
+        "category": "Problem",
+        "speaker": "doctor",
+        "status": "uncertain",
+        "visit_state": "historical",
+        "temporality": "past",
+        "proposition_text": "The doctor assesses hepatitis C."
+      },
+      {
+        "prop_id": "CAP8",
+        "cap_type": "Problem",
+        "canonical_concept": "depression",
+        "category": "Problem",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient reports depression."
+      },
+      {
+        "prop_id": "CAP9",
+        "cap_type": "Problem",
+        "canonical_concept": "hypertension",
+        "category": "Problem",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient reports hypertension."
+      },
+      {
+        "prop_id": "CAP10",
+        "cap_type": "Problem",
+        "canonical_concept": "diabetes",
+        "category": "Problem",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient reports diabetes."
+      },
+      {
+        "prop_id": "CAP11",
+        "cap_type": "Symptom",
+        "canonical_concept": "hypertension",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports hypertension."
+      },
+      {
+        "prop_id": "CAP12",
+        "cap_type": "Symptom",
+        "canonical_concept": "depression",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports depression."
+      },
+      {
+        "prop_id": "CAP13",
+        "cap_type": "ExamFinding",
+        "canonical_concept": "murmur",
+        "category": "ExamFinding",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "stable",
+        "temporality": "current",
+        "proposition_text": "The patient has a two out of six systolic murmur."
+      },
+      {
+        "prop_id": "CAP14",
+        "cap_type": "TestResult",
+        "canonical_concept": "elevated AST",
+        "category": "TestResult",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "quantitative"
+        ],
+        "proposition_text": "The patient's AST is elevated at 39."
+      },
+      {
+        "prop_id": "CAP15",
+        "cap_type": "Order",
+        "canonical_concept": "MRI",
+        "category": "Order",
+        "speaker": "doctor",
+        "status": "uncertain",
+        "visit_state": "planned",
+        "temporality": "future",
+        "proposition_text": "A cervical MRI is planned."
+      },
+      {
+        "prop_id": "CAP16",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "Hepc RNA",
+        "category": "MedicationStatement",
+        "speaker": "doctor",
+        "predicate": "orders",
+        "status": "uncertain",
+        "visit_state": "planned",
+        "temporality": "future",
+        "claim_type_tags": [
+          "plan"
+        ],
+        "proposition_text": "The doctor orders Hepc RNA testing."
+      },
+      {
+        "prop_id": "CAP17",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "HCV genotype",
+        "category": "MedicationStatement",
+        "speaker": "doctor",
+        "predicate": "orders",
+        "status": "uncertain",
+        "visit_state": "planned",
+        "temporality": "future",
+        "claim_type_tags": [
+          "plan"
+        ],
+        "proposition_text": "The doctor orders HCV genotype testing."
+      },
+      {
+        "prop_id": "CAP18",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "Fibrosis ultrasound",
+        "category": "MedicationStatement",
+        "speaker": "doctor",
+        "predicate": "orders",
+        "status": "uncertain",
+        "visit_state": "planned",
+        "temporality": "future",
+        "claim_type_tags": [
+          "plan"
+        ],
+        "proposition_text": "The doctor orders a fibrosis ultrasound."
+      },
+      {
+        "prop_id": "CAP19",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "current medication",
+        "category": "MedicationStatement",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient is feeling good."
+      },
+      {
+        "prop_id": "CAP20",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "beer",
+        "category": "MedicationStatement",
+        "speaker": "patient",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient drinks beer."
+      },
+      {
+        "prop_id": "CAP21",
+        "cap_type": "ProblemHistory",
+        "canonical_concept": "iv drug use",
+        "category": "ProblemHistory",
+        "speaker": "patient",
+        "status": "uncertain",
+        "visit_state": "historical",
+        "temporality": "years ago",
+        "proposition_text": "The patient used to party and use iv drugs."
+      },
+      {
+        "prop_id": "CAP22",
+        "cap_type": "ProblemHistory",
+        "canonical_concept": "smoking",
+        "category": "ProblemHistory",
+        "speaker": "patient",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient smokes one to two cigarettes a day."
+      },
+      {
+        "prop_id": "CAP23",
+        "cap_type": "ProblemHistory",
+        "canonical_concept": "alcohol use",
+        "category": "ProblemHistory",
+        "speaker": "patient",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient drinks about a beer a day."
+      }
+    ]
+  },
+  "reference_gpt_f1_items": {
+    "active_problems_symptoms": [],
+    "negated_findings": [],
+    "uncertain_findings": [],
+    "medication_treatment": [],
+    "plan_followup": [],
+    "_chunk_count": [
+      "4"
+    ],
+    "_parse_failures": [
+      "{\"chunk_index\": 1, \"stage\": \"call_llm\", \"error\": \"LLM call failed after retries: Error code: 404\"}",
+      "{\"chunk_index\": 2, \"stage\": \"call_llm\", \"error\": \"LLM call failed after retries: Error code: 404\"}",
+      "{\"chunk_index\": 3, \"stage\": \"call_llm\", \"error\": \"LLM call failed after retries: Error code: 404\"}",
+      "{\"chunk_index\": 4, \"stage\": \"call_llm\", \"error\": \"LLM call failed after retries: Error code: 404\"}"
+    ]
+  },
+  "summary_gpt_f1_items": {
+    "active_problems_symptoms": [],
+    "negated_findings": [],
+    "uncertain_findings": [],
+    "medication_treatment": [],
+    "plan_followup": [],
+    "_chunk_count": [
+      "1"
+    ],
+    "_parse_failures": [
+      "{\"chunk_index\": 1, \"stage\": \"call_llm\", \"error\": \"LLM call failed after retries: Error code: 404\"}"
+    ]
+  },
+  "gpt_f1_alignment": {
+    "by_category": {
+      "active_problems_symptoms": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "matched_count": 0,
+        "pred_count": 0,
+        "ref_count": 0,
+        "matches": [],
+        "unsupported_pred_items": [],
+        "missing_ref_items": []
+      },
+      "negated_findings": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "matched_count": 0,
+        "pred_count": 0,
+        "ref_count": 0,
+        "matches": [],
+        "unsupported_pred_items": [],
+        "missing_ref_items": []
+      },
+      "uncertain_findings": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "matched_count": 0,
+        "pred_count": 0,
+        "ref_count": 0,
+        "matches": [],
+        "unsupported_pred_items": [],
+        "missing_ref_items": []
+      },
+      "medication_treatment": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "matched_count": 0,
+        "pred_count": 0,
+        "ref_count": 0,
+        "matches": [],
+        "unsupported_pred_items": [],
+        "missing_ref_items": []
+      },
+      "plan_followup": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "matched_count": 0,
+        "pred_count": 0,
+        "ref_count": 0,
+        "matches": [],
+        "unsupported_pred_items": [],
+        "missing_ref_items": []
+      }
+    }
+  },
+  "reference_nair_concepts": {
+    "sections": [
+      {
+        "heading": "Clinical Note",
+        "section_value": "CHIEF COMPLAINT\nHepatitis C.\nSOCIAL HISTORY\nPatient reports personal history of intravenous drug use over 15 years ago. She is currently smoking 1-2 cigarettes per day, previously 1 to 1.5 packs per day. She also has a history of heavy alcohol use, but now drinks approximately 1 beer per day, more on the weekends.\nFAMILY HISTORY\nPatient reports family history significant for hypertension, diabetes, and depression.\nREVIEW OF SYSTEMS\nConstitutional: Reports fatigue.\nAll other systems were reviewed and are negative.\nVITALS",
+        "medical_concepts": [
+          "hepatitis C",
+          "intravenous drug use",
+          "tobacco use",
+          "cigarette smoking",
+          "heavy alcohol use",
+          "hypertension",
+          "diabetes",
+          "depression",
+          "fatigue"
+        ]
+      },
+      {
+        "heading": "Clinical Note",
+        "section_value": "Vitals look good today.\nPHYSICAL EXAM\nConstitutional\n- General Appearance: in no apparent distress.\nRespiratory\n- Auscultation of Lungs: No wheezes, rales, or rhonchi.\nCardiovascular\n- Auscultation of Heart: Regular rate. 2/6 systolic ejection murmur, unchanged.\nGastrointestinal\n- Examination of Abdomen: No masses or tenderness. No hepatosplenomegaly.",
+        "medical_concepts": [
+          "vital signs",
+          "wheezes",
+          "rales",
+          "rhonchi",
+          "systolic ejection murmur",
+          "abdominal mass",
+          "abdominal tenderness",
+          "hepatosplenomegaly"
+        ]
+      },
+      {
+        "heading": "Clinical Note",
+        "section_value": "- Auscultation: Bowel sounds normal.\nMusculoskeletal\n- Examination: No edema.\nIntegumentary\n- Examination: No signs of jaundice.\nRESULTS\nHCV antibody: Positive\nAST: 39\nALT: Within normal limits\nAlbumin: Within normal limits",
+        "medical_concepts": [
+          "bowel sounds",
+          "edema",
+          "jaundice",
+          "HCV antibody",
+          "AST",
+          "ALT",
+          "albumin"
+        ]
+      },
+      {
+        "heading": "Clinical Note",
+        "section_value": "Bilirubin, total: Within normal limits\nASSESSMENT AND PLAN\n1. Hepatitis C.\n- Medical Reasoning: Her recent blood work revealed a positive HCV antibody. She does have a history of intravenous drug use, but she has not used drugs in over 15 years.\n- Patient Education and Counseling: We discussed the nature of hepatitis C in detail. I advised the patient to have her spouse and children tested for hepatitis C as well.\n- Medical Treatment: I'm going to order additional labs including a hepatitis C RNA and HCV genotype to confirm the diagnosis, as well as a Fibroscan to assess the severity of the condition.\nPatient Agreements: The patient understands and agrees with the recommended medical treatment plan.\nINSTRUCTIONS\nThe patient will follow up in 3 weeks.",
+        "medical_concepts": [
+          "bilirubin, total",
+          "hepatitis C",
+          "HCV antibody",
+          "intravenous drug use",
+          "hepatitis C RNA",
+          "HCV genotype",
+          "Fibroscan"
+        ]
+      }
+    ],
+    "medical_concepts": [
+      "hepatitis C",
+      "intravenous drug use",
+      "tobacco use",
+      "cigarette smoking",
+      "heavy alcohol use",
+      "hypertension",
+      "diabetes",
+      "depression",
+      "fatigue",
+      "vital signs",
+      "wheezes",
+      "rales",
+      "rhonchi",
+      "systolic ejection murmur",
+      "abdominal mass",
+      "abdominal tenderness",
+      "hepatosplenomegaly",
+      "bowel sounds",
+      "edema",
+      "jaundice",
+      "HCV antibody",
+      "AST",
+      "ALT",
+      "albumin",
+      "bilirubin, total",
+      "hepatitis C RNA",
+      "HCV genotype",
+      "Fibroscan"
+    ],
+    "section_count": 4
+  },
+  "summary_nair_concepts": {
+    "sections": [
+      {
+        "heading": "S",
+        "section_value": "The patient reports anxiety regarding recent blood work results, including a positive HCV antibody test and elevated AST. He states he has been feeling fine but is experiencing fatigue. He denies a history of intravenous drug use or known hepatitis C positive partners. He reports previously being able to function well but has recently been feeling tired at the end of the day.",
+        "medical_concepts": [
+          "anxiety",
+          "blood work",
+          "HCV antibody test",
+          "positive HCV antibody test",
+          "AST",
+          "elevated AST",
+          "fatigue",
+          "intravenous drug use",
+          "hepatitis C positive partners",
+          "tiredness"
+        ]
+      },
+      {
+        "heading": "O",
+        "section_value": "Physical exam reveals clear lung sounds with no wheezes or rales. Abdominal exam shows soft abdomen with normal bowel sounds and no hepatosplenomegaly. Heart sounds are regular rate and rhythm with a two out of six systolic murmur. Gait is normal and there is no edema.",
+        "medical_concepts": [
+          "lung sounds",
+          "wheezes",
+          "rales",
+          "abdominal exam",
+          "soft abdomen",
+          "bowel sounds",
+          "hepatosplenomegaly",
+          "heart sounds",
+          "systolic murmur",
+          "gait",
+          "edema"
+        ]
+      },
+      {
+        "heading": "A",
+        "section_value": "The patient has been diagnosed with hepatitis C. He also reports symptoms consistent with depression.",
+        "medical_concepts": [
+          "hepatitis C",
+          "depression"
+        ]
+      },
+      {
+        "heading": "P",
+        "section_value": "Order HCV RNA testing and HCV genotype testing. Order a liver ultrasound to assess for liver fibrosis. Counsel the patient on the importance of adherence to treatment and discuss potential side effects. Schedule a follow-up appointment in 4 weeks to monitor treatment response and liver function.",
+        "medical_concepts": [
+          "HCV RNA testing",
+          "HCV genotype testing",
+          "liver ultrasound",
+          "liver fibrosis",
+          "treatment side effects",
+          "treatment response",
+          "liver function"
+        ]
+      }
+    ],
+    "medical_concepts": [
+      "anxiety",
+      "blood work",
+      "HCV antibody test",
+      "positive HCV antibody test",
+      "AST",
+      "elevated AST",
+      "fatigue",
+      "intravenous drug use",
+      "hepatitis C positive partners",
+      "tiredness",
+      "lung sounds",
+      "wheezes",
+      "rales",
+      "abdominal exam",
+      "soft abdomen",
+      "bowel sounds",
+      "hepatosplenomegaly",
+      "heart sounds",
+      "systolic murmur",
+      "gait",
+      "edema",
+      "hepatitis C",
+      "depression",
+      "HCV RNA testing",
+      "HCV genotype testing",
+      "liver ultrasound",
+      "liver fibrosis",
+      "treatment side effects",
+      "treatment response",
+      "liver function"
+    ],
+    "section_count": 4
+  },
+  "nair_alignment": {
+    "pred_concepts": [
+      "anxiety",
+      "blood work",
+      "HCV antibody test",
+      "positive HCV antibody test",
+      "AST",
+      "elevated AST",
+      "fatigue",
+      "intravenous drug use",
+      "hepatitis C positive partners",
+      "tiredness",
+      "lung sounds",
+      "wheezes",
+      "rales",
+      "abdominal exam",
+      "soft abdomen",
+      "bowel sounds",
+      "hepatosplenomegaly",
+      "heart sounds",
+      "systolic murmur",
+      "gait",
+      "edema",
+      "hepatitis C",
+      "depression",
+      "HCV RNA testing",
+      "HCV genotype testing",
+      "liver ultrasound",
+      "liver fibrosis",
+      "treatment side effects",
+      "treatment response",
+      "liver function"
+    ],
+    "ref_concepts": [
+      "hepatitis C",
+      "intravenous drug use",
+      "tobacco use",
+      "cigarette smoking",
+      "heavy alcohol use",
+      "hypertension",
+      "diabetes",
+      "depression",
+      "fatigue",
+      "vital signs",
+      "wheezes",
+      "rales",
+      "rhonchi",
+      "systolic ejection murmur",
+      "abdominal mass",
+      "abdominal tenderness",
+      "hepatosplenomegaly",
+      "bowel sounds",
+      "edema",
+      "jaundice",
+      "HCV antibody",
+      "AST",
+      "ALT",
+      "albumin",
+      "bilirubin, total",
+      "hepatitis C RNA",
+      "HCV genotype",
+      "Fibroscan"
+    ],
+    "precision_alignment": {
+      "found_b": [
+        "blood work",
+        "HCV antibody test",
+        "positive HCV antibody test",
+        "AST",
+        "elevated AST",
+        "fatigue",
+        "intravenous drug use",
+        "tiredness",
+        "lung sounds",
+        "wheezes",
+        "rales",
+        "abdominal exam",
+        "bowel sounds",
+        "hepatosplenomegaly",
+        "heart sounds",
+        "systolic murmur",
+        "edema",
+        "hepatitis C",
+        "depression",
+        "HCV RNA testing",
+        "HCV genotype testing"
+      ],
+      "not_found_b": [
+        "anxiety",
+        "hepatitis C positive partners",
+        "soft abdomen",
+        "gait",
+        "liver ultrasound",
+        "liver fibrosis",
+        "treatment side effects",
+        "treatment response",
+        "liver function"
+      ],
+      "chunk_count": 2,
+      "chunk_results": [
+        {
+          "found_b": [
+            "blood work",
+            "HCV antibody test",
+            "positive HCV antibody test",
+            "AST",
+            "elevated AST",
+            "fatigue",
+            "intravenous drug use",
+            "tiredness",
+            "lung sounds",
+            "wheezes",
+            "rales",
+            "abdominal exam",
+            "bowel sounds",
+            "hepatosplenomegaly",
+            "heart sounds",
+            "systolic murmur",
+            "edema",
+            "hepatitis C",
+            "depression",
+            "HCV RNA testing"
+          ],
+          "not_found_b": [
+            "anxiety",
+            "hepatitis C positive partners",
+            "soft abdomen",
+            "gait"
+          ]
+        },
+        {
+          "found_b": [
+            "HCV genotype testing"
+          ],
+          "not_found_b": [
+            "liver ultrasound",
+            "liver fibrosis",
+            "treatment side effects",
+            "treatment response",
+            "liver function"
+          ]
+        }
+      ]
+    },
+    "recall_alignment": {
+      "found_b": [
+        "hepatitis C",
+        "intravenous drug use",
+        "depression",
+        "fatigue",
+        "wheezes",
+        "rales",
+        "hepatosplenomegaly",
+        "bowel sounds",
+        "edema",
+        "HCV antibody",
+        "AST",
+        "hepatitis C RNA",
+        "HCV genotype"
+      ],
+      "not_found_b": [
+        "tobacco use",
+        "cigarette smoking",
+        "heavy alcohol use",
+        "hypertension",
+        "diabetes",
+        "vital signs",
+        "rhonchi",
+        "systolic ejection murmur",
+        "abdominal mass",
+        "abdominal tenderness",
+        "jaundice",
+        "ALT",
+        "albumin",
+        "bilirubin, total",
+        "Fibroscan"
+      ],
+      "chunk_count": 2,
+      "chunk_results": [
+        {
+          "found_b": [
+            "hepatitis C",
+            "intravenous drug use",
+            "depression",
+            "fatigue",
+            "wheezes",
+            "rales",
+            "hepatosplenomegaly",
+            "bowel sounds",
+            "edema",
+            "HCV antibody",
+            "AST"
+          ],
+          "not_found_b": [
+            "tobacco use",
+            "cigarette smoking",
+            "heavy alcohol use",
+            "hypertension",
+            "diabetes",
+            "vital signs",
+            "rhonchi",
+            "systolic ejection murmur",
+            "abdominal mass",
+            "abdominal tenderness",
+            "jaundice",
+            "ALT",
+            "albumin"
+          ]
+        },
+        {
+          "found_b": [
+            "hepatitis C RNA",
+            "HCV genotype"
+          ],
+          "not_found_b": [
+            "bilirubin, total",
+            "Fibroscan"
+          ]
+        }
+      ]
+    }
+  },
+  "semantic_cap_audit": {
+    "source_cap_recall": [
+      {
+        "cap_id": "P1",
+        "judgment": "contradicted",
+        "reason": null
+      },
+      {
+        "cap_id": "P2",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P3",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P4",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P5",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P6",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P7",
+        "judgment": "contradicted",
+        "reason": null
+      },
+      {
+        "cap_id": "P8",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P9",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P10",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P11",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P12",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P13",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P14",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P15",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P16",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P1",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P2",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P3",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P4",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P5",
+        "judgment": "contradicted",
+        "reason": null
+      },
+      {
+        "cap_id": "P6",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P7",
+        "judgment": "missing",
+        "reason": null
+      }
+    ],
+    "summary_cap_precision": [],
+    "metrics": {
+      "semantic_cap_precision": 0.0,
+      "semantic_cap_recall": 0.3043,
+      "semantic_cap_f1": 0.0,
+      "semantic_cap_precision_supported_count": 0,
+      "semantic_cap_precision_partial_count": 0,
+      "semantic_cap_precision_denominator": 0,
+      "semantic_cap_recall_supported_count": 4,
+      "semantic_cap_recall_partial_count": 6,
+      "semantic_cap_recall_denominator": 23,
+      "semantic_cap_low_value_source_count": 0,
+      "semantic_cap_low_value_summary_count": 0,
+      "semantic_cap_missing_count": 10,
+      "semantic_cap_unsupported_count": 0,
+      "semantic_cap_contradicted_source_count": 3,
+      "semantic_cap_contradicted_summary_count": 0
+    }
+  },
+  "safety_judgment": null,
+  "section_judgment": {
+    "section_miscategorizations": [],
+    "summary_statistics": {
+      "section_appropriateness_score": 1.0,
+      "section_miscategorization_count": 0,
+      "major_section_miscategorization_count": 0
+    }
+  },
+  "pdsqi_judgment": {
+    "citation_applicable": 0,
+    "citation": 0,
+    "accurate": 2,
+    "thorough": 2,
+    "useful": 2,
+    "organized": 4,
+    "comprehensible": 4,
+    "succinct": 4,
+    "abstraction": 1,
+    "synthesized": 3,
+    "voice_summ": 0,
+    "voice_note": 0,
+    "pdsqi_core_mean": 3.0
+  },
+  "llm_checklist_judgment": {
+    "content_preservation_core": 2,
+    "noise_suppression": 4,
+    "lay_expression_preservation": 2,
+    "state_update_fidelity": 1,
+    "temporality_preservation": 2,
+    "problem_evidence_linkage": 2,
+    "state_plan_separation": 2,
+    "section_organization_appropriateness": 2,
+    "overall_clinical_usability": 2,
+    "clinically_meaningful_omission": "Yes",
+    "clinically_concerning_hallucination": "Yes",
+    "checklist_a_mean": 2.6667,
+    "checklist_b_mean": 1.5,
+    "checklist_c_mean": 2.0,
+    "llm_checklist_abc_mean": 2.125,
+    "llm_checklist_mean_no_usability": 2.125,
+    "llm_checklist_total_score": 19,
+    "llm_checklist_mean": 2.1111,
+    "llm_checklist_meaningful_omission_yes": 1,
+    "llm_checklist_concerning_hallucination_yes": 1
+  },
+  "metrics": {
+    "case_id": "D2N113",
+    "method": "cluster2sent",
+    "template": "soap",
+    "source_cap_count": 23,
+    "event_plan_count": null,
+    "summary_cap_count": 0,
+    "cap_matched_count": 0,
+    "cap_precision": 0.0,
+    "cap_recall": 0.0,
+    "cap_f1": 0.0,
+    "unsupported_summary_cap_count": 0,
+    "missing_source_cap_count": 23,
+    "summary_runtime_seconds": null,
+    "summary_cap_runtime_seconds": 0.532,
+    "event_plan_runtime_seconds": null,
+    "rouge_l_f1_vs_reference": 0.2022,
+    "token_f1_vs_reference": 0.4308,
+    "gptf1_macro_f1": 0.0,
+    "nair_gpt_precision": 0.7,
+    "nair_gpt_recall": 0.4643,
+    "nair_gpt_f1": 0.5583,
+    "semantic_cap_precision": 0.0,
+    "semantic_cap_recall": 0.3043,
+    "semantic_cap_f1": 0.0,
+    "hallucination_count": null,
+    "major_hallucination_count": null,
+    "omission_count": null,
+    "major_omission_count": null,
+    "section_appropriateness_score": 1.0,
+    "section_miscategorization_count": 0,
+    "major_section_miscategorization_count": 0,
+    "pdsqi_core_mean": 3.0,
+    "pdsqi_accurate": 2,
+    "pdsqi_thorough": 2,
+    "llm_checklist_total_score": 19,
+    "llm_checklist_mean": 2.1111,
+    "llm_checklist_mean_no_usability": 2.125,
+    "checklist_a_mean": 2.6667,
+    "checklist_b_mean": 1.5,
+    "checklist_c_mean": 2.0,
+    "llm_checklist_abc_mean": 2.125,
+    "content_preservation_core": 2,
+    "noise_suppression": 4,
+    "lay_expression_preservation": 2,
+    "state_update_fidelity": 1,
+    "temporality_preservation": 2,
+    "problem_evidence_linkage": 2,
+    "state_plan_separation": 2,
+    "section_organization_appropriateness": 2,
+    "overall_clinical_usability": 2,
+    "llm_checklist_meaningful_omission_yes": 1,
+    "llm_checklist_concerning_hallucination_yes": 1,
+    "gptf1_active_problems_symptoms_precision": 0.0,
+    "gptf1_active_problems_symptoms_recall": 0.0,
+    "gptf1_active_problems_symptoms_f1": 0.0,
+    "gptf1_active_problems_symptoms_pred_count": 0,
+    "gptf1_active_problems_symptoms_ref_count": 0,
+    "gptf1_negated_findings_precision": 0.0,
+    "gptf1_negated_findings_recall": 0.0,
+    "gptf1_negated_findings_f1": 0.0,
+    "gptf1_negated_findings_pred_count": 0,
+    "gptf1_negated_findings_ref_count": 0,
+    "gptf1_uncertain_findings_precision": 0.0,
+    "gptf1_uncertain_findings_recall": 0.0,
+    "gptf1_uncertain_findings_f1": 0.0,
+    "gptf1_uncertain_findings_pred_count": 0,
+    "gptf1_uncertain_findings_ref_count": 0,
+    "gptf1_medication_treatment_precision": 0.0,
+    "gptf1_medication_treatment_recall": 0.0,
+    "gptf1_medication_treatment_f1": 0.0,
+    "gptf1_medication_treatment_pred_count": 0,
+    "gptf1_medication_treatment_ref_count": 0,
+    "gptf1_plan_followup_precision": 0.0,
+    "gptf1_plan_followup_recall": 0.0,
+    "gptf1_plan_followup_f1": 0.0,
+    "gptf1_plan_followup_pred_count": 0,
+    "gptf1_plan_followup_ref_count": 0,
+    "nair_pred_concept_count": 30,
+    "nair_ref_concept_count": 28,
+    "nair_precision_match_count": 21,
+    "nair_recall_match_count": 13,
+    "semantic_cap_precision_supported_count": 0,
+    "semantic_cap_precision_partial_count": 0,
+    "semantic_cap_precision_denominator": 0,
+    "semantic_cap_recall_supported_count": 4,
+    "semantic_cap_recall_partial_count": 6,
+    "semantic_cap_recall_denominator": 23,
+    "semantic_cap_low_value_source_count": 0,
+    "semantic_cap_low_value_summary_count": 0,
+    "semantic_cap_missing_count": 10,
+    "semantic_cap_unsupported_count": 0,
+    "semantic_cap_contradicted_source_count": 3,
+    "semantic_cap_contradicted_summary_count": 0,
+    "pdsqi_useful": 2,
+    "pdsqi_organized": 4,
+    "pdsqi_comprehensible": 4,
+    "pdsqi_succinct": 4,
+    "pdsqi_synthesized": 3
+  }
+}

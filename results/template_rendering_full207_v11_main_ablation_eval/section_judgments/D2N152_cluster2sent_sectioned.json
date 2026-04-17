@@ -1,0 +1,23 @@
+{
+  "section_miscategorizations": [
+    {
+      "text": "The patient's a1c has not been tested in approximately five months.",
+      "current_section": "Findings",
+      "expected_section": "History of Present Illness",
+      "severity": "major",
+      "reason": "This is historical information about prior testing (a gap in monitoring), not an actual exam, lab, or imaging result from this encounter. Placing it under Findings could mislead a reader into thinking it is a current objective result rather than historical context."
+    },
+    {
+      "text": "The clinician ordered an a1c test.",
+      "current_section": "Findings",
+      "expected_section": "Plan",
+      "severity": "major",
+      "reason": "Ordering a test is a management decision and belongs in the Plan. Listing it under Findings incorrectly presents an order as if it were an existing result."
+    }
+  ],
+  "summary_statistics": {
+    "section_appropriateness_score": 0.7,
+    "section_miscategorization_count": 2,
+    "major_section_miscategorization_count": 2
+  }
+}

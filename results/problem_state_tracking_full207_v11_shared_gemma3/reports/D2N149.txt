@@ -1,0 +1,123 @@
+Case: D2N149
+
+Problem List and Visit State Tracking
+
+Problem List
+- shortness of breath | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=doctor,patient | evidence=T0,T36,T7
+  Summary: The doctor is concerned about shortness of breath.
+  ClusterId: CL1
+  TemporalProfile: current, recent
+  Updates:
+  - CAP6: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T0 :: The patient has shortness of breath.
+  - CAP4: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T7 :: The patient reports shortness of breath.
+  - CAP3: content_source=doctor modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T36 :: The doctor is concerned about shortness of breath.
+  - CAP9: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=recent turns=T36 :: The patient reports shortness of breath.
+- diabetes | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T0,T38
+  Summary: The patient has diabetes.
+  ClusterId: CL2
+  TemporalProfile: current, past
+  Updates:
+  - CAP25: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=past turns=T0 :: The patient has a history of diabetes.
+  - CAP16: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T38 :: The patient has diabetes.
+- high blood pressure | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T0
+  Summary: The patient has a history of high blood pressure.
+  ClusterId: CL3
+  TemporalProfile: past
+  Updates:
+  - CAP23: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=past turns=T0 :: The patient has a history of high blood pressure.
+- asthma | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T0
+  Summary: The patient has a history of asthma.
+  ClusterId: CL4
+  TemporalProfile: past
+  Updates:
+  - CAP26: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=past turns=T0 :: The patient has a history of asthma.
+- coughing up blood | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T11,T35,T9
+  Summary: The patient reports coughing up blood.
+  ClusterId: CL5
+  TemporalProfile: current, recent, three weeks
+  Updates:
+  - CAP5: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T9 :: The patient reports coughing up blood.
+  - CAP7: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T9 :: The patient is coughing up blood.
+  - CAP14: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T9 :: The patient is coughing.
+  - CAP24: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=three weeks turns=T11 :: The patient has been coughing for three weeks.
+  - CAP8: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=recent turns=T35 :: The patient reports coughing up blood.
+- hemoptysis | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T9
+  Summary: The patient is experiencing hemoptysis.
+  ClusterId: CL6
+  TemporalProfile: current
+  Updates:
+  - CAP10: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T9 :: The patient is experiencing hemoptysis.
+- bruising | verification_status=unconfirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T16
+  Summary: The patient denies bruising.
+  ClusterId: CL7
+  TemporalProfile: none
+  Updates:
+  - CAP12: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=none turns=T16 :: The patient denies bruising.
+- bleeding | verification_status=unconfirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T16
+  Summary: The patient denies bleeding.
+  ClusterId: CL8
+  TemporalProfile: none
+  Updates:
+  - CAP13: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=none turns=T16 :: The patient denies bleeding.
+- leg swelling | verification_status=unconfirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T18
+  Summary: The patient denies leg swelling.
+  ClusterId: CL9
+  TemporalProfile: none
+  Updates:
+  - CAP11: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=none turns=T18 :: The patient denies leg swelling.
+- travel history | verification_status=unconfirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T18
+  Summary: The patient has a recent travel history.
+  ClusterId: CL10
+  TemporalProfile: recent
+  Updates:
+  - CAP27: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=recent turns=T18 :: The patient has a recent travel history.
+- knee problem | verification_status=unconfirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T19
+  Summary: The patient has had a knee problem for quite some time.
+  ClusterId: CL11
+  TemporalProfile: quite some time
+  Updates:
+  - CAP22: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=quite some time turns=T19 :: The patient has had a knee problem for quite some time.
+- pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T27
+  Summary: The patient reports pain in the left hand.
+  ClusterId: CL12
+  TemporalProfile: current
+  Updates:
+  - CAP2: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T27 :: The patient reports pain in the left hand.
+- blood clot | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=doctor | evidence=T36
+  Summary: The doctor is worried about a possible blood clot.
+  ClusterId: CL13
+  TemporalProfile: potential
+  Updates:
+  - CAP1: content_source=doctor modality=interview verification_status=unconfirmed clinical_status=active temporality=potential turns=T36 :: The doctor is worried about a possible blood clot.
+- pneumonia | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=doctor | evidence=T36
+  Summary: The doctor suspects pneumonia.
+  ClusterId: CL14
+  TemporalProfile: potential
+  Updates:
+  - CAP15: content_source=doctor modality=interview verification_status=unconfirmed clinical_status=active temporality=potential turns=T36 :: The doctor suspects pneumonia.
+
+Medication Tracking
+- [MedicationChange] metformin | verification_status=confirmed | clinical_status=planned | modalities=interview | speakers=doctor | evidence=T38
+  Summary: The doctor plans to increase the metformin dose from 500mg twice daily to 750mg twice daily.
+  ClusterId: CL18
+  TemporalProfile: future
+  PlannedChanges:
+  - The doctor plans to increase the metformin dose from 500mg twice daily to 750mg twice daily. (T38)
+  - The doctor plans to increase the metformin dose. (T38)
+  Updates:
+  - CAP20: content_source=doctor modality=interview verification_status=confirmed clinical_status=planned temporality=future turns=T38 :: The doctor plans to increase the metformin dose from 500mg twice daily to 750mg twice daily.
+  - CAP21: content_source=doctor modality=interview verification_status=confirmed clinical_status=planned temporality=future turns=T38 :: The doctor plans to increase the metformin dose.
+
+Other Structured States
+- [Plan] chest x-ray | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T36
+  Summary: A chest x-ray is ordered.
+  ClusterId: CL15
+  TemporalProfile: soon
+- [Plan] cat scan | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T36
+  Summary: A cat scan is ordered.
+  ClusterId: CL16
+  TemporalProfile: soon
+- [Plan] blood testing | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T36
+  Summary: Blood testing is ordered.
+  ClusterId: CL17
+  TemporalProfile: soon

@@ -1,0 +1,110 @@
+Case: D2N082
+
+Problem List and Visit State Tracking
+
+Problem List
+- low immunoglobulin a level | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T5
+  Summary: The patient's PCP reported a low immunoglobulin A level.
+  ClusterId: CL1
+  TemporalProfile: current
+  Updates:
+  - CAP2: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T5 :: The patient's PCP reported a low immunoglobulin A level.
+- pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T9
+  Summary: The patient reports pain in the left hand.
+  ClusterId: CL2
+  TemporalProfile: current
+  Updates:
+  - CAP4: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T9 :: The patient reports pain in the left hand.
+- cold symptoms | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T17
+  Summary: The patient experiences prolonged cold symptoms.
+  ClusterId: CL3
+  TemporalProfile: wintertime
+  Updates:
+  - CAP9: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=wintertime turns=T17 :: The patient experiences prolonged cold symptoms.
+- frequent infections | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T19
+  Summary: The patient reports frequent infections.
+  ClusterId: CL4
+  TemporalProfile: current
+  Updates:
+  - CAP13: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T19 :: The patient reports frequent infections.
+- usual | verification_status=unconfirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T20
+  Summary: The patient believes their cold symptoms are unusual.
+  ClusterId: CL5
+  TemporalProfile: wintertime
+  Updates:
+  - CAP5: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=wintertime turns=T20 :: The patient believes their cold symptoms are unusual.
+- family history of diabetes | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T29
+  Summary: The patient's family owns a donut shop.
+  ClusterId: CL7
+  TemporalProfile: current, historical
+  Updates:
+  - CAP3: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T29 :: The patient has been diagnosed with type two diabetes.
+  - CAP7: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=historical turns=T29 :: The patient's family owns a donut shop.
+- iga deficiency | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=doctor,patient | evidence=T43,T47
+  Summary: The patient has a history of iga deficiency.
+  ClusterId: CL9
+  TemporalProfile: current, history
+  Updates:
+  - CAP10: content_source=doctor modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T43 :: The patient has an iga deficiency.
+  - CAP6: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=history turns=T47 :: The patient has a history of iga deficiency.
+- respiratory tract infections | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=doctor | evidence=T43
+  Summary: The patient may experience respiratory tract infections.
+  ClusterId: CL10
+  TemporalProfile: potential
+  Updates:
+  - CAP8: content_source=doctor modality=interview verification_status=unconfirmed clinical_status=active temporality=potential turns=T43 :: The patient may experience respiratory tract infections.
+- sinus infections | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=doctor | evidence=T43
+  Summary: The patient may experience sinus infections.
+  ClusterId: CL11
+  TemporalProfile: potential
+  Updates:
+  - CAP11: content_source=doctor modality=interview verification_status=unconfirmed clinical_status=active temporality=potential turns=T43 :: The patient may experience sinus infections.
+- abdominal infections | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=doctor | evidence=T43
+  Summary: The patient may experience abdominal infections.
+  ClusterId: CL12
+  TemporalProfile: potential
+  Updates:
+  - CAP12: content_source=doctor modality=interview verification_status=unconfirmed clinical_status=active temporality=potential turns=T43 :: The patient may experience abdominal infections.
+- severe diarrhea | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T45
+  Summary: The patient reports severe diarrhea.
+  ClusterId: CL13
+  TemporalProfile: current
+  Updates:
+  - CAP14: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T45 :: The patient reports severe diarrhea.
+- risk of strong reaction to blood products | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T47
+  Summary: The patient reports a risk of a strong reaction to blood products.
+  ClusterId: CL14
+  TemporalProfile: future
+  Updates:
+  - CAP1: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=future turns=T47 :: The patient reports a risk of a strong reaction to blood products.
+
+Medication Tracking
+- [MedicationChange] metformin | verification_status=confirmed | clinical_status=planned | modalities=interview | speakers=doctor | evidence=T28
+  Summary: The doctor has started the patient on metformin.
+  ClusterId: CL6
+  TemporalProfile: current
+  PlannedChanges:
+  - The doctor has started the patient on metformin. (T28)
+  - The doctor started the patient on metformin. (T28)
+  Updates:
+  - CAP17: content_source=doctor modality=interview verification_status=confirmed clinical_status=planned temporality=current turns=T28 :: The doctor has started the patient on metformin.
+  - CAP18: content_source=doctor modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T28 :: The doctor started the patient on metformin.
+- [MedicationChange] blood transfusion | verification_status=unconfirmed | clinical_status=planned | modalities=interview | speakers=doctor | evidence=T35
+  Summary: The doctor asked about blood transfusions.
+  ClusterId: CL8
+  TemporalProfile: future
+  PlannedChanges:
+  - The doctor asked about blood transfusions. (T35)
+  Updates:
+  - CAP15: content_source=doctor modality=interview verification_status=unconfirmed clinical_status=planned temporality=future turns=T35 :: The doctor asked about blood transfusions.
+- [MedicationState] iga deficiency | verification_status=unconfirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T47
+  Summary: The patient will inform providers about their iga deficiency history.
+  ClusterId: CL15
+  TemporalProfile: future
+  CurrentRegimens:
+  - The patient will inform providers about their iga deficiency history. (T47)
+  Updates:
+  - CAP16: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=future turns=T47 :: The patient will inform providers about their iga deficiency history.
+
+Other Structured States
+- None

@@ -1,0 +1,1579 @@
+{
+  "case_id": "D2N024",
+  "method": "cap_only",
+  "template": "soap",
+  "summary_text": "S:\nThe patient reports a breast lump in March. The patient reports pain in the left hand. The patient reported discomfort with scars. The patient reports breast pain. The patient denies chills. The patient denies fever. The patient denies nausea. The patient denies vomiting. The patient has noticed lumps.\n\nO:\nThe patient's blood pressure is mildly low. Heart rate is within normal limits. Neurologic examination is nonfocal. The patient has scars.\n\nA:\nThe patient's symptoms are concerning for possible malignancy. The patient's reported lumps require further investigation.\n\nP:\nThe doctor recommends the patient continue using the gel twice a day. The patient can keep using mederma scar gel twice a day. The doctor recommends revisiting the scar in six months. The doctor will take pictures of the scars today. The doctor will revisit the scars in six months. The patient should massage the scar gel. The doctor recommends surgical excision.",
+  "reference_summary": "CHIEF COMPLAINT\n\nFollow up bilateral reduction mammoplasty.\n\nHISTORY OF PRESENT ILLNESS\n\nPamela Cook is a 36-year-old female who is returning for a postoperative visit. Status post bilateral reduction mammaplasty 10/10/2020.\n\nThe patient was last seen in clinic by Ruth Sanchez, PA in 03/2021 at which time there was a lump along the left breast, and she was advised to perform massages.\n\nToday, Ms. Cook reports she is doing well and that her breasts feel great. She is no longer suffering from back pain. The left breast lower incisional lump from last visit has resolved with massaging and use of scar gel. She reports that the scar on her breast has been bothersome. The patient denies fever, chills, nausea, or vomiting.\n\nCURRENT MEDICATIONS\n\nMederma scar gel to incision.\n\nPHYSICAL EXAM\n\nBreast\nBilateral breast incisions well healed with widening of the scar tissue. No signs of infection or erythema.\n\nASSESSMENT\n\n• Status post bilateral reduction mammoplasty.\n\nPamela Cook is a 36-year-old female who is status post bilateral reduction mammaplasty on 10/10/2020. There is some widening of the scar tissue bilaterally.\n\nPLAN\n\n- Obtain bilateral breast photos today to monitor scarring.\n- Continue Mederma scar gel and incisional scar massage twice daily.\n\nINSTRUCTIONS\n\nFollow up in 6 months to reevaluate scars.",
+  "source_cap": {
+    "atomic_propositions": [
+      {
+        "prop_id": "CAP1",
+        "cap_type": "Problem",
+        "canonical_concept": "scar",
+        "category": "Problem",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The doctor states that the scar needs to be cut out."
+      },
+      {
+        "prop_id": "CAP2",
+        "cap_type": "Symptom",
+        "canonical_concept": "breast lump",
+        "category": "Symptom",
+        "speaker": "patient",
+        "status": "uncertain",
+        "visit_state": "historical",
+        "temporality": "March",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reported a breast lump in March."
+      },
+      {
+        "prop_id": "CAP3",
+        "cap_type": "Symptom",
+        "canonical_concept": "left hand pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports pain in the left hand."
+      },
+      {
+        "prop_id": "CAP4",
+        "cap_type": "Symptom",
+        "canonical_concept": "pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports pain in the hand."
+      },
+      {
+        "prop_id": "CAP5",
+        "cap_type": "Symptom",
+        "canonical_concept": "scar discomfort",
+        "category": "Symptom",
+        "speaker": "patient",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reported discomfort with scars."
+      },
+      {
+        "prop_id": "CAP6",
+        "cap_type": "Problem",
+        "canonical_concept": "breast pain",
+        "category": "Problem",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient reports breast pain."
+      },
+      {
+        "prop_id": "CAP7",
+        "cap_type": "Symptom",
+        "canonical_concept": "back pain",
+        "category": "Symptom",
+        "speaker": "doctor",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports back pain."
+      },
+      {
+        "prop_id": "CAP8",
+        "cap_type": "Symptom",
+        "canonical_concept": "lumps",
+        "category": "Symptom",
+        "speaker": "patient",
+        "status": "uncertain",
+        "visit_state": "historical",
+        "temporality": "noticed",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient has noticed lumps."
+      },
+      {
+        "prop_id": "CAP9",
+        "cap_type": "Symptom",
+        "canonical_concept": "chills",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "denies",
+        "status": "negated",
+        "visit_state": "historical",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient denies chills."
+      },
+      {
+        "prop_id": "CAP10",
+        "cap_type": "Symptom",
+        "canonical_concept": "fever",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "denies",
+        "status": "negated",
+        "visit_state": "historical",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient denies fever."
+      },
+      {
+        "prop_id": "CAP11",
+        "cap_type": "Symptom",
+        "canonical_concept": "nausea",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "denies",
+        "status": "negated",
+        "visit_state": "historical",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient denies nausea."
+      },
+      {
+        "prop_id": "CAP12",
+        "cap_type": "Symptom",
+        "canonical_concept": "vomiting",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "denies",
+        "status": "negated",
+        "visit_state": "historical",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient denies vomiting."
+      },
+      {
+        "prop_id": "CAP13",
+        "cap_type": "Problem",
+        "canonical_concept": "scars",
+        "category": "Problem",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient has scars."
+      },
+      {
+        "prop_id": "CAP14",
+        "cap_type": "Order",
+        "canonical_concept": "gel",
+        "category": "Order",
+        "speaker": "doctor",
+        "predicate": "recommends",
+        "status": "affirmed",
+        "visit_state": "planned",
+        "temporality": "future",
+        "claim_type_tags": [
+          "plan"
+        ],
+        "proposition_text": "The doctor recommends the patient continue using the gel twice a day."
+      },
+      {
+        "prop_id": "CAP15",
+        "cap_type": "Order",
+        "canonical_concept": "mederma scar gel",
+        "category": "Order",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "planned",
+        "temporality": "ongoing",
+        "proposition_text": "The patient can keep using mederma scar gel twice a day."
+      },
+      {
+        "prop_id": "CAP16",
+        "cap_type": "Order",
+        "canonical_concept": "scar",
+        "category": "Order",
+        "speaker": "doctor",
+        "predicate": "recommends",
+        "status": "affirmed",
+        "visit_state": "planned",
+        "temporality": "six months",
+        "claim_type_tags": [
+          "plan"
+        ],
+        "proposition_text": "The doctor recommends revisiting the scar in six months."
+      },
+      {
+        "prop_id": "CAP17",
+        "cap_type": "Order",
+        "canonical_concept": "put scar gel on other scars",
+        "category": "Order",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "planned",
+        "temporality": "ongoing",
+        "proposition_text": "The patient can put scar gel on other scars."
+      },
+      {
+        "prop_id": "CAP18",
+        "cap_type": "Order",
+        "canonical_concept": "take pictures of scars",
+        "category": "Order",
+        "speaker": "doctor",
+        "predicate": "has",
+        "status": "affirmed",
+        "visit_state": "planned",
+        "temporality": "today",
+        "proposition_text": "The doctor will take pictures of the scars today."
+      },
+      {
+        "prop_id": "CAP19",
+        "cap_type": "Order",
+        "canonical_concept": "revisit scars",
+        "category": "Order",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "six months",
+        "proposition_text": "The doctor will revisit the scars in six months."
+      },
+      {
+        "prop_id": "CAP20",
+        "cap_type": "Order",
+        "canonical_concept": "massage scar gel",
+        "category": "Order",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "planned",
+        "temporality": "ongoing",
+        "proposition_text": "The patient should massage the scar gel."
+      },
+      {
+        "prop_id": "CAP21",
+        "cap_type": "Order",
+        "canonical_concept": "surgical excision",
+        "category": "Order",
+        "speaker": "doctor",
+        "predicate": "recommends",
+        "status": "uncertain",
+        "visit_state": "planned",
+        "temporality": "future",
+        "claim_type_tags": [
+          "plan"
+        ],
+        "proposition_text": "The doctor recommends surgical excision."
+      },
+      {
+        "prop_id": "CAP22",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "scar gel",
+        "category": "MedicationStatement",
+        "speaker": "patient",
+        "status": "uncertain",
+        "visit_state": "historical",
+        "temporality": "current",
+        "proposition_text": "The patient was using scar gel."
+      },
+      {
+        "prop_id": "CAP23",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "scar gel",
+        "category": "MedicationStatement",
+        "speaker": "patient",
+        "status": "uncertain",
+        "visit_state": "historical",
+        "temporality": "current",
+        "proposition_text": "The patient discontinued using scar gel."
+      }
+    ],
+    "filtered_nonverifiable_units": []
+  },
+  "event_plan": null,
+  "summary_cap": {
+    "atomic_propositions": [
+      {
+        "prop_id": "P1",
+        "cap_type": "Symptom",
+        "canonical_concept": "breast lump",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports a breast lump."
+      },
+      {
+        "prop_id": "P2",
+        "cap_type": "Symptom",
+        "canonical_concept": "pain:hand",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports pain in the left hand."
+      },
+      {
+        "prop_id": "P3",
+        "cap_type": "Symptom",
+        "canonical_concept": "discomfort scars",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports discomfort with scars."
+      },
+      {
+        "prop_id": "P4",
+        "cap_type": "Symptom",
+        "canonical_concept": "pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports breast pain."
+      },
+      {
+        "prop_id": "P5",
+        "cap_type": "Finding",
+        "canonical_concept": "noticed lumps",
+        "category": "Finding",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "past",
+        "claim_type_tags": [
+          "exam"
+        ],
+        "proposition_text": "The patient has noticed lumps."
+      },
+      {
+        "prop_id": "P6",
+        "cap_type": "Denial",
+        "canonical_concept": "denies chills",
+        "category": "Denial",
+        "speaker": "patient",
+        "predicate": "denies",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient denies chills."
+      },
+      {
+        "prop_id": "P7",
+        "cap_type": "Denial",
+        "canonical_concept": "denies fever",
+        "category": "Denial",
+        "speaker": "patient",
+        "predicate": "denies",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient denies fever."
+      },
+      {
+        "prop_id": "P8",
+        "cap_type": "Denial",
+        "canonical_concept": "denies nausea",
+        "category": "Denial",
+        "speaker": "patient",
+        "predicate": "denies",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient denies nausea."
+      },
+      {
+        "prop_id": "P9",
+        "cap_type": "Denial",
+        "canonical_concept": "denies vomiting",
+        "category": "Denial",
+        "speaker": "patient",
+        "predicate": "denies",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient denies vomiting."
+      },
+      {
+        "prop_id": "P10",
+        "cap_type": "Finding",
+        "canonical_concept": "scars",
+        "category": "Finding",
+        "speaker": "clinician",
+        "predicate": "has",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "exam"
+        ],
+        "proposition_text": "The patient has scars."
+      },
+      {
+        "prop_id": "P11",
+        "cap_type": "Finding",
+        "canonical_concept": "blood pressure",
+        "category": "Finding",
+        "speaker": "clinician",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "exam"
+        ],
+        "proposition_text": "The patient's blood pressure is mildly low."
+      },
+      {
+        "prop_id": "P12",
+        "cap_type": "Finding",
+        "canonical_concept": "heart rate within normal",
+        "category": "Finding",
+        "speaker": "clinician",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "exam"
+        ],
+        "proposition_text": "Heart rate is within normal limits."
+      },
+      {
+        "prop_id": "P13",
+        "cap_type": "Finding",
+        "canonical_concept": "neurologic examination nonfocal",
+        "category": "Finding",
+        "speaker": "clinician",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "exam"
+        ],
+        "proposition_text": "Neurologic examination is nonfocal."
+      }
+    ],
+    "filtered_nonverifiable_units": [],
+    "runtime_seconds": 23.166
+  },
+  "cap_alignment": {
+    "cap_precision": 0.7692307692307693,
+    "cap_recall": 0.43478260869565216,
+    "cap_f1": 0.5555555555555555,
+    "matched_count": 10,
+    "summary_prop_count": 13,
+    "source_prop_count": 23,
+    "matched_pairs": [
+      {
+        "score": 1.0,
+        "summary_prop_id": "P10",
+        "source_prop_id": "CAP16",
+        "summary_text": "The patient has scars.",
+        "source_text": "The doctor recommends revisiting the scar in six months."
+      },
+      {
+        "score": 1.0,
+        "summary_prop_id": "P9",
+        "source_prop_id": "CAP12",
+        "summary_text": "The patient denies vomiting.",
+        "source_text": "The patient denies vomiting."
+      },
+      {
+        "score": 1.0,
+        "summary_prop_id": "P8",
+        "source_prop_id": "CAP11",
+        "summary_text": "The patient denies nausea.",
+        "source_text": "The patient denies nausea."
+      },
+      {
+        "score": 1.0,
+        "summary_prop_id": "P7",
+        "source_prop_id": "CAP10",
+        "summary_text": "The patient denies fever.",
+        "source_text": "The patient denies fever."
+      },
+      {
+        "score": 1.0,
+        "summary_prop_id": "P6",
+        "source_prop_id": "CAP9",
+        "summary_text": "The patient denies chills.",
+        "source_text": "The patient denies chills."
+      },
+      {
+        "score": 1.0,
+        "summary_prop_id": "P5",
+        "source_prop_id": "CAP8",
+        "summary_text": "The patient has noticed lumps.",
+        "source_text": "The patient has noticed lumps."
+      },
+      {
+        "score": 1.0,
+        "summary_prop_id": "P4",
+        "source_prop_id": "CAP6",
+        "summary_text": "The patient reports breast pain.",
+        "source_text": "The patient reports breast pain."
+      },
+      {
+        "score": 1.0,
+        "summary_prop_id": "P3",
+        "source_prop_id": "CAP5",
+        "summary_text": "The patient reports discomfort with scars.",
+        "source_text": "The patient reported discomfort with scars."
+      },
+      {
+        "score": 1.0,
+        "summary_prop_id": "P2",
+        "source_prop_id": "CAP4",
+        "summary_text": "The patient reports pain in the left hand.",
+        "source_text": "The patient reports pain in the hand."
+      },
+      {
+        "score": 1.0,
+        "summary_prop_id": "P1",
+        "source_prop_id": "CAP2",
+        "summary_text": "The patient reports a breast lump.",
+        "source_text": "The patient reported a breast lump in March."
+      }
+    ],
+    "unsupported_summary_props": [
+      {
+        "prop_id": "P11",
+        "cap_type": "Finding",
+        "canonical_concept": "blood pressure",
+        "category": "Finding",
+        "speaker": "clinician",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "exam"
+        ],
+        "proposition_text": "The patient's blood pressure is mildly low."
+      },
+      {
+        "prop_id": "P12",
+        "cap_type": "Finding",
+        "canonical_concept": "heart rate within normal",
+        "category": "Finding",
+        "speaker": "clinician",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "exam"
+        ],
+        "proposition_text": "Heart rate is within normal limits."
+      },
+      {
+        "prop_id": "P13",
+        "cap_type": "Finding",
+        "canonical_concept": "neurologic examination nonfocal",
+        "category": "Finding",
+        "speaker": "clinician",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "exam"
+        ],
+        "proposition_text": "Neurologic examination is nonfocal."
+      }
+    ],
+    "missing_source_props": [
+      {
+        "prop_id": "CAP1",
+        "cap_type": "Problem",
+        "canonical_concept": "scar",
+        "category": "Problem",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The doctor states that the scar needs to be cut out."
+      },
+      {
+        "prop_id": "CAP3",
+        "cap_type": "Symptom",
+        "canonical_concept": "left hand pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports pain in the left hand."
+      },
+      {
+        "prop_id": "CAP7",
+        "cap_type": "Symptom",
+        "canonical_concept": "back pain",
+        "category": "Symptom",
+        "speaker": "doctor",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports back pain."
+      },
+      {
+        "prop_id": "CAP13",
+        "cap_type": "Problem",
+        "canonical_concept": "scars",
+        "category": "Problem",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient has scars."
+      },
+      {
+        "prop_id": "CAP14",
+        "cap_type": "Order",
+        "canonical_concept": "gel",
+        "category": "Order",
+        "speaker": "doctor",
+        "predicate": "recommends",
+        "status": "affirmed",
+        "visit_state": "planned",
+        "temporality": "future",
+        "claim_type_tags": [
+          "plan"
+        ],
+        "proposition_text": "The doctor recommends the patient continue using the gel twice a day."
+      },
+      {
+        "prop_id": "CAP15",
+        "cap_type": "Order",
+        "canonical_concept": "mederma scar gel",
+        "category": "Order",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "planned",
+        "temporality": "ongoing",
+        "proposition_text": "The patient can keep using mederma scar gel twice a day."
+      },
+      {
+        "prop_id": "CAP17",
+        "cap_type": "Order",
+        "canonical_concept": "put scar gel on other scars",
+        "category": "Order",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "planned",
+        "temporality": "ongoing",
+        "proposition_text": "The patient can put scar gel on other scars."
+      },
+      {
+        "prop_id": "CAP18",
+        "cap_type": "Order",
+        "canonical_concept": "take pictures of scars",
+        "category": "Order",
+        "speaker": "doctor",
+        "predicate": "has",
+        "status": "affirmed",
+        "visit_state": "planned",
+        "temporality": "today",
+        "proposition_text": "The doctor will take pictures of the scars today."
+      },
+      {
+        "prop_id": "CAP19",
+        "cap_type": "Order",
+        "canonical_concept": "revisit scars",
+        "category": "Order",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "six months",
+        "proposition_text": "The doctor will revisit the scars in six months."
+      },
+      {
+        "prop_id": "CAP20",
+        "cap_type": "Order",
+        "canonical_concept": "massage scar gel",
+        "category": "Order",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "planned",
+        "temporality": "ongoing",
+        "proposition_text": "The patient should massage the scar gel."
+      },
+      {
+        "prop_id": "CAP21",
+        "cap_type": "Order",
+        "canonical_concept": "surgical excision",
+        "category": "Order",
+        "speaker": "doctor",
+        "predicate": "recommends",
+        "status": "uncertain",
+        "visit_state": "planned",
+        "temporality": "future",
+        "claim_type_tags": [
+          "plan"
+        ],
+        "proposition_text": "The doctor recommends surgical excision."
+      },
+      {
+        "prop_id": "CAP22",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "scar gel",
+        "category": "MedicationStatement",
+        "speaker": "patient",
+        "status": "uncertain",
+        "visit_state": "historical",
+        "temporality": "current",
+        "proposition_text": "The patient was using scar gel."
+      },
+      {
+        "prop_id": "CAP23",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "scar gel",
+        "category": "MedicationStatement",
+        "speaker": "patient",
+        "status": "uncertain",
+        "visit_state": "historical",
+        "temporality": "current",
+        "proposition_text": "The patient discontinued using scar gel."
+      }
+    ]
+  },
+  "reference_gpt_f1_items": {
+    "active_problems_symptoms": [
+      "scar on breast has been bothersome",
+      "left breast lower incisional lump has resolved"
+    ],
+    "negated_findings": [
+      "denies fever",
+      "denies chills",
+      "denies nausea",
+      "denies vomiting"
+    ],
+    "uncertain_findings": [],
+    "medication_treatment": [
+      "Mederma scar gel to incision"
+    ],
+    "plan_followup": [],
+    "_chunk_count": [
+      "2"
+    ]
+  },
+  "summary_gpt_f1_items": {
+    "active_problems_symptoms": [
+      "breast lump",
+      "pain in the left hand",
+      "discomfort with scars",
+      "breast pain",
+      "lumps"
+    ],
+    "negated_findings": [
+      "chills",
+      "fever",
+      "nausea",
+      "vomiting"
+    ],
+    "uncertain_findings": [
+      "possible malignancy"
+    ],
+    "medication_treatment": [
+      "continue using the gel twice a day",
+      "mederma scar gel twice a day",
+      "surgical excision"
+    ],
+    "plan_followup": [
+      "revisiting the scar in six months",
+      "take pictures of the scars today",
+      "massage the scar gel"
+    ],
+    "_chunk_count": [
+      "1"
+    ]
+  },
+  "gpt_f1_alignment": {
+    "by_category": {
+      "active_problems_symptoms": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "matched_count": 0,
+        "pred_count": 5,
+        "ref_count": 2,
+        "matches": [],
+        "unsupported_pred_items": [
+          "breast lump",
+          "pain in the left hand",
+          "discomfort with scars",
+          "breast pain",
+          "lumps"
+        ],
+        "missing_ref_items": [
+          "scar on breast has been bothersome",
+          "left breast lower incisional lump has resolved"
+        ]
+      },
+      "negated_findings": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "matched_count": 4,
+        "pred_count": 4,
+        "ref_count": 4,
+        "matches": [
+          {
+            "score": 0.6667,
+            "pred_text": "vomiting",
+            "ref_text": "denies vomiting"
+          },
+          {
+            "score": 0.6667,
+            "pred_text": "nausea",
+            "ref_text": "denies nausea"
+          },
+          {
+            "score": 0.6667,
+            "pred_text": "fever",
+            "ref_text": "denies fever"
+          },
+          {
+            "score": 0.6667,
+            "pred_text": "chills",
+            "ref_text": "denies chills"
+          }
+        ],
+        "unsupported_pred_items": [],
+        "missing_ref_items": []
+      },
+      "uncertain_findings": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "matched_count": 0,
+        "pred_count": 1,
+        "ref_count": 0,
+        "matches": [],
+        "unsupported_pred_items": [
+          "possible malignancy"
+        ],
+        "missing_ref_items": []
+      },
+      "medication_treatment": {
+        "precision": 0.3333333333333333,
+        "recall": 1.0,
+        "f1": 0.5,
+        "matched_count": 1,
+        "pred_count": 3,
+        "ref_count": 1,
+        "matches": [
+          {
+            "score": 0.6,
+            "pred_text": "mederma scar gel twice a day",
+            "ref_text": "Mederma scar gel to incision"
+          }
+        ],
+        "unsupported_pred_items": [
+          "continue using the gel twice a day",
+          "surgical excision"
+        ],
+        "missing_ref_items": []
+      },
+      "plan_followup": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "matched_count": 0,
+        "pred_count": 3,
+        "ref_count": 0,
+        "matches": [],
+        "unsupported_pred_items": [
+          "revisiting the scar in six months",
+          "take pictures of the scars today",
+          "massage the scar gel"
+        ],
+        "missing_ref_items": []
+      }
+    }
+  },
+  "reference_nair_concepts": {
+    "sections": [
+      {
+        "heading": "Clinical Note",
+        "section_value": "CHIEF COMPLAINT\nFollow up bilateral reduction mammoplasty.\nHISTORY OF PRESENT ILLNESS\nPamela Cook is a 36-year-old female who is returning for a postoperative visit. Status post bilateral reduction mammaplasty 10/10/2020.\nThe patient was last seen in clinic by Ruth Sanchez, PA in 03/2021 at which time there was a lump along the left breast, and she was advised to perform massages.\nToday, Ms. Cook reports she is doing well and that her breasts feel great. She is no longer suffering from back pain. The left breast lower incisional lump from last visit has resolved with massaging and use of scar gel. She reports that the scar on her breast has been bothersome. The patient denies fever, chills, nausea, or vomiting.\nCURRENT MEDICATIONS\nMederma scar gel to incision.\nPHYSICAL EXAM\nBreast",
+        "medical_concepts": [
+          "bilateral reduction mammoplasty",
+          "postoperative visit",
+          "lump along the left breast",
+          "back pain",
+          "left breast lower incisional lump",
+          "scar on breast",
+          "fever",
+          "chills",
+          "nausea",
+          "vomiting",
+          "Mederma scar gel"
+        ]
+      },
+      {
+        "heading": "Clinical Note",
+        "section_value": "Bilateral breast incisions well healed with widening of the scar tissue. No signs of infection or erythema.\nASSESSMENT\n• Status post bilateral reduction mammoplasty.\nPamela Cook is a 36-year-old female who is status post bilateral reduction mammaplasty on 10/10/2020. There is some widening of the scar tissue bilaterally.\nPLAN\n- Obtain bilateral breast photos today to monitor scarring.\n- Continue Mederma scar gel and incisional scar massage twice daily.\nINSTRUCTIONS\nFollow up in 6 months to reevaluate scars.",
+        "medical_concepts": [
+          "bilateral breast incisions",
+          "widening of scar tissue",
+          "infection",
+          "erythema",
+          "status post bilateral reduction mammoplasty",
+          "bilateral reduction mammaplasty",
+          "scarring",
+          "Mederma scar gel",
+          "incisional scar massage"
+        ]
+      }
+    ],
+    "medical_concepts": [
+      "bilateral reduction mammoplasty",
+      "postoperative visit",
+      "lump along the left breast",
+      "back pain",
+      "left breast lower incisional lump",
+      "scar on breast",
+      "fever",
+      "chills",
+      "nausea",
+      "vomiting",
+      "Mederma scar gel",
+      "bilateral breast incisions",
+      "widening of scar tissue",
+      "infection",
+      "erythema",
+      "status post bilateral reduction mammoplasty",
+      "bilateral reduction mammaplasty",
+      "scarring",
+      "incisional scar massage"
+    ],
+    "section_count": 2
+  },
+  "summary_nair_concepts": {
+    "sections": [
+      {
+        "heading": "S",
+        "section_value": "The patient reports a breast lump in March. The patient reports pain in the left hand. The patient reported discomfort with scars. The patient reports breast pain. The patient denies chills. The patient denies fever. The patient denies nausea. The patient denies vomiting. The patient has noticed lumps.",
+        "medical_concepts": [
+          "breast lump",
+          "pain in the left hand",
+          "discomfort with scars",
+          "breast pain",
+          "chills",
+          "fever",
+          "nausea",
+          "vomiting",
+          "lumps"
+        ]
+      },
+      {
+        "heading": "O",
+        "section_value": "The patient's blood pressure is mildly low. Heart rate is within normal limits. Neurologic examination is nonfocal. The patient has scars.",
+        "medical_concepts": [
+          "low blood pressure",
+          "heart rate",
+          "neurologic examination",
+          "scars"
+        ]
+      },
+      {
+        "heading": "A",
+        "section_value": "The patient's symptoms are concerning for possible malignancy. The patient's reported lumps require further investigation.",
+        "medical_concepts": [
+          "malignancy",
+          "lumps"
+        ]
+      },
+      {
+        "heading": "P",
+        "section_value": "The doctor recommends the patient continue using the gel twice a day. The patient can keep using mederma scar gel twice a day. The doctor recommends revisiting the scar in six months. The doctor will take pictures of the scars today. The doctor will revisit the scars in six months. The patient should massage the scar gel. The doctor recommends surgical excision.",
+        "medical_concepts": [
+          "scar",
+          "mederma scar gel",
+          "surgical excision"
+        ]
+      }
+    ],
+    "medical_concepts": [
+      "breast lump",
+      "pain in the left hand",
+      "discomfort with scars",
+      "breast pain",
+      "chills",
+      "fever",
+      "nausea",
+      "vomiting",
+      "lumps",
+      "low blood pressure",
+      "heart rate",
+      "neurologic examination",
+      "scars",
+      "malignancy",
+      "scar",
+      "mederma scar gel",
+      "surgical excision"
+    ],
+    "section_count": 4
+  },
+  "nair_alignment": {
+    "pred_concepts": [
+      "breast lump",
+      "pain in the left hand",
+      "discomfort with scars",
+      "breast pain",
+      "chills",
+      "fever",
+      "nausea",
+      "vomiting",
+      "lumps",
+      "low blood pressure",
+      "heart rate",
+      "neurologic examination",
+      "scars",
+      "malignancy",
+      "scar",
+      "mederma scar gel",
+      "surgical excision"
+    ],
+    "ref_concepts": [
+      "bilateral reduction mammoplasty",
+      "postoperative visit",
+      "lump along the left breast",
+      "back pain",
+      "left breast lower incisional lump",
+      "scar on breast",
+      "fever",
+      "chills",
+      "nausea",
+      "vomiting",
+      "Mederma scar gel",
+      "bilateral breast incisions",
+      "widening of scar tissue",
+      "infection",
+      "erythema",
+      "status post bilateral reduction mammoplasty",
+      "bilateral reduction mammaplasty",
+      "scarring",
+      "incisional scar massage"
+    ],
+    "precision_alignment": {
+      "found_b": [
+        "breast lump",
+        "discomfort with scars",
+        "chills",
+        "fever",
+        "nausea",
+        "vomiting",
+        "lumps",
+        "scars",
+        "scar",
+        "mederma scar gel"
+      ],
+      "not_found_b": [
+        "pain in the left hand",
+        "breast pain",
+        "low blood pressure",
+        "heart rate",
+        "neurologic examination",
+        "malignancy",
+        "surgical excision"
+      ],
+      "chunk_count": 1,
+      "chunk_results": [
+        {
+          "found_b": [
+            "breast lump",
+            "discomfort with scars",
+            "chills",
+            "fever",
+            "nausea",
+            "vomiting",
+            "lumps",
+            "scars",
+            "scar",
+            "mederma scar gel"
+          ],
+          "not_found_b": [
+            "pain in the left hand",
+            "breast pain",
+            "low blood pressure",
+            "heart rate",
+            "neurologic examination",
+            "malignancy",
+            "surgical excision"
+          ]
+        }
+      ]
+    },
+    "recall_alignment": {
+      "found_b": [
+        "fever",
+        "chills",
+        "nausea",
+        "vomiting",
+        "Mederma scar gel",
+        "scarring",
+        "incisional scar massage"
+      ],
+      "not_found_b": [
+        "bilateral reduction mammoplasty",
+        "postoperative visit",
+        "lump along the left breast",
+        "back pain",
+        "left breast lower incisional lump",
+        "scar on breast",
+        "bilateral breast incisions",
+        "widening of scar tissue",
+        "infection",
+        "erythema",
+        "status post bilateral reduction mammoplasty",
+        "bilateral reduction mammaplasty"
+      ],
+      "chunk_count": 1,
+      "chunk_results": [
+        {
+          "found_b": [
+            "fever",
+            "chills",
+            "nausea",
+            "vomiting",
+            "Mederma scar gel",
+            "scarring",
+            "incisional scar massage"
+          ],
+          "not_found_b": [
+            "bilateral reduction mammoplasty",
+            "postoperative visit",
+            "lump along the left breast",
+            "back pain",
+            "left breast lower incisional lump",
+            "scar on breast",
+            "bilateral breast incisions",
+            "widening of scar tissue",
+            "infection",
+            "erythema",
+            "status post bilateral reduction mammoplasty",
+            "bilateral reduction mammaplasty"
+          ]
+        }
+      ]
+    }
+  },
+  "semantic_cap_audit": {
+    "source_cap_recall": [
+      {
+        "cap_id": "P1",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P2",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P3",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P4",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P5",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P6",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P7",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P8",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P9",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P10",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P11",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P12",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P13",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P14",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P15",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P16",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P1",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P2",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P3",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P4",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P5",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P6",
+        "judgment": "contradicted",
+        "reason": null
+      },
+      {
+        "cap_id": "P7",
+        "judgment": "contradicted",
+        "reason": null
+      }
+    ],
+    "summary_cap_precision": [
+      {
+        "cap_id": "P1",
+        "judgment": "unsupported",
+        "reason": null
+      },
+      {
+        "cap_id": "P2",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P3",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P4",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P5",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P6",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P7",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P8",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P9",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P10",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P11",
+        "judgment": "unsupported",
+        "reason": null
+      },
+      {
+        "cap_id": "P12",
+        "judgment": "unsupported",
+        "reason": null
+      },
+      {
+        "cap_id": "P13",
+        "judgment": "unsupported",
+        "reason": null
+      }
+    ],
+    "metrics": {
+      "semantic_cap_precision": 0.3846,
+      "semantic_cap_recall": 0.7609,
+      "semantic_cap_f1": 0.5109,
+      "semantic_cap_precision_supported_count": 1,
+      "semantic_cap_precision_partial_count": 8,
+      "semantic_cap_precision_denominator": 13,
+      "semantic_cap_recall_supported_count": 17,
+      "semantic_cap_recall_partial_count": 1,
+      "semantic_cap_recall_denominator": 23,
+      "semantic_cap_low_value_source_count": 0,
+      "semantic_cap_low_value_summary_count": 0,
+      "semantic_cap_missing_count": 3,
+      "semantic_cap_unsupported_count": 4,
+      "semantic_cap_contradicted_source_count": 2,
+      "semantic_cap_contradicted_summary_count": 0
+    }
+  },
+  "safety_judgment": null,
+  "section_judgment": {
+    "section_miscategorizations": [],
+    "summary_statistics": {
+      "section_appropriateness_score": 1.0,
+      "section_miscategorization_count": 0,
+      "major_section_miscategorization_count": 0
+    }
+  },
+  "pdsqi_judgment": {
+    "citation_applicable": 0,
+    "citation": 0,
+    "accurate": 1,
+    "thorough": 1,
+    "useful": 1,
+    "organized": 2,
+    "comprehensible": 2,
+    "succinct": 2,
+    "abstraction": 1,
+    "synthesized": 2,
+    "voice_summ": 0,
+    "voice_note": 0,
+    "pdsqi_core_mean": 1.5714
+  },
+  "llm_checklist_judgment": {
+    "content_preservation_core": 2,
+    "noise_suppression": 4,
+    "lay_expression_preservation": 2,
+    "state_update_fidelity": 1,
+    "temporality_preservation": 2,
+    "problem_evidence_linkage": 1,
+    "state_plan_separation": 2,
+    "section_organization_appropriateness": 2,
+    "overall_clinical_usability": 1,
+    "clinically_meaningful_omission": "Yes",
+    "clinically_concerning_hallucination": "Yes",
+    "checklist_a_mean": 2.6667,
+    "checklist_b_mean": 1.5,
+    "checklist_c_mean": 1.6667,
+    "llm_checklist_abc_mean": 2.0,
+    "llm_checklist_mean_no_usability": 2.0,
+    "llm_checklist_total_score": 17,
+    "llm_checklist_mean": 1.8889,
+    "llm_checklist_meaningful_omission_yes": 1,
+    "llm_checklist_concerning_hallucination_yes": 1
+  },
+  "metrics": {
+    "case_id": "D2N024",
+    "method": "cap_only",
+    "template": "soap",
+    "source_cap_count": 23,
+    "event_plan_count": null,
+    "summary_cap_count": 13,
+    "cap_matched_count": 10,
+    "cap_precision": 0.7692,
+    "cap_recall": 0.4348,
+    "cap_f1": 0.5556,
+    "unsupported_summary_cap_count": 3,
+    "missing_source_cap_count": 13,
+    "summary_runtime_seconds": null,
+    "summary_cap_runtime_seconds": 23.166,
+    "event_plan_runtime_seconds": null,
+    "rouge_l_f1_vs_reference": 0.1689,
+    "token_f1_vs_reference": 0.267,
+    "gptf1_macro_f1": 0.3,
+    "nair_gpt_precision": 0.5882,
+    "nair_gpt_recall": 0.3684,
+    "nair_gpt_f1": 0.4531,
+    "semantic_cap_precision": 0.3846,
+    "semantic_cap_recall": 0.7609,
+    "semantic_cap_f1": 0.5109,
+    "hallucination_count": null,
+    "major_hallucination_count": null,
+    "omission_count": null,
+    "major_omission_count": null,
+    "section_appropriateness_score": 1.0,
+    "section_miscategorization_count": 0,
+    "major_section_miscategorization_count": 0,
+    "pdsqi_core_mean": 1.5714,
+    "pdsqi_accurate": 1,
+    "pdsqi_thorough": 1,
+    "llm_checklist_total_score": 17,
+    "llm_checklist_mean": 1.8889,
+    "llm_checklist_mean_no_usability": 2.0,
+    "checklist_a_mean": 2.6667,
+    "checklist_b_mean": 1.5,
+    "checklist_c_mean": 1.6667,
+    "llm_checklist_abc_mean": 2.0,
+    "content_preservation_core": 2,
+    "noise_suppression": 4,
+    "lay_expression_preservation": 2,
+    "state_update_fidelity": 1,
+    "temporality_preservation": 2,
+    "problem_evidence_linkage": 1,
+    "state_plan_separation": 2,
+    "section_organization_appropriateness": 2,
+    "overall_clinical_usability": 1,
+    "llm_checklist_meaningful_omission_yes": 1,
+    "llm_checklist_concerning_hallucination_yes": 1,
+    "gptf1_active_problems_symptoms_precision": 0.0,
+    "gptf1_active_problems_symptoms_recall": 0.0,
+    "gptf1_active_problems_symptoms_f1": 0.0,
+    "gptf1_active_problems_symptoms_pred_count": 5,
+    "gptf1_active_problems_symptoms_ref_count": 2,
+    "gptf1_negated_findings_precision": 1.0,
+    "gptf1_negated_findings_recall": 1.0,
+    "gptf1_negated_findings_f1": 1.0,
+    "gptf1_negated_findings_pred_count": 4,
+    "gptf1_negated_findings_ref_count": 4,
+    "gptf1_uncertain_findings_precision": 0.0,
+    "gptf1_uncertain_findings_recall": 0.0,
+    "gptf1_uncertain_findings_f1": 0.0,
+    "gptf1_uncertain_findings_pred_count": 1,
+    "gptf1_uncertain_findings_ref_count": 0,
+    "gptf1_medication_treatment_precision": 0.3333,
+    "gptf1_medication_treatment_recall": 1.0,
+    "gptf1_medication_treatment_f1": 0.5,
+    "gptf1_medication_treatment_pred_count": 3,
+    "gptf1_medication_treatment_ref_count": 1,
+    "gptf1_plan_followup_precision": 0.0,
+    "gptf1_plan_followup_recall": 0.0,
+    "gptf1_plan_followup_f1": 0.0,
+    "gptf1_plan_followup_pred_count": 3,
+    "gptf1_plan_followup_ref_count": 0,
+    "nair_pred_concept_count": 17,
+    "nair_ref_concept_count": 19,
+    "nair_precision_match_count": 10,
+    "nair_recall_match_count": 7,
+    "semantic_cap_precision_supported_count": 1,
+    "semantic_cap_precision_partial_count": 8,
+    "semantic_cap_precision_denominator": 13,
+    "semantic_cap_recall_supported_count": 17,
+    "semantic_cap_recall_partial_count": 1,
+    "semantic_cap_recall_denominator": 23,
+    "semantic_cap_low_value_source_count": 0,
+    "semantic_cap_low_value_summary_count": 0,
+    "semantic_cap_missing_count": 3,
+    "semantic_cap_unsupported_count": 4,
+    "semantic_cap_contradicted_source_count": 2,
+    "semantic_cap_contradicted_summary_count": 0,
+    "pdsqi_useful": 1,
+    "pdsqi_organized": 2,
+    "pdsqi_comprehensible": 2,
+    "pdsqi_succinct": 2,
+    "pdsqi_synthesized": 2
+  }
+}

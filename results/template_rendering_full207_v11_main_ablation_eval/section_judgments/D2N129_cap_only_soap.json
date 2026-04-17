@@ -1,0 +1,30 @@
+{
+  "section_miscategorizations": [
+    {
+      "text": "Blood pressure is normal.",
+      "current_section": "O",
+      "expected_section": "A",
+      "severity": "minor",
+      "reason": "This is an interpretive summary of a vital sign rather than the raw measured value; it functions more as assessment of control than an objective measurement, though it does not substantially mislead."
+    },
+    {
+      "text": "The patient's blood sugars have been elevated.",
+      "current_section": "A",
+      "expected_section": "S",
+      "severity": "major",
+      "reason": "This is a characterization of home blood sugar readings, which are patient-reported subjective data rather than a synthesized diagnostic impression."
+    },
+    {
+      "text": "Order a hemoglobin A1c test.",
+      "current_section": "P",
+      "expected_section": "O",
+      "severity": "major",
+      "reason": "The note already states that the hemoglobin A1c level is pending in the Objective section, indicating the test has been ordered/performed; repeating it as a new order in the Plan is inconsistent and could mislead about the timing/status of the test."
+    }
+  ],
+  "summary_statistics": {
+    "section_appropriateness_score": 0.7,
+    "section_miscategorization_count": 3,
+    "major_section_miscategorization_count": 2
+  }
+}

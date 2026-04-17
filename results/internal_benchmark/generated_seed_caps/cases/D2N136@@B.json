@@ -1,0 +1,539 @@
+{
+  "case_id": "D2N136",
+  "annotator": "B",
+  "seed_gold_caps": [
+    {
+      "gold_id": "G1",
+      "fact_text": "The patient is a 33-year-old female named Janet",
+      "category": "Demographics",
+      "speaker": "clinician",
+      "temporality": "current",
+      "certainty": "high",
+      "provenance_sentence": "4"
+    },
+    {
+      "gold_id": "G2",
+      "fact_text": "The patient is here for joint pain",
+      "category": "Chief Complaint",
+      "speaker": "clinician",
+      "temporality": "current",
+      "certainty": "high",
+      "provenance_sentence": "4"
+    },
+    {
+      "gold_id": "G3",
+      "fact_text": "The patient's joint pain is mostly in her knees",
+      "category": "Symptom",
+      "speaker": "patient",
+      "temporality": "current",
+      "certainty": "high",
+      "provenance_sentence": "5,7"
+    },
+    {
+      "gold_id": "G4",
+      "fact_text": "The patient's knee pain affects both knees equally",
+      "category": "Symptom",
+      "speaker": "patient",
+      "temporality": "current",
+      "certainty": "high",
+      "provenance_sentence": "9"
+    },
+    {
+      "gold_id": "G5",
+      "fact_text": "The patient has been doing more stair-type workouts",
+      "category": "Lifestyle",
+      "speaker": "patient",
+      "temporality": "unknown",
+      "certainty": "high",
+      "provenance_sentence": "5"
+    },
+    {
+      "gold_id": "G6",
+      "fact_text": "The patient expected stair-type workouts to build muscle around her knees and help them",
+      "category": "Counseling",
+      "speaker": "patient",
+      "temporality": "past",
+      "certainty": "high",
+      "provenance_sentence": "5"
+    },
+    {
+      "gold_id": "G7",
+      "fact_text": "Despite stair workouts, the patient's knees have been really bothering her",
+      "category": "Symptom",
+      "speaker": "patient",
+      "temporality": "unknown",
+      "certainty": "high",
+      "provenance_sentence": "7"
+    },
+    {
+      "gold_id": "G8",
+      "fact_text": "The patient denies pain in other joints such as elbows or shoulders currently",
+      "category": "Review of Systems",
+      "speaker": "patient",
+      "temporality": "current",
+      "certainty": "high",
+      "provenance_sentence": "10-11"
+    },
+    {
+      "gold_id": "G9",
+      "fact_text": "The patient had a rotator cuff repair about two years ago",
+      "category": "Past Medical History",
+      "speaker": "patient",
+      "temporality": "past",
+      "certainty": "high",
+      "provenance_sentence": "11"
+    },
+    {
+      "gold_id": "G10",
+      "fact_text": "The patient's rotator cuff repair was on the right shoulder",
+      "category": "Past Medical History",
+      "speaker": "patient",
+      "temporality": "past",
+      "certainty": "high",
+      "provenance_sentence": "15"
+    },
+    {
+      "gold_id": "G11",
+      "fact_text": "The patient has not had shoulder problems since the rotator cuff repair",
+      "category": "Past Medical History",
+      "speaker": "patient",
+      "temporality": "unknown",
+      "certainty": "high",
+      "provenance_sentence": "13"
+    },
+    {
+      "gold_id": "G12",
+      "fact_text": "The patient denies pins and needles in her feet",
+      "category": "Review of Systems",
+      "speaker": "patient",
+      "temporality": "current",
+      "certainty": "high",
+      "provenance_sentence": "16-17"
+    },
+    {
+      "gold_id": "G13",
+      "fact_text": "The patient denies swelling in her legs",
+      "category": "Review of Systems",
+      "speaker": "patient",
+      "temporality": "current",
+      "certainty": "high",
+      "provenance_sentence": "16-17"
+    },
+    {
+      "gold_id": "G14",
+      "fact_text": "The patient reports she has diabetes",
+      "category": "Past Medical History",
+      "speaker": "patient",
+      "temporality": "unknown",
+      "certainty": "high",
+      "provenance_sentence": "19"
+    },
+    {
+      "gold_id": "G15",
+      "fact_text": "The patient looks out for foot symptoms and leg swelling because she has diabetes",
+      "category": "Education",
+      "speaker": "patient",
+      "temporality": "unknown",
+      "certainty": "high",
+      "provenance_sentence": "19"
+    },
+    {
+      "gold_id": "G16",
+      "fact_text": "The patient reports her blood sugars have been under control",
+      "category": "Finding",
+      "speaker": "patient",
+      "temporality": "unknown",
+      "certainty": "high",
+      "provenance_sentence": "20-21"
+    },
+    {
+      "gold_id": "G17",
+      "fact_text": "The patient denies fever",
+      "category": "Review of Systems",
+      "speaker": "patient",
+      "temporality": "current",
+      "certainty": "high",
+      "provenance_sentence": "22-23"
+    },
+    {
+      "gold_id": "G18",
+      "fact_text": "The patient denies chills",
+      "category": "Review of Systems",
+      "speaker": "patient",
+      "temporality": "current",
+      "certainty": "high",
+      "provenance_sentence": "22-23"
+    },
+    {
+      "gold_id": "G19",
+      "fact_text": "The patient denies nausea",
+      "category": "Review of Systems",
+      "speaker": "patient",
+      "temporality": "current",
+      "certainty": "high",
+      "provenance_sentence": "24-25"
+    },
+    {
+      "gold_id": "G20",
+      "fact_text": "The patient denies vomiting",
+      "category": "Review of Systems",
+      "speaker": "patient",
+      "temporality": "current",
+      "certainty": "high",
+      "provenance_sentence": "24-25"
+    },
+    {
+      "gold_id": "G21",
+      "fact_text": "The patient denies chest pain",
+      "category": "Review of Systems",
+      "speaker": "patient",
+      "temporality": "current",
+      "certainty": "high",
+      "provenance_sentence": "24-25"
+    },
+    {
+      "gold_id": "G22",
+      "fact_text": "The patient denies shortness of breath",
+      "category": "Review of Systems",
+      "speaker": "patient",
+      "temporality": "current",
+      "certainty": "high",
+      "provenance_sentence": "24-25"
+    },
+    {
+      "gold_id": "G23",
+      "fact_text": "The patient has high blood pressure",
+      "category": "Past Medical History",
+      "speaker": "patient",
+      "temporality": "unknown",
+      "certainty": "high",
+      "provenance_sentence": "25"
+    },
+    {
+      "gold_id": "G24",
+      "fact_text": "The patient monitors her blood pressure",
+      "category": "Lifestyle",
+      "speaker": "patient",
+      "temporality": "unknown",
+      "certainty": "high",
+      "provenance_sentence": "25"
+    },
+    {
+      "gold_id": "G25",
+      "fact_text": "The patient has been taking medication for high blood pressure",
+      "category": "Medication",
+      "speaker": "patient",
+      "temporality": "unknown",
+      "certainty": "high",
+      "provenance_sentence": "25"
+    },
+    {
+      "gold_id": "G26",
+      "fact_text": "The patient reports her blood pressure has not elevated since the onset of joint pain",
+      "category": "Finding",
+      "speaker": "patient",
+      "temporality": "unknown",
+      "certainty": "high",
+      "provenance_sentence": "25"
+    },
+    {
+      "gold_id": "G27",
+      "fact_text": "The clinician notes the patient takes Norvasc 5 mg a day",
+      "category": "Medication",
+      "speaker": "clinician",
+      "temporality": "unknown",
+      "certainty": "high",
+      "provenance_sentence": "26"
+    },
+    {
+      "gold_id": "G28",
+      "fact_text": "The patient confirms she has been taking Norvasc 5 mg every day",
+      "category": "Medication",
+      "speaker": "patient",
+      "temporality": "unknown",
+      "certainty": "high",
+      "provenance_sentence": "26-27"
+    },
+    {
+      "gold_id": "G29",
+      "fact_text": "The clinician states the patient's blood pressure is pretty high today",
+      "category": "Finding",
+      "speaker": "clinician",
+      "temporality": "current",
+      "certainty": "high",
+      "provenance_sentence": "28"
+    },
+    {
+      "gold_id": "G30",
+      "fact_text": "The clinician suggests the patient might be a little nervous contributing to high blood pressure today",
+      "category": "Assessment",
+      "speaker": "clinician",
+      "temporality": "current",
+      "certainty": "medium",
+      "provenance_sentence": "28"
+    },
+    {
+      "gold_id": "G31",
+      "fact_text": "On exam, the patient's neck is soft with no enlarged thyroid",
+      "category": "Physical Exam",
+      "speaker": "clinician",
+      "temporality": "current",
+      "certainty": "high",
+      "provenance_sentence": "30"
+    },
+    {
+      "gold_id": "G32",
+      "fact_text": "On exam, the patient's heart has a regular rate and rhythm",
+      "category": "Physical Exam",
+      "speaker": "clinician",
+      "temporality": "current",
+      "certainty": "high",
+      "provenance_sentence": "30"
+    },
+    {
+      "gold_id": "G33",
+      "fact_text": "On exam, the patient's lungs are clear",
+      "category": "Physical Exam",
+      "speaker": "clinician",
+      "temporality": "current",
+      "certainty": "high",
+      "provenance_sentence": "30"
+    },
+    {
+      "gold_id": "G34",
+      "fact_text": "On exam, the patient's abdomen is soft",
+      "category": "Physical Exam",
+      "speaker": "clinician",
+      "temporality": "current",
+      "certainty": "high",
+      "provenance_sentence": "30"
+    },
+    {
+      "gold_id": "G35",
+      "fact_text": "On exam, the patient's left knee has slight erythema",
+      "category": "Physical Exam",
+      "speaker": "clinician",
+      "temporality": "current",
+      "certainty": "high",
+      "provenance_sentence": "30"
+    },
+    {
+      "gold_id": "G36",
+      "fact_text": "On exam, the patient's left knee has slight edema",
+      "category": "Physical Exam",
+      "speaker": "clinician",
+      "temporality": "current",
+      "certainty": "high",
+      "provenance_sentence": "30"
+    },
+    {
+      "gold_id": "G37",
+      "fact_text": "On exam, there is a small effusion over the patient's left knee",
+      "category": "Physical Exam",
+      "speaker": "clinician",
+      "temporality": "current",
+      "certainty": "high",
+      "provenance_sentence": "30"
+    },
+    {
+      "gold_id": "G38",
+      "fact_text": "On exam, the patient has decreased flexion and extension of the left knee",
+      "category": "Physical Exam",
+      "speaker": "clinician",
+      "temporality": "current",
+      "certainty": "high",
+      "provenance_sentence": "30"
+    },
+    {
+      "gold_id": "G39",
+      "fact_text": "On exam, the patient's lower extremity strength is good",
+      "category": "Physical Exam",
+      "speaker": "clinician",
+      "temporality": "current",
+      "certainty": "high",
+      "provenance_sentence": "30"
+    },
+    {
+      "gold_id": "G40",
+      "fact_text": "The patient had left knee x-rays performed when she came in",
+      "category": "Test Result",
+      "speaker": "clinician",
+      "temporality": "past",
+      "certainty": "high",
+      "provenance_sentence": "30,32"
+    },
+    {
+      "gold_id": "G41",
+      "fact_text": "The clinician interprets the left knee x-ray as normal",
+      "category": "Test Result",
+      "speaker": "clinician",
+      "temporality": "current",
+      "certainty": "high",
+      "provenance_sentence": "32"
+    },
+    {
+      "gold_id": "G42",
+      "fact_text": "The clinician thinks the patient may have a strain in her knees",
+      "category": "Assessment",
+      "speaker": "clinician",
+      "temporality": "current",
+      "certainty": "medium",
+      "provenance_sentence": "32"
+    },
+    {
+      "gold_id": "G43",
+      "fact_text": "The clinician notes the patient's white blood cell count is not elevated",
+      "category": "Test Result",
+      "speaker": "clinician",
+      "temporality": "current",
+      "certainty": "high",
+      "provenance_sentence": "34"
+    },
+    {
+      "gold_id": "G44",
+      "fact_text": "Based on the white blood cell count, the clinician is not concerned about an infection",
+      "category": "Assessment",
+      "speaker": "clinician",
+      "temporality": "current",
+      "certainty": "high",
+      "provenance_sentence": "34"
+    },
+    {
+      "gold_id": "G45",
+      "fact_text": "The clinician notes the patient's A1c is a little elevated",
+      "category": "Test Result",
+      "speaker": "clinician",
+      "temporality": "current",
+      "certainty": "high",
+      "provenance_sentence": "34"
+    },
+    {
+      "gold_id": "G46",
+      "fact_text": "The clinician states the A1c elevation is not terrible",
+      "category": "Assessment",
+      "speaker": "clinician",
+      "temporality": "current",
+      "certainty": "medium",
+      "provenance_sentence": "34"
+    },
+    {
+      "gold_id": "G47",
+      "fact_text": "The clinician plans to continue the patient on her current diabetes regimen",
+      "category": "MedicationPlan",
+      "speaker": "clinician",
+      "temporality": "future",
+      "certainty": "high",
+      "provenance_sentence": "34"
+    },
+    {
+      "gold_id": "G48",
+      "fact_text": "The clinician plans to send autoimmune labs to work up the patient's left knee pain",
+      "category": "Plan",
+      "speaker": "clinician",
+      "temporality": "future",
+      "certainty": "high",
+      "provenance_sentence": "34"
+    },
+    {
+      "gold_id": "G49",
+      "fact_text": "The clinician plans for the patient to do physical therapy for joint pain",
+      "category": "Plan",
+      "speaker": "clinician",
+      "temporality": "future",
+      "certainty": "high",
+      "provenance_sentence": "34"
+    },
+    {
+      "gold_id": "G50",
+      "fact_text": "The clinician plans to give the patient anti-inflammatory medication to help with pain",
+      "category": "MedicationPlan",
+      "speaker": "clinician",
+      "temporality": "future",
+      "certainty": "high",
+      "provenance_sentence": "34"
+    },
+    {
+      "gold_id": "G51",
+      "fact_text": "The patient agrees with the proposed plan for joint pain management",
+      "category": "Counseling",
+      "speaker": "patient",
+      "temporality": "current",
+      "certainty": "high",
+      "provenance_sentence": "34-35"
+    },
+    {
+      "gold_id": "G52",
+      "fact_text": "The clinician orders meloxicam 15 mg once a day",
+      "category": "MedicationPlan",
+      "speaker": "clinician",
+      "temporality": "future",
+      "certainty": "high",
+      "provenance_sentence": "36"
+    },
+    {
+      "gold_id": "G53",
+      "fact_text": "The clinician orders a physical therapy referral",
+      "category": "Plan",
+      "speaker": "clinician",
+      "temporality": "future",
+      "certainty": "high",
+      "provenance_sentence": "36"
+    },
+    {
+      "gold_id": "G54",
+      "fact_text": "The clinician orders an autoimmune profile",
+      "category": "Plan",
+      "speaker": "clinician",
+      "temporality": "future",
+      "certainty": "high",
+      "provenance_sentence": "36"
+    },
+    {
+      "gold_id": "G55",
+      "fact_text": "Because the patient's blood pressure is a little elevated today, the clinician wants her to continue to monitor it at home",
+      "category": "Plan",
+      "speaker": "clinician",
+      "temporality": "future",
+      "certainty": "high",
+      "provenance_sentence": "36"
+    },
+    {
+      "gold_id": "G56",
+      "fact_text": "The clinician asks the patient to send a blood pressure report in the next couple of weeks",
+      "category": "Plan",
+      "speaker": "clinician",
+      "temporality": "future",
+      "certainty": "high",
+      "provenance_sentence": "36"
+    },
+    {
+      "gold_id": "G57",
+      "fact_text": "The patient has a blood pressure cuff at home",
+      "category": "Lifestyle",
+      "speaker": "patient",
+      "temporality": "current",
+      "certainty": "high",
+      "provenance_sentence": "36-37"
+    },
+    {
+      "gold_id": "G58",
+      "fact_text": "The clinician plans to order a lipid profile for the patient",
+      "category": "Plan",
+      "speaker": "clinician",
+      "temporality": "future",
+      "certainty": "high",
+      "provenance_sentence": "38"
+    },
+    {
+      "gold_id": "G59",
+      "fact_text": "The clinician plans to continue the patient on metformin 500 mg twice a day",
+      "category": "MedicationPlan",
+      "speaker": "clinician",
+      "temporality": "future",
+      "certainty": "high",
+      "provenance_sentence": "38"
+    }
+  ],
+  "generator_model": "gpt-5.1",
+  "generated_at": "2026-04-11T09:00:58.375045+00:00"
+}

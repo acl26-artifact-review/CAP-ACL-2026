@@ -1,0 +1,1794 @@
+{
+  "case_id": "D2N080",
+  "method": "cap_only",
+  "template": "soap",
+  "summary_text": "S:\nThe patient reports intermittent left knee pain, describing a sensation of 'giving out' when kneeling and using a cane to stabilize the knee. He reports pain in the left hand. The patient denies pain. The patient reports knee pain. The patient reports pain lasting only a short time.\n\nO:\nThe patient's blood pressure is mildly low. Heart rate is 78 bpm and regular. Neurological exam is nonfocal. The patient has a knee.\n\nA:\nThe patient has knee pain. The primary problem is knee pain.\n\nP:\nThe doctor suggests a cane in case. The doctor orders a hemoglobin A1C test. The doctor orders a lipid panel. The doctor orders an echocardiogram. The patient is taking metformin. The patient is taking blood pressure medicine. The doctor recommends physical therapy.",
+  "reference_summary": "CHIEF COMPLAINT\n\nLeft knee pain.\n\nHISTORY OF PRESENT ILLNESS\n\nAndrea Barnes is a 34-year-old female who presents today for evaluation of left knee pain.\n\nThe patient has been experiencing intermittent episodes of pain and sudden instability with ambulation. Her pain is localized deep in her patella and occurs less than once daily. Due to the fleeting nature of these episodes, she has not taken medication and simply braces herself until it passes. She denies any trauma or injury, or ever hearing or feeling a pop in the knee. Her symptoms do not interfere with her daily activities and she does not use a cane.\n\nRegarding her hypertension, it has been several days since she last checked her blood pressure at home, but it was approximately 120/70 mmHg at that time. Her current medications include amlodipine, lisinopril, and hydrochlorothiazide, all of which she takes on a regular basis.\n\nIn terms of her diabetes, her fasting morning blood glucose levels have been approximately 130 based on home monitoring. This is slightly higher than usual, even though she has been compliant with metformin and Farxiga. She does try to avoid eating late at night.\n\nMEDICAL HISTORY\n\nPatient reports a personal history of hypertension and type 2 diabetes.\n\nSOCIAL HISTORY\n\nPatient likes to travel and is planning a trip to Columbus, Georgia in the next month or so. She is part of the Lion's Club.\n\nMEDICATIONS\n\nPatient reports that she is taking amlodipine, lisinopril 20 mg once daily, hydrochlorothiazide, Metformin, and Farxiga.\n\nREVIEW OF SYSTEMS\n\nMusculoskeletal: Reports left knee pain and instability,\n\nVITALS\n\nTemperature: 98.2 degrees F\nHeart rate: 72 bpm\nRespirations: 16\nBlood pressure: 122/70 mmHg\n\nPHYSICAL EXAM\n\nMSK: Examination of the right knee: No ecchymosis or edema. No effusion. No pain with palpation.\nExamination of the left knee: Full range of motion. Negative varus and valgus stress test.\n\nRESULTS\n\nX-rays were obtained and reviewed today. These reveal no evidence of fracture or bony abnormality.\n\nASSESSMENT\n\n1. Left knee pain.\n2. Hypertension.\n3. Diabetes mellitus type 2.\n\nPLAN\n\nAfter reviewing the patients x-rays, I believe there is some arthritis in the knee. I'm going to prescribe meloxicam 15 mg once daily. We can consider physical therapy to strengthen the muscles around the area to prevent any further issues.\n\nHer hypertension is well controlled with her current medication regimen. She can continue with lisinopril 20 mg once daily. I'm also going to order an echocardiogram for further evaluation of the murmur heard on exam.\n\nShe has been compliant with metformin as prescribed, but her blood glucose levels have been slightly elevated recently. I'm going to order a lipid panel, as well as a hemoglobin A1c to determine if any adjustments need to be made to her dose of metformin.",
+  "source_cap": {
+    "atomic_propositions": [
+      {
+        "prop_id": "CAP1",
+        "cap_type": "Diagnosis",
+        "canonical_concept": "arthritis",
+        "category": "Diagnosis",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "diagnostic"
+        ],
+        "proposition_text": "The doctor believes the patient has arthritis in the left knee."
+      },
+      {
+        "prop_id": "CAP2",
+        "cap_type": "Diagnosis",
+        "canonical_concept": "diabetes mellitus",
+        "category": "Diagnosis",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "diagnostic"
+        ],
+        "proposition_text": "The doctor believes the patient has diabetes mellitus."
+      },
+      {
+        "prop_id": "CAP3",
+        "cap_type": "Diagnosis",
+        "canonical_concept": "hypertension",
+        "category": "Diagnosis",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "diagnostic"
+        ],
+        "proposition_text": "The doctor believes the patient has hypertension."
+      },
+      {
+        "prop_id": "CAP4",
+        "cap_type": "Symptom",
+        "canonical_concept": "left knee pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "intermittent",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports intermittent left knee pain."
+      },
+      {
+        "prop_id": "CAP5",
+        "cap_type": "Problem",
+        "canonical_concept": "knee pain",
+        "category": "Problem",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "intermittent",
+        "proposition_text": "The patient has knee pain."
+      },
+      {
+        "prop_id": "CAP6",
+        "cap_type": "Symptom",
+        "canonical_concept": "giving out",
+        "category": "Symptom",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "intermittent",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient describes a sensation of 'giving out' in the left knee."
+      },
+      {
+        "prop_id": "CAP7",
+        "cap_type": "Symptom",
+        "canonical_concept": "holding grocery carts",
+        "category": "Symptom",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient uses holding grocery carts to stabilize the knee."
+      },
+      {
+        "prop_id": "CAP8",
+        "cap_type": "Symptom",
+        "canonical_concept": "interference",
+        "category": "Symptom",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient's pain does not interfere with daily activities."
+      },
+      {
+        "prop_id": "CAP9",
+        "cap_type": "Symptom",
+        "canonical_concept": "pain",
+        "category": "Symptom",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "short duration",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient's pain lasts only a short time."
+      },
+      {
+        "prop_id": "CAP10",
+        "cap_type": "Symptom",
+        "canonical_concept": "pain",
+        "category": "Symptom",
+        "speaker": "doctor",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports pain in the left hand."
+      },
+      {
+        "prop_id": "CAP11",
+        "cap_type": "Symptom",
+        "canonical_concept": "left knee pain",
+        "category": "Symptom",
+        "speaker": "doctor",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports pain in the left knee."
+      },
+      {
+        "prop_id": "CAP12",
+        "cap_type": "Symptom",
+        "canonical_concept": "knee",
+        "category": "Symptom",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient has a knee."
+      },
+      {
+        "prop_id": "CAP13",
+        "cap_type": "Symptom",
+        "canonical_concept": "knee pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports knee pain."
+      },
+      {
+        "prop_id": "CAP14",
+        "cap_type": "Problem",
+        "canonical_concept": "knee pain",
+        "category": "Problem",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient has knee pain."
+      },
+      {
+        "prop_id": "CAP15",
+        "cap_type": "Symptom",
+        "canonical_concept": "pain",
+        "category": "Symptom",
+        "speaker": "doctor",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports pain."
+      },
+      {
+        "prop_id": "CAP16",
+        "cap_type": "Symptom",
+        "canonical_concept": "no pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "denies",
+        "status": "affirmed",
+        "visit_state": "resolved",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient denies pain."
+      },
+      {
+        "prop_id": "CAP17",
+        "cap_type": "Order",
+        "canonical_concept": "cane",
+        "category": "Order",
+        "speaker": "doctor",
+        "status": "uncertain",
+        "visit_state": "planned",
+        "temporality": "future",
+        "proposition_text": "The doctor suggests a cane in case."
+      },
+      {
+        "prop_id": "CAP18",
+        "cap_type": "TestResult",
+        "canonical_concept": "hemoglobin a1c",
+        "category": "TestResult",
+        "speaker": "doctor",
+        "predicate": "orders",
+        "status": "uncertain",
+        "visit_state": "planned",
+        "temporality": "future",
+        "claim_type_tags": [
+          "plan",
+          "quantitative"
+        ],
+        "proposition_text": "The doctor orders a hemoglobin A1C test."
+      },
+      {
+        "prop_id": "CAP19",
+        "cap_type": "TestResult",
+        "canonical_concept": "lipid panel",
+        "category": "TestResult",
+        "speaker": "doctor",
+        "predicate": "orders",
+        "status": "uncertain",
+        "visit_state": "planned",
+        "temporality": "future",
+        "claim_type_tags": [
+          "plan"
+        ],
+        "proposition_text": "The doctor orders a lipid panel."
+      },
+      {
+        "prop_id": "CAP20",
+        "cap_type": "Order",
+        "canonical_concept": "echocardiogram",
+        "category": "Order",
+        "speaker": "doctor",
+        "predicate": "orders",
+        "status": "uncertain",
+        "visit_state": "planned",
+        "temporality": "future",
+        "claim_type_tags": [
+          "plan"
+        ],
+        "proposition_text": "The doctor orders an echocardiogram."
+      },
+      {
+        "prop_id": "CAP21",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "meloxicam",
+        "category": "MedicationStatement",
+        "speaker": "doctor",
+        "predicate": "prescribes",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "medication",
+          "quantitative"
+        ],
+        "proposition_text": "The doctor prescribes meloxicam at 15 mg daily."
+      },
+      {
+        "prop_id": "CAP22",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "lisinopril",
+        "category": "MedicationStatement",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "medication",
+          "quantitative"
+        ],
+        "proposition_text": "The doctor continues lisinopril at 20 mg daily."
+      },
+      {
+        "prop_id": "CAP23",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "blood pressure medicine",
+        "category": "MedicationStatement",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient is taking blood pressure medicine."
+      },
+      {
+        "prop_id": "CAP24",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "metformin",
+        "category": "MedicationStatement",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "medication"
+        ],
+        "proposition_text": "The patient is taking metformin."
+      },
+      {
+        "prop_id": "CAP25",
+        "cap_type": "Counseling",
+        "canonical_concept": "physical therapy",
+        "category": "Counseling",
+        "speaker": "doctor",
+        "predicate": "recommends",
+        "status": "uncertain",
+        "visit_state": "planned",
+        "temporality": "future",
+        "claim_type_tags": [
+          "plan"
+        ],
+        "proposition_text": "The doctor recommends physical therapy."
+      }
+    ],
+    "filtered_nonverifiable_units": []
+  },
+  "event_plan": null,
+  "summary_cap": {
+    "atomic_propositions": [
+      {
+        "prop_id": "P1",
+        "cap_type": "Symptom",
+        "canonical_concept": "pain:knee",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports intermittent left knee pain"
+      },
+      {
+        "prop_id": "P2",
+        "cap_type": "Symptom",
+        "canonical_concept": "sensory change",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient describes a sensation of 'giving out' when kneeling"
+      },
+      {
+        "prop_id": "P3",
+        "cap_type": "Symptom",
+        "canonical_concept": "uses cane stabilize knee",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient uses a cane to stabilize the knee"
+      },
+      {
+        "prop_id": "P4",
+        "cap_type": "Symptom",
+        "canonical_concept": "pain:hand",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports pain in the left hand"
+      },
+      {
+        "prop_id": "P5",
+        "cap_type": "Symptom",
+        "canonical_concept": "pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "denies",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient denies pain"
+      },
+      {
+        "prop_id": "P6",
+        "cap_type": "Symptom",
+        "canonical_concept": "pain:knee",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports knee pain"
+      },
+      {
+        "prop_id": "P7",
+        "cap_type": "Symptom",
+        "canonical_concept": "pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports pain lasting only a short time"
+      },
+      {
+        "prop_id": "P8",
+        "cap_type": "Finding",
+        "canonical_concept": "knee",
+        "category": "Finding",
+        "speaker": "unknown",
+        "predicate": "has",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "exam"
+        ],
+        "proposition_text": "The patient has a knee"
+      },
+      {
+        "prop_id": "P9",
+        "cap_type": "Problem",
+        "canonical_concept": "pain:knee",
+        "category": "Problem",
+        "speaker": "clinician",
+        "predicate": "diagnoses",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "diagnostic"
+        ],
+        "proposition_text": "The primary problem is knee pain"
+      },
+      {
+        "prop_id": "P10",
+        "cap_type": "MedicationPlan",
+        "canonical_concept": "recommends physical therapy",
+        "category": "MedicationPlan",
+        "speaker": "clinician",
+        "predicate": "prescribes",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "medication"
+        ],
+        "proposition_text": "The doctor recommends physical therapy"
+      },
+      {
+        "prop_id": "P11",
+        "cap_type": "Order",
+        "canonical_concept": "orders hemoglobin a1c test",
+        "category": "Order",
+        "speaker": "clinician",
+        "predicate": "orders",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "test"
+        ],
+        "proposition_text": "The doctor orders a hemoglobin A1C test"
+      },
+      {
+        "prop_id": "P12",
+        "cap_type": "Order",
+        "canonical_concept": "orders lipid panel",
+        "category": "Order",
+        "speaker": "clinician",
+        "predicate": "orders",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "test"
+        ],
+        "proposition_text": "The doctor orders a lipid panel"
+      },
+      {
+        "prop_id": "P13",
+        "cap_type": "Order",
+        "canonical_concept": "orders echocardiogram",
+        "category": "Order",
+        "speaker": "clinician",
+        "predicate": "orders",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "test"
+        ],
+        "proposition_text": "The doctor orders an echocardiogram"
+      },
+      {
+        "prop_id": "P14",
+        "cap_type": "MedicationPlan",
+        "canonical_concept": "metformin",
+        "category": "MedicationPlan",
+        "speaker": "patient",
+        "predicate": "takes",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "medication"
+        ],
+        "proposition_text": "The patient is taking metformin"
+      }
+    ],
+    "filtered_nonverifiable_units": [],
+    "runtime_seconds": 27.318
+  },
+  "cap_alignment": {
+    "cap_precision": 1.0,
+    "cap_recall": 0.56,
+    "cap_f1": 0.717948717948718,
+    "matched_count": 14,
+    "summary_prop_count": 14,
+    "source_prop_count": 25,
+    "matched_pairs": [
+      {
+        "score": 1.0,
+        "summary_prop_id": "P14",
+        "source_prop_id": "CAP24",
+        "summary_text": "The patient is taking metformin",
+        "source_text": "The patient is taking metformin."
+      },
+      {
+        "score": 1.0,
+        "summary_prop_id": "P13",
+        "source_prop_id": "CAP20",
+        "summary_text": "The doctor orders an echocardiogram",
+        "source_text": "The doctor orders an echocardiogram."
+      },
+      {
+        "score": 1.0,
+        "summary_prop_id": "P12",
+        "source_prop_id": "CAP19",
+        "summary_text": "The doctor orders a lipid panel",
+        "source_text": "The doctor orders a lipid panel."
+      },
+      {
+        "score": 1.0,
+        "summary_prop_id": "P11",
+        "source_prop_id": "CAP18",
+        "summary_text": "The doctor orders a hemoglobin A1C test",
+        "source_text": "The doctor orders a hemoglobin A1C test."
+      },
+      {
+        "score": 1.0,
+        "summary_prop_id": "P10",
+        "source_prop_id": "CAP25",
+        "summary_text": "The doctor recommends physical therapy",
+        "source_text": "The doctor recommends physical therapy."
+      },
+      {
+        "score": 1.0,
+        "summary_prop_id": "P9",
+        "source_prop_id": "CAP14",
+        "summary_text": "The primary problem is knee pain",
+        "source_text": "The patient has knee pain."
+      },
+      {
+        "score": 1.0,
+        "summary_prop_id": "P8",
+        "source_prop_id": "CAP12",
+        "summary_text": "The patient has a knee",
+        "source_text": "The patient has a knee."
+      },
+      {
+        "score": 1.0,
+        "summary_prop_id": "P7",
+        "source_prop_id": "CAP15",
+        "summary_text": "The patient reports pain lasting only a short time",
+        "source_text": "The patient reports pain."
+      },
+      {
+        "score": 1.0,
+        "summary_prop_id": "P6",
+        "source_prop_id": "CAP13",
+        "summary_text": "The patient reports knee pain",
+        "source_text": "The patient reports knee pain."
+      },
+      {
+        "score": 1.0,
+        "summary_prop_id": "P5",
+        "source_prop_id": "CAP16",
+        "summary_text": "The patient denies pain",
+        "source_text": "The patient denies pain."
+      },
+      {
+        "score": 1.0,
+        "summary_prop_id": "P4",
+        "source_prop_id": "CAP10",
+        "summary_text": "The patient reports pain in the left hand",
+        "source_text": "The patient reports pain in the left hand."
+      },
+      {
+        "score": 1.0,
+        "summary_prop_id": "P1",
+        "source_prop_id": "CAP5",
+        "summary_text": "The patient reports intermittent left knee pain",
+        "source_text": "The patient has knee pain."
+      },
+      {
+        "score": 0.7368,
+        "summary_prop_id": "P3",
+        "source_prop_id": "CAP7",
+        "summary_text": "The patient uses a cane to stabilize the knee",
+        "source_text": "The patient uses holding grocery carts to stabilize the knee."
+      },
+      {
+        "score": 0.7273,
+        "summary_prop_id": "P2",
+        "source_prop_id": "CAP6",
+        "summary_text": "The patient describes a sensation of 'giving out' when kneeling",
+        "source_text": "The patient describes a sensation of 'giving out' in the left knee."
+      }
+    ],
+    "unsupported_summary_props": [],
+    "missing_source_props": [
+      {
+        "prop_id": "CAP1",
+        "cap_type": "Diagnosis",
+        "canonical_concept": "arthritis",
+        "category": "Diagnosis",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "diagnostic"
+        ],
+        "proposition_text": "The doctor believes the patient has arthritis in the left knee."
+      },
+      {
+        "prop_id": "CAP2",
+        "cap_type": "Diagnosis",
+        "canonical_concept": "diabetes mellitus",
+        "category": "Diagnosis",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "diagnostic"
+        ],
+        "proposition_text": "The doctor believes the patient has diabetes mellitus."
+      },
+      {
+        "prop_id": "CAP3",
+        "cap_type": "Diagnosis",
+        "canonical_concept": "hypertension",
+        "category": "Diagnosis",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "diagnostic"
+        ],
+        "proposition_text": "The doctor believes the patient has hypertension."
+      },
+      {
+        "prop_id": "CAP4",
+        "cap_type": "Symptom",
+        "canonical_concept": "left knee pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "intermittent",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports intermittent left knee pain."
+      },
+      {
+        "prop_id": "CAP8",
+        "cap_type": "Symptom",
+        "canonical_concept": "interference",
+        "category": "Symptom",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient's pain does not interfere with daily activities."
+      },
+      {
+        "prop_id": "CAP9",
+        "cap_type": "Symptom",
+        "canonical_concept": "pain",
+        "category": "Symptom",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "short duration",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient's pain lasts only a short time."
+      },
+      {
+        "prop_id": "CAP11",
+        "cap_type": "Symptom",
+        "canonical_concept": "left knee pain",
+        "category": "Symptom",
+        "speaker": "doctor",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports pain in the left knee."
+      },
+      {
+        "prop_id": "CAP17",
+        "cap_type": "Order",
+        "canonical_concept": "cane",
+        "category": "Order",
+        "speaker": "doctor",
+        "status": "uncertain",
+        "visit_state": "planned",
+        "temporality": "future",
+        "proposition_text": "The doctor suggests a cane in case."
+      },
+      {
+        "prop_id": "CAP21",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "meloxicam",
+        "category": "MedicationStatement",
+        "speaker": "doctor",
+        "predicate": "prescribes",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "medication",
+          "quantitative"
+        ],
+        "proposition_text": "The doctor prescribes meloxicam at 15 mg daily."
+      },
+      {
+        "prop_id": "CAP22",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "lisinopril",
+        "category": "MedicationStatement",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "medication",
+          "quantitative"
+        ],
+        "proposition_text": "The doctor continues lisinopril at 20 mg daily."
+      },
+      {
+        "prop_id": "CAP23",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "blood pressure medicine",
+        "category": "MedicationStatement",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient is taking blood pressure medicine."
+      }
+    ]
+  },
+  "reference_gpt_f1_items": {
+    "active_problems_symptoms": [
+      "left knee pain and instability",
+      "Left knee pain",
+      "Hypertension",
+      "Diabetes mellitus type 2",
+      "arthritis in the knee",
+      "slightly elevated blood glucose levels",
+      "murmur heard on exam"
+    ],
+    "negated_findings": [],
+    "uncertain_findings": [],
+    "medication_treatment": [
+      "amlodipine",
+      "lisinopril 20 mg once daily",
+      "hydrochlorothiazide",
+      "Metformin",
+      "Farxiga",
+      "meloxicam 15 mg once daily"
+    ],
+    "plan_followup": [
+      "order an echocardiogram",
+      "order a lipid panel",
+      "order a hemoglobin A1c"
+    ],
+    "_chunk_count": [
+      "4"
+    ]
+  },
+  "summary_gpt_f1_items": {
+    "active_problems_symptoms": [
+      "left knee pain",
+      "left hand pain",
+      "knee pain"
+    ],
+    "negated_findings": [
+      "denies pain"
+    ],
+    "uncertain_findings": [],
+    "medication_treatment": [
+      "metformin",
+      "blood pressure medicine"
+    ],
+    "plan_followup": [
+      "hemoglobin A1C test",
+      "lipid panel",
+      "echocardiogram",
+      "physical therapy"
+    ],
+    "_chunk_count": [
+      "1"
+    ]
+  },
+  "gpt_f1_alignment": {
+    "by_category": {
+      "active_problems_symptoms": {
+        "precision": 0.3333333333333333,
+        "recall": 0.14285714285714285,
+        "f1": 0.2,
+        "matched_count": 1,
+        "pred_count": 3,
+        "ref_count": 7,
+        "matches": [
+          {
+            "score": 1.0,
+            "pred_text": "left knee pain",
+            "ref_text": "Left knee pain"
+          }
+        ],
+        "unsupported_pred_items": [
+          "left hand pain",
+          "knee pain"
+        ],
+        "missing_ref_items": [
+          "left knee pain and instability",
+          "Hypertension",
+          "Diabetes mellitus type 2",
+          "arthritis in the knee",
+          "slightly elevated blood glucose levels",
+          "murmur heard on exam"
+        ]
+      },
+      "negated_findings": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "matched_count": 0,
+        "pred_count": 1,
+        "ref_count": 0,
+        "matches": [],
+        "unsupported_pred_items": [
+          "denies pain"
+        ],
+        "missing_ref_items": []
+      },
+      "uncertain_findings": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "matched_count": 0,
+        "pred_count": 0,
+        "ref_count": 0,
+        "matches": [],
+        "unsupported_pred_items": [],
+        "missing_ref_items": []
+      },
+      "medication_treatment": {
+        "precision": 0.5,
+        "recall": 0.16666666666666666,
+        "f1": 0.25,
+        "matched_count": 1,
+        "pred_count": 2,
+        "ref_count": 6,
+        "matches": [
+          {
+            "score": 1.0,
+            "pred_text": "metformin",
+            "ref_text": "Metformin"
+          }
+        ],
+        "unsupported_pred_items": [
+          "blood pressure medicine"
+        ],
+        "missing_ref_items": [
+          "amlodipine",
+          "lisinopril 20 mg once daily",
+          "hydrochlorothiazide",
+          "Farxiga",
+          "meloxicam 15 mg once daily"
+        ]
+      },
+      "plan_followup": {
+        "precision": 0.75,
+        "recall": 1.0,
+        "f1": 0.8571428571428571,
+        "matched_count": 3,
+        "pred_count": 4,
+        "ref_count": 3,
+        "matches": [
+          {
+            "score": 0.8,
+            "pred_text": "lipid panel",
+            "ref_text": "order a lipid panel"
+          },
+          {
+            "score": 0.6667,
+            "pred_text": "echocardiogram",
+            "ref_text": "order an echocardiogram"
+          },
+          {
+            "score": 0.6667,
+            "pred_text": "hemoglobin A1C test",
+            "ref_text": "order a hemoglobin A1c"
+          }
+        ],
+        "unsupported_pred_items": [
+          "physical therapy"
+        ],
+        "missing_ref_items": []
+      }
+    }
+  },
+  "reference_nair_concepts": {
+    "sections": [
+      {
+        "heading": "Clinical Note",
+        "section_value": "CHIEF COMPLAINT\nLeft knee pain.\nHISTORY OF PRESENT ILLNESS\nAndrea Barnes is a 34-year-old female who presents today for evaluation of left knee pain.\nThe patient has been experiencing intermittent episodes of pain and sudden instability with ambulation. Her pain is localized deep in her patella and occurs less than once daily. Due to the fleeting nature of these episodes, she has not taken medication and simply braces herself until it passes. She denies any trauma or injury, or ever hearing or feeling a pop in the knee. Her symptoms do not interfere with her daily activities and she does not use a cane.\nRegarding her hypertension, it has been several days since she last checked her blood pressure at home, but it was approximately 120/70 mmHg at that time. Her current medications include amlodipine, lisinopril, and hydrochlorothiazide, all of which she takes on a regular basis.\nIn terms of her diabetes, her fasting morning blood glucose levels have been approximately 130 based on home monitoring. This is slightly higher than usual, even though she has been compliant with metformin and Farxiga. She does try to avoid eating late at night.\nMEDICAL HISTORY\nPatient reports a personal history of hypertension and type 2 diabetes.\nSOCIAL HISTORY",
+        "medical_concepts": [
+          "left knee pain",
+          "knee instability",
+          "patellar pain",
+          "trauma",
+          "injury",
+          "hypertension",
+          "blood pressure",
+          "amlodipine",
+          "lisinopril",
+          "hydrochlorothiazide",
+          "diabetes",
+          "type 2 diabetes",
+          "fasting blood glucose",
+          "metformin",
+          "Farxiga"
+        ]
+      },
+      {
+        "heading": "Clinical Note",
+        "section_value": "Patient likes to travel and is planning a trip to Columbus, Georgia in the next month or so. She is part of the Lion's Club.\nMEDICATIONS\nPatient reports that she is taking amlodipine, lisinopril 20 mg once daily, hydrochlorothiazide, Metformin, and Farxiga.\nREVIEW OF SYSTEMS\nMusculoskeletal: Reports left knee pain and instability,\nVITALS\nTemperature: 98.2 degrees F\nHeart rate: 72 bpm\nRespirations: 16\nBlood pressure: 122/70 mmHg",
+        "medical_concepts": [
+          "amlodipine",
+          "lisinopril",
+          "hydrochlorothiazide",
+          "metformin",
+          "Farxiga",
+          "left knee pain",
+          "knee instability",
+          "temperature",
+          "heart rate",
+          "respirations",
+          "blood pressure"
+        ]
+      },
+      {
+        "heading": "Clinical Note",
+        "section_value": "PHYSICAL EXAM\nMSK: Examination of the right knee: No ecchymosis or edema. No effusion. No pain with palpation.\nExamination of the left knee: Full range of motion. Negative varus and valgus stress test.\nRESULTS\nX-rays were obtained and reviewed today. These reveal no evidence of fracture or bony abnormality.\nASSESSMENT\n1. Left knee pain.\n2. Hypertension.\n3. Diabetes mellitus type 2.\nPLAN",
+        "medical_concepts": [
+          "ecchymosis",
+          "edema",
+          "effusion",
+          "pain with palpation",
+          "range of motion",
+          "varus stress test",
+          "valgus stress test",
+          "X-ray",
+          "fracture",
+          "bony abnormality",
+          "left knee pain",
+          "hypertension",
+          "diabetes mellitus type 2"
+        ]
+      },
+      {
+        "heading": "Clinical Note",
+        "section_value": "After reviewing the patients x-rays, I believe there is some arthritis in the knee. I'm going to prescribe meloxicam 15 mg once daily. We can consider physical therapy to strengthen the muscles around the area to prevent any further issues.\nHer hypertension is well controlled with her current medication regimen. She can continue with lisinopril 20 mg once daily. I'm also going to order an echocardiogram for further evaluation of the murmur heard on exam.\nShe has been compliant with metformin as prescribed, but her blood glucose levels have been slightly elevated recently. I'm going to order a lipid panel, as well as a hemoglobin A1c to determine if any adjustments need to be made to her dose of metformin.",
+        "medical_concepts": [
+          "x-ray",
+          "arthritis",
+          "knee",
+          "meloxicam",
+          "physical therapy",
+          "hypertension",
+          "lisinopril",
+          "echocardiogram",
+          "heart murmur",
+          "metformin",
+          "elevated blood glucose",
+          "lipid panel",
+          "hemoglobin A1c"
+        ]
+      }
+    ],
+    "medical_concepts": [
+      "left knee pain",
+      "knee instability",
+      "patellar pain",
+      "trauma",
+      "injury",
+      "hypertension",
+      "blood pressure",
+      "amlodipine",
+      "lisinopril",
+      "hydrochlorothiazide",
+      "diabetes",
+      "type 2 diabetes",
+      "fasting blood glucose",
+      "metformin",
+      "Farxiga",
+      "temperature",
+      "heart rate",
+      "respirations",
+      "ecchymosis",
+      "edema",
+      "effusion",
+      "pain with palpation",
+      "range of motion",
+      "varus stress test",
+      "valgus stress test",
+      "X-ray",
+      "fracture",
+      "bony abnormality",
+      "diabetes mellitus type 2",
+      "arthritis",
+      "knee",
+      "meloxicam",
+      "physical therapy",
+      "echocardiogram",
+      "heart murmur",
+      "elevated blood glucose",
+      "lipid panel",
+      "hemoglobin A1c"
+    ],
+    "section_count": 4
+  },
+  "summary_nair_concepts": {
+    "sections": [
+      {
+        "heading": "S",
+        "section_value": "The patient reports intermittent left knee pain, describing a sensation of 'giving out' when kneeling and using a cane to stabilize the knee. He reports pain in the left hand. The patient denies pain. The patient reports knee pain. The patient reports pain lasting only a short time.",
+        "medical_concepts": [
+          "left knee pain",
+          "knee instability",
+          "use of cane",
+          "left hand pain",
+          "knee pain",
+          "acute pain"
+        ]
+      },
+      {
+        "heading": "O",
+        "section_value": "The patient's blood pressure is mildly low. Heart rate is 78 bpm and regular. Neurological exam is nonfocal. The patient has a knee.",
+        "medical_concepts": [
+          "low blood pressure",
+          "heart rate",
+          "neurological exam",
+          "knee"
+        ]
+      },
+      {
+        "heading": "A",
+        "section_value": "The patient has knee pain. The primary problem is knee pain.",
+        "medical_concepts": [
+          "knee pain"
+        ]
+      },
+      {
+        "heading": "P",
+        "section_value": "The doctor suggests a cane in case. The doctor orders a hemoglobin A1C test. The doctor orders a lipid panel. The doctor orders an echocardiogram. The patient is taking metformin. The patient is taking blood pressure medicine. The doctor recommends physical therapy.",
+        "medical_concepts": [
+          "cane",
+          "hemoglobin A1C test",
+          "lipid panel",
+          "echocardiogram",
+          "metformin",
+          "blood pressure medicine",
+          "physical therapy"
+        ]
+      }
+    ],
+    "medical_concepts": [
+      "left knee pain",
+      "knee instability",
+      "use of cane",
+      "left hand pain",
+      "knee pain",
+      "acute pain",
+      "low blood pressure",
+      "heart rate",
+      "neurological exam",
+      "knee",
+      "cane",
+      "hemoglobin A1C test",
+      "lipid panel",
+      "echocardiogram",
+      "metformin",
+      "blood pressure medicine",
+      "physical therapy"
+    ],
+    "section_count": 4
+  },
+  "nair_alignment": {
+    "pred_concepts": [
+      "left knee pain",
+      "knee instability",
+      "use of cane",
+      "left hand pain",
+      "knee pain",
+      "acute pain",
+      "low blood pressure",
+      "heart rate",
+      "neurological exam",
+      "knee",
+      "cane",
+      "hemoglobin A1C test",
+      "lipid panel",
+      "echocardiogram",
+      "metformin",
+      "blood pressure medicine",
+      "physical therapy"
+    ],
+    "ref_concepts": [
+      "left knee pain",
+      "knee instability",
+      "patellar pain",
+      "trauma",
+      "injury",
+      "hypertension",
+      "blood pressure",
+      "amlodipine",
+      "lisinopril",
+      "hydrochlorothiazide",
+      "diabetes",
+      "type 2 diabetes",
+      "fasting blood glucose",
+      "metformin",
+      "Farxiga",
+      "temperature",
+      "heart rate",
+      "respirations",
+      "ecchymosis",
+      "edema",
+      "effusion",
+      "pain with palpation",
+      "range of motion",
+      "varus stress test",
+      "valgus stress test",
+      "X-ray",
+      "fracture",
+      "bony abnormality",
+      "diabetes mellitus type 2",
+      "arthritis",
+      "knee",
+      "meloxicam",
+      "physical therapy",
+      "echocardiogram",
+      "heart murmur",
+      "elevated blood glucose",
+      "lipid panel",
+      "hemoglobin A1c"
+    ],
+    "precision_alignment": {
+      "found_b": [
+        "left knee pain",
+        "knee instability",
+        "knee pain",
+        "heart rate",
+        "knee",
+        "hemoglobin A1C test",
+        "lipid panel",
+        "echocardiogram",
+        "metformin",
+        "blood pressure medicine",
+        "physical therapy"
+      ],
+      "not_found_b": [
+        "use of cane",
+        "left hand pain",
+        "acute pain",
+        "low blood pressure",
+        "neurological exam",
+        "cane"
+      ],
+      "chunk_count": 1,
+      "chunk_results": [
+        {
+          "found_b": [
+            "left knee pain",
+            "knee instability",
+            "knee pain",
+            "heart rate",
+            "knee",
+            "hemoglobin A1C test",
+            "lipid panel",
+            "echocardiogram",
+            "metformin",
+            "blood pressure medicine",
+            "physical therapy"
+          ],
+          "not_found_b": [
+            "use of cane",
+            "left hand pain",
+            "acute pain",
+            "low blood pressure",
+            "neurological exam",
+            "cane"
+          ]
+        }
+      ]
+    },
+    "recall_alignment": {
+      "found_b": [
+        "left knee pain",
+        "knee instability",
+        "blood pressure",
+        "metformin",
+        "heart rate",
+        "knee",
+        "physical therapy",
+        "echocardiogram",
+        "lipid panel",
+        "hemoglobin A1c"
+      ],
+      "not_found_b": [
+        "patellar pain",
+        "trauma",
+        "injury",
+        "hypertension",
+        "amlodipine",
+        "lisinopril",
+        "hydrochlorothiazide",
+        "diabetes",
+        "type 2 diabetes",
+        "fasting blood glucose",
+        "Farxiga",
+        "temperature",
+        "respirations",
+        "ecchymosis",
+        "edema",
+        "effusion",
+        "pain with palpation",
+        "range of motion",
+        "varus stress test",
+        "valgus stress test",
+        "X-ray",
+        "fracture",
+        "bony abnormality",
+        "diabetes mellitus type 2",
+        "arthritis",
+        "meloxicam",
+        "heart murmur",
+        "elevated blood glucose"
+      ],
+      "chunk_count": 2,
+      "chunk_results": [
+        {
+          "found_b": [
+            "left knee pain",
+            "knee instability",
+            "blood pressure",
+            "metformin",
+            "heart rate"
+          ],
+          "not_found_b": [
+            "patellar pain",
+            "trauma",
+            "injury",
+            "hypertension",
+            "amlodipine",
+            "lisinopril",
+            "hydrochlorothiazide",
+            "diabetes",
+            "type 2 diabetes",
+            "fasting blood glucose",
+            "Farxiga",
+            "temperature",
+            "respirations",
+            "ecchymosis",
+            "edema",
+            "effusion",
+            "pain with palpation",
+            "range of motion",
+            "varus stress test"
+          ]
+        },
+        {
+          "found_b": [
+            "knee",
+            "physical therapy",
+            "echocardiogram",
+            "lipid panel",
+            "hemoglobin A1c"
+          ],
+          "not_found_b": [
+            "valgus stress test",
+            "X-ray",
+            "fracture",
+            "bony abnormality",
+            "diabetes mellitus type 2",
+            "arthritis",
+            "meloxicam",
+            "heart murmur",
+            "elevated blood glucose"
+          ]
+        }
+      ]
+    }
+  },
+  "semantic_cap_audit": {
+    "source_cap_recall": [
+      {
+        "cap_id": "P1",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P2",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P3",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P4",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P5",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P6",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P7",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P8",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P9",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P10",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P11",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P12",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P13",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P14",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P15",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P16",
+        "judgment": "contradicted",
+        "reason": null
+      },
+      {
+        "cap_id": "P1",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P2",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P3",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P4",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P5",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P6",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P7",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P8",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P9",
+        "judgment": "supported",
+        "reason": null
+      }
+    ],
+    "summary_cap_precision": [
+      {
+        "cap_id": "P1",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P2",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P3",
+        "judgment": "unsupported",
+        "reason": null
+      },
+      {
+        "cap_id": "P4",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P5",
+        "judgment": "contradicted",
+        "reason": null
+      },
+      {
+        "cap_id": "P6",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P7",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P8",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P9",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P10",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P11",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P12",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P13",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P14",
+        "judgment": "partial",
+        "reason": null
+      }
+    ],
+    "metrics": {
+      "semantic_cap_precision": 0.6429,
+      "semantic_cap_recall": 0.56,
+      "semantic_cap_f1": 0.5986,
+      "semantic_cap_precision_supported_count": 6,
+      "semantic_cap_precision_partial_count": 6,
+      "semantic_cap_precision_denominator": 14,
+      "semantic_cap_recall_supported_count": 14,
+      "semantic_cap_recall_partial_count": 0,
+      "semantic_cap_recall_denominator": 25,
+      "semantic_cap_low_value_source_count": 0,
+      "semantic_cap_low_value_summary_count": 0,
+      "semantic_cap_missing_count": 10,
+      "semantic_cap_unsupported_count": 1,
+      "semantic_cap_contradicted_source_count": 1,
+      "semantic_cap_contradicted_summary_count": 1
+    }
+  },
+  "safety_judgment": null,
+  "section_judgment": {
+    "section_miscategorizations": [
+      {
+        "text": "The patient denies pain.",
+        "current_section": "S",
+        "expected_section": "S",
+        "severity": "minor",
+        "reason": "This directly contradicts multiple other subjective pain statements in the same section; while still subjective content, the internal inconsistency could mislead but is more a documentation quality issue than a section misplacement."
+      },
+      {
+        "text": "The patient has a knee.",
+        "current_section": "O",
+        "expected_section": "O",
+        "severity": "minor",
+        "reason": "This is technically an objective anatomic statement, but it is trivial and non-clinical; it does not belong meaningfully in any SOAP section, though its presence in O is not strictly incorrect."
+      },
+      {
+        "text": "The patient is taking metformin.",
+        "current_section": "P",
+        "expected_section": "S",
+        "severity": "major",
+        "reason": "This describes an existing medication regimen rather than a new order or change; per instructions, current medications belong in the Subjective section unless framed as a treatment change."
+      },
+      {
+        "text": "The patient is taking blood pressure medicine.",
+        "current_section": "P",
+        "expected_section": "S",
+        "severity": "major",
+        "reason": "This is current medication state, not a new prescription or change; it should be documented in the Subjective section per the template rules."
+      }
+    ],
+    "summary_statistics": {
+      "section_appropriateness_score": 0.6,
+      "section_miscategorization_count": 4,
+      "major_section_miscategorization_count": 2
+    }
+  },
+  "pdsqi_judgment": {
+    "citation_applicable": 0,
+    "citation": 0,
+    "accurate": 1,
+    "thorough": 1,
+    "useful": 1,
+    "organized": 2,
+    "comprehensible": 2,
+    "succinct": 3,
+    "abstraction": 1,
+    "synthesized": 1,
+    "voice_summ": 0,
+    "voice_note": 0,
+    "pdsqi_core_mean": 1.5714
+  },
+  "llm_checklist_judgment": {
+    "content_preservation_core": 1,
+    "noise_suppression": 4,
+    "lay_expression_preservation": 2,
+    "state_update_fidelity": 1,
+    "temporality_preservation": 2,
+    "problem_evidence_linkage": 2,
+    "state_plan_separation": 2,
+    "section_organization_appropriateness": 2,
+    "overall_clinical_usability": 1,
+    "clinically_meaningful_omission": "Yes",
+    "clinically_concerning_hallucination": "Yes",
+    "checklist_a_mean": 2.3333,
+    "checklist_b_mean": 1.5,
+    "checklist_c_mean": 2.0,
+    "llm_checklist_abc_mean": 2.0,
+    "llm_checklist_mean_no_usability": 2.0,
+    "llm_checklist_total_score": 17,
+    "llm_checklist_mean": 1.8889,
+    "llm_checklist_meaningful_omission_yes": 1,
+    "llm_checklist_concerning_hallucination_yes": 1
+  },
+  "metrics": {
+    "case_id": "D2N080",
+    "method": "cap_only",
+    "template": "soap",
+    "source_cap_count": 25,
+    "event_plan_count": null,
+    "summary_cap_count": 14,
+    "cap_matched_count": 14,
+    "cap_precision": 1.0,
+    "cap_recall": 0.56,
+    "cap_f1": 0.7179,
+    "unsupported_summary_cap_count": 0,
+    "missing_source_cap_count": 11,
+    "summary_runtime_seconds": null,
+    "summary_cap_runtime_seconds": 27.318,
+    "event_plan_runtime_seconds": null,
+    "rouge_l_f1_vs_reference": 0.1311,
+    "token_f1_vs_reference": 0.2723,
+    "gptf1_macro_f1": 0.3268,
+    "nair_gpt_precision": 0.6471,
+    "nair_gpt_recall": 0.2632,
+    "nair_gpt_f1": 0.3741,
+    "semantic_cap_precision": 0.6429,
+    "semantic_cap_recall": 0.56,
+    "semantic_cap_f1": 0.5986,
+    "hallucination_count": null,
+    "major_hallucination_count": null,
+    "omission_count": null,
+    "major_omission_count": null,
+    "section_appropriateness_score": 0.6,
+    "section_miscategorization_count": 4,
+    "major_section_miscategorization_count": 2,
+    "pdsqi_core_mean": 1.5714,
+    "pdsqi_accurate": 1,
+    "pdsqi_thorough": 1,
+    "llm_checklist_total_score": 17,
+    "llm_checklist_mean": 1.8889,
+    "llm_checklist_mean_no_usability": 2.0,
+    "checklist_a_mean": 2.3333,
+    "checklist_b_mean": 1.5,
+    "checklist_c_mean": 2.0,
+    "llm_checklist_abc_mean": 2.0,
+    "content_preservation_core": 1,
+    "noise_suppression": 4,
+    "lay_expression_preservation": 2,
+    "state_update_fidelity": 1,
+    "temporality_preservation": 2,
+    "problem_evidence_linkage": 2,
+    "state_plan_separation": 2,
+    "section_organization_appropriateness": 2,
+    "overall_clinical_usability": 1,
+    "llm_checklist_meaningful_omission_yes": 1,
+    "llm_checklist_concerning_hallucination_yes": 1,
+    "gptf1_active_problems_symptoms_precision": 0.3333,
+    "gptf1_active_problems_symptoms_recall": 0.1429,
+    "gptf1_active_problems_symptoms_f1": 0.2,
+    "gptf1_active_problems_symptoms_pred_count": 3,
+    "gptf1_active_problems_symptoms_ref_count": 7,
+    "gptf1_negated_findings_precision": 0.0,
+    "gptf1_negated_findings_recall": 0.0,
+    "gptf1_negated_findings_f1": 0.0,
+    "gptf1_negated_findings_pred_count": 1,
+    "gptf1_negated_findings_ref_count": 0,
+    "gptf1_uncertain_findings_precision": 0.0,
+    "gptf1_uncertain_findings_recall": 0.0,
+    "gptf1_uncertain_findings_f1": 0.0,
+    "gptf1_uncertain_findings_pred_count": 0,
+    "gptf1_uncertain_findings_ref_count": 0,
+    "gptf1_medication_treatment_precision": 0.5,
+    "gptf1_medication_treatment_recall": 0.1667,
+    "gptf1_medication_treatment_f1": 0.25,
+    "gptf1_medication_treatment_pred_count": 2,
+    "gptf1_medication_treatment_ref_count": 6,
+    "gptf1_plan_followup_precision": 0.75,
+    "gptf1_plan_followup_recall": 1.0,
+    "gptf1_plan_followup_f1": 0.8571,
+    "gptf1_plan_followup_pred_count": 4,
+    "gptf1_plan_followup_ref_count": 3,
+    "nair_pred_concept_count": 17,
+    "nair_ref_concept_count": 38,
+    "nair_precision_match_count": 11,
+    "nair_recall_match_count": 10,
+    "semantic_cap_precision_supported_count": 6,
+    "semantic_cap_precision_partial_count": 6,
+    "semantic_cap_precision_denominator": 14,
+    "semantic_cap_recall_supported_count": 14,
+    "semantic_cap_recall_partial_count": 0,
+    "semantic_cap_recall_denominator": 25,
+    "semantic_cap_low_value_source_count": 0,
+    "semantic_cap_low_value_summary_count": 0,
+    "semantic_cap_missing_count": 10,
+    "semantic_cap_unsupported_count": 1,
+    "semantic_cap_contradicted_source_count": 1,
+    "semantic_cap_contradicted_summary_count": 1,
+    "pdsqi_useful": 1,
+    "pdsqi_organized": 2,
+    "pdsqi_comprehensible": 2,
+    "pdsqi_succinct": 3,
+    "pdsqi_synthesized": 1
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "section_miscategorizations": [
+    {
+      "text": "The patient reports decreased range of motion in the right knee.",
+      "current_section": "O",
+      "expected_section": "S",
+      "severity": "major",
+      "reason": "This is explicitly framed as a patient-reported symptom rather than an observed/measured physical exam finding."
+    },
+    {
+      "text": "The patient is diabetic.",
+      "current_section": "A",
+      "expected_section": "O",
+      "severity": "minor",
+      "reason": "Diabetes is an existing objective comorbidity/problem rather than an assessment specific to this encounter; it would more typically appear in the objective/problem list rather than the assessment of the acute knee issue."
+    },
+    {
+      "text": "The patient reports knee pain.",
+      "current_section": "A",
+      "expected_section": "S",
+      "severity": "major",
+      "reason": "This is a subjective symptom statement and should be documented in the subjective section, not in the assessment."
+    }
+  ],
+  "summary_statistics": {
+    "section_appropriateness_score": 0.8,
+    "section_miscategorization_count": 3,
+    "major_section_miscategorization_count": 2
+  }
+}

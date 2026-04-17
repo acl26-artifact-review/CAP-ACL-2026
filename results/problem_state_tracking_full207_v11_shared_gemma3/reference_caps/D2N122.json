@@ -1,0 +1,175 @@
+{
+  "caps": [
+    {
+      "cap_id": "CAP1",
+      "cap_type": "Symptom",
+      "content_source": "clinician",
+      "modality": "assessment",
+      "canonical_concept": "cough",
+      "verification_status": "confirmed",
+      "clinical_status": "active",
+      "temporality": "current",
+      "proposition_text": "The patient reports a cough.",
+      "evidence": [
+        {
+          "turn_id": "S1",
+          "turn_speaker": "note",
+          "span_text": "Cough.",
+          "char_start": 0,
+          "char_end": 6
+        }
+      ],
+      "assertion": "present",
+      "visit_state": "active",
+      "linked_problem": null
+    },
+    {
+      "cap_id": "CAP2",
+      "cap_type": "Problem",
+      "content_source": "clinician",
+      "modality": "assessment",
+      "canonical_concept": "rheumatoid arthritis",
+      "verification_status": "confirmed",
+      "clinical_status": "active",
+      "temporality": "current",
+      "proposition_text": "The patient has rheumatoid arthritis.",
+      "evidence": [
+        {
+          "turn_id": "S34",
+          "turn_speaker": "note",
+          "span_text": "2. Rheumatoid arthritis.",
+          "char_start": 0,
+          "char_end": 24
+        }
+      ],
+      "assertion": "present",
+      "visit_state": "active",
+      "linked_problem": null
+    },
+    {
+      "cap_id": "CAP3",
+      "cap_type": "ExamFinding",
+      "content_source": "physician",
+      "modality": "assessment",
+      "canonical_concept": "Body Temperature",
+      "verification_status": "confirmed",
+      "clinical_status": "active",
+      "temporality": "current",
+      "proposition_text": "The physician assesses the patient's body temperature as afebrile.",
+      "evidence": [
+        {
+          "turn_id": "S17",
+          "turn_speaker": "note",
+          "span_text": "Body Temperature: Afebrile.",
+          "char_start": 0,
+          "char_end": 27
+        }
+      ],
+      "assertion": "present",
+      "visit_state": "active",
+      "linked_problem": null
+    },
+    {
+      "cap_id": "CAP4",
+      "cap_type": "Order",
+      "content_source": "clinician",
+      "modality": "plan",
+      "canonical_concept": "follow-up",
+      "verification_status": "confirmed",
+      "clinical_status": "active",
+      "temporality": "future",
+      "proposition_text": "The clinician recommends continued follow-up with the rheumatologist.",
+      "evidence": [
+        {
+          "turn_id": "S36",
+          "turn_speaker": "note",
+          "span_text": "- Patient Education and Counseling: I encouraged the patient to continue to follow up with his rheumatologist.",
+          "char_start": 0,
+          "char_end": 110
+        }
+      ],
+      "assertion": "present",
+      "visit_state": "active",
+      "linked_problem": null
+    },
+    {
+      "cap_id": "CAP5",
+      "cap_type": "ExamFinding",
+      "content_source": "physician",
+      "modality": "assessment",
+      "canonical_concept": "Oxygen Saturation",
+      "verification_status": "confirmed",
+      "clinical_status": "active",
+      "temporality": "current",
+      "proposition_text": "The physician measures oxygen saturation at 98%.",
+      "evidence": [
+        {
+          "turn_id": "S16",
+          "turn_speaker": "note",
+          "span_text": "Oxygen Saturation: 98% on room air.",
+          "char_start": 0,
+          "char_end": 35
+        }
+      ],
+      "assertion": "present",
+      "visit_state": "active",
+      "linked_problem": null
+    },
+    {
+      "cap_id": "CAP6",
+      "cap_type": "ExamFinding",
+      "content_source": "clinician",
+      "modality": "assessment",
+      "canonical_concept": "edema",
+      "verification_status": "refuted",
+      "clinical_status": "active",
+      "temporality": "current",
+      "proposition_text": "No lower extremity edema is present.",
+      "evidence": [
+        {
+          "turn_id": "S24",
+          "turn_speaker": "note",
+          "span_text": "- Examination: No lower extremity edema. Mild swelling to the 3rd digit knuckles on the bilateral hands, consistent with RA.",
+          "char_start": 0,
+          "char_end": 124
+        }
+      ],
+      "assertion": "absent",
+      "visit_state": "active",
+      "linked_problem": null
+    },
+    {
+      "cap_id": "CAP7",
+      "cap_type": "MedicationStatement",
+      "content_source": "clinician",
+      "modality": "unknown",
+      "canonical_concept": "medication therapy",
+      "verification_status": "confirmed",
+      "clinical_status": "active",
+      "temporality": "current",
+      "proposition_text": "The clinician continues medication therapy.",
+      "evidence": [
+        {
+          "turn_id": "S37",
+          "turn_speaker": "note",
+          "span_text": "- Medical Treatment: Continue medication therapy and routine follow up with rheumatologist as previously outlined.",
+          "char_start": 0,
+          "char_end": 114
+        }
+      ],
+      "assertion": "present",
+      "visit_state": "active",
+      "linked_problem": null
+    }
+  ],
+  "filtered_nonverifiable_units": [
+    "S34",
+    "S35",
+    "S36",
+    "S37",
+    "S38"
+  ],
+  "chunk_count": 5,
+  "extraction_mode": "single_call",
+  "runtime_seconds": 26.647
+}

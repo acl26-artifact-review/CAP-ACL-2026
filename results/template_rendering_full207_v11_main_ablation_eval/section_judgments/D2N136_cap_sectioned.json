@@ -1,0 +1,30 @@
+{
+  "section_miscategorizations": [
+    {
+      "text": "Blood pressure is elevated today.",
+      "current_section": "Findings",
+      "expected_section": "History of Present Illness",
+      "severity": "major",
+      "reason": "The template defines vitals as Findings, but this statement conflicts with the HPI report that home blood pressure is well-controlled. Without clarifying that this is an in-clinic measurement, placing it in Findings can mislead the reader about the patient's usual blood pressure control described in HPI."
+    },
+    {
+      "text": "The slightly elevated A1c suggests a need for continued diabetes management.",
+      "current_section": "Assessment",
+      "expected_section": "Plan",
+      "severity": "minor",
+      "reason": "This sentence is more of a management implication than a diagnostic impression. The diagnostic aspect (elevated A1c) is already in Findings; the statement here is edging into treatment planning rather than assessment/synthesis."
+    },
+    {
+      "text": "Continue metformin 500 mg twice daily for diabetes management.",
+      "current_section": "Plan",
+      "expected_section": "History of Present Illness",
+      "severity": "major",
+      "reason": "Metformin use is not mentioned in the HPI medication list, yet it is continued in the Plan as if it were an established medication. This creates a discrepancy between current medication state (which belongs in HPI) and treatment changes (Plan), potentially misleading the reader about whether metformin is newly prescribed or pre-existing therapy."
+    }
+  ],
+  "summary_statistics": {
+    "section_appropriateness_score": 0.7,
+    "section_miscategorization_count": 3,
+    "major_section_miscategorization_count": 2
+  }
+}

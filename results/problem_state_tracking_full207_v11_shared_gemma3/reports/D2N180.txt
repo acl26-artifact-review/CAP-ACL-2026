@@ -1,0 +1,92 @@
+Case: D2N180
+
+Problem List and Visit State Tracking
+
+Problem List
+- numbness | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T2
+  Summary: The patient reports numbness.
+  ClusterId: CL1
+  TemporalProfile: current
+  Updates:
+  - CAP1: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T2 :: The patient reports numbness.
+- tingling | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T10
+  Summary: The patient reports tingling.
+  ClusterId: CL2
+  TemporalProfile: current
+  Updates:
+  - CAP2: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T10 :: The patient reports tingling.
+- weakness | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T10
+  Summary: The patient reports weakness.
+  ClusterId: CL3
+  TemporalProfile: current
+  Updates:
+  - CAP3: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T10 :: The patient reports weakness.
+- pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T10
+  Summary: The patient reports pain.
+  ClusterId: CL4
+  TemporalProfile: current
+  Updates:
+  - CAP4: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T10 :: The patient reports pain.
+- chronic kidney disease | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T15
+  Summary: The patient has a history of chronic kidney disease.
+  ClusterId: CL5
+  TemporalProfile: historical
+  Updates:
+  - CAP7: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=historical turns=T15 :: The patient has a history of chronic kidney disease.
+- gout | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T15
+  Summary: The patient has a history of gout.
+  ClusterId: CL6
+  TemporalProfile: historical
+  Updates:
+  - CAP8: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=historical turns=T15 :: The patient has a history of gout.
+- hypertension | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T15
+  Summary: The patient has a history of hypertension.
+  ClusterId: CL7
+  TemporalProfile: historical
+  Updates:
+  - CAP9: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=historical turns=T15 :: The patient has a history of hypertension.
+- anxiety | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T15
+  Summary: The patient has a history of anxiety.
+  ClusterId: CL8
+  TemporalProfile: historical
+  Updates:
+  - CAP10: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=historical turns=T15 :: The patient has a history of anxiety.
+- gerd | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T15
+  Summary: The patient has a history of GERD.
+  ClusterId: CL9
+  TemporalProfile: historical
+  Updates:
+  - CAP11: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=historical turns=T15 :: The patient has a history of GERD.
+- diabetes | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T15
+  Summary: The patient has a history of diabetes.
+  ClusterId: CL10
+  TemporalProfile: historical
+  Updates:
+  - CAP12: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=historical turns=T15 :: The patient has a history of diabetes.
+- sulfa drugs | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T18
+  Summary: The patient is allergic to sulfa drugs.
+  ClusterId: CL13
+  TemporalProfile: current
+  Updates:
+  - CAP13: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T18 :: The patient is allergic to sulfa drugs.
+
+Medication Tracking
+- [MedicationState] carvedilol | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T18
+  Summary: The patient is taking carvedilol.
+  ClusterId: CL11
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient is taking carvedilol. (T18)
+  Updates:
+  - CAP5: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T18 :: The patient is taking carvedilol.
+- [MedicationState] lexapro | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T18
+  Summary: The patient is taking lexapro.
+  ClusterId: CL12
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient is taking lexapro. (T18)
+  Updates:
+  - CAP6: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T18 :: The patient is taking lexapro.
+
+Other Structured States
+- None

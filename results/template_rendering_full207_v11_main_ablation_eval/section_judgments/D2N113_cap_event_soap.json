@@ -1,0 +1,51 @@
+{
+  "section_miscategorizations": [
+    {
+      "text": "The patient has hepatitis C, hypertension, diabetes, and a family history of depression.",
+      "current_section": "A",
+      "expected_section": "O",
+      "severity": "major",
+      "reason": "These are established diagnoses and family history, which are objective charted conditions rather than the clinician's interpretive assessment or diagnostic synthesis in this context."
+    },
+    {
+      "text": "The elevated AST suggests possible liver involvement.",
+      "current_section": "A",
+      "expected_section": "O",
+      "severity": "minor",
+      "reason": "The AST value itself would belong in O; the interpretive phrase about possible liver involvement is assessment-like, but without the actual lab value present this reads more as a lab interpretation that could reasonably be grouped with objective results."
+    },
+    {
+      "text": "Schedule a cervical MRI.",
+      "current_section": "P",
+      "expected_section": "P",
+      "severity": "minor",
+      "reason": "This is an order for imaging and is correctly placed in the Plan section."
+    },
+    {
+      "text": "Order hepatitis C RNA and HCV genotype testing.",
+      "current_section": "P",
+      "expected_section": "P",
+      "severity": "minor",
+      "reason": "These are diagnostic orders and appropriately belong in the Plan section."
+    },
+    {
+      "text": "Recommend increased oral hydration and slow positional changes for orthostatic symptoms.",
+      "current_section": "P",
+      "expected_section": "P",
+      "severity": "minor",
+      "reason": "This is counseling and management advice, correctly placed in the Plan section."
+    },
+    {
+      "text": "Offer counseling regarding lifestyle modifications to manage diabetes and depression.",
+      "current_section": "P",
+      "expected_section": "P",
+      "severity": "minor",
+      "reason": "This is a management and counseling plan, correctly placed in the Plan section."
+    }
+  ],
+  "summary_statistics": {
+    "section_appropriateness_score": 0.7,
+    "section_miscategorization_count": 6,
+    "major_section_miscategorization_count": 1
+  }
+}

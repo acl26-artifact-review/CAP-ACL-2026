@@ -1,0 +1,44 @@
+{
+  "section_miscategorizations": [
+    {
+      "text": "The patient reports reflex.",
+      "current_section": "History of Present Illness",
+      "expected_section": "Findings",
+      "severity": "major",
+      "reason": "Reflex status is an examination finding, not a patient-reported symptom; placing it in HPI blurs the distinction between subjective history and objective exam."
+    },
+    {
+      "text": "The patient reports pain.",
+      "current_section": "History of Present Illness",
+      "expected_section": "History of Present Illness",
+      "severity": "minor",
+      "reason": "This is a vague restatement of already-described pain; while technically subjective and acceptable in HPI, its lack of context makes it read more like an extraneous note than meaningful history."
+    },
+    {
+      "text": "The patient reports difficulty breathing.",
+      "current_section": "Findings",
+      "expected_section": "History of Present Illness",
+      "severity": "major",
+      "reason": "Difficulty breathing is a subjective symptom reported by the patient and belongs in HPI; listing it under Findings incorrectly suggests it was an observed exam finding."
+    },
+    {
+      "text": "The patient's geneticist reported a potential risk of kidney fusion.",
+      "current_section": "History of Present Illness",
+      "expected_section": "Assessment",
+      "severity": "minor",
+      "reason": "This is a prior specialist diagnostic impression/risk assessment rather than a current symptom; it fits better in Assessment but is not grossly misleading in HPI as past relevant history."
+    },
+    {
+      "text": "The patient's presentation is most consistent with a syndrome complicated by orthopedic issues, including potential kidney fusion and reflex abnormalities.",
+      "current_section": "Assessment",
+      "expected_section": "Assessment",
+      "severity": "minor",
+      "reason": "Reflex abnormalities are not clearly supported by the documented exam (reflex is present bilaterally) or history; while this is an assessment statement, tying it to reflex findings that are not actually abnormal may confuse readers about what was found vs. inferred."
+    }
+  ],
+  "summary_statistics": {
+    "section_appropriateness_score": 0.7,
+    "section_miscategorization_count": 5,
+    "major_section_miscategorization_count": 2
+  }
+}

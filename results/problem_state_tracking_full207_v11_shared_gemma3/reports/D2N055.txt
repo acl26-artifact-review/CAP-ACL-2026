@@ -1,0 +1,155 @@
+Case: D2N055
+
+Problem List and Visit State Tracking
+
+Problem List
+- eye twitch | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T3
+  Summary: The patient reports an eye twitch.
+  ClusterId: CL1
+  TemporalProfile: current
+  Updates:
+  - CAP2: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T3,T3 :: The patient reports an eye twitch.
+  - CAP14: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T3 :: Karen is experiencing an eye twitch.
+- facial movement | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T11,T37,T9
+  Summary: The patient reports that the side of her face moves.
+  ClusterId: CL2
+  TemporalProfile: current
+  Updates:
+  - CAP3: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T11,T9 :: The patient reports facial movement.
+  - CAP1: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T37,T37 :: The patient reports that the side of her face moves.
+- twitch | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T10
+  Summary: The patient reports a twitch.
+  ClusterId: CL3
+  TemporalProfile: current
+  Updates:
+  - CAP16: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T10 :: The patient reports a twitch.
+- pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T11,T27
+  Summary: The patient reports pain in the left hand.
+  ClusterId: CL4
+  TemporalProfile: current
+  Updates:
+  - CAP22: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T11 :: The patient reports pain.
+  - CAP10: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T27 :: The patient reports pain in the left hand.
+- kicking | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T11
+  Summary: The patient reports being kicked.
+  ClusterId: CL5
+  TemporalProfile: current
+  Updates:
+  - CAP18: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T11 :: The patient reports being kicked.
+- hair pulling | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T19
+  Summary: The patient reports that her hair pulling causes her pain.
+  ClusterId: CL6
+  TemporalProfile: current
+  Updates:
+  - CAP4: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T19 :: The patient reports that her hair pulling causes her pain.
+  - CAP17: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T19 :: The patient reports hair pulling.
+- behavioral problems | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T21
+  Summary: The patient reports behavioral problems.
+  ClusterId: CL7
+  TemporalProfile: current
+  Updates:
+  - CAP19: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T21 :: The patient reports behavioral problems.
+- shopping preferences | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T27
+  Summary: The patient expresses a desire for dresses and dogs.
+  ClusterId: CL8
+  TemporalProfile: current
+  Updates:
+  - CAP5: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T27 :: The patient expresses a desire for dresses and dogs.
+- facial twitching | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T27
+  Summary: The patient reports facial twitching.
+  ClusterId: CL9
+  TemporalProfile: current
+  Updates:
+  - CAP20: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T27 :: The patient reports facial twitching.
+- playing with friends | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T31
+  Summary: The patient reports that Karen is playing with friends.
+  ClusterId: CL10
+  TemporalProfile: current
+  Updates:
+  - CAP6: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T31 :: The patient reports that Karen is playing with friends.
+- eating well | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T31
+  Summary: The patient reports that Karen is eating well.
+  ClusterId: CL11
+  TemporalProfile: current
+  Updates:
+  - CAP11: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T31 :: The patient reports that Karen is eating well.
+- normal activities | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T31
+  Summary: Karen is engaging in her normal activities.
+  ClusterId: CL12
+  TemporalProfile: current
+  Updates:
+  - CAP13: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T31 :: Karen is engaging in her normal activities.
+- karen | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T34
+  Summary: Karen is experiencing episodes of facial twitching.
+  ClusterId: CL13
+  TemporalProfile: current
+  Updates:
+  - CAP12: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T34 :: Karen is experiencing episodes of facial twitching.
+- tourette syndrome | verification_status=unconfirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T41
+  Summary: The patient denies a family history of Tourette syndrome.
+  ClusterId: CL14
+  TemporalProfile: childhood
+  Updates:
+  - CAP7: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=childhood turns=T41 :: The patient denies a family history of Tourette syndrome.
+- fever | verification_status=refuted | clinical_status=historical | modalities=interview | speakers=patient | evidence=T44
+  Summary: The patient denies fever.
+  ClusterId: CL15
+  TemporalProfile: none
+  Updates:
+  - CAP23: content_source=patient modality=interview verification_status=refuted clinical_status=historical temporality=none turns=T44 :: The patient denies fever.
+- coughing | verification_status=unconfirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T46
+  Summary: The patient denies coughing.
+  ClusterId: CL16
+  TemporalProfile: none
+  Updates:
+  - CAP24: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=none turns=T46 :: The patient denies coughing.
+- headache | verification_status=unconfirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T46
+  Summary: The patient denies headache.
+  ClusterId: CL17
+  TemporalProfile: none
+  Updates:
+  - CAP25: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=none turns=T46 :: The patient denies headache.
+- sleep problems | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T48
+  Summary: The patient reports problems with sleep.
+  ClusterId: CL18
+  TemporalProfile: current
+  Updates:
+  - CAP15: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T48 :: The patient reports problems with sleep.
+- tick | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T57
+  Summary: The patient reports experiencing tics.
+  ClusterId: CL21
+  TemporalProfile: current
+  Updates:
+  - CAP21: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T57 :: The patient reports experiencing tics.
+- seizure | verification_status=refuted | clinical_status=historical | modalities=assessment | speakers=doctor | evidence=T59
+  Summary: The doctor does not believe Karen had a seizure.
+  ClusterId: CL22
+  TemporalProfile: past
+  Updates:
+  - CAP9: content_source=doctor modality=assessment verification_status=refuted clinical_status=historical temporality=past turns=T59 :: The doctor does not believe Karen had a seizure.
+- tic disorder | verification_status=unconfirmed | clinical_status=active | modalities=assessment | speakers=doctor | evidence=T65
+  Summary: The doctor believes Karen may have a tic disorder.
+  ClusterId: CL24
+  TemporalProfile: current
+  Updates:
+  - CAP8: content_source=doctor modality=assessment verification_status=unconfirmed clinical_status=active temporality=current turns=T65 :: The doctor believes Karen may have a tic disorder.
+
+Medication Tracking
+- [MedicationChange] no treatment | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T61
+  Summary: No medication or cream is recommended at this time.
+  ClusterId: CL23
+  TemporalProfile: future
+  PlannedChanges:
+  - No medication or cream is recommended at this time. (T61)
+  Updates:
+  - CAP28: content_source=doctor modality=plan verification_status=unconfirmed clinical_status=planned temporality=future turns=T61 :: No medication or cream is recommended at this time.
+
+Other Structured States
+- [ExamFinding] reflexes | verification_status=confirmed | clinical_status=active | modalities=exam | speakers=doctor | evidence=T56
+  Summary: The patient's reflexes are two plus and symmetric.
+  ClusterId: CL19
+  TemporalProfile: current
+- [ExamFinding] sensation | verification_status=confirmed | clinical_status=active | modalities=exam | speakers=doctor | evidence=T56
+  Summary: The patient's sensation is intact.
+  ClusterId: CL20
+  TemporalProfile: current

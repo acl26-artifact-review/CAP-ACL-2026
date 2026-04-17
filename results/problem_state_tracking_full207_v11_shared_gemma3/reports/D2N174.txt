@@ -1,0 +1,132 @@
+Case: D2N174
+
+Problem List and Visit State Tracking
+
+Problem List
+- knee pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T11,T29,T30,T5
+  Summary: The patient reports knee pain.
+  ClusterId: CL1
+  TemporalProfile: current
+  Updates:
+  - CAP1: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T5,T11 :: The patient reports knee pain.
+  - CAP13: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T11 :: The patient reports knee pain.
+  - CAP10: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T29 :: The patient is experiencing knee pain.
+  - CAP8: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T30 :: The patient reports pain in the right knee.
+- bike riding | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T5
+  Summary: The patient has increased bike riding.
+  ClusterId: CL2
+  TemporalProfile: recent
+  Updates:
+  - CAP26: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=recent turns=T5 :: The patient has increased bike riding.
+- morning stiffness | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T9
+  Summary: The patient reports stiffness and soreness in the morning.
+  ClusterId: CL3
+  TemporalProfile: morning
+  Updates:
+  - CAP6: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=morning turns=T9 :: The patient reports stiffness and soreness in the morning.
+  - CAP12: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=morning turns=T9 :: The patient experiences morning stiffness.
+- soreness | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T9
+  Summary: The patient reports soreness in the afternoon.
+  ClusterId: CL4
+  TemporalProfile: afternoon
+  Updates:
+  - CAP9: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=afternoon turns=T9 :: The patient reports soreness in the afternoon.
+- inflammation | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T13
+  Summary: The patient notes inflammation in the knees in the morning.
+  ClusterId: CL5
+  TemporalProfile: afternoon, morning
+  Updates:
+  - CAP4: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=morning turns=T13 :: The patient notes inflammation in the knees in the morning.
+  - CAP5: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=afternoon turns=T13 :: The patient notes inflammation in the knees in the afternoon.
+- repetitive motion | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T17
+  Summary: The patient reports knee pain related to repetitive motion.
+  ClusterId: CL6
+  TemporalProfile: current
+  Updates:
+  - CAP7: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T17 :: The patient reports knee pain related to repetitive motion.
+- lupus | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=doctor | evidence=T19
+  Summary: The doctor is concerned that the knee pain might be from a flareup of lupus.
+  ClusterId: CL7
+  TemporalProfile: current
+  Updates:
+  - CAP2: content_source=doctor modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T19 :: The doctor is concerned that the knee pain might be from a flareup of lupus.
+- chest pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T28
+  Summary: The patient denies chest pain.
+  ClusterId: CL9
+  TemporalProfile: current
+  Updates:
+  - CAP14: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T28 :: The patient denies chest pain.
+- nausea | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T28
+  Summary: The patient denies nausea.
+  ClusterId: CL10
+  TemporalProfile: current
+  Updates:
+  - CAP16: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T28 :: The patient denies nausea.
+- vomiting | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T28
+  Summary: The patient denies vomiting.
+  ClusterId: CL11
+  TemporalProfile: current
+  Updates:
+  - CAP17: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T28 :: The patient denies vomiting.
+- abdominal pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T33
+  Summary: The patient denies abdominal pain.
+  ClusterId: CL13
+  TemporalProfile: current
+  Updates:
+  - CAP15: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T33 :: The patient denies abdominal pain.
+- coronary artery disease | verification_status=confirmed | clinical_status=stable | modalities=interview | speakers=doctor | evidence=T57
+  Summary: The doctor believes the patient is doing well with coronary artery disease.
+  ClusterId: CL17
+  TemporalProfile: current
+  Updates:
+  - CAP3: content_source=doctor modality=interview verification_status=confirmed clinical_status=stable temporality=current turns=T57 :: The doctor believes the patient is doing well with coronary artery disease.
+- left hand pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T63
+  Summary: The patient reports left hand pain.
+  ClusterId: CL21
+  TemporalProfile: current
+  Updates:
+  - CAP11: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T63 :: The patient reports left hand pain.
+
+Medication Tracking
+- [MedicationState] crestor | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T25
+  Summary: The patient reports no problems with crestor.
+  ClusterId: CL8
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient reports no problems with crestor. (T25)
+  Updates:
+  - CAP25: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T25 :: The patient reports no problems with crestor.
+- [MedicationState] aspirin | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T28
+  Summary: The patient is taking aspirin every day.
+  ClusterId: CL12
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient is taking aspirin every day. (T28)
+  Updates:
+  - CAP24: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T28 :: The patient is taking aspirin every day.
+
+Other Structured States
+- [ExamFinding] effusion | verification_status=confirmed | clinical_status=active | modalities=exam | speakers=doctor | evidence=T37
+  Summary: There is a mild effusion present on the right knee.
+  ClusterId: CL14
+  TemporalProfile: current
+- [ExamFinding] erythema | verification_status=confirmed | clinical_status=active | modalities=exam | speakers=doctor | evidence=T37
+  Summary: There is mild erythema present on the right knee.
+  ClusterId: CL15
+  TemporalProfile: current
+- [ExamFinding] edema | verification_status=confirmed | clinical_status=active | modalities=exam | speakers=doctor | evidence=T41
+  Summary: There is bilateral edema present.
+  ClusterId: CL16
+  TemporalProfile: current
+- [TestResult] autoimmune panel | verification_status=unconfirmed | clinical_status=planned | modalities=test_result | speakers=doctor | evidence=T57
+  Summary: The doctor will order an autoimmune panel.
+  ClusterId: CL18
+  TemporalProfile: future
+- [TestResult] lipid panel | verification_status=unconfirmed | clinical_status=planned | modalities=test_result | speakers=doctor | evidence=T57
+  Summary: The doctor will order a lipid panel.
+  ClusterId: CL19
+  TemporalProfile: future
+- [TestResult] echocardiogram | verification_status=unconfirmed | clinical_status=planned | modalities=test_result | speakers=doctor | evidence=T61
+  Summary: The doctor will order an echocardiogram.
+  ClusterId: CL20
+  TemporalProfile: future

@@ -1,0 +1,117 @@
+Case: D2N173
+
+Problem List and Visit State Tracking
+
+Problem List
+- cold | verification_status=confirmed | clinical_status=active | modalities=assessment,interview | speakers=doctor,patient | evidence=T38,T5
+  Summary: The patient has a cold.
+  ClusterId: CL1
+  TemporalProfile: current
+  Updates:
+  - CAP10: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T5 :: The patient reports a cold.
+  - CAP2: content_source=doctor modality=assessment verification_status=confirmed clinical_status=active temporality=current turns=T38 :: The patient has a cold.
+- chest pain | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T5
+  Summary: The patient reports chest pain.
+  ClusterId: CL2
+  TemporalProfile: current
+  Updates:
+  - CAP11: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T5 :: The patient reports chest pain.
+- upper respiratory infection | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T5
+  Summary: The patient has an upper respiratory infection.
+  ClusterId: CL3
+  TemporalProfile: current
+  Updates:
+  - CAP21: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T5 :: The patient has an upper respiratory infection.
+- high cholesterol | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T11
+  Summary: The patient is on Crestor 20 milligrams a day.
+  ClusterId: CL4
+  TemporalProfile: current
+  Updates:
+  - CAP5: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T11 :: The patient is on Crestor 20 milligrams a day.
+- fever | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T15
+  Summary: The patient thought they had a slight fever.
+  ClusterId: CL6
+  TemporalProfile: recent
+  Updates:
+  - CAP7: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=recent turns=T15 :: The patient thought they had a slight fever.
+- diet | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T19
+  Summary: The patient has been doing pretty good with the diet.
+  ClusterId: CL7
+  TemporalProfile: current
+  Updates:
+  - CAP4: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T19 :: The patient has been doing pretty good with the diet.
+- travel | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T19
+  Summary: The patient traveled over the last week or so.
+  ClusterId: CL8
+  TemporalProfile: last week or so
+  Updates:
+  - CAP6: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=last week or so turns=T19 :: The patient traveled over the last week or so.
+- cervical lymphadenopathy | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T27
+  Summary: The patient has cervical lymphadenopathy.
+  ClusterId: CL9
+  TemporalProfile: on exam
+  Updates:
+  - CAP12: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=on exam turns=T27 :: The patient has cervical lymphadenopathy.
+- ronchi | verification_status=confirmed | clinical_status=active | modalities=exam | speakers=doctor | evidence=T27
+  Summary: The patient has bilateral ronchi.
+  ClusterId: CL10
+  TemporalProfile: on exam
+  Updates:
+  - CAP13: content_source=doctor modality=exam verification_status=confirmed clinical_status=active temporality=on exam turns=T27 :: The patient has bilateral ronchi.
+- wheezing | verification_status=confirmed | clinical_status=active | modalities=exam | speakers=doctor | evidence=T27
+  Summary: The patient has wheezing.
+  ClusterId: CL11
+  TemporalProfile: on exam
+  Updates:
+  - CAP14: content_source=doctor modality=exam verification_status=confirmed clinical_status=active temporality=on exam turns=T27 :: The patient has wheezing.
+- infection | verification_status=confirmed | clinical_status=active | modalities=assessment,interview | speakers=doctor | evidence=T38
+  Summary: The patient has an infection.
+  ClusterId: CL13
+  TemporalProfile: current
+  Updates:
+  - CAP1: content_source=doctor modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T38 :: The doctor diagnoses the patient with a covid infection.
+  - CAP3: content_source=doctor modality=assessment verification_status=confirmed clinical_status=active temporality=current turns=T38 :: The patient has an infection.
+- left hand pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T39,T44
+  Summary: The patient reports left hand pain.
+  ClusterId: CL15
+  TemporalProfile: current
+  Updates:
+  - CAP15: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T39 :: The patient reports pain.
+  - CAP9: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T39 :: The patient reports left hand pain.
+  - CAP8: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T44 :: The patient reports pain in the left hand.
+
+Medication Tracking
+- [MedicationState] covid vaccine | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T11
+  Summary: The patient has received both stages of the covid vaccine.
+  ClusterId: CL5
+  TemporalProfile: past
+  CurrentRegimens:
+  - The patient has received both stages of the covid vaccine. (T11)
+  Updates:
+  - CAP19: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=past turns=T11 :: The patient has received both stages of the covid vaccine.
+- [MedicationState] crestor | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=doctor | evidence=T44
+  Summary: The patient should continue taking crestor 20 milligrams a day.
+  ClusterId: CL18
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient should continue taking crestor 20 milligrams a day. (T44)
+  Updates:
+  - CAP20: content_source=doctor modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T44 :: The patient should continue taking crestor 20 milligrams a day.
+
+Other Structured States
+- [Plan] quarantine | verification_status=confirmed | clinical_status=planned | modalities=interview | speakers=doctor | evidence=T37
+  Summary: The doctor advises the patient to quarantine for 10 days.
+  ClusterId: CL12
+  TemporalProfile: 10 days
+- [TestResult] covid positive | verification_status=confirmed | clinical_status=active | modalities=test_result | speakers=doctor | evidence=T38
+  Summary: The patient is positive for covid.
+  ClusterId: CL14
+  TemporalProfile: current
+- [Plan] lipid panel | verification_status=confirmed | clinical_status=planned | modalities=interview | speakers=doctor | evidence=T44
+  Summary: The doctor orders a lipid panel in six months.
+  ClusterId: CL16
+  TemporalProfile: six months
+- [Plan] stress test | verification_status=confirmed | clinical_status=planned | modalities=interview | speakers=doctor | evidence=T44
+  Summary: The doctor orders a stress test in six months.
+  ClusterId: CL17
+  TemporalProfile: six months

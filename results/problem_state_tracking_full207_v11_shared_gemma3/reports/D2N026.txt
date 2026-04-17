@@ -1,0 +1,143 @@
+Case: D2N026
+
+Problem List and Visit State Tracking
+
+Problem List
+- left hand pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T7,T9
+  Summary: The patient reports pain in the left hand.
+  ClusterId: CL1
+  TemporalProfile: current
+  Updates:
+  - CAP3: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T7 :: The patient reports pain in the left hand.
+  - CAP4: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T9 :: The patient reports the pain is awful.
+  - CAP17: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T9 :: The patient reports pain.
+- time | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T9
+  Summary: The pain started approximately two weeks ago.
+  ClusterId: CL2
+  TemporalProfile: two weeks ago
+  Updates:
+  - CAP5: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=two weeks ago turns=T9 :: The pain started approximately two weeks ago.
+  - CAP6: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=two weeks ago turns=T9 :: The patient woke up two weeks ago.
+- pinched nerve | verification_status=unconfirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T19
+  Summary: The patient suspects a pinched nerve.
+  ClusterId: CL3
+  TemporalProfile: previous
+  Updates:
+  - CAP8: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=previous turns=T19 :: The patient suspects a pinched nerve.
+- nerve pain | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T19
+  Summary: The patient has nerve pain.
+  ClusterId: CL4
+  TemporalProfile: current
+  Updates:
+  - CAP10: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T19 :: The patient has nerve pain.
+- weakness | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T27
+  Summary: The patient reports weakness in their hand.
+  ClusterId: CL5
+  TemporalProfile: current
+  Updates:
+  - CAP7: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T27 :: The patient reports weakness in their hand.
+- difficulty gripping | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T27
+  Summary: The patient has difficulty gripping things.
+  ClusterId: CL6
+  TemporalProfile: current
+  Updates:
+  - CAP9: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T27 :: The patient has difficulty gripping things.
+- previous hand injury | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T33
+  Summary: The patient previously injured their hand.
+  ClusterId: CL8
+  TemporalProfile: past
+  Updates:
+  - CAP24: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=past turns=T33 :: The patient previously injured their hand.
+- va disability | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T37
+  Summary: The patient is a VA and has one percent disability.
+  ClusterId: CL9
+  TemporalProfile: current, past
+  Updates:
+  - CAP2: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T37 :: The patient is a VA and has one percent disability.
+  - CAP25: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=past turns=T37 :: The patient is one percent disabled.
+- leg issues | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T37
+  Summary: The patient has leg issues.
+  ClusterId: CL10
+  TemporalProfile: current
+  Updates:
+  - CAP11: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T37 :: The patient has leg issues.
+- knee issues | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T37
+  Summary: The patient has knee issues.
+  ClusterId: CL11
+  TemporalProfile: current
+  Updates:
+  - CAP12: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T37 :: The patient has knee issues.
+- foot issues | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T37
+  Summary: The patient has foot issues.
+  ClusterId: CL12
+  TemporalProfile: current
+  Updates:
+  - CAP13: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T37 :: The patient has foot issues.
+- neck pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T37,T63
+  Summary: The patient reports neck pain.
+  ClusterId: CL13
+  TemporalProfile: current, last week
+  Updates:
+  - CAP14: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T37 :: The patient reports neck pain.
+  - CAP15: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=last week turns=T63 :: The patient reports neck pain.
+- leg pain | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T37
+  Summary: The patient has a history of leg pain.
+  ClusterId: CL16
+  TemporalProfile: past
+  Updates:
+  - CAP23: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=past turns=T37 :: The patient has a history of leg pain.
+- neuropathy | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T39
+  Summary: The patient has neuropathy.
+  ClusterId: CL17
+  TemporalProfile: current
+  Updates:
+  - CAP18: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T39 :: The patient has neuropathy.
+- nerve compression | verification_status=unconfirmed | clinical_status=planned | modalities=assessment | speakers=doctor | evidence=T63
+  Summary: The nerve roots are compressed.
+  ClusterId: CL19
+  TemporalProfile: future
+  Updates:
+  - CAP16: content_source=doctor modality=assessment verification_status=unconfirmed clinical_status=planned temporality=future turns=T63 :: The nerve roots are compressed.
+- hand pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T65
+  Summary: The patient reports hand pain.
+  ClusterId: CL20
+  TemporalProfile: current
+  Updates:
+  - CAP1: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T65,T65 :: The patient reports hand pain.
+
+Medication Tracking
+- [MedicationState] oral steroids | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T27
+  Summary: The patient took oral steroids.
+  ClusterId: CL7
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient took oral steroids. (T27)
+  Updates:
+  - CAP20: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T27 :: The patient took oral steroids.
+- [MedicationState] numbing medicine | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T37
+  Summary: The patient took numbing medicine.
+  ClusterId: CL14
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient took numbing medicine. (T37)
+  Updates:
+  - CAP19: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T37 :: The patient took numbing medicine.
+- [MedicationState] gabapentin | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T37
+  Summary: The patient took gabapentin.
+  ClusterId: CL15
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient took gabapentin. (T37)
+  Updates:
+  - CAP22: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T37 :: The patient took gabapentin.
+- [MedicationState] eliquis | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T59
+  Summary: The patient is taking eliquis.
+  ClusterId: CL18
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient is taking eliquis. (T59)
+  Updates:
+  - CAP21: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T59 :: The patient is taking eliquis.
+
+Other Structured States
+- None

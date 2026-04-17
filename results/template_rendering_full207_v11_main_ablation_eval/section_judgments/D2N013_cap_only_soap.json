@@ -1,0 +1,30 @@
+{
+  "section_miscategorizations": [
+    {
+      "text": "The patient reports anxiety.",
+      "current_section": "A",
+      "expected_section": "S",
+      "severity": "major",
+      "reason": "This is a patient-reported symptom and belongs in the Subjective section, not in the Assessment, where clinician diagnostic impressions and problem synthesis should be documented."
+    },
+    {
+      "text": "The patient will continue taking keppra.",
+      "current_section": "P",
+      "expected_section": "P",
+      "severity": "minor",
+      "reason": "This is a plan statement about continuing a medication and is correctly placed in the Plan; however, it implicitly references a current medication state that is not documented in S. The placement is acceptable but slightly organizationally suboptimal."
+    },
+    {
+      "text": "The patient will continue taking metformin 500 mg twice a day.",
+      "current_section": "P",
+      "expected_section": "P",
+      "severity": "minor",
+      "reason": "This is a management decision to continue an existing medication and is correctly in the Plan, though ideally the baseline current medication use would also be reflected in S. The current placement is acceptable."
+    }
+  ],
+  "summary_statistics": {
+    "section_appropriateness_score": 0.9,
+    "section_miscategorization_count": 3,
+    "major_section_miscategorization_count": 1
+  }
+}

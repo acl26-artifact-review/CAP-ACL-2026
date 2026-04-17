@@ -1,0 +1,80 @@
+Case: D2N203
+
+Problem List and Visit State Tracking
+
+Problem List
+- pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T15
+  Summary: The patient reports pain.
+  ClusterId: CL1
+  TemporalProfile: current
+  Updates:
+  - CAP7: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T15 :: The patient reports pain.
+- smoking | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T16
+  Summary: The patient reports difficulty quitting smoking.
+  ClusterId: CL2
+  TemporalProfile: current
+  Updates:
+  - CAP4: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T16 :: The patient reports difficulty quitting smoking.
+- high blood pressure | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T18
+  Summary: The patient has a history of high blood pressure.
+  ClusterId: CL3
+  TemporalProfile: current, history
+  Updates:
+  - CAP1: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T18 :: The patient has a history of high blood pressure.
+  - CAP2: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=history turns=T18 :: The patient has a history of high blood pressure.
+- neovascular age-related macular degeneration | verification_status=confirmed | clinical_status=active | modalities=assessment | speakers=doctor | evidence=T19
+  Summary: The patient has neovascular age-related macular degeneration.
+  ClusterId: CL5
+  TemporalProfile: current
+  Updates:
+  - CAP3: content_source=doctor modality=assessment verification_status=confirmed clinical_status=active temporality=current turns=T19 :: The patient has neovascular age-related macular degeneration.
+- left hand pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T19
+  Summary: The patient reports left hand pain.
+  ClusterId: CL6
+  TemporalProfile: current
+  Updates:
+  - CAP5: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T19 :: The patient reports left hand pain.
+- vision loss | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T28
+  Summary: The patient reports vision loss.
+  ClusterId: CL10
+  TemporalProfile: current
+  Updates:
+  - CAP6: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T28 :: The patient reports vision loss.
+
+Medication Tracking
+- [MedicationChange] blood pressure medication | verification_status=unconfirmed | clinical_status=planned | modalities=interview | speakers=doctor | evidence=T18
+  Summary: The doctor wants the patient to start taking blood pressure medication.
+  ClusterId: CL4
+  TemporalProfile: today
+  PlannedChanges:
+  - The doctor wants the patient to start taking blood pressure medication. (T18)
+  - The doctor recommends taking blood pressure medication as prescribed. (T18)
+  Updates:
+  - CAP12: content_source=doctor modality=interview verification_status=unconfirmed clinical_status=planned temporality=today turns=T18 :: The doctor wants the patient to start taking blood pressure medication.
+  - CAP13: content_source=doctor modality=interview verification_status=unconfirmed clinical_status=planned temporality=today turns=T18 :: The doctor recommends taking blood pressure medication as prescribed.
+- [MedicationChange] lucent | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T22
+  Summary: The doctor plans to administer monthly lucent injections.
+  ClusterId: CL9
+  TemporalProfile: monthly
+  PlannedChanges:
+  - The doctor plans to administer monthly lucent injections. (T22)
+  Updates:
+  - CAP10: content_source=doctor modality=plan verification_status=unconfirmed clinical_status=planned temporality=monthly turns=T22 :: The doctor plans to administer monthly lucent injections.
+- [MedicationChange] injection | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T32
+  Summary: The doctor orders an injection.
+  ClusterId: CL11
+  TemporalProfile: today
+  PlannedChanges:
+  - The doctor orders an injection. (T32)
+  Updates:
+  - CAP11: content_source=doctor modality=plan verification_status=unconfirmed clinical_status=planned temporality=today turns=T32 :: The doctor orders an injection.
+
+Other Structured States
+- [Plan] physical exam | verification_status=unconfirmed | clinical_status=planned | modalities=interview | speakers=doctor | evidence=T20
+  Summary: The doctor will perform a physical exam on the patient's eyes.
+  ClusterId: CL7
+  TemporalProfile: today
+- [Plan] pill bottle | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T20
+  Summary: The doctor wants to place a pill bottle on the counter.
+  ClusterId: CL8
+  TemporalProfile: today

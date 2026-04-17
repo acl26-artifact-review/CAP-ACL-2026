@@ -1,0 +1,135 @@
+Case: D2N120
+
+Problem List and Visit State Tracking
+
+Problem List
+- back pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T1,T10,T23
+  Summary: The patient reports sharp, stabbing back pain.
+  ClusterId: CL1
+  TemporalProfile: current
+  Updates:
+  - CAP8: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T1 :: The patient reports sharp, stabbing back pain.
+  - CAP18: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T10 :: The patient reports pain.
+  - CAP14: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T23 :: The patient reports back pain.
+  - CAP15: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T23 :: The patient has back pain.
+- leg pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T7
+  Summary: The patient reports sharp, stabbing pain in their right leg.
+  ClusterId: CL2
+  TemporalProfile: current
+  Updates:
+  - CAP3: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T7 :: The patient reports sharp, stabbing pain in their right leg.
+- numbness | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T10
+  Summary: The patient reports numbness.
+  ClusterId: CL3
+  TemporalProfile: current
+  Updates:
+  - CAP16: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T10 :: The patient reports numbness.
+- tingling | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T10
+  Summary: The patient reports tingling.
+  ClusterId: CL4
+  TemporalProfile: current
+  Updates:
+  - CAP17: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T10 :: The patient reports tingling.
+- leg | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T11
+  Summary: The patient reports numbness to the right leg.
+  ClusterId: CL5
+  TemporalProfile: current
+  Updates:
+  - CAP5: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T11 :: The patient reports numbness to the right leg.
+- foot | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T11
+  Summary: The patient reports numbness to the foot.
+  ClusterId: CL6
+  TemporalProfile: current
+  Updates:
+  - CAP9: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T11 :: The patient reports numbness to the foot.
+- sensory loss | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T11
+  Summary: The patient reports sensory loss.
+  ClusterId: CL7
+  TemporalProfile: current
+  Updates:
+  - CAP13: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T11 :: The patient reports sensory loss.
+- physical therapy | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T21
+  Summary: The patient has tried physical therapy in the past.
+  ClusterId: CL9
+  TemporalProfile: past
+  Updates:
+  - CAP24: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=past turns=T21 :: The patient has tried physical therapy in the past.
+- surgery | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T21
+  Summary: The patient was previously offered surgery.
+  ClusterId: CL10
+  TemporalProfile: past
+  Updates:
+  - CAP25: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=past turns=T21 :: The patient was previously offered surgery.
+- weight gain | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T23
+  Summary: The patient reports weight gain over the past years.
+  ClusterId: CL11
+  TemporalProfile: past years
+  Updates:
+  - CAP4: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=past years turns=T23 :: The patient reports weight gain over the past years.
+- golf | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T25
+  Summary: The patient used to enjoy playing golf.
+  ClusterId: CL12
+  TemporalProfile: current
+  Updates:
+  - CAP10: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=current turns=T25 :: The patient used to enjoy playing golf.
+- left hand pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T35
+  Summary: The patient reports pain in the left hand.
+  ClusterId: CL13
+  TemporalProfile: current
+  Updates:
+  - CAP6: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T35 :: The patient reports pain in the left hand.
+- l4 l5 herniated disk with radiculopathy | verification_status=confirmed | clinical_status=active | modalities=assessment | speakers=doctor | evidence=T36
+  Summary: The patient has an l4 l5 herniated disk with radiculopathy.
+  ClusterId: CL14
+  TemporalProfile: current
+  Updates:
+  - CAP1: content_source=doctor modality=assessment verification_status=confirmed clinical_status=active temporality=current turns=T36 :: The patient has an l4 l5 herniated disk with radiculopathy.
+- chronic lumbar back pain | verification_status=confirmed | clinical_status=active | modalities=assessment | speakers=doctor | evidence=T36
+  Summary: The patient's symptoms are consistent with an L4-L5 herniated disk with radiculopathy.
+  ClusterId: CL15
+  TemporalProfile: current
+  Updates:
+  - CAP2: content_source=doctor modality=assessment verification_status=confirmed clinical_status=active temporality=current turns=T36 :: The patient's symptoms are consistent with an L4-L5 herniated disk with radiculopathy.
+  - CAP12: content_source=doctor modality=assessment verification_status=confirmed clinical_status=active temporality=current turns=T36 :: The patient has chronic lumbar back pain.
+- decreased sensation | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T36
+  Summary: The patient reports decreased sensation to light touch.
+  ClusterId: CL16
+  TemporalProfile: current
+  Updates:
+  - CAP7: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T36 :: The patient reports decreased sensation to light touch.
+- lumbar pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T39
+  Summary: The patient reports pain with lumbar flexion.
+  ClusterId: CL20
+  TemporalProfile: current
+  Updates:
+  - CAP11: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T39 :: The patient reports pain with lumbar flexion.
+
+Medication Tracking
+- [MedicationState] pain medications | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T21
+  Summary: The patient has previously taken strong pain medications.
+  ClusterId: CL8
+  TemporalProfile: past
+  CurrentRegimens:
+  - The patient has previously taken strong pain medications. (T21)
+  Updates:
+  - CAP21: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=past turns=T21 :: The patient has previously taken strong pain medications.
+- [MedicationChange] corticosteroid | verification_status=confirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T36
+  Summary: A spinal injection with a strong inflammatory medication called a corticosteroid is recommended.
+  ClusterId: CL18
+  TemporalProfile: future
+  PlannedChanges:
+  - A spinal injection with a strong inflammatory medication called a corticosteroid is recommended. (T36)
+  - A corticosteroid will be injected. (T36)
+  Updates:
+  - CAP20: content_source=doctor modality=plan verification_status=unconfirmed clinical_status=planned temporality=future turns=T36 :: A spinal injection with a strong inflammatory medication called a corticosteroid is recommended.
+  - CAP23: content_source=doctor modality=plan verification_status=confirmed clinical_status=planned temporality=future turns=T36 :: A corticosteroid will be injected.
+
+Other Structured States
+- [Plan] spinal injection | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T36
+  Summary: A spinal injection is ordered.
+  ClusterId: CL17
+  TemporalProfile: future
+- [FollowUp] monitoring | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T36
+  Summary: The patient will be monitored.
+  ClusterId: CL19
+  TemporalProfile: future

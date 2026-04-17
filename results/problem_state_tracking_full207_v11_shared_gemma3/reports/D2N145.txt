@@ -1,0 +1,285 @@
+Case: D2N145
+
+Problem List and Visit State Tracking
+
+Problem List
+- rash | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=doctor,patient | evidence=T109,T6,T81,T87
+  Summary: The patient reports a small rash.
+  ClusterId: CL1
+  TemporalProfile: current
+  Updates:
+  - CAP10: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T6 :: The patient reports a small rash.
+  - CAP18: content_source=doctor modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T81 :: The doctor mentioned a rash.
+  - CAP19: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T87 :: The patient has a rash.
+  - CAP21: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T109 :: The patient reports a rash.
+- plateaued | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T10
+  Summary: The patient reports the rash has plateaued.
+  ClusterId: CL3
+  TemporalProfile: current
+  Updates:
+  - CAP8: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T10 :: The patient reports the rash has plateaued.
+- hand pain | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T16,T28,T38,T56
+  Summary: The patient reports pain in the left hand.
+  ClusterId: CL4
+  TemporalProfile: current
+  Updates:
+  - CAP7: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T16 :: The patient reports pain in the left hand.
+  - CAP14: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T28 :: The patient reports hand pain.
+  - CAP17: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T38 :: The patient reports hand pain.
+  - CAP16: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T56 :: The patient reports hand pain.
+- worried | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T16
+  Summary: The patient expressed worry about elidel.
+  ClusterId: CL5
+  TemporalProfile: current
+  Updates:
+  - CAP11: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T16 :: The patient expressed worry about elidel.
+- dry skin | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T36,T92
+  Summary: The patient reports not using any lotion.
+  ClusterId: CL7
+  TemporalProfile: current
+  Updates:
+  - CAP9: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T36 :: The patient reports not using any lotion.
+  - CAP20: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T92 :: The patient reports feeling dry.
+- sun sensitivity | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T52
+  Summary: The patient feels sun sensitive.
+  ClusterId: CL10
+  TemporalProfile: current
+  Updates:
+  - CAP15: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T52 :: The patient feels sun sensitive.
+- cost of medication | verification_status=unconfirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T56
+  Summary: The patient reports the cost of medication is too high.
+  ClusterId: CL11
+  TemporalProfile: recently
+  Updates:
+  - CAP2: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=recently turns=T56 :: The patient reports the cost of medication is too high.
+- cost | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T65,T66
+  Summary: The patient states the cost was previously $30 to $40.
+  ClusterId: CL13
+  TemporalProfile: past
+  Updates:
+  - CAP3: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=past turns=T65 :: The patient states the cost was previously $30 to $40.
+  - CAP4: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=past turns=T66 :: The patient states the cost was around $850 after insurance.
+- tingly sensation | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T82
+  Summary: The patient reports a tingly sensation.
+  ClusterId: CL19
+  TemporalProfile: current
+  Updates:
+  - CAP12: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T82 :: The patient reports a tingly sensation.
+- redness | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T82
+  Summary: The patient reports redness.
+  ClusterId: CL20
+  TemporalProfile: current
+  Updates:
+  - CAP22: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T82 :: The patient reports redness.
+- flushing | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T82
+  Summary: The patient reports flushing.
+  ClusterId: CL21
+  TemporalProfile: current
+  Updates:
+  - CAP23: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T82 :: The patient reports flushing.
+- needle-like sensation | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T83
+  Summary: The patient reports a needle-like sensation.
+  ClusterId: CL22
+  TemporalProfile: current
+  Updates:
+  - CAP13: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T83 :: The patient reports a needle-like sensation.
+- moisture | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T94
+  Summary: The patient reports feeling like there's moisture getting back in.
+  ClusterId: CL24
+  TemporalProfile: current
+  Updates:
+  - CAP5: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T94 :: The patient reports feeling like there's moisture getting back in.
+- gentle cleanser | verification_status=confirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T127
+  Summary: The doctor recommends gently washing eyelids once a day with gentle cleanser.
+  ClusterId: CL38
+  TemporalProfile: future
+  Updates:
+  - CAP1: content_source=doctor modality=plan verification_status=confirmed clinical_status=planned temporality=future turns=T127 :: The doctor recommends gently washing eyelids once a day with gentle cleanser.
+- bruder mask | verification_status=confirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T127
+  Summary: The doctor recommends using a bruder mask as needed.
+  ClusterId: CL39
+  TemporalProfile: future
+  Updates:
+  - CAP6: content_source=doctor modality=plan verification_status=confirmed clinical_status=planned temporality=future turns=T127 :: The doctor recommends using a bruder mask as needed.
+
+Medication Tracking
+- [MedicationState] doxycycline | verification_status=confirmed | clinical_status=active | modalities=interview,unknown | speakers=doctor,patient | evidence=T109,T15,T40,T45,T6
+  Summary: The patient is now taking doxycycline at once a day.
+  ClusterId: CL2
+  TemporalProfile: current, future, past
+  CurrentRegimens:
+  - The patient is now taking doxycycline at once a day. (T6)
+  - The doctor suggests resuming doxycycline twice a day. (T15)
+  - The patient was taking doxycycline twice a day. (T40)
+  - The doctor recommends increasing doxycycline to twice a day. (T45)
+  - The doctor recommends continuing doxycycline for another week. (T109)
+  Updates:
+  - CAP54: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T6 :: The patient is now taking doxycycline at once a day.
+  - CAP58: content_source=doctor modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T15 :: The doctor suggests resuming doxycycline twice a day.
+  - CAP59: content_source=doctor modality=unknown verification_status=confirmed clinical_status=active temporality=past turns=T40 :: The patient was taking doxycycline twice a day.
+  - CAP56: content_source=doctor modality=unknown verification_status=confirmed clinical_status=active temporality=future turns=T45 :: The doctor recommends increasing doxycycline to twice a day.
+  - CAP60: content_source=doctor modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T109 :: The doctor recommends continuing doxycycline for another week.
+- [MedicationChange] doxycycline | verification_status=confirmed | clinical_status=planned | modalities=interview,plan | speakers=doctor | evidence=T105,T109,T117,T45,T97
+  Summary: Take doxycycline twice a day until the rash is gone.
+  ClusterId: CL8
+  TemporalProfile: another week, current, daily, future, twice daily until rash is gone
+  PlannedChanges:
+  - The doctor recommends doxycycline twice daily. (T45)
+  - The doctor orders doxycycline to be increased to twice a day. (T97)
+  - Take doxycycline twice a day until the rash is gone. (T105)
+  - Continue taking doxycycline for another week. (T109)
+  - The patient has another refill of the doxycycline. (T117)
+  Updates:
+  - CAP37: content_source=doctor modality=interview verification_status=confirmed clinical_status=planned temporality=daily turns=T45 :: The doctor recommends doxycycline twice daily.
+  - CAP49: content_source=doctor modality=plan verification_status=confirmed clinical_status=planned temporality=future turns=T97 :: The doctor orders doxycycline to be increased to twice a day.
+  - CAP26: content_source=doctor modality=interview verification_status=confirmed clinical_status=planned temporality=twice daily until rash is gone turns=T105 :: Take doxycycline twice a day until the rash is gone.
+  - CAP41: content_source=doctor modality=interview verification_status=confirmed clinical_status=planned temporality=another week turns=T109 :: Continue taking doxycycline for another week.
+  - CAP61: content_source=doctor modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T117 :: The patient has another refill of the doxycycline.
+- [MedicationChange] elidel | verification_status=unconfirmed | clinical_status=planned | modalities=interview,plan | speakers=doctor | evidence=T47,T55
+  Summary: The doctor recommends using elidel.
+  ClusterId: CL9
+  TemporalProfile: future, sooner rather than later
+  PlannedChanges:
+  - The doctor recommends starting elidel. (T47)
+  - The doctor recommends using elidel. (T55)
+  Updates:
+  - CAP43: content_source=doctor modality=interview verification_status=confirmed clinical_status=planned temporality=future turns=T47 :: The doctor recommends starting elidel.
+  - CAP44: content_source=doctor modality=plan verification_status=unconfirmed clinical_status=planned temporality=sooner rather than later turns=T55 :: The doctor recommends using elidel.
+- [MedicationChange] eucrisa | verification_status=unconfirmed | clinical_status=planned | modalities=interview | speakers=patient | evidence=T62
+  Summary: The patient suggests using eucrisa instead.
+  ClusterId: CL12
+  TemporalProfile: instead
+  PlannedChanges:
+  - The patient suggests using eucrisa instead. (T62)
+  Updates:
+  - CAP38: content_source=patient modality=interview verification_status=unconfirmed clinical_status=planned temporality=instead turns=T62 :: The patient suggests using eucrisa instead.
+- [MedicationChange] tacrolimus ointment | verification_status=confirmed | clinical_status=planned | modalities=interview,plan | speakers=doctor | evidence=T109,T67
+  Summary: The doctor suggests trying tacrolimus ointment.
+  ClusterId: CL15
+  TemporalProfile: current, future, once a day for a week before stopping
+  PlannedChanges:
+  - The doctor suggests trying tacrolimus ointment. (T67)
+  - The doctor recommends stopping the tacrolimus ointment once the rash stops. (T109)
+  - Take tacrolimus once a day for a week before stopping. (T109)
+  Updates:
+  - CAP39: content_source=doctor modality=plan verification_status=unconfirmed clinical_status=planned temporality=future turns=T67 :: The doctor suggests trying tacrolimus ointment.
+  - CAP52: content_source=doctor modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T109 :: The doctor recommends stopping the tacrolimus ointment once the rash stops.
+  - CAP27: content_source=doctor modality=interview verification_status=confirmed clinical_status=planned temporality=once a day for a week before stopping turns=T109 :: Take tacrolimus once a day for a week before stopping.
+- [MedicationState] calcineurin inhibitor | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=doctor | evidence=T79
+  Summary: The doctor prescribed a calcineurin inhibitor.
+  ClusterId: CL17
+  TemporalProfile: current
+  CurrentRegimens:
+  - The doctor prescribed a calcineurin inhibitor. (T79)
+  Updates:
+  - CAP63: content_source=doctor modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T79 :: The doctor prescribed a calcineurin inhibitor.
+- [MedicationState] steroids | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=doctor | evidence=T81
+  Summary: The doctor stated that steroids should not be used on the face.
+  ClusterId: CL18
+  TemporalProfile: past
+  CurrentRegimens:
+  - The doctor stated that steroids should not be used on the face. (T81)
+  Updates:
+  - CAP48: content_source=doctor modality=interview verification_status=confirmed clinical_status=historical temporality=past turns=T81 :: The doctor stated that steroids should not be used on the face.
+- [MedicationChange] face wash | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T89
+  Summary: Apply to rash on face twice daily, until resolved.
+  ClusterId: CL23
+  TemporalProfile: current
+  PlannedChanges:
+  - Apply to rash on face twice daily, until resolved. (T89)
+  - Keep using the face wash. (T89)
+  Updates:
+  - CAP29: content_source=doctor modality=plan verification_status=unconfirmed clinical_status=planned temporality=current turns=T89 :: Apply to rash on face twice daily, until resolved.
+  - CAP45: content_source=doctor modality=plan verification_status=unconfirmed clinical_status=planned temporality=current turns=T89 :: Keep using the face wash.
+- [MedicationChange] metro cream | verification_status=confirmed | clinical_status=planned | modalities=interview | speakers=doctor | evidence=T109
+  Summary: Continue using the metro cream.
+  ClusterId: CL32
+  TemporalProfile: continue using
+  PlannedChanges:
+  - Continue using the metro cream. (T109)
+  Updates:
+  - CAP46: content_source=doctor modality=interview verification_status=confirmed clinical_status=planned temporality=continue using turns=T109 :: Continue using the metro cream.
+- [MedicationState] metro cream | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=doctor | evidence=T109,T117
+  Summary: The patient probably still has enough of the metro cream.
+  ClusterId: CL33
+  TemporalProfile: current
+  CurrentRegimens:
+  - The doctor recommends continuing to use the metro cream. (T109)
+  - The patient probably still has enough of the metro cream. (T117)
+  Updates:
+  - CAP57: content_source=doctor modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T109 :: The doctor recommends continuing to use the metro cream.
+  - CAP55: content_source=doctor modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T117 :: The patient probably still has enough of the metro cream.
+- [MedicationChange] petroleum jelly | verification_status=confirmed | clinical_status=planned | modalities=interview | speakers=doctor | evidence=T121
+  Summary: The doctor suggests using petroleum jelly if skin is very dry.
+  ClusterId: CL37
+  TemporalProfile: future
+  PlannedChanges:
+  - The doctor suggests using petroleum jelly if skin is very dry. (T121)
+  Updates:
+  - CAP53: content_source=doctor modality=interview verification_status=confirmed clinical_status=planned temporality=future turns=T121 :: The doctor suggests using petroleum jelly if skin is very dry.
+- [MedicationChange] vanicream | verification_status=confirmed | clinical_status=planned | modalities=interview | speakers=doctor | evidence=T127
+  Summary: The doctor recommends vanicream as a moisturizer.
+  ClusterId: CL41
+  TemporalProfile: future
+  PlannedChanges:
+  - The doctor recommends vanicream as a moisturizer. (T127)
+  Updates:
+  - CAP62: content_source=doctor modality=interview verification_status=confirmed clinical_status=planned temporality=future turns=T127 :: The doctor recommends vanicream as a moisturizer.
+
+Other Structured States
+- [Plan] elidel | verification_status=unconfirmed | clinical_status=planned | modalities=assessment,interview | speakers=doctor | evidence=T17,T47
+  Summary: The doctor recommends starting elidel.
+  ClusterId: CL6
+  TemporalProfile: future
+- [TestResult] elidel price | verification_status=unconfirmed | clinical_status=active | modalities=assessment | speakers=doctor | evidence=T65
+  Summary: The elidel price is around $ 70.
+  ClusterId: CL14
+  TemporalProfile: currently
+- [Plan] prescription | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T71,T73
+  Summary: The doctor will send a prescription to pick'n save or metro market.
+  ClusterId: CL16
+  TemporalProfile: future
+- [Plan] wash | verification_status=confirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T97
+  Summary: The patient should wash once a day with the face wash.
+  ClusterId: CL25
+  TemporalProfile: future
+- [Plan] metro cream | verification_status=confirmed | clinical_status=active | modalities=plan | speakers=doctor | evidence=T97
+  Summary: The patient should continue using metro cream.
+  ClusterId: CL26
+  TemporalProfile: current
+- [FollowUp] reduce | verification_status=confirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T97
+  Summary: The patient should reduce to once per day if starting to get dry.
+  ClusterId: CL27
+  TemporalProfile: future
+- [FollowUp] continue | verification_status=confirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T97
+  Summary: The patient should continue using the face wash and metro cream.
+  ClusterId: CL28
+  TemporalProfile: future
+- [FollowUp] stop | verification_status=confirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T97
+  Summary: The patient should stop using once per day after one week.
+  ClusterId: CL29
+  TemporalProfile: future
+- [Plan] tacrolimus ointment | verification_status=unconfirmed | clinical_status=planned | modalities=interview | speakers=doctor | evidence=T109
+  Summary: The doctor recommends restarting tacrolimus ointment if the rash flares.
+  ClusterId: CL30
+  TemporalProfile: future
+- [Plan] doxycycline | verification_status=unconfirmed | clinical_status=planned | modalities=interview | speakers=doctor | evidence=T109
+  Summary: The doctor recommends restarting doxycycline if the rash flares.
+  ClusterId: CL31
+  TemporalProfile: future
+- [FollowUp] follow-up | verification_status=confirmed | clinical_status=planned | modalities=interview | speakers=doctor | evidence=T117
+  Summary: The doctor recommends a follow-up appointment.
+  ClusterId: CL34
+  TemporalProfile: future
+- [Plan] face wash | verification_status=unconfirmed | clinical_status=planned | modalities=interview | speakers=doctor | evidence=T119
+  Summary: The doctor recommends continuing to use the face wash.
+  ClusterId: CL35
+  TemporalProfile: future
+- [Plan] elidel cream | verification_status=unconfirmed | clinical_status=planned | modalities=interview | speakers=doctor | evidence=T119
+  Summary: The doctor recommends canceling the elidel cream.
+  ClusterId: CL36
+  TemporalProfile: future
+- [Plan] vanicream | verification_status=confirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T127
+  Summary: The doctor will give the patient samples of vanicream.
+  ClusterId: CL40
+  TemporalProfile: future

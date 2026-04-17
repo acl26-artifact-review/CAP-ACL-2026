@@ -1,0 +1,75 @@
+Case: D2N017
+
+Problem List and Visit State Tracking
+
+Problem List
+- leg pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T7
+  Summary: The patient reports pain in the top part of their right leg.
+  ClusterId: CL1
+  TemporalProfile: current
+  Updates:
+  - CAP2: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T7 :: The patient reports pain in the top part of their right leg.
+- fall | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T7
+  Summary: The patient fell while bowling.
+  ClusterId: CL2
+  TemporalProfile: past
+  Updates:
+  - CAP7: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=past turns=T7 :: The patient fell while bowling.
+- hand pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T9
+  Summary: The patient reports pain in the left hand.
+  ClusterId: CL3
+  TemporalProfile: current
+  Updates:
+  - CAP4: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T9 :: The patient reports pain in the left hand.
+- swelling | verification_status=unconfirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T11
+  Summary: The patient did not seem to swell.
+  ClusterId: CL4
+  TemporalProfile: past
+  Updates:
+  - CAP5: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=past turns=T11 :: The patient did not seem to swell.
+- bruising | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T13
+  Summary: The patient reports bruising on the back end of the left hand.
+  ClusterId: CL5
+  TemporalProfile: current
+  Updates:
+  - CAP3: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T13 :: The patient reports bruising on the back end of the left hand.
+- pain with walking | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T13
+  Summary: The patient reports pain when walking.
+  ClusterId: CL6
+  TemporalProfile: current
+  Updates:
+  - CAP6: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T13 :: The patient reports pain when walking.
+- difficulty walking | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T13
+  Summary: The patient reports difficulty walking.
+  ClusterId: CL7
+  TemporalProfile: current
+  Updates:
+  - CAP8: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T13 :: The patient reports difficulty walking.
+- pain avoidance | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T19
+  Summary: The patient avoids stairs.
+  ClusterId: CL8
+  TemporalProfile: current
+  Updates:
+  - CAP9: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T19 :: The patient avoids stairs.
+- contusion | verification_status=confirmed | clinical_status=active | modalities=assessment | speakers=doctor | evidence=T32
+  Summary: The doctor's impression is that the patient has a contusion.
+  ClusterId: CL9
+  TemporalProfile: future
+  Updates:
+  - CAP1: content_source=doctor modality=assessment verification_status=confirmed clinical_status=active temporality=future turns=T32 :: The doctor's impression is that the patient has a contusion.
+
+Medication Tracking
+- [MedicationChange] mobic | verification_status=confirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T32
+  Summary: The doctor will start the patient on mobic 15 milligrams once a day.
+  ClusterId: CL11
+  TemporalProfile: future
+  PlannedChanges:
+  - The doctor will start the patient on mobic 15 milligrams once a day. (T32)
+  Updates:
+  - CAP11: content_source=doctor modality=plan verification_status=confirmed clinical_status=planned temporality=future turns=T32 :: The doctor will start the patient on mobic 15 milligrams once a day.
+
+Other Structured States
+- [Plan] ice | verification_status=confirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T32
+  Summary: The doctor recommends the patient use ice.
+  ClusterId: CL10
+  TemporalProfile: future

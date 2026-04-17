@@ -1,0 +1,93 @@
+Case: D2N146
+
+Problem List and Visit State Tracking
+
+Problem List
+- gallstones | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T1
+  Summary: The patient has a history of gallstones.
+  ClusterId: CL2
+  TemporalProfile: past
+  Updates:
+  - CAP19: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=past turns=T1 :: The patient has a history of gallstones.
+- abdominal pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T21,T3,T37,T9
+  Summary: The patient reports squeezing severe pain on the right hand side of their belly.
+  ClusterId: CL3
+  TemporalProfile: current
+  Updates:
+  - CAP2: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T3 :: The patient reports squeezing severe pain on the right hand side of their belly.
+  - CAP4: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T9 :: The patient reports pain in the left hand.
+  - CAP5: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T21 :: The patient reports pain underneath the ribs.
+  - CAP8: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T21 :: The patient still gets pain.
+  - CAP12: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T21 :: The patient reports pain.
+  - CAP9: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T37 :: The patient has abdominal pain.
+- nausea | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T3
+  Summary: The patient reports nausea.
+  ClusterId: CL4
+  TemporalProfile: current
+  Updates:
+  - CAP10: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T3 :: The patient reports nausea.
+- diet | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T13,T15
+  Summary: The patient's diet has changed.
+  ClusterId: CL5
+  TemporalProfile: current
+  Updates:
+  - CAP1: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T13,T15 :: The patient's diet has changed.
+- type 2 diabetes | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T13
+  Summary: The patient has a history of type 2 diabetes.
+  ClusterId: CL6
+  TemporalProfile: past
+  Updates:
+  - CAP3: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=past turns=T13 :: The patient has a history of type 2 diabetes.
+- symptoms | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T19
+  Summary: The patient's symptoms improved.
+  ClusterId: CL7
+  TemporalProfile: current
+  Updates:
+  - CAP11: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T19 :: The patient's symptoms improved.
+- carb intake | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T22
+  Summary: The patient cut out pork rinds.
+  ClusterId: CL8
+  TemporalProfile: current
+  Updates:
+  - CAP6: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T22 :: The patient cut out pork rinds.
+- gallbladder disease | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T25
+  Summary: The patient's father and mother both had their gallbladders taken out.
+  ClusterId: CL9
+  TemporalProfile: historical
+  Updates:
+  - CAP18: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=historical turns=T25 :: The patient's father and mother both had their gallbladders taken out.
+  - CAP20: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=historical turns=T25 :: The patient's mother died of pancreatic cancer.
+- fever | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T37
+  Summary: The patient reports low grade fever.
+  ClusterId: CL10
+  TemporalProfile: current
+  Updates:
+  - CAP7: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T37 :: The patient reports low grade fever.
+
+Medication Tracking
+- [MedicationState] high fat food | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T1
+  Summary: The patient previously avoided high fat food.
+  ClusterId: CL1
+  TemporalProfile: past
+  CurrentRegimens:
+  - The patient previously avoided high fat food. (T1)
+  Updates:
+  - CAP17: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=past turns=T1 :: The patient previously avoided high fat food.
+- [MedicationState] diabetes | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=doctor | evidence=T49
+  Summary: The doctor wants the patient to follow up with their physician to monitor their diabetes.
+  ClusterId: CL12
+  TemporalProfile: current
+  CurrentRegimens:
+  - The doctor wants the patient to follow up with their physician to monitor their diabetes. (T49)
+  Updates:
+  - CAP15: content_source=doctor modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T49 :: The doctor wants the patient to follow up with their physician to monitor their diabetes.
+
+Other Structured States
+- [Plan] walking | verification_status=confirmed | clinical_status=planned | modalities=interview | speakers=doctor | evidence=T49,T52
+  Summary: The doctor wants the patient to get up and walk around on solid ground within a week.
+  ClusterId: CL11
+  TemporalProfile: within 2 days, within a week
+- [FollowUp] follow_up | verification_status=confirmed | clinical_status=planned | modalities=interview | speakers=doctor | evidence=T49
+  Summary: The doctor wants to see the patient again in about a week.
+  ClusterId: CL13
+  TemporalProfile: next week

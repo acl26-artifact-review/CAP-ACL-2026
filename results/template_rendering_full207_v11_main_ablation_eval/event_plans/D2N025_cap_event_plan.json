@@ -1,0 +1,130 @@
+{
+  "events": [
+    {
+      "event_id": "CL22",
+      "event_type": "ProblemOrientedNoteBundle",
+      "canonical_concept": "heart problems",
+      "visit_state": "active",
+      "status": "affirmed",
+      "temporality": "future",
+      "speaker_source": "doctor,test_result",
+      "clinical_priority": "high",
+      "title": "heart problems",
+      "event_summary": "Problem-oriented bundle for heart problems.",
+      "supporting_cap_ids": [
+        "CAP1",
+        "CAP30",
+        "CAP28",
+        "CAP22",
+        "CAP34",
+        "CAP18",
+        "CAP33"
+      ],
+      "anchor_problem_cap_id": "CAP1",
+      "anchor_problem": "heart problems",
+      "O_cap_ids": [
+        "CAP30",
+        "CAP28",
+        "CAP18"
+      ],
+      "A_cap_ids": [
+        "CAP1"
+      ],
+      "P_cap_ids": [
+        "CAP22",
+        "CAP34",
+        "CAP33"
+      ],
+      "supporting_evidence": [
+        "The patient's creatinine was .7.",
+        "The patient's creatinine level is appropriate.",
+        "The doctor plans to perform an EKG on the patient.",
+        "The patient has heart problems."
+      ],
+      "current_state": [
+        "The patient has heart problems."
+      ],
+      "planned_actions": [
+        "The doctor recommends putting the patient on magnesium supplement.",
+        "The doctor recommends stopping the patient from taking clopidogrel before surgery."
+      ],
+      "key_slots": {
+        "source_modalities": "assessment, interview, test_result, plan, exam",
+        "temporal_profile": "current, future",
+        "anchor_cluster_type": "ProblemState",
+        "anchor_primary_cap_type": "Diagnosis",
+        "bundle_concepts": "heart problems; creatinine; magnesium supplement; ekg; clopidogrel",
+        "history_context": "",
+        "related_factors": "",
+        "visit_primary": "true",
+        "render_in_note": "true",
+        "assessment_fallback": "",
+        "bundle_design": "problem_oriented_note_bundle"
+      },
+      "render_sections": [
+        "S",
+        "O",
+        "A",
+        "P",
+        "History of Present Illness",
+        "Findings",
+        "Assessment",
+        "Plan"
+      ]
+    },
+    {
+      "event_id": "CL34",
+      "event_type": "ProblemOrientedNoteBundle",
+      "canonical_concept": "diabetes",
+      "visit_state": "active",
+      "status": "affirmed",
+      "temporality": "march",
+      "speaker_source": "doctor,test_result",
+      "clinical_priority": "high",
+      "title": "diabetes",
+      "event_summary": "Problem-oriented bundle for diabetes.",
+      "supporting_cap_ids": [
+        "CAP16",
+        "CAP24"
+      ],
+      "anchor_problem_cap_id": "CAP16",
+      "anchor_problem": "diabetes",
+      "S_cap_ids": [
+        "CAP16"
+      ],
+      "O_cap_ids": [
+        "CAP24"
+      ],
+      "supporting_evidence": [
+        "The patient has diabetes.",
+        "The patient's last A1C was 5.5 in March."
+      ],
+      "current_state": [
+        "The patient has diabetes."
+      ],
+      "key_slots": {
+        "source_modalities": "interview, test_result",
+        "temporal_profile": "ongoing, march",
+        "anchor_cluster_type": "ProblemState",
+        "anchor_primary_cap_type": "Problem",
+        "bundle_concepts": "diabetes; a1c",
+        "history_context": "",
+        "related_factors": "",
+        "visit_primary": "true",
+        "render_in_note": "true",
+        "assessment_fallback": "The patient has diabetes.",
+        "bundle_design": "problem_oriented_note_bundle"
+      },
+      "render_sections": [
+        "S",
+        "O",
+        "A",
+        "P",
+        "History of Present Illness",
+        "Findings",
+        "Assessment",
+        "Plan"
+      ]
+    }
+  ]
+}

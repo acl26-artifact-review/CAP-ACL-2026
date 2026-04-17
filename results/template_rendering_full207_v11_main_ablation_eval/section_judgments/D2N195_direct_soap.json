@@ -1,0 +1,23 @@
+{
+  "section_miscategorizations": [
+    {
+      "text": "He has a diagnosis of type 2 diabetes with an A1c of 7.2.",
+      "current_section": "A",
+      "expected_section": "O",
+      "severity": "minor",
+      "reason": "The A1c value is an objective lab result and belongs in the Objective section; however, its presence in Assessment as part of problem synthesis is not seriously misleading."
+    },
+    {
+      "text": "Order a blood glucose monitoring log and schedule a follow-up appointment in two weeks.",
+      "current_section": "P",
+      "expected_section": "P",
+      "severity": "minor",
+      "reason": "This single statement contains two distinct plan items (ordering a log and scheduling follow-up). While both belong in Plan, best organization would separate them; this is a minor structural issue, not a true miscategorization."
+    }
+  ],
+  "summary_statistics": {
+    "section_appropriateness_score": 0.9,
+    "section_miscategorization_count": 2,
+    "major_section_miscategorization_count": 0
+  }
+}

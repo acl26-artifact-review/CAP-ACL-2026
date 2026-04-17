@@ -1,0 +1,30 @@
+{
+  "section_miscategorizations": [
+    {
+      "text": "The patient is a 43-year-old male with a history of diabetes, hypertension, and high cholesterol.",
+      "current_section": "Findings",
+      "expected_section": "History of Present Illness",
+      "severity": "minor",
+      "reason": "Past medical history and demographics are part of the patient's history rather than exam or test findings. While commonly documented in an exam section, this is organizationally better suited to the history section."
+    },
+    {
+      "text": "The patient reports checking his blood sugar approximately two to three times a week, with readings typically in the range of 120-140 mg/dL.",
+      "current_section": "Findings",
+      "expected_section": "History of Present Illness",
+      "severity": "major",
+      "reason": "This is patient-reported home monitoring behavior and symptom-related data, fitting the HPI definition. Placing it under Findings could mislead a reader into thinking these are objective clinic or lab results rather than self-reported values."
+    },
+    {
+      "text": "He also continues to have uncontrolled diabetes and hypertension with associated edema.",
+      "current_section": "Assessment",
+      "expected_section": "Assessment",
+      "severity": "minor",
+      "reason": "The narrative elsewhere (A1c 7.0%, BP 120/70, no clear thresholds) does not clearly support labeling diabetes and hypertension as 'uncontrolled.' While this is an assessment statement and belongs in this section, the wording may overstate the degree of control relative to the documented findings, which could mildly mislead interpretation."
+    }
+  ],
+  "summary_statistics": {
+    "section_appropriateness_score": 0.8,
+    "section_miscategorization_count": 3,
+    "major_section_miscategorization_count": 1
+  }
+}

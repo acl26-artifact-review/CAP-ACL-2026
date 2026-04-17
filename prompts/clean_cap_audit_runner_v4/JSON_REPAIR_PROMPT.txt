@@ -1,0 +1,15 @@
+You will receive malformed JSON produced by a clinical NLP system.
+Return one repaired valid JSON object only.
+Do not add commentary, markdown, or code fences.
+Preserve content whenever possible and remove unfinished trailing fragments if needed.
+Return only this compact schema:
+- atomic_propositions: list of up to {max_props} objects
+- each object may contain only prop_id, category, speaker, predicate, status, temporality, claim_type_tags, proposition_text
+- filtered_nonverifiable_units: flat list of strings
+
+If the malformed content cannot be safely repaired into that schema, return:
+{{"atomic_propositions": [], "filtered_nonverifiable_units": []}}
+
+<Malformed JSON>
+{bad_json}
+</Malformed JSON>

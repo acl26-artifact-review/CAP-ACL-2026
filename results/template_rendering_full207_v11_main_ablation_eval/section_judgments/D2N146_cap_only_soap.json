@@ -1,0 +1,37 @@
+{
+  "section_miscategorizations": [
+    {
+      "text": "A history of type 2 diabetes.",
+      "current_section": "A",
+      "expected_section": "S",
+      "severity": "minor",
+      "reason": "Past medical history is typically documented in the subjective/history portion; here it is listed among assessments rather than as part of the patient's history."
+    },
+    {
+      "text": "The patient has a history of gallstones.",
+      "current_section": "A",
+      "expected_section": "S",
+      "severity": "minor",
+      "reason": "History of gallstones is past medical history, which belongs in the subjective/history section rather than the assessment, unless being explicitly synthesized as an active problem."
+    },
+    {
+      "text": "The patient's father and mother both had their gallbladders taken out.",
+      "current_section": "A",
+      "expected_section": "S",
+      "severity": "major",
+      "reason": "This is family history, which belongs in the subjective/history section; placing it in the assessment could mislead a reader into interpreting it as an active clinical assessment rather than background risk information."
+    },
+    {
+      "text": "The patient's mother died of pancreatic cancer.",
+      "current_section": "A",
+      "expected_section": "S",
+      "severity": "major",
+      "reason": "This is family history, which should be in the subjective/history section; documenting it in the assessment blurs the distinction between family risk factors and the clinician's diagnostic impression."
+    }
+  ],
+  "summary_statistics": {
+    "section_appropriateness_score": 0.7,
+    "section_miscategorization_count": 4,
+    "major_section_miscategorization_count": 2
+  }
+}

@@ -1,0 +1,76 @@
+Case: D2N005
+
+Problem List and Visit State Tracking
+
+Problem List
+- pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T26,T29,T3
+  Summary: The patient reports pain in the right middle finger.
+  ClusterId: CL1
+  TemporalProfile: current
+  Updates:
+  - CAP4: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T3 :: The patient reports pain in the right middle finger.
+  - CAP8: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T26 :: The patient reports very much so pain.
+  - CAP11: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T29 :: The patient reports pain.
+- road traffic accident | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T5
+  Summary: The patient sustained a road traffic accident.
+  ClusterId: CL2
+  TemporalProfile: 4-5 days ago
+  Updates:
+  - CAP6: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=4-5 days ago turns=T5 :: The patient sustained a road traffic accident.
+- anger | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T5
+  Summary: The patient experienced anger during the accident.
+  ClusterId: CL3
+  TemporalProfile: during accident
+  Updates:
+  - CAP7: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=during accident turns=T5 :: The patient experienced anger during the accident.
+- hand injury | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T6
+  Summary: The patient has a hand injury.
+  ClusterId: CL4
+  TemporalProfile: current
+  Updates:
+  - CAP9: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T6 :: The patient has a hand injury.
+- rear-end collision | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T10
+  Summary: The patient was involved in a rear-end collision.
+  ClusterId: CL5
+  TemporalProfile: recent
+  Updates:
+  - CAP5: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=recent turns=T10 :: The patient was involved in a rear-end collision.
+- distal phalanx fracture of the middle finger | verification_status=confirmed | clinical_status=active | modalities=assessment,interview | speakers=doctor,patient | evidence=T21,T29
+  Summary: The patient has a distal phalanx fracture of the middle finger.
+  ClusterId: CL6
+  TemporalProfile: current
+  Updates:
+  - CAP2: content_source=doctor modality=assessment verification_status=confirmed clinical_status=active temporality=current turns=T21 :: The patient has a distal phalanx fracture.
+  - CAP10: content_source=doctor modality=assessment verification_status=confirmed clinical_status=active temporality=current turns=T21 :: The patient has a fracture.
+  - CAP3: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T29 :: The patient reports tenderness over the distal phalanx of the right middle finger.
+  - CAP1: content_source=doctor modality=assessment verification_status=confirmed clinical_status=active temporality=current turns=T29 :: The patient has a distal phalanx fracture of the middle finger.
+
+Medication Tracking
+- [MedicationChange] tramadol | verification_status=confirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T29
+  Summary: The patient will receive tramadol 50 mg every 6 hours as needed for pain for two days.
+  ClusterId: CL7
+  TemporalProfile: in 2 days, in the next 2 days
+  PlannedChanges:
+  - The patient will receive tramadol 50 mg every 6 hours as needed for pain for two days. (T29)
+  - The patient will receive tramadol. (T29)
+  Updates:
+  - CAP13: content_source=doctor modality=plan verification_status=confirmed clinical_status=planned temporality=in 2 days turns=T29 :: The patient will receive tramadol 50 mg every 6 hours as needed for pain for two days.
+  - CAP15: content_source=doctor modality=plan verification_status=confirmed clinical_status=planned temporality=in the next 2 days turns=T29 :: The patient will receive tramadol.
+- [MedicationState] digoxin | verification_status=confirmed | clinical_status=active | modalities=plan | speakers=doctor | evidence=T35
+  Summary: The patient is taking digoxin.
+  ClusterId: CL10
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient is taking digoxin. (T35)
+  Updates:
+  - CAP16: content_source=doctor modality=plan verification_status=confirmed clinical_status=active temporality=current turns=T35 :: The patient is taking digoxin.
+
+Other Structured States
+- [FollowUp] follow-up x-ray | verification_status=confirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T31
+  Summary: The patient will have a follow-up x-ray in two weeks.
+  ClusterId: CL8
+  TemporalProfile: in two weeks
+- [Plan] finger splint | verification_status=confirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T33
+  Summary: The patient will receive a finger splint.
+  ClusterId: CL9
+  TemporalProfile: in the future

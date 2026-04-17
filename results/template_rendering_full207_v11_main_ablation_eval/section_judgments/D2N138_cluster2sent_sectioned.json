@@ -1,0 +1,44 @@
+{
+  "section_miscategorizations": [
+    {
+      "text": "The patient's breathing test results are comparable to prior results and slightly improved.",
+      "current_section": "History of Present Illness",
+      "expected_section": "Findings",
+      "severity": "major",
+      "reason": "This sentence reports objective test results, which belong under exam/findings rather than in the patient history narrative."
+    },
+    {
+      "text": "The clinician recommends stepping down to alvesco as a potential alternative to wixela and recommends using inhalers only during illness or smoke season.",
+      "current_section": "History of Present Illness",
+      "expected_section": "Plan",
+      "severity": "major",
+      "reason": "This is a treatment recommendation and management strategy, which should be documented in the plan rather than in the history."
+    },
+    {
+      "text": "The act score is 21.",
+      "current_section": "Findings",
+      "expected_section": "History of Present Illness",
+      "severity": "minor",
+      "reason": "An ACT score reflects a patient-reported symptom control measure; while often listed with vitals, by the given template semantics it more closely aligns with patient-reported history than objective exam findings."
+    },
+    {
+      "text": "Written consent is obtained today to use Dax for documentation.",
+      "current_section": "Plan",
+      "expected_section": "Findings",
+      "severity": "minor",
+      "reason": "This is a completed action/observation during the visit rather than a forward-looking plan item; it fits better as a visit finding or procedural note."
+    },
+    {
+      "text": "The patient's pharmacy is Kaiser Permanente Broadway.",
+      "current_section": "Plan",
+      "expected_section": "History of Present Illness",
+      "severity": "minor",
+      "reason": "Pharmacy information is background/contextual history rather than a treatment plan element."
+    }
+  ],
+  "summary_statistics": {
+    "section_appropriateness_score": 0.7,
+    "section_miscategorization_count": 5,
+    "major_section_miscategorization_count": 2
+  }
+}

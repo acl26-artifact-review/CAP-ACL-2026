@@ -1,0 +1,67 @@
+Case: D2N061
+
+Problem List and Visit State Tracking
+
+Problem List
+- knee injury | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T17,T3
+  Summary: The patient sustained a knee injury 7 days ago.
+  ClusterId: CL1
+  TemporalProfile: 7 days ago, current
+  Updates:
+  - CAP7: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T3 :: The patient has a knee injury.
+  - CAP1: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=7 days ago turns=T17 :: The patient sustained a knee injury 7 days ago.
+- knee pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T13,T24,T3,T37
+  Summary: The patient reports pain in the knee.
+  ClusterId: CL2
+  TemporalProfile: current
+  Updates:
+  - CAP4: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T3 :: The patient reports pain in the knee.
+  - CAP5: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T13 :: The patient reports pain on the inside.
+  - CAP8: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T24 :: The patient reports knee pain.
+  - CAP3: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T37 :: The patient reports pain in the left hand.
+- fall | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T5
+  Summary: The patient fell to the ground.
+  ClusterId: CL3
+  TemporalProfile: past
+  Updates:
+  - CAP6: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=past turns=T5 :: The patient fell to the ground.
+- diabetes | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T13
+  Summary: The patient is diabetic.
+  ClusterId: CL4
+  TemporalProfile: current
+  Updates:
+  - CAP9: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T13 :: The patient is diabetic.
+- swelling | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T19
+  Summary: The patient reports swelling in the right knee.
+  ClusterId: CL5
+  TemporalProfile: current
+  Updates:
+  - CAP2: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T19 :: The patient reports swelling in the right knee.
+
+Medication Tracking
+- [MedicationState] metformin | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T20
+  Summary: The patient takes metformin 500 milligrams twice a day.
+  ClusterId: CL6
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient takes metformin 500 milligrams twice a day. (T20)
+  Updates:
+  - CAP13: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T20 :: The patient takes metformin 500 milligrams twice a day.
+- [MedicationChange] discharge | verification_status=confirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T42
+  Summary: The doctor will discharge the patient.
+  ClusterId: CL9
+  TemporalProfile: discharge
+  PlannedChanges:
+  - The doctor will discharge the patient. (T42)
+  Updates:
+  - CAP12: content_source=doctor modality=plan verification_status=confirmed clinical_status=planned temporality=discharge turns=T42 :: The doctor will discharge the patient.
+
+Other Structured States
+- [Plan] imaging | verification_status=confirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T36
+  Summary: The doctor will consider ordering a CT scan or MRI of the knee if needed.
+  ClusterId: CL7
+  TemporalProfile: in 7 days
+- [Plan] knee examination | verification_status=confirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T36
+  Summary: The doctor will schedule a follow-up appointment in 7 days.
+  ClusterId: CL8
+  TemporalProfile: in 7 days

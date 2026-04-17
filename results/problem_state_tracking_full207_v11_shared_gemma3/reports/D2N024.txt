@@ -1,0 +1,124 @@
+Case: D2N024
+
+Problem List and Visit State Tracking
+
+Problem List
+- breast pain | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T4
+  Summary: The patient reports breast pain.
+  ClusterId: CL1
+  TemporalProfile: current
+  Updates:
+  - CAP6: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T4 :: The patient reports breast pain.
+- chills | verification_status=refuted | clinical_status=historical | modalities=interview | speakers=patient | evidence=T8
+  Summary: The patient denies chills.
+  ClusterId: CL2
+  TemporalProfile: current
+  Updates:
+  - CAP9: content_source=patient modality=interview verification_status=refuted clinical_status=historical temporality=current turns=T8 :: The patient denies chills.
+- fever | verification_status=refuted | clinical_status=historical | modalities=interview | speakers=patient | evidence=T8
+  Summary: The patient denies fever.
+  ClusterId: CL3
+  TemporalProfile: current
+  Updates:
+  - CAP10: content_source=patient modality=interview verification_status=refuted clinical_status=historical temporality=current turns=T8 :: The patient denies fever.
+- nausea | verification_status=refuted | clinical_status=historical | modalities=interview | speakers=patient | evidence=T8
+  Summary: The patient denies nausea.
+  ClusterId: CL4
+  TemporalProfile: current
+  Updates:
+  - CAP11: content_source=patient modality=interview verification_status=refuted clinical_status=historical temporality=current turns=T8 :: The patient denies nausea.
+- vomiting | verification_status=refuted | clinical_status=historical | modalities=interview | speakers=patient | evidence=T8
+  Summary: The patient denies vomiting.
+  ClusterId: CL5
+  TemporalProfile: current
+  Updates:
+  - CAP12: content_source=patient modality=interview verification_status=refuted clinical_status=historical temporality=current turns=T8 :: The patient denies vomiting.
+- lumps | verification_status=unconfirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T10
+  Summary: The patient has noticed lumps.
+  ClusterId: CL6
+  TemporalProfile: noticed
+  Updates:
+  - CAP8: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=noticed turns=T10 :: The patient has noticed lumps.
+- back pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T18
+  Summary: The patient reports back pain.
+  ClusterId: CL7
+  TemporalProfile: current
+  Updates:
+  - CAP7: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T18 :: The patient reports back pain.
+- breast lump | verification_status=unconfirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T21
+  Summary: The patient reported a breast lump in March.
+  ClusterId: CL8
+  TemporalProfile: March
+  Updates:
+  - CAP2: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=March turns=T21 :: The patient reported a breast lump in March.
+- scar discomfort | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T23
+  Summary: The patient reported discomfort with scars.
+  ClusterId: CL9
+  TemporalProfile: current
+  Updates:
+  - CAP5: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T23 :: The patient reported discomfort with scars.
+- scar | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=doctor | evidence=T27
+  Summary: The doctor states that the scar needs to be cut out.
+  ClusterId: CL11
+  TemporalProfile: current
+  Updates:
+  - CAP1: content_source=doctor modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T27 :: The doctor states that the scar needs to be cut out.
+- left hand pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T34,T36
+  Summary: The patient reports pain in the left hand.
+  ClusterId: CL15
+  TemporalProfile: current
+  Updates:
+  - CAP4: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T34 :: The patient reports pain in the hand.
+  - CAP3: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T36 :: The patient reports pain in the left hand.
+- scars | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T47
+  Summary: The patient has scars.
+  ClusterId: CL20
+  TemporalProfile: current
+  Updates:
+  - CAP13: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T47 :: The patient has scars.
+
+Medication Tracking
+- [MedicationState] scar gel | verification_status=unconfirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T23
+  Summary: The patient was using scar gel.
+  ClusterId: CL10
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient was using scar gel. (T23)
+  - The patient discontinued using scar gel. (T23)
+  Updates:
+  - CAP22: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=current turns=T23 :: The patient was using scar gel.
+  - CAP23: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=current turns=T23 :: The patient discontinued using scar gel.
+
+Other Structured States
+- [Plan] surgical excision | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T27
+  Summary: The doctor recommends surgical excision.
+  ClusterId: CL12
+  TemporalProfile: future
+- [Plan] gel | verification_status=confirmed | clinical_status=planned | modalities=interview | speakers=doctor | evidence=T33
+  Summary: The doctor recommends the patient continue using the gel twice a day.
+  ClusterId: CL13
+  TemporalProfile: future
+- [Plan] scar | verification_status=confirmed | clinical_status=planned | modalities=interview | speakers=doctor | evidence=T33
+  Summary: The doctor recommends revisiting the scar in six months.
+  ClusterId: CL14
+  TemporalProfile: six months
+- [Plan] mederma scar gel | verification_status=confirmed | clinical_status=planned | modalities=assessment | speakers=doctor | evidence=T41
+  Summary: The patient can keep using mederma scar gel twice a day.
+  ClusterId: CL16
+  TemporalProfile: ongoing
+- [Plan] put scar gel on other scars | verification_status=confirmed | clinical_status=planned | modalities=assessment | speakers=doctor | evidence=T41
+  Summary: The patient can put scar gel on other scars.
+  ClusterId: CL17
+  TemporalProfile: ongoing
+- [Plan] massage scar gel | verification_status=confirmed | clinical_status=planned | modalities=assessment | speakers=doctor | evidence=T41
+  Summary: The patient should massage the scar gel.
+  ClusterId: CL18
+  TemporalProfile: ongoing
+- [Plan] take pictures of scars | verification_status=confirmed | clinical_status=planned | modalities=assessment | speakers=doctor | evidence=T43
+  Summary: The doctor will take pictures of the scars today.
+  ClusterId: CL19
+  TemporalProfile: today
+- [Plan] revisit scars | verification_status=confirmed | clinical_status=active | modalities=assessment | speakers=doctor | evidence=T47
+  Summary: The doctor will revisit the scars in six months.
+  ClusterId: CL21
+  TemporalProfile: six months

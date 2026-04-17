@@ -1,0 +1,118 @@
+{
+  "events": [
+    {
+      "event_id": "CL34",
+      "event_type": "ProblemOrientedNoteBundle",
+      "canonical_concept": "DCIS",
+      "visit_state": "historical",
+      "status": "affirmed",
+      "temporality": "future",
+      "speaker_source": "doctor",
+      "clinical_priority": "high",
+      "title": "DCIS",
+      "event_summary": "Problem-oriented bundle for DCIS.",
+      "supporting_cap_ids": [
+        "CAP13",
+        "CAP10",
+        "CAP16",
+        "CAP23",
+        "CAP24",
+        "CAP18",
+        "CAP34",
+        "CAP40"
+      ],
+      "anchor_problem_cap_id": "CAP13",
+      "anchor_problem": "DCIS",
+      "P_cap_ids": [
+        "CAP34"
+      ],
+      "planned_actions": [
+        "The patient should continue to be observed."
+      ],
+      "care_context": [
+        "The patient has stage zero DCIS.",
+        "The patient's mammogram in January 2021 was negative.",
+        "The patient's lymph nodes were benign.",
+        "The patient underwent a lumpectomy.",
+        "The patient received radiation therapy.",
+        "There is no evidence of recurrence."
+      ],
+      "key_slots": {
+        "source_modalities": "assessment, interview, plan",
+        "temporal_profile": "past, current, future",
+        "anchor_cluster_type": "ProblemState",
+        "anchor_primary_cap_type": "Problem",
+        "bundle_concepts": "dcis; negative mammogram; benign lymph nodes; lumpectomy; radiation therapy; no recurrence; observe",
+        "history_context": "The patient has stage zero DCIS.",
+        "related_factors": "The patient's mammogram in January 2021 was negative.; The patient's lymph nodes were benign.; The patient underwent a lumpectomy.; The patient received radiation therapy.; There is no evidence of recurrence.",
+        "visit_primary": "true",
+        "render_in_note": "true",
+        "assessment_fallback": "The patient is being followed for DCIS without evidence of recurrence.",
+        "bundle_design": "problem_oriented_note_bundle"
+      },
+      "render_sections": [
+        "S",
+        "O",
+        "A",
+        "P",
+        "History of Present Illness",
+        "Findings",
+        "Assessment",
+        "Plan"
+      ]
+    },
+    {
+      "event_id": "CL2",
+      "event_type": "ProblemOrientedNoteBundle",
+      "canonical_concept": "breast cancer",
+      "visit_state": "active",
+      "status": "affirmed",
+      "temporality": "current",
+      "speaker_source": "patient,doctor",
+      "clinical_priority": "high",
+      "title": "breast cancer",
+      "event_summary": "Problem-oriented bundle for breast cancer.",
+      "supporting_cap_ids": [
+        "CAP5",
+        "CAP1"
+      ],
+      "anchor_problem_cap_id": "CAP5",
+      "anchor_problem": "breast cancer",
+      "S_cap_ids": [
+        "CAP1"
+      ],
+      "supporting_evidence": [
+        "The patient has skin thickening at the medial inferior aspect of the right breast."
+      ],
+      "current_state": [
+        "The patient has skin thickening at the medial inferior aspect of the right breast."
+      ],
+      "care_context": [
+        "The patient had a right breast lumpectomy last year."
+      ],
+      "key_slots": {
+        "source_modalities": "interview, assessment",
+        "temporal_profile": "historical, current",
+        "anchor_cluster_type": "ProblemState",
+        "anchor_primary_cap_type": "Problem",
+        "bundle_concepts": "breast cancer; breast skin thickening",
+        "history_context": "The patient had a right breast lumpectomy last year.",
+        "related_factors": "",
+        "visit_primary": "true",
+        "render_in_note": "true",
+        "assessment_fallback": "The patient is being followed for breast cancer without evidence of recurrence.",
+        "bundle_design": "problem_oriented_note_bundle"
+      },
+      "render_sections": [
+        "S",
+        "O",
+        "A",
+        "P",
+        "History of Present Illness",
+        "Findings",
+        "Assessment",
+        "Plan"
+      ]
+    }
+  ]
+}

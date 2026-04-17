@@ -1,0 +1,1468 @@
+{
+  "case_id": "D2N104",
+  "method": "cap_event_only",
+  "template": "soap",
+  "summary_text": "S:\nThe patient reports experiencing persistent, sharp chest pain radiating to his left arm, which began approximately 2 hours ago. He rates the pain as 8/10. He states he was resting at home when the pain started. He denies shortness of breath or palpitations.\n\nO:\nBlood pressure is 140/90 mmHg. Heart rate is 88 bpm and regular. Oxygen saturation is 98% on room air. Auscultation reveals no murmurs.\n\nA:\nThe patient is presenting with acute chest pain, concerning for possible myocardial infarction.\n\nP:\nActivate EMS. Obtain 12-lead ECG. Administer aspirin 325 mg. Start oxygen at 2L via nasal cannula. Monitor vital signs closely.",
+  "reference_summary": "CHIEF COMPLAINT\n\nPsoriatic arthritis management.\n\nHISTORY OF PRESENT ILLNESS\n\nJudy Gomez is a 61-year-old female who presents to the clinic today for ongoing management of psoriatic arthritis.\n\nMs. Gomez is currently taking methotrexate and prednisone 1 mg daily. She believes methotrexate has been relieving her joint pain.\n\nThe patient reports she has been doing well since her last visit. She has been able to decrease her prednisone dose to 1 mg daily; however, she took 2 mg for a couple of days due to increased pain in her bilateral feet.\n\nThe patient states when she received her first COVID-19 vaccine she held her methotrexate and felt \"horrible\" all week until the next Wednesday when she took it. She felt better by the end of the week. She did not hold methotrexate for her second COVID-19 vaccine.\n\nPHYSICAL EXAM\n\nMusculoskeletal: Full range of motion. Dystrophy of all the nails of the toes.\n\nASSESSMENT\n\n• Psoriatic arthritis.\n• High risk medication use.\n\nPLAN\n\nPsoriatic arthritis.\nStable on methotrexate and prednisone 1 mg daily. The patient will discontinue prednisone and continue methotrexate.\n\nINSTRUCTIONS\n\nThe patient will follow up in 3 months.",
+  "source_cap": {
+    "atomic_propositions": [
+      {
+        "prop_id": "CAP1",
+        "cap_type": "Symptom",
+        "canonical_concept": "pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports pain in the left hand."
+      },
+      {
+        "prop_id": "CAP2",
+        "cap_type": "Symptom",
+        "canonical_concept": "joint pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports pain in their feet."
+      },
+      {
+        "prop_id": "CAP3",
+        "cap_type": "Symptom",
+        "canonical_concept": "bruising",
+        "category": "Symptom",
+        "speaker": "doctor",
+        "predicate": "reports",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports experiencing bruising."
+      },
+      {
+        "prop_id": "CAP4",
+        "cap_type": "Problem",
+        "canonical_concept": "prednisone",
+        "category": "Problem",
+        "speaker": "doctor",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient is taking prednisone."
+      },
+      {
+        "prop_id": "CAP5",
+        "cap_type": "Symptom",
+        "canonical_concept": "joint pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports joint pain."
+      },
+      {
+        "prop_id": "CAP6",
+        "cap_type": "Symptom",
+        "canonical_concept": "nail ridges",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports nail ridges."
+      },
+      {
+        "prop_id": "CAP7",
+        "cap_type": "Symptom",
+        "canonical_concept": "pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports pain."
+      },
+      {
+        "prop_id": "CAP8",
+        "cap_type": "Problem",
+        "canonical_concept": "psoriasis",
+        "category": "Problem",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient has psoriasis."
+      },
+      {
+        "prop_id": "CAP9",
+        "cap_type": "Order",
+        "canonical_concept": "blood work",
+        "category": "Order",
+        "speaker": "doctor",
+        "status": "uncertain",
+        "visit_state": "planned",
+        "temporality": "future",
+        "proposition_text": "An appointment for blood work is to be made."
+      },
+      {
+        "prop_id": "CAP10",
+        "cap_type": "MedicationRequest",
+        "canonical_concept": "prednisone",
+        "category": "MedicationRequest",
+        "speaker": "doctor",
+        "predicate": "has",
+        "status": "uncertain",
+        "visit_state": "planned",
+        "temporality": "future",
+        "proposition_text": "The doctor will discontinue prednisone."
+      },
+      {
+        "prop_id": "CAP11",
+        "cap_type": "FollowUp",
+        "canonical_concept": "blood draw",
+        "category": "FollowUp",
+        "speaker": "doctor",
+        "status": "uncertain",
+        "visit_state": "planned",
+        "temporality": "future",
+        "proposition_text": "The doctor will schedule a blood draw."
+      },
+      {
+        "prop_id": "CAP12",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "prednisone",
+        "category": "MedicationStatement",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "temporal"
+        ],
+        "proposition_text": "The patient is currently taking prednisone."
+      },
+      {
+        "prop_id": "CAP13",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "methotrexate",
+        "category": "MedicationStatement",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient is taking methotrexate."
+      },
+      {
+        "prop_id": "CAP14",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "methotrexate",
+        "category": "MedicationStatement",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "Methotrexate is being taken."
+      },
+      {
+        "prop_id": "CAP15",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "prednisone",
+        "category": "MedicationStatement",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "planned",
+        "temporality": "future",
+        "proposition_text": "Prednisone will be stopped."
+      },
+      {
+        "prop_id": "CAP16",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "methotrexate",
+        "category": "MedicationStatement",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "future",
+        "proposition_text": "Methotrexate will be continued."
+      },
+      {
+        "prop_id": "CAP17",
+        "cap_type": "ProblemHistory",
+        "canonical_concept": "psoriasis",
+        "category": "ProblemHistory",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "long time",
+        "proposition_text": "The patient's nail ridges have been present for a long time."
+      },
+      {
+        "prop_id": "CAP18",
+        "cap_type": "ProblemHistory",
+        "canonical_concept": "psoriatic arthritis",
+        "category": "ProblemHistory",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "ongoing",
+        "proposition_text": "The patient has ongoing management of psoriatic arthritis."
+      }
+    ],
+    "filtered_nonverifiable_units": []
+  },
+  "event_plan": {
+    "events": [
+      {
+        "event_id": "CL10",
+        "event_type": "ProblemOrientedNoteBundle",
+        "canonical_concept": "psoriasis",
+        "visit_state": "historical",
+        "status": "affirmed",
+        "temporality": "future",
+        "speaker_source": "patient,doctor",
+        "clinical_priority": "high",
+        "title": "psoriasis",
+        "event_summary": "Problem-oriented bundle for psoriasis.",
+        "supporting_cap_ids": [
+          "CAP8",
+          "CAP17",
+          "CAP1",
+          "CAP2",
+          "CAP5",
+          "CAP7",
+          "CAP6",
+          "CAP13",
+          "CAP14",
+          "CAP16"
+        ],
+        "anchor_problem_cap_id": "CAP8",
+        "anchor_problem": "psoriasis",
+        "S_cap_ids": [
+          "CAP8",
+          "CAP13",
+          "CAP14"
+        ],
+        "global_cap_ids": [
+          "CAP17",
+          "CAP1",
+          "CAP2",
+          "CAP5",
+          "CAP7",
+          "CAP6",
+          "CAP16"
+        ],
+        "supporting_evidence": [
+          "The patient has psoriasis.",
+          "The patient is taking methotrexate.",
+          "Methotrexate is being taken."
+        ],
+        "current_state": [
+          "The patient has psoriasis.",
+          "The patient is taking methotrexate.",
+          "Methotrexate is being taken."
+        ],
+        "planned_actions": [
+          "Methotrexate will be continued."
+        ],
+        "care_context": [
+          "The patient's nail ridges have been present for a long time.",
+          "The patient reports pain in the left hand.",
+          "The patient reports pain in their feet.",
+          "The patient reports joint pain.",
+          "The patient reports pain.",
+          "The patient reports nail ridges."
+        ],
+        "key_slots": {
+          "source_modalities": "interview",
+          "temporal_profile": "current, long time, future",
+          "anchor_cluster_type": "ProblemState",
+          "anchor_primary_cap_type": "Problem",
+          "bundle_concepts": "psoriasis; joint pain; nail ridges; methotrexate",
+          "history_context": "",
+          "related_factors": "",
+          "visit_primary": "false",
+          "render_in_note": "false",
+          "assessment_fallback": "",
+          "bundle_design": "problem_oriented_note_bundle"
+        },
+        "render_sections": [
+          "S",
+          "O",
+          "A",
+          "P",
+          "History of Present Illness",
+          "Findings",
+          "Assessment",
+          "Plan"
+        ]
+      }
+    ]
+  },
+  "summary_cap": {
+    "atomic_propositions": [
+      {
+        "prop_id": "P1",
+        "cap_type": "Symptom",
+        "canonical_concept": "pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports persistent, sharp chest pain radiating to his left arm"
+      },
+      {
+        "prop_id": "P2",
+        "cap_type": "Symptom",
+        "canonical_concept": "pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient rates the pain as 8/10"
+      },
+      {
+        "prop_id": "P3",
+        "cap_type": "History",
+        "canonical_concept": "pain",
+        "category": "History",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient states he was resting at home when the pain started"
+      },
+      {
+        "prop_id": "P4",
+        "cap_type": "Denial",
+        "canonical_concept": "denies shortness breath",
+        "category": "Denial",
+        "speaker": "patient",
+        "predicate": "denies",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "safety_relevant"
+        ],
+        "proposition_text": "The patient denies shortness of breath"
+      },
+      {
+        "prop_id": "P5",
+        "cap_type": "Denial",
+        "canonical_concept": "denies palpitations",
+        "category": "Denial",
+        "speaker": "patient",
+        "predicate": "denies",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "safety_relevant"
+        ],
+        "proposition_text": "The patient denies palpitations"
+      },
+      {
+        "prop_id": "P6",
+        "cap_type": "Finding",
+        "canonical_concept": "pain",
+        "category": "Finding",
+        "speaker": "clinician",
+        "predicate": "diagnoses",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "diagnostic"
+        ],
+        "proposition_text": "The patient is presenting with acute chest pain, concerning for possible myocardial infarction"
+      },
+      {
+        "prop_id": "P7",
+        "cap_type": "Plan",
+        "canonical_concept": "activate ems",
+        "category": "Plan",
+        "speaker": "clinician",
+        "predicate": "plans",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "plan"
+        ],
+        "proposition_text": "Activate EMS"
+      },
+      {
+        "prop_id": "P8",
+        "cap_type": "Plan",
+        "canonical_concept": "obtain -lead ecg",
+        "category": "Plan",
+        "speaker": "clinician",
+        "predicate": "plans",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "plan"
+        ],
+        "proposition_text": "Obtain 12-lead ECG"
+      },
+      {
+        "prop_id": "P9",
+        "cap_type": "MedicationPlan",
+        "canonical_concept": "administer aspirin",
+        "category": "MedicationPlan",
+        "speaker": "clinician",
+        "predicate": "prescribes",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "medication"
+        ],
+        "proposition_text": "Administer aspirin 325 mg"
+      },
+      {
+        "prop_id": "P10",
+        "cap_type": "MedicationPlan",
+        "canonical_concept": "start oxygen via nasal",
+        "category": "MedicationPlan",
+        "speaker": "clinician",
+        "predicate": "prescribes",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "medication"
+        ],
+        "proposition_text": "Start oxygen at 2L via nasal cannula"
+      },
+      {
+        "prop_id": "P11",
+        "cap_type": "Plan",
+        "canonical_concept": "monitor vital signs closely",
+        "category": "Plan",
+        "speaker": "clinician",
+        "predicate": "plans",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "plan"
+        ],
+        "proposition_text": "Monitor vital signs closely"
+      }
+    ],
+    "filtered_nonverifiable_units": [],
+    "runtime_seconds": 17.972
+  },
+  "cap_alignment": {
+    "cap_precision": 0.36363636363636365,
+    "cap_recall": 0.2222222222222222,
+    "cap_f1": 0.27586206896551724,
+    "matched_count": 4,
+    "summary_prop_count": 11,
+    "source_prop_count": 18,
+    "matched_pairs": [
+      {
+        "score": 1.0,
+        "summary_prop_id": "P6",
+        "source_prop_id": "CAP7",
+        "summary_text": "The patient is presenting with acute chest pain, concerning for possible myocardial infarction",
+        "source_text": "The patient reports pain."
+      },
+      {
+        "score": 1.0,
+        "summary_prop_id": "P3",
+        "source_prop_id": "CAP1",
+        "summary_text": "The patient states he was resting at home when the pain started",
+        "source_text": "The patient reports pain in the left hand."
+      },
+      {
+        "score": 0.8251,
+        "summary_prop_id": "P1",
+        "source_prop_id": "CAP5",
+        "summary_text": "The patient reports persistent, sharp chest pain radiating to his left arm",
+        "source_text": "The patient reports joint pain."
+      },
+      {
+        "score": 0.7933,
+        "summary_prop_id": "P2",
+        "source_prop_id": "CAP2",
+        "summary_text": "The patient rates the pain as 8/10",
+        "source_text": "The patient reports pain in their feet."
+      }
+    ],
+    "unsupported_summary_props": [
+      {
+        "prop_id": "P4",
+        "cap_type": "Denial",
+        "canonical_concept": "denies shortness breath",
+        "category": "Denial",
+        "speaker": "patient",
+        "predicate": "denies",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "safety_relevant"
+        ],
+        "proposition_text": "The patient denies shortness of breath"
+      },
+      {
+        "prop_id": "P5",
+        "cap_type": "Denial",
+        "canonical_concept": "denies palpitations",
+        "category": "Denial",
+        "speaker": "patient",
+        "predicate": "denies",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "safety_relevant"
+        ],
+        "proposition_text": "The patient denies palpitations"
+      },
+      {
+        "prop_id": "P7",
+        "cap_type": "Plan",
+        "canonical_concept": "activate ems",
+        "category": "Plan",
+        "speaker": "clinician",
+        "predicate": "plans",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "plan"
+        ],
+        "proposition_text": "Activate EMS"
+      },
+      {
+        "prop_id": "P8",
+        "cap_type": "Plan",
+        "canonical_concept": "obtain -lead ecg",
+        "category": "Plan",
+        "speaker": "clinician",
+        "predicate": "plans",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "plan"
+        ],
+        "proposition_text": "Obtain 12-lead ECG"
+      },
+      {
+        "prop_id": "P9",
+        "cap_type": "MedicationPlan",
+        "canonical_concept": "administer aspirin",
+        "category": "MedicationPlan",
+        "speaker": "clinician",
+        "predicate": "prescribes",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "medication"
+        ],
+        "proposition_text": "Administer aspirin 325 mg"
+      },
+      {
+        "prop_id": "P10",
+        "cap_type": "MedicationPlan",
+        "canonical_concept": "start oxygen via nasal",
+        "category": "MedicationPlan",
+        "speaker": "clinician",
+        "predicate": "prescribes",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "medication"
+        ],
+        "proposition_text": "Start oxygen at 2L via nasal cannula"
+      },
+      {
+        "prop_id": "P11",
+        "cap_type": "Plan",
+        "canonical_concept": "monitor vital signs closely",
+        "category": "Plan",
+        "speaker": "clinician",
+        "predicate": "plans",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "plan"
+        ],
+        "proposition_text": "Monitor vital signs closely"
+      }
+    ],
+    "missing_source_props": [
+      {
+        "prop_id": "CAP3",
+        "cap_type": "Symptom",
+        "canonical_concept": "bruising",
+        "category": "Symptom",
+        "speaker": "doctor",
+        "predicate": "reports",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports experiencing bruising."
+      },
+      {
+        "prop_id": "CAP4",
+        "cap_type": "Problem",
+        "canonical_concept": "prednisone",
+        "category": "Problem",
+        "speaker": "doctor",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient is taking prednisone."
+      },
+      {
+        "prop_id": "CAP6",
+        "cap_type": "Symptom",
+        "canonical_concept": "nail ridges",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports nail ridges."
+      },
+      {
+        "prop_id": "CAP8",
+        "cap_type": "Problem",
+        "canonical_concept": "psoriasis",
+        "category": "Problem",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient has psoriasis."
+      },
+      {
+        "prop_id": "CAP9",
+        "cap_type": "Order",
+        "canonical_concept": "blood work",
+        "category": "Order",
+        "speaker": "doctor",
+        "status": "uncertain",
+        "visit_state": "planned",
+        "temporality": "future",
+        "proposition_text": "An appointment for blood work is to be made."
+      },
+      {
+        "prop_id": "CAP10",
+        "cap_type": "MedicationRequest",
+        "canonical_concept": "prednisone",
+        "category": "MedicationRequest",
+        "speaker": "doctor",
+        "predicate": "has",
+        "status": "uncertain",
+        "visit_state": "planned",
+        "temporality": "future",
+        "proposition_text": "The doctor will discontinue prednisone."
+      },
+      {
+        "prop_id": "CAP11",
+        "cap_type": "FollowUp",
+        "canonical_concept": "blood draw",
+        "category": "FollowUp",
+        "speaker": "doctor",
+        "status": "uncertain",
+        "visit_state": "planned",
+        "temporality": "future",
+        "proposition_text": "The doctor will schedule a blood draw."
+      },
+      {
+        "prop_id": "CAP12",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "prednisone",
+        "category": "MedicationStatement",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "temporal"
+        ],
+        "proposition_text": "The patient is currently taking prednisone."
+      },
+      {
+        "prop_id": "CAP13",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "methotrexate",
+        "category": "MedicationStatement",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient is taking methotrexate."
+      },
+      {
+        "prop_id": "CAP14",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "methotrexate",
+        "category": "MedicationStatement",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "Methotrexate is being taken."
+      },
+      {
+        "prop_id": "CAP15",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "prednisone",
+        "category": "MedicationStatement",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "planned",
+        "temporality": "future",
+        "proposition_text": "Prednisone will be stopped."
+      },
+      {
+        "prop_id": "CAP16",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "methotrexate",
+        "category": "MedicationStatement",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "future",
+        "proposition_text": "Methotrexate will be continued."
+      },
+      {
+        "prop_id": "CAP17",
+        "cap_type": "ProblemHistory",
+        "canonical_concept": "psoriasis",
+        "category": "ProblemHistory",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "long time",
+        "proposition_text": "The patient's nail ridges have been present for a long time."
+      },
+      {
+        "prop_id": "CAP18",
+        "cap_type": "ProblemHistory",
+        "canonical_concept": "psoriatic arthritis",
+        "category": "ProblemHistory",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "ongoing",
+        "proposition_text": "The patient has ongoing management of psoriatic arthritis."
+      }
+    ]
+  },
+  "reference_gpt_f1_items": {
+    "active_problems_symptoms": [
+      "Psoriatic arthritis"
+    ],
+    "negated_findings": [],
+    "uncertain_findings": [],
+    "medication_treatment": [
+      "Methotrexate 1 mg daily",
+      "Prednisone 1 mg daily"
+    ],
+    "plan_followup": [
+      "Follow up in 3 months"
+    ],
+    "_chunk_count": [
+      "2"
+    ]
+  },
+  "summary_gpt_f1_items": {
+    "active_problems_symptoms": [
+      "persistent, sharp chest pain radiating to his left arm",
+      "pain rated as 8/10"
+    ],
+    "negated_findings": [
+      "denies shortness of breath",
+      "denies palpitations"
+    ],
+    "uncertain_findings": [
+      "possible myocardial infarction"
+    ],
+    "medication_treatment": [
+      "aspirin 325 mg",
+      "oxygen at 2L via nasal cannula"
+    ],
+    "plan_followup": [
+      "Activate EMS",
+      "obtain 12-lead ECG",
+      "monitor vital signs closely"
+    ],
+    "_chunk_count": [
+      "1"
+    ]
+  },
+  "gpt_f1_alignment": {
+    "by_category": {
+      "active_problems_symptoms": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "matched_count": 0,
+        "pred_count": 2,
+        "ref_count": 1,
+        "matches": [],
+        "unsupported_pred_items": [
+          "persistent, sharp chest pain radiating to his left arm",
+          "pain rated as 8/10"
+        ],
+        "missing_ref_items": [
+          "Psoriatic arthritis"
+        ]
+      },
+      "negated_findings": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "matched_count": 0,
+        "pred_count": 2,
+        "ref_count": 0,
+        "matches": [],
+        "unsupported_pred_items": [
+          "denies shortness of breath",
+          "denies palpitations"
+        ],
+        "missing_ref_items": []
+      },
+      "uncertain_findings": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "matched_count": 0,
+        "pred_count": 1,
+        "ref_count": 0,
+        "matches": [],
+        "unsupported_pred_items": [
+          "possible myocardial infarction"
+        ],
+        "missing_ref_items": []
+      },
+      "medication_treatment": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "matched_count": 0,
+        "pred_count": 2,
+        "ref_count": 2,
+        "matches": [],
+        "unsupported_pred_items": [
+          "aspirin 325 mg",
+          "oxygen at 2L via nasal cannula"
+        ],
+        "missing_ref_items": [
+          "Methotrexate 1 mg daily",
+          "Prednisone 1 mg daily"
+        ]
+      },
+      "plan_followup": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "matched_count": 0,
+        "pred_count": 3,
+        "ref_count": 1,
+        "matches": [],
+        "unsupported_pred_items": [
+          "Activate EMS",
+          "obtain 12-lead ECG",
+          "monitor vital signs closely"
+        ],
+        "missing_ref_items": [
+          "Follow up in 3 months"
+        ]
+      }
+    }
+  },
+  "reference_nair_concepts": {
+    "sections": [
+      {
+        "heading": "Clinical Note",
+        "section_value": "CHIEF COMPLAINT\nPsoriatic arthritis management.\nHISTORY OF PRESENT ILLNESS\nJudy Gomez is a 61-year-old female who presents to the clinic today for ongoing management of psoriatic arthritis.\nMs. Gomez is currently taking methotrexate and prednisone 1 mg daily. She believes methotrexate has been relieving her joint pain.\nThe patient reports she has been doing well since her last visit. She has been able to decrease her prednisone dose to 1 mg daily; however, she took 2 mg for a couple of days due to increased pain in her bilateral feet.\nThe patient states when she received her first COVID-19 vaccine she held her methotrexate and felt \"horrible\" all week until the next Wednesday when she took it. She felt better by the end of the week. She did not hold methotrexate for her second COVID-19 vaccine.\nPHYSICAL EXAM\nMusculoskeletal: Full range of motion. Dystrophy of all the nails of the toes.\nASSESSMENT",
+        "medical_concepts": [
+          "psoriatic arthritis",
+          "methotrexate",
+          "prednisone",
+          "joint pain",
+          "bilateral foot pain",
+          "COVID-19 vaccine",
+          "full range of motion",
+          "nail dystrophy of toes"
+        ]
+      },
+      {
+        "heading": "Clinical Note",
+        "section_value": "• Psoriatic arthritis.\n• High risk medication use.\nPLAN\nPsoriatic arthritis.\nStable on methotrexate and prednisone 1 mg daily. The patient will discontinue prednisone and continue methotrexate.\nINSTRUCTIONS\nThe patient will follow up in 3 months.",
+        "medical_concepts": [
+          "psoriatic arthritis",
+          "high risk medication use",
+          "methotrexate",
+          "prednisone"
+        ]
+      }
+    ],
+    "medical_concepts": [
+      "psoriatic arthritis",
+      "methotrexate",
+      "prednisone",
+      "joint pain",
+      "bilateral foot pain",
+      "COVID-19 vaccine",
+      "full range of motion",
+      "nail dystrophy of toes",
+      "high risk medication use"
+    ],
+    "section_count": 2
+  },
+  "summary_nair_concepts": {
+    "sections": [
+      {
+        "heading": "S",
+        "section_value": "The patient reports experiencing persistent, sharp chest pain radiating to his left arm, which began approximately 2 hours ago. He rates the pain as 8/10. He states he was resting at home when the pain started. He denies shortness of breath or palpitations.",
+        "medical_concepts": [
+          "chest pain",
+          "left arm pain",
+          "shortness of breath",
+          "palpitations"
+        ]
+      },
+      {
+        "heading": "O",
+        "section_value": "Blood pressure is 140/90 mmHg. Heart rate is 88 bpm and regular. Oxygen saturation is 98% on room air. Auscultation reveals no murmurs.",
+        "medical_concepts": [
+          "blood pressure",
+          "heart rate",
+          "oxygen saturation",
+          "room air",
+          "auscultation",
+          "murmurs"
+        ]
+      },
+      {
+        "heading": "A",
+        "section_value": "The patient is presenting with acute chest pain, concerning for possible myocardial infarction.",
+        "medical_concepts": [
+          "acute chest pain",
+          "chest pain",
+          "myocardial infarction"
+        ]
+      },
+      {
+        "heading": "P",
+        "section_value": "Activate EMS. Obtain 12-lead ECG. Administer aspirin 325 mg. Start oxygen at 2L via nasal cannula. Monitor vital signs closely.",
+        "medical_concepts": [
+          "EMS activation",
+          "12-lead ECG",
+          "aspirin 325 mg",
+          "oxygen therapy",
+          "nasal cannula",
+          "vital signs monitoring"
+        ]
+      }
+    ],
+    "medical_concepts": [
+      "chest pain",
+      "left arm pain",
+      "shortness of breath",
+      "palpitations",
+      "blood pressure",
+      "heart rate",
+      "oxygen saturation",
+      "room air",
+      "auscultation",
+      "murmurs",
+      "acute chest pain",
+      "myocardial infarction",
+      "EMS activation",
+      "12-lead ECG",
+      "aspirin 325 mg",
+      "oxygen therapy",
+      "nasal cannula",
+      "vital signs monitoring"
+    ],
+    "section_count": 4
+  },
+  "nair_alignment": {
+    "pred_concepts": [
+      "chest pain",
+      "left arm pain",
+      "shortness of breath",
+      "palpitations",
+      "blood pressure",
+      "heart rate",
+      "oxygen saturation",
+      "room air",
+      "auscultation",
+      "murmurs",
+      "acute chest pain",
+      "myocardial infarction",
+      "EMS activation",
+      "12-lead ECG",
+      "aspirin 325 mg",
+      "oxygen therapy",
+      "nasal cannula",
+      "vital signs monitoring"
+    ],
+    "ref_concepts": [
+      "psoriatic arthritis",
+      "methotrexate",
+      "prednisone",
+      "joint pain",
+      "bilateral foot pain",
+      "COVID-19 vaccine",
+      "full range of motion",
+      "nail dystrophy of toes",
+      "high risk medication use"
+    ],
+    "precision_alignment": {
+      "found_b": [],
+      "not_found_b": [
+        "chest pain",
+        "left arm pain",
+        "shortness of breath",
+        "palpitations",
+        "blood pressure",
+        "heart rate",
+        "oxygen saturation",
+        "room air",
+        "auscultation",
+        "murmurs",
+        "acute chest pain",
+        "myocardial infarction",
+        "EMS activation",
+        "12-lead ECG",
+        "aspirin 325 mg",
+        "oxygen therapy",
+        "nasal cannula",
+        "vital signs monitoring"
+      ],
+      "chunk_count": 1,
+      "chunk_results": [
+        {
+          "found_b": [],
+          "not_found_b": [
+            "chest pain",
+            "left arm pain",
+            "shortness of breath",
+            "palpitations",
+            "blood pressure",
+            "heart rate",
+            "oxygen saturation",
+            "room air",
+            "auscultation",
+            "murmurs",
+            "acute chest pain",
+            "myocardial infarction",
+            "EMS activation",
+            "12-lead ECG",
+            "aspirin 325 mg",
+            "oxygen therapy",
+            "nasal cannula",
+            "vital signs monitoring"
+          ]
+        }
+      ]
+    },
+    "recall_alignment": {
+      "found_b": [],
+      "not_found_b": [
+        "psoriatic arthritis",
+        "methotrexate",
+        "prednisone",
+        "joint pain",
+        "bilateral foot pain",
+        "COVID-19 vaccine",
+        "full range of motion",
+        "nail dystrophy of toes",
+        "high risk medication use"
+      ],
+      "chunk_count": 1,
+      "chunk_results": [
+        {
+          "found_b": [],
+          "not_found_b": [
+            "psoriatic arthritis",
+            "methotrexate",
+            "prednisone",
+            "joint pain",
+            "bilateral foot pain",
+            "COVID-19 vaccine",
+            "full range of motion",
+            "nail dystrophy of toes",
+            "high risk medication use"
+          ]
+        }
+      ]
+    }
+  },
+  "semantic_cap_audit": {
+    "source_cap_recall": [
+      {
+        "cap_id": "P1",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P2",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P3",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P4",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P5",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P6",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P7",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P8",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P9",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P10",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P11",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P12",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P13",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P14",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P15",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P16",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P1",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P2",
+        "judgment": "missing",
+        "reason": null
+      }
+    ],
+    "summary_cap_precision": [
+      {
+        "cap_id": "P1",
+        "judgment": "unsupported",
+        "reason": null
+      },
+      {
+        "cap_id": "P2",
+        "judgment": "unsupported",
+        "reason": null
+      },
+      {
+        "cap_id": "P3",
+        "judgment": "unsupported",
+        "reason": null
+      },
+      {
+        "cap_id": "P4",
+        "judgment": "unsupported",
+        "reason": null
+      },
+      {
+        "cap_id": "P5",
+        "judgment": "unsupported",
+        "reason": null
+      },
+      {
+        "cap_id": "P6",
+        "judgment": "unsupported",
+        "reason": null
+      },
+      {
+        "cap_id": "P7",
+        "judgment": "unsupported",
+        "reason": null
+      },
+      {
+        "cap_id": "P8",
+        "judgment": "unsupported",
+        "reason": null
+      },
+      {
+        "cap_id": "P9",
+        "judgment": "unsupported",
+        "reason": null
+      },
+      {
+        "cap_id": "P10",
+        "judgment": "unsupported",
+        "reason": null
+      },
+      {
+        "cap_id": "P11",
+        "judgment": "unsupported",
+        "reason": null
+      }
+    ],
+    "metrics": {
+      "semantic_cap_precision": 0.0,
+      "semantic_cap_recall": 0.0,
+      "semantic_cap_f1": 0.0,
+      "semantic_cap_precision_supported_count": 0,
+      "semantic_cap_precision_partial_count": 0,
+      "semantic_cap_precision_denominator": 11,
+      "semantic_cap_recall_supported_count": 0,
+      "semantic_cap_recall_partial_count": 0,
+      "semantic_cap_recall_denominator": 18,
+      "semantic_cap_low_value_source_count": 0,
+      "semantic_cap_low_value_summary_count": 0,
+      "semantic_cap_missing_count": 18,
+      "semantic_cap_unsupported_count": 11,
+      "semantic_cap_contradicted_source_count": 0,
+      "semantic_cap_contradicted_summary_count": 0
+    }
+  },
+  "safety_judgment": null,
+  "section_judgment": {
+    "section_miscategorizations": [],
+    "summary_statistics": {
+      "section_appropriateness_score": 1.0,
+      "section_miscategorization_count": 0,
+      "major_section_miscategorization_count": 0
+    }
+  },
+  "pdsqi_judgment": {
+    "citation_applicable": 0,
+    "citation": 0,
+    "accurate": 1,
+    "thorough": 1,
+    "useful": 1,
+    "organized": 3,
+    "comprehensible": 4,
+    "succinct": 4,
+    "abstraction": 1,
+    "synthesized": 1,
+    "voice_summ": 0,
+    "voice_note": 0,
+    "pdsqi_core_mean": 2.1429
+  },
+  "llm_checklist_judgment": {
+    "content_preservation_core": 1,
+    "noise_suppression": 3,
+    "lay_expression_preservation": 1,
+    "state_update_fidelity": 1,
+    "temporality_preservation": 1,
+    "problem_evidence_linkage": 1,
+    "state_plan_separation": 2,
+    "section_organization_appropriateness": 2,
+    "overall_clinical_usability": 1,
+    "clinically_meaningful_omission": "Yes",
+    "clinically_concerning_hallucination": "Yes",
+    "checklist_a_mean": 1.6667,
+    "checklist_b_mean": 1.0,
+    "checklist_c_mean": 1.6667,
+    "llm_checklist_abc_mean": 1.5,
+    "llm_checklist_mean_no_usability": 1.5,
+    "llm_checklist_total_score": 13,
+    "llm_checklist_mean": 1.4444,
+    "llm_checklist_meaningful_omission_yes": 1,
+    "llm_checklist_concerning_hallucination_yes": 1
+  },
+  "metrics": {
+    "case_id": "D2N104",
+    "method": "cap_event_only",
+    "template": "soap",
+    "source_cap_count": 18,
+    "event_plan_count": 1,
+    "summary_cap_count": 11,
+    "cap_matched_count": 4,
+    "cap_precision": 0.3636,
+    "cap_recall": 0.2222,
+    "cap_f1": 0.2759,
+    "unsupported_summary_cap_count": 7,
+    "missing_source_cap_count": 14,
+    "summary_runtime_seconds": null,
+    "summary_cap_runtime_seconds": 17.972,
+    "event_plan_runtime_seconds": null,
+    "rouge_l_f1_vs_reference": 0.0878,
+    "token_f1_vs_reference": 0.1419,
+    "gptf1_macro_f1": 0.0,
+    "nair_gpt_precision": 0.0,
+    "nair_gpt_recall": 0.0,
+    "nair_gpt_f1": 0.0,
+    "semantic_cap_precision": 0.0,
+    "semantic_cap_recall": 0.0,
+    "semantic_cap_f1": 0.0,
+    "hallucination_count": null,
+    "major_hallucination_count": null,
+    "omission_count": null,
+    "major_omission_count": null,
+    "section_appropriateness_score": 1.0,
+    "section_miscategorization_count": 0,
+    "major_section_miscategorization_count": 0,
+    "pdsqi_core_mean": 2.1429,
+    "pdsqi_accurate": 1,
+    "pdsqi_thorough": 1,
+    "llm_checklist_total_score": 13,
+    "llm_checklist_mean": 1.4444,
+    "llm_checklist_mean_no_usability": 1.5,
+    "checklist_a_mean": 1.6667,
+    "checklist_b_mean": 1.0,
+    "checklist_c_mean": 1.6667,
+    "llm_checklist_abc_mean": 1.5,
+    "content_preservation_core": 1,
+    "noise_suppression": 3,
+    "lay_expression_preservation": 1,
+    "state_update_fidelity": 1,
+    "temporality_preservation": 1,
+    "problem_evidence_linkage": 1,
+    "state_plan_separation": 2,
+    "section_organization_appropriateness": 2,
+    "overall_clinical_usability": 1,
+    "llm_checklist_meaningful_omission_yes": 1,
+    "llm_checklist_concerning_hallucination_yes": 1,
+    "gptf1_active_problems_symptoms_precision": 0.0,
+    "gptf1_active_problems_symptoms_recall": 0.0,
+    "gptf1_active_problems_symptoms_f1": 0.0,
+    "gptf1_active_problems_symptoms_pred_count": 2,
+    "gptf1_active_problems_symptoms_ref_count": 1,
+    "gptf1_negated_findings_precision": 0.0,
+    "gptf1_negated_findings_recall": 0.0,
+    "gptf1_negated_findings_f1": 0.0,
+    "gptf1_negated_findings_pred_count": 2,
+    "gptf1_negated_findings_ref_count": 0,
+    "gptf1_uncertain_findings_precision": 0.0,
+    "gptf1_uncertain_findings_recall": 0.0,
+    "gptf1_uncertain_findings_f1": 0.0,
+    "gptf1_uncertain_findings_pred_count": 1,
+    "gptf1_uncertain_findings_ref_count": 0,
+    "gptf1_medication_treatment_precision": 0.0,
+    "gptf1_medication_treatment_recall": 0.0,
+    "gptf1_medication_treatment_f1": 0.0,
+    "gptf1_medication_treatment_pred_count": 2,
+    "gptf1_medication_treatment_ref_count": 2,
+    "gptf1_plan_followup_precision": 0.0,
+    "gptf1_plan_followup_recall": 0.0,
+    "gptf1_plan_followup_f1": 0.0,
+    "gptf1_plan_followup_pred_count": 3,
+    "gptf1_plan_followup_ref_count": 1,
+    "nair_pred_concept_count": 18,
+    "nair_ref_concept_count": 9,
+    "nair_precision_match_count": 0,
+    "nair_recall_match_count": 0,
+    "semantic_cap_precision_supported_count": 0,
+    "semantic_cap_precision_partial_count": 0,
+    "semantic_cap_precision_denominator": 11,
+    "semantic_cap_recall_supported_count": 0,
+    "semantic_cap_recall_partial_count": 0,
+    "semantic_cap_recall_denominator": 18,
+    "semantic_cap_low_value_source_count": 0,
+    "semantic_cap_low_value_summary_count": 0,
+    "semantic_cap_missing_count": 18,
+    "semantic_cap_unsupported_count": 11,
+    "semantic_cap_contradicted_source_count": 0,
+    "semantic_cap_contradicted_summary_count": 0,
+    "pdsqi_useful": 1,
+    "pdsqi_organized": 3,
+    "pdsqi_comprehensible": 4,
+    "pdsqi_succinct": 4,
+    "pdsqi_synthesized": 1
+  }
+}

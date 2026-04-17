@@ -1,0 +1,2939 @@
+{
+  "case_id": "D2N066",
+  "method": "cluster2sent",
+  "template": "sectioned",
+  "summary_text": "Chief Complaint\nBack pain, primarily in the lower back and radiating down the left leg.\n\nHistory of Present Illness\nThe patient reports back pain that began four days ago after bending over to lift an object, accompanied by pain radiating down his left leg. He describes occasional tingling but primarily experiences pain, particularly with certain positions. He has a history of occasional back pain over the years and has previously tried ibuprofen with some relief. He reports being approximately 15 pounds heavier and acknowledges a need for weight loss. He is currently taking norvasc 5mg daily for blood pressure and reports some ankle swelling. He has not had any prior back surgeries or significant past back problems.\n\nFindings\nThe patient is a 43-year-old male with a history of diabetes, hypertension, and high cholesterol. Examination reveals no jugular venous distension or bruits. Lung sounds are clear, and the heart exam shows a two over six systolic ejection murmur, which is stable. The abdomen is soft, and the lower back examination reveals tenderness in the left paraspinal area. Straight leg raise is negative. Neurological exam is normal. There is one plus edema of the lower extremities, primarily in the ankles. Hemoglobin A1c was 7.0%. The patient's blood pressure in the clinic is 120/70 mmHg. The patient reports checking his blood sugar approximately two to three times a week, with readings typically in the range of 120-140 mg/dL.\n\nAssessment\nThe patient presents with musculoskeletal back pain, likely a muscular sprain, secondary to his reported activity. He also continues to have uncontrolled diabetes and hypertension with associated edema.\n\nPlan\nI am ordering a hemoglobin A1c to further assess his diabetes control and will continue the metformin 500 mg twice daily. I will also order some blood work to evaluate his kidney function and electrolytes. I am prescribing naproxen 500 mg twice daily and flexeril 10 mg twice daily for pain and muscle relaxation. I am referring the patient to physical therapy to address his back pain and strengthen his lower back muscles. I will also prescribe hydrochlorothiazide 10 mg once daily to manage the ankle edema. I will schedule a follow-up appointment in two weeks to review the A1c results and assess treatment response. We will continue to monitor his blood pressure and edema levels.",
+  "reference_summary": "CHIEF COMPLAINT\n\nBack pain evaluation.\n\nMEDICAL HISTORY\n\nThe patient has a history of diabetes, hypertension, and high cholesterol.\n\nSURGICAL HISTORY\n\nHe denies previous back surgeries.\n\nMEDICATIONS\n\nThe patient currently utilizes metformin 500 mg twice daily and Norvasc.\n\nREVIEW OF SYSTEMS\n\nCardiovascular: Reports ankle swelling.\nMusculoskeletal: Reports lower back pain.\nNeurological: Reports tingling in left leg. Denies weakness or numbness in legs, or loss of bowl or bladder function.\n\nPHYSICAL EXAM\n\nNeurological\n- Orientation: Alert and oriented x3. Cranial nerves grossly intact. Normal gait.\n\nNeck\n- General Examination: No JVD. No bruits.\n\nRespiratory\n- Auscultation of Lungs: No wheezes, rales.\n\nCardiovascular\n- Auscultation of Heart: Regular rate and rhythm. 2/6 systolic ejection murmur. Otherwise, regular rate and rhythm.\n\nMusculoskeletal\n- Examination: Tenderness on the left paraspinal area. Straight leg raise test is negative. Reflexes are normal. 1+ nonpitting edema of lower extremities. No calf tenderness. Negative Homan's sign.\n\nASSESSMENT AND PLAN\n\n1. Lower back pain.\n- Medical Reasoning: I believe this is more of a muscular sprain.\n- Patient Education and Counseling: We discussed treatment options today.\n- Medical Treatment: I am going to start him on Naprosyn 500 mg twice a day and Flexeril 10 mg twice a day. I will refer him for physical therapy to help strengthen some of the muscles in his lower back.\n- Additional Testing: I do not think he needs an x-ray at this stage, however if he does not improve, we will order one for further evaluation.\n\n2. Diabetes.\n- Medical Reasoning: His most recent A1c was 7.1 and his blood sugar levels are typically between 120-140.\n- Patient Education and Counseling: We discussed treatment options today.\n- Medical Treatment: He will continue the metformin 500 mg twice a day.\n- Additional Testing: I am going to order another hemoglobin A1c.\n\n3. Hypertension.\n- Medical Reasoning: He does have 1+ edema in his legs.\n- Patient Education and Counseling: We discussed treatment options today. I explained that his edema is likely caused by the Norvasc.\n- Medical Treatment: The patient will discontinue the use of Norvasc and we will start him on hydrochlorothiazide 10 mg once a day.\n- Additional Testing: I will order a CBC and BMP. Additionally, I will order a repeat EKG, as well as a chest x-ray.\n\nPatient Agreements: The patient understands and agrees with the recommended medical treatment plan.\n\nINSTRUCTIONS\n\nThe patient will follow up in 2 weeks.",
+  "source_cap": {
+    "atomic_propositions": [
+      {
+        "prop_id": "CAP1",
+        "cap_type": "Problem",
+        "canonical_concept": "back pain",
+        "category": "Problem",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "over the years",
+        "proposition_text": "The patient has had back pain occasionally over the years."
+      },
+      {
+        "prop_id": "CAP2",
+        "cap_type": "Symptom",
+        "canonical_concept": "leg pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports pain radiating down their left leg."
+      },
+      {
+        "prop_id": "CAP3",
+        "cap_type": "Symptom",
+        "canonical_concept": "pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports pain in the left leg."
+      },
+      {
+        "prop_id": "CAP4",
+        "cap_type": "Symptom",
+        "canonical_concept": "left hand pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports pain in the left hand."
+      },
+      {
+        "prop_id": "CAP5",
+        "cap_type": "Problem",
+        "canonical_concept": "back pain",
+        "category": "Problem",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient is here today for back pain."
+      },
+      {
+        "prop_id": "CAP6",
+        "cap_type": "Symptom",
+        "canonical_concept": "tingling",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports tingling in certain positions."
+      },
+      {
+        "prop_id": "CAP7",
+        "cap_type": "Problem",
+        "canonical_concept": "diabetes",
+        "category": "Problem",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "historical",
+        "proposition_text": "The patient has a history of diabetes."
+      },
+      {
+        "prop_id": "CAP8",
+        "cap_type": "Symptom",
+        "canonical_concept": "ankle swelling",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports swelling in their ankles."
+      },
+      {
+        "prop_id": "CAP9",
+        "cap_type": "Symptom",
+        "canonical_concept": "edema",
+        "category": "Symptom",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient has edema in their legs."
+      },
+      {
+        "prop_id": "CAP10",
+        "cap_type": "Problem",
+        "canonical_concept": "high blood pressure",
+        "category": "Problem",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient has high blood pressure."
+      },
+      {
+        "prop_id": "CAP11",
+        "cap_type": "Symptom",
+        "canonical_concept": "back pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports back pain."
+      },
+      {
+        "prop_id": "CAP12",
+        "cap_type": "Problem",
+        "canonical_concept": "physical therapy",
+        "category": "Problem",
+        "speaker": "doctor",
+        "predicate": "orders",
+        "status": "uncertain",
+        "visit_state": "planned",
+        "temporality": "current",
+        "claim_type_tags": [
+          "plan"
+        ],
+        "proposition_text": "The doctor orders physical therapy."
+      },
+      {
+        "prop_id": "CAP13",
+        "cap_type": "Symptom",
+        "canonical_concept": "tingling",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports tingling."
+      },
+      {
+        "prop_id": "CAP14",
+        "cap_type": "Problem",
+        "canonical_concept": "diabetes",
+        "category": "Problem",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient has diabetes."
+      },
+      {
+        "prop_id": "CAP15",
+        "cap_type": "MedicationRequest",
+        "canonical_concept": "metformin",
+        "category": "MedicationRequest",
+        "speaker": "doctor",
+        "predicate": "has",
+        "status": "affirmed",
+        "visit_state": "planned",
+        "temporality": "current",
+        "claim_type_tags": [
+          "medication",
+          "quantitative"
+        ],
+        "proposition_text": "The patient will take metformin 500 milligrams twice a day."
+      },
+      {
+        "prop_id": "CAP16",
+        "cap_type": "MedicationRequest",
+        "canonical_concept": "hydrochlorothiazide",
+        "category": "MedicationRequest",
+        "speaker": "doctor",
+        "predicate": "has",
+        "status": "affirmed",
+        "visit_state": "planned",
+        "temporality": "current",
+        "claim_type_tags": [
+          "quantitative"
+        ],
+        "proposition_text": "The patient will take hydrochlorothiazide 10 milligrams once a day."
+      },
+      {
+        "prop_id": "CAP17",
+        "cap_type": "TestResult",
+        "canonical_concept": "hemoglobin A1c",
+        "category": "TestResult",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "last time",
+        "claim_type_tags": [
+          "quantitative"
+        ],
+        "proposition_text": "The patient's hemoglobin A1c was 7.1 percent."
+      },
+      {
+        "prop_id": "CAP18",
+        "cap_type": "TestResult",
+        "canonical_concept": "hemoglobin a1c",
+        "category": "TestResult",
+        "speaker": "doctor",
+        "predicate": "orders",
+        "status": "uncertain",
+        "visit_state": "planned",
+        "temporality": "current",
+        "claim_type_tags": [
+          "plan",
+          "quantitative"
+        ],
+        "proposition_text": "The doctor orders a hemoglobin a1c test."
+      },
+      {
+        "prop_id": "CAP19",
+        "cap_type": "TestResult",
+        "canonical_concept": "complete blood count",
+        "category": "TestResult",
+        "speaker": "doctor",
+        "predicate": "orders",
+        "status": "uncertain",
+        "visit_state": "planned",
+        "temporality": "current",
+        "claim_type_tags": [
+          "plan"
+        ],
+        "proposition_text": "The doctor orders a complete blood count."
+      },
+      {
+        "prop_id": "CAP20",
+        "cap_type": "TestResult",
+        "canonical_concept": "basic metabolic panel",
+        "category": "TestResult",
+        "speaker": "doctor",
+        "predicate": "orders",
+        "status": "uncertain",
+        "visit_state": "planned",
+        "temporality": "current",
+        "claim_type_tags": [
+          "plan"
+        ],
+        "proposition_text": "The doctor orders a basic metabolic panel."
+      },
+      {
+        "prop_id": "CAP21",
+        "cap_type": "Order",
+        "canonical_concept": "hemoglobin a1c",
+        "category": "Order",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "planned",
+        "temporality": "current",
+        "claim_type_tags": [
+          "quantitative"
+        ],
+        "proposition_text": "An hemoglobin a1c test will be ordered."
+      },
+      {
+        "prop_id": "CAP22",
+        "cap_type": "Order",
+        "canonical_concept": "norvasc",
+        "category": "Order",
+        "speaker": "doctor",
+        "predicate": "plans",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "plan"
+        ],
+        "proposition_text": "The patient will stop taking norvasc."
+      },
+      {
+        "prop_id": "CAP23",
+        "cap_type": "MedicationRequest",
+        "canonical_concept": "naproxen",
+        "category": "MedicationRequest",
+        "speaker": "doctor",
+        "predicate": "recommends",
+        "status": "uncertain",
+        "visit_state": "planned",
+        "temporality": "current",
+        "claim_type_tags": [
+          "plan"
+        ],
+        "proposition_text": "The doctor recommends starting naproxen."
+      },
+      {
+        "prop_id": "CAP24",
+        "cap_type": "MedicationRequest",
+        "canonical_concept": "flexeril",
+        "category": "MedicationRequest",
+        "speaker": "doctor",
+        "predicate": "recommends",
+        "status": "uncertain",
+        "visit_state": "planned",
+        "temporality": "current",
+        "claim_type_tags": [
+          "plan"
+        ],
+        "proposition_text": "The doctor recommends starting flexeril."
+      },
+      {
+        "prop_id": "CAP25",
+        "cap_type": "TestResult",
+        "canonical_concept": "electrocardiogram",
+        "category": "TestResult",
+        "speaker": "doctor",
+        "predicate": "orders",
+        "status": "uncertain",
+        "visit_state": "planned",
+        "temporality": "current",
+        "claim_type_tags": [
+          "plan"
+        ],
+        "proposition_text": "The doctor orders an electrocardiogram."
+      },
+      {
+        "prop_id": "CAP26",
+        "cap_type": "MedicationRequest",
+        "canonical_concept": "metformin",
+        "category": "MedicationRequest",
+        "speaker": "doctor",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "medication"
+        ],
+        "proposition_text": "The doctor continues metformin."
+      },
+      {
+        "prop_id": "CAP27",
+        "cap_type": "MedicationRequest",
+        "canonical_concept": "hydrochlorothiazide",
+        "category": "MedicationRequest",
+        "speaker": "doctor",
+        "predicate": "orders",
+        "status": "uncertain",
+        "visit_state": "planned",
+        "temporality": "current",
+        "claim_type_tags": [
+          "plan"
+        ],
+        "proposition_text": "The doctor orders hydrochlorothiazide."
+      },
+      {
+        "prop_id": "CAP28",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "metformin",
+        "category": "MedicationStatement",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "medication",
+          "quantitative"
+        ],
+        "proposition_text": "The patient is taking metformin 500 mg twice a day."
+      },
+      {
+        "prop_id": "CAP29",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "norvasc",
+        "category": "MedicationStatement",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "quantitative"
+        ],
+        "proposition_text": "The patient is taking norvasc 5 milligrams once a day."
+      },
+      {
+        "prop_id": "CAP30",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "norvasc",
+        "category": "MedicationStatement",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "medication",
+          "quantitative"
+        ],
+        "proposition_text": "The patient is taking norvasc 5 mg once daily."
+      },
+      {
+        "prop_id": "CAP31",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "metformin",
+        "category": "MedicationStatement",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "twice a day",
+        "claim_type_tags": [
+          "medication"
+        ],
+        "proposition_text": "The patient is on metformin."
+      },
+      {
+        "prop_id": "CAP32",
+        "cap_type": "ProblemHistory",
+        "canonical_concept": "swelling",
+        "category": "ProblemHistory",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "uncertain",
+        "visit_state": "historical",
+        "temporality": "1-2 months after norvasc start",
+        "proposition_text": "The patient reports swelling started approximately one to two months after starting norvasc."
+      },
+      {
+        "prop_id": "CAP33",
+        "cap_type": "ProblemHistory",
+        "canonical_concept": "lifting",
+        "category": "ProblemHistory",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "past",
+        "proposition_text": "The patient reports the pain started after bending over to lift something."
+      },
+      {
+        "prop_id": "CAP34",
+        "cap_type": "ProblemHistory",
+        "canonical_concept": "yard work",
+        "category": "ProblemHistory",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "past",
+        "proposition_text": "The patient reports back pain began while working in the yard."
+      },
+      {
+        "prop_id": "CAP35",
+        "cap_type": "ProblemHistory",
+        "canonical_concept": "argument",
+        "category": "ProblemHistory",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "past",
+        "proposition_text": "The patient reports the pain started after an argument."
+      }
+    ],
+    "filtered_nonverifiable_units": []
+  },
+  "event_plan": null,
+  "summary_cap": {
+    "atomic_propositions": [
+      {
+        "prop_id": "P1",
+        "cap_type": "ChiefComplaint",
+        "canonical_concept": "pain:leg",
+        "category": "ChiefComplaint",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports back pain, primarily in the lower back and radiating down the left leg."
+      },
+      {
+        "prop_id": "P2",
+        "cap_type": "History",
+        "canonical_concept": "pain:back",
+        "category": "History",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "past",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports back pain that began four days ago."
+      },
+      {
+        "prop_id": "P3",
+        "cap_type": "History",
+        "canonical_concept": "pain:leg",
+        "category": "History",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "past",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports pain radiating down his left leg."
+      },
+      {
+        "prop_id": "P4",
+        "cap_type": "History",
+        "canonical_concept": "sensory change",
+        "category": "History",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "past",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports occasional tingling."
+      },
+      {
+        "prop_id": "P5",
+        "cap_type": "History",
+        "canonical_concept": "pain",
+        "category": "History",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "past",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports primarily experiences pain."
+      },
+      {
+        "prop_id": "P6",
+        "cap_type": "History",
+        "canonical_concept": "pain:back",
+        "category": "History",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "past",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports a history of occasional back pain."
+      },
+      {
+        "prop_id": "P7",
+        "cap_type": "History",
+        "canonical_concept": "ibuprofen some relief",
+        "category": "History",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "past",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports ibuprofen with some relief."
+      },
+      {
+        "prop_id": "P8",
+        "cap_type": "History",
+        "canonical_concept": "being approximately pounds heavier",
+        "category": "History",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports being approximately 15 pounds heavier."
+      },
+      {
+        "prop_id": "P9",
+        "cap_type": "History",
+        "canonical_concept": "need for weight loss",
+        "category": "History",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports a need for weight loss."
+      },
+      {
+        "prop_id": "P10",
+        "cap_type": "ProblemHistory",
+        "canonical_concept": "ankle swelling",
+        "category": "ProblemHistory",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports ankle swelling."
+      },
+      {
+        "prop_id": "P11",
+        "cap_type": "History",
+        "canonical_concept": "denies prior back surgeries",
+        "category": "History",
+        "speaker": "patient",
+        "predicate": "denies",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "past",
+        "claim_type_tags": [
+          "allergy"
+        ],
+        "proposition_text": "The patient denies prior back surgeries."
+      },
+      {
+        "prop_id": "P12",
+        "cap_type": "History",
+        "canonical_concept": "denies significant past back",
+        "category": "History",
+        "speaker": "patient",
+        "predicate": "denies",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "past",
+        "claim_type_tags": [
+          "allergy"
+        ],
+        "proposition_text": "The patient denies significant past back problems."
+      },
+      {
+        "prop_id": "P13",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "taking norvasc 5mg daily",
+        "category": "MedicationStatement",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "medication"
+        ],
+        "proposition_text": "The patient reports taking norvasc 5mg daily."
+      },
+      {
+        "prop_id": "P14",
+        "cap_type": "Problem",
+        "canonical_concept": "diabetes",
+        "category": "Problem",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports a history of diabetes."
+      },
+      {
+        "prop_id": "P15",
+        "cap_type": "Problem",
+        "canonical_concept": "hypertension",
+        "category": "Problem",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports a history of hypertension."
+      },
+      {
+        "prop_id": "P16",
+        "cap_type": "Problem",
+        "canonical_concept": "cholesterol test",
+        "category": "Problem",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports a history of high cholesterol."
+      },
+      {
+        "prop_id": "P17",
+        "cap_type": "Finding",
+        "canonical_concept": "examination reveals jugular venous",
+        "category": "Finding",
+        "speaker": "clinician",
+        "predicate": "examines",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "exam"
+        ],
+        "proposition_text": "Examination reveals no jugular venous distension."
+      },
+      {
+        "prop_id": "P18",
+        "cap_type": "Finding",
+        "canonical_concept": "examination reveals bruits",
+        "category": "Finding",
+        "speaker": "clinician",
+        "predicate": "examines",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "exam"
+        ],
+        "proposition_text": "Examination reveals no bruits."
+      },
+      {
+        "prop_id": "P19",
+        "cap_type": "Finding",
+        "canonical_concept": "lung sounds are clear",
+        "category": "Finding",
+        "speaker": "clinician",
+        "predicate": "examines",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "exam"
+        ],
+        "proposition_text": "Lung sounds are clear."
+      },
+      {
+        "prop_id": "P20",
+        "cap_type": "Finding",
+        "canonical_concept": "heart exam shows two",
+        "category": "Finding",
+        "speaker": "clinician",
+        "predicate": "examines",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "exam"
+        ],
+        "proposition_text": "The heart exam shows a two over six systolic ejection murmur."
+      },
+      {
+        "prop_id": "P21",
+        "cap_type": "Finding",
+        "canonical_concept": "two over six systolic",
+        "category": "Finding",
+        "speaker": "clinician",
+        "predicate": "examines",
+        "status": "affirmed",
+        "visit_state": "stable",
+        "temporality": "current",
+        "claim_type_tags": [
+          "exam"
+        ],
+        "proposition_text": "The two over six systolic ejection murmur is stable."
+      },
+      {
+        "prop_id": "P22",
+        "cap_type": "Finding",
+        "canonical_concept": "abdomen soft",
+        "category": "Finding",
+        "speaker": "clinician",
+        "predicate": "examines",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "exam"
+        ],
+        "proposition_text": "The abdomen is soft."
+      },
+      {
+        "prop_id": "P23",
+        "cap_type": "Finding",
+        "canonical_concept": "lower back examination reveals",
+        "category": "Finding",
+        "speaker": "clinician",
+        "predicate": "examines",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "exam"
+        ],
+        "proposition_text": "The lower back examination reveals tenderness in the left paraspinal area."
+      },
+      {
+        "prop_id": "P24",
+        "cap_type": "Finding",
+        "canonical_concept": "straight leg raise negative",
+        "category": "Finding",
+        "speaker": "clinician",
+        "predicate": "examines",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "exam"
+        ],
+        "proposition_text": "Straight leg raise is negative."
+      },
+      {
+        "prop_id": "P25",
+        "cap_type": "Finding",
+        "canonical_concept": "neurological exam normal",
+        "category": "Finding",
+        "speaker": "clinician",
+        "predicate": "examines",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "exam"
+        ],
+        "proposition_text": "Neurological exam is normal."
+      },
+      {
+        "prop_id": "P26",
+        "cap_type": "Finding",
+        "canonical_concept": "one plus edema lower",
+        "category": "Finding",
+        "speaker": "unknown",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "There is one plus edema of the lower extremities, primarily in the ankles."
+      },
+      {
+        "prop_id": "P27",
+        "cap_type": "TestResult",
+        "canonical_concept": "hemoglobin a1c was",
+        "category": "TestResult",
+        "speaker": "test_result",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "diagnostic"
+        ],
+        "proposition_text": "Hemoglobin A1c was 7.0%."
+      },
+      {
+        "prop_id": "P28",
+        "cap_type": "Problem",
+        "canonical_concept": "diabetes",
+        "category": "Problem",
+        "speaker": "clinician",
+        "predicate": "diagnoses",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "diagnostic"
+        ],
+        "proposition_text": "The patient has diabetes"
+      },
+      {
+        "prop_id": "P29",
+        "cap_type": "MedicationPlan",
+        "canonical_concept": "metformin",
+        "category": "MedicationPlan",
+        "speaker": "clinician",
+        "predicate": "prescribes",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "medication"
+        ],
+        "proposition_text": "The clinician prescribes metformin 500 mg twice daily"
+      },
+      {
+        "prop_id": "P30",
+        "cap_type": "MedicationPlan",
+        "canonical_concept": "prescribes naproxen twice daily",
+        "category": "MedicationPlan",
+        "speaker": "clinician",
+        "predicate": "prescribes",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "medication"
+        ],
+        "proposition_text": "The clinician prescribes naproxen 500 mg twice daily"
+      },
+      {
+        "prop_id": "P31",
+        "cap_type": "MedicationPlan",
+        "canonical_concept": "prescribes flexeril twice daily",
+        "category": "MedicationPlan",
+        "speaker": "clinician",
+        "predicate": "prescribes",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "medication"
+        ],
+        "proposition_text": "The clinician prescribes flexeril 10 mg twice daily"
+      },
+      {
+        "prop_id": "P32",
+        "cap_type": "MedicationPlan",
+        "canonical_concept": "hydrochlorothiazide",
+        "category": "MedicationPlan",
+        "speaker": "clinician",
+        "predicate": "prescribes",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "medication"
+        ],
+        "proposition_text": "The clinician prescribes hydrochlorothiazide 10 mg once daily"
+      },
+      {
+        "prop_id": "P33",
+        "cap_type": "Referral",
+        "canonical_concept": "refers physical therapy",
+        "category": "Referral",
+        "speaker": "clinician",
+        "predicate": "refers",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "plan"
+        ],
+        "proposition_text": "The clinician refers the patient to physical therapy"
+      },
+      {
+        "prop_id": "P34",
+        "cap_type": "FollowUpPlan",
+        "canonical_concept": "plans follow-up appointment two",
+        "category": "FollowUpPlan",
+        "speaker": "clinician",
+        "predicate": "plans",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "future",
+        "claim_type_tags": [
+          "plan"
+        ],
+        "proposition_text": "The clinician plans a follow-up appointment in two weeks"
+      },
+      {
+        "prop_id": "P35",
+        "cap_type": "Problem",
+        "canonical_concept": "pain:back",
+        "category": "Problem",
+        "speaker": "clinician",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports back pain"
+      },
+      {
+        "prop_id": "P36",
+        "cap_type": "Finding",
+        "canonical_concept": "ankle edema",
+        "category": "Finding",
+        "speaker": "clinician",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "exam"
+        ],
+        "proposition_text": "The patient has ankle edema"
+      }
+    ],
+    "filtered_nonverifiable_units": [],
+    "runtime_seconds": 37.589
+  },
+  "cap_alignment": {
+    "cap_precision": 0.4444444444444444,
+    "cap_recall": 0.45714285714285713,
+    "cap_f1": 0.4507042253521127,
+    "matched_count": 16,
+    "summary_prop_count": 36,
+    "source_prop_count": 35,
+    "matched_pairs": [
+      {
+        "score": 1.0,
+        "summary_prop_id": "P35",
+        "source_prop_id": "CAP11",
+        "summary_text": "The patient reports back pain",
+        "source_text": "The patient reports back pain."
+      },
+      {
+        "score": 1.0,
+        "summary_prop_id": "P32",
+        "source_prop_id": "CAP27",
+        "summary_text": "The clinician prescribes hydrochlorothiazide 10 mg once daily",
+        "source_text": "The doctor orders hydrochlorothiazide."
+      },
+      {
+        "score": 1.0,
+        "summary_prop_id": "P29",
+        "source_prop_id": "CAP31",
+        "summary_text": "The clinician prescribes metformin 500 mg twice daily",
+        "source_text": "The patient is on metformin."
+      },
+      {
+        "score": 1.0,
+        "summary_prop_id": "P28",
+        "source_prop_id": "CAP14",
+        "summary_text": "The patient has diabetes",
+        "source_text": "The patient has diabetes."
+      },
+      {
+        "score": 1.0,
+        "summary_prop_id": "P14",
+        "source_prop_id": "CAP7",
+        "summary_text": "The patient reports a history of diabetes.",
+        "source_text": "The patient has a history of diabetes."
+      },
+      {
+        "score": 1.0,
+        "summary_prop_id": "P10",
+        "source_prop_id": "CAP8",
+        "summary_text": "The patient reports ankle swelling.",
+        "source_text": "The patient reports swelling in their ankles."
+      },
+      {
+        "score": 1.0,
+        "summary_prop_id": "P6",
+        "source_prop_id": "CAP5",
+        "summary_text": "The patient reports a history of occasional back pain.",
+        "source_text": "The patient is here today for back pain."
+      },
+      {
+        "score": 1.0,
+        "summary_prop_id": "P5",
+        "source_prop_id": "CAP3",
+        "summary_text": "The patient reports primarily experiences pain.",
+        "source_text": "The patient reports pain in the left leg."
+      },
+      {
+        "score": 1.0,
+        "summary_prop_id": "P3",
+        "source_prop_id": "CAP2",
+        "summary_text": "The patient reports pain radiating down his left leg.",
+        "source_text": "The patient reports pain radiating down their left leg."
+      },
+      {
+        "score": 1.0,
+        "summary_prop_id": "P2",
+        "source_prop_id": "CAP1",
+        "summary_text": "The patient reports back pain that began four days ago.",
+        "source_text": "The patient has had back pain occasionally over the years."
+      },
+      {
+        "score": 0.8889,
+        "summary_prop_id": "P4",
+        "source_prop_id": "CAP13",
+        "summary_text": "The patient reports occasional tingling.",
+        "source_text": "The patient reports tingling."
+      },
+      {
+        "score": 0.8033,
+        "summary_prop_id": "P36",
+        "source_prop_id": "CAP9",
+        "summary_text": "The patient has ankle edema",
+        "source_text": "The patient has edema in their legs."
+      },
+      {
+        "score": 0.8,
+        "summary_prop_id": "P33",
+        "source_prop_id": "CAP12",
+        "summary_text": "The clinician refers the patient to physical therapy",
+        "source_text": "The doctor orders physical therapy."
+      },
+      {
+        "score": 0.8,
+        "summary_prop_id": "P27",
+        "source_prop_id": "CAP21",
+        "summary_text": "Hemoglobin A1c was 7.0%.",
+        "source_text": "An hemoglobin a1c test will be ordered."
+      },
+      {
+        "score": 0.7513,
+        "summary_prop_id": "P13",
+        "source_prop_id": "CAP30",
+        "summary_text": "The patient reports taking norvasc 5mg daily.",
+        "source_text": "The patient is taking norvasc 5 mg once daily."
+      },
+      {
+        "score": 0.5833,
+        "summary_prop_id": "P1",
+        "source_prop_id": "CAP4",
+        "summary_text": "The patient reports back pain, primarily in the lower back and radiating down the left leg.",
+        "source_text": "The patient reports pain in the left hand."
+      }
+    ],
+    "unsupported_summary_props": [
+      {
+        "prop_id": "P7",
+        "cap_type": "History",
+        "canonical_concept": "ibuprofen some relief",
+        "category": "History",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "past",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports ibuprofen with some relief."
+      },
+      {
+        "prop_id": "P8",
+        "cap_type": "History",
+        "canonical_concept": "being approximately pounds heavier",
+        "category": "History",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports being approximately 15 pounds heavier."
+      },
+      {
+        "prop_id": "P9",
+        "cap_type": "History",
+        "canonical_concept": "need for weight loss",
+        "category": "History",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports a need for weight loss."
+      },
+      {
+        "prop_id": "P11",
+        "cap_type": "History",
+        "canonical_concept": "denies prior back surgeries",
+        "category": "History",
+        "speaker": "patient",
+        "predicate": "denies",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "past",
+        "claim_type_tags": [
+          "allergy"
+        ],
+        "proposition_text": "The patient denies prior back surgeries."
+      },
+      {
+        "prop_id": "P12",
+        "cap_type": "History",
+        "canonical_concept": "denies significant past back",
+        "category": "History",
+        "speaker": "patient",
+        "predicate": "denies",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "past",
+        "claim_type_tags": [
+          "allergy"
+        ],
+        "proposition_text": "The patient denies significant past back problems."
+      },
+      {
+        "prop_id": "P15",
+        "cap_type": "Problem",
+        "canonical_concept": "hypertension",
+        "category": "Problem",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports a history of hypertension."
+      },
+      {
+        "prop_id": "P16",
+        "cap_type": "Problem",
+        "canonical_concept": "cholesterol test",
+        "category": "Problem",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports a history of high cholesterol."
+      },
+      {
+        "prop_id": "P17",
+        "cap_type": "Finding",
+        "canonical_concept": "examination reveals jugular venous",
+        "category": "Finding",
+        "speaker": "clinician",
+        "predicate": "examines",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "exam"
+        ],
+        "proposition_text": "Examination reveals no jugular venous distension."
+      },
+      {
+        "prop_id": "P18",
+        "cap_type": "Finding",
+        "canonical_concept": "examination reveals bruits",
+        "category": "Finding",
+        "speaker": "clinician",
+        "predicate": "examines",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "exam"
+        ],
+        "proposition_text": "Examination reveals no bruits."
+      },
+      {
+        "prop_id": "P19",
+        "cap_type": "Finding",
+        "canonical_concept": "lung sounds are clear",
+        "category": "Finding",
+        "speaker": "clinician",
+        "predicate": "examines",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "exam"
+        ],
+        "proposition_text": "Lung sounds are clear."
+      },
+      {
+        "prop_id": "P20",
+        "cap_type": "Finding",
+        "canonical_concept": "heart exam shows two",
+        "category": "Finding",
+        "speaker": "clinician",
+        "predicate": "examines",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "exam"
+        ],
+        "proposition_text": "The heart exam shows a two over six systolic ejection murmur."
+      },
+      {
+        "prop_id": "P21",
+        "cap_type": "Finding",
+        "canonical_concept": "two over six systolic",
+        "category": "Finding",
+        "speaker": "clinician",
+        "predicate": "examines",
+        "status": "affirmed",
+        "visit_state": "stable",
+        "temporality": "current",
+        "claim_type_tags": [
+          "exam"
+        ],
+        "proposition_text": "The two over six systolic ejection murmur is stable."
+      },
+      {
+        "prop_id": "P22",
+        "cap_type": "Finding",
+        "canonical_concept": "abdomen soft",
+        "category": "Finding",
+        "speaker": "clinician",
+        "predicate": "examines",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "exam"
+        ],
+        "proposition_text": "The abdomen is soft."
+      },
+      {
+        "prop_id": "P23",
+        "cap_type": "Finding",
+        "canonical_concept": "lower back examination reveals",
+        "category": "Finding",
+        "speaker": "clinician",
+        "predicate": "examines",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "exam"
+        ],
+        "proposition_text": "The lower back examination reveals tenderness in the left paraspinal area."
+      },
+      {
+        "prop_id": "P24",
+        "cap_type": "Finding",
+        "canonical_concept": "straight leg raise negative",
+        "category": "Finding",
+        "speaker": "clinician",
+        "predicate": "examines",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "exam"
+        ],
+        "proposition_text": "Straight leg raise is negative."
+      },
+      {
+        "prop_id": "P25",
+        "cap_type": "Finding",
+        "canonical_concept": "neurological exam normal",
+        "category": "Finding",
+        "speaker": "clinician",
+        "predicate": "examines",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "exam"
+        ],
+        "proposition_text": "Neurological exam is normal."
+      },
+      {
+        "prop_id": "P26",
+        "cap_type": "Finding",
+        "canonical_concept": "one plus edema lower",
+        "category": "Finding",
+        "speaker": "unknown",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "There is one plus edema of the lower extremities, primarily in the ankles."
+      },
+      {
+        "prop_id": "P30",
+        "cap_type": "MedicationPlan",
+        "canonical_concept": "prescribes naproxen twice daily",
+        "category": "MedicationPlan",
+        "speaker": "clinician",
+        "predicate": "prescribes",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "medication"
+        ],
+        "proposition_text": "The clinician prescribes naproxen 500 mg twice daily"
+      },
+      {
+        "prop_id": "P31",
+        "cap_type": "MedicationPlan",
+        "canonical_concept": "prescribes flexeril twice daily",
+        "category": "MedicationPlan",
+        "speaker": "clinician",
+        "predicate": "prescribes",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "medication"
+        ],
+        "proposition_text": "The clinician prescribes flexeril 10 mg twice daily"
+      },
+      {
+        "prop_id": "P34",
+        "cap_type": "FollowUpPlan",
+        "canonical_concept": "plans follow-up appointment two",
+        "category": "FollowUpPlan",
+        "speaker": "clinician",
+        "predicate": "plans",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "future",
+        "claim_type_tags": [
+          "plan"
+        ],
+        "proposition_text": "The clinician plans a follow-up appointment in two weeks"
+      }
+    ],
+    "missing_source_props": [
+      {
+        "prop_id": "CAP6",
+        "cap_type": "Symptom",
+        "canonical_concept": "tingling",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports tingling in certain positions."
+      },
+      {
+        "prop_id": "CAP10",
+        "cap_type": "Problem",
+        "canonical_concept": "high blood pressure",
+        "category": "Problem",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient has high blood pressure."
+      },
+      {
+        "prop_id": "CAP15",
+        "cap_type": "MedicationRequest",
+        "canonical_concept": "metformin",
+        "category": "MedicationRequest",
+        "speaker": "doctor",
+        "predicate": "has",
+        "status": "affirmed",
+        "visit_state": "planned",
+        "temporality": "current",
+        "claim_type_tags": [
+          "medication",
+          "quantitative"
+        ],
+        "proposition_text": "The patient will take metformin 500 milligrams twice a day."
+      },
+      {
+        "prop_id": "CAP16",
+        "cap_type": "MedicationRequest",
+        "canonical_concept": "hydrochlorothiazide",
+        "category": "MedicationRequest",
+        "speaker": "doctor",
+        "predicate": "has",
+        "status": "affirmed",
+        "visit_state": "planned",
+        "temporality": "current",
+        "claim_type_tags": [
+          "quantitative"
+        ],
+        "proposition_text": "The patient will take hydrochlorothiazide 10 milligrams once a day."
+      },
+      {
+        "prop_id": "CAP17",
+        "cap_type": "TestResult",
+        "canonical_concept": "hemoglobin A1c",
+        "category": "TestResult",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "last time",
+        "claim_type_tags": [
+          "quantitative"
+        ],
+        "proposition_text": "The patient's hemoglobin A1c was 7.1 percent."
+      },
+      {
+        "prop_id": "CAP18",
+        "cap_type": "TestResult",
+        "canonical_concept": "hemoglobin a1c",
+        "category": "TestResult",
+        "speaker": "doctor",
+        "predicate": "orders",
+        "status": "uncertain",
+        "visit_state": "planned",
+        "temporality": "current",
+        "claim_type_tags": [
+          "plan",
+          "quantitative"
+        ],
+        "proposition_text": "The doctor orders a hemoglobin a1c test."
+      },
+      {
+        "prop_id": "CAP19",
+        "cap_type": "TestResult",
+        "canonical_concept": "complete blood count",
+        "category": "TestResult",
+        "speaker": "doctor",
+        "predicate": "orders",
+        "status": "uncertain",
+        "visit_state": "planned",
+        "temporality": "current",
+        "claim_type_tags": [
+          "plan"
+        ],
+        "proposition_text": "The doctor orders a complete blood count."
+      },
+      {
+        "prop_id": "CAP20",
+        "cap_type": "TestResult",
+        "canonical_concept": "basic metabolic panel",
+        "category": "TestResult",
+        "speaker": "doctor",
+        "predicate": "orders",
+        "status": "uncertain",
+        "visit_state": "planned",
+        "temporality": "current",
+        "claim_type_tags": [
+          "plan"
+        ],
+        "proposition_text": "The doctor orders a basic metabolic panel."
+      },
+      {
+        "prop_id": "CAP22",
+        "cap_type": "Order",
+        "canonical_concept": "norvasc",
+        "category": "Order",
+        "speaker": "doctor",
+        "predicate": "plans",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "plan"
+        ],
+        "proposition_text": "The patient will stop taking norvasc."
+      },
+      {
+        "prop_id": "CAP23",
+        "cap_type": "MedicationRequest",
+        "canonical_concept": "naproxen",
+        "category": "MedicationRequest",
+        "speaker": "doctor",
+        "predicate": "recommends",
+        "status": "uncertain",
+        "visit_state": "planned",
+        "temporality": "current",
+        "claim_type_tags": [
+          "plan"
+        ],
+        "proposition_text": "The doctor recommends starting naproxen."
+      },
+      {
+        "prop_id": "CAP24",
+        "cap_type": "MedicationRequest",
+        "canonical_concept": "flexeril",
+        "category": "MedicationRequest",
+        "speaker": "doctor",
+        "predicate": "recommends",
+        "status": "uncertain",
+        "visit_state": "planned",
+        "temporality": "current",
+        "claim_type_tags": [
+          "plan"
+        ],
+        "proposition_text": "The doctor recommends starting flexeril."
+      },
+      {
+        "prop_id": "CAP25",
+        "cap_type": "TestResult",
+        "canonical_concept": "electrocardiogram",
+        "category": "TestResult",
+        "speaker": "doctor",
+        "predicate": "orders",
+        "status": "uncertain",
+        "visit_state": "planned",
+        "temporality": "current",
+        "claim_type_tags": [
+          "plan"
+        ],
+        "proposition_text": "The doctor orders an electrocardiogram."
+      },
+      {
+        "prop_id": "CAP26",
+        "cap_type": "MedicationRequest",
+        "canonical_concept": "metformin",
+        "category": "MedicationRequest",
+        "speaker": "doctor",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "medication"
+        ],
+        "proposition_text": "The doctor continues metformin."
+      },
+      {
+        "prop_id": "CAP28",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "metformin",
+        "category": "MedicationStatement",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "medication",
+          "quantitative"
+        ],
+        "proposition_text": "The patient is taking metformin 500 mg twice a day."
+      },
+      {
+        "prop_id": "CAP29",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "norvasc",
+        "category": "MedicationStatement",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "quantitative"
+        ],
+        "proposition_text": "The patient is taking norvasc 5 milligrams once a day."
+      },
+      {
+        "prop_id": "CAP32",
+        "cap_type": "ProblemHistory",
+        "canonical_concept": "swelling",
+        "category": "ProblemHistory",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "uncertain",
+        "visit_state": "historical",
+        "temporality": "1-2 months after norvasc start",
+        "proposition_text": "The patient reports swelling started approximately one to two months after starting norvasc."
+      },
+      {
+        "prop_id": "CAP33",
+        "cap_type": "ProblemHistory",
+        "canonical_concept": "lifting",
+        "category": "ProblemHistory",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "past",
+        "proposition_text": "The patient reports the pain started after bending over to lift something."
+      },
+      {
+        "prop_id": "CAP34",
+        "cap_type": "ProblemHistory",
+        "canonical_concept": "yard work",
+        "category": "ProblemHistory",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "past",
+        "proposition_text": "The patient reports back pain began while working in the yard."
+      },
+      {
+        "prop_id": "CAP35",
+        "cap_type": "ProblemHistory",
+        "canonical_concept": "argument",
+        "category": "ProblemHistory",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "past",
+        "proposition_text": "The patient reports the pain started after an argument."
+      }
+    ]
+  },
+  "reference_gpt_f1_items": {
+    "active_problems_symptoms": [
+      "diabetes",
+      "hypertension",
+      "high cholesterol",
+      "ankle swelling",
+      "lower back pain",
+      "tingling in left leg"
+    ],
+    "negated_findings": [
+      "denies previous back surgeries",
+      "denies weakness or numbness in legs",
+      "denies loss of bowel or bladder function"
+    ],
+    "uncertain_findings": [],
+    "medication_treatment": [
+      "metformin 500 mg twice daily",
+      "Norvasc"
+    ],
+    "plan_followup": [
+      "follow-up in 2 weeks"
+    ],
+    "_chunk_count": [
+      "5"
+    ]
+  },
+  "summary_gpt_f1_items": {
+    "active_problems_symptoms": [],
+    "negated_findings": [],
+    "uncertain_findings": [],
+    "medication_treatment": [],
+    "plan_followup": [],
+    "_chunk_count": [
+      "2"
+    ]
+  },
+  "gpt_f1_alignment": {
+    "by_category": {
+      "active_problems_symptoms": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "matched_count": 0,
+        "pred_count": 0,
+        "ref_count": 6,
+        "matches": [],
+        "unsupported_pred_items": [],
+        "missing_ref_items": [
+          "diabetes",
+          "hypertension",
+          "high cholesterol",
+          "ankle swelling",
+          "lower back pain",
+          "tingling in left leg"
+        ]
+      },
+      "negated_findings": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "matched_count": 0,
+        "pred_count": 0,
+        "ref_count": 3,
+        "matches": [],
+        "unsupported_pred_items": [],
+        "missing_ref_items": [
+          "denies previous back surgeries",
+          "denies weakness or numbness in legs",
+          "denies loss of bowel or bladder function"
+        ]
+      },
+      "uncertain_findings": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "matched_count": 0,
+        "pred_count": 0,
+        "ref_count": 0,
+        "matches": [],
+        "unsupported_pred_items": [],
+        "missing_ref_items": []
+      },
+      "medication_treatment": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "matched_count": 0,
+        "pred_count": 0,
+        "ref_count": 2,
+        "matches": [],
+        "unsupported_pred_items": [],
+        "missing_ref_items": [
+          "metformin 500 mg twice daily",
+          "Norvasc"
+        ]
+      },
+      "plan_followup": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "matched_count": 0,
+        "pred_count": 0,
+        "ref_count": 1,
+        "matches": [],
+        "unsupported_pred_items": [],
+        "missing_ref_items": [
+          "follow-up in 2 weeks"
+        ]
+      }
+    }
+  },
+  "reference_nair_concepts": {
+    "sections": [
+      {
+        "heading": "Clinical Note",
+        "section_value": "CHIEF COMPLAINT\nBack pain evaluation.\nMEDICAL HISTORY\nThe patient has a history of diabetes, hypertension, and high cholesterol.\nSURGICAL HISTORY\nHe denies previous back surgeries.\nMEDICATIONS\nThe patient currently utilizes metformin 500 mg twice daily and Norvasc.\nREVIEW OF SYSTEMS\nCardiovascular: Reports ankle swelling.",
+        "medical_concepts": [
+          "back pain",
+          "diabetes",
+          "hypertension",
+          "high cholesterol",
+          "back surgeries",
+          "metformin",
+          "Norvasc",
+          "ankle swelling"
+        ]
+      },
+      {
+        "heading": "Clinical Note",
+        "section_value": "Musculoskeletal: Reports lower back pain.\nNeurological: Reports tingling in left leg. Denies weakness or numbness in legs, or loss of bowl or bladder function.\nPHYSICAL EXAM\nNeurological\n- Orientation: Alert and oriented x3. Cranial nerves grossly intact. Normal gait.\nNeck\n- General Examination: No JVD. No bruits.\nRespiratory\n- Auscultation of Lungs: No wheezes, rales.\nCardiovascular",
+        "medical_concepts": [
+          "lower back pain",
+          "tingling in left leg",
+          "weakness in legs",
+          "numbness in legs",
+          "loss of bowel function",
+          "loss of bladder function",
+          "alert and oriented x3",
+          "cranial nerves grossly intact",
+          "normal gait",
+          "jugular venous distention",
+          "bruits",
+          "wheezes",
+          "rales"
+        ]
+      },
+      {
+        "heading": "Clinical Note",
+        "section_value": "- Auscultation of Heart: Regular rate and rhythm. 2/6 systolic ejection murmur. Otherwise, regular rate and rhythm.\nMusculoskeletal\n- Examination: Tenderness on the left paraspinal area. Straight leg raise test is negative. Reflexes are normal. 1+ nonpitting edema of lower extremities. No calf tenderness. Negative Homan's sign.\nASSESSMENT AND PLAN\n1. Lower back pain.\n- Medical Reasoning: I believe this is more of a muscular sprain.\n- Patient Education and Counseling: We discussed treatment options today.\n- Medical Treatment: I am going to start him on Naprosyn 500 mg twice a day and Flexeril 10 mg twice a day. I will refer him for physical therapy to help strengthen some of the muscles in his lower back.\n- Additional Testing: I do not think he needs an x-ray at this stage, however if he does not improve, we will order one for further evaluation.\n2. Diabetes.",
+        "medical_concepts": [
+          "auscultation of heart",
+          "systolic ejection murmur",
+          "tenderness on the left paraspinal area",
+          "straight leg raise test",
+          "reflexes",
+          "nonpitting edema of lower extremities",
+          "calf tenderness",
+          "Homan's sign",
+          "lower back pain",
+          "muscular sprain",
+          "Naprosyn 500 mg twice a day",
+          "Flexeril 10 mg twice a day",
+          "physical therapy",
+          "x-ray",
+          "diabetes"
+        ]
+      },
+      {
+        "heading": "Clinical Note",
+        "section_value": "- Medical Reasoning: His most recent A1c was 7.1 and his blood sugar levels are typically between 120-140.\n- Patient Education and Counseling: We discussed treatment options today.\n- Medical Treatment: He will continue the metformin 500 mg twice a day.\n- Additional Testing: I am going to order another hemoglobin A1c.\n3. Hypertension.\n- Medical Reasoning: He does have 1+ edema in his legs.\n- Patient Education and Counseling: We discussed treatment options today. I explained that his edema is likely caused by the Norvasc.\n- Medical Treatment: The patient will discontinue the use of Norvasc and we will start him on hydrochlorothiazide 10 mg once a day.\n- Additional Testing: I will order a CBC and BMP. Additionally, I will order a repeat EKG, as well as a chest x-ray.\nPatient Agreements: The patient understands and agrees with the recommended medical treatment plan.",
+        "medical_concepts": [
+          "A1c",
+          "blood sugar levels",
+          "metformin",
+          "hemoglobin A1c",
+          "hypertension",
+          "edema",
+          "Norvasc",
+          "hydrochlorothiazide",
+          "CBC",
+          "BMP",
+          "EKG",
+          "chest x-ray"
+        ]
+      },
+      {
+        "heading": "Clinical Note",
+        "section_value": "INSTRUCTIONS\nThe patient will follow up in 2 weeks.",
+        "medical_concepts": []
+      }
+    ],
+    "medical_concepts": [
+      "back pain",
+      "diabetes",
+      "hypertension",
+      "high cholesterol",
+      "back surgeries",
+      "metformin",
+      "Norvasc",
+      "ankle swelling",
+      "lower back pain",
+      "tingling in left leg",
+      "weakness in legs",
+      "numbness in legs",
+      "loss of bowel function",
+      "loss of bladder function",
+      "alert and oriented x3",
+      "cranial nerves grossly intact",
+      "normal gait",
+      "jugular venous distention",
+      "bruits",
+      "wheezes",
+      "rales",
+      "auscultation of heart",
+      "systolic ejection murmur",
+      "tenderness on the left paraspinal area",
+      "straight leg raise test",
+      "reflexes",
+      "nonpitting edema of lower extremities",
+      "calf tenderness",
+      "Homan's sign",
+      "muscular sprain",
+      "Naprosyn 500 mg twice a day",
+      "Flexeril 10 mg twice a day",
+      "physical therapy",
+      "x-ray",
+      "A1c",
+      "blood sugar levels",
+      "hemoglobin A1c",
+      "edema",
+      "hydrochlorothiazide",
+      "CBC",
+      "BMP",
+      "EKG",
+      "chest x-ray"
+    ],
+    "section_count": 5
+  },
+  "summary_nair_concepts": {
+    "sections": [
+      {
+        "heading": "Clinical Note",
+        "section_value": "Chief Complaint\nBack pain, primarily in the lower back and radiating down the left leg.\nHistory of Present Illness\nThe patient reports back pain that began four days ago after bending over to lift an object, accompanied by pain radiating down his left leg. He describes occasional tingling but primarily experiences pain, particularly with certain positions. He has a history of occasional back pain over the years and has previously tried ibuprofen with some relief. He reports being approximately 15 pounds heavier and acknowledges a need for weight loss. He is currently taking norvasc 5mg daily for blood pressure and reports some ankle swelling. He has not had any prior back surgeries or significant past back problems.\nFindings",
+        "medical_concepts": [
+          "back pain",
+          "lower back pain",
+          "radicular pain",
+          "left leg pain",
+          "tingling",
+          "overweight",
+          "weight loss",
+          "ankle swelling",
+          "ibuprofen",
+          "norvasc",
+          "hypertension",
+          "back surgery"
+        ]
+      },
+      {
+        "heading": "Clinical Note",
+        "section_value": "The patient is a 43-year-old male with a history of diabetes, hypertension, and high cholesterol. Examination reveals no jugular venous distension or bruits. Lung sounds are clear, and the heart exam shows a two over six systolic ejection murmur, which is stable. The abdomen is soft, and the lower back examination reveals tenderness in the left paraspinal area. Straight leg raise is negative. Neurological exam is normal. There is one plus edema of the lower extremities, primarily in the ankles. Hemoglobin A1c was 7.0%. The patient's blood pressure in the clinic is 120/70 mmHg. The patient reports checking his blood sugar approximately two to three times a week, with readings typically in the range of 120-140 mg/dL.\nAssessment\nThe patient presents with musculoskeletal back pain, likely a muscular sprain, secondary to his reported activity. He also continues to have uncontrolled diabetes and hypertension with associated edema.\nPlan",
+        "medical_concepts": [
+          "diabetes",
+          "hypertension",
+          "high cholesterol",
+          "jugular venous distension",
+          "bruits",
+          "lung sounds",
+          "systolic ejection murmur",
+          "abdominal exam",
+          "paraspinal tenderness",
+          "straight leg raise",
+          "neurological exam",
+          "edema of the lower extremities",
+          "ankle edema",
+          "hemoglobin A1c",
+          "blood pressure",
+          "blood sugar",
+          "musculoskeletal back pain",
+          "muscular sprain",
+          "uncontrolled diabetes",
+          "uncontrolled hypertension"
+        ]
+      },
+      {
+        "heading": "Clinical Note",
+        "section_value": "I am ordering a hemoglobin A1c to further assess his diabetes control and will continue the metformin 500 mg twice daily. I will also order some blood work to evaluate his kidney function and electrolytes. I am prescribing naproxen 500 mg twice daily and flexeril 10 mg twice daily for pain and muscle relaxation. I am referring the patient to physical therapy to address his back pain and strengthen his lower back muscles. I will also prescribe hydrochlorothiazide 10 mg once daily to manage the ankle edema. I will schedule a follow-up appointment in two weeks to review the A1c results and assess treatment response. We will continue to monitor his blood pressure and edema levels.",
+        "medical_concepts": [
+          "hemoglobin A1c",
+          "diabetes",
+          "metformin",
+          "kidney function",
+          "electrolytes",
+          "naproxen",
+          "flexeril",
+          "pain",
+          "muscle relaxation",
+          "physical therapy",
+          "back pain",
+          "hydrochlorothiazide",
+          "ankle edema",
+          "edema",
+          "blood pressure"
+        ]
+      }
+    ],
+    "medical_concepts": [
+      "back pain",
+      "lower back pain",
+      "radicular pain",
+      "left leg pain",
+      "tingling",
+      "overweight",
+      "weight loss",
+      "ankle swelling",
+      "ibuprofen",
+      "norvasc",
+      "hypertension",
+      "back surgery",
+      "diabetes",
+      "high cholesterol",
+      "jugular venous distension",
+      "bruits",
+      "lung sounds",
+      "systolic ejection murmur",
+      "abdominal exam",
+      "paraspinal tenderness",
+      "straight leg raise",
+      "neurological exam",
+      "edema of the lower extremities",
+      "ankle edema",
+      "hemoglobin A1c",
+      "blood pressure",
+      "blood sugar",
+      "musculoskeletal back pain",
+      "muscular sprain",
+      "uncontrolled diabetes",
+      "uncontrolled hypertension",
+      "metformin",
+      "kidney function",
+      "electrolytes",
+      "naproxen",
+      "flexeril",
+      "pain",
+      "muscle relaxation",
+      "physical therapy",
+      "hydrochlorothiazide",
+      "edema"
+    ],
+    "section_count": 3
+  },
+  "nair_alignment": {
+    "pred_concepts": [
+      "back pain",
+      "lower back pain",
+      "radicular pain",
+      "left leg pain",
+      "tingling",
+      "overweight",
+      "weight loss",
+      "ankle swelling",
+      "ibuprofen",
+      "norvasc",
+      "hypertension",
+      "back surgery",
+      "diabetes",
+      "high cholesterol",
+      "jugular venous distension",
+      "bruits",
+      "lung sounds",
+      "systolic ejection murmur",
+      "abdominal exam",
+      "paraspinal tenderness",
+      "straight leg raise",
+      "neurological exam",
+      "edema of the lower extremities",
+      "ankle edema",
+      "hemoglobin A1c",
+      "blood pressure",
+      "blood sugar",
+      "musculoskeletal back pain",
+      "muscular sprain",
+      "uncontrolled diabetes",
+      "uncontrolled hypertension",
+      "metformin",
+      "kidney function",
+      "electrolytes",
+      "naproxen",
+      "flexeril",
+      "pain",
+      "muscle relaxation",
+      "physical therapy",
+      "hydrochlorothiazide",
+      "edema"
+    ],
+    "ref_concepts": [
+      "back pain",
+      "diabetes",
+      "hypertension",
+      "high cholesterol",
+      "back surgeries",
+      "metformin",
+      "Norvasc",
+      "ankle swelling",
+      "lower back pain",
+      "tingling in left leg",
+      "weakness in legs",
+      "numbness in legs",
+      "loss of bowel function",
+      "loss of bladder function",
+      "alert and oriented x3",
+      "cranial nerves grossly intact",
+      "normal gait",
+      "jugular venous distention",
+      "bruits",
+      "wheezes",
+      "rales",
+      "auscultation of heart",
+      "systolic ejection murmur",
+      "tenderness on the left paraspinal area",
+      "straight leg raise test",
+      "reflexes",
+      "nonpitting edema of lower extremities",
+      "calf tenderness",
+      "Homan's sign",
+      "muscular sprain",
+      "Naprosyn 500 mg twice a day",
+      "Flexeril 10 mg twice a day",
+      "physical therapy",
+      "x-ray",
+      "A1c",
+      "blood sugar levels",
+      "hemoglobin A1c",
+      "edema",
+      "hydrochlorothiazide",
+      "CBC",
+      "BMP",
+      "EKG",
+      "chest x-ray"
+    ],
+    "precision_alignment": {
+      "found_b": [
+        "back pain",
+        "lower back pain",
+        "tingling",
+        "ankle swelling",
+        "norvasc",
+        "hypertension",
+        "back surgery",
+        "diabetes",
+        "high cholesterol",
+        "jugular venous distension",
+        "bruits",
+        "systolic ejection murmur",
+        "paraspinal tenderness",
+        "straight leg raise",
+        "edema of the lower extremities",
+        "hemoglobin A1c",
+        "blood sugar",
+        "musculoskeletal back pain",
+        "muscular sprain",
+        "metformin",
+        "electrolytes",
+        "naproxen",
+        "flexeril",
+        "pain",
+        "physical therapy",
+        "hydrochlorothiazide",
+        "edema"
+      ],
+      "not_found_b": [
+        "radicular pain",
+        "left leg pain",
+        "overweight",
+        "weight loss",
+        "ibuprofen",
+        "lung sounds",
+        "abdominal exam",
+        "neurological exam",
+        "ankle edema",
+        "blood pressure",
+        "uncontrolled diabetes",
+        "uncontrolled hypertension",
+        "kidney function",
+        "muscle relaxation"
+      ],
+      "chunk_count": 2,
+      "chunk_results": [
+        {
+          "found_b": [
+            "back pain",
+            "lower back pain",
+            "tingling",
+            "ankle swelling",
+            "norvasc",
+            "hypertension",
+            "back surgery",
+            "diabetes",
+            "high cholesterol",
+            "jugular venous distension",
+            "bruits",
+            "systolic ejection murmur",
+            "paraspinal tenderness",
+            "straight leg raise",
+            "edema of the lower extremities"
+          ],
+          "not_found_b": [
+            "radicular pain",
+            "left leg pain",
+            "overweight",
+            "weight loss",
+            "ibuprofen",
+            "lung sounds",
+            "abdominal exam",
+            "neurological exam",
+            "ankle edema"
+          ]
+        },
+        {
+          "found_b": [
+            "hemoglobin A1c",
+            "blood sugar",
+            "musculoskeletal back pain",
+            "muscular sprain",
+            "metformin",
+            "electrolytes",
+            "naproxen",
+            "flexeril",
+            "pain",
+            "physical therapy",
+            "hydrochlorothiazide",
+            "edema"
+          ],
+          "not_found_b": [
+            "blood pressure",
+            "uncontrolled diabetes",
+            "uncontrolled hypertension",
+            "kidney function",
+            "muscle relaxation"
+          ]
+        }
+      ]
+    },
+    "recall_alignment": {
+      "found_b": [
+        "back pain",
+        "diabetes",
+        "hypertension",
+        "high cholesterol",
+        "back surgeries",
+        "metformin",
+        "Norvasc",
+        "ankle swelling",
+        "lower back pain",
+        "tingling in left leg",
+        "jugular venous distention",
+        "bruits",
+        "systolic ejection murmur",
+        "tenderness on the left paraspinal area",
+        "straight leg raise test",
+        "muscular sprain",
+        "Naprosyn 500 mg twice a day",
+        "Flexeril 10 mg twice a day",
+        "physical therapy",
+        "A1c",
+        "blood sugar levels",
+        "hemoglobin A1c",
+        "edema",
+        "hydrochlorothiazide"
+      ],
+      "not_found_b": [
+        "weakness in legs",
+        "numbness in legs",
+        "loss of bowel function",
+        "loss of bladder function",
+        "alert and oriented x3",
+        "cranial nerves grossly intact",
+        "normal gait",
+        "wheezes",
+        "rales",
+        "auscultation of heart",
+        "reflexes",
+        "nonpitting edema of lower extremities",
+        "calf tenderness",
+        "Homan's sign",
+        "x-ray",
+        "CBC",
+        "BMP",
+        "EKG",
+        "chest x-ray"
+      ],
+      "chunk_count": 2,
+      "chunk_results": [
+        {
+          "found_b": [
+            "back pain",
+            "diabetes",
+            "hypertension",
+            "high cholesterol",
+            "back surgeries",
+            "metformin",
+            "Norvasc",
+            "ankle swelling",
+            "lower back pain",
+            "tingling in left leg",
+            "jugular venous distention",
+            "bruits",
+            "systolic ejection murmur",
+            "tenderness on the left paraspinal area"
+          ],
+          "not_found_b": [
+            "weakness in legs",
+            "numbness in legs",
+            "loss of bowel function",
+            "loss of bladder function",
+            "alert and oriented x3",
+            "cranial nerves grossly intact",
+            "normal gait",
+            "wheezes",
+            "rales",
+            "auscultation of heart"
+          ]
+        },
+        {
+          "found_b": [
+            "straight leg raise test",
+            "muscular sprain",
+            "Naprosyn 500 mg twice a day",
+            "Flexeril 10 mg twice a day",
+            "physical therapy",
+            "A1c",
+            "blood sugar levels",
+            "hemoglobin A1c",
+            "edema",
+            "hydrochlorothiazide"
+          ],
+          "not_found_b": [
+            "reflexes",
+            "nonpitting edema of lower extremities",
+            "calf tenderness",
+            "Homan's sign",
+            "x-ray",
+            "CBC",
+            "BMP",
+            "EKG",
+            "chest x-ray"
+          ]
+        }
+      ]
+    }
+  },
+  "semantic_cap_audit": {
+    "source_cap_recall": [
+      {
+        "cap_id": "P1",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P2",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P3",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P4",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P5",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P6",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P7",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P8",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P9",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P10",
+        "judgment": "contradicted",
+        "reason": null
+      },
+      {
+        "cap_id": "P11",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P12",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P13",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P14",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P15",
+        "judgment": "contradicted",
+        "reason": null
+      },
+      {
+        "cap_id": "P16",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P1",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P2",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P3",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P4",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P5",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P6",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P7",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P8",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P9",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P10",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P11",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P12",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P13",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P14",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P15",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P16",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P1",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P2",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P3",
+        "judgment": "missing",
+        "reason": null
+      }
+    ],
+    "summary_cap_precision": [
+      {
+        "cap_id": "P1",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P2",
+        "judgment": "unsupported",
+        "reason": null
+      },
+      {
+        "cap_id": "P3",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P4",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P5",
+        "judgment": "unsupported",
+        "reason": null
+      },
+      {
+        "cap_id": "P6",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P7",
+        "judgment": "unsupported",
+        "reason": null
+      },
+      {
+        "cap_id": "P8",
+        "judgment": "unsupported",
+        "reason": null
+      },
+      {
+        "cap_id": "P9",
+        "judgment": "unsupported",
+        "reason": null
+      },
+      {
+        "cap_id": "P10",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P11",
+        "judgment": "unsupported",
+        "reason": null
+      },
+      {
+        "cap_id": "P12",
+        "judgment": "contradicted",
+        "reason": null
+      },
+      {
+        "cap_id": "P13",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P14",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P15",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P16",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P1",
+        "judgment": "unsupported",
+        "reason": null
+      },
+      {
+        "cap_id": "P2",
+        "judgment": "unsupported",
+        "reason": null
+      },
+      {
+        "cap_id": "P3",
+        "judgment": "unsupported",
+        "reason": null
+      },
+      {
+        "cap_id": "P4",
+        "judgment": "unsupported",
+        "reason": null
+      },
+      {
+        "cap_id": "P5",
+        "judgment": "unsupported",
+        "reason": null
+      },
+      {
+        "cap_id": "P6",
+        "judgment": "unsupported",
+        "reason": null
+      },
+      {
+        "cap_id": "P7",
+        "judgment": "unsupported",
+        "reason": null
+      },
+      {
+        "cap_id": "P8",
+        "judgment": "unsupported",
+        "reason": null
+      },
+      {
+        "cap_id": "P9",
+        "judgment": "unsupported",
+        "reason": null
+      },
+      {
+        "cap_id": "P10",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P11",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P12",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P13",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P14",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P15",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P16",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P1",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P2",
+        "judgment": "unsupported",
+        "reason": null
+      },
+      {
+        "cap_id": "P3",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P4",
+        "judgment": "partial",
+        "reason": null
+      }
+    ],
+    "metrics": {
+      "semantic_cap_precision": 0.375,
+      "semantic_cap_recall": 0.6571,
+      "semantic_cap_f1": 0.4775,
+      "semantic_cap_precision_supported_count": 8,
+      "semantic_cap_precision_partial_count": 11,
+      "semantic_cap_precision_denominator": 36,
+      "semantic_cap_recall_supported_count": 19,
+      "semantic_cap_recall_partial_count": 8,
+      "semantic_cap_recall_denominator": 35,
+      "semantic_cap_low_value_source_count": 0,
+      "semantic_cap_low_value_summary_count": 0,
+      "semantic_cap_missing_count": 6,
+      "semantic_cap_unsupported_count": 16,
+      "semantic_cap_contradicted_source_count": 2,
+      "semantic_cap_contradicted_summary_count": 1
+    }
+  },
+  "safety_judgment": null,
+  "section_judgment": {
+    "section_miscategorizations": [
+      {
+        "text": "The patient is a 43-year-old male with a history of diabetes, hypertension, and high cholesterol.",
+        "current_section": "Findings",
+        "expected_section": "History of Present Illness",
+        "severity": "minor",
+        "reason": "Past medical history and demographics are part of the patient's history rather than exam or test findings. While commonly documented in an exam section, this is organizationally better suited to the history section."
+      },
+      {
+        "text": "The patient reports checking his blood sugar approximately two to three times a week, with readings typically in the range of 120-140 mg/dL.",
+        "current_section": "Findings",
+        "expected_section": "History of Present Illness",
+        "severity": "major",
+        "reason": "This is patient-reported home monitoring behavior and symptom-related data, fitting the HPI definition. Placing it under Findings could mislead a reader into thinking these are objective clinic or lab results rather than self-reported values."
+      },
+      {
+        "text": "He also continues to have uncontrolled diabetes and hypertension with associated edema.",
+        "current_section": "Assessment",
+        "expected_section": "Assessment",
+        "severity": "minor",
+        "reason": "The narrative elsewhere (A1c 7.0%, BP 120/70, no clear thresholds) does not clearly support labeling diabetes and hypertension as 'uncontrolled.' While this is an assessment statement and belongs in this section, the wording may overstate the degree of control relative to the documented findings, which could mildly mislead interpretation."
+      }
+    ],
+    "summary_statistics": {
+      "section_appropriateness_score": 0.8,
+      "section_miscategorization_count": 3,
+      "major_section_miscategorization_count": 1
+    }
+  },
+  "pdsqi_judgment": {
+    "citation_applicable": 0,
+    "citation": 0,
+    "accurate": 3,
+    "thorough": 3,
+    "useful": 3,
+    "organized": 4,
+    "comprehensible": 5,
+    "succinct": 4,
+    "abstraction": 1,
+    "synthesized": 4,
+    "voice_summ": 0,
+    "voice_note": 0,
+    "pdsqi_core_mean": 3.7143
+  },
+  "llm_checklist_judgment": {
+    "content_preservation_core": 4,
+    "noise_suppression": 5,
+    "lay_expression_preservation": 4,
+    "state_update_fidelity": 3,
+    "temporality_preservation": 4,
+    "problem_evidence_linkage": 4,
+    "state_plan_separation": 3,
+    "section_organization_appropriateness": 4,
+    "overall_clinical_usability": 4,
+    "clinically_meaningful_omission": "Yes",
+    "clinically_concerning_hallucination": "Yes",
+    "checklist_a_mean": 4.3333,
+    "checklist_b_mean": 3.5,
+    "checklist_c_mean": 3.6667,
+    "llm_checklist_abc_mean": 3.875,
+    "llm_checklist_mean_no_usability": 3.875,
+    "llm_checklist_total_score": 35,
+    "llm_checklist_mean": 3.8889,
+    "llm_checklist_meaningful_omission_yes": 1,
+    "llm_checklist_concerning_hallucination_yes": 1
+  },
+  "metrics": {
+    "case_id": "D2N066",
+    "method": "cluster2sent",
+    "template": "sectioned",
+    "source_cap_count": 35,
+    "event_plan_count": null,
+    "summary_cap_count": 36,
+    "cap_matched_count": 16,
+    "cap_precision": 0.4444,
+    "cap_recall": 0.4571,
+    "cap_f1": 0.4507,
+    "unsupported_summary_cap_count": 20,
+    "missing_source_cap_count": 19,
+    "summary_runtime_seconds": null,
+    "summary_cap_runtime_seconds": 37.589,
+    "event_plan_runtime_seconds": null,
+    "rouge_l_f1_vs_reference": 0.2288,
+    "token_f1_vs_reference": 0.5141,
+    "gptf1_macro_f1": 0.0,
+    "nair_gpt_precision": 0.6585,
+    "nair_gpt_recall": 0.5581,
+    "nair_gpt_f1": 0.6042,
+    "semantic_cap_precision": 0.375,
+    "semantic_cap_recall": 0.6571,
+    "semantic_cap_f1": 0.4775,
+    "hallucination_count": null,
+    "major_hallucination_count": null,
+    "omission_count": null,
+    "major_omission_count": null,
+    "section_appropriateness_score": 0.8,
+    "section_miscategorization_count": 3,
+    "major_section_miscategorization_count": 1,
+    "pdsqi_core_mean": 3.7143,
+    "pdsqi_accurate": 3,
+    "pdsqi_thorough": 3,
+    "llm_checklist_total_score": 35,
+    "llm_checklist_mean": 3.8889,
+    "llm_checklist_mean_no_usability": 3.875,
+    "checklist_a_mean": 4.3333,
+    "checklist_b_mean": 3.5,
+    "checklist_c_mean": 3.6667,
+    "llm_checklist_abc_mean": 3.875,
+    "content_preservation_core": 4,
+    "noise_suppression": 5,
+    "lay_expression_preservation": 4,
+    "state_update_fidelity": 3,
+    "temporality_preservation": 4,
+    "problem_evidence_linkage": 4,
+    "state_plan_separation": 3,
+    "section_organization_appropriateness": 4,
+    "overall_clinical_usability": 4,
+    "llm_checklist_meaningful_omission_yes": 1,
+    "llm_checklist_concerning_hallucination_yes": 1,
+    "gptf1_active_problems_symptoms_precision": 0.0,
+    "gptf1_active_problems_symptoms_recall": 0.0,
+    "gptf1_active_problems_symptoms_f1": 0.0,
+    "gptf1_active_problems_symptoms_pred_count": 0,
+    "gptf1_active_problems_symptoms_ref_count": 6,
+    "gptf1_negated_findings_precision": 0.0,
+    "gptf1_negated_findings_recall": 0.0,
+    "gptf1_negated_findings_f1": 0.0,
+    "gptf1_negated_findings_pred_count": 0,
+    "gptf1_negated_findings_ref_count": 3,
+    "gptf1_uncertain_findings_precision": 0.0,
+    "gptf1_uncertain_findings_recall": 0.0,
+    "gptf1_uncertain_findings_f1": 0.0,
+    "gptf1_uncertain_findings_pred_count": 0,
+    "gptf1_uncertain_findings_ref_count": 0,
+    "gptf1_medication_treatment_precision": 0.0,
+    "gptf1_medication_treatment_recall": 0.0,
+    "gptf1_medication_treatment_f1": 0.0,
+    "gptf1_medication_treatment_pred_count": 0,
+    "gptf1_medication_treatment_ref_count": 2,
+    "gptf1_plan_followup_precision": 0.0,
+    "gptf1_plan_followup_recall": 0.0,
+    "gptf1_plan_followup_f1": 0.0,
+    "gptf1_plan_followup_pred_count": 0,
+    "gptf1_plan_followup_ref_count": 1,
+    "nair_pred_concept_count": 41,
+    "nair_ref_concept_count": 43,
+    "nair_precision_match_count": 27,
+    "nair_recall_match_count": 24,
+    "semantic_cap_precision_supported_count": 8,
+    "semantic_cap_precision_partial_count": 11,
+    "semantic_cap_precision_denominator": 36,
+    "semantic_cap_recall_supported_count": 19,
+    "semantic_cap_recall_partial_count": 8,
+    "semantic_cap_recall_denominator": 35,
+    "semantic_cap_low_value_source_count": 0,
+    "semantic_cap_low_value_summary_count": 0,
+    "semantic_cap_missing_count": 6,
+    "semantic_cap_unsupported_count": 16,
+    "semantic_cap_contradicted_source_count": 2,
+    "semantic_cap_contradicted_summary_count": 1,
+    "pdsqi_useful": 3,
+    "pdsqi_organized": 4,
+    "pdsqi_comprehensible": 5,
+    "pdsqi_succinct": 4,
+    "pdsqi_synthesized": 4
+  }
+}

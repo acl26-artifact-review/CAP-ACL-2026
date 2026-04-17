@@ -1,0 +1,84 @@
+Case: D2N095
+
+Problem List and Visit State Tracking
+
+Problem List
+- low back pain | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T26,T3,T38,T5
+  Summary: The patient reports low back pain.
+  ClusterId: CL1
+  TemporalProfile: current
+  Updates:
+  - CAP1: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T3,T38 :: The patient reports low back pain.
+  - CAP3: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T5 :: The patient reports back pain.
+  - CAP4: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T26 :: The patient endorses back pain.
+- muscle spasm | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T5
+  Summary: The patient describes a feeling of a spasm.
+  ClusterId: CL2
+  TemporalProfile: current
+  Updates:
+  - CAP2: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T5 :: The patient describes a feeling of a spasm.
+- walking duration | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T5
+  Summary: The patient walks approximately 30 minutes to an hour per day.
+  ClusterId: CL3
+  TemporalProfile: recent
+  Updates:
+  - CAP13: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=recent turns=T5 :: The patient walks approximately 30 minutes to an hour per day.
+  - CAP14: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=recent turns=T5 :: The patient reports increased walking.
+- nasal congestion | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T30
+  Summary: The patient reports nasal congestion.
+  ClusterId: CL8
+  TemporalProfile: current
+  Updates:
+  - CAP5: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T30 :: The patient reports nasal congestion.
+
+Medication Tracking
+- [MedicationState] ibuprofen | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T11
+  Summary: The patient is taking ibuprofen.
+  ClusterId: CL4
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient is taking ibuprofen. (T11)
+  Updates:
+  - CAP10: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T11 :: The patient is taking ibuprofen.
+- [MedicationState] heat | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T11
+  Summary: The patient is applying heat.
+  ClusterId: CL5
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient is applying heat. (T11)
+  Updates:
+  - CAP11: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T11 :: The patient is applying heat.
+- [MedicationState] lisinopril | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T27
+  Summary: The patient is taking lisinopril.
+  ClusterId: CL7
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient is taking lisinopril. (T27)
+  Updates:
+  - CAP12: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T27 :: The patient is taking lisinopril.
+- [MedicationChange] meloxicam | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T39
+  Summary: The doctor prescribes meloxicam 15 milligrams once a day.
+  ClusterId: CL9
+  TemporalProfile: future
+  PlannedChanges:
+  - The doctor prescribes meloxicam 15 milligrams once a day. (T39)
+  Updates:
+  - CAP8: content_source=doctor modality=plan verification_status=unconfirmed clinical_status=planned temporality=future turns=T39 :: The doctor prescribes meloxicam 15 milligrams once a day.
+- [MedicationChange] lisinopril | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T45
+  Summary: The doctor prescribes lisinopril 10 milligrams a day.
+  ClusterId: CL11
+  TemporalProfile: future
+  PlannedChanges:
+  - The doctor prescribes lisinopril 10 milligrams a day. (T45)
+  Updates:
+  - CAP9: content_source=doctor modality=plan verification_status=unconfirmed clinical_status=planned temporality=future turns=T45 :: The doctor prescribes lisinopril 10 milligrams a day.
+
+Other Structured States
+- [TestResult] blood pressure | verification_status=confirmed | clinical_status=stable | modalities=test_result | speakers=patient | evidence=T24
+  Summary: The patient's home blood pressure readings have been good.
+  ClusterId: CL6
+  TemporalProfile: recent
+- [Plan] order lisinopril | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T45
+  Summary: The doctor orders lisinopril.
+  ClusterId: CL10
+  TemporalProfile: future

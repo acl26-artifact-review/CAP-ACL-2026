@@ -1,0 +1,37 @@
+{
+  "section_miscategorizations": [
+    {
+      "text": "The patient reports edema in the lower extremities.",
+      "current_section": "O",
+      "expected_section": "S",
+      "severity": "major",
+      "reason": "This is a symptom reported by the patient, not an observed exam finding, so it belongs in the Subjective section."
+    },
+    {
+      "text": "The patient has diabetes.",
+      "current_section": "A",
+      "expected_section": "O",
+      "severity": "minor",
+      "reason": "This is a known, objective diagnosis/problem rather than an interpretive assessment in this context; it could reasonably be listed among objective medical history, though its presence in Assessment is not highly misleading."
+    },
+    {
+      "text": "The patient has hyperglycemia.",
+      "current_section": "A",
+      "expected_section": "O",
+      "severity": "minor",
+      "reason": "This reads as a factual condition (elevated glucose) rather than a synthesized diagnostic impression; it could fit better under Objective data, though its placement in Assessment is acceptable clinically."
+    },
+    {
+      "text": "The patient wants to continue meditation.",
+      "current_section": "P",
+      "expected_section": "S",
+      "severity": "minor",
+      "reason": "This is the patient's stated preference/behavior, not a clinician order or management action, so it fits better in Subjective; its presence in Plan is not highly misleading."
+    }
+  ],
+  "summary_statistics": {
+    "section_appropriateness_score": 0.7,
+    "section_miscategorization_count": 4,
+    "major_section_miscategorization_count": 1
+  }
+}

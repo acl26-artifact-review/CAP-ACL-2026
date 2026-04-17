@@ -1,0 +1,151 @@
+Case: D2N001
+
+Problem List and Visit State Tracking
+
+Problem List
+- hiking | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T5
+  Summary: The patient has been doing a lot of hiking.
+  ClusterId: CL1
+  TemporalProfile: current
+  Updates:
+  - CAP4: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T5 :: The patient has been doing a lot of hiking.
+- travel | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T5
+  Summary: The patient has been traveling a lot recently.
+  ClusterId: CL2
+  TemporalProfile: current
+  Updates:
+  - CAP6: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T5 :: The patient has been traveling a lot recently.
+- congestive heart failure | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T7
+  Summary: The patient has a history of congestive heart failure.
+  ClusterId: CL3
+  TemporalProfile: current
+  Updates:
+  - CAP3: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T7 :: The patient has a history of congestive heart failure.
+- chest pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T15,T40,T7
+  Summary: The patient reports chest pain.
+  ClusterId: CL4
+  TemporalProfile: current
+  Updates:
+  - CAP5: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T7 :: The patient reports pain in the left hand.
+  - CAP18: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T15 :: The patient reports chest pain.
+  - CAP20: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T40 :: The patient reports pain.
+- depression | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T15,T7
+  Summary: The patient has a history of depression.
+  ClusterId: CL5
+  TemporalProfile: current
+  Updates:
+  - CAP10: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T7 :: The patient has a history of depression.
+  - CAP19: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T15 :: The patient has depression.
+- hypertension | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T7
+  Summary: The patient has a history of hypertension.
+  ClusterId: CL6
+  TemporalProfile: current
+  Updates:
+  - CAP11: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T7 :: The patient has a history of hypertension.
+- low sodium diet | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T9
+  Summary: The patient is watching a low sodium diet.
+  ClusterId: CL7
+  TemporalProfile: current
+  Updates:
+  - CAP7: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T9 :: The patient is watching a low sodium diet.
+- tater tots | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T9
+  Summary: The patient has resisted tater tots.
+  ClusterId: CL8
+  TemporalProfile: current
+  Updates:
+  - CAP12: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T9 :: The patient has resisted tater tots.
+- soft pretzels | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T9
+  Summary: The patient has resisted soft pretzels.
+  ClusterId: CL9
+  TemporalProfile: current
+  Updates:
+  - CAP13: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T9 :: The patient has resisted soft pretzels.
+- salty foods | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T9
+  Summary: The patient has resisted salty foods.
+  ClusterId: CL10
+  TemporalProfile: current
+  Updates:
+  - CAP14: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T9 :: The patient has resisted salty foods.
+- shortness of breath | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T15
+  Summary: The patient reports shortness of breath.
+  ClusterId: CL11
+  TemporalProfile: current
+  Updates:
+  - CAP15: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T15 :: The patient reports shortness of breath.
+- high blood pressure | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T19
+  Summary: The patient reports difficulty remembering to take blood pressure medication.
+  ClusterId: CL12
+  TemporalProfile: current
+  Updates:
+  - CAP2: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T19 :: The patient reports difficulty remembering to take blood pressure medication.
+  - CAP16: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T19 :: The patient has high blood pressure.
+- stress | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T19
+  Summary: The patient's blood pressure increases with increased stress.
+  ClusterId: CL13
+  TemporalProfile: current
+  Updates:
+  - CAP8: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T19 :: The patient's blood pressure increases with increased stress.
+- elevated blood pressure | verification_status=confirmed | clinical_status=active | modalities=assessment | speakers=doctor | evidence=T19
+  Summary: The doctor finds the patient's blood pressure elevated.
+  ClusterId: CL14
+  TemporalProfile: current
+  Updates:
+  - CAP9: content_source=doctor modality=assessment verification_status=confirmed clinical_status=active temporality=current turns=T19 :: The doctor finds the patient's blood pressure elevated.
+- responsibility | verification_status=unconfirmed | clinical_status=active | modalities=assessment | speakers=doctor | evidence=T21
+  Summary: The doctor believes the patient's responsibility is contributing to the stress.
+  ClusterId: CL16
+  TemporalProfile: current
+  Updates:
+  - CAP1: content_source=doctor modality=assessment verification_status=unconfirmed clinical_status=active temporality=current turns=T21 :: The doctor believes the patient's responsibility is contributing to the stress.
+- nasal congestion | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T21
+  Summary: The patient is endorsing nasal congestion.
+  ClusterId: CL17
+  TemporalProfile: current
+  Updates:
+  - CAP17: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T21 :: The patient is endorsing nasal congestion.
+
+Medication Tracking
+- [MedicationState] blood pressure medication | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T19
+  Summary: The patient is taking blood pressure medication.
+  ClusterId: CL15
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient is taking blood pressure medication. (T19)
+  Updates:
+  - CAP26: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T19 :: The patient is taking blood pressure medication.
+- [MedicationChange] lisinopril | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T35,T39
+  Summary: The doctor wants the patient to take lisinopril as directed.
+  ClusterId: CL20
+  TemporalProfile: current, future
+  PlannedChanges:
+  - The patient will continue on lisinopril. (T35)
+  - The doctor wants the patient to take lisinopril as directed. (T39)
+  Updates:
+  - CAP27: content_source=doctor modality=plan verification_status=confirmed clinical_status=planned temporality=current turns=T35 :: The patient will continue on lisinopril.
+  - CAP25: content_source=doctor modality=plan verification_status=unconfirmed clinical_status=planned temporality=future turns=T39 :: The doctor wants the patient to take lisinopril as directed.
+- [MedicationChange] lasix | verification_status=confirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T35
+  Summary: The patient will start lasix.
+  ClusterId: CL21
+  TemporalProfile: current
+  PlannedChanges:
+  - The patient will start lasix. (T35)
+  Updates:
+  - CAP28: content_source=doctor modality=plan verification_status=confirmed clinical_status=planned temporality=current turns=T35 :: The patient will start lasix.
+
+Other Structured States
+- [TestResult] echocardiogram | verification_status=confirmed | clinical_status=historical | modalities=test_result | speakers=dragon | evidence=T32
+  Summary: The echocardiogram showed that the patient has low-ish pumping function of the heart at about 45%.
+  ClusterId: CL18
+  TemporalProfile: last year
+- [TestResult] lipid panel | verification_status=confirmed | clinical_status=historical | modalities=test_result | speakers=dragon | evidence=T33
+  Summary: The lipid panel from last year showed that the patient's cholesterol was slightly high.
+  ClusterId: CL19
+  TemporalProfile: last year
+- [Plan] blood pressure monitoring | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T39
+  Summary: The doctor wants the patient to record their blood pressures.
+  ClusterId: CL22
+  TemporalProfile: future
+- [Plan] mammogram | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T39
+  Summary: The doctor wants the patient to schedule a mammogram.
+  ClusterId: CL23
+  TemporalProfile: future

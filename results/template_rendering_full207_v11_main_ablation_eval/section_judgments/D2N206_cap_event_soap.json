@@ -1,0 +1,23 @@
+{
+  "section_miscategorizations": [
+    {
+      "text": "The patient reports using an ibuprofen.",
+      "current_section": "O",
+      "expected_section": "S",
+      "severity": "major",
+      "reason": "This is a patient-reported current medication use and belongs in the Subjective section, not in Objective findings."
+    },
+    {
+      "text": "Rescribe ibuprofen for pain management.",
+      "current_section": "P",
+      "expected_section": "P",
+      "severity": "minor",
+      "reason": "The intent is a treatment change/order (appropriate for Plan), but the wording is unclear ('Rescribe') and could be misread as simply documenting existing use; clearer phrasing as a new or continued prescription would better distinguish it from Subjective medication history."
+    }
+  ],
+  "summary_statistics": {
+    "section_appropriateness_score": 0.9,
+    "section_miscategorization_count": 2,
+    "major_section_miscategorization_count": 1
+  }
+}

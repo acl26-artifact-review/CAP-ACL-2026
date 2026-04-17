@@ -1,0 +1,87 @@
+Case: D2N104
+
+Problem List and Visit State Tracking
+
+Problem List
+- joint pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T25,T27,T5,T7
+  Summary: The patient reports pain in their feet.
+  ClusterId: CL1
+  TemporalProfile: current
+  Updates:
+  - CAP1: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T5 :: The patient reports pain in the left hand.
+  - CAP2: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T7 :: The patient reports pain in their feet.
+  - CAP5: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T25 :: The patient reports joint pain.
+  - CAP7: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T27 :: The patient reports pain.
+- psoriatic arthritis | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T9
+  Summary: The patient has ongoing management of psoriatic arthritis.
+  ClusterId: CL4
+  TemporalProfile: ongoing
+  Updates:
+  - CAP18: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=ongoing turns=T9 :: The patient has ongoing management of psoriatic arthritis.
+- bruising | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T18
+  Summary: The patient reports experiencing bruising.
+  ClusterId: CL5
+  TemporalProfile: current
+  Updates:
+  - CAP3: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T18 :: The patient reports experiencing bruising.
+- prednisone | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T18
+  Summary: The patient is taking prednisone.
+  ClusterId: CL6
+  TemporalProfile: current
+  Updates:
+  - CAP4: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T18 :: The patient is taking prednisone.
+- nail ridges | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T27
+  Summary: The patient reports nail ridges.
+  ClusterId: CL9
+  TemporalProfile: current
+  Updates:
+  - CAP6: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T27 :: The patient reports nail ridges.
+- psoriasis | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T27,T29
+  Summary: The patient has psoriasis.
+  ClusterId: CL10
+  TemporalProfile: current, long time
+  Updates:
+  - CAP8: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T27 :: The patient has psoriasis.
+  - CAP17: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=long time turns=T29 :: The patient's nail ridges have been present for a long time.
+
+Medication Tracking
+- [MedicationState] prednisone | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T9
+  Summary: The patient is currently taking prednisone.
+  ClusterId: CL2
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient is currently taking prednisone. (T9)
+  Updates:
+  - CAP12: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T9 :: The patient is currently taking prednisone.
+- [MedicationState] methotrexate | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=doctor,patient | evidence=T27,T30,T9
+  Summary: The patient is taking methotrexate.
+  ClusterId: CL3
+  TemporalProfile: current, future
+  CurrentRegimens:
+  - The patient is taking methotrexate. (T9)
+  - Methotrexate is being taken. (T27)
+  - Methotrexate will be continued. (T30)
+  Updates:
+  - CAP13: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T9 :: The patient is taking methotrexate.
+  - CAP14: content_source=doctor modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T27 :: Methotrexate is being taken.
+  - CAP16: content_source=doctor modality=interview verification_status=confirmed clinical_status=active temporality=future turns=T30 :: Methotrexate will be continued.
+- [MedicationChange] prednisone | verification_status=confirmed | clinical_status=planned | modalities=interview,plan | speakers=doctor | evidence=T18,T30
+  Summary: The doctor will discontinue prednisone.
+  ClusterId: CL7
+  TemporalProfile: future
+  PlannedChanges:
+  - The doctor will discontinue prednisone. (T18)
+  - Prednisone will be stopped. (T30)
+  Updates:
+  - CAP10: content_source=doctor modality=plan verification_status=unconfirmed clinical_status=planned temporality=future turns=T18 :: The doctor will discontinue prednisone.
+  - CAP15: content_source=doctor modality=interview verification_status=confirmed clinical_status=planned temporality=future turns=T30 :: Prednisone will be stopped.
+
+Other Structured States
+- [FollowUp] blood draw | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T18
+  Summary: The doctor will schedule a blood draw.
+  ClusterId: CL8
+  TemporalProfile: future
+- [Plan] blood work | verification_status=unconfirmed | clinical_status=planned | modalities=interview | speakers=doctor | evidence=T30
+  Summary: An appointment for blood work is to be made.
+  ClusterId: CL11
+  TemporalProfile: future

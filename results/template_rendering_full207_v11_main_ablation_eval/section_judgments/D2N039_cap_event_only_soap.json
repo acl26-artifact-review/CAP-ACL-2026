@@ -1,0 +1,30 @@
+{
+  "section_miscategorizations": [
+    {
+      "text": "The patient's blood pressure was as high as 170 over 90.",
+      "current_section": "O",
+      "expected_section": "S",
+      "severity": "major",
+      "reason": "This blood pressure value is clearly described as a home measurement reported by the patient, not a clinician-measured vital in the visit, so it belongs in the subjective history section."
+    },
+    {
+      "text": "The patient is taking carvedilol 25 milligrams twice a day.",
+      "current_section": "O",
+      "expected_section": "S",
+      "severity": "major",
+      "reason": "This is the patient's current medication regimen, not a new order or in-clinic observation, so it should be documented as subjective medication history."
+    },
+    {
+      "text": "The patient is taking norvasc 10 milligrams daily.",
+      "current_section": "O",
+      "expected_section": "S",
+      "severity": "major",
+      "reason": "This is an existing medication the patient is already taking, which per instructions belongs in the subjective section unless framed as a treatment change or order."
+    }
+  ],
+  "summary_statistics": {
+    "section_appropriateness_score": 0.6,
+    "section_miscategorization_count": 3,
+    "major_section_miscategorization_count": 3
+  }
+}

@@ -1,0 +1,140 @@
+Case: D2N020
+
+Problem List and Visit State Tracking
+
+Problem List
+- lightheadedness | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T7
+  Summary: The patient reports feeling lightheaded.
+  ClusterId: CL1
+  TemporalProfile: current
+  Updates:
+  - CAP8: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T7 :: The patient reports feeling lightheaded.
+- pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T25,T9
+  Summary: The patient reports pain in the left hand.
+  ClusterId: CL2
+  TemporalProfile: current
+  Updates:
+  - CAP2: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T9 :: The patient reports pain in the left hand.
+  - CAP16: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T25 :: The patient reports pain.
+  - CAP17: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T25 :: The patient experiences pain.
+- knife injury | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T9
+  Summary: The patient reports a slight nick from a knife while chopping onions.
+  ClusterId: CL3
+  TemporalProfile: past
+  Updates:
+  - CAP25: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=past turns=T9 :: The patient reports a slight nick from a knife while chopping onions.
+- blood in stools | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T10
+  Summary: The patient denies blood in their stools.
+  ClusterId: CL4
+  TemporalProfile: past
+  Updates:
+  - CAP5: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=past turns=T10 :: The patient denies blood in their stools.
+- decreased appetite | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T15
+  Summary: The patient reports decreased appetite.
+  ClusterId: CL5
+  TemporalProfile: current
+  Updates:
+  - CAP9: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T15 :: The patient reports decreased appetite.
+- weight loss | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T15
+  Summary: The patient denies weight loss.
+  ClusterId: CL6
+  TemporalProfile: past
+  Updates:
+  - CAP10: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=past turns=T15 :: The patient denies weight loss.
+- fever | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T16
+  Summary: The patient denies fever.
+  ClusterId: CL7
+  TemporalProfile: past
+  Updates:
+  - CAP14: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=past turns=T16 :: The patient denies fever.
+- chills | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T16
+  Summary: The patient denies chills.
+  ClusterId: CL8
+  TemporalProfile: past
+  Updates:
+  - CAP15: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=past turns=T16 :: The patient denies chills.
+- nausea | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T19,T21
+  Summary: The patient experiences nausea at times.
+  ClusterId: CL9
+  TemporalProfile: current
+  Updates:
+  - CAP13: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T19 :: The patient reports nausea.
+  - CAP6: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T21 :: The patient experiences nausea at times.
+- knee replacement | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T21
+  Summary: The patient had a knee replacement last year.
+  ClusterId: CL10
+  TemporalProfile: past
+  Updates:
+  - CAP3: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=past turns=T21 :: The patient had a knee replacement last year.
+- lung cancer | verification_status=confirmed | clinical_status=resolved | modalities=interview | speakers=patient | evidence=T27
+  Summary: The patient had a possible lung cancer scare.
+  ClusterId: CL11
+  TemporalProfile: past
+  Updates:
+  - CAP4: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=past turns=T27 :: The patient had a possible lung cancer scare.
+  - CAP11: content_source=patient modality=interview verification_status=confirmed clinical_status=resolved temporality=past turns=T27 :: The lung cancer was benign.
+- tenderness | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T31
+  Summary: The patient has tenderness to the right lower quadrant.
+  ClusterId: CL12
+  TemporalProfile: current
+  Updates:
+  - CAP1: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T31 :: The patient has tenderness to the right lower quadrant.
+- anemia | verification_status=unconfirmed | clinical_status=planned | modalities=interview,unknown | speakers=doctor,patient | evidence=T36
+  Summary: The patient reports having newfound anemia.
+  ClusterId: CL14
+  TemporalProfile: current, future
+  Updates:
+  - CAP7: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T36 :: The patient reports having newfound anemia.
+  - CAP18: content_source=doctor modality=unknown verification_status=unconfirmed clinical_status=planned temporality=future turns=T36 :: The doctor suspects anemia.
+- hand pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T45
+  Summary: The patient reports hand pain.
+  ClusterId: CL20
+  TemporalProfile: current
+  Updates:
+  - CAP12: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T45 :: The patient reports hand pain.
+
+Medication Tracking
+- [MedicationChange] protonix | verification_status=confirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T38,T41
+  Summary: The doctor orders protonix 40 milligrams once a day.
+  ClusterId: CL15
+  TemporalProfile: current, future
+  PlannedChanges:
+  - The doctor plans to prescribe protonix. (T38)
+  - The doctor orders protonix 40 milligrams once a day. (T41)
+  Updates:
+  - CAP24: content_source=doctor modality=plan verification_status=unconfirmed clinical_status=planned temporality=future turns=T38 :: The doctor plans to prescribe protonix.
+  - CAP23: content_source=doctor modality=plan verification_status=confirmed clinical_status=planned temporality=current turns=T41 :: The doctor orders protonix 40 milligrams once a day.
+- [MedicationChange] cbc | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T48
+  Summary: The nurse will finalize the note.
+  ClusterId: CL22
+  TemporalProfile: soon
+  PlannedChanges:
+  - The nurse will finalize the note. (T48)
+  Updates:
+  - CAP20: content_source=doctor modality=plan verification_status=unconfirmed clinical_status=planned temporality=soon turns=T48 :: The nurse will finalize the note.
+
+Other Structured States
+- [TestResult] hemoglobin | verification_status=confirmed | clinical_status=active | modalities=test_result | speakers=doctor | evidence=T34
+  Summary: The patient's hemoglobin is 8.2.
+  ClusterId: CL13
+  TemporalProfile: current
+- [FollowUp] follow up | verification_status=confirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T41
+  Summary: The doctor schedules a follow-up appointment in a couple of weeks.
+  ClusterId: CL16
+  TemporalProfile: current
+- [Plan] caffeine | verification_status=confirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T41
+  Summary: The doctor advises the patient to cut down on caffeine intake.
+  ClusterId: CL17
+  TemporalProfile: current
+- [Plan] ibuprofen | verification_status=confirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T41
+  Summary: The doctor advises the patient to avoid taking ibuprofen.
+  ClusterId: CL18
+  TemporalProfile: current
+- [Plan] alcohol intake | verification_status=confirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T41
+  Summary: The doctor advises the patient to reduce alcohol intake.
+  ClusterId: CL19
+  TemporalProfile: current
+- [Plan] complete blood count | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T48
+  Summary: A complete blood count will be ordered.
+  ClusterId: CL21
+  TemporalProfile: soon

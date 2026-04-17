@@ -1,0 +1,44 @@
+{
+  "section_miscategorizations": [
+    {
+      "text": "The patient reports pain in the right knee and left hand.",
+      "current_section": "O",
+      "expected_section": "S",
+      "severity": "major",
+      "reason": "This is a patient-reported symptom and belongs in the Subjective section, not in Objective findings."
+    },
+    {
+      "text": "The patient's blood pressure is approximately 120/80 mmHg.",
+      "current_section": "O",
+      "expected_section": "O",
+      "severity": "minor",
+      "reason": "The use of 'approximately' suggests an estimate rather than a directly measured vital sign, but it is still functioning as an objective vital and is acceptable in O."
+    },
+    {
+      "text": "The patient took Aleve twice a day.",
+      "current_section": "S",
+      "expected_section": "S",
+      "severity": "minor",
+      "reason": "This is correctly placed as a patient-reported current/prior medication use; no change is needed."
+    },
+    {
+      "text": "The patient is taking lisinopril 20 milligrams a day.",
+      "current_section": "P",
+      "expected_section": "S",
+      "severity": "major",
+      "reason": "This describes an existing medication regimen rather than a new order or change; it should be documented as current medication state in the Subjective section."
+    },
+    {
+      "text": "The patient's high blood pressure is being managed with medication.",
+      "current_section": "A",
+      "expected_section": "A",
+      "severity": "minor",
+      "reason": "This is an assessment statement about an existing condition and its management status; it is acceptable in the Assessment section."
+    }
+  ],
+  "summary_statistics": {
+    "section_appropriateness_score": 0.7,
+    "section_miscategorization_count": 5,
+    "major_section_miscategorization_count": 2
+  }
+}

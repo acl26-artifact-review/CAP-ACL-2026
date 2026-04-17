@@ -1,0 +1,113 @@
+Case: D2N183
+
+Problem List and Visit State Tracking
+
+Problem List
+- acne | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T6
+  Summary: The patient reports acne.
+  ClusterId: CL1
+  TemporalProfile: current
+  Updates:
+  - CAP4: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T6 :: The patient reports acne.
+- redness | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T6
+  Summary: The patient reports redness.
+  ClusterId: CL2
+  TemporalProfile: current
+  Updates:
+  - CAP5: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T6 :: The patient reports redness.
+- dryness | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T6
+  Summary: The patient reports dryness.
+  ClusterId: CL3
+  TemporalProfile: current
+  Updates:
+  - CAP6: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T6 :: The patient reports dryness.
+- irritation | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T6
+  Summary: The patient reports irritation.
+  ClusterId: CL4
+  TemporalProfile: current
+  Updates:
+  - CAP7: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T6 :: The patient reports irritation.
+- dry skin | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T10
+  Summary: The patient reports dry skin.
+  ClusterId: CL8
+  TemporalProfile: current
+  Updates:
+  - CAP2: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T10 :: The patient reports dry skin.
+- chest pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T18
+  Summary: The patient reports chest pain.
+  ClusterId: CL9
+  TemporalProfile: current
+  Updates:
+  - CAP3: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T18 :: The patient reports chest pain.
+- left hand pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T28
+  Summary: The patient reports pain in the left hand.
+  ClusterId: CL11
+  TemporalProfile: current
+  Updates:
+  - CAP1: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T28 :: The patient reports pain in the left hand.
+
+Medication Tracking
+- [MedicationState] benzoyl peroxide wash | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T6
+  Summary: The patient uses benzoyl peroxide wash.
+  ClusterId: CL5
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient uses benzoyl peroxide wash. (T6)
+  Updates:
+  - CAP14: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T6 :: The patient uses benzoyl peroxide wash.
+- [MedicationState] sunscreen moisture stuff | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T8
+  Summary: The patient uses sunscreen moisture stuff.
+  ClusterId: CL6
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient uses sunscreen moisture stuff. (T8)
+  Updates:
+  - CAP15: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T8 :: The patient uses sunscreen moisture stuff.
+- [MedicationState] tretinoin cream | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T8
+  Summary: The patient uses tretinoin cream.
+  ClusterId: CL7
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient uses tretinoin cream. (T8)
+  Updates:
+  - CAP16: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T8 :: The patient uses tretinoin cream.
+- [MedicationChange] benzoyl peroxide base | verification_status=confirmed | clinical_status=planned | modalities=assessment | speakers=doctor | evidence=T23
+  Summary: The doctor suggests a 5-10% benzoyl peroxide base if the little bit bothers the patient.
+  ClusterId: CL10
+  TemporalProfile: future
+  PlannedChanges:
+  - The doctor suggests a 5-10% benzoyl peroxide base if the little bit bothers the patient. (T23)
+  Updates:
+  - CAP9: content_source=doctor modality=assessment verification_status=confirmed clinical_status=planned temporality=future turns=T23 :: The doctor suggests a 5-10% benzoyl peroxide base if the little bit bothers the patient.
+- [MedicationChange] panoxyl 10% | verification_status=confirmed | clinical_status=planned | modalities=assessment,plan | speakers=doctor | evidence=T29
+  Summary: The doctor recommends PanOxyl 10% for the chest and back.
+  ClusterId: CL13
+  TemporalProfile: future
+  PlannedChanges:
+  - A PanOxyl 10% foaming wash will be sent to the patient. (T29)
+  - The doctor recommends PanOxyl 10% for the chest and back. (T29)
+  Updates:
+  - CAP12: content_source=doctor modality=plan verification_status=confirmed clinical_status=planned temporality=future turns=T29 :: A PanOxyl 10% foaming wash will be sent to the patient.
+  - CAP13: content_source=doctor modality=assessment verification_status=confirmed clinical_status=planned temporality=future turns=T29 :: The doctor recommends PanOxyl 10% for the chest and back.
+- [MedicationChange] tretinoin | verification_status=confirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T37
+  Summary: A tretinoin cream prescription with three refills will be sent to the patient.
+  ClusterId: CL14
+  TemporalProfile: future
+  PlannedChanges:
+  - A tretinoin cream prescription with three refills will be sent to the patient. (T37)
+  Updates:
+  - CAP10: content_source=doctor modality=plan verification_status=confirmed clinical_status=planned temporality=future turns=T37 :: A tretinoin cream prescription with three refills will be sent to the patient.
+- [MedicationChange] clindamycin | verification_status=confirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T37
+  Summary: A clindamycin prescription with 11 refills will be sent to the patient.
+  ClusterId: CL15
+  TemporalProfile: future
+  PlannedChanges:
+  - A clindamycin prescription with 11 refills will be sent to the patient. (T37)
+  Updates:
+  - CAP11: content_source=doctor modality=plan verification_status=confirmed clinical_status=planned temporality=future turns=T37 :: A clindamycin prescription with 11 refills will be sent to the patient.
+
+Other Structured States
+- [Plan] panoxyl 10% | verification_status=confirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T29
+  Summary: The patient should use PanOxyl 10% foaming wash daily in the shower.
+  ClusterId: CL12
+  TemporalProfile: daily

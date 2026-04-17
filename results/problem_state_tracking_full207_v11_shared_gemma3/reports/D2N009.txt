@@ -1,0 +1,83 @@
+Case: D2N009
+
+Problem List and Visit State Tracking
+
+Problem List
+- discectomy | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T16
+  Summary: The patient has a history of discectomy.
+  ClusterId: CL1
+  TemporalProfile: past
+  Updates:
+  - CAP17: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=past turns=T16 :: The patient has a history of discectomy.
+- back pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T18,T23,T24,T34,T38
+  Summary: The patient reports pain to palpation of the right lumbar spine.
+  ClusterId: CL2
+  TemporalProfile: current
+  Updates:
+  - CAP8: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T18 :: The patient reports pain.
+  - CAP10: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T18 :: The patient has pain.
+  - CAP5: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T23 :: The patient reports pain in their back.
+  - CAP7: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T23 :: The patient has back pain.
+  - CAP6: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T24 :: The patient reports pain when bending over.
+  - CAP4: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T34 :: The patient reports pain in the left hand.
+  - CAP1: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T38 :: The patient reports pain to palpation of the right lumbar spine.
+- numbness | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T20
+  Summary: The patient reports numbness.
+  ClusterId: CL3
+  TemporalProfile: current
+  Updates:
+  - CAP9: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T20 :: The patient reports numbness.
+- decreased flexion and extension | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T35
+  Summary: The patient reports decreased flexion and extension of the back.
+  ClusterId: CL6
+  TemporalProfile: current
+  Updates:
+  - CAP2: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T35 :: The patient reports decreased flexion and extension of the back.
+- positive straight leg raise | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T35
+  Summary: The patient reports a positive straight leg raise.
+  ClusterId: CL7
+  TemporalProfile: current
+  Updates:
+  - CAP3: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T35 :: The patient reports a positive straight leg raise.
+
+Medication Tracking
+- [MedicationState] tylenol | verification_status=confirmed | clinical_status=active | modalities=interview,plan | speakers=clinician,patient | evidence=T20,T53
+  Summary: The patient should continue to take tylenol.
+  ClusterId: CL4
+  TemporalProfile: continue to take, current
+  CurrentRegimens:
+  - The patient tried taking tylenol. (T20)
+  - The patient should continue to take tylenol. (T53)
+  Updates:
+  - CAP16: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T20 :: The patient tried taking tylenol.
+  - CAP12: content_source=clinician modality=plan verification_status=confirmed clinical_status=active temporality=continue to take turns=T53 :: The patient should continue to take tylenol.
+- [MedicationState] ibuprofen | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T20
+  Summary: The patient has been taking ibuprofen.
+  ClusterId: CL5
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient has been taking ibuprofen. (T20)
+  Updates:
+  - CAP15: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T20 :: The patient has been taking ibuprofen.
+- [MedicationState] ultram | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=clinician | evidence=T51
+  Summary: The doctor prescribed ultram 50 milligrams every four hours as needed.
+  ClusterId: CL9
+  TemporalProfile: every four hours as needed
+  CurrentRegimens:
+  - The doctor prescribed ultram 50 milligrams every four hours as needed. (T51)
+  Updates:
+  - CAP13: content_source=clinician modality=interview verification_status=confirmed clinical_status=active temporality=every four hours as needed turns=T51 :: The doctor prescribed ultram 50 milligrams every four hours as needed.
+- [MedicationState] meloxicam | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=clinician | evidence=T51
+  Summary: The doctor prescribed meloxicam 15 milligrams once a day.
+  ClusterId: CL10
+  TemporalProfile: once a day
+  CurrentRegimens:
+  - The doctor prescribed meloxicam 15 milligrams once a day. (T51)
+  Updates:
+  - CAP14: content_source=clinician modality=interview verification_status=confirmed clinical_status=active temporality=once a day turns=T51 :: The doctor prescribed meloxicam 15 milligrams once a day.
+
+Other Structured States
+- [Plan] physical therapy | verification_status=confirmed | clinical_status=planned | modalities=plan | speakers=clinician | evidence=T49
+  Summary: The doctor will refer the patient to physical therapy after the MRI results are back.
+  ClusterId: CL8
+  TemporalProfile: after mri results

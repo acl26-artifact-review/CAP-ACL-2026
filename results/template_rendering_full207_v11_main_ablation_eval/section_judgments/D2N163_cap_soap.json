@@ -1,0 +1,44 @@
+{
+  "section_miscategorizations": [
+    {
+      "text": "The patient's cholesterol was borderline last year.",
+      "current_section": "O",
+      "expected_section": "S",
+      "severity": "major",
+      "reason": "This is historical information rather than a current observed finding; without context that this is a reviewed lab result from today, it reads more like past history and would more appropriately be documented in the subjective/history portion."
+    },
+    {
+      "text": "The patient's grandfather and grandmother reported having hypercholesterolemia when young.",
+      "current_section": "A",
+      "expected_section": "S",
+      "severity": "major",
+      "reason": "This is family history information, which belongs in the subjective/history section rather than in the assessment/problem synthesis."
+    },
+    {
+      "text": "The patient's grandfather had a heart attack.",
+      "current_section": "A",
+      "expected_section": "S",
+      "severity": "major",
+      "reason": "This is family history of cardiovascular disease, which should be documented in the subjective/history section, not in the assessment."
+    },
+    {
+      "text": "The patient previously felt healthy.",
+      "current_section": "A",
+      "expected_section": "S",
+      "severity": "major",
+      "reason": "This is a patient-reported historical symptom status and belongs in the subjective section, not in the clinician assessment."
+    },
+    {
+      "text": "The doctor will take a look at the patient.",
+      "current_section": "P",
+      "expected_section": "O",
+      "severity": "minor",
+      "reason": "This refers to performing an examination, which is part of objective evaluation; however, it is phrased as a future action, so it could be considered a plan. The wording is ambiguous, making this a minor organizational issue."
+    }
+  ],
+  "summary_statistics": {
+    "section_appropriateness_score": 0.8,
+    "section_miscategorization_count": 5,
+    "major_section_miscategorization_count": 4
+  }
+}

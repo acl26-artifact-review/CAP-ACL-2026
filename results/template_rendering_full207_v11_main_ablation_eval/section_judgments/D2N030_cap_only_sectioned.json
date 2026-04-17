@@ -1,0 +1,37 @@
+{
+  "section_miscategorizations": [
+    {
+      "text": "The patient needs to get the cream refilled.",
+      "current_section": "Plan",
+      "expected_section": "History of Present Illness",
+      "severity": "major",
+      "reason": "This is a statement of current medication state/need (ongoing therapy requiring refill), not a newly made plan or order in this encounter."
+    },
+    {
+      "text": "The patient uses a cream.",
+      "current_section": "Plan",
+      "expected_section": "History of Present Illness",
+      "severity": "major",
+      "reason": "This describes existing medication use as part of the patient's current treatment history, which belongs in HPI rather than in the Plan."
+    },
+    {
+      "text": "Dr. Ward prescribed singulair.",
+      "current_section": "Plan",
+      "expected_section": "History of Present Illness",
+      "severity": "major",
+      "reason": "This is prior treatment history/current medication state, not a new order or management step from this visit, so it fits HPI rather than Plan."
+    },
+    {
+      "text": "The patient has received the vaccine.",
+      "current_section": "Plan",
+      "expected_section": "History of Present Illness",
+      "severity": "minor",
+      "reason": "This is past immunization history; while sometimes summarized in the plan, it more accurately reflects prior history/medication state and fits better in HPI."
+    }
+  ],
+  "summary_statistics": {
+    "section_appropriateness_score": 0.7,
+    "section_miscategorization_count": 4,
+    "major_section_miscategorization_count": 3
+  }
+}

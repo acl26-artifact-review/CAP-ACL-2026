@@ -1,0 +1,37 @@
+{
+  "section_miscategorizations": [
+    {
+      "text": "The patient reports pain to palpation of the right knee and observes edema and erythema.",
+      "current_section": "H",
+      "expected_section": "F",
+      "severity": "major",
+      "reason": "Pain to palpation, edema, and erythema are physical exam findings; phrased as patient report here, but they conceptually belong with objective exam findings rather than HPI symptoms."
+    },
+    {
+      "text": "The patient reports occasional elbow pain.",
+      "current_section": "F",
+      "expected_section": "H",
+      "severity": "major",
+      "reason": "This is a subjective symptom reported by the patient and belongs in the history of present illness, not in the objective findings section."
+    },
+    {
+      "text": "The patient is taking synthroid.",
+      "current_section": "P",
+      "expected_section": "H",
+      "severity": "major",
+      "reason": "This is current medication state, not a new order or change; it belongs in the history (medication history) rather than the plan."
+    },
+    {
+      "text": "The patient's pain is in the left hand.",
+      "current_section": "F",
+      "expected_section": "H",
+      "severity": "minor",
+      "reason": "This is a subjective pain location statement; while it appears among exam findings, it is not an observed or measured finding but a symptom description."
+    }
+  ],
+  "summary_statistics": {
+    "section_appropriateness_score": 0.7,
+    "section_miscategorization_count": 4,
+    "major_section_miscategorization_count": 3
+  }
+}

@@ -1,0 +1,1441 @@
+{
+  "case_id": "D2N205",
+  "method": "cluster2sent",
+  "template": "soap",
+  "summary_text": "S:\nThe patient reports experiencing shortness of breath, particularly over the weekend, and states he was previously active, able to walk his dog regularly. He also reports a dry cough and swallowing pain exacerbated by radiation. He has experienced nausea and fatigue with chemotherapy, but reports symptom relief with zofran and rest. He reports difficulty tolerating liquids due to pain, but has been consuming Ensure shakes.\n\nO:\nVitals are within normal limits. Oxygen saturation is adequate. Physical exam reveals bilateral crackles in the lungs and erythema on the anterior chest wall. Cervical and subclavicular lymph nodes are unremarkable. Lung exam reveals crackles bilaterally. Examination reveals no lower extremity edema.\n\nA:\nThe patient has stage three non-small cell lung cancer. He is experiencing radiation pneumonitis and esophageal inflammation secondary to radiation. He is experiencing symptoms consistent with chemotherapy side effects.\n\nP:\nRescribe low-dose prednisone 40 mg daily for five days. Prescribe lidocaine swabs for swallowing. Continue current chemotherapy regimen and radiation therapy. Schedule follow-up in two weeks. Advise patient to maintain adequate hydration and report any worsening symptoms.",
+  "reference_summary": "CHIEF COMPLAINT\n\nFollow-up of stage III non-small cell lung cancer.\n\nMEDICAL HISTORY\n\nPatient reports recent diagnosis of stage III non-small cell lung cancer.\n\nSOCIAL HISTORY\n\nPatient reports she was previously active taking mile long walks with her doberman. She states her husband is her support system and has been helpful with this new diagnosis. Her daughter has also been helpful.\n\nMEDICATIONS\n\nPatient reports receiving chemotherapy consisting of Cisplatin and etoposide. She is also taking Zofran.\n\nREVIEW OF SYSTEMS\n\nConstitutional: Reports fatigue. Denies fever.\nHENT: Reports odynophagia.\nRespiratory: Reports dyspnea and dry cough.\nGastrointestinal: Reports nausea.\n\nVITALS\n\nVitals are normal including pulse oximetry.\n\nPHYSICAL EXAM\n\nNeck\n- General Examination: Neck is supple without cervical lymphadenopathy, or subclavicular adenopathy.\n\nRespiratory\n- Auscultation of Lungs: Rales in the lungs bilaterally.\n\nCardiovascular\n- Auscultation of Heart: Regular rate and rhythm. No murmurs.\n\nMusculoskeletal\n- Examination: No edema.\n\nIntegumentary\n- Examination: Some erythema on the left anterior aspect of the chest.\n\nHematology/Lymphatic/Immunology\n- Palpation: No enlarged lymph nodes.\n\nRESULTS\n\nPathology report is reviewed and shows evidence of a 4.4 cm left upper lobe nodule.\n\nChest x-ray is reviewed and shows evidence of mild radiation pneumonitis.\n\nASSESSMENT AND PLAN\n\n1. Stage III non-small cell lung cancer.\n- Medical Reasoning: This is a new diagnosis for this patient. Recent pathology report showed evidence of a 4.4 cm left upper lobe nodule.\n- Patient Education and Counseling: We discussed that once her treatment regimen is complete we will proceed with further testing and hopefully tumor resection.\n- Medical Treatment: Patient will continue on current regimen consisting of Cisplatin and etoposide. Her radiation will remain at 45 Gy.\n\n2. Radiation pneumonitis.\n- Medical Reasoning: Recent chest x-ray showed evidence of mild radiation pneumonitis.\n- Patient Education and Counseling: We discussed she is experiencing inflammation of the lungs secondary to her radiation treatment. The risks and benefits of prednisone were also discussed.\n- Medical treatment: A prescription for prednisone 40 mg 1 tablet a day for 5 days was provided.\n\n3. Odynophagia.\n- Medical Reasoning: Patient reports symptoms of painful swallowing.\n- Patient Education and Counseling: I advised her that her radiation pneumonitis is also affecting her esophagus which is resulting in her painful swallowing. We discussed the importance of nutrition and hydration while undergoing chemotherapy.\n- Medical treatment: Prescription for lidocaine viscous solution to be completed 4 times a day was provided.\nPatient Agreements: The patient understands and agrees with the recommended medical treatment plan.\n\nINSTRUCTIONS\n\nPatient will return for follow-up in 2 weeks.",
+  "source_cap": {
+    "atomic_propositions": [
+      {
+        "prop_id": "CAP1",
+        "cap_type": "Diagnosis",
+        "canonical_concept": "lung cancer",
+        "category": "Diagnosis",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "diagnostic"
+        ],
+        "proposition_text": "The patient has lung cancer."
+      },
+      {
+        "prop_id": "CAP2",
+        "cap_type": "Diagnosis",
+        "canonical_concept": "radiation pneumonitis",
+        "category": "Diagnosis",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "diagnostic"
+        ],
+        "proposition_text": "The patient has radiation pneumonitis."
+      },
+      {
+        "prop_id": "CAP3",
+        "cap_type": "Symptom",
+        "canonical_concept": "pain",
+        "category": "Symptom",
+        "speaker": "doctor",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports pain in the left hand."
+      },
+      {
+        "prop_id": "CAP4",
+        "cap_type": "Symptom",
+        "canonical_concept": "shortness of breath",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "weekend",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports shortness of breath."
+      },
+      {
+        "prop_id": "CAP5",
+        "cap_type": "Symptom",
+        "canonical_concept": "dry cough",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports a dry cough."
+      },
+      {
+        "prop_id": "CAP6",
+        "cap_type": "Symptom",
+        "canonical_concept": "dry cough",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports a dry cough."
+      },
+      {
+        "prop_id": "CAP7",
+        "cap_type": "Symptom",
+        "canonical_concept": "difficulty walking",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports difficulty walking."
+      },
+      {
+        "prop_id": "CAP8",
+        "cap_type": "Problem",
+        "canonical_concept": "lung cancer",
+        "category": "Problem",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient has lung cancer."
+      },
+      {
+        "prop_id": "CAP9",
+        "cap_type": "Problem",
+        "canonical_concept": "radiation pneumonitis",
+        "category": "Problem",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient has radiation pneumonitis."
+      },
+      {
+        "prop_id": "CAP10",
+        "cap_type": "Symptom",
+        "canonical_concept": "nausea",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports nausea."
+      },
+      {
+        "prop_id": "CAP11",
+        "cap_type": "Symptom",
+        "canonical_concept": "fatigue",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports fatigue."
+      },
+      {
+        "prop_id": "CAP12",
+        "cap_type": "Symptom",
+        "canonical_concept": "dysphagia",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports dysphagia."
+      },
+      {
+        "prop_id": "CAP13",
+        "cap_type": "Problem",
+        "canonical_concept": "pain",
+        "category": "Problem",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient reports pain."
+      },
+      {
+        "prop_id": "CAP14",
+        "cap_type": "ExamFinding",
+        "canonical_concept": "erythema",
+        "category": "ExamFinding",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The clinician observes erythema on the anterior aspect of the patient's chest on the left side."
+      },
+      {
+        "prop_id": "CAP15",
+        "cap_type": "ExamFinding",
+        "canonical_concept": "crackles",
+        "category": "ExamFinding",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The clinician detects faint crackles in the patient's lungs bilaterally."
+      },
+      {
+        "prop_id": "CAP16",
+        "cap_type": "MedicationRequest",
+        "canonical_concept": "medication",
+        "category": "MedicationRequest",
+        "speaker": "doctor",
+        "status": "uncertain",
+        "visit_state": "planned",
+        "temporality": "future",
+        "claim_type_tags": [
+          "medication"
+        ],
+        "proposition_text": "The doctor will get you those medications those prescriptions."
+      },
+      {
+        "prop_id": "CAP17",
+        "cap_type": "MedicationRequest",
+        "canonical_concept": "prednisone",
+        "category": "MedicationRequest",
+        "speaker": "doctor",
+        "predicate": "prescribes",
+        "status": "affirmed",
+        "visit_state": "planned",
+        "temporality": "current",
+        "proposition_text": "The doctor prescribes prednisone."
+      },
+      {
+        "prop_id": "CAP18",
+        "cap_type": "MedicationRequest",
+        "canonical_concept": "lidocaine",
+        "category": "MedicationRequest",
+        "speaker": "doctor",
+        "predicate": "prescribes",
+        "status": "affirmed",
+        "visit_state": "planned",
+        "temporality": "current",
+        "proposition_text": "The doctor prescribes lidocaine."
+      },
+      {
+        "prop_id": "CAP19",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "prednisone",
+        "category": "MedicationStatement",
+        "speaker": "doctor",
+        "predicate": "prescribes",
+        "status": "affirmed",
+        "visit_state": "planned",
+        "temporality": "current",
+        "proposition_text": "The clinician prescribes prednisone."
+      },
+      {
+        "prop_id": "CAP20",
+        "cap_type": "ProblemHistory",
+        "canonical_concept": "dog walk distance",
+        "category": "ProblemHistory",
+        "speaker": "patient",
+        "status": "uncertain",
+        "visit_state": "historical",
+        "temporality": "this weekend",
+        "proposition_text": "The patient could only walk down to the end of the street this weekend."
+      },
+      {
+        "prop_id": "CAP21",
+        "cap_type": "ProblemHistory",
+        "canonical_concept": "activity level",
+        "category": "ProblemHistory",
+        "speaker": "patient",
+        "status": "uncertain",
+        "visit_state": "historical",
+        "temporality": "before this weekend",
+        "proposition_text": "The patient previously walked their dog for mile-long walks every day."
+      },
+      {
+        "prop_id": "CAP22",
+        "cap_type": "ProblemHistory",
+        "canonical_concept": "dog walk distance",
+        "category": "ProblemHistory",
+        "speaker": "patient",
+        "status": "uncertain",
+        "visit_state": "historical",
+        "temporality": "before this weekend",
+        "proposition_text": "The patient normally took their dog for mile-long walks every day."
+      }
+    ],
+    "filtered_nonverifiable_units": []
+  },
+  "event_plan": null,
+  "summary_cap": {
+    "atomic_propositions": [],
+    "filtered_nonverifiable_units": [],
+    "runtime_seconds": 0.555
+  },
+  "cap_alignment": {
+    "cap_precision": 0.0,
+    "cap_recall": 0.0,
+    "cap_f1": 0.0,
+    "matched_count": 0,
+    "summary_prop_count": 0,
+    "source_prop_count": 22,
+    "matched_pairs": [],
+    "unsupported_summary_props": [],
+    "missing_source_props": [
+      {
+        "prop_id": "CAP1",
+        "cap_type": "Diagnosis",
+        "canonical_concept": "lung cancer",
+        "category": "Diagnosis",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "diagnostic"
+        ],
+        "proposition_text": "The patient has lung cancer."
+      },
+      {
+        "prop_id": "CAP2",
+        "cap_type": "Diagnosis",
+        "canonical_concept": "radiation pneumonitis",
+        "category": "Diagnosis",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "diagnostic"
+        ],
+        "proposition_text": "The patient has radiation pneumonitis."
+      },
+      {
+        "prop_id": "CAP3",
+        "cap_type": "Symptom",
+        "canonical_concept": "pain",
+        "category": "Symptom",
+        "speaker": "doctor",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports pain in the left hand."
+      },
+      {
+        "prop_id": "CAP4",
+        "cap_type": "Symptom",
+        "canonical_concept": "shortness of breath",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "weekend",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports shortness of breath."
+      },
+      {
+        "prop_id": "CAP5",
+        "cap_type": "Symptom",
+        "canonical_concept": "dry cough",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports a dry cough."
+      },
+      {
+        "prop_id": "CAP6",
+        "cap_type": "Symptom",
+        "canonical_concept": "dry cough",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports a dry cough."
+      },
+      {
+        "prop_id": "CAP7",
+        "cap_type": "Symptom",
+        "canonical_concept": "difficulty walking",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports difficulty walking."
+      },
+      {
+        "prop_id": "CAP8",
+        "cap_type": "Problem",
+        "canonical_concept": "lung cancer",
+        "category": "Problem",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient has lung cancer."
+      },
+      {
+        "prop_id": "CAP9",
+        "cap_type": "Problem",
+        "canonical_concept": "radiation pneumonitis",
+        "category": "Problem",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient has radiation pneumonitis."
+      },
+      {
+        "prop_id": "CAP10",
+        "cap_type": "Symptom",
+        "canonical_concept": "nausea",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports nausea."
+      },
+      {
+        "prop_id": "CAP11",
+        "cap_type": "Symptom",
+        "canonical_concept": "fatigue",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports fatigue."
+      },
+      {
+        "prop_id": "CAP12",
+        "cap_type": "Symptom",
+        "canonical_concept": "dysphagia",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports dysphagia."
+      },
+      {
+        "prop_id": "CAP13",
+        "cap_type": "Problem",
+        "canonical_concept": "pain",
+        "category": "Problem",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient reports pain."
+      },
+      {
+        "prop_id": "CAP14",
+        "cap_type": "ExamFinding",
+        "canonical_concept": "erythema",
+        "category": "ExamFinding",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The clinician observes erythema on the anterior aspect of the patient's chest on the left side."
+      },
+      {
+        "prop_id": "CAP15",
+        "cap_type": "ExamFinding",
+        "canonical_concept": "crackles",
+        "category": "ExamFinding",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The clinician detects faint crackles in the patient's lungs bilaterally."
+      },
+      {
+        "prop_id": "CAP16",
+        "cap_type": "MedicationRequest",
+        "canonical_concept": "medication",
+        "category": "MedicationRequest",
+        "speaker": "doctor",
+        "status": "uncertain",
+        "visit_state": "planned",
+        "temporality": "future",
+        "claim_type_tags": [
+          "medication"
+        ],
+        "proposition_text": "The doctor will get you those medications those prescriptions."
+      },
+      {
+        "prop_id": "CAP17",
+        "cap_type": "MedicationRequest",
+        "canonical_concept": "prednisone",
+        "category": "MedicationRequest",
+        "speaker": "doctor",
+        "predicate": "prescribes",
+        "status": "affirmed",
+        "visit_state": "planned",
+        "temporality": "current",
+        "proposition_text": "The doctor prescribes prednisone."
+      },
+      {
+        "prop_id": "CAP18",
+        "cap_type": "MedicationRequest",
+        "canonical_concept": "lidocaine",
+        "category": "MedicationRequest",
+        "speaker": "doctor",
+        "predicate": "prescribes",
+        "status": "affirmed",
+        "visit_state": "planned",
+        "temporality": "current",
+        "proposition_text": "The doctor prescribes lidocaine."
+      },
+      {
+        "prop_id": "CAP19",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "prednisone",
+        "category": "MedicationStatement",
+        "speaker": "doctor",
+        "predicate": "prescribes",
+        "status": "affirmed",
+        "visit_state": "planned",
+        "temporality": "current",
+        "proposition_text": "The clinician prescribes prednisone."
+      },
+      {
+        "prop_id": "CAP20",
+        "cap_type": "ProblemHistory",
+        "canonical_concept": "dog walk distance",
+        "category": "ProblemHistory",
+        "speaker": "patient",
+        "status": "uncertain",
+        "visit_state": "historical",
+        "temporality": "this weekend",
+        "proposition_text": "The patient could only walk down to the end of the street this weekend."
+      },
+      {
+        "prop_id": "CAP21",
+        "cap_type": "ProblemHistory",
+        "canonical_concept": "activity level",
+        "category": "ProblemHistory",
+        "speaker": "patient",
+        "status": "uncertain",
+        "visit_state": "historical",
+        "temporality": "before this weekend",
+        "proposition_text": "The patient previously walked their dog for mile-long walks every day."
+      },
+      {
+        "prop_id": "CAP22",
+        "cap_type": "ProblemHistory",
+        "canonical_concept": "dog walk distance",
+        "category": "ProblemHistory",
+        "speaker": "patient",
+        "status": "uncertain",
+        "visit_state": "historical",
+        "temporality": "before this weekend",
+        "proposition_text": "The patient normally took their dog for mile-long walks every day."
+      }
+    ]
+  },
+  "reference_gpt_f1_items": {
+    "active_problems_symptoms": [],
+    "negated_findings": [],
+    "uncertain_findings": [],
+    "medication_treatment": [],
+    "plan_followup": [],
+    "_chunk_count": [
+      "5"
+    ],
+    "_parse_failures": [
+      "{\"chunk_index\": 1, \"stage\": \"call_llm\", \"error\": \"LLM call failed after retries: Error code: 404\"}",
+      "{\"chunk_index\": 2, \"stage\": \"call_llm\", \"error\": \"LLM call failed after retries: Error code: 404\"}",
+      "{\"chunk_index\": 3, \"stage\": \"call_llm\", \"error\": \"LLM call failed after retries: Error code: 404\"}",
+      "{\"chunk_index\": 4, \"stage\": \"call_llm\", \"error\": \"LLM call failed after retries: Error code: 404\"}",
+      "{\"chunk_index\": 5, \"stage\": \"call_llm\", \"error\": \"LLM call failed after retries: Error code: 404\"}"
+    ]
+  },
+  "summary_gpt_f1_items": {
+    "active_problems_symptoms": [],
+    "negated_findings": [],
+    "uncertain_findings": [],
+    "medication_treatment": [],
+    "plan_followup": [],
+    "_chunk_count": [
+      "1"
+    ],
+    "_parse_failures": [
+      "{\"chunk_index\": 1, \"stage\": \"call_llm\", \"error\": \"LLM call failed after retries: Error code: 404\"}"
+    ]
+  },
+  "gpt_f1_alignment": {
+    "by_category": {
+      "active_problems_symptoms": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "matched_count": 0,
+        "pred_count": 0,
+        "ref_count": 0,
+        "matches": [],
+        "unsupported_pred_items": [],
+        "missing_ref_items": []
+      },
+      "negated_findings": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "matched_count": 0,
+        "pred_count": 0,
+        "ref_count": 0,
+        "matches": [],
+        "unsupported_pred_items": [],
+        "missing_ref_items": []
+      },
+      "uncertain_findings": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "matched_count": 0,
+        "pred_count": 0,
+        "ref_count": 0,
+        "matches": [],
+        "unsupported_pred_items": [],
+        "missing_ref_items": []
+      },
+      "medication_treatment": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "matched_count": 0,
+        "pred_count": 0,
+        "ref_count": 0,
+        "matches": [],
+        "unsupported_pred_items": [],
+        "missing_ref_items": []
+      },
+      "plan_followup": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "matched_count": 0,
+        "pred_count": 0,
+        "ref_count": 0,
+        "matches": [],
+        "unsupported_pred_items": [],
+        "missing_ref_items": []
+      }
+    }
+  },
+  "reference_nair_concepts": {
+    "sections": [
+      {
+        "heading": "Clinical Note",
+        "section_value": "CHIEF COMPLAINT\nFollow-up of stage III non-small cell lung cancer.\nMEDICAL HISTORY\nPatient reports recent diagnosis of stage III non-small cell lung cancer.\nSOCIAL HISTORY\nPatient reports she was previously active taking mile long walks with her doberman. She states her husband is her support system and has been helpful with this new diagnosis. Her daughter has also been helpful.\nMEDICATIONS\nPatient reports receiving chemotherapy consisting of Cisplatin and etoposide. She is also taking Zofran.\nREVIEW OF SYSTEMS\nConstitutional: Reports fatigue. Denies fever.",
+        "medical_concepts": [
+          "stage III non-small cell lung cancer",
+          "non-small cell lung cancer",
+          "lung cancer",
+          "chemotherapy",
+          "cisplatin",
+          "etoposide",
+          "Zofran",
+          "fatigue",
+          "fever"
+        ]
+      },
+      {
+        "heading": "Clinical Note",
+        "section_value": "HENT: Reports odynophagia.\nRespiratory: Reports dyspnea and dry cough.\nGastrointestinal: Reports nausea.\nVITALS\nVitals are normal including pulse oximetry.\nPHYSICAL EXAM\nNeck\n- General Examination: Neck is supple without cervical lymphadenopathy, or subclavicular adenopathy.\nRespiratory\n- Auscultation of Lungs: Rales in the lungs bilaterally.",
+        "medical_concepts": [
+          "odynophagia",
+          "dyspnea",
+          "dry cough",
+          "nausea",
+          "vitals",
+          "pulse oximetry",
+          "cervical lymphadenopathy",
+          "subclavicular adenopathy",
+          "rales"
+        ]
+      },
+      {
+        "heading": "Clinical Note",
+        "section_value": "Cardiovascular\n- Auscultation of Heart: Regular rate and rhythm. No murmurs.\nMusculoskeletal\n- Examination: No edema.\nIntegumentary\n- Examination: Some erythema on the left anterior aspect of the chest.\nHematology/Lymphatic/Immunology\n- Palpation: No enlarged lymph nodes.\nRESULTS\nPathology report is reviewed and shows evidence of a 4.4 cm left upper lobe nodule.",
+        "medical_concepts": [
+          "regular heart rate and rhythm",
+          "heart murmur",
+          "edema",
+          "erythema",
+          "enlarged lymph nodes",
+          "pathology report",
+          "left upper lobe nodule",
+          "pulmonary nodule",
+          "4.4 cm nodule"
+        ]
+      },
+      {
+        "heading": "Clinical Note",
+        "section_value": "Chest x-ray is reviewed and shows evidence of mild radiation pneumonitis.\nASSESSMENT AND PLAN\n1. Stage III non-small cell lung cancer.\n- Medical Reasoning: This is a new diagnosis for this patient. Recent pathology report showed evidence of a 4.4 cm left upper lobe nodule.\n- Patient Education and Counseling: We discussed that once her treatment regimen is complete we will proceed with further testing and hopefully tumor resection.\n- Medical Treatment: Patient will continue on current regimen consisting of Cisplatin and etoposide. Her radiation will remain at 45 Gy.\n2. Radiation pneumonitis.\n- Medical Reasoning: Recent chest x-ray showed evidence of mild radiation pneumonitis.\n- Patient Education and Counseling: We discussed she is experiencing inflammation of the lungs secondary to her radiation treatment. The risks and benefits of prednisone were also discussed.\n- Medical treatment: A prescription for prednisone 40 mg 1 tablet a day for 5 days was provided.",
+        "medical_concepts": [
+          "chest x-ray",
+          "radiation pneumonitis",
+          "Stage III non-small cell lung cancer",
+          "pathology report",
+          "left upper lobe nodule",
+          "tumor resection",
+          "Cisplatin",
+          "etoposide",
+          "radiation 45 Gy",
+          "inflammation of the lungs",
+          "prednisone",
+          "prednisone 40 mg 1 tablet a day for 5 days"
+        ]
+      },
+      {
+        "heading": "Clinical Note",
+        "section_value": "3. Odynophagia.\n- Medical Reasoning: Patient reports symptoms of painful swallowing.\n- Patient Education and Counseling: I advised her that her radiation pneumonitis is also affecting her esophagus which is resulting in her painful swallowing. We discussed the importance of nutrition and hydration while undergoing chemotherapy.\n- Medical treatment: Prescription for lidocaine viscous solution to be completed 4 times a day was provided.\nPatient Agreements: The patient understands and agrees with the recommended medical treatment plan.\nINSTRUCTIONS\nPatient will return for follow-up in 2 weeks.",
+        "medical_concepts": [
+          "odynophagia",
+          "painful swallowing",
+          "radiation pneumonitis",
+          "esophageal involvement",
+          "chemotherapy",
+          "lidocaine viscous solution",
+          "nutrition",
+          "hydration"
+        ]
+      }
+    ],
+    "medical_concepts": [
+      "stage III non-small cell lung cancer",
+      "non-small cell lung cancer",
+      "lung cancer",
+      "chemotherapy",
+      "cisplatin",
+      "etoposide",
+      "Zofran",
+      "fatigue",
+      "fever",
+      "odynophagia",
+      "dyspnea",
+      "dry cough",
+      "nausea",
+      "vitals",
+      "pulse oximetry",
+      "cervical lymphadenopathy",
+      "subclavicular adenopathy",
+      "rales",
+      "regular heart rate and rhythm",
+      "heart murmur",
+      "edema",
+      "erythema",
+      "enlarged lymph nodes",
+      "pathology report",
+      "left upper lobe nodule",
+      "pulmonary nodule",
+      "4.4 cm nodule",
+      "chest x-ray",
+      "radiation pneumonitis",
+      "tumor resection",
+      "radiation 45 Gy",
+      "inflammation of the lungs",
+      "prednisone",
+      "prednisone 40 mg 1 tablet a day for 5 days",
+      "painful swallowing",
+      "esophageal involvement",
+      "lidocaine viscous solution",
+      "nutrition",
+      "hydration"
+    ],
+    "section_count": 5
+  },
+  "summary_nair_concepts": {
+    "sections": [
+      {
+        "heading": "S",
+        "section_value": "The patient reports experiencing shortness of breath, particularly over the weekend, and states he was previously active, able to walk his dog regularly. He also reports a dry cough and swallowing pain exacerbated by radiation. He has experienced nausea and fatigue with chemotherapy, but reports symptom relief with zofran and rest. He reports difficulty tolerating liquids due to pain, but has been consuming Ensure shakes.",
+        "medical_concepts": [
+          "shortness of breath",
+          "dry cough",
+          "swallowing pain",
+          "radiation",
+          "nausea",
+          "fatigue",
+          "chemotherapy",
+          "zofran",
+          "difficulty tolerating liquids",
+          "Ensure shakes"
+        ]
+      },
+      {
+        "heading": "O",
+        "section_value": "Vitals are within normal limits. Oxygen saturation is adequate. Physical exam reveals bilateral crackles in the lungs and erythema on the anterior chest wall. Cervical and subclavicular lymph nodes are unremarkable. Lung exam reveals crackles bilaterally. Examination reveals no lower extremity edema.",
+        "medical_concepts": [
+          "vital signs",
+          "oxygen saturation",
+          "bilateral crackles in the lungs",
+          "erythema on the anterior chest wall",
+          "cervical lymph nodes",
+          "subclavicular lymph nodes",
+          "lung exam",
+          "crackles bilaterally",
+          "lower extremity edema"
+        ]
+      },
+      {
+        "heading": "A",
+        "section_value": "The patient has stage three non-small cell lung cancer. He is experiencing radiation pneumonitis and esophageal inflammation secondary to radiation. He is experiencing symptoms consistent with chemotherapy side effects.",
+        "medical_concepts": [
+          "stage III non-small cell lung cancer",
+          "non-small cell lung cancer",
+          "radiation pneumonitis",
+          "esophageal inflammation",
+          "chemotherapy side effects"
+        ]
+      },
+      {
+        "heading": "P",
+        "section_value": "Rescribe low-dose prednisone 40 mg daily for five days. Prescribe lidocaine swabs for swallowing. Continue current chemotherapy regimen and radiation therapy. Schedule follow-up in two weeks. Advise patient to maintain adequate hydration and report any worsening symptoms.",
+        "medical_concepts": [
+          "prednisone",
+          "lidocaine",
+          "chemotherapy",
+          "radiation therapy",
+          "swallowing",
+          "hydration",
+          "worsening symptoms"
+        ]
+      }
+    ],
+    "medical_concepts": [
+      "shortness of breath",
+      "dry cough",
+      "swallowing pain",
+      "radiation",
+      "nausea",
+      "fatigue",
+      "chemotherapy",
+      "zofran",
+      "difficulty tolerating liquids",
+      "Ensure shakes",
+      "vital signs",
+      "oxygen saturation",
+      "bilateral crackles in the lungs",
+      "erythema on the anterior chest wall",
+      "cervical lymph nodes",
+      "subclavicular lymph nodes",
+      "lung exam",
+      "crackles bilaterally",
+      "lower extremity edema",
+      "stage III non-small cell lung cancer",
+      "non-small cell lung cancer",
+      "radiation pneumonitis",
+      "esophageal inflammation",
+      "chemotherapy side effects",
+      "prednisone",
+      "lidocaine",
+      "radiation therapy",
+      "swallowing",
+      "hydration",
+      "worsening symptoms"
+    ],
+    "section_count": 4
+  },
+  "nair_alignment": {
+    "pred_concepts": [
+      "shortness of breath",
+      "dry cough",
+      "swallowing pain",
+      "radiation",
+      "nausea",
+      "fatigue",
+      "chemotherapy",
+      "zofran",
+      "difficulty tolerating liquids",
+      "Ensure shakes",
+      "vital signs",
+      "oxygen saturation",
+      "bilateral crackles in the lungs",
+      "erythema on the anterior chest wall",
+      "cervical lymph nodes",
+      "subclavicular lymph nodes",
+      "lung exam",
+      "crackles bilaterally",
+      "lower extremity edema",
+      "stage III non-small cell lung cancer",
+      "non-small cell lung cancer",
+      "radiation pneumonitis",
+      "esophageal inflammation",
+      "chemotherapy side effects",
+      "prednisone",
+      "lidocaine",
+      "radiation therapy",
+      "swallowing",
+      "hydration",
+      "worsening symptoms"
+    ],
+    "ref_concepts": [
+      "stage III non-small cell lung cancer",
+      "non-small cell lung cancer",
+      "lung cancer",
+      "chemotherapy",
+      "cisplatin",
+      "etoposide",
+      "Zofran",
+      "fatigue",
+      "fever",
+      "odynophagia",
+      "dyspnea",
+      "dry cough",
+      "nausea",
+      "vitals",
+      "pulse oximetry",
+      "cervical lymphadenopathy",
+      "subclavicular adenopathy",
+      "rales",
+      "regular heart rate and rhythm",
+      "heart murmur",
+      "edema",
+      "erythema",
+      "enlarged lymph nodes",
+      "pathology report",
+      "left upper lobe nodule",
+      "pulmonary nodule",
+      "4.4 cm nodule",
+      "chest x-ray",
+      "radiation pneumonitis",
+      "tumor resection",
+      "radiation 45 Gy",
+      "inflammation of the lungs",
+      "prednisone",
+      "prednisone 40 mg 1 tablet a day for 5 days",
+      "painful swallowing",
+      "esophageal involvement",
+      "lidocaine viscous solution",
+      "nutrition",
+      "hydration"
+    ],
+    "precision_alignment": {
+      "found_b": [
+        "shortness of breath",
+        "dry cough",
+        "swallowing pain",
+        "radiation",
+        "nausea",
+        "fatigue",
+        "chemotherapy",
+        "zofran",
+        "vital signs",
+        "oxygen saturation",
+        "bilateral crackles in the lungs",
+        "erythema on the anterior chest wall",
+        "cervical lymph nodes",
+        "subclavicular lymph nodes",
+        "crackles bilaterally",
+        "stage III non-small cell lung cancer",
+        "non-small cell lung cancer",
+        "radiation pneumonitis",
+        "esophageal inflammation",
+        "chemotherapy side effects",
+        "prednisone",
+        "lidocaine",
+        "radiation therapy",
+        "swallowing",
+        "hydration"
+      ],
+      "not_found_b": [
+        "difficulty tolerating liquids",
+        "Ensure shakes",
+        "lung exam",
+        "lower extremity edema",
+        "worsening symptoms"
+      ],
+      "chunk_count": 2,
+      "chunk_results": [
+        {
+          "found_b": [
+            "shortness of breath",
+            "dry cough",
+            "swallowing pain",
+            "radiation",
+            "nausea",
+            "fatigue",
+            "chemotherapy",
+            "zofran",
+            "vital signs",
+            "oxygen saturation",
+            "bilateral crackles in the lungs",
+            "erythema on the anterior chest wall",
+            "cervical lymph nodes",
+            "subclavicular lymph nodes",
+            "crackles bilaterally",
+            "stage III non-small cell lung cancer",
+            "non-small cell lung cancer",
+            "radiation pneumonitis",
+            "esophageal inflammation",
+            "chemotherapy side effects"
+          ],
+          "not_found_b": [
+            "difficulty tolerating liquids",
+            "Ensure shakes",
+            "lung exam",
+            "lower extremity edema"
+          ]
+        },
+        {
+          "found_b": [
+            "prednisone",
+            "lidocaine",
+            "radiation therapy",
+            "swallowing",
+            "hydration"
+          ],
+          "not_found_b": [
+            "worsening symptoms"
+          ]
+        }
+      ]
+    },
+    "recall_alignment": {
+      "found_b": [
+        "stage III non-small cell lung cancer",
+        "non-small cell lung cancer",
+        "lung cancer",
+        "chemotherapy",
+        "Zofran",
+        "fatigue",
+        "odynophagia",
+        "dyspnea",
+        "dry cough",
+        "nausea",
+        "vitals",
+        "pulse oximetry",
+        "rales",
+        "edema",
+        "erythema",
+        "radiation pneumonitis",
+        "inflammation of the lungs",
+        "prednisone",
+        "painful swallowing",
+        "esophageal involvement",
+        "hydration"
+      ],
+      "not_found_b": [
+        "cisplatin",
+        "etoposide",
+        "fever",
+        "cervical lymphadenopathy",
+        "subclavicular adenopathy",
+        "regular heart rate and rhythm",
+        "heart murmur",
+        "enlarged lymph nodes",
+        "pathology report",
+        "left upper lobe nodule",
+        "pulmonary nodule",
+        "4.4 cm nodule",
+        "chest x-ray",
+        "tumor resection",
+        "radiation 45 Gy",
+        "prednisone 40 mg 1 tablet a day for 5 days",
+        "lidocaine viscous solution",
+        "nutrition"
+      ],
+      "chunk_count": 2,
+      "chunk_results": [
+        {
+          "found_b": [
+            "stage III non-small cell lung cancer",
+            "non-small cell lung cancer",
+            "lung cancer",
+            "chemotherapy",
+            "Zofran",
+            "fatigue",
+            "odynophagia",
+            "dyspnea",
+            "dry cough",
+            "nausea",
+            "vitals",
+            "pulse oximetry",
+            "rales",
+            "edema",
+            "erythema"
+          ],
+          "not_found_b": [
+            "cisplatin",
+            "etoposide",
+            "fever",
+            "cervical lymphadenopathy",
+            "subclavicular adenopathy",
+            "regular heart rate and rhythm",
+            "heart murmur",
+            "enlarged lymph nodes",
+            "pathology report"
+          ]
+        },
+        {
+          "found_b": [
+            "radiation pneumonitis",
+            "inflammation of the lungs",
+            "prednisone",
+            "painful swallowing",
+            "esophageal involvement",
+            "hydration"
+          ],
+          "not_found_b": [
+            "left upper lobe nodule",
+            "pulmonary nodule",
+            "4.4 cm nodule",
+            "chest x-ray",
+            "tumor resection",
+            "radiation 45 Gy",
+            "prednisone 40 mg 1 tablet a day for 5 days",
+            "lidocaine viscous solution",
+            "nutrition"
+          ]
+        }
+      ]
+    }
+  },
+  "semantic_cap_audit": {
+    "source_cap_recall": [
+      {
+        "cap_id": "P1",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P2",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P3",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P4",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P5",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P6",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P7",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P8",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P9",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P10",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P11",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P12",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P13",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P14",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P15",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P16",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P1",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P2",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P3",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P4",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P5",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P6",
+        "judgment": "partial",
+        "reason": null
+      }
+    ],
+    "summary_cap_precision": [],
+    "metrics": {
+      "semantic_cap_precision": 0.0,
+      "semantic_cap_recall": 0.7273,
+      "semantic_cap_f1": 0.0,
+      "semantic_cap_precision_supported_count": 0,
+      "semantic_cap_precision_partial_count": 0,
+      "semantic_cap_precision_denominator": 0,
+      "semantic_cap_recall_supported_count": 12,
+      "semantic_cap_recall_partial_count": 8,
+      "semantic_cap_recall_denominator": 22,
+      "semantic_cap_low_value_source_count": 0,
+      "semantic_cap_low_value_summary_count": 0,
+      "semantic_cap_missing_count": 2,
+      "semantic_cap_unsupported_count": 0,
+      "semantic_cap_contradicted_source_count": 0,
+      "semantic_cap_contradicted_summary_count": 0
+    }
+  },
+  "safety_judgment": null,
+  "section_judgment": {
+    "section_miscategorizations": [],
+    "summary_statistics": {
+      "section_appropriateness_score": 1.0,
+      "section_miscategorization_count": 0,
+      "major_section_miscategorization_count": 0
+    }
+  },
+  "pdsqi_judgment": {
+    "citation_applicable": 0,
+    "citation": 0,
+    "accurate": 3,
+    "thorough": 3,
+    "useful": 3,
+    "organized": 4,
+    "comprehensible": 5,
+    "succinct": 4,
+    "abstraction": 1,
+    "synthesized": 4,
+    "voice_summ": 0,
+    "voice_note": 0,
+    "pdsqi_core_mean": 3.7143
+  },
+  "llm_checklist_judgment": {
+    "content_preservation_core": 4,
+    "noise_suppression": 5,
+    "lay_expression_preservation": 3,
+    "state_update_fidelity": 4,
+    "temporality_preservation": 4,
+    "problem_evidence_linkage": 4,
+    "state_plan_separation": 4,
+    "section_organization_appropriateness": 4,
+    "overall_clinical_usability": 4,
+    "clinically_meaningful_omission": "Yes",
+    "clinically_concerning_hallucination": "Yes",
+    "checklist_a_mean": 4.0,
+    "checklist_b_mean": 4.0,
+    "checklist_c_mean": 4.0,
+    "llm_checklist_abc_mean": 4.0,
+    "llm_checklist_mean_no_usability": 4.0,
+    "llm_checklist_total_score": 36,
+    "llm_checklist_mean": 4.0,
+    "llm_checklist_meaningful_omission_yes": 1,
+    "llm_checklist_concerning_hallucination_yes": 1
+  },
+  "metrics": {
+    "case_id": "D2N205",
+    "method": "cluster2sent",
+    "template": "soap",
+    "source_cap_count": 22,
+    "event_plan_count": null,
+    "summary_cap_count": 0,
+    "cap_matched_count": 0,
+    "cap_precision": 0.0,
+    "cap_recall": 0.0,
+    "cap_f1": 0.0,
+    "unsupported_summary_cap_count": 0,
+    "missing_source_cap_count": 22,
+    "summary_runtime_seconds": null,
+    "summary_cap_runtime_seconds": 0.555,
+    "event_plan_runtime_seconds": null,
+    "rouge_l_f1_vs_reference": 0.1895,
+    "token_f1_vs_reference": 0.3384,
+    "gptf1_macro_f1": 0.0,
+    "nair_gpt_precision": 0.8333,
+    "nair_gpt_recall": 0.5385,
+    "nair_gpt_f1": 0.6542,
+    "semantic_cap_precision": 0.0,
+    "semantic_cap_recall": 0.7273,
+    "semantic_cap_f1": 0.0,
+    "hallucination_count": null,
+    "major_hallucination_count": null,
+    "omission_count": null,
+    "major_omission_count": null,
+    "section_appropriateness_score": 1.0,
+    "section_miscategorization_count": 0,
+    "major_section_miscategorization_count": 0,
+    "pdsqi_core_mean": 3.7143,
+    "pdsqi_accurate": 3,
+    "pdsqi_thorough": 3,
+    "llm_checklist_total_score": 36,
+    "llm_checklist_mean": 4.0,
+    "llm_checklist_mean_no_usability": 4.0,
+    "checklist_a_mean": 4.0,
+    "checklist_b_mean": 4.0,
+    "checklist_c_mean": 4.0,
+    "llm_checklist_abc_mean": 4.0,
+    "content_preservation_core": 4,
+    "noise_suppression": 5,
+    "lay_expression_preservation": 3,
+    "state_update_fidelity": 4,
+    "temporality_preservation": 4,
+    "problem_evidence_linkage": 4,
+    "state_plan_separation": 4,
+    "section_organization_appropriateness": 4,
+    "overall_clinical_usability": 4,
+    "llm_checklist_meaningful_omission_yes": 1,
+    "llm_checklist_concerning_hallucination_yes": 1,
+    "gptf1_active_problems_symptoms_precision": 0.0,
+    "gptf1_active_problems_symptoms_recall": 0.0,
+    "gptf1_active_problems_symptoms_f1": 0.0,
+    "gptf1_active_problems_symptoms_pred_count": 0,
+    "gptf1_active_problems_symptoms_ref_count": 0,
+    "gptf1_negated_findings_precision": 0.0,
+    "gptf1_negated_findings_recall": 0.0,
+    "gptf1_negated_findings_f1": 0.0,
+    "gptf1_negated_findings_pred_count": 0,
+    "gptf1_negated_findings_ref_count": 0,
+    "gptf1_uncertain_findings_precision": 0.0,
+    "gptf1_uncertain_findings_recall": 0.0,
+    "gptf1_uncertain_findings_f1": 0.0,
+    "gptf1_uncertain_findings_pred_count": 0,
+    "gptf1_uncertain_findings_ref_count": 0,
+    "gptf1_medication_treatment_precision": 0.0,
+    "gptf1_medication_treatment_recall": 0.0,
+    "gptf1_medication_treatment_f1": 0.0,
+    "gptf1_medication_treatment_pred_count": 0,
+    "gptf1_medication_treatment_ref_count": 0,
+    "gptf1_plan_followup_precision": 0.0,
+    "gptf1_plan_followup_recall": 0.0,
+    "gptf1_plan_followup_f1": 0.0,
+    "gptf1_plan_followup_pred_count": 0,
+    "gptf1_plan_followup_ref_count": 0,
+    "nair_pred_concept_count": 30,
+    "nair_ref_concept_count": 39,
+    "nair_precision_match_count": 25,
+    "nair_recall_match_count": 21,
+    "semantic_cap_precision_supported_count": 0,
+    "semantic_cap_precision_partial_count": 0,
+    "semantic_cap_precision_denominator": 0,
+    "semantic_cap_recall_supported_count": 12,
+    "semantic_cap_recall_partial_count": 8,
+    "semantic_cap_recall_denominator": 22,
+    "semantic_cap_low_value_source_count": 0,
+    "semantic_cap_low_value_summary_count": 0,
+    "semantic_cap_missing_count": 2,
+    "semantic_cap_unsupported_count": 0,
+    "semantic_cap_contradicted_source_count": 0,
+    "semantic_cap_contradicted_summary_count": 0,
+    "pdsqi_useful": 3,
+    "pdsqi_organized": 4,
+    "pdsqi_comprehensible": 5,
+    "pdsqi_succinct": 4,
+    "pdsqi_synthesized": 4
+  }
+}

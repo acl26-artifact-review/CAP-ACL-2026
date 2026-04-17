@@ -1,0 +1,123 @@
+Case: D2N056
+
+Problem List and Visit State Tracking
+
+Problem List
+- shortness of breath | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T1
+  Summary: The patient reports experiencing shortness of breath.
+  ClusterId: CL1
+  TemporalProfile: current
+  Updates:
+  - CAP10: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T1 :: The patient reports experiencing shortness of breath.
+- low-grade fever | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T1
+  Summary: The patient reports having a low-grade fever.
+  ClusterId: CL2
+  TemporalProfile: current
+  Updates:
+  - CAP11: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T1 :: The patient reports having a low-grade fever.
+- cough | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T1
+  Summary: The patient reports coughing.
+  ClusterId: CL3
+  TemporalProfile: current
+  Updates:
+  - CAP13: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T1 :: The patient reports coughing.
+- pneumonia | verification_status=unconfirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T3,T4
+  Summary: The patient has experienced pneumonia multiple times in the past six months.
+  ClusterId: CL4
+  TemporalProfile: multiple occurrences over 6 months
+  Updates:
+  - CAP21: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=multiple occurrences over 6 months turns=T3 :: The patient has a history of frequent pneumonia episodes.
+  - CAP22: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=multiple occurrences over 6 months turns=T3 :: The patient has had pneumonia episodes frequently.
+  - CAP20: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=multiple occurrences over 6 months turns=T4 :: The patient has experienced pneumonia multiple times in the past six months.
+- hand pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T10,T24
+  Summary: The patient reports pain in the left hand.
+  ClusterId: CL5
+  TemporalProfile: current
+  Updates:
+  - CAP8: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T10 :: The patient reports pain in the left hand.
+  - CAP9: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T24 :: The patient reports pain in the left hand.
+- illness | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=doctor | evidence=T15
+  Summary: The doctor believes he is the only one getting sick.
+  ClusterId: CL7
+  TemporalProfile: current
+  Updates:
+  - CAP1: content_source=doctor modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T15 :: The doctor believes he is the only one getting sick.
+- farmer's lung | verification_status=confirmed | clinical_status=active | modalities=assessment,interview | speakers=doctor,patient | evidence=T20,T32
+  Summary: The doctor assesses farmer's lung as a possible diagnosis.
+  ClusterId: CL9
+  TemporalProfile: current
+  Updates:
+  - CAP3: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T20 :: The patient is experiencing symptoms related to farm work.
+  - CAP7: content_source=doctor modality=assessment verification_status=confirmed clinical_status=active temporality=current turns=T32 :: The doctor assesses farmer's lung as a possible diagnosis.
+- allergy history | verification_status=unconfirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T24
+  Summary: The patient asks if anyone has a history of allergies.
+  ClusterId: CL10
+  TemporalProfile: past
+  Updates:
+  - CAP2: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=past turns=T24 :: The patient asks if anyone has a history of allergies.
+- allergies | verification_status=unconfirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T24
+  Summary: The patient inquires about family history of seasonal allergies.
+  ClusterId: CL11
+  TemporalProfile: past
+  Updates:
+  - CAP4: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=past turns=T24 :: The patient inquires about family history of seasonal allergies.
+- smoking | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T24
+  Summary: The patient asks if anyone in their family smokes.
+  ClusterId: CL12
+  TemporalProfile: current
+  Updates:
+  - CAP5: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T24 :: The patient asks if anyone in their family smokes.
+- hypersensitivity pneumonitis | verification_status=confirmed | clinical_status=active | modalities=assessment | speakers=doctor | evidence=T32
+  Summary: The doctor assesses hypersensitivity pneumonitis as a possible diagnosis.
+  ClusterId: CL13
+  TemporalProfile: current
+  Updates:
+  - CAP6: content_source=doctor modality=assessment verification_status=confirmed clinical_status=active temporality=current turns=T32 :: The doctor assesses hypersensitivity pneumonitis as a possible diagnosis.
+- lung infections | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T32
+  Summary: The patient reports recurrent lung infections.
+  ClusterId: CL14
+  TemporalProfile: current
+  Updates:
+  - CAP12: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T32 :: The patient reports recurrent lung infections.
+- pain | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T36
+  Summary: The patient reports pain.
+  ClusterId: CL19
+  TemporalProfile: current
+  Updates:
+  - CAP14: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T36 :: The patient reports pain.
+
+Medication Tracking
+- [MedicationState] mask | verification_status=unconfirmed | clinical_status=historical | modalities=interview | speakers=doctor | evidence=T13
+  Summary: None of us wear masks when unloading hay.
+  ClusterId: CL6
+  TemporalProfile: past
+  CurrentRegimens:
+  - None of us wear masks when unloading hay. (T13)
+  Updates:
+  - CAP18: content_source=doctor modality=interview verification_status=unconfirmed clinical_status=historical temporality=past turns=T13 :: None of us wear masks when unloading hay.
+- [MedicationChange] oral steroid | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T32
+  Summary: The doctor prescribes an oral steroid.
+  ClusterId: CL18
+  TemporalProfile: future
+  PlannedChanges:
+  - The doctor prescribes an oral steroid. (T32)
+  Updates:
+  - CAP19: content_source=doctor modality=plan verification_status=unconfirmed clinical_status=planned temporality=future turns=T32 :: The doctor prescribes an oral steroid.
+
+Other Structured States
+- [Demographics] number of siblings | verification_status=unconfirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T19
+  Summary: There are ten siblings.
+  ClusterId: CL8
+  TemporalProfile: current
+- [TestResult] cat scan | verification_status=unconfirmed | clinical_status=planned | modalities=assessment | speakers=doctor | evidence=T32
+  Summary: The doctor orders a cat scan of the lungs.
+  ClusterId: CL15
+  TemporalProfile: future
+- [TestResult] pulmonary function test | verification_status=unconfirmed | clinical_status=planned | modalities=assessment | speakers=doctor | evidence=T32
+  Summary: The doctor orders a pulmonary function test.
+  ClusterId: CL16
+  TemporalProfile: future
+- [Plan] wear respirator | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T32
+  Summary: The doctor recommends wearing a respirator.
+  ClusterId: CL17
+  TemporalProfile: future

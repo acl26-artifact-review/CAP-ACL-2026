@@ -1,0 +1,212 @@
+Case: D2N105
+
+Problem List and Visit State Tracking
+
+Problem List
+- heart murmur | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T4
+  Summary: The patient reports a new worrisome heart murmur.
+  ClusterId: CL1
+  TemporalProfile: current
+  Updates:
+  - CAP2: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T4 :: The patient reports a new worrisome heart murmur.
+  - CAP8: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T4 :: The patient has a heart murmur.
+- pain | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T8
+  Summary: The patient reports pain in the left hand.
+  ClusterId: CL2
+  TemporalProfile: current
+  Updates:
+  - CAP3: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T8 :: The patient reports pain in the left hand.
+- leg pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T14,T26,T28,T83,T95
+  Summary: The patient reports severe pains in their legs.
+  ClusterId: CL3
+  TemporalProfile: 6 months, current
+  Updates:
+  - CAP4: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T14 :: The patient reports severe pains in their legs.
+  - CAP38: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=6 months turns=T26 :: The patient's leg pain has worsened.
+  - CAP12: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T28 :: The patient reports leg pain.
+  - CAP16: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T83 :: The patient reports leg pain.
+  - CAP11: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T95 :: The patient reports bilateral leg pain.
+- shortness of breath | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T18
+  Summary: The patient reports experiencing shortness of breath.
+  ClusterId: CL5
+  TemporalProfile: current
+  Updates:
+  - CAP6: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T18 :: The patient reports experiencing shortness of breath.
+  - CAP9: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T18 :: The patient experiences shortness of breath.
+- fatigue | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T20,T48
+  Summary: The patient reports feeling overly tired.
+  ClusterId: CL6
+  TemporalProfile: current
+  Updates:
+  - CAP18: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T20 :: The patient feels fatigued.
+  - CAP10: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T48 :: The patient reports feeling overly tired.
+- walking intolerance | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T20,T22,T24
+  Summary: The patient reports walking intolerance.
+  ClusterId: CL7
+  TemporalProfile: current
+  Updates:
+  - CAP35: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T20,T20,T22,T24 :: The patient reports walking intolerance.
+- peripheral neuropathy | verification_status=unconfirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T26
+  Summary: The patient has peripheral neuropathy.
+  ClusterId: CL8
+  TemporalProfile: current
+  Updates:
+  - CAP13: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=current turns=T26 :: The patient has peripheral neuropathy.
+- dizziness | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T32,T62,T66
+  Summary: The patient reports feeling lightheaded or dizzy.
+  ClusterId: CL10
+  TemporalProfile: current
+  Updates:
+  - CAP7: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T32 :: The patient reports feeling lightheaded or dizzy.
+  - CAP14: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T62 :: The patient is feeling dizziness.
+  - CAP15: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T66 :: The patient reports feeling dizzy.
+- surgeries | verification_status=unconfirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T34
+  Summary: The patient has had multiple surgeries.
+  ClusterId: CL11
+  TemporalProfile: multiple
+  Updates:
+  - CAP39: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=multiple turns=T34 :: The patient has had multiple surgeries.
+- medication side effects | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T48
+  Summary: The patient reports feeling overly tired because they take a lot of medication.
+  ClusterId: CL12
+  TemporalProfile: current
+  Updates:
+  - CAP1: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T48 :: The patient reports feeling overly tired because they take a lot of medication.
+- heart attack | verification_status=unconfirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T56
+  Summary: The patient's son had a heart attack.
+  ClusterId: CL13
+  TemporalProfile: past
+  Updates:
+  - CAP37: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=past turns=T56 :: The patient's son had a heart attack.
+- family history of heart problems | verification_status=unconfirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T58
+  Summary: The patient's family has a history of heart problems.
+  ClusterId: CL14
+  TemporalProfile: family history
+  Updates:
+  - CAP36: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=family history turns=T58 :: The patient's family has a history of heart problems.
+- sugar diabetes | verification_status=unconfirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T58
+  Summary: The patient's brother had sugar diabetes.
+  ClusterId: CL15
+  TemporalProfile: past
+  Updates:
+  - CAP40: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=past turns=T58 :: The patient's brother had sugar diabetes.
+- stroke | verification_status=unconfirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T58
+  Summary: The patient's brother had a stroke.
+  ClusterId: CL16
+  TemporalProfile: past
+  Updates:
+  - CAP41: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=past turns=T58 :: The patient's brother had a stroke.
+- left hand pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T60
+  Summary: The patient reports pain in the left hand.
+  ClusterId: CL17
+  TemporalProfile: current
+  Updates:
+  - CAP5: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T60 :: The patient reports pain in the left hand.
+- no allergies | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T60
+  Summary: The patient reports no known allergies.
+  ClusterId: CL18
+  TemporalProfile: current
+  Updates:
+  - CAP42: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T60 :: The patient reports no known allergies.
+- aortic stenosis | verification_status=unconfirmed | clinical_status=historical | modalities=assessment | speakers=doctor | evidence=T93
+  Summary: The doctor suspects aortic stenosis.
+  ClusterId: CL26
+  TemporalProfile: past
+  Updates:
+  - CAP17: content_source=doctor modality=assessment verification_status=unconfirmed clinical_status=historical temporality=past turns=T93 :: The doctor suspects aortic stenosis.
+- pvcs | verification_status=unconfirmed | clinical_status=active | modalities=assessment | speakers=doctor | evidence=T94
+  Summary: The doctor assesses pvcs.
+  ClusterId: CL27
+  TemporalProfile: current
+  Updates:
+  - CAP19: content_source=doctor modality=assessment verification_status=unconfirmed clinical_status=active temporality=current turns=T94 :: The doctor assesses pvcs.
+- hypolipidemia | verification_status=unconfirmed | clinical_status=active | modalities=assessment | speakers=doctor | evidence=T95
+  Summary: The doctor assesses hypolipidemia.
+  ClusterId: CL28
+  TemporalProfile: current
+  Updates:
+  - CAP20: content_source=doctor modality=assessment verification_status=unconfirmed clinical_status=active temporality=current turns=T95 :: The doctor assesses hypolipidemia.
+- lightheadedness | verification_status=unconfirmed | clinical_status=active | modalities=assessment | speakers=doctor | evidence=T96
+  Summary: The doctor assesses lightheadedness.
+  ClusterId: CL30
+  TemporalProfile: current
+  Updates:
+  - CAP21: content_source=doctor modality=assessment verification_status=unconfirmed clinical_status=active temporality=current turns=T96 :: The doctor assesses lightheadedness.
+
+Medication Tracking
+- [MedicationChange] pain pills | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T16
+  Summary: The patient started taking pain pills for their legs.
+  ClusterId: CL4
+  TemporalProfile: current
+  PlannedChanges:
+  - The patient started taking pain pills for their legs. (T16)
+  Updates:
+  - CAP28: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T16 :: The patient started taking pain pills for their legs.
+- [MedicationState] pill | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T30
+  Summary: The patient does not take the pill every day.
+  ClusterId: CL9
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient does not take the pill every day. (T30)
+  - The patient takes a pill for dizziness. (T30)
+  Updates:
+  - CAP29: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T30 :: The patient does not take the pill every day.
+  - CAP30: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T30 :: The patient takes a pill for dizziness.
+- [MedicationChange] echocardiogram | verification_status=confirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T69
+  Summary: The doctor will order an echocardiogram.
+  ClusterId: CL20
+  TemporalProfile: today
+  PlannedChanges:
+  - The doctor will order an echocardiogram. (T69)
+  Updates:
+  - CAP24: content_source=doctor modality=plan verification_status=confirmed clinical_status=planned temporality=today turns=T69 :: The doctor will order an echocardiogram.
+- [MedicationState] amlodipine | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=doctor | evidence=T81
+  Summary: The patient is currently taking amlodipine.
+  ClusterId: CL21
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient is currently taking amlodipine. (T81)
+  Updates:
+  - CAP31: content_source=doctor modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T81 :: The patient is currently taking amlodipine.
+- [MedicationState] lisinopril | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=doctor | evidence=T81
+  Summary: The patient is currently taking lisinopril.
+  ClusterId: CL22
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient is currently taking lisinopril. (T81)
+  Updates:
+  - CAP32: content_source=doctor modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T81 :: The patient is currently taking lisinopril.
+- [MedicationState] simvastatin | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=doctor | evidence=T83
+  Summary: The patient is currently taking simvastatin.
+  ClusterId: CL23
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient is currently taking simvastatin. (T83)
+  Updates:
+  - CAP33: content_source=doctor modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T83 :: The patient is currently taking simvastatin.
+- [MedicationState] meclizine | verification_status=confirmed | clinical_status=active | modalities=plan | speakers=doctor | evidence=T96
+  Summary: The doctor prescribes meclizine.
+  ClusterId: CL31
+  TemporalProfile: current
+  CurrentRegimens:
+  - The doctor prescribes meclizine. (T96)
+  Updates:
+  - CAP34: content_source=doctor modality=plan verification_status=confirmed clinical_status=active temporality=current turns=T96 :: The doctor prescribes meclizine.
+
+Other Structured States
+- [Plan] echocardiogram | verification_status=unconfirmed | clinical_status=planned | modalities=interview,plan | speakers=doctor | evidence=T69,T85,T94
+  Summary: The doctor will schedule the patient for an echocardiogram.
+  ClusterId: CL19
+  TemporalProfile: future, today
+- [Plan] statins | verification_status=unconfirmed | clinical_status=planned | modalities=interview | speakers=doctor | evidence=T85
+  Summary: The doctor will defer to the PCP regarding statin use.
+  ClusterId: CL24
+  TemporalProfile: future
+- [Plan] statin discussion | verification_status=unconfirmed | clinical_status=planned | modalities=interview | speakers=doctor | evidence=T85
+  Summary: The doctor will discuss statin use with the PCP.
+  ClusterId: CL25
+  TemporalProfile: future
+- [Plan] statin | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T95
+  Summary: The doctor considers a statin.
+  ClusterId: CL29
+  TemporalProfile: future

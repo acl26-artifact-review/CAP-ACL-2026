@@ -1,0 +1,63 @@
+Case: D2N107
+
+Problem List and Visit State Tracking
+
+Problem List
+- pins and needles | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T1
+  Summary: The patient reports pins and needles in their right foot.
+  ClusterId: CL1
+  TemporalProfile: current
+  Updates:
+  - CAP4: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T1 :: The patient reports pins and needles in their right foot.
+- low back pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T11,T13,T16,T2,T23,T26,T3,T39
+  Summary: The patient has low back pain.
+  ClusterId: CL2
+  TemporalProfile: current, long term, three years ago
+  Updates:
+  - CAP10: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T2 :: The patient reports back pain.
+  - CAP17: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=three years ago turns=T3 :: The patient had back pain three years ago.
+  - CAP2: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T11,T13 :: The patient reports pain when bending over.
+  - CAP6: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T13 :: The patient reports pain when his partner stands up.
+  - CAP12: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T13 :: The patient reports pain.
+  - CAP1: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T13,T13,T13 :: The patient has low back pain.
+  - CAP5: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T16 :: The patient reports pain to palpation around the L5 vertebra.
+  - CAP7: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T23 :: The patient reports high pain in his right hand.
+  - CAP8: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T23 :: The patient reports severe pain in his back.
+  - CAP18: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=long term turns=T26 :: The patient has a history of back pain.
+  - CAP3: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T39 :: The patient reports the pain has been hurting for six hours.
+- injury | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T24
+  Summary: The patient suspects an injury.
+  ClusterId: CL4
+  TemporalProfile: current
+  Updates:
+  - CAP11: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T24 :: The patient suspects an injury.
+- surgery | verification_status=unconfirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T39
+  Summary: The patient states he had surgery yesterday.
+  ClusterId: CL7
+  TemporalProfile: yesterday
+  Updates:
+  - CAP9: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=yesterday turns=T39 :: The patient states he had surgery yesterday.
+
+Medication Tracking
+- [MedicationState] ibuprofen | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T5
+  Summary: The patient took two Advils.
+  ClusterId: CL3
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient took two Advils. (T5)
+  Updates:
+  - CAP16: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T5 :: The patient took two Advils.
+
+Other Structured States
+- [Plan] physical therapy | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T36
+  Summary: The doctor prescribes physical therapy.
+  ClusterId: CL5
+  TemporalProfile: future
+- [Plan] mri | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T36
+  Summary: The doctor orders an MRI.
+  ClusterId: CL6
+  TemporalProfile: future
+- [TestResult] mri | verification_status=unconfirmed | clinical_status=planned | modalities=test_result | speakers=patient | evidence=T40
+  Summary: The patient requests an MRI.
+  ClusterId: CL8
+  TemporalProfile: future

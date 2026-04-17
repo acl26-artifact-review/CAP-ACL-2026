@@ -1,0 +1,30 @@
+{
+  "section_miscategorizations": [
+    {
+      "text": "He reports chills and a fever.",
+      "current_section": "History of Present Illness",
+      "expected_section": "History of Present Illness",
+      "severity": "minor",
+      "reason": "This sentence conflicts with the earlier denial of fever in the same HPI, but it is still symptom history and belongs in HPI; the issue is internal inconsistency, not section misplacement."
+    },
+    {
+      "text": "The patient reports chills.",
+      "current_section": "Findings",
+      "expected_section": "History of Present Illness",
+      "severity": "major",
+      "reason": "Chills are a patient-reported symptom, not an exam or objective finding; placing this in Findings could mislead a reader into interpreting it as an observed sign rather than subjective history."
+    },
+    {
+      "text": "The doctor ordered a complete blood count.",
+      "current_section": "Plan",
+      "expected_section": "Plan",
+      "severity": "minor",
+      "reason": "This duplicates the prior plan statement 'Order a complete blood count.' While still a plan element, the past-tense phrasing may suggest it already occurred; however, it does not clearly belong to another section."
+    }
+  ],
+  "summary_statistics": {
+    "section_appropriateness_score": 0.8,
+    "section_miscategorization_count": 3,
+    "major_section_miscategorization_count": 1
+  }
+}

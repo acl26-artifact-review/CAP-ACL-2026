@@ -1,0 +1,30 @@
+{
+  "section_miscategorizations": [
+    {
+      "text": "The patient reports limited respiratory function.",
+      "current_section": "O",
+      "expected_section": "S",
+      "severity": "major",
+      "reason": "This is a patient-reported symptom and belongs in the Subjective section, not Objective findings."
+    },
+    {
+      "text": "The patient drinks Miralax daily.",
+      "current_section": "P",
+      "expected_section": "S",
+      "severity": "major",
+      "reason": "This describes an existing medication regimen, not a new order or change, so it belongs in the Subjective section as current medication use."
+    },
+    {
+      "text": "The patient is unvaccinated.",
+      "current_section": "P",
+      "expected_section": "S",
+      "severity": "minor",
+      "reason": "Vaccination status is part of the patient's history/status rather than an explicit management action; it fits better in Subjective but its placement in Plan is not highly misleading."
+    }
+  ],
+  "summary_statistics": {
+    "section_appropriateness_score": 0.6,
+    "section_miscategorization_count": 3,
+    "major_section_miscategorization_count": 2
+  }
+}

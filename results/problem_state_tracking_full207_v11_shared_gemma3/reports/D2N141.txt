@@ -1,0 +1,93 @@
+Case: D2N141
+
+Problem List and Visit State Tracking
+
+Problem List
+- cognitive impairment | verification_status=confirmed | clinical_status=resolved | modalities=assessment,interview | speakers=doctor,patient | evidence=T1,T17,T19,T47
+  Summary: The doctor diagnoses cognitive impairment.
+  ClusterId: CL1
+  TemporalProfile: current, past, progressive
+  Updates:
+  - CAP7: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=progressive turns=T1 :: The patient reports cognitive impairment.
+  - CAP1: content_source=patient modality=interview verification_status=refuted clinical_status=resolved temporality=past turns=T19,T17 :: The patient feels like he can have a normal conversation with others again.
+  - CAP13: content_source=doctor modality=assessment verification_status=confirmed clinical_status=active temporality=current turns=T47 :: The doctor diagnoses cognitive impairment.
+- gait impairment | verification_status=confirmed | clinical_status=active | modalities=assessment,interview | speakers=doctor,patient | evidence=T1,T47
+  Summary: The doctor diagnoses gait impairment.
+  ClusterId: CL2
+  TemporalProfile: current, progressive
+  Updates:
+  - CAP5: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=progressive turns=T1 :: The patient reports progressive gait impairment.
+  - CAP12: content_source=doctor modality=assessment verification_status=confirmed clinical_status=active temporality=current turns=T47 :: The doctor diagnoses gait impairment.
+- pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T11,T3
+  Summary: The patient reports pain in the left hand.
+  ClusterId: CL3
+  TemporalProfile: current
+  Updates:
+  - CAP14: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T3 :: The patient reports pain.
+  - CAP4: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T11 :: The patient reports pain in the left hand.
+- bladder control issues | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T3
+  Summary: The patient reports decreased bladder control.
+  ClusterId: CL4
+  TemporalProfile: decreased
+  Updates:
+  - CAP6: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=decreased turns=T3 :: The patient reports decreased bladder control.
+- headache | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T11,T27
+  Summary: The patient denies headaches.
+  ClusterId: CL5
+  TemporalProfile: current, past
+  Updates:
+  - CAP15: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=past turns=T11 :: The patient denies headaches.
+  - CAP16: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T27 :: The patient reports headaches.
+- bladder control | verification_status=confirmed | clinical_status=stable | modalities=interview | speakers=patient | evidence=T12
+  Summary: The patient is wearing diapers.
+  ClusterId: CL6
+  TemporalProfile: current
+  Updates:
+  - CAP8: content_source=patient modality=interview verification_status=confirmed clinical_status=stable temporality=current turns=T12 :: The patient is wearing diapers.
+- blood fluid collection | verification_status=unconfirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T25
+  Summary: There is a blood fluid collection in the right parietal region.
+  ClusterId: CL7
+  TemporalProfile: past
+  Updates:
+  - CAP3: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=past turns=T25 :: There is a blood fluid collection in the right parietal region.
+- mobility impairment | verification_status=unconfirmed | clinical_status=historical | modalities=assessment | speakers=doctor | evidence=T30
+  Summary: The doctor believes Mr. Watson's movement speed will likely not improve to the level needed for a driver safety evaluation.
+  ClusterId: CL9
+  TemporalProfile: past
+  Updates:
+  - CAP2: content_source=doctor modality=assessment verification_status=unconfirmed clinical_status=historical temporality=past turns=T30 :: The doctor believes Mr. Watson's movement speed will likely not improve to the level needed for a driver safety evaluation.
+- urgent urination | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T37
+  Summary: The patient reports urgent urination.
+  ClusterId: CL12
+  TemporalProfile: current
+  Updates:
+  - CAP10: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T37 :: The patient reports urgent urination.
+- urinary incontinence | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T42
+  Summary: The patient reports urinary incontinence.
+  ClusterId: CL13
+  TemporalProfile: current
+  Updates:
+  - CAP9: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T42 :: The patient reports urinary incontinence.
+- adult hydrocephalus | verification_status=confirmed | clinical_status=active | modalities=assessment | speakers=doctor | evidence=T47
+  Summary: The doctor diagnoses adult hydrocephalus.
+  ClusterId: CL14
+  TemporalProfile: current
+  Updates:
+  - CAP11: content_source=doctor modality=assessment verification_status=confirmed clinical_status=active temporality=current turns=T47 :: The doctor diagnoses adult hydrocephalus.
+
+Medication Tracking
+- None
+
+Other Structured States
+- [Plan] shunt | verification_status=confirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T27
+  Summary: The shunt should be left for another two to three months.
+  ClusterId: CL8
+  TemporalProfile: future
+- [Plan] driver safety program | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T34
+  Summary: The doctor recommends Mr. Watson enroll in a driver safety program.
+  ClusterId: CL10
+  TemporalProfile: future
+- [Plan] follow-up | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T34
+  Summary: The doctor recommends a follow-up in three months.
+  ClusterId: CL11
+  TemporalProfile: 3 months

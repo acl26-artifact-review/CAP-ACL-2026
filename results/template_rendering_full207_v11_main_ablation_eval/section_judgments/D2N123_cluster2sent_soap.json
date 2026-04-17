@@ -1,0 +1,30 @@
+{
+  "section_miscategorizations": [
+    {
+      "text": "Blood pressure is 120/50 mmHg at the office and occasionally higher at home.",
+      "current_section": "O",
+      "expected_section": "O and S",
+      "severity": "minor",
+      "reason": "The office blood pressure is an observed, clinician-measured vital (Objective), but the description that it is 'occasionally higher at home' reflects patient-reported home measurements (Subjective). Combining both in O is a mild organizational issue but not misleading."
+    },
+    {
+      "text": "The patient's blood sugar levels are within the target range.",
+      "current_section": "O",
+      "expected_section": "O or S",
+      "severity": "minor",
+      "reason": "If this refers to home glucose readings reported by the patient, it belongs in S; if it refers to in-office or lab measurements, it belongs in O. The wording is ambiguous, so its placement in O is only a minor potential miscategorization."
+    },
+    {
+      "text": "The doctor continues the patient on metformin.",
+      "current_section": "P",
+      "expected_section": "P",
+      "severity": "minor",
+      "reason": "Although metformin is a current medication, the explicit decision to continue it is a management action and appropriately belongs in the Plan section."
+    }
+  ],
+  "summary_statistics": {
+    "section_appropriateness_score": 0.9,
+    "section_miscategorization_count": 3,
+    "major_section_miscategorization_count": 0
+  }
+}

@@ -1,0 +1,413 @@
+{
+  "case_id": "D2N049",
+  "annotator": "A",
+  "seed_gold_caps": [
+    {
+      "gold_id": "G1",
+      "fact_text": "The patient is experiencing severe left back pain that began about three days ago and has been continuous since onset.",
+      "category": "Symptom",
+      "speaker": "patient",
+      "temporality": "current",
+      "certainty": "high",
+      "provenance_sentence": "1,3,5,7,9"
+    },
+    {
+      "gold_id": "G2",
+      "fact_text": "The patient's pain has migrated from the left back to a lower area and is now radiating toward the groin.",
+      "category": "Symptom",
+      "speaker": "patient",
+      "temporality": "current",
+      "certainty": "high",
+      "provenance_sentence": "5,49"
+    },
+    {
+      "gold_id": "G3",
+      "fact_text": "The patient reports not having passed the suspected kidney stone yet.",
+      "category": "Symptom",
+      "speaker": "patient",
+      "temporality": "current",
+      "certainty": "high",
+      "provenance_sentence": "5"
+    },
+    {
+      "gold_id": "G4",
+      "fact_text": "The patient is able to urinate.",
+      "category": "Symptom",
+      "speaker": "patient",
+      "temporality": "current",
+      "certainty": "high",
+      "provenance_sentence": "10-11"
+    },
+    {
+      "gold_id": "G5",
+      "fact_text": "The patient noticed blood in the urine starting this morning.",
+      "category": "Symptom",
+      "speaker": "patient",
+      "temporality": "current",
+      "certainty": "high",
+      "provenance_sentence": "11"
+    },
+    {
+      "gold_id": "G6",
+      "fact_text": "The patient has a history of recurrent kidney stones, with this episode likely being the third.",
+      "category": "Past Medical History",
+      "speaker": "patient",
+      "temporality": "unknown",
+      "certainty": "high",
+      "provenance_sentence": "0,12-13,15"
+    },
+    {
+      "gold_id": "G7",
+      "fact_text": "In prior episodes, the patient's kidney stones usually passed within about three to four days.",
+      "category": "Past Medical History",
+      "speaker": "patient",
+      "temporality": "past",
+      "certainty": "high",
+      "provenance_sentence": "20-21"
+    },
+    {
+      "gold_id": "G8",
+      "fact_text": "This is approximately the third day of the current kidney stone episode.",
+      "category": "Symptom",
+      "speaker": "clinician",
+      "temporality": "current",
+      "certainty": "high",
+      "provenance_sentence": "1,21-23"
+    },
+    {
+      "gold_id": "G9",
+      "fact_text": "The patient reports chills without fever.",
+      "category": "Symptom",
+      "speaker": "patient",
+      "temporality": "current",
+      "certainty": "high",
+      "provenance_sentence": "16-17"
+    },
+    {
+      "gold_id": "G10",
+      "fact_text": "The patient denies fever.",
+      "category": "Review of Systems",
+      "speaker": "patient",
+      "temporality": "current",
+      "certainty": "high",
+      "provenance_sentence": "16-17"
+    },
+    {
+      "gold_id": "G11",
+      "fact_text": "The patient reports decreased appetite and inability to eat due to pain.",
+      "category": "Symptom",
+      "speaker": "patient",
+      "temporality": "current",
+      "certainty": "high",
+      "provenance_sentence": "17"
+    },
+    {
+      "gold_id": "G12",
+      "fact_text": "The patient feels a little nauseous.",
+      "category": "Symptom",
+      "speaker": "patient",
+      "temporality": "current",
+      "certainty": "high",
+      "provenance_sentence": "17"
+    },
+    {
+      "gold_id": "G13",
+      "fact_text": "The patient has tried acetaminophen (Tylenol) for pain without adequate relief.",
+      "category": "Medication",
+      "speaker": "patient",
+      "temporality": "unknown",
+      "certainty": "high",
+      "provenance_sentence": "19"
+    },
+    {
+      "gold_id": "G14",
+      "fact_text": "The patient has taken ibuprofen for pain despite prior advice to be cautious because of blood pressure.",
+      "category": "Medication",
+      "speaker": "patient",
+      "temporality": "unknown",
+      "certainty": "high",
+      "provenance_sentence": "19"
+    },
+    {
+      "gold_id": "G15",
+      "fact_text": "The patient reports that Tylenol and ibuprofen have not been effective for her pain.",
+      "category": "Symptom",
+      "speaker": "patient",
+      "temporality": "current",
+      "certainty": "high",
+      "provenance_sentence": "19"
+    },
+    {
+      "gold_id": "G16",
+      "fact_text": "The patient has a past medical history of hypertension.",
+      "category": "Past Medical History",
+      "speaker": "clinician",
+      "temporality": "unknown",
+      "certainty": "high",
+      "provenance_sentence": "0"
+    },
+    {
+      "gold_id": "G17",
+      "fact_text": "The patient has a past medical history of diabetes.",
+      "category": "Past Medical History",
+      "speaker": "clinician",
+      "temporality": "unknown",
+      "certainty": "high",
+      "provenance_sentence": "0"
+    },
+    {
+      "gold_id": "G18",
+      "fact_text": "The patient is currently taking amlodipine (Norvasc) 2.5 mg for hypertension.",
+      "category": "Medication",
+      "speaker": "clinician",
+      "temporality": "current",
+      "certainty": "high",
+      "provenance_sentence": "26"
+    },
+    {
+      "gold_id": "G19",
+      "fact_text": "The patient's blood pressure was a little high at today's visit, likely related to pain per clinician assessment.",
+      "category": "Finding",
+      "speaker": "clinician",
+      "temporality": "current",
+      "certainty": "medium",
+      "provenance_sentence": "26"
+    },
+    {
+      "gold_id": "G20",
+      "fact_text": "The patient obtained a home blood pressure cuff but has not been consistently checking blood pressure.",
+      "category": "Lifestyle",
+      "speaker": "patient",
+      "temporality": "unknown",
+      "certainty": "high",
+      "provenance_sentence": "26-27"
+    },
+    {
+      "gold_id": "G21",
+      "fact_text": "Recent home systolic blood pressure readings have usually been in the 130s, sometimes in the 140s, and once around 150.",
+      "category": "Finding",
+      "speaker": "patient",
+      "temporality": "past",
+      "certainty": "high",
+      "provenance_sentence": "29"
+    },
+    {
+      "gold_id": "G22",
+      "fact_text": "Recent home diastolic blood pressure readings have been between 70 and 80.",
+      "category": "Finding",
+      "speaker": "patient",
+      "temporality": "past",
+      "certainty": "high",
+      "provenance_sentence": "31"
+    },
+    {
+      "gold_id": "G23",
+      "fact_text": "At the time of initial hypertension diagnosis, the patient's systolic blood pressure was in the 180s.",
+      "category": "Past Medical History",
+      "speaker": "clinician",
+      "temporality": "past",
+      "certainty": "high",
+      "provenance_sentence": "31-33"
+    },
+    {
+      "gold_id": "G24",
+      "fact_text": "The clinician counseled the patient to lower salt intake to about 2300 mg per day.",
+      "category": "Counseling",
+      "speaker": "clinician",
+      "temporality": "unknown",
+      "certainty": "high",
+      "provenance_sentence": "34"
+    },
+    {
+      "gold_id": "G25",
+      "fact_text": "The patient is trying to reduce salt intake but continues to frequently eat French fries.",
+      "category": "Lifestyle",
+      "speaker": "patient",
+      "temporality": "unknown",
+      "certainty": "high",
+      "provenance_sentence": "34-35"
+    },
+    {
+      "gold_id": "G26",
+      "fact_text": "The clinician discussed the risk of stroke in relation to unhealthy diet and high salt intake.",
+      "category": "Education",
+      "speaker": "clinician",
+      "temporality": "current",
+      "certainty": "high",
+      "provenance_sentence": "38"
+    },
+    {
+      "gold_id": "G27",
+      "fact_text": "The patient would like help with improving diet and curbing unhealthy food habits.",
+      "category": "Lifestyle",
+      "speaker": "patient",
+      "temporality": "future",
+      "certainty": "high",
+      "provenance_sentence": "38-39"
+    },
+    {
+      "gold_id": "G28",
+      "fact_text": "The clinician plans to connect the patient with someone to help with diet.",
+      "category": "Plan",
+      "speaker": "clinician",
+      "temporality": "future",
+      "certainty": "high",
+      "provenance_sentence": "39"
+    },
+    {
+      "gold_id": "G29",
+      "fact_text": "At the last visit, the patient's hemoglobin A1c was 7.3%.",
+      "category": "Test Result",
+      "speaker": "clinician",
+      "temporality": "past",
+      "certainty": "high",
+      "provenance_sentence": "40"
+    },
+    {
+      "gold_id": "G30",
+      "fact_text": "The patient is currently taking metformin 500 mg for diabetes.",
+      "category": "Medication",
+      "speaker": "clinician",
+      "temporality": "current",
+      "certainty": "high",
+      "provenance_sentence": "40,43,45"
+    },
+    {
+      "gold_id": "G31",
+      "fact_text": "The patient has been checking blood sugars before eating every day.",
+      "category": "Lifestyle",
+      "speaker": "patient",
+      "temporality": "unknown",
+      "certainty": "high",
+      "provenance_sentence": "40-41"
+    },
+    {
+      "gold_id": "G32",
+      "fact_text": "Recent home blood glucose readings before meals have been in the low 100s.",
+      "category": "Test Result",
+      "speaker": "patient",
+      "temporality": "past",
+      "certainty": "high",
+      "provenance_sentence": "41"
+    },
+    {
+      "gold_id": "G33",
+      "fact_text": "A few months ago, an in-clinic glucose test showed a level around 300 mg/dL.",
+      "category": "Test Result",
+      "speaker": "clinician",
+      "temporality": "past",
+      "certainty": "high",
+      "provenance_sentence": "42"
+    },
+    {
+      "gold_id": "G34",
+      "fact_text": "The patient reports taking metformin every day.",
+      "category": "Medication",
+      "speaker": "patient",
+      "temporality": "unknown",
+      "certainty": "high",
+      "provenance_sentence": "43,45"
+    },
+    {
+      "gold_id": "G35",
+      "fact_text": "The patient denies chest pain.",
+      "category": "Review of Systems",
+      "speaker": "patient",
+      "temporality": "current",
+      "certainty": "high",
+      "provenance_sentence": "46-47"
+    },
+    {
+      "gold_id": "G36",
+      "fact_text": "The patient denies abdominal pain, though back pain is radiating into the groin.",
+      "category": "Review of Systems",
+      "speaker": "patient",
+      "temporality": "current",
+      "certainty": "high",
+      "provenance_sentence": "48-49"
+    },
+    {
+      "gold_id": "G37",
+      "fact_text": "On cardiac exam, there is a grade 2/6 systolic ejection murmur, previously known and not currently concerning to the clinician.",
+      "category": "Physical Exam",
+      "speaker": "clinician",
+      "temporality": "current",
+      "certainty": "high",
+      "provenance_sentence": "50"
+    },
+    {
+      "gold_id": "G38",
+      "fact_text": "On lung exam, the patient's lungs are clear bilaterally without crackles or wheezes.",
+      "category": "Physical Exam",
+      "speaker": "clinician",
+      "temporality": "current",
+      "certainty": "high",
+      "provenance_sentence": "50"
+    },
+    {
+      "gold_id": "G39",
+      "fact_text": "The patient has abdominal tenderness to palpation without rebound or guarding.",
+      "category": "Physical Exam",
+      "speaker": "clinician",
+      "temporality": "current",
+      "certainty": "high",
+      "provenance_sentence": "50-51,54"
+    },
+    {
+      "gold_id": "G40",
+      "fact_text": "The patient has back tenderness on exam.",
+      "category": "Physical Exam",
+      "speaker": "clinician",
+      "temporality": "current",
+      "certainty": "high",
+      "provenance_sentence": "52-53"
+    },
+    {
+      "gold_id": "G41",
+      "fact_text": "There is costovertebral angle tenderness on the right flank.",
+      "category": "Physical Exam",
+      "speaker": "clinician",
+      "temporality": "current",
+      "certainty": "high",
+      "provenance_sentence": "54"
+    },
+    {
+      "gold_id": "G42",
+      "fact_text": "The clinician assesses that the patient currently has a kidney stone with associated inflammation around the kidney.",
+      "category": "Assessment",
+      "speaker": "clinician",
+      "temporality": "current",
+      "certainty": "high",
+      "provenance_sentence": "54"
+    },
+    {
+      "gold_id": "G43",
+      "fact_text": "The clinician will prescribe oxycodone 5 mg every 6 to 8 hours as needed for pain.",
+      "category": "MedicationPlan",
+      "speaker": "clinician",
+      "temporality": "future",
+      "certainty": "high",
+      "provenance_sentence": "54"
+    },
+    {
+      "gold_id": "G44",
+      "fact_text": "The clinician advises the patient to continue taking Tylenol for breakthrough pain.",
+      "category": "MedicationPlan",
+      "speaker": "clinician",
+      "temporality": "future",
+      "certainty": "high",
+      "provenance_sentence": "54"
+    },
+    {
+      "gold_id": "G45",
+      "fact_text": "The clinician instructs the patient to increase fluid intake to help pass the kidney stone and clear the kidneys.",
+      "category": "Plan",
+      "speaker": "clinician",
+      "temporality": "future",
+      "certainty": "high",
+      "provenance_sentence": "54"
+    }
+  ],
+  "generator_model": "gpt-5.1",
+  "generated_at": "2026-04-11T08:59:52.937034+00:00"
+}

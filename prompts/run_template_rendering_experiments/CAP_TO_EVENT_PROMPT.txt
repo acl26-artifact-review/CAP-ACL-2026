@@ -1,0 +1,112 @@
+You are an expert clinical content planner.
+
+Convert the Clinical Atomic Propositions (CAPs) into a compact dialogue-aware problem-oriented care bundle plan.
+
+[Goal]
+- Group related CAPs into clinically coherent problem-oriented care bundles.
+- Separate content planning from note rendering.
+- Preserve negation, temporality, uncertainty, medication changes, and follow-up intent.
+- Make the resulting structure useful for note rendering, problem-linked action grouping, and auditability.
+
+[Care Bundle Framing]
+- Each event should behave like a problem-oriented care bundle rather than a raw dialogue cluster.
+- The bundle should identify an anchor problem and organize linked evidence, current state, planned actions, and care context.
+- This abstraction is inspired by FHIR workflow semantics such as Condition, Observation, MedicationStatement, MedicationRequest, ServiceRequest, and CarePlan.
+- Do not attempt strict FHIR resource extraction. Produce a dialogue-grounded planning abstraction.
+
+[Event Types]
+- ChiefComplaint
+- SymptomCourse
+- PMH
+- MedicationState
+- MedicationChange
+- ExamFinding
+- TestResult
+- DiagnosisImpression
+- PlanOrder
+- FollowUp
+- PatientInstruction
+
+[Status Values]
+- affirmed
+- negated
+- uncertain
+
+[Temporality Values]
+- past
+- current
+- future
+- relative
+
+[Speaker Source Values]
+- patient
+- clinician
+- test_result
+- mixed
+
+[Clinical Priority Values]
+- high
+- medium
+- low
+
+[Rules]
+1. Construct one-stage problem-oriented note bundles rather than free-form event summaries.
+2. Each bundle must be centered on a single active problem or diagnostic concern.
+3. Anchor eligibility is narrow:
+   - allowed: ChiefComplaint, Problem
+   - optionally allowed: Diagnosis, Impression
+   - disallowed: ProblemHistory, MedicationStatement, ExamFinding, TestResult, Order, FollowUp, Counseling, Allergy
+4. Use pointer-style assignments whenever possible:
+   - anchor_problem_cap_id
+   - S_cap_ids
+   - O_cap_ids
+   - A_cap_ids
+   - P_cap_ids
+   - global_cap_ids
+5. Slot rules:
+   - S_caps: patient-reported symptoms, ROS, symptom course, patient-reported medication use
+   - O_caps: exam findings, test results, quantified vitals, clinician-observed abnormalities
+   - A_caps: diagnostic impressions, problem summaries, clinically interpreted state
+   - P_caps: medication changes, orders, referrals, follow-up, counseling
+   - global_caps: PMH, allergies, family history, social history, stable background medications, screening history
+6. Each CAP may attach to at most one anchor bundle.
+7. If no anchor fit is clear, send the CAP to global_cap_ids rather than inventing a new anchor.
+8. Do not create standalone anchors for labs, orders, referrals, medication changes, allergies, or background history.
+9. Do not over-segment sibling CAPs that describe the same problem.
+10. Return at most {max_events} bundles.
+
+[Output Format]
+Return valid JSON only:
+{{
+  "events": [
+    {{
+      "event_id": "E1",
+      "event_type": "ProblemOrientedNoteBundle",
+      "status": "affirmed",
+      "temporality": "current",
+      "speaker_source": "clinician",
+      "clinical_priority": "high",
+      "title": "Type 2 diabetes",
+      "event_summary": "Problem-oriented bundle for type 2 diabetes.",
+      "supporting_cap_ids": ["P2", "P3", "P4"],
+      "anchor_problem_cap_id": "P2",
+      "anchor_problem": "Type 2 diabetes",
+      "S_cap_ids": ["P3"],
+      "O_cap_ids": [],
+      "A_cap_ids": ["P2"],
+      "P_cap_ids": ["P4"],
+      "global_cap_ids": ["P8"],
+      "supporting_evidence": ["Home glucose readings remain elevated."],
+      "current_state": ["The patient is taking glimepiride 2 mg twice daily."],
+      "planned_actions": ["Increase glimepiride to 4 mg twice daily."],
+      "care_context": ["Continue diet and exercise counseling."],
+      "key_slots": {{
+        "bundle_design": "problem_oriented_note_bundle"
+      }},
+      "render_sections": ["S", "O", "A", "P", "History of Present Illness", "Findings", "Assessment", "Plan"]
+    }}
+  ]
+}}
+
+[Clinical Atomic Propositions]
+{cap_lines}

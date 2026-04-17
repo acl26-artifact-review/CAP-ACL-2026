@@ -1,0 +1,2421 @@
+{
+  "case_id": "D2N099",
+  "method": "cluster2sent",
+  "template": "sectioned",
+  "summary_text": "Chief Complaint\nReports feeling sick and irritable.\n\nHistory of Present Illness\nRandy has been feeling sick for several days, starting with a runny nose and stuffiness. He also has a low-grade fever and has been irritable. The patient has been using saline mist and humidifier at home. He noticed his cradle cap has worsened and has been using head & shoulder's shampoo. The patient reports no exposure to anyone with COVID-19. He has been given tylenol this morning due to fever and sweating. He has been using Zarbee's for the stuffy nose, and is considering using his sister's medicine for a barky cough.\n\nFindings\nPhysical exam reveals a rectal temperature of 100.3°F. We also had a play date with my nephew, who later tested positive for a sinus infection.\n\nAssessment\nThe patient presents with symptoms consistent with a viral upper respiratory infection.\n\nPlan\nIf the patient starts medication, administer a half teaspoon every five days. Continue fluids, rest, and monitor for a barky cough, which would warrant a half teaspoon of his sister's medicine.",
+  "reference_summary": "CHIEF COMPLAINT\n\nCough, nasal congestion, and rhinorrhea.\n\nHISTORY OF PRESENT ILLNESS\n\nRandy Gutierrez is a 9-month-old male who is being evaluated today for a cough, nasal congestion, and rhinorrhea. He is accompanied by his mother.\n\nSymptoms began yesterday around dinnertime with clear nasal drainage, pulling on his ears bilaterally, and rubbing his nose frequently. He does not have a barky cough or a sore throat. His rectal temperature was 100.3 degrees. The patient did consume a 7 ounce bottle this morning, but mostly denied the next offered bottle and declined cereal. He is irritable and having trouble falling asleep, described “like he is fighting it”.\n\nThe patient has been exposed to an older sister who is sick and a cousin who has a sinus infection.\n\nTreatment has included saline nasal spray, Tylenol, baby Vick's, and a humidifier. When the patient aroused this morning, he was warm to the touch. When his sleeper was removed, he was quite sweaty despite the air conditioner being on.\n\nThe patient's dandruff is also worsening. The only tried treatment is Aveeno shampoo.\n\nSOCIAL HISTORY\n\nOlder sister.\n\nCURRENT MEDICATIONS\n\nTylenol PRN.\n\nPHYSICAL EXAM\n\nTemperature 100.3 degrees.\n\nEars, Eyes, Nose, Throat\nNasal congestion, clear mucus, rhinorrhea. Bilateral pulling of ears, no sore throat or hoarseness.\n\nRespiratory\nPositive for cough.\n\nASSESSMENT\n\n• Viral infection\n• Dandruff\n\nPLAN\n\nViral infection\nThe patient presents with a viral infection and does not need antibiotics currently. I advised continuation of fluids, rest. Additionally, I suggested trying Zarbee’s for children under 1 years old. If a croup cough develops, the patient will receive a 0.5 teaspoon.\n\nI also provided counseling to the mother to avoid giving honey to the patient for his first year of life due to botulism spores.\n\nDandruff\nThe patient is experiencing worsening symptoms of dandruff. I recommended Head and Shoulders shampoo, Selsun Blue, or Nizoral A-D 2 times per week, combined with his usual shampoo. I counseled the mother that she should be careful not to get the shampoo in the patient eyes and to not use the extra strength shampoos. Additionally, he may also use baby oil and a soft brush on the area.\n\nINSTRUCTIONS\n\nReturn in one week for a re-check.",
+  "source_cap": {
+    "atomic_propositions": [
+      {
+        "prop_id": "CAP1",
+        "cap_type": "Problem",
+        "canonical_concept": "bacterial infection",
+        "category": "Problem",
+        "speaker": "doctor",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "future",
+        "proposition_text": "The doctor believes the infection could become bacterial if left untreated."
+      },
+      {
+        "prop_id": "CAP2",
+        "cap_type": "Problem",
+        "canonical_concept": "honey for babies",
+        "category": "Problem",
+        "speaker": "unknown",
+        "status": "uncertain",
+        "visit_state": "historical",
+        "temporality": "current",
+        "proposition_text": "The patient asks if honey should be given to babies."
+      },
+      {
+        "prop_id": "CAP3",
+        "cap_type": "Symptom",
+        "canonical_concept": "bottle consumption",
+        "category": "Symptom",
+        "speaker": "unknown",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient consumed approximately seven ounces from a bottle."
+      },
+      {
+        "prop_id": "CAP4",
+        "cap_type": "Problem",
+        "canonical_concept": "avoid eyes",
+        "category": "Problem",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "planned",
+        "temporality": "ongoing",
+        "proposition_text": "The patient should avoid getting shampoo in his eyes."
+      },
+      {
+        "prop_id": "CAP5",
+        "cap_type": "Problem",
+        "canonical_concept": "cold",
+        "category": "Problem",
+        "speaker": "unknown",
+        "status": "uncertain",
+        "visit_state": "historical",
+        "temporality": "last night",
+        "proposition_text": "The patient started to feel sick last night."
+      },
+      {
+        "prop_id": "CAP6",
+        "cap_type": "Symptom",
+        "canonical_concept": "fever",
+        "category": "Symptom",
+        "speaker": "unknown",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "quantitative",
+          "symptom"
+        ],
+        "proposition_text": "The patient's rectal temperature was 100.3 degrees Fahrenheit."
+      },
+      {
+        "prop_id": "CAP7",
+        "cap_type": "Symptom",
+        "canonical_concept": "barky cough",
+        "category": "Symptom",
+        "speaker": "doctor",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "future",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The doctor is watching for a barky cough."
+      },
+      {
+        "prop_id": "CAP8",
+        "cap_type": "Symptom",
+        "canonical_concept": "left hand pain",
+        "category": "Symptom",
+        "speaker": "unknown",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports pain in the left hand."
+      },
+      {
+        "prop_id": "CAP9",
+        "cap_type": "Symptom",
+        "canonical_concept": "ear pulling",
+        "category": "Symptom",
+        "speaker": "unknown",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient is pulling on his ears."
+      },
+      {
+        "prop_id": "CAP10",
+        "cap_type": "Symptom",
+        "canonical_concept": "barely ate",
+        "category": "Symptom",
+        "speaker": "unknown",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient barely ate the offered cereal."
+      },
+      {
+        "prop_id": "CAP11",
+        "cap_type": "Problem",
+        "canonical_concept": "brush off scales",
+        "category": "Problem",
+        "speaker": "unknown",
+        "status": "affirmed",
+        "visit_state": "planned",
+        "temporality": "ongoing",
+        "proposition_text": "The patient should brush off the scales."
+      },
+      {
+        "prop_id": "CAP12",
+        "cap_type": "Symptom",
+        "canonical_concept": "runny nose",
+        "category": "Symptom",
+        "speaker": "unknown",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports a runny nose."
+      },
+      {
+        "prop_id": "CAP13",
+        "cap_type": "Symptom",
+        "canonical_concept": "nose rubbing",
+        "category": "Symptom",
+        "speaker": "unknown",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient is rubbing his nose."
+      },
+      {
+        "prop_id": "CAP14",
+        "cap_type": "Symptom",
+        "canonical_concept": "difficulty sleeping",
+        "category": "Symptom",
+        "speaker": "unknown",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient is fighting to sleep."
+      },
+      {
+        "prop_id": "CAP15",
+        "cap_type": "Problem",
+        "canonical_concept": "Cradle cap",
+        "category": "Problem",
+        "speaker": "unknown",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "temporal"
+        ],
+        "proposition_text": "The patient's cradle cap is worsening."
+      },
+      {
+        "prop_id": "CAP16",
+        "cap_type": "Symptom",
+        "canonical_concept": "viral infection",
+        "category": "Symptom",
+        "speaker": "unknown",
+        "predicate": "suspects",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient suspects a viral infection."
+      },
+      {
+        "prop_id": "CAP17",
+        "cap_type": "Problem",
+        "canonical_concept": "sinus infection",
+        "category": "Problem",
+        "speaker": "doctor",
+        "predicate": "suspects",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The doctor suspects a sinus infection."
+      },
+      {
+        "prop_id": "CAP18",
+        "cap_type": "Symptom",
+        "canonical_concept": "stuffy",
+        "category": "Symptom",
+        "speaker": "unknown",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports being stuffy."
+      },
+      {
+        "prop_id": "CAP19",
+        "cap_type": "Symptom",
+        "canonical_concept": "cough",
+        "category": "Symptom",
+        "speaker": "unknown",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports a cough."
+      },
+      {
+        "prop_id": "CAP20",
+        "cap_type": "Symptom",
+        "canonical_concept": "decreased appetite",
+        "category": "Symptom",
+        "speaker": "unknown",
+        "predicate": "reports",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports decreased appetite."
+      },
+      {
+        "prop_id": "CAP21",
+        "cap_type": "Symptom",
+        "canonical_concept": "irritable",
+        "category": "Symptom",
+        "speaker": "unknown",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports being irritable."
+      },
+      {
+        "prop_id": "CAP22",
+        "cap_type": "Symptom",
+        "canonical_concept": "warm",
+        "category": "Symptom",
+        "speaker": "unknown",
+        "predicate": "reports",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports feeling warm."
+      },
+      {
+        "prop_id": "CAP23",
+        "cap_type": "Symptom",
+        "canonical_concept": "ear pain",
+        "category": "Symptom",
+        "speaker": "unknown",
+        "predicate": "reports",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports ear pain."
+      },
+      {
+        "prop_id": "CAP24",
+        "cap_type": "Symptom",
+        "canonical_concept": "cradle cap",
+        "category": "Symptom",
+        "speaker": "doctor",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports cradle cap."
+      },
+      {
+        "prop_id": "CAP25",
+        "cap_type": "Symptom",
+        "canonical_concept": "pain",
+        "category": "Symptom",
+        "speaker": "unknown",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports pain."
+      },
+      {
+        "prop_id": "CAP26",
+        "cap_type": "Symptom",
+        "canonical_concept": "irritable",
+        "category": "Symptom",
+        "speaker": "unknown",
+        "predicate": "reports",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports irritability."
+      },
+      {
+        "prop_id": "CAP27",
+        "cap_type": "Symptom",
+        "canonical_concept": "sweating",
+        "category": "Symptom",
+        "speaker": "unknown",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient is sweating."
+      },
+      {
+        "prop_id": "CAP28",
+        "cap_type": "Symptom",
+        "canonical_concept": "sweating",
+        "category": "Symptom",
+        "speaker": "unknown",
+        "predicate": "reports",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports sweating."
+      },
+      {
+        "prop_id": "CAP29",
+        "cap_type": "Symptom",
+        "canonical_concept": "dizziness",
+        "category": "Symptom",
+        "speaker": "unknown",
+        "predicate": "reports",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports dizziness."
+      },
+      {
+        "prop_id": "CAP30",
+        "cap_type": "Order",
+        "canonical_concept": "let us know",
+        "category": "Order",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "planned",
+        "temporality": "ongoing",
+        "claim_type_tags": [
+          "temporal"
+        ],
+        "proposition_text": "The patient should let us know if it keeps getting worse."
+      },
+      {
+        "prop_id": "CAP31",
+        "cap_type": "Order",
+        "canonical_concept": "check out",
+        "category": "Order",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "planned",
+        "temporality": "within six weeks",
+        "proposition_text": "The patient can check out."
+      },
+      {
+        "prop_id": "CAP32",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "honey nut cheerios",
+        "category": "MedicationStatement",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The doctor states that honey nut cheerios contain honey and should not be given to babies."
+      },
+      {
+        "prop_id": "CAP33",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "half a teaspoon",
+        "category": "MedicationStatement",
+        "speaker": "doctor",
+        "predicate": "has",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "five days",
+        "claim_type_tags": [
+          "medication"
+        ],
+        "proposition_text": "The patient should take half a teaspoon of the medication daily for five days."
+      },
+      {
+        "prop_id": "CAP34",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "half a teaspoon",
+        "category": "MedicationStatement",
+        "speaker": "doctor",
+        "status": "uncertain",
+        "visit_state": "planned",
+        "temporality": "future",
+        "proposition_text": "The doctor will give the patient half a teaspoon of sister's medicine."
+      },
+      {
+        "prop_id": "CAP35",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "agave",
+        "category": "MedicationStatement",
+        "speaker": "doctor",
+        "predicate": "recommends",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "plan"
+        ],
+        "proposition_text": "The doctor recommends agave as an alternative to honey for babies."
+      },
+      {
+        "prop_id": "CAP36",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "ibuprofen",
+        "category": "MedicationStatement",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The doctor will give the patient half a teaspoon of ibuprofen."
+      },
+      {
+        "prop_id": "CAP37",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "head & shoulder shampoo",
+        "category": "MedicationStatement",
+        "speaker": "doctor",
+        "predicate": "recommends",
+        "status": "affirmed",
+        "visit_state": "planned",
+        "temporality": "twice per week",
+        "claim_type_tags": [
+          "plan"
+        ],
+        "proposition_text": "The doctor recommends using head & shoulder shampoo twice per week."
+      },
+      {
+        "prop_id": "CAP38",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "selsun blue shampoo",
+        "category": "MedicationStatement",
+        "speaker": "doctor",
+        "predicate": "recommends",
+        "status": "affirmed",
+        "visit_state": "planned",
+        "temporality": "twice per week",
+        "claim_type_tags": [
+          "plan"
+        ],
+        "proposition_text": "The doctor recommends using selsun blue shampoo twice per week."
+      },
+      {
+        "prop_id": "CAP39",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "saline mist",
+        "category": "MedicationStatement",
+        "speaker": "unknown",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient has given saline mist to his child."
+      },
+      {
+        "prop_id": "CAP40",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "nizoral shampoo",
+        "category": "MedicationStatement",
+        "speaker": "doctor",
+        "predicate": "recommends",
+        "status": "affirmed",
+        "visit_state": "planned",
+        "temporality": "twice per week",
+        "claim_type_tags": [
+          "plan"
+        ],
+        "proposition_text": "The doctor recommends using nizoral shampoo twice per week."
+      },
+      {
+        "prop_id": "CAP41",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "sister's medicine",
+        "category": "MedicationStatement",
+        "speaker": "doctor",
+        "status": "uncertain",
+        "visit_state": "planned",
+        "temporality": "future",
+        "proposition_text": "The doctor will give the patient sister's medicine."
+      },
+      {
+        "prop_id": "CAP42",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "Tylenol",
+        "category": "MedicationStatement",
+        "speaker": "unknown",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient gave Tylenol to his child."
+      },
+      {
+        "prop_id": "CAP43",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "ibuprofen",
+        "category": "MedicationStatement",
+        "speaker": "unknown",
+        "status": "affirmed",
+        "visit_state": "planned",
+        "temporality": "future",
+        "proposition_text": "The doctor will give the patient ibuprofen."
+      },
+      {
+        "prop_id": "CAP44",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "Tylenol",
+        "category": "MedicationStatement",
+        "speaker": "unknown",
+        "status": "uncertain",
+        "visit_state": "historical",
+        "temporality": "this morning",
+        "claim_type_tags": [
+          "temporal"
+        ],
+        "proposition_text": "The patient used Tylenol this morning."
+      },
+      {
+        "prop_id": "CAP45",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "Baby Vicks",
+        "category": "MedicationStatement",
+        "speaker": "unknown",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "last night",
+        "proposition_text": "The patient used Baby Vicks."
+      },
+      {
+        "prop_id": "CAP46",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "Aveno Shampoo",
+        "category": "MedicationStatement",
+        "speaker": "unknown",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "present",
+        "proposition_text": "The patient uses Aveno Shampoo."
+      },
+      {
+        "prop_id": "CAP47",
+        "cap_type": "Counseling",
+        "canonical_concept": "soft brush",
+        "category": "Counseling",
+        "speaker": "doctor",
+        "predicate": "recommends",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "ongoing",
+        "claim_type_tags": [
+          "plan"
+        ],
+        "proposition_text": "The doctor recommends using a soft brush."
+      },
+      {
+        "prop_id": "CAP48",
+        "cap_type": "Counseling",
+        "canonical_concept": "baby oil",
+        "category": "Counseling",
+        "speaker": "doctor",
+        "predicate": "recommends",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "ongoing",
+        "claim_type_tags": [
+          "plan"
+        ],
+        "proposition_text": "The doctor recommends using baby oil."
+      }
+    ],
+    "filtered_nonverifiable_units": []
+  },
+  "event_plan": null,
+  "summary_cap": {
+    "atomic_propositions": [
+      {
+        "prop_id": "P1",
+        "cap_type": "ChiefComplaint",
+        "canonical_concept": "feeling sick and irritable",
+        "category": "ChiefComplaint",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports feeling sick and irritable."
+      },
+      {
+        "prop_id": "P2",
+        "cap_type": "History",
+        "canonical_concept": "runny nose and stuffiness",
+        "category": "History",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "past",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports a runny nose and stuffiness starting several days ago."
+      },
+      {
+        "prop_id": "P3",
+        "cap_type": "History",
+        "canonical_concept": "low-grade fever",
+        "category": "History",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports a low-grade fever."
+      },
+      {
+        "prop_id": "P4",
+        "cap_type": "Finding",
+        "canonical_concept": "irritability",
+        "category": "Finding",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports irritability."
+      },
+      {
+        "prop_id": "P5",
+        "cap_type": "MedicationPlan",
+        "canonical_concept": "using saline mist and",
+        "category": "MedicationPlan",
+        "speaker": "patient",
+        "predicate": "uses",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "medication"
+        ],
+        "proposition_text": "The patient is using saline mist and a humidifier at home."
+      },
+      {
+        "prop_id": "P6",
+        "cap_type": "MedicationPlan",
+        "canonical_concept": "using head shoulders shampoo",
+        "category": "MedicationPlan",
+        "speaker": "patient",
+        "predicate": "uses",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "medication"
+        ],
+        "proposition_text": "The patient is using Head & Shoulders shampoo."
+      },
+      {
+        "prop_id": "P7",
+        "cap_type": "History",
+        "canonical_concept": "exposure anyone covid-",
+        "category": "History",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "past",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports no exposure to anyone with COVID-19."
+      },
+      {
+        "prop_id": "P8",
+        "cap_type": "MedicationPlan",
+        "canonical_concept": "took tylenol morning",
+        "category": "MedicationPlan",
+        "speaker": "patient",
+        "predicate": "takes",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "medication"
+        ],
+        "proposition_text": "The patient took Tylenol this morning."
+      },
+      {
+        "prop_id": "P9",
+        "cap_type": "MedicationPlan",
+        "canonical_concept": "cough",
+        "category": "MedicationPlan",
+        "speaker": "patient",
+        "predicate": "uses",
+        "status": "uncertain",
+        "visit_state": "uncertain",
+        "temporality": "current",
+        "claim_type_tags": [
+          "medication"
+        ],
+        "proposition_text": "The patient is considering using his sister's medicine for a barky cough."
+      },
+      {
+        "prop_id": "P10",
+        "cap_type": "Finding",
+        "canonical_concept": "measures rectal temperature",
+        "category": "Finding",
+        "speaker": "clinician",
+        "predicate": "measures",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "exam"
+        ],
+        "proposition_text": "The clinician measures a rectal temperature of 100.3°F."
+      },
+      {
+        "prop_id": "P11",
+        "cap_type": "History",
+        "canonical_concept": "observed play date nephew",
+        "category": "History",
+        "speaker": "clinician",
+        "predicate": "observes",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "past",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The clinician observed a play date with the patient's nephew, who later tested positive for a sinus infection."
+      },
+      {
+        "prop_id": "P12",
+        "cap_type": "MedicationPlan",
+        "canonical_concept": "prescribes half teaspoon medication",
+        "category": "MedicationPlan",
+        "speaker": "clinician",
+        "predicate": "prescribes",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "medication"
+        ],
+        "proposition_text": "The clinician prescribes a half teaspoon of medication every five days."
+      },
+      {
+        "prop_id": "P13",
+        "cap_type": "MedicationPlan",
+        "canonical_concept": "prescribes half teaspoon his",
+        "category": "MedicationPlan",
+        "speaker": "clinician",
+        "predicate": "prescribes",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "medication"
+        ],
+        "proposition_text": "The clinician prescribes a half teaspoon of his sister's medicine."
+      }
+    ],
+    "filtered_nonverifiable_units": [],
+    "runtime_seconds": 18.957
+  },
+  "cap_alignment": {
+    "cap_precision": 0.6923076923076923,
+    "cap_recall": 0.1875,
+    "cap_f1": 0.29508196721311475,
+    "matched_count": 9,
+    "summary_prop_count": 13,
+    "source_prop_count": 48,
+    "matched_pairs": [
+      {
+        "score": 1.0,
+        "summary_prop_id": "P9",
+        "source_prop_id": "CAP19",
+        "summary_text": "The patient is considering using his sister's medicine for a barky cough.",
+        "source_text": "The patient reports a cough."
+      },
+      {
+        "score": 1.0,
+        "summary_prop_id": "P4",
+        "source_prop_id": "CAP26",
+        "summary_text": "The patient reports irritability.",
+        "source_text": "The patient reports irritability."
+      },
+      {
+        "score": 0.8571,
+        "summary_prop_id": "P6",
+        "source_prop_id": "CAP37",
+        "summary_text": "The patient is using Head & Shoulders shampoo.",
+        "source_text": "The doctor recommends using head & shoulder shampoo twice per week."
+      },
+      {
+        "score": 0.8333,
+        "summary_prop_id": "P8",
+        "source_prop_id": "CAP44",
+        "summary_text": "The patient took Tylenol this morning.",
+        "source_text": "The patient used Tylenol this morning."
+      },
+      {
+        "score": 0.7613,
+        "summary_prop_id": "P12",
+        "source_prop_id": "CAP33",
+        "summary_text": "The clinician prescribes a half teaspoon of medication every five days.",
+        "source_text": "The patient should take half a teaspoon of the medication daily for five days."
+      },
+      {
+        "score": 0.7433,
+        "summary_prop_id": "P2",
+        "source_prop_id": "CAP12",
+        "summary_text": "The patient reports a runny nose and stuffiness starting several days ago.",
+        "source_text": "The patient reports a runny nose."
+      },
+      {
+        "score": 0.73,
+        "summary_prop_id": "P1",
+        "source_prop_id": "CAP21",
+        "summary_text": "The patient reports feeling sick and irritable.",
+        "source_text": "The patient reports being irritable."
+      },
+      {
+        "score": 0.6833,
+        "summary_prop_id": "P5",
+        "source_prop_id": "CAP39",
+        "summary_text": "The patient is using saline mist and a humidifier at home.",
+        "source_text": "The patient has given saline mist to his child."
+      },
+      {
+        "score": 0.6733,
+        "summary_prop_id": "P13",
+        "source_prop_id": "CAP34",
+        "summary_text": "The clinician prescribes a half teaspoon of his sister's medicine.",
+        "source_text": "The doctor will give the patient half a teaspoon of sister's medicine."
+      }
+    ],
+    "unsupported_summary_props": [
+      {
+        "prop_id": "P3",
+        "cap_type": "History",
+        "canonical_concept": "low-grade fever",
+        "category": "History",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports a low-grade fever."
+      },
+      {
+        "prop_id": "P7",
+        "cap_type": "History",
+        "canonical_concept": "exposure anyone covid-",
+        "category": "History",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "past",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports no exposure to anyone with COVID-19."
+      },
+      {
+        "prop_id": "P10",
+        "cap_type": "Finding",
+        "canonical_concept": "measures rectal temperature",
+        "category": "Finding",
+        "speaker": "clinician",
+        "predicate": "measures",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "exam"
+        ],
+        "proposition_text": "The clinician measures a rectal temperature of 100.3°F."
+      },
+      {
+        "prop_id": "P11",
+        "cap_type": "History",
+        "canonical_concept": "observed play date nephew",
+        "category": "History",
+        "speaker": "clinician",
+        "predicate": "observes",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "past",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The clinician observed a play date with the patient's nephew, who later tested positive for a sinus infection."
+      }
+    ],
+    "missing_source_props": [
+      {
+        "prop_id": "CAP1",
+        "cap_type": "Problem",
+        "canonical_concept": "bacterial infection",
+        "category": "Problem",
+        "speaker": "doctor",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "future",
+        "proposition_text": "The doctor believes the infection could become bacterial if left untreated."
+      },
+      {
+        "prop_id": "CAP2",
+        "cap_type": "Problem",
+        "canonical_concept": "honey for babies",
+        "category": "Problem",
+        "speaker": "unknown",
+        "status": "uncertain",
+        "visit_state": "historical",
+        "temporality": "current",
+        "proposition_text": "The patient asks if honey should be given to babies."
+      },
+      {
+        "prop_id": "CAP3",
+        "cap_type": "Symptom",
+        "canonical_concept": "bottle consumption",
+        "category": "Symptom",
+        "speaker": "unknown",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient consumed approximately seven ounces from a bottle."
+      },
+      {
+        "prop_id": "CAP4",
+        "cap_type": "Problem",
+        "canonical_concept": "avoid eyes",
+        "category": "Problem",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "planned",
+        "temporality": "ongoing",
+        "proposition_text": "The patient should avoid getting shampoo in his eyes."
+      },
+      {
+        "prop_id": "CAP5",
+        "cap_type": "Problem",
+        "canonical_concept": "cold",
+        "category": "Problem",
+        "speaker": "unknown",
+        "status": "uncertain",
+        "visit_state": "historical",
+        "temporality": "last night",
+        "proposition_text": "The patient started to feel sick last night."
+      },
+      {
+        "prop_id": "CAP6",
+        "cap_type": "Symptom",
+        "canonical_concept": "fever",
+        "category": "Symptom",
+        "speaker": "unknown",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "quantitative",
+          "symptom"
+        ],
+        "proposition_text": "The patient's rectal temperature was 100.3 degrees Fahrenheit."
+      },
+      {
+        "prop_id": "CAP7",
+        "cap_type": "Symptom",
+        "canonical_concept": "barky cough",
+        "category": "Symptom",
+        "speaker": "doctor",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "future",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The doctor is watching for a barky cough."
+      },
+      {
+        "prop_id": "CAP8",
+        "cap_type": "Symptom",
+        "canonical_concept": "left hand pain",
+        "category": "Symptom",
+        "speaker": "unknown",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports pain in the left hand."
+      },
+      {
+        "prop_id": "CAP9",
+        "cap_type": "Symptom",
+        "canonical_concept": "ear pulling",
+        "category": "Symptom",
+        "speaker": "unknown",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient is pulling on his ears."
+      },
+      {
+        "prop_id": "CAP10",
+        "cap_type": "Symptom",
+        "canonical_concept": "barely ate",
+        "category": "Symptom",
+        "speaker": "unknown",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient barely ate the offered cereal."
+      },
+      {
+        "prop_id": "CAP11",
+        "cap_type": "Problem",
+        "canonical_concept": "brush off scales",
+        "category": "Problem",
+        "speaker": "unknown",
+        "status": "affirmed",
+        "visit_state": "planned",
+        "temporality": "ongoing",
+        "proposition_text": "The patient should brush off the scales."
+      },
+      {
+        "prop_id": "CAP13",
+        "cap_type": "Symptom",
+        "canonical_concept": "nose rubbing",
+        "category": "Symptom",
+        "speaker": "unknown",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient is rubbing his nose."
+      },
+      {
+        "prop_id": "CAP14",
+        "cap_type": "Symptom",
+        "canonical_concept": "difficulty sleeping",
+        "category": "Symptom",
+        "speaker": "unknown",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient is fighting to sleep."
+      },
+      {
+        "prop_id": "CAP15",
+        "cap_type": "Problem",
+        "canonical_concept": "Cradle cap",
+        "category": "Problem",
+        "speaker": "unknown",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "temporal"
+        ],
+        "proposition_text": "The patient's cradle cap is worsening."
+      },
+      {
+        "prop_id": "CAP16",
+        "cap_type": "Symptom",
+        "canonical_concept": "viral infection",
+        "category": "Symptom",
+        "speaker": "unknown",
+        "predicate": "suspects",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient suspects a viral infection."
+      },
+      {
+        "prop_id": "CAP17",
+        "cap_type": "Problem",
+        "canonical_concept": "sinus infection",
+        "category": "Problem",
+        "speaker": "doctor",
+        "predicate": "suspects",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The doctor suspects a sinus infection."
+      },
+      {
+        "prop_id": "CAP18",
+        "cap_type": "Symptom",
+        "canonical_concept": "stuffy",
+        "category": "Symptom",
+        "speaker": "unknown",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports being stuffy."
+      },
+      {
+        "prop_id": "CAP20",
+        "cap_type": "Symptom",
+        "canonical_concept": "decreased appetite",
+        "category": "Symptom",
+        "speaker": "unknown",
+        "predicate": "reports",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports decreased appetite."
+      },
+      {
+        "prop_id": "CAP22",
+        "cap_type": "Symptom",
+        "canonical_concept": "warm",
+        "category": "Symptom",
+        "speaker": "unknown",
+        "predicate": "reports",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports feeling warm."
+      },
+      {
+        "prop_id": "CAP23",
+        "cap_type": "Symptom",
+        "canonical_concept": "ear pain",
+        "category": "Symptom",
+        "speaker": "unknown",
+        "predicate": "reports",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports ear pain."
+      },
+      {
+        "prop_id": "CAP24",
+        "cap_type": "Symptom",
+        "canonical_concept": "cradle cap",
+        "category": "Symptom",
+        "speaker": "doctor",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports cradle cap."
+      },
+      {
+        "prop_id": "CAP25",
+        "cap_type": "Symptom",
+        "canonical_concept": "pain",
+        "category": "Symptom",
+        "speaker": "unknown",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports pain."
+      },
+      {
+        "prop_id": "CAP27",
+        "cap_type": "Symptom",
+        "canonical_concept": "sweating",
+        "category": "Symptom",
+        "speaker": "unknown",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient is sweating."
+      },
+      {
+        "prop_id": "CAP28",
+        "cap_type": "Symptom",
+        "canonical_concept": "sweating",
+        "category": "Symptom",
+        "speaker": "unknown",
+        "predicate": "reports",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports sweating."
+      },
+      {
+        "prop_id": "CAP29",
+        "cap_type": "Symptom",
+        "canonical_concept": "dizziness",
+        "category": "Symptom",
+        "speaker": "unknown",
+        "predicate": "reports",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports dizziness."
+      },
+      {
+        "prop_id": "CAP30",
+        "cap_type": "Order",
+        "canonical_concept": "let us know",
+        "category": "Order",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "planned",
+        "temporality": "ongoing",
+        "claim_type_tags": [
+          "temporal"
+        ],
+        "proposition_text": "The patient should let us know if it keeps getting worse."
+      },
+      {
+        "prop_id": "CAP31",
+        "cap_type": "Order",
+        "canonical_concept": "check out",
+        "category": "Order",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "planned",
+        "temporality": "within six weeks",
+        "proposition_text": "The patient can check out."
+      },
+      {
+        "prop_id": "CAP32",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "honey nut cheerios",
+        "category": "MedicationStatement",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The doctor states that honey nut cheerios contain honey and should not be given to babies."
+      },
+      {
+        "prop_id": "CAP35",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "agave",
+        "category": "MedicationStatement",
+        "speaker": "doctor",
+        "predicate": "recommends",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "plan"
+        ],
+        "proposition_text": "The doctor recommends agave as an alternative to honey for babies."
+      },
+      {
+        "prop_id": "CAP36",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "ibuprofen",
+        "category": "MedicationStatement",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The doctor will give the patient half a teaspoon of ibuprofen."
+      },
+      {
+        "prop_id": "CAP38",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "selsun blue shampoo",
+        "category": "MedicationStatement",
+        "speaker": "doctor",
+        "predicate": "recommends",
+        "status": "affirmed",
+        "visit_state": "planned",
+        "temporality": "twice per week",
+        "claim_type_tags": [
+          "plan"
+        ],
+        "proposition_text": "The doctor recommends using selsun blue shampoo twice per week."
+      },
+      {
+        "prop_id": "CAP40",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "nizoral shampoo",
+        "category": "MedicationStatement",
+        "speaker": "doctor",
+        "predicate": "recommends",
+        "status": "affirmed",
+        "visit_state": "planned",
+        "temporality": "twice per week",
+        "claim_type_tags": [
+          "plan"
+        ],
+        "proposition_text": "The doctor recommends using nizoral shampoo twice per week."
+      },
+      {
+        "prop_id": "CAP41",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "sister's medicine",
+        "category": "MedicationStatement",
+        "speaker": "doctor",
+        "status": "uncertain",
+        "visit_state": "planned",
+        "temporality": "future",
+        "proposition_text": "The doctor will give the patient sister's medicine."
+      },
+      {
+        "prop_id": "CAP42",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "Tylenol",
+        "category": "MedicationStatement",
+        "speaker": "unknown",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient gave Tylenol to his child."
+      },
+      {
+        "prop_id": "CAP43",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "ibuprofen",
+        "category": "MedicationStatement",
+        "speaker": "unknown",
+        "status": "affirmed",
+        "visit_state": "planned",
+        "temporality": "future",
+        "proposition_text": "The doctor will give the patient ibuprofen."
+      },
+      {
+        "prop_id": "CAP45",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "Baby Vicks",
+        "category": "MedicationStatement",
+        "speaker": "unknown",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "last night",
+        "proposition_text": "The patient used Baby Vicks."
+      },
+      {
+        "prop_id": "CAP46",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "Aveno Shampoo",
+        "category": "MedicationStatement",
+        "speaker": "unknown",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "present",
+        "proposition_text": "The patient uses Aveno Shampoo."
+      },
+      {
+        "prop_id": "CAP47",
+        "cap_type": "Counseling",
+        "canonical_concept": "soft brush",
+        "category": "Counseling",
+        "speaker": "doctor",
+        "predicate": "recommends",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "ongoing",
+        "claim_type_tags": [
+          "plan"
+        ],
+        "proposition_text": "The doctor recommends using a soft brush."
+      },
+      {
+        "prop_id": "CAP48",
+        "cap_type": "Counseling",
+        "canonical_concept": "baby oil",
+        "category": "Counseling",
+        "speaker": "doctor",
+        "predicate": "recommends",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "ongoing",
+        "claim_type_tags": [
+          "plan"
+        ],
+        "proposition_text": "The doctor recommends using baby oil."
+      }
+    ]
+  },
+  "reference_gpt_f1_items": {
+    "active_problems_symptoms": [
+      "cough",
+      "nasal congestion",
+      "clear mucus",
+      "rhinorrhea",
+      "bilateral pulling of ears",
+      "Temperature 100.3 degrees",
+      "Dandruff",
+      "viral infection",
+      "croup cough"
+    ],
+    "negated_findings": [],
+    "uncertain_findings": [
+      "Viral infection"
+    ],
+    "medication_treatment": [
+      "Tylenol PRN",
+      "Zarbee's for children under 1 years old",
+      "Head and Shoulders shampoo",
+      "Selsun Blue",
+      "Nizoral A-D",
+      "baby oil",
+      "soft brush"
+    ],
+    "plan_followup": [
+      "Return in one week for a re-check"
+    ],
+    "_chunk_count": [
+      "3"
+    ]
+  },
+  "summary_gpt_f1_items": {
+    "active_problems_symptoms": [],
+    "negated_findings": [],
+    "uncertain_findings": [],
+    "medication_treatment": [],
+    "plan_followup": [],
+    "_chunk_count": [
+      "1"
+    ]
+  },
+  "gpt_f1_alignment": {
+    "by_category": {
+      "active_problems_symptoms": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "matched_count": 0,
+        "pred_count": 0,
+        "ref_count": 9,
+        "matches": [],
+        "unsupported_pred_items": [],
+        "missing_ref_items": [
+          "cough",
+          "nasal congestion",
+          "clear mucus",
+          "rhinorrhea",
+          "bilateral pulling of ears",
+          "Temperature 100.3 degrees",
+          "Dandruff",
+          "viral infection",
+          "croup cough"
+        ]
+      },
+      "negated_findings": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "matched_count": 0,
+        "pred_count": 0,
+        "ref_count": 0,
+        "matches": [],
+        "unsupported_pred_items": [],
+        "missing_ref_items": []
+      },
+      "uncertain_findings": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "matched_count": 0,
+        "pred_count": 0,
+        "ref_count": 1,
+        "matches": [],
+        "unsupported_pred_items": [],
+        "missing_ref_items": [
+          "Viral infection"
+        ]
+      },
+      "medication_treatment": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "matched_count": 0,
+        "pred_count": 0,
+        "ref_count": 7,
+        "matches": [],
+        "unsupported_pred_items": [],
+        "missing_ref_items": [
+          "Tylenol PRN",
+          "Zarbee's for children under 1 years old",
+          "Head and Shoulders shampoo",
+          "Selsun Blue",
+          "Nizoral A-D",
+          "baby oil",
+          "soft brush"
+        ]
+      },
+      "plan_followup": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "matched_count": 0,
+        "pred_count": 0,
+        "ref_count": 1,
+        "matches": [],
+        "unsupported_pred_items": [],
+        "missing_ref_items": [
+          "Return in one week for a re-check"
+        ]
+      }
+    }
+  },
+  "reference_nair_concepts": {
+    "sections": [
+      {
+        "heading": "Clinical Note",
+        "section_value": "CHIEF COMPLAINT\nCough, nasal congestion, and rhinorrhea.\nHISTORY OF PRESENT ILLNESS\nRandy Gutierrez is a 9-month-old male who is being evaluated today for a cough, nasal congestion, and rhinorrhea. He is accompanied by his mother.\nSymptoms began yesterday around dinnertime with clear nasal drainage, pulling on his ears bilaterally, and rubbing his nose frequently. He does not have a barky cough or a sore throat. His rectal temperature was 100.3 degrees. The patient did consume a 7 ounce bottle this morning, but mostly denied the next offered bottle and declined cereal. He is irritable and having trouble falling asleep, described “like he is fighting it”.\nThe patient has been exposed to an older sister who is sick and a cousin who has a sinus infection.\nTreatment has included saline nasal spray, Tylenol, baby Vick's, and a humidifier. When the patient aroused this morning, he was warm to the touch. When his sleeper was removed, he was quite sweaty despite the air conditioner being on.\nThe patient's dandruff is also worsening. The only tried treatment is Aveeno shampoo.\nSOCIAL HISTORY\nOlder sister.",
+        "medical_concepts": [
+          "cough",
+          "nasal congestion",
+          "rhinorrhea",
+          "clear nasal drainage",
+          "ear pulling",
+          "nose rubbing",
+          "barky cough",
+          "sore throat",
+          "rectal temperature 100.3 F",
+          "decreased oral intake",
+          "irritability",
+          "insomnia",
+          "fever",
+          "sweating",
+          "sinus infection",
+          "saline nasal spray",
+          "Tylenol",
+          "humidifier",
+          "dandruff",
+          "Aveeno shampoo"
+        ]
+      },
+      {
+        "heading": "Clinical Note",
+        "section_value": "CURRENT MEDICATIONS\nTylenol PRN.\nPHYSICAL EXAM\nTemperature 100.3 degrees.\nEars, Eyes, Nose, Throat\nNasal congestion, clear mucus, rhinorrhea. Bilateral pulling of ears, no sore throat or hoarseness.\nRespiratory\nPositive for cough.\nASSESSMENT\n• Viral infection",
+        "medical_concepts": [
+          "Tylenol",
+          "temperature 100.3 degrees",
+          "nasal congestion",
+          "rhinorrhea",
+          "ear pulling",
+          "sore throat",
+          "hoarseness",
+          "cough",
+          "viral infection"
+        ]
+      },
+      {
+        "heading": "Clinical Note",
+        "section_value": "• Dandruff\nPLAN\nViral infection\nThe patient presents with a viral infection and does not need antibiotics currently. I advised continuation of fluids, rest. Additionally, I suggested trying Zarbee’s for children under 1 years old. If a croup cough develops, the patient will receive a 0.5 teaspoon.\nI also provided counseling to the mother to avoid giving honey to the patient for his first year of life due to botulism spores.\nDandruff\nThe patient is experiencing worsening symptoms of dandruff. I recommended Head and Shoulders shampoo, Selsun Blue, or Nizoral A-D 2 times per week, combined with his usual shampoo. I counseled the mother that she should be careful not to get the shampoo in the patient eyes and to not use the extra strength shampoos. Additionally, he may also use baby oil and a soft brush on the area.\nINSTRUCTIONS\nReturn in one week for a re-check.",
+        "medical_concepts": [
+          "dandruff",
+          "viral infection",
+          "antibiotics",
+          "croup cough",
+          "botulism spores"
+        ]
+      }
+    ],
+    "medical_concepts": [
+      "cough",
+      "nasal congestion",
+      "rhinorrhea",
+      "clear nasal drainage",
+      "ear pulling",
+      "nose rubbing",
+      "barky cough",
+      "sore throat",
+      "rectal temperature 100.3 F",
+      "decreased oral intake",
+      "irritability",
+      "insomnia",
+      "fever",
+      "sweating",
+      "sinus infection",
+      "saline nasal spray",
+      "Tylenol",
+      "humidifier",
+      "dandruff",
+      "Aveeno shampoo",
+      "temperature 100.3 degrees",
+      "hoarseness",
+      "viral infection",
+      "antibiotics",
+      "croup cough",
+      "botulism spores"
+    ],
+    "section_count": 3
+  },
+  "summary_nair_concepts": {
+    "sections": [
+      {
+        "heading": "Clinical Note",
+        "section_value": "Chief Complaint\nReports feeling sick and irritable.\nHistory of Present Illness\nRandy has been feeling sick for several days, starting with a runny nose and stuffiness. He also has a low-grade fever and has been irritable. The patient has been using saline mist and humidifier at home. He noticed his cradle cap has worsened and has been using head & shoulder's shampoo. The patient reports no exposure to anyone with COVID-19. He has been given tylenol this morning due to fever and sweating. He has been using Zarbee's for the stuffy nose, and is considering using his sister's medicine for a barky cough.\nFindings\nPhysical exam reveals a rectal temperature of 100.3°F. We also had a play date with my nephew, who later tested positive for a sinus infection.\nAssessment\nThe patient presents with symptoms consistent with a viral upper respiratory infection.\nPlan\nIf the patient starts medication, administer a half teaspoon every five days. Continue fluids, rest, and monitor for a barky cough, which would warrant a half teaspoon of his sister's medicine.",
+        "medical_concepts": [
+          "feeling sick",
+          "irritable",
+          "runny nose",
+          "nasal congestion",
+          "low-grade fever",
+          "cradle cap",
+          "COVID-19 exposure",
+          "fever",
+          "sweating",
+          "barky cough",
+          "rectal temperature",
+          "sinus infection",
+          "viral upper respiratory infection"
+        ]
+      }
+    ],
+    "medical_concepts": [
+      "feeling sick",
+      "irritable",
+      "runny nose",
+      "nasal congestion",
+      "low-grade fever",
+      "cradle cap",
+      "COVID-19 exposure",
+      "fever",
+      "sweating",
+      "barky cough",
+      "rectal temperature",
+      "sinus infection",
+      "viral upper respiratory infection"
+    ],
+    "section_count": 1
+  },
+  "nair_alignment": {
+    "pred_concepts": [
+      "feeling sick",
+      "irritable",
+      "runny nose",
+      "nasal congestion",
+      "low-grade fever",
+      "cradle cap",
+      "COVID-19 exposure",
+      "fever",
+      "sweating",
+      "barky cough",
+      "rectal temperature",
+      "sinus infection",
+      "viral upper respiratory infection"
+    ],
+    "ref_concepts": [
+      "cough",
+      "nasal congestion",
+      "rhinorrhea",
+      "clear nasal drainage",
+      "ear pulling",
+      "nose rubbing",
+      "barky cough",
+      "sore throat",
+      "rectal temperature 100.3 F",
+      "decreased oral intake",
+      "irritability",
+      "insomnia",
+      "fever",
+      "sweating",
+      "sinus infection",
+      "saline nasal spray",
+      "Tylenol",
+      "humidifier",
+      "dandruff",
+      "Aveeno shampoo",
+      "temperature 100.3 degrees",
+      "hoarseness",
+      "viral infection",
+      "antibiotics",
+      "croup cough",
+      "botulism spores"
+    ],
+    "precision_alignment": {
+      "found_b": [
+        "irritable",
+        "runny nose",
+        "nasal congestion",
+        "low-grade fever",
+        "fever",
+        "sweating",
+        "barky cough",
+        "rectal temperature",
+        "sinus infection"
+      ],
+      "not_found_b": [
+        "feeling sick",
+        "cradle cap",
+        "COVID-19 exposure",
+        "viral upper respiratory infection"
+      ],
+      "chunk_count": 1,
+      "chunk_results": [
+        {
+          "found_b": [
+            "irritable",
+            "runny nose",
+            "nasal congestion",
+            "low-grade fever",
+            "fever",
+            "sweating",
+            "barky cough",
+            "rectal temperature",
+            "sinus infection"
+          ],
+          "not_found_b": [
+            "feeling sick",
+            "cradle cap",
+            "COVID-19 exposure",
+            "viral upper respiratory infection"
+          ]
+        }
+      ]
+    },
+    "recall_alignment": {
+      "found_b": [
+        "cough",
+        "nasal congestion",
+        "rhinorrhea",
+        "barky cough",
+        "rectal temperature 100.3 F",
+        "irritability",
+        "fever",
+        "sweating",
+        "sinus infection",
+        "saline nasal spray",
+        "Tylenol",
+        "humidifier",
+        "dandruff",
+        "temperature 100.3 degrees",
+        "viral infection",
+        "croup cough"
+      ],
+      "not_found_b": [
+        "clear nasal drainage",
+        "ear pulling",
+        "nose rubbing",
+        "sore throat",
+        "decreased oral intake",
+        "insomnia",
+        "Aveeno shampoo",
+        "hoarseness",
+        "antibiotics",
+        "botulism spores"
+      ],
+      "chunk_count": 2,
+      "chunk_results": [
+        {
+          "found_b": [
+            "cough",
+            "nasal congestion",
+            "rhinorrhea",
+            "barky cough",
+            "rectal temperature 100.3 F",
+            "irritability",
+            "fever",
+            "sweating",
+            "sinus infection",
+            "saline nasal spray",
+            "Tylenol",
+            "humidifier",
+            "dandruff",
+            "temperature 100.3 degrees",
+            "viral infection"
+          ],
+          "not_found_b": [
+            "clear nasal drainage",
+            "ear pulling",
+            "nose rubbing",
+            "sore throat",
+            "decreased oral intake",
+            "insomnia",
+            "Aveeno shampoo",
+            "hoarseness",
+            "antibiotics"
+          ]
+        },
+        {
+          "found_b": [
+            "croup cough"
+          ],
+          "not_found_b": [
+            "botulism spores"
+          ]
+        }
+      ]
+    }
+  },
+  "semantic_cap_audit": {
+    "source_cap_recall": [
+      {
+        "cap_id": "P1",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P2",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P3",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P4",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P5",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P6",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P7",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P8",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P9",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P10",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P11",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P12",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P13",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P14",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P15",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P16",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P1",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P2",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P3",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P4",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P5",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P6",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P7",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P8",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P9",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P10",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P11",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P12",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P13",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P14",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P15",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P16",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P1",
+        "judgment": "contradicted",
+        "reason": null
+      },
+      {
+        "cap_id": "P2",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P3",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P4",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P5",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P6",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P7",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P8",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P9",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P10",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P11",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P12",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P13",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P14",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P15",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P16",
+        "judgment": "missing",
+        "reason": null
+      }
+    ],
+    "summary_cap_precision": [
+      {
+        "cap_id": "P1",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P2",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P3",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P4",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P5",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P6",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P7",
+        "judgment": "unsupported",
+        "reason": null
+      },
+      {
+        "cap_id": "P8",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P9",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P10",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P11",
+        "judgment": "unsupported",
+        "reason": null
+      },
+      {
+        "cap_id": "P12",
+        "judgment": "contradicted",
+        "reason": null
+      },
+      {
+        "cap_id": "P13",
+        "judgment": "partial",
+        "reason": null
+      }
+    ],
+    "metrics": {
+      "semantic_cap_precision": 0.5,
+      "semantic_cap_recall": 0.3021,
+      "semantic_cap_f1": 0.3766,
+      "semantic_cap_precision_supported_count": 3,
+      "semantic_cap_precision_partial_count": 7,
+      "semantic_cap_precision_denominator": 13,
+      "semantic_cap_recall_supported_count": 11,
+      "semantic_cap_recall_partial_count": 7,
+      "semantic_cap_recall_denominator": 48,
+      "semantic_cap_low_value_source_count": 0,
+      "semantic_cap_low_value_summary_count": 0,
+      "semantic_cap_missing_count": 29,
+      "semantic_cap_unsupported_count": 2,
+      "semantic_cap_contradicted_source_count": 1,
+      "semantic_cap_contradicted_summary_count": 1
+    }
+  },
+  "safety_judgment": null,
+  "section_judgment": {
+    "section_miscategorizations": [
+      {
+        "text": "We also had a play date with my nephew, who later tested positive for a sinus infection.",
+        "current_section": "Findings",
+        "expected_section": "History of Present Illness",
+        "severity": "major",
+        "reason": "This is exposure history reported in the course of the illness, not an exam, vital, lab, or imaging finding."
+      },
+      {
+        "text": "If the patient starts medication, administer a half teaspoon every five days.",
+        "current_section": "Plan",
+        "expected_section": "Plan",
+        "severity": "minor",
+        "reason": "The dosing instruction is appropriate for the Plan, but the conditional and vague reference to an unspecified medication makes the statement clinically confusing; however, it is still conceptually a plan item rather than another section."
+      },
+      {
+        "text": "which would warrant a half teaspoon of his sister's medicine.",
+        "current_section": "Plan",
+        "expected_section": "Plan",
+        "severity": "minor",
+        "reason": "This is framed as an instruction (plan), but recommending use of another child's medication is clinically inappropriate; organizationally it still belongs in the Plan, so this is a minor, not structural, issue."
+      }
+    ],
+    "summary_statistics": {
+      "section_appropriateness_score": 0.6,
+      "section_miscategorization_count": 3,
+      "major_section_miscategorization_count": 1
+    }
+  },
+  "pdsqi_judgment": {
+    "citation_applicable": 0,
+    "citation": 0,
+    "accurate": 2,
+    "thorough": 2,
+    "useful": 2,
+    "organized": 3,
+    "comprehensible": 3,
+    "succinct": 3,
+    "abstraction": 1,
+    "synthesized": 2,
+    "voice_summ": 0,
+    "voice_note": 0,
+    "pdsqi_core_mean": 2.4286
+  },
+  "llm_checklist_judgment": {
+    "content_preservation_core": 2,
+    "noise_suppression": 4,
+    "lay_expression_preservation": 2,
+    "state_update_fidelity": 1,
+    "temporality_preservation": 2,
+    "problem_evidence_linkage": 2,
+    "state_plan_separation": 2,
+    "section_organization_appropriateness": 2,
+    "overall_clinical_usability": 2,
+    "clinically_meaningful_omission": "Yes",
+    "clinically_concerning_hallucination": "Yes",
+    "checklist_a_mean": 2.6667,
+    "checklist_b_mean": 1.5,
+    "checklist_c_mean": 2.0,
+    "llm_checklist_abc_mean": 2.125,
+    "llm_checklist_mean_no_usability": 2.125,
+    "llm_checklist_total_score": 19,
+    "llm_checklist_mean": 2.1111,
+    "llm_checklist_meaningful_omission_yes": 1,
+    "llm_checklist_concerning_hallucination_yes": 1
+  },
+  "metrics": {
+    "case_id": "D2N099",
+    "method": "cluster2sent",
+    "template": "sectioned",
+    "source_cap_count": 48,
+    "event_plan_count": null,
+    "summary_cap_count": 13,
+    "cap_matched_count": 9,
+    "cap_precision": 0.6923,
+    "cap_recall": 0.1875,
+    "cap_f1": 0.2951,
+    "unsupported_summary_cap_count": 4,
+    "missing_source_cap_count": 39,
+    "summary_runtime_seconds": null,
+    "summary_cap_runtime_seconds": 18.957,
+    "event_plan_runtime_seconds": null,
+    "rouge_l_f1_vs_reference": 0.2061,
+    "token_f1_vs_reference": 0.3725,
+    "gptf1_macro_f1": 0.0,
+    "nair_gpt_precision": 0.6923,
+    "nair_gpt_recall": 0.6154,
+    "nair_gpt_f1": 0.6516,
+    "semantic_cap_precision": 0.5,
+    "semantic_cap_recall": 0.3021,
+    "semantic_cap_f1": 0.3766,
+    "hallucination_count": null,
+    "major_hallucination_count": null,
+    "omission_count": null,
+    "major_omission_count": null,
+    "section_appropriateness_score": 0.6,
+    "section_miscategorization_count": 3,
+    "major_section_miscategorization_count": 1,
+    "pdsqi_core_mean": 2.4286,
+    "pdsqi_accurate": 2,
+    "pdsqi_thorough": 2,
+    "llm_checklist_total_score": 19,
+    "llm_checklist_mean": 2.1111,
+    "llm_checklist_mean_no_usability": 2.125,
+    "checklist_a_mean": 2.6667,
+    "checklist_b_mean": 1.5,
+    "checklist_c_mean": 2.0,
+    "llm_checklist_abc_mean": 2.125,
+    "content_preservation_core": 2,
+    "noise_suppression": 4,
+    "lay_expression_preservation": 2,
+    "state_update_fidelity": 1,
+    "temporality_preservation": 2,
+    "problem_evidence_linkage": 2,
+    "state_plan_separation": 2,
+    "section_organization_appropriateness": 2,
+    "overall_clinical_usability": 2,
+    "llm_checklist_meaningful_omission_yes": 1,
+    "llm_checklist_concerning_hallucination_yes": 1,
+    "gptf1_active_problems_symptoms_precision": 0.0,
+    "gptf1_active_problems_symptoms_recall": 0.0,
+    "gptf1_active_problems_symptoms_f1": 0.0,
+    "gptf1_active_problems_symptoms_pred_count": 0,
+    "gptf1_active_problems_symptoms_ref_count": 9,
+    "gptf1_negated_findings_precision": 0.0,
+    "gptf1_negated_findings_recall": 0.0,
+    "gptf1_negated_findings_f1": 0.0,
+    "gptf1_negated_findings_pred_count": 0,
+    "gptf1_negated_findings_ref_count": 0,
+    "gptf1_uncertain_findings_precision": 0.0,
+    "gptf1_uncertain_findings_recall": 0.0,
+    "gptf1_uncertain_findings_f1": 0.0,
+    "gptf1_uncertain_findings_pred_count": 0,
+    "gptf1_uncertain_findings_ref_count": 1,
+    "gptf1_medication_treatment_precision": 0.0,
+    "gptf1_medication_treatment_recall": 0.0,
+    "gptf1_medication_treatment_f1": 0.0,
+    "gptf1_medication_treatment_pred_count": 0,
+    "gptf1_medication_treatment_ref_count": 7,
+    "gptf1_plan_followup_precision": 0.0,
+    "gptf1_plan_followup_recall": 0.0,
+    "gptf1_plan_followup_f1": 0.0,
+    "gptf1_plan_followup_pred_count": 0,
+    "gptf1_plan_followup_ref_count": 1,
+    "nair_pred_concept_count": 13,
+    "nair_ref_concept_count": 26,
+    "nair_precision_match_count": 9,
+    "nair_recall_match_count": 16,
+    "semantic_cap_precision_supported_count": 3,
+    "semantic_cap_precision_partial_count": 7,
+    "semantic_cap_precision_denominator": 13,
+    "semantic_cap_recall_supported_count": 11,
+    "semantic_cap_recall_partial_count": 7,
+    "semantic_cap_recall_denominator": 48,
+    "semantic_cap_low_value_source_count": 0,
+    "semantic_cap_low_value_summary_count": 0,
+    "semantic_cap_missing_count": 29,
+    "semantic_cap_unsupported_count": 2,
+    "semantic_cap_contradicted_source_count": 1,
+    "semantic_cap_contradicted_summary_count": 1,
+    "pdsqi_useful": 2,
+    "pdsqi_organized": 3,
+    "pdsqi_comprehensible": 3,
+    "pdsqi_succinct": 3,
+    "pdsqi_synthesized": 2
+  }
+}

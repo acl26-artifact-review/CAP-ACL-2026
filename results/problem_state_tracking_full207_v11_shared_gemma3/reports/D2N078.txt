@@ -1,0 +1,114 @@
+Case: D2N078
+
+Problem List and Visit State Tracking
+
+Problem List
+- knee pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T0,T13,T27
+  Summary: The patient reports pain in the right knee.
+  ClusterId: CL1
+  TemporalProfile: current
+  Updates:
+  - CAP2: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T0 :: The patient reports pain in the right knee.
+  - CAP9: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T13 :: The patient reports pain.
+  - CAP7: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T27 :: The patient reports pain in the knee.
+- fall | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T1
+  Summary: The patient slipped and fell while working on property.
+  ClusterId: CL2
+  TemporalProfile: past
+  Updates:
+  - CAP21: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=past turns=T1 :: The patient slipped and fell while working on property.
+- swelling | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T11
+  Summary: The patient reports swelling in the right knee.
+  ClusterId: CL3
+  TemporalProfile: current
+  Updates:
+  - CAP3: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T11 :: The patient reports swelling in the right knee.
+  - CAP10: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T11 :: The patient reports swelling.
+- hypertension | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T16
+  Summary: The patient has a past medical history of hypertension.
+  ClusterId: CL4
+  TemporalProfile: past
+  Updates:
+  - CAP1: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=past turns=T16 :: The patient has a past medical history of hypertension.
+- high blood pressure | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T19
+  Summary: The patient needs help lowering their salt intake.
+  ClusterId: CL7
+  TemporalProfile: current
+  Updates:
+  - CAP4: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T19 :: The patient needs help lowering their salt intake.
+- chest pain | verification_status=confirmed | clinical_status=resolved | modalities=interview | speakers=patient | evidence=T20
+  Summary: The patient denies chest pain.
+  ClusterId: CL8
+  TemporalProfile: today
+  Updates:
+  - CAP8: content_source=patient modality=interview verification_status=confirmed clinical_status=resolved temporality=today turns=T20 :: The patient denies chest pain.
+- medial collateral ligament strain | verification_status=confirmed | clinical_status=active | modalities=assessment | speakers=doctor | evidence=T34
+  Summary: The patient has a medial collateral ligament strain.
+  ClusterId: CL10
+  TemporalProfile: current
+  Updates:
+  - CAP5: content_source=doctor modality=assessment verification_status=confirmed clinical_status=active temporality=current turns=T34 :: The patient has a medial collateral ligament strain.
+- left hand pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T37
+  Summary: The patient reports pain in the left hand.
+  ClusterId: CL17
+  TemporalProfile: current
+  Updates:
+  - CAP6: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T37 :: The patient reports pain in the left hand.
+
+Medication Tracking
+- [MedicationState] lisinopril | verification_status=confirmed | clinical_status=active | modalities=interview,plan | speakers=doctor | evidence=T16,T34
+  Summary: The doctor wants to continue the patient on lisinopril.
+  ClusterId: CL6
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient is taking lisinopril. (T16)
+  - The doctor wants to continue the patient on lisinopril. (T34)
+  Updates:
+  - CAP19: content_source=doctor modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T16 :: The patient is taking lisinopril.
+  - CAP18: content_source=doctor modality=plan verification_status=confirmed clinical_status=active temporality=current turns=T34 :: The doctor wants to continue the patient on lisinopril.
+- [MedicationChange] ibuprofen | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T34
+  Summary: The doctor prescribed ibuprofen.
+  ClusterId: CL14
+  TemporalProfile: current
+  PlannedChanges:
+  - The doctor prescribed ibuprofen. (T34)
+  Updates:
+  - CAP20: content_source=doctor modality=plan verification_status=unconfirmed clinical_status=planned temporality=current turns=T34 :: The doctor prescribed ibuprofen.
+- [MedicationChange] nurse will be in with orders | verification_status=confirmed | clinical_status=planned | modalities=interview | speakers=doctor | evidence=T40
+  Summary: The nurse will be in with the orders.
+  ClusterId: CL18
+  TemporalProfile: next time
+  PlannedChanges:
+  - The nurse will be in with the orders. (T40)
+  Updates:
+  - CAP14: content_source=doctor modality=interview verification_status=confirmed clinical_status=planned temporality=next time turns=T40 :: The nurse will be in with the orders.
+
+Other Structured States
+- [TestResult] blood pressure | verification_status=confirmed | clinical_status=active | modalities=test_result | speakers=doctor | evidence=T16
+  Summary: The patient's blood pressure was 150 over 70.
+  ClusterId: CL5
+  TemporalProfile: current
+- [ExamFinding] grade 2 systolic ejection murmur | verification_status=confirmed | clinical_status=historical | modalities=exam | speakers=doctor | evidence=T28
+  Summary: The doctor hears a grade 2 out of 6 systolic ejection murmur.
+  ClusterId: CL9
+  TemporalProfile: current
+- [Plan] ice the knee | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T34
+  Summary: The doctor instructed the patient to ice the knee.
+  ClusterId: CL11
+  TemporalProfile: current
+- [Plan] nutrition referral | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T34
+  Summary: The doctor ordered a referral to nutrition.
+  ClusterId: CL12
+  TemporalProfile: current
+- [Plan] knee brace | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T34
+  Summary: The doctor ordered a knee brace.
+  ClusterId: CL13
+  TemporalProfile: current
+- [Plan] elevate leg | verification_status=confirmed | clinical_status=planned | modalities=interview | speakers=doctor | evidence=T36
+  Summary: The doctor recommends elevating the leg.
+  ClusterId: CL15
+  TemporalProfile: next time
+- [Plan] stay off leg | verification_status=confirmed | clinical_status=planned | modalities=interview | speakers=doctor | evidence=T36
+  Summary: The doctor advises the patient to stay off the leg.
+  ClusterId: CL16
+  TemporalProfile: next time

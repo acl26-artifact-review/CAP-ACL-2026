@@ -1,0 +1,99 @@
+Case: D2N097
+
+Problem List and Visit State Tracking
+
+Problem List
+- depression | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T4
+  Summary: The patient has a history of depression.
+  ClusterId: CL1
+  TemporalProfile: current
+  Updates:
+  - CAP2: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T4 :: The patient has a history of depression.
+- hypertension | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T4
+  Summary: The patient has a history of hypertension.
+  ClusterId: CL2
+  TemporalProfile: current
+  Updates:
+  - CAP3: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T4 :: The patient has a history of hypertension.
+- left hand pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T7
+  Summary: The patient reports pain in the left hand.
+  ClusterId: CL3
+  TemporalProfile: current
+  Updates:
+  - CAP1: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T7 :: The patient reports pain in the left hand.
+- shortness of breath | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T9
+  Summary: The patient denies shortness of breath.
+  ClusterId: CL4
+  TemporalProfile: current
+  Updates:
+  - CAP4: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T9 :: The patient denies shortness of breath.
+- therapy | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T9
+  Summary: The patient is attending therapy.
+  ClusterId: CL5
+  TemporalProfile: current
+  Updates:
+  - CAP8: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T9 :: The patient is attending therapy.
+- nasal congestion | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T16
+  Summary: The patient reports nasal congestion.
+  ClusterId: CL7
+  TemporalProfile: current
+  Updates:
+  - CAP5: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T16 :: The patient reports nasal congestion.
+- chest pain | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T16
+  Summary: The patient denies chest pain.
+  ClusterId: CL8
+  TemporalProfile: current
+  Updates:
+  - CAP6: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T16 :: The patient denies chest pain.
+- abdominal pain | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T16
+  Summary: The patient denies abdominal pain.
+  ClusterId: CL9
+  TemporalProfile: current
+  Updates:
+  - CAP7: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T16 :: The patient denies abdominal pain.
+- nausea | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T16
+  Summary: The patient denies nausea.
+  ClusterId: CL10
+  TemporalProfile: current
+  Updates:
+  - CAP9: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T16 :: The patient denies nausea.
+- pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T28
+  Summary: The patient reports pain.
+  ClusterId: CL12
+  TemporalProfile: current
+  Updates:
+  - CAP10: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T28 :: The patient reports pain.
+
+Medication Tracking
+- [MedicationState] medication | verification_status=unconfirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T9
+  Summary: The patient was previously on medication.
+  ClusterId: CL6
+  TemporalProfile: past
+  CurrentRegimens:
+  - The patient was previously on medication. (T9)
+  Updates:
+  - CAP14: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=past turns=T9 :: The patient was previously on medication.
+- [MedicationState] lisinopril | verification_status=confirmed | clinical_status=active | modalities=interview,plan | speakers=clinician,patient | evidence=T17,T37
+  Summary: The physician wants the patient to continue lisinopril.
+  ClusterId: CL11
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient is taking lisinopril. (T17)
+  - The physician wants the patient to continue lisinopril. (T37)
+  Updates:
+  - CAP15: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T17 :: The patient is taking lisinopril.
+  - CAP13: content_source=clinician modality=plan verification_status=confirmed clinical_status=active temporality=current turns=T37 :: The physician wants the patient to continue lisinopril.
+- [MedicationState] 20 milligrams | verification_status=confirmed | clinical_status=active | modalities=plan | speakers=clinician | evidence=T29
+  Summary: The physician wants the patient to take lisinopril at a dose of 20 milligrams per day.
+  ClusterId: CL13
+  TemporalProfile: current
+  CurrentRegimens:
+  - The physician wants the patient to take lisinopril at a dose of 20 milligrams per day. (T29)
+  Updates:
+  - CAP12: content_source=clinician modality=plan verification_status=confirmed clinical_status=active temporality=current turns=T29 :: The physician wants the patient to take lisinopril at a dose of 20 milligrams per day.
+
+Other Structured States
+- [Plan] mammogram | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=clinician | evidence=T37
+  Summary: The physician orders a mammogram.
+  ClusterId: CL14
+  TemporalProfile: future

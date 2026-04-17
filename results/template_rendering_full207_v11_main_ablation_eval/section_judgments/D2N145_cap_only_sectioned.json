@@ -1,0 +1,58 @@
+{
+  "section_miscategorizations": [
+    {
+      "text": "The patient reports hand pain.",
+      "current_section": "Findings",
+      "expected_section": "History of Present Illness",
+      "severity": "major",
+      "reason": "This is a patient-reported symptom rather than an exam or test finding; repeating it under Findings could mislead a reader into thinking it was elicited on exam rather than history."
+    },
+    {
+      "text": "The patient reports a tingly sensation.",
+      "current_section": "Findings",
+      "expected_section": "History of Present Illness",
+      "severity": "major",
+      "reason": "This is a subjective symptom reported by the patient, not an objective exam or test result."
+    },
+    {
+      "text": "The patient reports redness and flushing.",
+      "current_section": "Findings",
+      "expected_section": "History of Present Illness",
+      "severity": "major",
+      "reason": "Redness and flushing here are described as patient-reported symptoms rather than documented exam findings."
+    },
+    {
+      "text": "The patient reports a needle-like sensation.",
+      "current_section": "Findings",
+      "expected_section": "History of Present Illness",
+      "severity": "major",
+      "reason": "This is a subjective sensory complaint and belongs in the symptom history, not in the objective findings section."
+    },
+    {
+      "text": "The elidel price is around $70.",
+      "current_section": "Findings",
+      "expected_section": "History of Present Illness",
+      "severity": "minor",
+      "reason": "Medication cost is part of the contextual history/medication state rather than an exam or test finding; misplacement is organizational but not clinically misleading."
+    },
+    {
+      "text": "The doctor recommends canceling the elidel cream.",
+      "current_section": "Plan",
+      "expected_section": "Plan",
+      "severity": "minor",
+      "reason": "This directly conflicts with the subsequent recommendation to use elidel in the same Plan section, creating internal inconsistency that could confuse implementation of the plan, though it is not a cross-section miscategorization."
+    },
+    {
+      "text": "The doctor recommends using elidel.",
+      "current_section": "Plan",
+      "expected_section": "Plan",
+      "severity": "minor",
+      "reason": "This conflicts with the prior directive to cancel elidel within the Plan section; while section placement is correct, the contradictory statements could mislead the reader about the intended management."
+    }
+  ],
+  "summary_statistics": {
+    "section_appropriateness_score": 0.7,
+    "section_miscategorization_count": 7,
+    "major_section_miscategorization_count": 4
+  }
+}

@@ -1,0 +1,1471 @@
+{
+  "case_id": "D2N169",
+  "method": "cap_event_only",
+  "template": "soap",
+  "summary_text": "S:\nThe patient reports experiencing persistent, sharp chest pain radiating to his left arm, which began approximately 2 hours ago. He states the pain is rated 8/10 and is not relieved by over-the-counter analgesics. He also reports shortness of breath and nausea. The patient denies any recent trauma or fever.\n\nO:\nBlood pressure is 140/90 mmHg. Heart rate is 92 bpm and regular. Oxygen saturation is 98% on room air. Auscultation reveals no murmurs or rubs. Lung sounds are clear bilaterally.\n\nA:\nThe patient's symptoms are concerning for acute myocardial infarction.\n\nP:\nActivate EMS and transport to the nearest hospital for immediate evaluation and treatment. Administer oxygen at 2L via nasal cannula. Start aspirin 325 mg.",
+  "reference_summary": "CHIEF COMPLAINT\n\nShortness of breath.\n\nHISTORY OF PRESENT ILLNESS\n\nAlan Butler is a 61-year-old male presenting with complaints of shortness of breath.\n\nThe patient states that over the weekend, he took a very long bike ride for approximately 3 hours, and when he returned, he was very lightheaded and short of breath. He notes that it was difficult to catch his breath afterward. He endorses that he had mild chest pain at that time, however, it eventually went away after about an hour. He denies any fever at this time or any other symptoms at this time. No other members in his family have been sick.\n\nThe patient is currently taking Imitrex as needed for his migraines. His migraines are under control and he avoids exposure to bright lights.\n\nThe patient is currently taking Protonix for his reflux and he is doing well with this.\n\nThe patient had cataract surgery about 4.5 months ago. He notes that his vision is okay since then.\n\nREVIEW OF SYSTEMS\n\n• Constitutional: No fevers.\n• Cardiovascular: Endorses chest pain and dyspnea on exertion.\n• Respiratory: Endorses a cough. Endorses shortness of breath.\n• Gastrointestinal: Endorses reflux.\n• Neurological: Endorses migraines. Endorses lightheadedness.\n\nPHYSICAL EXAMINATION\n\n• Neck: Supple.  No jugular venous distension.\n• Respiratory: Slight expiratory wheezing bilaterally.\n• Cardiovascular: Regular rate and rhythm. No murmurs.\n• Musculoskeletal: Trace edema in the bilateral lower extremities.\n\nRESULTS\n\nPulmonary function test are within normal limits.\n\nX-ray of the chest is unremarkable.\n\nCBC: Within normal limits.\n\nASSESSMENT AND PLAN\n\nThe patient is a 61-year-old male who presents for shortness of breath.\n\nShortness of breath.\n• Medical Reasoning: I reviewed the patient's chest x-ray, pulmonary function test, and labs which were all normal. He does have slight expiratory wheezing bilaterally on exam. I suspect his episode of shortness of breath was due to an exacerbation of asthma.\n• Medical Treatment: I would like to prescribe an albuterol inhaler, 2 puffs every 4 hours as needed for wheezing or shortness of breath.\n• Specialist Referral: I have referred him to pulmonology for an asthma workup.\n\nAcid reflux.\n• Medical Reasoning: This seems stable.\n• Medical Treatment: I recommended the patient continue Protonix.\n\nMigraines.\n• Medical Reasoning: This problem is also stable. Continue on Imitrex as needed.\n• Medical Treatment: I recommended he continue Imitrex as needed for migraines.\n\nPatient Agreements: The patient understands and agrees with the recommended medical treatment plan.\n\nINSTRUCTIONS\n\nThe patient will follow-up in 2 weeks or sooner if his conditions worsen.",
+  "source_cap": {
+    "atomic_propositions": [
+      {
+        "prop_id": "CAP1",
+        "cap_type": "Symptom",
+        "canonical_concept": "chest pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "uncertain",
+        "visit_state": "historical",
+        "temporality": "eventually went away",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports chest pain, but it eventually went away."
+      },
+      {
+        "prop_id": "CAP2",
+        "cap_type": "Symptom",
+        "canonical_concept": "left hand pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports pain in the left hand."
+      },
+      {
+        "prop_id": "CAP3",
+        "cap_type": "Symptom",
+        "canonical_concept": "shortness of breath",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "weekend",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports shortness of breath."
+      },
+      {
+        "prop_id": "CAP4",
+        "cap_type": "Symptom",
+        "canonical_concept": "shortness of breath",
+        "category": "Symptom",
+        "speaker": "doctor",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports shortness of breath."
+      },
+      {
+        "prop_id": "CAP5",
+        "cap_type": "Symptom",
+        "canonical_concept": "shortness of breath",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports shortness of breath."
+      },
+      {
+        "prop_id": "CAP6",
+        "cap_type": "Symptom",
+        "canonical_concept": "lightheadedness",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "afterwards",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports feeling lightheaded."
+      },
+      {
+        "prop_id": "CAP7",
+        "cap_type": "Symptom",
+        "canonical_concept": "chest pain",
+        "category": "Symptom",
+        "speaker": "doctor",
+        "predicate": "reports",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports chest pain."
+      },
+      {
+        "prop_id": "CAP8",
+        "cap_type": "Symptom",
+        "canonical_concept": "lightheadedness",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports feeling lightheaded."
+      },
+      {
+        "prop_id": "CAP9",
+        "cap_type": "Symptom",
+        "canonical_concept": "difficulty breathing",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports difficulty breathing."
+      },
+      {
+        "prop_id": "CAP10",
+        "cap_type": "Symptom",
+        "canonical_concept": "chest pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports chest pain."
+      },
+      {
+        "prop_id": "CAP11",
+        "cap_type": "TestResult",
+        "canonical_concept": "cataract surgery",
+        "category": "TestResult",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "4.5 months ago",
+        "proposition_text": "The patient had cataract surgery about four and a half months ago."
+      },
+      {
+        "prop_id": "CAP12",
+        "cap_type": "Order",
+        "canonical_concept": "follow up",
+        "category": "Order",
+        "speaker": "doctor",
+        "status": "uncertain",
+        "visit_state": "planned",
+        "temporality": "in a couple weeks",
+        "proposition_text": "The doctor wants to see the patient in a couple of weeks."
+      },
+      {
+        "prop_id": "CAP13",
+        "cap_type": "ExamFinding",
+        "canonical_concept": "lower extremity edema",
+        "category": "ExamFinding",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient has trace lower extremity edema."
+      },
+      {
+        "prop_id": "CAP14",
+        "cap_type": "ExamFinding",
+        "canonical_concept": "wheeze",
+        "category": "ExamFinding",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient has expiratory wheeze bilaterally."
+      },
+      {
+        "prop_id": "CAP15",
+        "cap_type": "MedicationRequest",
+        "canonical_concept": "albuterol inhaler",
+        "category": "MedicationRequest",
+        "speaker": "doctor",
+        "predicate": "prescribes",
+        "status": "uncertain",
+        "visit_state": "planned",
+        "temporality": "current",
+        "proposition_text": "The doctor prescribes an albuterol inhaler."
+      },
+      {
+        "prop_id": "CAP16",
+        "cap_type": "Order",
+        "canonical_concept": "pulmonary referral",
+        "category": "Order",
+        "speaker": "doctor",
+        "predicate": "orders",
+        "status": "uncertain",
+        "visit_state": "planned",
+        "temporality": "current",
+        "claim_type_tags": [
+          "plan"
+        ],
+        "proposition_text": "The doctor orders a pulmonary referral."
+      },
+      {
+        "prop_id": "CAP17",
+        "cap_type": "TestResult",
+        "canonical_concept": "vision",
+        "category": "TestResult",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "stable",
+        "temporality": "current",
+        "proposition_text": "The patient's vision is okay."
+      },
+      {
+        "prop_id": "CAP18",
+        "cap_type": "TestResult",
+        "canonical_concept": "chest x-ray",
+        "category": "TestResult",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "recent",
+        "proposition_text": "The chest x-ray is normal."
+      },
+      {
+        "prop_id": "CAP19",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "medication",
+        "category": "MedicationStatement",
+        "speaker": "patient",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient has avoided bright lights to manage migraines."
+      },
+      {
+        "prop_id": "CAP20",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "medication",
+        "category": "MedicationStatement",
+        "speaker": "patient",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "medication"
+        ],
+        "proposition_text": "The patient has been taking medication for migraines."
+      },
+      {
+        "prop_id": "CAP21",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "protonix",
+        "category": "MedicationStatement",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "stable",
+        "temporality": "current",
+        "proposition_text": "The patient's reflux is managed with protonix."
+      },
+      {
+        "prop_id": "CAP22",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "imitrex",
+        "category": "MedicationStatement",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient is still taking imitrex."
+      },
+      {
+        "prop_id": "CAP23",
+        "cap_type": "ProblemHistory",
+        "canonical_concept": "cough",
+        "category": "ProblemHistory",
+        "speaker": "patient",
+        "status": "uncertain",
+        "visit_state": "historical",
+        "temporality": "past year and a half",
+        "claim_type_tags": [
+          "temporal"
+        ],
+        "proposition_text": "The patient had a cough with their first cold in the past year and a half."
+      },
+      {
+        "prop_id": "CAP24",
+        "cap_type": "ProblemHistory",
+        "canonical_concept": "bike ride",
+        "category": "ProblemHistory",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "weekend",
+        "proposition_text": "The patient took a very long bike ride on the weekend."
+      }
+    ],
+    "filtered_nonverifiable_units": []
+  },
+  "event_plan": {
+    "events": [
+      {
+        "event_id": "CL1",
+        "event_type": "ProblemOrientedNoteBundle",
+        "canonical_concept": "shortness of breath",
+        "visit_state": "active",
+        "status": "uncertain",
+        "temporality": "past year and a half",
+        "speaker_source": "patient,exam,test_result",
+        "clinical_priority": "high",
+        "title": "shortness of breath",
+        "event_summary": "Problem-oriented bundle for shortness of breath.",
+        "supporting_cap_ids": [
+          "CAP3",
+          "CAP4",
+          "CAP5",
+          "CAP9",
+          "CAP17",
+          "CAP11",
+          "CAP13",
+          "CAP14",
+          "CAP18",
+          "CAP19",
+          "CAP20",
+          "CAP22",
+          "CAP24",
+          "CAP23",
+          "CAP21"
+        ],
+        "anchor_problem": "shortness of breath",
+        "S_cap_ids": [
+          "CAP19",
+          "CAP20"
+        ],
+        "O_cap_ids": [
+          "CAP17",
+          "CAP11",
+          "CAP13",
+          "CAP14",
+          "CAP18"
+        ],
+        "global_cap_ids": [
+          "CAP3",
+          "CAP4",
+          "CAP5",
+          "CAP9",
+          "CAP22",
+          "CAP24",
+          "CAP23",
+          "CAP21"
+        ],
+        "supporting_evidence": [
+          "The patient has avoided bright lights to manage migraines.",
+          "The patient has been taking medication for migraines.",
+          "The patient's vision is okay.",
+          "The patient had cataract surgery about four and a half months ago.",
+          "The patient has trace lower extremity edema.",
+          "The patient has expiratory wheeze bilaterally."
+        ],
+        "current_state": [
+          "The patient has avoided bright lights to manage migraines.",
+          "The patient has been taking medication for migraines."
+        ],
+        "care_context": [
+          "The patient reports shortness of breath.",
+          "The patient reports difficulty breathing.",
+          "The patient is still taking imitrex.",
+          "The patient took a very long bike ride on the weekend.",
+          "The patient had a cough with their first cold in the past year and a half.",
+          "The patient's reflux is managed with protonix."
+        ],
+        "key_slots": {
+          "source_modalities": "interview, test_result, exam",
+          "temporal_profile": "current, weekend, 4.5 months ago, recent, past year and a half",
+          "anchor_cluster_type": "ProblemState",
+          "anchor_primary_cap_type": "Symptom",
+          "bundle_concepts": "shortness of breath; difficulty breathing; vision; cataract surgery; lower extremity edema; wheeze; chest x-ray; medication; imitrex; bike ride; cough; protonix",
+          "history_context": "",
+          "related_factors": "",
+          "visit_primary": "false",
+          "render_in_note": "false",
+          "assessment_fallback": "",
+          "bundle_design": "problem_oriented_note_bundle"
+        },
+        "render_sections": [
+          "S",
+          "O",
+          "A",
+          "P",
+          "History of Present Illness",
+          "Findings",
+          "Assessment",
+          "Plan"
+        ]
+      }
+    ]
+  },
+  "summary_cap": {
+    "atomic_propositions": [],
+    "filtered_nonverifiable_units": [],
+    "runtime_seconds": 0.548
+  },
+  "cap_alignment": {
+    "cap_precision": 0.0,
+    "cap_recall": 0.0,
+    "cap_f1": 0.0,
+    "matched_count": 0,
+    "summary_prop_count": 0,
+    "source_prop_count": 24,
+    "matched_pairs": [],
+    "unsupported_summary_props": [],
+    "missing_source_props": [
+      {
+        "prop_id": "CAP1",
+        "cap_type": "Symptom",
+        "canonical_concept": "chest pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "uncertain",
+        "visit_state": "historical",
+        "temporality": "eventually went away",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports chest pain, but it eventually went away."
+      },
+      {
+        "prop_id": "CAP2",
+        "cap_type": "Symptom",
+        "canonical_concept": "left hand pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports pain in the left hand."
+      },
+      {
+        "prop_id": "CAP3",
+        "cap_type": "Symptom",
+        "canonical_concept": "shortness of breath",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "weekend",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports shortness of breath."
+      },
+      {
+        "prop_id": "CAP4",
+        "cap_type": "Symptom",
+        "canonical_concept": "shortness of breath",
+        "category": "Symptom",
+        "speaker": "doctor",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports shortness of breath."
+      },
+      {
+        "prop_id": "CAP5",
+        "cap_type": "Symptom",
+        "canonical_concept": "shortness of breath",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports shortness of breath."
+      },
+      {
+        "prop_id": "CAP6",
+        "cap_type": "Symptom",
+        "canonical_concept": "lightheadedness",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "afterwards",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports feeling lightheaded."
+      },
+      {
+        "prop_id": "CAP7",
+        "cap_type": "Symptom",
+        "canonical_concept": "chest pain",
+        "category": "Symptom",
+        "speaker": "doctor",
+        "predicate": "reports",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports chest pain."
+      },
+      {
+        "prop_id": "CAP8",
+        "cap_type": "Symptom",
+        "canonical_concept": "lightheadedness",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports feeling lightheaded."
+      },
+      {
+        "prop_id": "CAP9",
+        "cap_type": "Symptom",
+        "canonical_concept": "difficulty breathing",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports difficulty breathing."
+      },
+      {
+        "prop_id": "CAP10",
+        "cap_type": "Symptom",
+        "canonical_concept": "chest pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports chest pain."
+      },
+      {
+        "prop_id": "CAP11",
+        "cap_type": "TestResult",
+        "canonical_concept": "cataract surgery",
+        "category": "TestResult",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "4.5 months ago",
+        "proposition_text": "The patient had cataract surgery about four and a half months ago."
+      },
+      {
+        "prop_id": "CAP12",
+        "cap_type": "Order",
+        "canonical_concept": "follow up",
+        "category": "Order",
+        "speaker": "doctor",
+        "status": "uncertain",
+        "visit_state": "planned",
+        "temporality": "in a couple weeks",
+        "proposition_text": "The doctor wants to see the patient in a couple of weeks."
+      },
+      {
+        "prop_id": "CAP13",
+        "cap_type": "ExamFinding",
+        "canonical_concept": "lower extremity edema",
+        "category": "ExamFinding",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient has trace lower extremity edema."
+      },
+      {
+        "prop_id": "CAP14",
+        "cap_type": "ExamFinding",
+        "canonical_concept": "wheeze",
+        "category": "ExamFinding",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient has expiratory wheeze bilaterally."
+      },
+      {
+        "prop_id": "CAP15",
+        "cap_type": "MedicationRequest",
+        "canonical_concept": "albuterol inhaler",
+        "category": "MedicationRequest",
+        "speaker": "doctor",
+        "predicate": "prescribes",
+        "status": "uncertain",
+        "visit_state": "planned",
+        "temporality": "current",
+        "proposition_text": "The doctor prescribes an albuterol inhaler."
+      },
+      {
+        "prop_id": "CAP16",
+        "cap_type": "Order",
+        "canonical_concept": "pulmonary referral",
+        "category": "Order",
+        "speaker": "doctor",
+        "predicate": "orders",
+        "status": "uncertain",
+        "visit_state": "planned",
+        "temporality": "current",
+        "claim_type_tags": [
+          "plan"
+        ],
+        "proposition_text": "The doctor orders a pulmonary referral."
+      },
+      {
+        "prop_id": "CAP17",
+        "cap_type": "TestResult",
+        "canonical_concept": "vision",
+        "category": "TestResult",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "stable",
+        "temporality": "current",
+        "proposition_text": "The patient's vision is okay."
+      },
+      {
+        "prop_id": "CAP18",
+        "cap_type": "TestResult",
+        "canonical_concept": "chest x-ray",
+        "category": "TestResult",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "recent",
+        "proposition_text": "The chest x-ray is normal."
+      },
+      {
+        "prop_id": "CAP19",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "medication",
+        "category": "MedicationStatement",
+        "speaker": "patient",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient has avoided bright lights to manage migraines."
+      },
+      {
+        "prop_id": "CAP20",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "medication",
+        "category": "MedicationStatement",
+        "speaker": "patient",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "medication"
+        ],
+        "proposition_text": "The patient has been taking medication for migraines."
+      },
+      {
+        "prop_id": "CAP21",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "protonix",
+        "category": "MedicationStatement",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "stable",
+        "temporality": "current",
+        "proposition_text": "The patient's reflux is managed with protonix."
+      },
+      {
+        "prop_id": "CAP22",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "imitrex",
+        "category": "MedicationStatement",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient is still taking imitrex."
+      },
+      {
+        "prop_id": "CAP23",
+        "cap_type": "ProblemHistory",
+        "canonical_concept": "cough",
+        "category": "ProblemHistory",
+        "speaker": "patient",
+        "status": "uncertain",
+        "visit_state": "historical",
+        "temporality": "past year and a half",
+        "claim_type_tags": [
+          "temporal"
+        ],
+        "proposition_text": "The patient had a cough with their first cold in the past year and a half."
+      },
+      {
+        "prop_id": "CAP24",
+        "cap_type": "ProblemHistory",
+        "canonical_concept": "bike ride",
+        "category": "ProblemHistory",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "weekend",
+        "proposition_text": "The patient took a very long bike ride on the weekend."
+      }
+    ]
+  },
+  "reference_gpt_f1_items": {
+    "active_problems_symptoms": [],
+    "negated_findings": [],
+    "uncertain_findings": [],
+    "medication_treatment": [],
+    "plan_followup": [],
+    "_chunk_count": [
+      "4"
+    ],
+    "_parse_failures": [
+      "{\"chunk_index\": 1, \"stage\": \"call_llm\", \"error\": \"LLM call failed after retries: Error code: 404\"}",
+      "{\"chunk_index\": 2, \"stage\": \"call_llm\", \"error\": \"LLM call failed after retries: Error code: 404\"}",
+      "{\"chunk_index\": 3, \"stage\": \"call_llm\", \"error\": \"LLM call failed after retries: Error code: 404\"}",
+      "{\"chunk_index\": 4, \"stage\": \"call_llm\", \"error\": \"LLM call failed after retries: Error code: 404\"}"
+    ]
+  },
+  "summary_gpt_f1_items": {
+    "active_problems_symptoms": [],
+    "negated_findings": [],
+    "uncertain_findings": [],
+    "medication_treatment": [],
+    "plan_followup": [],
+    "_chunk_count": [
+      "1"
+    ],
+    "_parse_failures": [
+      "{\"chunk_index\": 1, \"stage\": \"call_llm\", \"error\": \"LLM call failed after retries: Error code: 404\"}"
+    ]
+  },
+  "gpt_f1_alignment": {
+    "by_category": {
+      "active_problems_symptoms": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "matched_count": 0,
+        "pred_count": 0,
+        "ref_count": 0,
+        "matches": [],
+        "unsupported_pred_items": [],
+        "missing_ref_items": []
+      },
+      "negated_findings": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "matched_count": 0,
+        "pred_count": 0,
+        "ref_count": 0,
+        "matches": [],
+        "unsupported_pred_items": [],
+        "missing_ref_items": []
+      },
+      "uncertain_findings": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "matched_count": 0,
+        "pred_count": 0,
+        "ref_count": 0,
+        "matches": [],
+        "unsupported_pred_items": [],
+        "missing_ref_items": []
+      },
+      "medication_treatment": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "matched_count": 0,
+        "pred_count": 0,
+        "ref_count": 0,
+        "matches": [],
+        "unsupported_pred_items": [],
+        "missing_ref_items": []
+      },
+      "plan_followup": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "matched_count": 0,
+        "pred_count": 0,
+        "ref_count": 0,
+        "matches": [],
+        "unsupported_pred_items": [],
+        "missing_ref_items": []
+      }
+    }
+  },
+  "reference_nair_concepts": {
+    "sections": [
+      {
+        "heading": "Clinical Note",
+        "section_value": "CHIEF COMPLAINT\nShortness of breath.\nHISTORY OF PRESENT ILLNESS\nAlan Butler is a 61-year-old male presenting with complaints of shortness of breath.\nThe patient states that over the weekend, he took a very long bike ride for approximately 3 hours, and when he returned, he was very lightheaded and short of breath. He notes that it was difficult to catch his breath afterward. He endorses that he had mild chest pain at that time, however, it eventually went away after about an hour. He denies any fever at this time or any other symptoms at this time. No other members in his family have been sick.\nThe patient is currently taking Imitrex as needed for his migraines. His migraines are under control and he avoids exposure to bright lights.\nThe patient is currently taking Protonix for his reflux and he is doing well with this.\nThe patient had cataract surgery about 4.5 months ago. He notes that his vision is okay since then.\nREVIEW OF SYSTEMS\n• Constitutional: No fevers.",
+        "medical_concepts": [
+          "shortness of breath",
+          "lightheadedness",
+          "chest pain",
+          "fever",
+          "migraines",
+          "bright light sensitivity",
+          "reflux",
+          "cataract surgery",
+          "vision change",
+          "Imitrex",
+          "Protonix"
+        ]
+      },
+      {
+        "heading": "Clinical Note",
+        "section_value": "• Cardiovascular: Endorses chest pain and dyspnea on exertion.\n• Respiratory: Endorses a cough. Endorses shortness of breath.\n• Gastrointestinal: Endorses reflux.\n• Neurological: Endorses migraines. Endorses lightheadedness.\nPHYSICAL EXAMINATION\n• Neck: Supple.  No jugular venous distension.\n• Respiratory: Slight expiratory wheezing bilaterally.\n• Cardiovascular: Regular rate and rhythm. No murmurs.\n• Musculoskeletal: Trace edema in the bilateral lower extremities.\nRESULTS",
+        "medical_concepts": [
+          "chest pain",
+          "dyspnea on exertion",
+          "cough",
+          "shortness of breath",
+          "reflux",
+          "migraines",
+          "lightheadedness",
+          "jugular venous distension",
+          "expiratory wheezing",
+          "murmurs",
+          "edema",
+          "lower extremity edema"
+        ]
+      },
+      {
+        "heading": "Clinical Note",
+        "section_value": "Pulmonary function test are within normal limits.\nX-ray of the chest is unremarkable.\nCBC: Within normal limits.\nASSESSMENT AND PLAN\nThe patient is a 61-year-old male who presents for shortness of breath.\nShortness of breath.\n• Medical Reasoning: I reviewed the patient's chest x-ray, pulmonary function test, and labs which were all normal. He does have slight expiratory wheezing bilaterally on exam. I suspect his episode of shortness of breath was due to an exacerbation of asthma.\n• Medical Treatment: I would like to prescribe an albuterol inhaler, 2 puffs every 4 hours as needed for wheezing or shortness of breath.\n• Specialist Referral: I have referred him to pulmonology for an asthma workup.\nAcid reflux.",
+        "medical_concepts": [
+          "pulmonary function test",
+          "chest x-ray",
+          "CBC",
+          "shortness of breath",
+          "expiratory wheezing",
+          "asthma",
+          "albuterol inhaler",
+          "wheezing",
+          "pulmonology",
+          "asthma workup",
+          "acid reflux"
+        ]
+      },
+      {
+        "heading": "Clinical Note",
+        "section_value": "• Medical Reasoning: This seems stable.\n• Medical Treatment: I recommended the patient continue Protonix.\nMigraines.\n• Medical Reasoning: This problem is also stable. Continue on Imitrex as needed.\n• Medical Treatment: I recommended he continue Imitrex as needed for migraines.\nPatient Agreements: The patient understands and agrees with the recommended medical treatment plan.\nINSTRUCTIONS\nThe patient will follow-up in 2 weeks or sooner if his conditions worsen.",
+        "medical_concepts": [
+          "Protonix",
+          "migraines",
+          "Imitrex"
+        ]
+      }
+    ],
+    "medical_concepts": [
+      "shortness of breath",
+      "lightheadedness",
+      "chest pain",
+      "fever",
+      "migraines",
+      "bright light sensitivity",
+      "reflux",
+      "cataract surgery",
+      "vision change",
+      "Imitrex",
+      "Protonix",
+      "dyspnea on exertion",
+      "cough",
+      "jugular venous distension",
+      "expiratory wheezing",
+      "murmurs",
+      "edema",
+      "lower extremity edema",
+      "pulmonary function test",
+      "chest x-ray",
+      "CBC",
+      "asthma",
+      "albuterol inhaler",
+      "wheezing",
+      "pulmonology",
+      "asthma workup",
+      "acid reflux"
+    ],
+    "section_count": 4
+  },
+  "summary_nair_concepts": {
+    "sections": [
+      {
+        "heading": "S",
+        "section_value": "The patient reports experiencing persistent, sharp chest pain radiating to his left arm, which began approximately 2 hours ago. He states the pain is rated 8/10 and is not relieved by over-the-counter analgesics. He also reports shortness of breath and nausea. The patient denies any recent trauma or fever.",
+        "medical_concepts": [
+          "chest pain",
+          "left arm pain",
+          "shortness of breath",
+          "nausea",
+          "trauma",
+          "fever",
+          "over-the-counter analgesics"
+        ]
+      },
+      {
+        "heading": "O",
+        "section_value": "Blood pressure is 140/90 mmHg. Heart rate is 92 bpm and regular. Oxygen saturation is 98% on room air. Auscultation reveals no murmurs or rubs. Lung sounds are clear bilaterally.",
+        "medical_concepts": [
+          "blood pressure",
+          "heart rate",
+          "oxygen saturation",
+          "room air",
+          "cardiac murmur",
+          "pericardial rub",
+          "lung sounds"
+        ]
+      },
+      {
+        "heading": "A",
+        "section_value": "The patient's symptoms are concerning for acute myocardial infarction.",
+        "medical_concepts": [
+          "acute myocardial infarction"
+        ]
+      },
+      {
+        "heading": "P",
+        "section_value": "Activate EMS and transport to the nearest hospital for immediate evaluation and treatment. Administer oxygen at 2L via nasal cannula. Start aspirin 325 mg.",
+        "medical_concepts": [
+          "oxygen",
+          "nasal cannula",
+          "aspirin 325 mg"
+        ]
+      }
+    ],
+    "medical_concepts": [
+      "chest pain",
+      "left arm pain",
+      "shortness of breath",
+      "nausea",
+      "trauma",
+      "fever",
+      "over-the-counter analgesics",
+      "blood pressure",
+      "heart rate",
+      "oxygen saturation",
+      "room air",
+      "cardiac murmur",
+      "pericardial rub",
+      "lung sounds",
+      "acute myocardial infarction",
+      "oxygen",
+      "nasal cannula",
+      "aspirin 325 mg"
+    ],
+    "section_count": 4
+  },
+  "nair_alignment": {
+    "pred_concepts": [
+      "chest pain",
+      "left arm pain",
+      "shortness of breath",
+      "nausea",
+      "trauma",
+      "fever",
+      "over-the-counter analgesics",
+      "blood pressure",
+      "heart rate",
+      "oxygen saturation",
+      "room air",
+      "cardiac murmur",
+      "pericardial rub",
+      "lung sounds",
+      "acute myocardial infarction",
+      "oxygen",
+      "nasal cannula",
+      "aspirin 325 mg"
+    ],
+    "ref_concepts": [
+      "shortness of breath",
+      "lightheadedness",
+      "chest pain",
+      "fever",
+      "migraines",
+      "bright light sensitivity",
+      "reflux",
+      "cataract surgery",
+      "vision change",
+      "Imitrex",
+      "Protonix",
+      "dyspnea on exertion",
+      "cough",
+      "jugular venous distension",
+      "expiratory wheezing",
+      "murmurs",
+      "edema",
+      "lower extremity edema",
+      "pulmonary function test",
+      "chest x-ray",
+      "CBC",
+      "asthma",
+      "albuterol inhaler",
+      "wheezing",
+      "pulmonology",
+      "asthma workup",
+      "acid reflux"
+    ],
+    "precision_alignment": {
+      "found_b": [
+        "chest pain",
+        "shortness of breath",
+        "fever"
+      ],
+      "not_found_b": [
+        "left arm pain",
+        "nausea",
+        "trauma",
+        "over-the-counter analgesics",
+        "blood pressure",
+        "heart rate",
+        "oxygen saturation",
+        "room air",
+        "cardiac murmur",
+        "pericardial rub",
+        "lung sounds",
+        "acute myocardial infarction",
+        "oxygen",
+        "nasal cannula",
+        "aspirin 325 mg"
+      ],
+      "chunk_count": 1,
+      "chunk_results": [
+        {
+          "found_b": [
+            "chest pain",
+            "shortness of breath",
+            "fever"
+          ],
+          "not_found_b": [
+            "left arm pain",
+            "nausea",
+            "trauma",
+            "over-the-counter analgesics",
+            "blood pressure",
+            "heart rate",
+            "oxygen saturation",
+            "room air",
+            "cardiac murmur",
+            "pericardial rub",
+            "lung sounds",
+            "acute myocardial infarction",
+            "oxygen",
+            "nasal cannula",
+            "aspirin 325 mg"
+          ]
+        }
+      ]
+    },
+    "recall_alignment": {
+      "found_b": [
+        "shortness of breath",
+        "chest pain",
+        "fever",
+        "murmurs"
+      ],
+      "not_found_b": [
+        "lightheadedness",
+        "migraines",
+        "bright light sensitivity",
+        "reflux",
+        "cataract surgery",
+        "vision change",
+        "Imitrex",
+        "Protonix",
+        "dyspnea on exertion",
+        "cough",
+        "jugular venous distension",
+        "expiratory wheezing",
+        "edema",
+        "lower extremity edema",
+        "pulmonary function test",
+        "chest x-ray",
+        "CBC",
+        "asthma",
+        "albuterol inhaler",
+        "wheezing",
+        "pulmonology",
+        "asthma workup",
+        "acid reflux"
+      ],
+      "chunk_count": 2,
+      "chunk_results": [
+        {
+          "found_b": [
+            "shortness of breath",
+            "chest pain",
+            "fever",
+            "murmurs"
+          ],
+          "not_found_b": [
+            "lightheadedness",
+            "migraines",
+            "bright light sensitivity",
+            "reflux",
+            "cataract surgery",
+            "vision change",
+            "Imitrex",
+            "Protonix",
+            "dyspnea on exertion",
+            "cough",
+            "jugular venous distension",
+            "expiratory wheezing",
+            "edema",
+            "lower extremity edema",
+            "pulmonary function test",
+            "chest x-ray",
+            "CBC",
+            "asthma",
+            "albuterol inhaler",
+            "wheezing"
+          ]
+        },
+        {
+          "found_b": [],
+          "not_found_b": [
+            "pulmonology",
+            "asthma workup",
+            "acid reflux"
+          ]
+        }
+      ]
+    }
+  },
+  "semantic_cap_audit": {
+    "source_cap_recall": [
+      {
+        "cap_id": "P1",
+        "judgment": "contradicted",
+        "reason": null
+      },
+      {
+        "cap_id": "P2",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P3",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P4",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P5",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P6",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P7",
+        "judgment": "contradicted",
+        "reason": null
+      },
+      {
+        "cap_id": "P8",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P9",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P10",
+        "judgment": "contradicted",
+        "reason": null
+      },
+      {
+        "cap_id": "P11",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P12",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P13",
+        "judgment": "contradicted",
+        "reason": null
+      },
+      {
+        "cap_id": "P14",
+        "judgment": "contradicted",
+        "reason": null
+      },
+      {
+        "cap_id": "P15",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P16",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P1",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P2",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P3",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P4",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P5",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P6",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P7",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P8",
+        "judgment": "missing",
+        "reason": null
+      }
+    ],
+    "summary_cap_precision": [],
+    "metrics": {
+      "semantic_cap_precision": 0.0,
+      "semantic_cap_recall": 0.0833,
+      "semantic_cap_f1": 0.0,
+      "semantic_cap_precision_supported_count": 0,
+      "semantic_cap_precision_partial_count": 0,
+      "semantic_cap_precision_denominator": 0,
+      "semantic_cap_recall_supported_count": 0,
+      "semantic_cap_recall_partial_count": 4,
+      "semantic_cap_recall_denominator": 24,
+      "semantic_cap_low_value_source_count": 0,
+      "semantic_cap_low_value_summary_count": 0,
+      "semantic_cap_missing_count": 15,
+      "semantic_cap_unsupported_count": 0,
+      "semantic_cap_contradicted_source_count": 5,
+      "semantic_cap_contradicted_summary_count": 0
+    }
+  },
+  "safety_judgment": null,
+  "section_judgment": {
+    "section_miscategorizations": [],
+    "summary_statistics": {
+      "section_appropriateness_score": 1.0,
+      "section_miscategorization_count": 0,
+      "major_section_miscategorization_count": 0
+    }
+  },
+  "pdsqi_judgment": {
+    "citation_applicable": 0,
+    "citation": 0,
+    "accurate": 1,
+    "thorough": 1,
+    "useful": 1,
+    "organized": 3,
+    "comprehensible": 5,
+    "succinct": 4,
+    "abstraction": 1,
+    "synthesized": 1,
+    "voice_summ": 0,
+    "voice_note": 0,
+    "pdsqi_core_mean": 2.2857
+  },
+  "llm_checklist_judgment": {
+    "content_preservation_core": 1,
+    "noise_suppression": 3,
+    "lay_expression_preservation": 1,
+    "state_update_fidelity": 1,
+    "temporality_preservation": 1,
+    "problem_evidence_linkage": 1,
+    "state_plan_separation": 2,
+    "section_organization_appropriateness": 2,
+    "overall_clinical_usability": 1,
+    "clinically_meaningful_omission": "Yes",
+    "clinically_concerning_hallucination": "Yes",
+    "checklist_a_mean": 1.6667,
+    "checklist_b_mean": 1.0,
+    "checklist_c_mean": 1.6667,
+    "llm_checklist_abc_mean": 1.5,
+    "llm_checklist_mean_no_usability": 1.5,
+    "llm_checklist_total_score": 13,
+    "llm_checklist_mean": 1.4444,
+    "llm_checklist_meaningful_omission_yes": 1,
+    "llm_checklist_concerning_hallucination_yes": 1
+  },
+  "metrics": {
+    "case_id": "D2N169",
+    "method": "cap_event_only",
+    "template": "soap",
+    "source_cap_count": 24,
+    "event_plan_count": 1,
+    "summary_cap_count": 0,
+    "cap_matched_count": 0,
+    "cap_precision": 0.0,
+    "cap_recall": 0.0,
+    "cap_f1": 0.0,
+    "unsupported_summary_cap_count": 0,
+    "missing_source_cap_count": 24,
+    "summary_runtime_seconds": null,
+    "summary_cap_runtime_seconds": 0.548,
+    "event_plan_runtime_seconds": null,
+    "rouge_l_f1_vs_reference": 0.1134,
+    "token_f1_vs_reference": 0.2193,
+    "gptf1_macro_f1": 0.0,
+    "nair_gpt_precision": 0.1667,
+    "nair_gpt_recall": 0.1481,
+    "nair_gpt_f1": 0.1569,
+    "semantic_cap_precision": 0.0,
+    "semantic_cap_recall": 0.0833,
+    "semantic_cap_f1": 0.0,
+    "hallucination_count": null,
+    "major_hallucination_count": null,
+    "omission_count": null,
+    "major_omission_count": null,
+    "section_appropriateness_score": 1.0,
+    "section_miscategorization_count": 0,
+    "major_section_miscategorization_count": 0,
+    "pdsqi_core_mean": 2.2857,
+    "pdsqi_accurate": 1,
+    "pdsqi_thorough": 1,
+    "llm_checklist_total_score": 13,
+    "llm_checklist_mean": 1.4444,
+    "llm_checklist_mean_no_usability": 1.5,
+    "checklist_a_mean": 1.6667,
+    "checklist_b_mean": 1.0,
+    "checklist_c_mean": 1.6667,
+    "llm_checklist_abc_mean": 1.5,
+    "content_preservation_core": 1,
+    "noise_suppression": 3,
+    "lay_expression_preservation": 1,
+    "state_update_fidelity": 1,
+    "temporality_preservation": 1,
+    "problem_evidence_linkage": 1,
+    "state_plan_separation": 2,
+    "section_organization_appropriateness": 2,
+    "overall_clinical_usability": 1,
+    "llm_checklist_meaningful_omission_yes": 1,
+    "llm_checklist_concerning_hallucination_yes": 1,
+    "gptf1_active_problems_symptoms_precision": 0.0,
+    "gptf1_active_problems_symptoms_recall": 0.0,
+    "gptf1_active_problems_symptoms_f1": 0.0,
+    "gptf1_active_problems_symptoms_pred_count": 0,
+    "gptf1_active_problems_symptoms_ref_count": 0,
+    "gptf1_negated_findings_precision": 0.0,
+    "gptf1_negated_findings_recall": 0.0,
+    "gptf1_negated_findings_f1": 0.0,
+    "gptf1_negated_findings_pred_count": 0,
+    "gptf1_negated_findings_ref_count": 0,
+    "gptf1_uncertain_findings_precision": 0.0,
+    "gptf1_uncertain_findings_recall": 0.0,
+    "gptf1_uncertain_findings_f1": 0.0,
+    "gptf1_uncertain_findings_pred_count": 0,
+    "gptf1_uncertain_findings_ref_count": 0,
+    "gptf1_medication_treatment_precision": 0.0,
+    "gptf1_medication_treatment_recall": 0.0,
+    "gptf1_medication_treatment_f1": 0.0,
+    "gptf1_medication_treatment_pred_count": 0,
+    "gptf1_medication_treatment_ref_count": 0,
+    "gptf1_plan_followup_precision": 0.0,
+    "gptf1_plan_followup_recall": 0.0,
+    "gptf1_plan_followup_f1": 0.0,
+    "gptf1_plan_followup_pred_count": 0,
+    "gptf1_plan_followup_ref_count": 0,
+    "nair_pred_concept_count": 18,
+    "nair_ref_concept_count": 27,
+    "nair_precision_match_count": 3,
+    "nair_recall_match_count": 4,
+    "semantic_cap_precision_supported_count": 0,
+    "semantic_cap_precision_partial_count": 0,
+    "semantic_cap_precision_denominator": 0,
+    "semantic_cap_recall_supported_count": 0,
+    "semantic_cap_recall_partial_count": 4,
+    "semantic_cap_recall_denominator": 24,
+    "semantic_cap_low_value_source_count": 0,
+    "semantic_cap_low_value_summary_count": 0,
+    "semantic_cap_missing_count": 15,
+    "semantic_cap_unsupported_count": 0,
+    "semantic_cap_contradicted_source_count": 5,
+    "semantic_cap_contradicted_summary_count": 0,
+    "pdsqi_useful": 1,
+    "pdsqi_organized": 3,
+    "pdsqi_comprehensible": 5,
+    "pdsqi_succinct": 4,
+    "pdsqi_synthesized": 1
+  }
+}

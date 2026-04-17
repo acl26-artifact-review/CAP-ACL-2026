@@ -1,0 +1,863 @@
+{
+  "clusters": [
+    {
+      "cluster_id": "CL1",
+      "cluster_type": "ProblemState",
+      "canonical_concept": "pain",
+      "primary_cap_type": "Symptom",
+      "source_cap_types": [
+        "Symptom"
+      ],
+      "final_verification_status": "unconfirmed",
+      "clinical_status": "active",
+      "final_assertion": "uncertain",
+      "visit_state": "active",
+      "source_speakers": [
+        "patient"
+      ],
+      "source_modalities": [
+        "interview"
+      ],
+      "temporal_profile": [
+        "current"
+      ],
+      "evidence_turn_ids": [
+        "T27",
+        "T33",
+        "T5"
+      ],
+      "supporting_cap_ids": [
+        "CAP3",
+        "CAP8",
+        "CAP12"
+      ],
+      "cluster_summary": "The patient reports pain in the left hand.",
+      "salience_score": 10,
+      "is_low_value": false,
+      "updates": [
+        {
+          "cap_id": "CAP3",
+          "content_source": "patient",
+          "modality": "interview",
+          "verification_status": "confirmed",
+          "clinical_status": "active",
+          "assertion": "present",
+          "visit_state": "active",
+          "temporality": "current",
+          "turn_ids": [
+            "T5"
+          ],
+          "proposition_text": "The patient reports pain in the left hand."
+        },
+        {
+          "cap_id": "CAP8",
+          "content_source": "patient",
+          "modality": "interview",
+          "verification_status": "confirmed",
+          "clinical_status": "active",
+          "assertion": "present",
+          "visit_state": "active",
+          "temporality": "current",
+          "turn_ids": [
+            "T27"
+          ],
+          "proposition_text": "The patient reports pain."
+        },
+        {
+          "cap_id": "CAP12",
+          "content_source": "patient",
+          "modality": "interview",
+          "verification_status": "unconfirmed",
+          "clinical_status": "active",
+          "assertion": "uncertain",
+          "visit_state": "active",
+          "temporality": "current",
+          "turn_ids": [
+            "T33"
+          ],
+          "proposition_text": "The patient reports pain."
+        }
+      ]
+    },
+    {
+      "cluster_id": "CL2",
+      "cluster_type": "ProblemState",
+      "canonical_concept": "depression",
+      "primary_cap_type": "Problem",
+      "source_cap_types": [
+        "Problem"
+      ],
+      "final_verification_status": "confirmed",
+      "clinical_status": "historical",
+      "final_assertion": "historical",
+      "visit_state": "historical",
+      "source_speakers": [
+        "patient"
+      ],
+      "source_modalities": [
+        "interview"
+      ],
+      "temporal_profile": [
+        "past"
+      ],
+      "evidence_turn_ids": [
+        "T5"
+      ],
+      "supporting_cap_ids": [
+        "CAP4"
+      ],
+      "cluster_summary": "The patient has a history of depression.",
+      "salience_score": 10,
+      "is_low_value": false,
+      "updates": [
+        {
+          "cap_id": "CAP4",
+          "content_source": "patient",
+          "modality": "interview",
+          "verification_status": "confirmed",
+          "clinical_status": "historical",
+          "assertion": "historical",
+          "visit_state": "historical",
+          "temporality": "past",
+          "turn_ids": [
+            "T5"
+          ],
+          "proposition_text": "The patient has a history of depression."
+        }
+      ]
+    },
+    {
+      "cluster_id": "CL3",
+      "cluster_type": "MedicationState",
+      "canonical_concept": "antidepressant",
+      "primary_cap_type": "MedicationStatement",
+      "source_cap_types": [
+        "MedicationStatement"
+      ],
+      "final_verification_status": "confirmed",
+      "clinical_status": "active",
+      "final_assertion": "present",
+      "visit_state": "active",
+      "source_speakers": [
+        "clinician"
+      ],
+      "source_modalities": [
+        "interview"
+      ],
+      "temporal_profile": [
+        "current"
+      ],
+      "evidence_turn_ids": [
+        "T5"
+      ],
+      "supporting_cap_ids": [
+        "CAP20"
+      ],
+      "cluster_summary": "The patient is taking an antidepressant.",
+      "salience_score": 8,
+      "is_low_value": false,
+      "updates": [
+        {
+          "cap_id": "CAP20",
+          "content_source": "clinician",
+          "modality": "interview",
+          "verification_status": "confirmed",
+          "clinical_status": "active",
+          "assertion": "present",
+          "visit_state": "active",
+          "temporality": "current",
+          "turn_ids": [
+            "T5"
+          ],
+          "proposition_text": "The patient is taking an antidepressant."
+        }
+      ],
+      "current_regimens": [
+        {
+          "proposition_text": "The patient is taking an antidepressant.",
+          "turn_ids": [
+            "T5"
+          ],
+          "attributes": {}
+        }
+      ]
+    },
+    {
+      "cluster_id": "CL4",
+      "cluster_type": "ExamFinding",
+      "canonical_concept": "adenopathy neck",
+      "primary_cap_type": "ExamFinding",
+      "source_cap_types": [
+        "ExamFinding"
+      ],
+      "final_verification_status": "refuted",
+      "clinical_status": "active",
+      "final_assertion": "absent",
+      "visit_state": "active",
+      "source_speakers": [
+        "doctor"
+      ],
+      "source_modalities": [
+        "exam"
+      ],
+      "temporal_profile": [
+        "none"
+      ],
+      "evidence_turn_ids": [
+        "T12"
+      ],
+      "supporting_cap_ids": [
+        "CAP13"
+      ],
+      "cluster_summary": "The doctor does not find any adenopathy in the patient's neck.",
+      "salience_score": 9,
+      "is_low_value": false,
+      "updates": [
+        {
+          "cap_id": "CAP13",
+          "content_source": "doctor",
+          "modality": "exam",
+          "verification_status": "refuted",
+          "clinical_status": "active",
+          "assertion": "absent",
+          "visit_state": "active",
+          "temporality": "none",
+          "turn_ids": [
+            "T12"
+          ],
+          "proposition_text": "The doctor does not find any adenopathy in the patient's neck."
+        }
+      ]
+    },
+    {
+      "cluster_id": "CL5",
+      "cluster_type": "ExamFinding",
+      "canonical_concept": "heart regular",
+      "primary_cap_type": "ExamFinding",
+      "source_cap_types": [
+        "ExamFinding"
+      ],
+      "final_verification_status": "confirmed",
+      "clinical_status": "active",
+      "final_assertion": "present",
+      "visit_state": "active",
+      "source_speakers": [
+        "doctor"
+      ],
+      "source_modalities": [
+        "exam"
+      ],
+      "temporal_profile": [
+        "none"
+      ],
+      "evidence_turn_ids": [
+        "T12"
+      ],
+      "supporting_cap_ids": [
+        "CAP14"
+      ],
+      "cluster_summary": "The doctor finds the patient's heart to be regular without murmurs.",
+      "salience_score": 9,
+      "is_low_value": false,
+      "updates": [
+        {
+          "cap_id": "CAP14",
+          "content_source": "doctor",
+          "modality": "exam",
+          "verification_status": "confirmed",
+          "clinical_status": "active",
+          "assertion": "present",
+          "visit_state": "active",
+          "temporality": "none",
+          "turn_ids": [
+            "T12"
+          ],
+          "proposition_text": "The doctor finds the patient's heart to be regular without murmurs."
+        }
+      ]
+    },
+    {
+      "cluster_id": "CL6",
+      "cluster_type": "ExamFinding",
+      "canonical_concept": "neurologically intact",
+      "primary_cap_type": "ExamFinding",
+      "source_cap_types": [
+        "ExamFinding"
+      ],
+      "final_verification_status": "confirmed",
+      "clinical_status": "active",
+      "final_assertion": "present",
+      "visit_state": "active",
+      "source_speakers": [
+        "doctor"
+      ],
+      "source_modalities": [
+        "exam"
+      ],
+      "temporal_profile": [
+        "none"
+      ],
+      "evidence_turn_ids": [
+        "T12"
+      ],
+      "supporting_cap_ids": [
+        "CAP15"
+      ],
+      "cluster_summary": "The doctor finds the patient's neurological exam to be intact.",
+      "salience_score": 9,
+      "is_low_value": false,
+      "updates": [
+        {
+          "cap_id": "CAP15",
+          "content_source": "doctor",
+          "modality": "exam",
+          "verification_status": "confirmed",
+          "clinical_status": "active",
+          "assertion": "present",
+          "visit_state": "active",
+          "temporality": "none",
+          "turn_ids": [
+            "T12"
+          ],
+          "proposition_text": "The doctor finds the patient's neurological exam to be intact."
+        }
+      ]
+    },
+    {
+      "cluster_id": "CL7",
+      "cluster_type": "ExamFinding",
+      "canonical_concept": "grips equal",
+      "primary_cap_type": "ExamFinding",
+      "source_cap_types": [
+        "ExamFinding"
+      ],
+      "final_verification_status": "confirmed",
+      "clinical_status": "active",
+      "final_assertion": "present",
+      "visit_state": "active",
+      "source_speakers": [
+        "doctor"
+      ],
+      "source_modalities": [
+        "exam"
+      ],
+      "temporal_profile": [
+        "none"
+      ],
+      "evidence_turn_ids": [
+        "T12"
+      ],
+      "supporting_cap_ids": [
+        "CAP16"
+      ],
+      "cluster_summary": "The doctor finds the patient's grips to be equal.",
+      "salience_score": 9,
+      "is_low_value": false,
+      "updates": [
+        {
+          "cap_id": "CAP16",
+          "content_source": "doctor",
+          "modality": "exam",
+          "verification_status": "confirmed",
+          "clinical_status": "active",
+          "assertion": "present",
+          "visit_state": "active",
+          "temporality": "none",
+          "turn_ids": [
+            "T12"
+          ],
+          "proposition_text": "The doctor finds the patient's grips to be equal."
+        }
+      ]
+    },
+    {
+      "cluster_id": "CL8",
+      "cluster_type": "ExamFinding",
+      "canonical_concept": "strength good",
+      "primary_cap_type": "ExamFinding",
+      "source_cap_types": [
+        "ExamFinding"
+      ],
+      "final_verification_status": "confirmed",
+      "clinical_status": "active",
+      "final_assertion": "present",
+      "visit_state": "active",
+      "source_speakers": [
+        "doctor"
+      ],
+      "source_modalities": [
+        "exam"
+      ],
+      "temporal_profile": [
+        "none"
+      ],
+      "evidence_turn_ids": [
+        "T12"
+      ],
+      "supporting_cap_ids": [
+        "CAP17"
+      ],
+      "cluster_summary": "The doctor finds the patient's strength to be good.",
+      "salience_score": 9,
+      "is_low_value": false,
+      "updates": [
+        {
+          "cap_id": "CAP17",
+          "content_source": "doctor",
+          "modality": "exam",
+          "verification_status": "confirmed",
+          "clinical_status": "active",
+          "assertion": "present",
+          "visit_state": "active",
+          "temporality": "none",
+          "turn_ids": [
+            "T12"
+          ],
+          "proposition_text": "The doctor finds the patient's strength to be good."
+        }
+      ]
+    },
+    {
+      "cluster_id": "CL9",
+      "cluster_type": "ExamFinding",
+      "canonical_concept": "pulses good",
+      "primary_cap_type": "ExamFinding",
+      "source_cap_types": [
+        "ExamFinding"
+      ],
+      "final_verification_status": "confirmed",
+      "clinical_status": "active",
+      "final_assertion": "present",
+      "visit_state": "active",
+      "source_speakers": [
+        "doctor"
+      ],
+      "source_modalities": [
+        "exam"
+      ],
+      "temporal_profile": [
+        "none"
+      ],
+      "evidence_turn_ids": [
+        "T12"
+      ],
+      "supporting_cap_ids": [
+        "CAP18"
+      ],
+      "cluster_summary": "The doctor finds the patient's pulses to be good.",
+      "salience_score": 9,
+      "is_low_value": false,
+      "updates": [
+        {
+          "cap_id": "CAP18",
+          "content_source": "doctor",
+          "modality": "exam",
+          "verification_status": "confirmed",
+          "clinical_status": "active",
+          "assertion": "present",
+          "visit_state": "active",
+          "temporality": "none",
+          "turn_ids": [
+            "T12"
+          ],
+          "proposition_text": "The doctor finds the patient's pulses to be good."
+        }
+      ]
+    },
+    {
+      "cluster_id": "CL10",
+      "cluster_type": "ExamFinding",
+      "canonical_concept": "lungs clear",
+      "primary_cap_type": "ExamFinding",
+      "source_cap_types": [
+        "ExamFinding"
+      ],
+      "final_verification_status": "confirmed",
+      "clinical_status": "active",
+      "final_assertion": "present",
+      "visit_state": "active",
+      "source_speakers": [
+        "doctor"
+      ],
+      "source_modalities": [
+        "exam"
+      ],
+      "temporal_profile": [
+        "none"
+      ],
+      "evidence_turn_ids": [
+        "T12"
+      ],
+      "supporting_cap_ids": [
+        "CAP19"
+      ],
+      "cluster_summary": "The doctor finds the patient's lungs clear.",
+      "salience_score": 9,
+      "is_low_value": false,
+      "updates": [
+        {
+          "cap_id": "CAP19",
+          "content_source": "doctor",
+          "modality": "exam",
+          "verification_status": "confirmed",
+          "clinical_status": "active",
+          "assertion": "present",
+          "visit_state": "active",
+          "temporality": "none",
+          "turn_ids": [
+            "T12"
+          ],
+          "proposition_text": "The doctor finds the patient's lungs clear."
+        }
+      ]
+    },
+    {
+      "cluster_id": "CL11",
+      "cluster_type": "ProblemState",
+      "canonical_concept": "blood pressure",
+      "primary_cap_type": "Symptom",
+      "source_cap_types": [
+        "Symptom"
+      ],
+      "final_verification_status": "confirmed",
+      "clinical_status": "active",
+      "final_assertion": "present",
+      "visit_state": "active",
+      "source_speakers": [
+        "patient"
+      ],
+      "source_modalities": [
+        "interview"
+      ],
+      "temporal_profile": [
+        "recent"
+      ],
+      "evidence_turn_ids": [
+        "T13",
+        "T17"
+      ],
+      "supporting_cap_ids": [
+        "CAP1"
+      ],
+      "cluster_summary": "The patient reports fluctuating blood pressure readings.",
+      "salience_score": 10,
+      "is_low_value": false,
+      "updates": [
+        {
+          "cap_id": "CAP1",
+          "content_source": "patient",
+          "modality": "interview",
+          "verification_status": "confirmed",
+          "clinical_status": "active",
+          "assertion": "present",
+          "visit_state": "active",
+          "temporality": "recent",
+          "turn_ids": [
+            "T17",
+            "T13"
+          ],
+          "proposition_text": "The patient reports fluctuating blood pressure readings."
+        }
+      ]
+    },
+    {
+      "cluster_id": "CL12",
+      "cluster_type": "ProblemState",
+      "canonical_concept": "frozen meals",
+      "primary_cap_type": "Symptom",
+      "source_cap_types": [
+        "Symptom"
+      ],
+      "final_verification_status": "unconfirmed",
+      "clinical_status": "active",
+      "final_assertion": "uncertain",
+      "visit_state": "active",
+      "source_speakers": [
+        "patient"
+      ],
+      "source_modalities": [
+        "interview"
+      ],
+      "temporal_profile": [
+        "recent"
+      ],
+      "evidence_turn_ids": [
+        "T19"
+      ],
+      "supporting_cap_ids": [
+        "CAP5"
+      ],
+      "cluster_summary": "The patient reports eating frozen meals.",
+      "salience_score": 10,
+      "is_low_value": false,
+      "updates": [
+        {
+          "cap_id": "CAP5",
+          "content_source": "patient",
+          "modality": "interview",
+          "verification_status": "unconfirmed",
+          "clinical_status": "active",
+          "assertion": "uncertain",
+          "visit_state": "active",
+          "temporality": "recent",
+          "turn_ids": [
+            "T19"
+          ],
+          "proposition_text": "The patient reports eating frozen meals."
+        }
+      ]
+    },
+    {
+      "cluster_id": "CL13",
+      "cluster_type": "ProblemState",
+      "canonical_concept": "stress",
+      "primary_cap_type": "Symptom",
+      "source_cap_types": [
+        "Symptom"
+      ],
+      "final_verification_status": "unconfirmed",
+      "clinical_status": "active",
+      "final_assertion": "uncertain",
+      "visit_state": "active",
+      "source_speakers": [
+        "patient"
+      ],
+      "source_modalities": [
+        "interview"
+      ],
+      "temporal_profile": [
+        "current"
+      ],
+      "evidence_turn_ids": [
+        "T19"
+      ],
+      "supporting_cap_ids": [
+        "CAP7"
+      ],
+      "cluster_summary": "The patient reports feeling stressed.",
+      "salience_score": 10,
+      "is_low_value": false,
+      "updates": [
+        {
+          "cap_id": "CAP7",
+          "content_source": "patient",
+          "modality": "interview",
+          "verification_status": "unconfirmed",
+          "clinical_status": "active",
+          "assertion": "uncertain",
+          "visit_state": "active",
+          "temporality": "current",
+          "turn_ids": [
+            "T19"
+          ],
+          "proposition_text": "The patient reports feeling stressed."
+        }
+      ]
+    },
+    {
+      "cluster_id": "CL14",
+      "cluster_type": "ProblemState",
+      "canonical_concept": "carpal tunnel release",
+      "primary_cap_type": "Symptom",
+      "source_cap_types": [
+        "Symptom"
+      ],
+      "final_verification_status": "confirmed",
+      "clinical_status": "active",
+      "final_assertion": "present",
+      "visit_state": "active",
+      "source_speakers": [
+        "patient"
+      ],
+      "source_modalities": [
+        "interview"
+      ],
+      "temporal_profile": [
+        "two years ago"
+      ],
+      "evidence_turn_ids": [
+        "T27"
+      ],
+      "supporting_cap_ids": [
+        "CAP2"
+      ],
+      "cluster_summary": "The patient reports that their carpal tunnel release has been doing well.",
+      "salience_score": 10,
+      "is_low_value": false,
+      "updates": [
+        {
+          "cap_id": "CAP2",
+          "content_source": "patient",
+          "modality": "interview",
+          "verification_status": "confirmed",
+          "clinical_status": "active",
+          "assertion": "present",
+          "visit_state": "active",
+          "temporality": "two years ago",
+          "turn_ids": [
+            "T27"
+          ],
+          "proposition_text": "The patient reports that their carpal tunnel release has been doing well."
+        }
+      ]
+    },
+    {
+      "cluster_id": "CL15",
+      "cluster_type": "ProblemState",
+      "canonical_concept": "numbness",
+      "primary_cap_type": "Symptom",
+      "source_cap_types": [
+        "Symptom"
+      ],
+      "final_verification_status": "refuted",
+      "clinical_status": "historical",
+      "final_assertion": "historical",
+      "visit_state": "historical",
+      "source_speakers": [
+        "patient"
+      ],
+      "source_modalities": [
+        "interview"
+      ],
+      "temporal_profile": [
+        "none"
+      ],
+      "evidence_turn_ids": [
+        "T27"
+      ],
+      "supporting_cap_ids": [
+        "CAP9"
+      ],
+      "cluster_summary": "The patient denies numbness.",
+      "salience_score": 10,
+      "is_low_value": false,
+      "updates": [
+        {
+          "cap_id": "CAP9",
+          "content_source": "patient",
+          "modality": "interview",
+          "verification_status": "refuted",
+          "clinical_status": "historical",
+          "assertion": "historical",
+          "visit_state": "historical",
+          "temporality": "none",
+          "turn_ids": [
+            "T27"
+          ],
+          "proposition_text": "The patient denies numbness."
+        }
+      ]
+    },
+    {
+      "cluster_id": "CL16",
+      "cluster_type": "ProblemState",
+      "canonical_concept": "tingling",
+      "primary_cap_type": "Symptom",
+      "source_cap_types": [
+        "Symptom"
+      ],
+      "final_verification_status": "unconfirmed",
+      "clinical_status": "active",
+      "final_assertion": "uncertain",
+      "visit_state": "active",
+      "source_speakers": [
+        "patient"
+      ],
+      "source_modalities": [
+        "interview"
+      ],
+      "temporal_profile": [
+        "current",
+        "none"
+      ],
+      "evidence_turn_ids": [
+        "T27",
+        "T33"
+      ],
+      "supporting_cap_ids": [
+        "CAP10",
+        "CAP11"
+      ],
+      "cluster_summary": "The patient denies tingling.",
+      "salience_score": 10,
+      "is_low_value": false,
+      "updates": [
+        {
+          "cap_id": "CAP10",
+          "content_source": "patient",
+          "modality": "interview",
+          "verification_status": "refuted",
+          "clinical_status": "historical",
+          "assertion": "historical",
+          "visit_state": "historical",
+          "temporality": "none",
+          "turn_ids": [
+            "T27"
+          ],
+          "proposition_text": "The patient denies tingling."
+        },
+        {
+          "cap_id": "CAP11",
+          "content_source": "patient",
+          "modality": "interview",
+          "verification_status": "unconfirmed",
+          "clinical_status": "active",
+          "assertion": "uncertain",
+          "visit_state": "active",
+          "temporality": "current",
+          "turn_ids": [
+            "T33"
+          ],
+          "proposition_text": "The patient reports tingling."
+        }
+      ]
+    },
+    {
+      "cluster_id": "CL17",
+      "cluster_type": "ProblemState",
+      "canonical_concept": "carpal tunnel syndrome",
+      "primary_cap_type": "Problem",
+      "source_cap_types": [
+        "Problem"
+      ],
+      "final_verification_status": "unconfirmed",
+      "clinical_status": "active",
+      "final_assertion": "uncertain",
+      "visit_state": "active",
+      "source_speakers": [
+        "patient"
+      ],
+      "source_modalities": [
+        "interview"
+      ],
+      "temporal_profile": [
+        "current"
+      ],
+      "evidence_turn_ids": [
+        "T33"
+      ],
+      "supporting_cap_ids": [
+        "CAP6"
+      ],
+      "cluster_summary": "The patient has carpal tunnel syndrome.",
+      "salience_score": 10,
+      "is_low_value": false,
+      "updates": [
+        {
+          "cap_id": "CAP6",
+          "content_source": "patient",
+          "modality": "interview",
+          "verification_status": "unconfirmed",
+          "clinical_status": "active",
+          "assertion": "uncertain",
+          "visit_state": "active",
+          "temporality": "current",
+          "turn_ids": [
+            "T33"
+          ],
+          "proposition_text": "The patient has carpal tunnel syndrome."
+        }
+      ]
+    }
+  ]
+}

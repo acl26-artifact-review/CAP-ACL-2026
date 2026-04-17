@@ -1,0 +1,109 @@
+Case: D2N049
+
+Problem List and Visit State Tracking
+
+Problem List
+- kidney stone | verification_status=unconfirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T0
+  Summary: The patient has a history of kidney stones.
+  ClusterId: CL1
+  TemporalProfile: past
+  Updates:
+  - CAP5: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=past turns=T0 :: The patient has a history of kidney stones.
+- hypertension | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T0
+  Summary: The patient has a history of hypertension.
+  ClusterId: CL2
+  TemporalProfile: current
+  Updates:
+  - CAP9: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T0 :: The patient has a history of hypertension.
+- diabetes | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T0
+  Summary: The patient has a history of diabetes.
+  ClusterId: CL3
+  TemporalProfile: current
+  Updates:
+  - CAP10: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T0 :: The patient has a history of diabetes.
+- pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T17,T18,T19,T3,T5
+  Summary: The patient reports constant pain in the left back.
+  ClusterId: CL4
+  TemporalProfile: current
+  Updates:
+  - CAP1: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T3,T5 :: The patient reports constant pain in the left back.
+  - CAP3: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T17 :: The patient reports being in a lot of pain.
+  - CAP15: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T18 :: The patient reports pain.
+  - CAP11: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T19 :: The patient is in so much pain.
+- hematuria | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T11
+  Summary: The patient reports seeing blood in the urine.
+  ClusterId: CL5
+  TemporalProfile: current
+  Updates:
+  - CAP4: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T11 :: The patient reports seeing blood in the urine.
+- nausea | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T16
+  Summary: The patient reports feeling nauseous.
+  ClusterId: CL6
+  TemporalProfile: current
+  Updates:
+  - CAP13: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T16 :: The patient reports feeling nauseous.
+- high blood pressure | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T27
+  Summary: The patient's blood pressure was previously elevated.
+  ClusterId: CL10
+  TemporalProfile: current, past
+  Updates:
+  - CAP6: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T27 :: The patient is concerned about their blood pressure.
+  - CAP12: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=past turns=T27 :: The patient's blood pressure was previously elevated.
+- left hand pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T27
+  Summary: The patient reports pain in the left hand.
+  ClusterId: CL11
+  TemporalProfile: current
+  Updates:
+  - CAP7: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T27 :: The patient reports pain in the left hand.
+- high salt intake | verification_status=unconfirmed | clinical_status=planned | modalities=interview | speakers=doctor | evidence=T34
+  Summary: The doctor recommends reducing the patient's salt intake to 2300 milligrams per day.
+  ClusterId: CL12
+  TemporalProfile: future
+  Updates:
+  - CAP2: content_source=doctor modality=interview verification_status=unconfirmed clinical_status=planned temporality=future turns=T34 :: The doctor recommends reducing the patient's salt intake to 2300 milligrams per day.
+- french fry preference | verification_status=unconfirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T35
+  Summary: The patient expresses a preference for french fries.
+  ClusterId: CL13
+  TemporalProfile: current
+  Updates:
+  - CAP8: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=current turns=T35 :: The patient expresses a preference for french fries.
+- chest pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T47
+  Summary: The patient denies chest pain.
+  ClusterId: CL15
+  TemporalProfile: current
+  Updates:
+  - CAP14: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T47 :: The patient denies chest pain.
+
+Medication Tracking
+- [MedicationState] ibuprofen | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T19
+  Summary: The patient has been trying to take ibuprofen.
+  ClusterId: CL7
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient has been trying to take ibuprofen. (T19)
+  - The patient has been trying to do ibuprofen. (T19)
+  Updates:
+  - CAP21: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T19 :: The patient has been trying to take ibuprofen.
+  - CAP22: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T19 :: The patient has been trying to do ibuprofen.
+- [MedicationState] tylenol | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T19
+  Summary: The patient has been taking Tylenol.
+  ClusterId: CL8
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient has been taking Tylenol. (T19)
+  Updates:
+  - CAP23: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T19 :: The patient has been taking Tylenol.
+- [MedicationState] metformin | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T40
+  Summary: The patient takes metformin daily.
+  ClusterId: CL14
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient takes metformin daily. (T40)
+  Updates:
+  - CAP24: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T40 :: The patient takes metformin daily.
+
+Other Structured States
+- [TestResult] blood pressure | verification_status=confirmed | clinical_status=active | modalities=assessment | speakers=doctor | evidence=T26,T27
+  Summary: The patient's blood pressure readings were sometimes in the one forties.
+  ClusterId: CL9
+  TemporalProfile: current

@@ -1,0 +1,30 @@
+{
+  "section_miscategorizations": [
+    {
+      "text": "A cat scan of the lungs and a pulmonary function test have been ordered.",
+      "current_section": "O",
+      "expected_section": "P",
+      "severity": "major",
+      "reason": "Orders for imaging and tests belong in the Plan section, not in Objective, which should contain results of tests or completed procedures."
+    },
+    {
+      "text": "The doctor orders a cat scan of the lungs.",
+      "current_section": "P",
+      "expected_section": "P",
+      "severity": "minor",
+      "reason": "This is correctly placed in the Plan, but it duplicates the miscategorized order statement in the Objective section, which may cause organizational confusion."
+    },
+    {
+      "text": "The doctor orders a pulmonary function test.",
+      "current_section": "P",
+      "expected_section": "P",
+      "severity": "minor",
+      "reason": "This is correctly placed in the Plan, but it duplicates the miscategorized order statement in the Objective section, which may cause organizational confusion."
+    }
+  ],
+  "summary_statistics": {
+    "section_appropriateness_score": 0.7,
+    "section_miscategorization_count": 3,
+    "major_section_miscategorization_count": 1
+  }
+}

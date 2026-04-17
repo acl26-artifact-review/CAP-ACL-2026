@@ -1,0 +1,114 @@
+Case: D2N122
+
+Problem List and Visit State Tracking
+
+Problem List
+- lung nodule | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T1,T26
+  Summary: The patient has a solitary two centimeter nodule.
+  ClusterId: CL1
+  TemporalProfile: current
+  Updates:
+  - CAP5: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T1 :: The patient has a lung nodule.
+  - CAP3: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T26 :: The patient has a solitary two centimeter nodule.
+- bronchitis | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T1
+  Summary: The patient initially experienced a cough approximately three months ago.
+  ClusterId: CL2
+  TemporalProfile: 3 months ago
+  Updates:
+  - CAP16: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=3 months ago turns=T1 :: The patient initially experienced a cough approximately three months ago.
+- cough | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T4
+  Summary: The patient reports a cough.
+  ClusterId: CL3
+  TemporalProfile: current
+  Updates:
+  - CAP7: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T4 :: The patient reports a cough.
+- biking | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T5
+  Summary: The patient regularly bikes.
+  ClusterId: CL4
+  TemporalProfile: regular
+  Updates:
+  - CAP9: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=regular turns=T5 :: The patient regularly bikes.
+- horse loading | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T5
+  Summary: The patient previously loaded bills for horses.
+  ClusterId: CL5
+  TemporalProfile: recent
+  Updates:
+  - CAP17: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=recent turns=T5 :: The patient previously loaded bills for horses.
+- cold | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T5
+  Summary: The patient recently had a cold.
+  ClusterId: CL6
+  TemporalProfile: recent
+  Updates:
+  - CAP18: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=recent turns=T5 :: The patient recently had a cold.
+- rheumatoid arthritis | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T12,T26
+  Summary: The patient has a history of rheumatoid arthritis.
+  ClusterId: CL7
+  TemporalProfile: current, historical
+  Updates:
+  - CAP2: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=historical turns=T12 :: The patient has a history of rheumatoid arthritis.
+  - CAP8: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T26 :: The patient has rheumatoid arthritis.
+- hand pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T15
+  Summary: The patient reports pain in the left hand.
+  ClusterId: CL9
+  TemporalProfile: current
+  Updates:
+  - CAP1: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T15 :: The patient reports pain in the left hand.
+- smoking cessation | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T16,T17
+  Summary: The patient stopped smoking seven years ago.
+  ClusterId: CL10
+  TemporalProfile: past
+  Updates:
+  - CAP6: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=past turns=T16 :: The patient was a previous smoker.
+  - CAP4: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=past turns=T17 :: The patient stopped smoking seven years ago.
+- pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T20
+  Summary: The patient reports pain.
+  ClusterId: CL11
+  TemporalProfile: current
+  Updates:
+  - CAP10: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T20 :: The patient reports pain.
+- breast cancer | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T23
+  Summary: The patient's mother had breast cancer.
+  ClusterId: CL12
+  TemporalProfile: past
+  Updates:
+  - CAP19: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=past turns=T23 :: The patient's mother had breast cancer.
+
+Medication Tracking
+- [MedicationState] methotrexate | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T13
+  Summary: The patient takes methotrexate.
+  ClusterId: CL8
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient takes methotrexate. (T13)
+  Updates:
+  - CAP15: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T13 :: The patient takes methotrexate.
+- [MedicationChange] pulmonary function test | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T26
+  Summary: A pulmonary function test is ordered.
+  ClusterId: CL13
+  TemporalProfile: future
+  PlannedChanges:
+  - A pulmonary function test is ordered. (T26)
+  Updates:
+  - CAP11: content_source=doctor modality=plan verification_status=unconfirmed clinical_status=planned temporality=future turns=T26 :: A pulmonary function test is ordered.
+- [MedicationChange] pet ct | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T26
+  Summary: A PET CT is scheduled.
+  ClusterId: CL14
+  TemporalProfile: future
+  PlannedChanges:
+  - A PET CT is scheduled. (T26)
+  Updates:
+  - CAP12: content_source=doctor modality=plan verification_status=unconfirmed clinical_status=planned temporality=future turns=T26 :: A PET CT is scheduled.
+
+Other Structured States
+- [Plan] video assisted thoracoscopy | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T26
+  Summary: Video assisted thoracoscopy is recommended.
+  ClusterId: CL15
+  TemporalProfile: future
+- [FollowUp] follow up | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T26
+  Summary: The patient will be followed up.
+  ClusterId: CL16
+  TemporalProfile: future
+- [Plan] chest tube | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T26
+  Summary: A chest tube will be placed.
+  ClusterId: CL17
+  TemporalProfile: future

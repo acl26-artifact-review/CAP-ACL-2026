@@ -1,0 +1,82 @@
+Case: D2N175
+
+Problem List and Visit State Tracking
+
+Problem List
+- chest pain | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T3
+  Summary: The patient denies chest pain.
+  ClusterId: CL1
+  TemporalProfile: current
+  Updates:
+  - CAP9: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T3 :: The patient denies chest pain.
+- diabetes | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T6
+  Summary: The patient has a history of diabetes.
+  ClusterId: CL2
+  TemporalProfile: history
+  Updates:
+  - CAP3: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=history turns=T6 :: The patient has a history of diabetes.
+- abnormal lab | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T6
+  Summary: The patient has an abnormal lab result.
+  ClusterId: CL3
+  TemporalProfile: recent
+  Updates:
+  - CAP4: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=recent turns=T6 :: The patient has an abnormal lab result.
+- high blood sugar | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T8
+  Summary: The patient reports elevated blood sugars.
+  ClusterId: CL4
+  TemporalProfile: recent
+  Updates:
+  - CAP7: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=recent turns=T8 :: The patient reports elevated blood sugars.
+- knee pain | verification_status=unconfirmed | clinical_status=resolved | modalities=interview | speakers=patient | evidence=T19,T25,T36,T47
+  Summary: The patient reports knee pain from prior surgery.
+  ClusterId: CL7
+  TemporalProfile: current, past
+  Updates:
+  - CAP1: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T19 :: The patient reports pain in the left hand.
+  - CAP2: content_source=patient modality=interview verification_status=confirmed clinical_status=resolved temporality=past turns=T25 :: The patient reports knee pain from prior surgery.
+  - CAP10: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T36 :: The patient reports pain.
+  - CAP11: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T47 :: The patient reports pain.
+- hyperglycemia | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T19
+  Summary: The patient reports an elevated A1c level.
+  ClusterId: CL8
+  TemporalProfile: current
+  Updates:
+  - CAP5: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T19 :: The patient reports an elevated A1c level.
+- elevated blood sugar | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T19
+  Summary: The patient reports elevated blood sugar.
+  ClusterId: CL9
+  TemporalProfile: recent
+  Updates:
+  - CAP8: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=recent turns=T19 :: The patient reports elevated blood sugar.
+- high blood pressure | verification_status=confirmed | clinical_status=stable | modalities=interview | speakers=patient | evidence=T23
+  Summary: The patient reports stable high blood pressure.
+  ClusterId: CL10
+  TemporalProfile: current
+  Updates:
+  - CAP6: content_source=patient modality=interview verification_status=confirmed clinical_status=stable temporality=current turns=T23 :: The patient reports stable high blood pressure.
+
+Medication Tracking
+- [MedicationState] metformin | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=doctor | evidence=T11
+  Summary: The patient's metformin dose is 100 mg daily.
+  ClusterId: CL5
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient's metformin dose is 100 mg daily. (T11)
+  - The patient is currently taking metformin. (T11)
+  Updates:
+  - CAP13: content_source=doctor modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T11 :: The patient's metformin dose is 100 mg daily.
+  - CAP14: content_source=doctor modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T11 :: The patient is currently taking metformin.
+- [MedicationState] lisinopril | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T23
+  Summary: The patient is taking lisinopril.
+  ClusterId: CL11
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient is taking lisinopril. (T23)
+  Updates:
+  - CAP15: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T23 :: The patient is taking lisinopril.
+
+Other Structured States
+- [Plan] adjust medication | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T17
+  Summary: The doctor plans to adjust the patient's medication.
+  ClusterId: CL6
+  TemporalProfile: future

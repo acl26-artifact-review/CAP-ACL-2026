@@ -1,0 +1,44 @@
+{
+  "section_miscategorizations": [
+    {
+      "text": "Blood pressure readings were sometimes in the one forties.",
+      "current_section": "O",
+      "expected_section": "S",
+      "severity": "major",
+      "reason": "This is a historical/home blood pressure description, not a specific clinician-measured vital from this encounter, so it fits better as patient-reported subjective information."
+    },
+    {
+      "text": "The patient denies chest pain.",
+      "current_section": "O",
+      "expected_section": "S",
+      "severity": "major",
+      "reason": "Denials of symptoms are part of the review of systems and belong in the subjective section, not in objective findings."
+    },
+    {
+      "text": "The patient has a history of kidney stones.",
+      "current_section": "A",
+      "expected_section": "S",
+      "severity": "major",
+      "reason": "Past medical history is patient history/subjective context, not an assessment or diagnostic impression for this visit."
+    },
+    {
+      "text": "The patient has a history of diabetes.",
+      "current_section": "A",
+      "expected_section": "S",
+      "severity": "major",
+      "reason": "Past medical history (diabetes) is part of the subjective history rather than the assessment section in this template definition."
+    },
+    {
+      "text": "The patient is in so much pain.",
+      "current_section": "A",
+      "expected_section": "S",
+      "severity": "major",
+      "reason": "This is a description of the patient's symptom experience and severity, which is subjective rather than a synthesized clinical assessment."
+    }
+  ],
+  "summary_statistics": {
+    "section_appropriateness_score": 0.6,
+    "section_miscategorization_count": 5,
+    "major_section_miscategorization_count": 5
+  }
+}

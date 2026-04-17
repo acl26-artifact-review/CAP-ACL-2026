@@ -1,0 +1,30 @@
+{
+  "section_miscategorizations": [
+    {
+      "text": "The doctor recommends surgery and prescribes crutches.",
+      "current_section": "A",
+      "expected_section": "P",
+      "severity": "major",
+      "reason": "This sentence describes management actions (recommendation for surgery and prescribing crutches), which belong in the Plan section, not in the Assessment that should focus on diagnostic impression/problem synthesis."
+    },
+    {
+      "text": "The doctor recommends surgery.",
+      "current_section": "P",
+      "expected_section": "P",
+      "severity": "minor",
+      "reason": "Content is appropriate for the Plan, but it is duplicated from the Assessment sentence that incorrectly mixes plan items into A. The primary miscategorization is in A; this instance in P is correct."
+    },
+    {
+      "text": "The doctor recommends crutches.",
+      "current_section": "P",
+      "expected_section": "P",
+      "severity": "minor",
+      "reason": "Content is appropriate for the Plan, but it is duplicated from the Assessment sentence that incorrectly mixes plan items into A. The primary miscategorization is in A; this instance in P is correct."
+    }
+  ],
+  "summary_statistics": {
+    "section_appropriateness_score": 0.7,
+    "section_miscategorization_count": 3,
+    "major_section_miscategorization_count": 1
+  }
+}

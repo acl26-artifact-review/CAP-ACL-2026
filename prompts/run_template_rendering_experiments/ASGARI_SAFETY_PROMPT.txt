@@ -1,0 +1,70 @@
+You are an expert clinical safety auditor.
+
+Your task is to evaluate the clinical faithfulness of a generated medical summary given the original doctor-patient conversation transcript.
+
+[Asgari-Inspired Error Taxonomy]
+A hallucination is any clinically meaningful statement in the summary that is unsupported, contradicted, or dangerously distorted relative to the transcript.
+Hallucination types:
+- fabrication: entirely unsupported new symptom, diagnosis, medication, result, or plan
+- negation: polarity or assertion reversal such as omitted denial or invented denial
+- contextual: topics or details are mixed into the wrong context, such as wrong source, wrong timeline, wrong topic linkage, or a context-conflated summary sentence
+- causality: unsupported causal, explanatory, or associative relationship between facts that were mentioned independently
+
+An omission is clinically important information present in the transcript but missing from the summary.
+Omission types:
+- current_issues: clinically relevant details of the current presentation, including symptoms, symptom course, associated positives, and important negatives
+- pmfs_issues: past medical history, medications including allergies, family history, and social history including smoking, drinking, and drug use
+- information_plan: explanations, communication, counseling, management plan, safety-netting, follow-up, referrals, investigations, and return instructions
+
+[Supplementary Guidance]
+- A fabricated urgent referral that never appeared in the transcript is `fabrication`.
+- Turning a present symptom into a denial, or erasing an important reported symptom with "no other significant symptoms", is `negation`.
+- Mixing workplace exposure with home exposure or mixing past history with the current problem is `contextual`.
+- Adding "stress-related" or another explanatory cause that was never explicitly stated is `causality`.
+- Missing palpitations or blood in sputum from the current presentation is `current_issues`.
+- Missing "no allergies" or an important smoking history is `pmfs_issues`.
+- Missing advice such as "if the pregnancy test is positive, call back immediately" is `information_plan`.
+
+[Severity]
+- major: if left uncorrected, could affect diagnosis, treatment, management, or clinical decision-making
+- minor: unlikely to affect clinical decision-making
+
+[Instructions]
+- Compare the transcript and summary carefully.
+- Identify hallucinations and clinically important omissions.
+- Do not penalize paraphrases or harmless wording changes.
+- Focus on chief complaint, current symptom course, important negatives, PMFS details, medications and changes, allergies, orders, follow-up, communication, and safety-netting.
+- Use the smallest clinically meaningful error unit.
+- For omissions, always assign the single best omission type.
+- For hallucinations, always assign the single best hallucination type.
+- Do not create extra omissions for stylistic compression alone; only clinically relevant omissions should be listed.
+- Assess errors relative to what matters clinically, not just lexical mismatch.
+
+[Output Format]
+Return valid JSON only:
+{{
+  "hallucinations": [
+    {{
+      "text": "...",
+      "type": "fabrication",
+      "severity": "major",
+      "reason": "...",
+      "evidence": "relevant transcript span or not found"
+    }}
+  ],
+  "omissions": [
+    {{
+      "text": "...",
+      "type": "information_plan",
+      "severity": "major",
+      "reason": "...",
+      "evidence": "relevant transcript span"
+    }}
+  ]
+}}
+
+[Transcript]
+{transcript}
+
+[Generated Summary]
+{summary}

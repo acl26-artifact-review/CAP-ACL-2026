@@ -1,0 +1,212 @@
+Case: D2N190
+
+Problem List and Visit State Tracking
+
+Problem List
+- fall | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T8
+  Summary: The patient fell off a tandem bike.
+  ClusterId: CL1
+  TemporalProfile: two weeks ago
+  Updates:
+  - CAP45: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=two weeks ago turns=T8 :: The patient fell off a tandem bike.
+- knee pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T10,T26,T28,T37,T40,T54,T58,T84
+  Summary: The patient reports tenderness on the medial joint line of the knee.
+  ClusterId: CL2
+  TemporalProfile: current, everyday, walking up inclines
+  Updates:
+  - CAP7: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T10 :: The patient reports pain in their right knee.
+  - CAP8: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T10 :: The patient reports pain in their right knee.
+  - CAP14: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=everyday turns=T10 :: The patient's knee is hurting everyday.
+  - CAP20: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T26 :: The patient reports knee pain.
+  - CAP27: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T28 :: The patient reports pain.
+  - CAP12: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T37 :: The patient reports pain on the inside.
+  - CAP22: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T40 :: The patient reports mild pain.
+  - CAP4: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T54 :: The patient reports tenderness on the medial joint line of the knee.
+  - CAP5: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T54 :: The patient reports tenderness on the medial joint line.
+  - CAP10: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=walking up inclines turns=T58 :: The patient experiences pain when walking up inclines.
+  - CAP25: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T84 :: The patient reports knee pain.
+- injury | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T10
+  Summary: The patient sustained an injury to their knee.
+  ClusterId: CL3
+  TemporalProfile: current
+  Updates:
+  - CAP9: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T10 :: The patient sustained an injury to their knee.
+- persistent pain | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T12
+  Summary: The patient experiences persistent pain.
+  ClusterId: CL6
+  TemporalProfile: current
+  Updates:
+  - CAP19: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T12 :: The patient experiences persistent pain.
+- knee injury | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T23,T78
+  Summary: The patient mentioned a knee injury.
+  ClusterId: CL7
+  TemporalProfile: current, past
+  Updates:
+  - CAP15: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=past turns=T23 :: The patient mentioned a knee injury.
+  - CAP18: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T78 :: The patient has a knee injury.
+- tenderness | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T38
+  Summary: The patient reports tenderness.
+  ClusterId: CL9
+  TemporalProfile: current
+  Updates:
+  - CAP28: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T38 :: The patient reports tenderness.
+- nontender | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T40
+  Summary: The patient reports no tenderness.
+  ClusterId: CL10
+  TemporalProfile: current
+  Updates:
+  - CAP21: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T40 :: The patient reports no tenderness.
+- dime size | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T43
+  Summary: The patient reports a dime-size abrasion.
+  ClusterId: CL11
+  TemporalProfile: current
+  Updates:
+  - CAP16: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T43 :: The patient reports a dime-size abrasion.
+- abrasions | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T43
+  Summary: The patient reports abrasions.
+  ClusterId: CL12
+  TemporalProfile: current
+  Updates:
+  - CAP29: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T43 :: The patient reports abrasions.
+- clicks | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T43
+  Summary: The patient reports clicking.
+  ClusterId: CL13
+  TemporalProfile: current
+  Updates:
+  - CAP30: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T43 :: The patient reports clicking.
+- full extension | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T44
+  Summary: The patient can straighten the joint fully.
+  ClusterId: CL14
+  TemporalProfile: current
+  Updates:
+  - CAP13: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T44 :: The patient can straighten the joint fully.
+- laxity | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T51
+  Summary: The patient reports mild laxity.
+  ClusterId: CL15
+  TemporalProfile: current
+  Updates:
+  - CAP23: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T51 :: The patient reports mild laxity.
+- drawer test | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T52
+  Summary: The patient reports a one plus posterior drawer and negative anterior drawer.
+  ClusterId: CL16
+  TemporalProfile: current
+  Updates:
+  - CAP3: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T52 :: The patient reports a one plus posterior drawer and negative anterior drawer.
+- crepitus | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T54
+  Summary: The patient denies crepitus.
+  ClusterId: CL17
+  TemporalProfile: current
+  Updates:
+  - CAP31: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T54 :: The patient denies crepitus.
+- knee instability | verification_status=unconfirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T56
+  Summary: The patient feels like the knee is shifting back compared to the other side.
+  ClusterId: CL18
+  TemporalProfile: current, shifting back
+  Updates:
+  - CAP1: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T56 :: The patient feels like they are shifting back a little bit on this side compared to the other side.
+  - CAP2: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=shifting back turns=T56 :: The patient feels like the knee is shifting back compared to the other side.
+- weakness | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T58,T74
+  Summary: The patient reports feeling weak.
+  ClusterId: CL19
+  TemporalProfile: current, general
+  Updates:
+  - CAP32: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=general turns=T58 :: The patient feels weak.
+  - CAP24: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T74 :: The patient reports feeling weak.
+- left hand pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T74
+  Summary: The patient reports pain in the left hand.
+  ClusterId: CL21
+  TemporalProfile: current
+  Updates:
+  - CAP11: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T74 :: The patient reports pain in the left hand.
+- walking the dog | verification_status=unconfirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T74
+  Summary: The patient reports walking the dog.
+  ClusterId: CL22
+  TemporalProfile: current
+  Updates:
+  - CAP17: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=current turns=T74 :: The patient reports walking the dog.
+- physical therapy | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T112
+  Summary: The doctor will refer the patient to physical therapy.
+  ClusterId: CL29
+  TemporalProfile: soon
+  Updates:
+  - CAP6: content_source=doctor modality=plan verification_status=unconfirmed clinical_status=planned temporality=soon turns=T112 :: The doctor will refer the patient to physical therapy.
+- hand pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T115
+  Summary: The patient reports hand pain.
+  ClusterId: CL31
+  TemporalProfile: current
+  Updates:
+  - CAP26: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T115 :: The patient reports hand pain.
+
+Medication Tracking
+- [MedicationState] ibuprofen | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T11,T13
+  Summary: The patient took ibuprofen.
+  ClusterId: CL5
+  TemporalProfile: current, recent
+  CurrentRegimens:
+  - The patient took ibuprofen. (T11)
+  - The patient took ibuprofen. (T13)
+  Updates:
+  - CAP43: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=recent turns=T11 :: The patient took ibuprofen.
+  - CAP44: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T13 :: The patient took ibuprofen.
+- [MedicationChange] work harder | verification_status=unconfirmed | clinical_status=planned | modalities=interview | speakers=patient | evidence=T68
+  Summary: The patient states they need to work harder.
+  ClusterId: CL20
+  TemporalProfile: current
+  PlannedChanges:
+  - The patient states they need to work harder. (T68)
+  Updates:
+  - CAP42: content_source=patient modality=interview verification_status=unconfirmed clinical_status=planned temporality=current turns=T68 :: The patient states they need to work harder.
+- [MedicationChange] leg removal | verification_status=unconfirmed | clinical_status=planned | modalities=assessment | speakers=doctor | evidence=T78
+  Summary: The doctor recommends leg removal.
+  ClusterId: CL24
+  TemporalProfile: future
+  PlannedChanges:
+  - The doctor recommends leg removal. (T78)
+  Updates:
+  - CAP40: content_source=doctor modality=assessment verification_status=unconfirmed clinical_status=planned temporality=future turns=T78 :: The doctor recommends leg removal.
+- [MedicationChange] ibuprofen | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T100
+  Summary: A prescription for ibuprofen is to be sent to the patient.
+  ClusterId: CL25
+  TemporalProfile: future
+  PlannedChanges:
+  - A prescription for ibuprofen is to be sent to the patient. (T100)
+  Updates:
+  - CAP33: content_source=doctor modality=plan verification_status=unconfirmed clinical_status=planned temporality=future turns=T100 :: A prescription for ibuprofen is to be sent to the patient.
+- [MedicationChange] prescription | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T102
+  Summary: A prescription will be sent to the patient.
+  ClusterId: CL26
+  TemporalProfile: future
+  PlannedChanges:
+  - A prescription will be sent to the patient. (T102)
+  Updates:
+  - CAP37: content_source=doctor modality=plan verification_status=unconfirmed clinical_status=planned temporality=future turns=T102 :: A prescription will be sent to the patient.
+- [MedicationChange] brace | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T110
+  Summary: The doctor will obtain a brace for the patient.
+  ClusterId: CL28
+  TemporalProfile: today
+  PlannedChanges:
+  - The doctor will obtain a brace for the patient. (T110)
+  Updates:
+  - CAP35: content_source=doctor modality=plan verification_status=unconfirmed clinical_status=planned temporality=today turns=T110 :: The doctor will obtain a brace for the patient.
+
+Other Structured States
+- [Plan] band-aid | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T11
+  Summary: The patient put a band-aid on it.
+  ClusterId: CL4
+  TemporalProfile: recent
+- [Plan] knee examination | verification_status=unconfirmed | clinical_status=planned | modalities=interview | speakers=doctor | evidence=T26
+  Summary: The doctor will examine the patient's knee.
+  ClusterId: CL8
+  TemporalProfile: future
+- [Plan] surgery | verification_status=unconfirmed | clinical_status=planned | modalities=assessment | speakers=doctor | evidence=T78
+  Summary: The patient may need surgery on their knee.
+  ClusterId: CL23
+  TemporalProfile: future
+- [Plan] brace | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T110
+  Summary: A brace will be fitted to the patient today.
+  ClusterId: CL27
+  TemporalProfile: today
+- [FollowUp] physical therapy follow-up | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T112
+  Summary: The patient will follow up with physical therapy in 4-6 weeks.
+  ClusterId: CL30
+  TemporalProfile: in 4-6 weeks

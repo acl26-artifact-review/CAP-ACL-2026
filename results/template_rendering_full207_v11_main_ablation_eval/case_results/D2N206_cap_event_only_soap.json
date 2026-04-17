@@ -1,0 +1,1142 @@
+{
+  "case_id": "D2N206",
+  "method": "cap_event_only",
+  "template": "soap",
+  "summary_text": "S:\nThe patient reports experiencing intermittent dizziness, particularly when standing, for approximately one week. He denies any chest pain, shortness of breath, or syncope. He reports taking ibuprofen as directed.\n\nO:\nBlood pressure is 90/60 mmHg. Heart rate is 88 bpm, regular. Neurological exam reveals normal cranial nerves, strength, and coordination. Gait is steady.\n\nA:\nThe patient's symptoms are most consistent with orthostatic hypotension, potentially exacerbated by ibuprofen use.\n\nP:\nI will order a tilt table test to evaluate for orthostatic intolerance. I will also advise the patient to increase fluid intake and avoid rapid positional changes. I will counsel the patient on the potential side effects of ibuprofen and recommend alternative pain management strategies if necessary.",
+  "reference_summary": "CHIEF COMPLAINT\n\nRight flank pain.\n\nHISTORY OF PRESENT ILLNESS\n\nJoshua Reyes is a pleasant 18-year-old male who presents to the clinic today for evaluation of right flank pain.\n\nFor the last 2 weeks, the patient has been experiencing pain that starts in his right flank and radiates down into his groin. He also recalls one episode in which the pain radiated down into one of his testicles. Although his pain is intermittent depending on his fluid intake and activity level, he rates the pain as a 4/10 at its worst. Otherwise, the pain is a 1-2/10. He denies any pain with urination, hematuria, nausea, vomiting, or fevers, but recalls possibly having chills at one point. Over-the-counter ibuprofen provides partial relief of his pain. Of note, the patient has a personal history of kidney stones, some which were passed independently, usually within a week, while others required surgical intervention or lithotripsy. He also has several family members with a histories of kidney stones.\n\nMEDICAL HISTORY\n\nThe patient has a personal history of kidney stones treated conservatively, surgically, and with lithotripsy.\n\nFAMILY HISTORY\n\nThe patient has a significant family history of kidney stones.\n\nREVIEW OF SYSTEMS\n\nConstitutional: Reports chills. Denies fever\nGastrointestinal: Denies nausea or vomiting.\nGenitourinary: Reports right flank pain. Denies dysuria or hematuria.\n\nVITALS\n\nBlood pressure: Slightly elevated\n\nPHYSICAL EXAM\n\nGI/GU: No tenderness to palpation of the abdomen.\nMSK: Examination of the right flank: CVA tenderness.\n\nRESULTS\n\nCT scan of the right flank was reviewed today, 05/06/2022. It revealed a kidney stone measuring 0.5 cm in size, located on the proximal right ureter. There is no evidence of hydronephrosis.\n\nASSESSMENT\n\nKidney stone, right side.\n\nPLAN\n\nAfter reviewing the patient's examination and CT scan findings today, we discussed the diagnosis and treatment plan. I recommend that we treat the patient conservatively at this point. I advised him to continue drinking plenty of fluids so he can hopefully pass the stone. He has been controlling his pain with over-the-counter ibuprofen and should continue to do so. I also prescribed tramadol 50 mg for any breakthrough pain. His primary care physician provided him with a strainer and I advised him to continue using this as well. I want to order a BMP, a urinalysis, and a urine culture to rule out any need for antibiotics. We will have him follow up in 2 weeks for re-evaluation. If he has not passed the kidney stone at that time, we can consider proceeding with lithotripsy.\n\nINSTRUCTIONS\n\nThe patient will follow up in 2 weeks.",
+  "source_cap": {
+    "atomic_propositions": [
+      {
+        "prop_id": "CAP1",
+        "cap_type": "Symptom",
+        "canonical_concept": "pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports pain in the right flank radiating to the groin."
+      },
+      {
+        "prop_id": "CAP2",
+        "cap_type": "Symptom",
+        "canonical_concept": "pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "quantitative",
+          "symptom"
+        ],
+        "proposition_text": "The patient reports a pain score of 4 out of 10."
+      },
+      {
+        "prop_id": "CAP3",
+        "cap_type": "Symptom",
+        "canonical_concept": "chills",
+        "category": "Symptom",
+        "speaker": "patient",
+        "status": "uncertain",
+        "visit_state": "historical",
+        "temporality": "past",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient felt like they might have had chills."
+      },
+      {
+        "prop_id": "CAP4",
+        "cap_type": "Symptom",
+        "canonical_concept": "hematuria",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "uncertain",
+        "visit_state": "historical",
+        "temporality": "past",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports a previous episode of hematuria."
+      },
+      {
+        "prop_id": "CAP5",
+        "cap_type": "Symptom",
+        "canonical_concept": "testicular pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "uncertain",
+        "visit_state": "historical",
+        "temporality": "past",
+        "claim_type_tags": [
+          "symptom",
+          "temporal"
+        ],
+        "proposition_text": "The patient reports testicular pain in the past."
+      },
+      {
+        "prop_id": "CAP6",
+        "cap_type": "Problem",
+        "canonical_concept": "kidney stone",
+        "category": "Problem",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "previous",
+        "proposition_text": "The patient has a history of kidney stones."
+      },
+      {
+        "prop_id": "CAP7",
+        "cap_type": "Symptom",
+        "canonical_concept": "dysuria",
+        "category": "Symptom",
+        "speaker": "doctor",
+        "predicate": "reports",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports pain when urinating."
+      },
+      {
+        "prop_id": "CAP8",
+        "cap_type": "Problem",
+        "canonical_concept": "kidney stone",
+        "category": "Problem",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient has a kidney stone."
+      },
+      {
+        "prop_id": "CAP9",
+        "cap_type": "Symptom",
+        "canonical_concept": "pain",
+        "category": "Symptom",
+        "speaker": "doctor",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports new pain."
+      },
+      {
+        "prop_id": "CAP10",
+        "cap_type": "Symptom",
+        "canonical_concept": "nausea",
+        "category": "Symptom",
+        "speaker": "doctor",
+        "predicate": "denies",
+        "status": "negated",
+        "visit_state": "historical",
+        "temporality": "past",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient denies nausea."
+      },
+      {
+        "prop_id": "CAP11",
+        "cap_type": "Symptom",
+        "canonical_concept": "vomiting",
+        "category": "Symptom",
+        "speaker": "doctor",
+        "predicate": "denies",
+        "status": "negated",
+        "visit_state": "historical",
+        "temporality": "past",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient denies vomiting."
+      },
+      {
+        "prop_id": "CAP12",
+        "cap_type": "Symptom",
+        "canonical_concept": "fever",
+        "category": "Symptom",
+        "speaker": "doctor",
+        "predicate": "denies",
+        "status": "negated",
+        "visit_state": "historical",
+        "temporality": "past",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient denies fever."
+      },
+      {
+        "prop_id": "CAP13",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "ibuprofen",
+        "category": "MedicationStatement",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient reports taking ibuprofen."
+      }
+    ],
+    "filtered_nonverifiable_units": []
+  },
+  "event_plan": {
+    "events": [
+      {
+        "event_id": "CL1",
+        "event_type": "ProblemOrientedNoteBundle",
+        "canonical_concept": "kidney stone",
+        "visit_state": "historical",
+        "status": "affirmed",
+        "temporality": "past",
+        "speaker_source": "patient",
+        "clinical_priority": "high",
+        "title": "kidney stone",
+        "event_summary": "Problem-oriented bundle for kidney stone.",
+        "supporting_cap_ids": [
+          "CAP8",
+          "CAP6",
+          "CAP7",
+          "CAP4",
+          "CAP13"
+        ],
+        "anchor_problem_cap_id": "CAP8",
+        "anchor_problem": "kidney stone",
+        "S_cap_ids": [
+          "CAP13"
+        ],
+        "global_cap_ids": [
+          "CAP7"
+        ],
+        "supporting_evidence": [
+          "The patient reports taking ibuprofen."
+        ],
+        "current_state": [
+          "The patient reports taking ibuprofen."
+        ],
+        "care_context": [
+          "The patient has a kidney stone.",
+          "The patient has a history of kidney stones.",
+          "The patient reports a previous episode of hematuria.",
+          "The patient reports pain when urinating."
+        ],
+        "key_slots": {
+          "source_modalities": "interview",
+          "temporal_profile": "current, previous, past",
+          "anchor_cluster_type": "ProblemState",
+          "anchor_primary_cap_type": "Problem",
+          "bundle_concepts": "kidney stone; dysuria; hematuria; ibuprofen",
+          "history_context": "The patient has a kidney stone.; The patient has a history of kidney stones.",
+          "related_factors": "The patient reports a previous episode of hematuria.",
+          "visit_primary": "true",
+          "render_in_note": "true",
+          "assessment_fallback": "Findings are consistent with kidney stone.",
+          "bundle_design": "problem_oriented_note_bundle"
+        },
+        "render_sections": [
+          "S",
+          "O",
+          "A",
+          "P",
+          "History of Present Illness",
+          "Findings",
+          "Assessment",
+          "Plan"
+        ]
+      }
+    ]
+  },
+  "summary_cap": {
+    "atomic_propositions": [],
+    "filtered_nonverifiable_units": [],
+    "runtime_seconds": 0.561
+  },
+  "cap_alignment": {
+    "cap_precision": 0.0,
+    "cap_recall": 0.0,
+    "cap_f1": 0.0,
+    "matched_count": 0,
+    "summary_prop_count": 0,
+    "source_prop_count": 13,
+    "matched_pairs": [],
+    "unsupported_summary_props": [],
+    "missing_source_props": [
+      {
+        "prop_id": "CAP1",
+        "cap_type": "Symptom",
+        "canonical_concept": "pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports pain in the right flank radiating to the groin."
+      },
+      {
+        "prop_id": "CAP2",
+        "cap_type": "Symptom",
+        "canonical_concept": "pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "quantitative",
+          "symptom"
+        ],
+        "proposition_text": "The patient reports a pain score of 4 out of 10."
+      },
+      {
+        "prop_id": "CAP3",
+        "cap_type": "Symptom",
+        "canonical_concept": "chills",
+        "category": "Symptom",
+        "speaker": "patient",
+        "status": "uncertain",
+        "visit_state": "historical",
+        "temporality": "past",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient felt like they might have had chills."
+      },
+      {
+        "prop_id": "CAP4",
+        "cap_type": "Symptom",
+        "canonical_concept": "hematuria",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "uncertain",
+        "visit_state": "historical",
+        "temporality": "past",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports a previous episode of hematuria."
+      },
+      {
+        "prop_id": "CAP5",
+        "cap_type": "Symptom",
+        "canonical_concept": "testicular pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "uncertain",
+        "visit_state": "historical",
+        "temporality": "past",
+        "claim_type_tags": [
+          "symptom",
+          "temporal"
+        ],
+        "proposition_text": "The patient reports testicular pain in the past."
+      },
+      {
+        "prop_id": "CAP6",
+        "cap_type": "Problem",
+        "canonical_concept": "kidney stone",
+        "category": "Problem",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "previous",
+        "proposition_text": "The patient has a history of kidney stones."
+      },
+      {
+        "prop_id": "CAP7",
+        "cap_type": "Symptom",
+        "canonical_concept": "dysuria",
+        "category": "Symptom",
+        "speaker": "doctor",
+        "predicate": "reports",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports pain when urinating."
+      },
+      {
+        "prop_id": "CAP8",
+        "cap_type": "Problem",
+        "canonical_concept": "kidney stone",
+        "category": "Problem",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient has a kidney stone."
+      },
+      {
+        "prop_id": "CAP9",
+        "cap_type": "Symptom",
+        "canonical_concept": "pain",
+        "category": "Symptom",
+        "speaker": "doctor",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports new pain."
+      },
+      {
+        "prop_id": "CAP10",
+        "cap_type": "Symptom",
+        "canonical_concept": "nausea",
+        "category": "Symptom",
+        "speaker": "doctor",
+        "predicate": "denies",
+        "status": "negated",
+        "visit_state": "historical",
+        "temporality": "past",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient denies nausea."
+      },
+      {
+        "prop_id": "CAP11",
+        "cap_type": "Symptom",
+        "canonical_concept": "vomiting",
+        "category": "Symptom",
+        "speaker": "doctor",
+        "predicate": "denies",
+        "status": "negated",
+        "visit_state": "historical",
+        "temporality": "past",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient denies vomiting."
+      },
+      {
+        "prop_id": "CAP12",
+        "cap_type": "Symptom",
+        "canonical_concept": "fever",
+        "category": "Symptom",
+        "speaker": "doctor",
+        "predicate": "denies",
+        "status": "negated",
+        "visit_state": "historical",
+        "temporality": "past",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient denies fever."
+      },
+      {
+        "prop_id": "CAP13",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "ibuprofen",
+        "category": "MedicationStatement",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient reports taking ibuprofen."
+      }
+    ]
+  },
+  "reference_gpt_f1_items": {
+    "active_problems_symptoms": [],
+    "negated_findings": [],
+    "uncertain_findings": [],
+    "medication_treatment": [],
+    "plan_followup": [],
+    "_chunk_count": [
+      "3"
+    ],
+    "_parse_failures": [
+      "{\"chunk_index\": 1, \"stage\": \"call_llm\", \"error\": \"LLM call failed after retries: Error code: 404\"}",
+      "{\"chunk_index\": 2, \"stage\": \"call_llm\", \"error\": \"LLM call failed after retries: Error code: 404\"}",
+      "{\"chunk_index\": 3, \"stage\": \"call_llm\", \"error\": \"LLM call failed after retries: Error code: 404\"}"
+    ]
+  },
+  "summary_gpt_f1_items": {
+    "active_problems_symptoms": [],
+    "negated_findings": [],
+    "uncertain_findings": [],
+    "medication_treatment": [],
+    "plan_followup": [],
+    "_chunk_count": [
+      "1"
+    ],
+    "_parse_failures": [
+      "{\"chunk_index\": 1, \"stage\": \"call_llm\", \"error\": \"LLM call failed after retries: Error code: 404\"}"
+    ]
+  },
+  "gpt_f1_alignment": {
+    "by_category": {
+      "active_problems_symptoms": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "matched_count": 0,
+        "pred_count": 0,
+        "ref_count": 0,
+        "matches": [],
+        "unsupported_pred_items": [],
+        "missing_ref_items": []
+      },
+      "negated_findings": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "matched_count": 0,
+        "pred_count": 0,
+        "ref_count": 0,
+        "matches": [],
+        "unsupported_pred_items": [],
+        "missing_ref_items": []
+      },
+      "uncertain_findings": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "matched_count": 0,
+        "pred_count": 0,
+        "ref_count": 0,
+        "matches": [],
+        "unsupported_pred_items": [],
+        "missing_ref_items": []
+      },
+      "medication_treatment": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "matched_count": 0,
+        "pred_count": 0,
+        "ref_count": 0,
+        "matches": [],
+        "unsupported_pred_items": [],
+        "missing_ref_items": []
+      },
+      "plan_followup": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "matched_count": 0,
+        "pred_count": 0,
+        "ref_count": 0,
+        "matches": [],
+        "unsupported_pred_items": [],
+        "missing_ref_items": []
+      }
+    }
+  },
+  "reference_nair_concepts": {
+    "sections": [
+      {
+        "heading": "Clinical Note",
+        "section_value": "CHIEF COMPLAINT\nRight flank pain.\nHISTORY OF PRESENT ILLNESS\nJoshua Reyes is a pleasant 18-year-old male who presents to the clinic today for evaluation of right flank pain.\nFor the last 2 weeks, the patient has been experiencing pain that starts in his right flank and radiates down into his groin. He also recalls one episode in which the pain radiated down into one of his testicles. Although his pain is intermittent depending on his fluid intake and activity level, he rates the pain as a 4/10 at its worst. Otherwise, the pain is a 1-2/10. He denies any pain with urination, hematuria, nausea, vomiting, or fevers, but recalls possibly having chills at one point. Over-the-counter ibuprofen provides partial relief of his pain. Of note, the patient has a personal history of kidney stones, some which were passed independently, usually within a week, while others required surgical intervention or lithotripsy. He also has several family members with a histories of kidney stones.\nMEDICAL HISTORY\nThe patient has a personal history of kidney stones treated conservatively, surgically, and with lithotripsy.\nFAMILY HISTORY\nThe patient has a significant family history of kidney stones.\nREVIEW OF SYSTEMS",
+        "medical_concepts": [
+          "right flank pain",
+          "groin pain",
+          "testicular pain",
+          "pain with urination",
+          "hematuria",
+          "nausea",
+          "vomiting",
+          "fevers",
+          "chills",
+          "ibuprofen",
+          "kidney stones",
+          "surgical intervention",
+          "lithotripsy",
+          "family history of kidney stones",
+          "personal history of kidney stones"
+        ]
+      },
+      {
+        "heading": "Clinical Note",
+        "section_value": "Constitutional: Reports chills. Denies fever\nGastrointestinal: Denies nausea or vomiting.\nGenitourinary: Reports right flank pain. Denies dysuria or hematuria.\nVITALS\nBlood pressure: Slightly elevated\nPHYSICAL EXAM\nGI/GU: No tenderness to palpation of the abdomen.\nMSK: Examination of the right flank: CVA tenderness.\nRESULTS\nCT scan of the right flank was reviewed today, 05/06/2022. It revealed a kidney stone measuring 0.5 cm in size, located on the proximal right ureter. There is no evidence of hydronephrosis.",
+        "medical_concepts": [
+          "chills",
+          "fever",
+          "nausea",
+          "vomiting",
+          "right flank pain",
+          "dysuria",
+          "hematuria",
+          "blood pressure",
+          "abdominal tenderness",
+          "CVA tenderness",
+          "CT scan",
+          "kidney stone",
+          "proximal right ureter",
+          "hydronephrosis"
+        ]
+      },
+      {
+        "heading": "Clinical Note",
+        "section_value": "ASSESSMENT\nKidney stone, right side.\nPLAN\nAfter reviewing the patient's examination and CT scan findings today, we discussed the diagnosis and treatment plan. I recommend that we treat the patient conservatively at this point. I advised him to continue drinking plenty of fluids so he can hopefully pass the stone. He has been controlling his pain with over-the-counter ibuprofen and should continue to do so. I also prescribed tramadol 50 mg for any breakthrough pain. His primary care physician provided him with a strainer and I advised him to continue using this as well. I want to order a BMP, a urinalysis, and a urine culture to rule out any need for antibiotics. We will have him follow up in 2 weeks for re-evaluation. If he has not passed the kidney stone at that time, we can consider proceeding with lithotripsy.\nINSTRUCTIONS\nThe patient will follow up in 2 weeks.",
+        "medical_concepts": [
+          "kidney stone",
+          "right kidney stone",
+          "CT scan",
+          "ibuprofen",
+          "tramadol",
+          "breakthrough pain",
+          "BMP",
+          "basic metabolic panel",
+          "urinalysis",
+          "urine culture",
+          "antibiotics",
+          "lithotripsy"
+        ]
+      }
+    ],
+    "medical_concepts": [
+      "right flank pain",
+      "groin pain",
+      "testicular pain",
+      "pain with urination",
+      "hematuria",
+      "nausea",
+      "vomiting",
+      "fevers",
+      "chills",
+      "ibuprofen",
+      "kidney stones",
+      "surgical intervention",
+      "lithotripsy",
+      "family history of kidney stones",
+      "personal history of kidney stones",
+      "fever",
+      "dysuria",
+      "blood pressure",
+      "abdominal tenderness",
+      "CVA tenderness",
+      "CT scan",
+      "kidney stone",
+      "proximal right ureter",
+      "hydronephrosis",
+      "right kidney stone",
+      "tramadol",
+      "breakthrough pain",
+      "BMP",
+      "basic metabolic panel",
+      "urinalysis",
+      "urine culture",
+      "antibiotics"
+    ],
+    "section_count": 3
+  },
+  "summary_nair_concepts": {
+    "sections": [
+      {
+        "heading": "S",
+        "section_value": "The patient reports experiencing intermittent dizziness, particularly when standing, for approximately one week. He denies any chest pain, shortness of breath, or syncope. He reports taking ibuprofen as directed.",
+        "medical_concepts": [
+          "dizziness",
+          "chest pain",
+          "shortness of breath",
+          "syncope",
+          "ibuprofen"
+        ]
+      },
+      {
+        "heading": "O",
+        "section_value": "Blood pressure is 90/60 mmHg. Heart rate is 88 bpm, regular. Neurological exam reveals normal cranial nerves, strength, and coordination. Gait is steady.",
+        "medical_concepts": [
+          "blood pressure",
+          "heart rate",
+          "neurological exam",
+          "cranial nerves",
+          "muscle strength",
+          "coordination",
+          "gait"
+        ]
+      },
+      {
+        "heading": "A",
+        "section_value": "The patient's symptoms are most consistent with orthostatic hypotension, potentially exacerbated by ibuprofen use.",
+        "medical_concepts": [
+          "orthostatic hypotension",
+          "ibuprofen use"
+        ]
+      },
+      {
+        "heading": "P",
+        "section_value": "I will order a tilt table test to evaluate for orthostatic intolerance. I will also advise the patient to increase fluid intake and avoid rapid positional changes. I will counsel the patient on the potential side effects of ibuprofen and recommend alternative pain management strategies if necessary.",
+        "medical_concepts": [
+          "tilt table test",
+          "orthostatic intolerance",
+          "fluid intake",
+          "ibuprofen",
+          "pain management"
+        ]
+      }
+    ],
+    "medical_concepts": [
+      "dizziness",
+      "chest pain",
+      "shortness of breath",
+      "syncope",
+      "ibuprofen",
+      "blood pressure",
+      "heart rate",
+      "neurological exam",
+      "cranial nerves",
+      "muscle strength",
+      "coordination",
+      "gait",
+      "orthostatic hypotension",
+      "ibuprofen use",
+      "tilt table test",
+      "orthostatic intolerance",
+      "fluid intake",
+      "pain management"
+    ],
+    "section_count": 4
+  },
+  "nair_alignment": {
+    "pred_concepts": [
+      "dizziness",
+      "chest pain",
+      "shortness of breath",
+      "syncope",
+      "ibuprofen",
+      "blood pressure",
+      "heart rate",
+      "neurological exam",
+      "cranial nerves",
+      "muscle strength",
+      "coordination",
+      "gait",
+      "orthostatic hypotension",
+      "ibuprofen use",
+      "tilt table test",
+      "orthostatic intolerance",
+      "fluid intake",
+      "pain management"
+    ],
+    "ref_concepts": [
+      "right flank pain",
+      "groin pain",
+      "testicular pain",
+      "pain with urination",
+      "hematuria",
+      "nausea",
+      "vomiting",
+      "fevers",
+      "chills",
+      "ibuprofen",
+      "kidney stones",
+      "surgical intervention",
+      "lithotripsy",
+      "family history of kidney stones",
+      "personal history of kidney stones",
+      "fever",
+      "dysuria",
+      "blood pressure",
+      "abdominal tenderness",
+      "CVA tenderness",
+      "CT scan",
+      "kidney stone",
+      "proximal right ureter",
+      "hydronephrosis",
+      "right kidney stone",
+      "tramadol",
+      "breakthrough pain",
+      "BMP",
+      "basic metabolic panel",
+      "urinalysis",
+      "urine culture",
+      "antibiotics"
+    ],
+    "precision_alignment": {
+      "found_b": [
+        "ibuprofen",
+        "blood pressure",
+        "ibuprofen use",
+        "fluid intake",
+        "pain management"
+      ],
+      "not_found_b": [
+        "dizziness",
+        "chest pain",
+        "shortness of breath",
+        "syncope",
+        "heart rate",
+        "neurological exam",
+        "cranial nerves",
+        "muscle strength",
+        "coordination",
+        "gait",
+        "orthostatic hypotension",
+        "tilt table test",
+        "orthostatic intolerance"
+      ],
+      "chunk_count": 1,
+      "chunk_results": [
+        {
+          "found_b": [
+            "ibuprofen",
+            "blood pressure",
+            "ibuprofen use",
+            "fluid intake",
+            "pain management"
+          ],
+          "not_found_b": [
+            "dizziness",
+            "chest pain",
+            "shortness of breath",
+            "syncope",
+            "heart rate",
+            "neurological exam",
+            "cranial nerves",
+            "muscle strength",
+            "coordination",
+            "gait",
+            "orthostatic hypotension",
+            "tilt table test",
+            "orthostatic intolerance"
+          ]
+        }
+      ]
+    },
+    "recall_alignment": {
+      "found_b": [
+        "ibuprofen",
+        "blood pressure"
+      ],
+      "not_found_b": [
+        "right flank pain",
+        "groin pain",
+        "testicular pain",
+        "pain with urination",
+        "hematuria",
+        "nausea",
+        "vomiting",
+        "fevers",
+        "chills",
+        "kidney stones",
+        "surgical intervention",
+        "lithotripsy",
+        "family history of kidney stones",
+        "personal history of kidney stones",
+        "fever",
+        "dysuria",
+        "abdominal tenderness",
+        "CVA tenderness",
+        "CT scan",
+        "kidney stone",
+        "proximal right ureter",
+        "hydronephrosis",
+        "right kidney stone",
+        "tramadol",
+        "breakthrough pain",
+        "BMP",
+        "basic metabolic panel",
+        "urinalysis",
+        "urine culture",
+        "antibiotics"
+      ],
+      "chunk_count": 2,
+      "chunk_results": [
+        {
+          "found_b": [
+            "ibuprofen",
+            "blood pressure"
+          ],
+          "not_found_b": [
+            "right flank pain",
+            "groin pain",
+            "testicular pain",
+            "pain with urination",
+            "hematuria",
+            "nausea",
+            "vomiting",
+            "fevers",
+            "chills",
+            "kidney stones",
+            "surgical intervention",
+            "lithotripsy",
+            "family history of kidney stones",
+            "personal history of kidney stones",
+            "fever",
+            "dysuria",
+            "abdominal tenderness",
+            "CVA tenderness",
+            "CT scan",
+            "kidney stone",
+            "proximal right ureter",
+            "hydronephrosis"
+          ]
+        },
+        {
+          "found_b": [],
+          "not_found_b": [
+            "right kidney stone",
+            "tramadol",
+            "breakthrough pain",
+            "BMP",
+            "basic metabolic panel",
+            "urinalysis",
+            "urine culture",
+            "antibiotics"
+          ]
+        }
+      ]
+    }
+  },
+  "semantic_cap_audit": {
+    "source_cap_recall": [
+      {
+        "cap_id": "P1",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P2",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P3",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P4",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P5",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P6",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P7",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P8",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P9",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P10",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P11",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P12",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P13",
+        "judgment": "supported",
+        "reason": null
+      }
+    ],
+    "summary_cap_precision": [],
+    "metrics": {
+      "semantic_cap_precision": 0.0,
+      "semantic_cap_recall": 0.0769,
+      "semantic_cap_f1": 0.0,
+      "semantic_cap_precision_supported_count": 0,
+      "semantic_cap_precision_partial_count": 0,
+      "semantic_cap_precision_denominator": 0,
+      "semantic_cap_recall_supported_count": 1,
+      "semantic_cap_recall_partial_count": 0,
+      "semantic_cap_recall_denominator": 13,
+      "semantic_cap_low_value_source_count": 0,
+      "semantic_cap_low_value_summary_count": 0,
+      "semantic_cap_missing_count": 12,
+      "semantic_cap_unsupported_count": 0,
+      "semantic_cap_contradicted_source_count": 0,
+      "semantic_cap_contradicted_summary_count": 0
+    }
+  },
+  "safety_judgment": null,
+  "section_judgment": {
+    "section_miscategorizations": [],
+    "summary_statistics": {
+      "section_appropriateness_score": 1.0,
+      "section_miscategorization_count": 0,
+      "major_section_miscategorization_count": 0
+    }
+  },
+  "pdsqi_judgment": {
+    "citation_applicable": 0,
+    "citation": 0,
+    "accurate": 1,
+    "thorough": 1,
+    "useful": 1,
+    "organized": 3,
+    "comprehensible": 4,
+    "succinct": 4,
+    "abstraction": 1,
+    "synthesized": 1,
+    "voice_summ": 0,
+    "voice_note": 0,
+    "pdsqi_core_mean": 2.1429
+  },
+  "llm_checklist_judgment": {
+    "content_preservation_core": 1,
+    "noise_suppression": 4,
+    "lay_expression_preservation": 1,
+    "state_update_fidelity": 1,
+    "temporality_preservation": 2,
+    "problem_evidence_linkage": 1,
+    "state_plan_separation": 2,
+    "section_organization_appropriateness": 2,
+    "overall_clinical_usability": 1,
+    "clinically_meaningful_omission": "Yes",
+    "clinically_concerning_hallucination": "Yes",
+    "checklist_a_mean": 2.0,
+    "checklist_b_mean": 1.5,
+    "checklist_c_mean": 1.6667,
+    "llm_checklist_abc_mean": 1.75,
+    "llm_checklist_mean_no_usability": 1.75,
+    "llm_checklist_total_score": 15,
+    "llm_checklist_mean": 1.6667,
+    "llm_checklist_meaningful_omission_yes": 1,
+    "llm_checklist_concerning_hallucination_yes": 1
+  },
+  "metrics": {
+    "case_id": "D2N206",
+    "method": "cap_event_only",
+    "template": "soap",
+    "source_cap_count": 13,
+    "event_plan_count": 1,
+    "summary_cap_count": 0,
+    "cap_matched_count": 0,
+    "cap_precision": 0.0,
+    "cap_recall": 0.0,
+    "cap_f1": 0.0,
+    "unsupported_summary_cap_count": 0,
+    "missing_source_cap_count": 13,
+    "summary_runtime_seconds": null,
+    "summary_cap_runtime_seconds": 0.561,
+    "event_plan_runtime_seconds": null,
+    "rouge_l_f1_vs_reference": 0.1085,
+    "token_f1_vs_reference": 0.2061,
+    "gptf1_macro_f1": 0.0,
+    "nair_gpt_precision": 0.2778,
+    "nair_gpt_recall": 0.0625,
+    "nair_gpt_f1": 0.102,
+    "semantic_cap_precision": 0.0,
+    "semantic_cap_recall": 0.0769,
+    "semantic_cap_f1": 0.0,
+    "hallucination_count": null,
+    "major_hallucination_count": null,
+    "omission_count": null,
+    "major_omission_count": null,
+    "section_appropriateness_score": 1.0,
+    "section_miscategorization_count": 0,
+    "major_section_miscategorization_count": 0,
+    "pdsqi_core_mean": 2.1429,
+    "pdsqi_accurate": 1,
+    "pdsqi_thorough": 1,
+    "llm_checklist_total_score": 15,
+    "llm_checklist_mean": 1.6667,
+    "llm_checklist_mean_no_usability": 1.75,
+    "checklist_a_mean": 2.0,
+    "checklist_b_mean": 1.5,
+    "checklist_c_mean": 1.6667,
+    "llm_checklist_abc_mean": 1.75,
+    "content_preservation_core": 1,
+    "noise_suppression": 4,
+    "lay_expression_preservation": 1,
+    "state_update_fidelity": 1,
+    "temporality_preservation": 2,
+    "problem_evidence_linkage": 1,
+    "state_plan_separation": 2,
+    "section_organization_appropriateness": 2,
+    "overall_clinical_usability": 1,
+    "llm_checklist_meaningful_omission_yes": 1,
+    "llm_checklist_concerning_hallucination_yes": 1,
+    "gptf1_active_problems_symptoms_precision": 0.0,
+    "gptf1_active_problems_symptoms_recall": 0.0,
+    "gptf1_active_problems_symptoms_f1": 0.0,
+    "gptf1_active_problems_symptoms_pred_count": 0,
+    "gptf1_active_problems_symptoms_ref_count": 0,
+    "gptf1_negated_findings_precision": 0.0,
+    "gptf1_negated_findings_recall": 0.0,
+    "gptf1_negated_findings_f1": 0.0,
+    "gptf1_negated_findings_pred_count": 0,
+    "gptf1_negated_findings_ref_count": 0,
+    "gptf1_uncertain_findings_precision": 0.0,
+    "gptf1_uncertain_findings_recall": 0.0,
+    "gptf1_uncertain_findings_f1": 0.0,
+    "gptf1_uncertain_findings_pred_count": 0,
+    "gptf1_uncertain_findings_ref_count": 0,
+    "gptf1_medication_treatment_precision": 0.0,
+    "gptf1_medication_treatment_recall": 0.0,
+    "gptf1_medication_treatment_f1": 0.0,
+    "gptf1_medication_treatment_pred_count": 0,
+    "gptf1_medication_treatment_ref_count": 0,
+    "gptf1_plan_followup_precision": 0.0,
+    "gptf1_plan_followup_recall": 0.0,
+    "gptf1_plan_followup_f1": 0.0,
+    "gptf1_plan_followup_pred_count": 0,
+    "gptf1_plan_followup_ref_count": 0,
+    "nair_pred_concept_count": 18,
+    "nair_ref_concept_count": 32,
+    "nair_precision_match_count": 5,
+    "nair_recall_match_count": 2,
+    "semantic_cap_precision_supported_count": 0,
+    "semantic_cap_precision_partial_count": 0,
+    "semantic_cap_precision_denominator": 0,
+    "semantic_cap_recall_supported_count": 1,
+    "semantic_cap_recall_partial_count": 0,
+    "semantic_cap_recall_denominator": 13,
+    "semantic_cap_low_value_source_count": 0,
+    "semantic_cap_low_value_summary_count": 0,
+    "semantic_cap_missing_count": 12,
+    "semantic_cap_unsupported_count": 0,
+    "semantic_cap_contradicted_source_count": 0,
+    "semantic_cap_contradicted_summary_count": 0,
+    "pdsqi_useful": 1,
+    "pdsqi_organized": 3,
+    "pdsqi_comprehensible": 4,
+    "pdsqi_succinct": 4,
+    "pdsqi_synthesized": 1
+  }
+}

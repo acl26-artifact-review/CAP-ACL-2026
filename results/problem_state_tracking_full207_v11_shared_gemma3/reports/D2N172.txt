@@ -1,0 +1,86 @@
+Case: D2N172
+
+Problem List and Visit State Tracking
+
+Problem List
+- depression | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T12,T4,T45
+  Summary: The patient reports a rough year due to depression.
+  ClusterId: CL1
+  TemporalProfile: current, past, year-and-a-half
+  Updates:
+  - CAP4: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=past turns=T4 :: The patient has a history of depression.
+  - CAP5: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=year-and-a-half turns=T12 :: The patient has a history of depression.
+  - CAP2: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T45 :: The patient reports a rough year due to depression.
+- pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T6
+  Summary: The patient reports pain in the left hand.
+  ClusterId: CL3
+  TemporalProfile: current
+  Updates:
+  - CAP3: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T6 :: The patient reports pain in the left hand.
+- insomnia | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T10,T18
+  Summary: The patient occasionally has difficulty sleeping.
+  ClusterId: CL4
+  TemporalProfile: current, occasional
+  Updates:
+  - CAP6: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=occasional turns=T10 :: The patient occasionally has difficulty sleeping.
+  - CAP7: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T18 :: The patient needs more sleep.
+- chest pain | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T20
+  Summary: The patient reports chest pain.
+  ClusterId: CL7
+  TemporalProfile: current
+  Updates:
+  - CAP8: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T20 :: The patient reports chest pain.
+- difficulty sleeping | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T20
+  Summary: The patient reports difficulty sleeping.
+  ClusterId: CL8
+  TemporalProfile: current
+  Updates:
+  - CAP9: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T20 :: The patient reports difficulty sleeping.
+- high blood pressure | verification_status=confirmed | clinical_status=stable | modalities=interview | speakers=patient | evidence=T26
+  Summary: The patient's high blood pressure has been under relatively good control recently.
+  ClusterId: CL9
+  TemporalProfile: recent
+  Updates:
+  - CAP1: content_source=patient modality=interview verification_status=confirmed clinical_status=stable temporality=recent turns=T26 :: The patient's high blood pressure has been under relatively good control recently.
+
+Medication Tracking
+- [MedicationState] zoloft | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=doctor | evidence=T10,T4
+  Summary: The patient is on zoloft 50 milligrams a day.
+  ClusterId: CL2
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient is on zoloft 50 milligrams a day. (T4)
+  - The patient is on zoloft. (T10)
+  Updates:
+  - CAP16: content_source=doctor modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T4 :: The patient is on zoloft 50 milligrams a day.
+  - CAP17: content_source=doctor modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T10 :: The patient is on zoloft.
+- [MedicationChange] lisinopril | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=doctor | evidence=T45
+  Summary: The doctor will continue the patient on lisinopril 5 milligrams a day.
+  ClusterId: CL11
+  TemporalProfile: current
+  PlannedChanges:
+  - The doctor will continue the patient on lisinopril 5 milligrams a day. (T45)
+  Updates:
+  - CAP12: content_source=doctor modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T45 :: The doctor will continue the patient on lisinopril 5 milligrams a day.
+- [MedicationChange] zoloft | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=doctor | evidence=T45
+  Summary: The doctor ordered a refill of zoloft 50 milligrams daily.
+  ClusterId: CL12
+  TemporalProfile: current
+  PlannedChanges:
+  - The doctor ordered a refill of zoloft 50 milligrams daily. (T45)
+  Updates:
+  - CAP15: content_source=doctor modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T45 :: The doctor ordered a refill of zoloft 50 milligrams daily.
+
+Other Structured States
+- [Plan] zoloft refill | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T19
+  Summary: The doctor ordered a zoloft refill.
+  ClusterId: CL5
+  TemporalProfile: future
+- [FollowUp] follow-up | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T19
+  Summary: The doctor wants to see the patient back in about one month.
+  ClusterId: CL6
+  TemporalProfile: one month from now, three months from now
+- [TestResult] grade two systolic ejection murmur | verification_status=confirmed | clinical_status=historical | modalities=exam | speakers=exam | evidence=T29
+  Summary: The patient has a grade two systolic ejection murmur.
+  ClusterId: CL10
+  TemporalProfile: before

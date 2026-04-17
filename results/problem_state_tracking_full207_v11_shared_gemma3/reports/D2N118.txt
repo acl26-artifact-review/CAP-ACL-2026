@@ -1,0 +1,227 @@
+Case: D2N118
+
+Problem List and Visit State Tracking
+
+Problem List
+- hypertension | verification_status=confirmed | clinical_status=active | modalities=assessment,interview | speakers=doctor,patient | evidence=T2,T24,T64
+  Summary: The patient has a past medical history of hypertension.
+  ClusterId: CL1
+  TemporalProfile: current, past
+  Updates:
+  - CAP21: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T2 :: The patient has hypertension.
+  - CAP3: content_source=doctor modality=assessment verification_status=confirmed clinical_status=active temporality=past turns=T24 :: The patient has a past medical history of hypertension.
+  - CAP2: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T64 :: The patient is doing well on two and a half milligrams of lisinopril.
+- diabetes | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T2
+  Summary: The patient has diabetes.
+  ClusterId: CL2
+  TemporalProfile: current
+  Updates:
+  - CAP22: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T2 :: The patient has diabetes.
+- kidney stone | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T2
+  Summary: The patient has a past medical history of kidney stones.
+  ClusterId: CL3
+  TemporalProfile: past
+  Updates:
+  - CAP49: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=past turns=T2 :: The patient has a past medical history of kidney stones.
+- left hand pain | verification_status=unconfirmed | clinical_status=resolved | modalities=interview | speakers=patient | evidence=T15,T27,T3,T55
+  Summary: The patient reports pain in the left hand.
+  ClusterId: CL4
+  TemporalProfile: current, past
+  Updates:
+  - CAP8: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T3 :: The patient reports pain in their kidneys.
+  - CAP17: content_source=patient modality=interview verification_status=refuted clinical_status=resolved temporality=past turns=T15 :: The patient reports no pain.
+  - CAP23: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T15 :: The patient reports pain.
+  - CAP7: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T27 :: The patient reports pain in the left hand.
+  - CAP6: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T55 :: The patient reports pain in the left hand.
+- blood in urine | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T10
+  Summary: The patient denies blood in their urine.
+  ClusterId: CL5
+  TemporalProfile: current
+  Updates:
+  - CAP9: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T10 :: The patient denies blood in their urine.
+  - CAP10: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T10 :: The patient reports blood in their urine.
+- kidney stones | verification_status=confirmed | clinical_status=historical | modalities=assessment,interview | speakers=doctor,patient | evidence=T22,T52
+  Summary: The patient previously had kidney stones.
+  ClusterId: CL7
+  TemporalProfile: past, recurrent
+  Updates:
+  - CAP11: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=recurrent turns=T22 :: The patient is experiencing recurrent kidney stones.
+  - CAP15: content_source=doctor modality=assessment verification_status=confirmed clinical_status=historical temporality=past turns=T52 :: The patient previously had kidney stones.
+- sodium intake | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=doctor | evidence=T31
+  Summary: The doctor wants to keep the patient's sodium intake at least 2300 milligrams per day.
+  ClusterId: CL11
+  TemporalProfile: current
+  Updates:
+  - CAP1: content_source=doctor modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T31 :: The doctor wants to keep the patient's sodium intake at least 2300 milligrams per day.
+- blood sugar | verification_status=unconfirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T44
+  Summary: The patient does not regularly check their blood sugar.
+  ClusterId: CL13
+  TemporalProfile: daily
+  Updates:
+  - CAP4: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=daily turns=T44 :: The patient does not regularly check their blood sugar.
+- type 2 diabetes | verification_status=confirmed | clinical_status=active | modalities=assessment | speakers=doctor | evidence=T47
+  Summary: The patient has type 2 diabetes.
+  ClusterId: CL14
+  TemporalProfile: historical
+  Updates:
+  - CAP14: content_source=doctor modality=assessment verification_status=confirmed clinical_status=active temporality=historical turns=T47 :: The patient has type 2 diabetes.
+- chest pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T48
+  Summary: The patient denies chest pain.
+  ClusterId: CL15
+  TemporalProfile: current
+  Updates:
+  - CAP18: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T48 :: The patient denies chest pain.
+- belly pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T50
+  Summary: The patient denies belly pain.
+  ClusterId: CL17
+  TemporalProfile: current
+  Updates:
+  - CAP19: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T50 :: The patient denies belly pain.
+- systolic ejection murmur | verification_status=confirmed | clinical_status=active | modalities=assessment | speakers=doctor | evidence=T52
+  Summary: The patient has a grade 2 systolic ejection murmur.
+  ClusterId: CL18
+  TemporalProfile: current
+  Updates:
+  - CAP5: content_source=doctor modality=assessment verification_status=confirmed clinical_status=active temporality=current turns=T52 :: The patient has a grade 2 systolic ejection murmur.
+- back pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T55
+  Summary: The patient reports no back pain.
+  ClusterId: CL19
+  TemporalProfile: current
+  Updates:
+  - CAP13: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T55 :: The patient reports no back pain.
+- urology | verification_status=unconfirmed | clinical_status=planned | modalities=assessment | speakers=doctor | evidence=T58
+  Summary: The doctor orders a referral to urology.
+  ClusterId: CL21
+  TemporalProfile: future
+  Updates:
+  - CAP12: content_source=doctor modality=assessment verification_status=unconfirmed clinical_status=planned temporality=future turns=T58 :: The doctor orders a referral to urology.
+- insomnia | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T80,T83,T96
+  Summary: The patient reports worrying about things.
+  ClusterId: CL27
+  TemporalProfile: current
+  Updates:
+  - CAP20: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T80 :: The patient reports staying awake.
+  - CAP16: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T83 :: The patient reports worrying about things.
+  - CAP25: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T96 :: The patient reports insomnia.
+- worrying | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T83
+  Summary: The patient reports worrying.
+  ClusterId: CL29
+  TemporalProfile: current
+  Updates:
+  - CAP24: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T83 :: The patient reports worrying.
+
+Medication Tracking
+- [MedicationState] percocet | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T19
+  Summary: The patient recalls receiving percocet.
+  ClusterId: CL6
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient recalls receiving percocet. (T19)
+  Updates:
+  - CAP47: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T19 :: The patient recalls receiving percocet.
+- [MedicationState] norvasc | verification_status=confirmed | clinical_status=active | modalities=assessment,interview | speakers=doctor | evidence=T24,T30,T64
+  Summary: The patient is currently taking norvasc at a dose of 2.5.
+  ClusterId: CL8
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient is currently taking norvasc at a dose of 2.5. (T24)
+  - Norvasc is working for the patient. (T30)
+  - The patient is taking 2.5 mg of norvasc. (T64)
+  Updates:
+  - CAP41: content_source=doctor modality=assessment verification_status=confirmed clinical_status=active temporality=current turns=T24 :: The patient is currently taking norvasc at a dose of 2.5.
+  - CAP46: content_source=doctor modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T30 :: Norvasc is working for the patient.
+  - CAP43: content_source=doctor modality=assessment verification_status=confirmed clinical_status=active temporality=current turns=T64 :: The patient is taking 2.5 mg of norvasc.
+- [MedicationChange] blood pressure cuff | verification_status=confirmed | clinical_status=planned | modalities=assessment | speakers=doctor | evidence=T28
+  Summary: The patient should take blood pressure readings using a blood pressure cuff.
+  ClusterId: CL10
+  TemporalProfile: future
+  PlannedChanges:
+  - The patient should take blood pressure readings using a blood pressure cuff. (T28)
+  Updates:
+  - CAP39: content_source=doctor modality=assessment verification_status=confirmed clinical_status=planned temporality=future turns=T28 :: The patient should take blood pressure readings using a blood pressure cuff.
+- [MedicationState] metformin | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=doctor | evidence=T40,T72
+  Summary: The doctor is continuing the patient on five hundred milligrams of metformin.
+  ClusterId: CL12
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient is taking metformin. (T40)
+  - The doctor is continuing the patient on five hundred milligrams of metformin. (T72)
+  Updates:
+  - CAP48: content_source=doctor modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T40 :: The patient is taking metformin.
+  - CAP40: content_source=doctor modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T72 :: The doctor is continuing the patient on five hundred milligrams of metformin.
+- [MedicationState] lisinopril | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=doctor | evidence=T64
+  Summary: The doctor is continuing the patient on two and a half milligrams of lisinopril.
+  ClusterId: CL23
+  TemporalProfile: current
+  CurrentRegimens:
+  - The doctor is continuing the patient on two and a half milligrams of lisinopril. (T64)
+  Updates:
+  - CAP38: content_source=doctor modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T64 :: The doctor is continuing the patient on two and a half milligrams of lisinopril.
+- [MedicationChange] metformin | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=doctor | evidence=T72
+  Summary: The doctor will continue the patient on metformin.
+  ClusterId: CL26
+  TemporalProfile: current
+  PlannedChanges:
+  - The doctor will continue the patient on metformin. (T72)
+  Updates:
+  - CAP44: content_source=doctor modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T72 :: The doctor will continue the patient on metformin.
+- [MedicationChange] melatonin | verification_status=confirmed | clinical_status=planned | modalities=interview,plan | speakers=doctor | evidence=T92,T96
+  Summary: The doctor recommends taking melatonin.
+  ClusterId: CL35
+  TemporalProfile: as needed, current
+  PlannedChanges:
+  - The doctor recommends taking melatonin. (T92)
+  - The doctor will prescribe ten milligrams of melatonin as needed. (T96)
+  Updates:
+  - CAP37: content_source=doctor modality=interview verification_status=unconfirmed clinical_status=planned temporality=current turns=T92 :: The doctor recommends taking melatonin.
+  - CAP42: content_source=doctor modality=plan verification_status=confirmed clinical_status=planned temporality=as needed turns=T96 :: The doctor will prescribe ten milligrams of melatonin as needed.
+
+Other Structured States
+- [ExamFinding] blood pressure | verification_status=confirmed | clinical_status=active | modalities=assessment | speakers=doctor | evidence=T27
+  Summary: The patient's blood pressure was measured at 150 over 90.
+  ClusterId: CL9
+  TemporalProfile: current
+- [TestResult] a1c | verification_status=confirmed | clinical_status=historical | modalities=test_result | speakers=doctor | evidence=T48
+  Summary: The patient's A1C was 6.7%
+  ClusterId: CL16
+  TemporalProfile: current
+- [Plan] urinalysis | verification_status=unconfirmed | clinical_status=planned | modalities=assessment | speakers=doctor | evidence=T56
+  Summary: The doctor orders a urinalysis.
+  ClusterId: CL20
+  TemporalProfile: future
+- [Plan] urine culture | verification_status=unconfirmed | clinical_status=planned | modalities=assessment | speakers=doctor | evidence=T58
+  Summary: The doctor orders a urine culture.
+  ClusterId: CL22
+  TemporalProfile: future
+- [Plan] blood sugar monitoring | verification_status=unconfirmed | clinical_status=planned | modalities=interview | speakers=doctor | evidence=T72
+  Summary: The doctor wants the patient to start taking their blood sugars before every meal.
+  ClusterId: CL24
+  TemporalProfile: before every meal
+- [Plan] blood sugars | verification_status=unconfirmed | clinical_status=planned | modalities=interview | speakers=doctor | evidence=T72
+  Summary: The patient should take blood sugars before meals.
+  ClusterId: CL25
+  TemporalProfile: before every meal
+- [FollowUp] follow-up | verification_status=confirmed | clinical_status=planned | modalities=interview | speakers=doctor | evidence=T80
+  Summary: The patient should return in three months.
+  ClusterId: CL28
+  TemporalProfile: in three months
+- [Plan] meditation apps | verification_status=unconfirmed | clinical_status=planned | modalities=interview | speakers=doctor | evidence=T83
+  Summary: The doctor recommends meditation apps.
+  ClusterId: CL30
+  TemporalProfile: current
+- [Plan] sleep hygiene | verification_status=confirmed | clinical_status=planned | modalities=interview,plan | speakers=doctor | evidence=T84,T98
+  Summary: The doctor recommends proper sleep hygiene.
+  ClusterId: CL31
+  TemporalProfile: as possible, current
+- [Plan] electronics off | verification_status=unconfirmed | clinical_status=planned | modalities=interview | speakers=doctor | evidence=T84
+  Summary: The doctor recommends turning electronics off.
+  ClusterId: CL32
+  TemporalProfile: current
+- [Plan] dark room | verification_status=unconfirmed | clinical_status=planned | modalities=interview | speakers=doctor | evidence=T84
+  Summary: The doctor recommends a dark room.
+  ClusterId: CL33
+  TemporalProfile: current
+- [Plan] iphone | verification_status=unconfirmed | clinical_status=planned | modalities=interview | speakers=doctor | evidence=T88
+  Summary: The doctor recommends using an iPhone.
+  ClusterId: CL34
+  TemporalProfile: current

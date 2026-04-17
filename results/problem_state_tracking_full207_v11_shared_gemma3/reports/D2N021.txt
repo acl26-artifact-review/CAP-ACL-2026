@@ -1,0 +1,335 @@
+Case: D2N021
+
+Problem List and Visit State Tracking
+
+Problem List
+- high medication price | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T8
+  Summary: The patient states the price of the new thyroid medicine is too high.
+  ClusterId: CL1
+  TemporalProfile: current
+  Updates:
+  - CAP1: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T8 :: The patient states the price of the new thyroid medicine is too high.
+- left hand pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T8
+  Summary: The patient reports pain in the left hand.
+  ClusterId: CL2
+  TemporalProfile: current
+  Updates:
+  - CAP19: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T8 :: The patient reports pain in the left hand.
+- weight gain | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T14
+  Summary: The patient reports weight gain.
+  ClusterId: CL3
+  TemporalProfile: current
+  Updates:
+  - CAP32: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T14 :: The patient reports weight gain.
+- birth control | verification_status=confirmed | clinical_status=historical | modalities=interview,plan | speakers=doctor,patient | evidence=T130,T18
+  Summary: The patient discontinued her birth control.
+  ClusterId: CL4
+  TemporalProfile: current, past
+  Updates:
+  - CAP6: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T18 :: The patient asks if birth control could have caused weight gain.
+  - CAP31: content_source=doctor modality=plan verification_status=confirmed clinical_status=historical temporality=past turns=T130 :: The patient discontinued her birth control.
+- high testosterone | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T19
+  Summary: The patient asks if high testosterone could be a cause.
+  ClusterId: CL5
+  TemporalProfile: current
+  Updates:
+  - CAP10: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T19 :: The patient asks if high testosterone could be a cause.
+- high dhea | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T19
+  Summary: The patient asks if high DHEA could be a cause.
+  ClusterId: CL6
+  TemporalProfile: current
+  Updates:
+  - CAP11: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T19 :: The patient asks if high DHEA could be a cause.
+- hyperandrogynism | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T19
+  Summary: The patient asks if hyperandrogynism could be a cause.
+  ClusterId: CL7
+  TemporalProfile: current
+  Updates:
+  - CAP13: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T19 :: The patient asks if hyperandrogynism could be a cause.
+- hair growth | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T19
+  Summary: The patient reports hair growth.
+  ClusterId: CL8
+  TemporalProfile: current
+  Updates:
+  - CAP33: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T19 :: The patient reports hair growth.
+- acne | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T19
+  Summary: The patient reports acne.
+  ClusterId: CL9
+  TemporalProfile: current
+  Updates:
+  - CAP39: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T19 :: The patient reports acne.
+- metabolism | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T30
+  Summary: The patient is asking about CLA to help their metabolism.
+  ClusterId: CL12
+  TemporalProfile: current
+  Updates:
+  - CAP12: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T30 :: The patient is asking about CLA to help their metabolism.
+- left hand | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T30
+  Summary: The patient's pain is in the left hand.
+  ClusterId: CL13
+  TemporalProfile: current
+  Updates:
+  - CAP20: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T30 :: The patient's pain is in the left hand.
+- pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T30
+  Summary: The patient reports pain.
+  ClusterId: CL14
+  TemporalProfile: current
+  Updates:
+  - CAP40: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T30 :: The patient reports pain.
+- thyroid issue | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T32
+  Summary: The patient's coworker has a thyroid issue.
+  ClusterId: CL15
+  TemporalProfile: current
+  Updates:
+  - CAP23: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T32 :: The patient's coworker has a thyroid issue.
+- weight loss study | verification_status=unconfirmed | clinical_status=planned | modalities=interview | speakers=patient | evidence=T33
+  Summary: The patient wants to be included in a weight loss study.
+  ClusterId: CL17
+  TemporalProfile: future
+  Updates:
+  - CAP7: content_source=patient modality=interview verification_status=unconfirmed clinical_status=planned temporality=future turns=T33 :: The patient wants to be included in a weight loss study.
+- constipation | verification_status=unconfirmed | clinical_status=active | modalities=assessment,interview | speakers=doctor,patient | evidence=T46,T89
+  Summary: Constipation is a potential side effect of the medication.
+  ClusterId: CL19
+  TemporalProfile: current, future
+  Updates:
+  - CAP34: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T46 :: The patient reports having constipation.
+  - CAP17: content_source=doctor modality=assessment verification_status=unconfirmed clinical_status=active temporality=future turns=T89 :: Constipation is a potential side effect of the medication.
+- swelling | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T52
+  Summary: The patient reports swelling in their feet.
+  ClusterId: CL20
+  TemporalProfile: current
+  Updates:
+  - CAP24: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T52 :: The patient reports swelling in their feet.
+- vitamin d deficiency | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=doctor | evidence=T69
+  Summary: The patient has a vitamin D deficiency.
+  ClusterId: CL21
+  TemporalProfile: current
+  Updates:
+  - CAP25: content_source=doctor modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T69 :: The patient has a vitamin D deficiency.
+- diabetes | verification_status=unconfirmed | clinical_status=active | modalities=assessment,interview | speakers=doctor,patient | evidence=T100,T89,T98
+  Summary: The doctor is starting a medication which has been used for diabetes treatment.
+  ClusterId: CL29
+  TemporalProfile: current
+  Updates:
+  - CAP2: content_source=doctor modality=assessment verification_status=unconfirmed clinical_status=active temporality=current turns=T89 :: The doctor is starting a medication which has been used for diabetes treatment.
+  - CAP41: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T98 :: The patient has diabetes.
+  - CAP37: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T100 :: The patient denies having diabetes.
+- nausea | verification_status=unconfirmed | clinical_status=active | modalities=assessment | speakers=doctor | evidence=T89
+  Summary: Nausea is a potential side effect of the medication.
+  ClusterId: CL30
+  TemporalProfile: future
+  Updates:
+  - CAP14: content_source=doctor modality=assessment verification_status=unconfirmed clinical_status=active temporality=future turns=T89 :: Nausea is a potential side effect of the medication.
+- vomiting | verification_status=unconfirmed | clinical_status=active | modalities=assessment | speakers=doctor | evidence=T89
+  Summary: Vomiting is a potential side effect of the medication.
+  ClusterId: CL31
+  TemporalProfile: future
+  Updates:
+  - CAP15: content_source=doctor modality=assessment verification_status=unconfirmed clinical_status=active temporality=future turns=T89 :: Vomiting is a potential side effect of the medication.
+- diarrhea | verification_status=unconfirmed | clinical_status=active | modalities=assessment | speakers=doctor | evidence=T89
+  Summary: Diarrhea is a potential side effect of the medication.
+  ClusterId: CL32
+  TemporalProfile: future
+  Updates:
+  - CAP16: content_source=doctor modality=assessment verification_status=unconfirmed clinical_status=active temporality=future turns=T89 :: Diarrhea is a potential side effect of the medication.
+- weight loss | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T89
+  Summary: The patient reports weight loss.
+  ClusterId: CL33
+  TemporalProfile: current
+  Updates:
+  - CAP35: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T89 :: The patient reports weight loss.
+- study | verification_status=unconfirmed | clinical_status=planned | modalities=assessment | speakers=doctor | evidence=T91
+  Summary: The patient will participate in a weight loss study.
+  ClusterId: CL34
+  TemporalProfile: future
+  Updates:
+  - CAP18: content_source=doctor modality=assessment verification_status=unconfirmed clinical_status=planned temporality=future turns=T91 :: The patient will participate in a weight loss study.
+- bmi greater than 30 | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T97
+  Summary: The patient has a BMI greater than 30.
+  ClusterId: CL37
+  TemporalProfile: current
+  Updates:
+  - CAP21: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T97 :: The patient has a BMI greater than 30.
+- bmi greater than 27 | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T97
+  Summary: The patient has a BMI greater than 27.
+  ClusterId: CL38
+  TemporalProfile: current
+  Updates:
+  - CAP22: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T97 :: The patient has a BMI greater than 27.
+- bipolar | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=doctor,patient | evidence=T101
+  Summary: The doctor states that patients cannot qualify if they have bipolar disorder.
+  ClusterId: CL39
+  TemporalProfile: current
+  Updates:
+  - CAP4: content_source=doctor modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T101 :: The doctor states that patients cannot qualify if they have bipolar disorder.
+  - CAP36: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T101 :: The patient has bipolar disorder.
+- schizophrenia | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=doctor,patient | evidence=T101
+  Summary: The doctor states that patients cannot qualify if they have schizophrenia.
+  ClusterId: CL40
+  TemporalProfile: current
+  Updates:
+  - CAP8: content_source=doctor modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T101 :: The doctor states that patients cannot qualify if they have schizophrenia.
+  - CAP42: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T101 :: The patient has schizophrenia.
+- high cholesterol | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=doctor | evidence=T103
+  Summary: The doctor states that patients can qualify if they have high cholesterol.
+  ClusterId: CL41
+  TemporalProfile: current
+  Updates:
+  - CAP5: content_source=doctor modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T103 :: The doctor states that patients can qualify if they have high cholesterol.
+- hypertension | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=doctor | evidence=T103
+  Summary: The doctor states that patients can qualify if they have hypertension.
+  ClusterId: CL42
+  TemporalProfile: current
+  Updates:
+  - CAP9: content_source=doctor modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T103 :: The doctor states that patients can qualify if they have hypertension.
+- low-carb diet | verification_status=confirmed | clinical_status=planned | modalities=unknown | speakers=doctor | evidence=T115
+  Summary: The patient should follow a low-carb diet.
+  ClusterId: CL47
+  TemporalProfile: current
+  Updates:
+  - CAP26: content_source=doctor modality=unknown verification_status=confirmed clinical_status=planned temporality=current turns=T115 :: The patient should follow a low-carb diet.
+- low cholesterol foods | verification_status=confirmed | clinical_status=planned | modalities=unknown | speakers=doctor | evidence=T115
+  Summary: The patient should consume low cholesterol foods.
+  ClusterId: CL48
+  TemporalProfile: current
+  Updates:
+  - CAP27: content_source=doctor modality=unknown verification_status=confirmed clinical_status=planned temporality=current turns=T115 :: The patient should consume low cholesterol foods.
+- avoid fatty foods | verification_status=confirmed | clinical_status=planned | modalities=unknown | speakers=doctor | evidence=T115
+  Summary: The patient should avoid fatty foods.
+  ClusterId: CL49
+  TemporalProfile: current
+  Updates:
+  - CAP29: content_source=doctor modality=unknown verification_status=confirmed clinical_status=planned temporality=current turns=T115 :: The patient should avoid fatty foods.
+- avoid alcohol | verification_status=confirmed | clinical_status=planned | modalities=unknown | speakers=doctor | evidence=T115
+  Summary: The patient should avoid alcohol.
+  ClusterId: CL50
+  TemporalProfile: current
+  Updates:
+  - CAP38: content_source=doctor modality=unknown verification_status=confirmed clinical_status=planned temporality=current turns=T115 :: The patient should avoid alcohol.
+- liver enzyme elevation | verification_status=unconfirmed | clinical_status=planned | modalities=interview | speakers=doctor | evidence=T119
+  Summary: The doctor believes the patient's liver enzymes will improve once they lose weight.
+  ClusterId: CL51
+  TemporalProfile: future
+  Updates:
+  - CAP3: content_source=doctor modality=interview verification_status=unconfirmed clinical_status=planned temporality=future turns=T119 :: The doctor believes the patient's liver enzymes will improve once they lose weight.
+- benzoyl peroxide | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T130
+  Summary: Benzoyl peroxide with clindamycin will be tried.
+  ClusterId: CL54
+  TemporalProfile: future
+  Updates:
+  - CAP28: content_source=doctor modality=plan verification_status=unconfirmed clinical_status=planned temporality=future turns=T130 :: Benzoyl peroxide with clindamycin will be tried.
+- liver enzymes | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T130
+  Summary: The patient's liver enzymes are abnormal.
+  ClusterId: CL55
+  TemporalProfile: current
+  Updates:
+  - CAP30: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T130 :: The patient's liver enzymes are abnormal.
+
+Medication Tracking
+- [MedicationChange] cla | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T24
+  Summary: The doctor asks about the safety of CLA.
+  ClusterId: CL11
+  TemporalProfile: future
+  PlannedChanges:
+  - The doctor asks about the safety of CLA. (T24)
+  Updates:
+  - CAP50: content_source=doctor modality=plan verification_status=unconfirmed clinical_status=planned temporality=future turns=T24 :: The doctor asks about the safety of CLA.
+- [MedicationChange] medication | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T91
+  Summary: The patient will receive various dosages of the medication.
+  ClusterId: CL35
+  TemporalProfile: future
+  PlannedChanges:
+  - The patient will receive various dosages of the medication. (T91)
+  Updates:
+  - CAP47: content_source=doctor modality=plan verification_status=unconfirmed clinical_status=planned temporality=future turns=T91 :: The patient will receive various dosages of the medication.
+- [MedicationChange] placebo | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T91
+  Summary: The patient will receive a placebo.
+  ClusterId: CL36
+  TemporalProfile: future
+  PlannedChanges:
+  - The patient will receive a placebo. (T91)
+  Updates:
+  - CAP60: content_source=doctor modality=plan verification_status=unconfirmed clinical_status=planned temporality=future turns=T91 :: The patient will receive a placebo.
+- [MedicationChange] unithroid | verification_status=unconfirmed | clinical_status=planned | modalities=interview | speakers=doctor | evidence=T109
+  Summary: The doctor requests a prescription for unithroid.
+  ClusterId: CL43
+  TemporalProfile: future
+  PlannedChanges:
+  - The doctor requests a prescription for unithroid. (T109)
+  Updates:
+  - CAP55: content_source=doctor modality=interview verification_status=unconfirmed clinical_status=planned temporality=future turns=T109 :: The doctor requests a prescription for unithroid.
+- [MedicationChange] 2000iu daily | verification_status=confirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T111
+  Summary: The doctor prescribed vitamin D at a dose of 2000iu daily.
+  ClusterId: CL44
+  TemporalProfile: current
+  PlannedChanges:
+  - The doctor prescribed vitamin D at a dose of 2000iu daily. (T111)
+  Updates:
+  - CAP44: content_source=doctor modality=plan verification_status=confirmed clinical_status=planned temporality=current turns=T111 :: The doctor prescribed vitamin D at a dose of 2000iu daily.
+- [MedicationChange] labs | verification_status=confirmed | clinical_status=planned | modalities=interview | speakers=doctor | evidence=T127
+  Summary: The doctor will order labs for the next visit.
+  ClusterId: CL53
+  TemporalProfile: next time
+  PlannedChanges:
+  - The doctor will order labs for the next visit. (T127)
+  Updates:
+  - CAP49: content_source=doctor modality=interview verification_status=confirmed clinical_status=planned temporality=next time turns=T127 :: The doctor will order labs for the next visit.
+
+Other Structured States
+- [Plan] weight loss study | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T21
+  Summary: The doctor recommends a weight loss study.
+  ClusterId: CL10
+  TemporalProfile: future
+- [Plan] try chromium | verification_status=unconfirmed | clinical_status=planned | modalities=interview | speakers=doctor | evidence=T32
+  Summary: The doctor suggests trying chromium.
+  ClusterId: CL16
+  TemporalProfile: future
+- [Plan] try cla | verification_status=unconfirmed | clinical_status=planned | modalities=interview | speakers=doctor | evidence=T33
+  Summary: The doctor suggests trying CLA.
+  ClusterId: CL18
+  TemporalProfile: future
+- [TestResult] vitamin d | verification_status=confirmed | clinical_status=active | modalities=test_result | speakers=doctor | evidence=T69
+  Summary: The patient's vitamin D level was in decent range.
+  ClusterId: CL22
+  TemporalProfile: current
+- [TestResult] good cholesterol | verification_status=confirmed | clinical_status=active | modalities=test_result | speakers=doctor | evidence=T69
+  Summary: The patient's good cholesterol was about 44.
+  ClusterId: CL23
+  TemporalProfile: current
+- [TestResult] non-hdl cholesterol | verification_status=confirmed | clinical_status=active | modalities=test_result | speakers=doctor | evidence=T69
+  Summary: The patient's non-HDL cholesterol was about 178.
+  ClusterId: CL24
+  TemporalProfile: current
+- [TestResult] bad cholesterol | verification_status=confirmed | clinical_status=active | modalities=test_result | speakers=doctor | evidence=T69
+  Summary: The patient's bad cholesterol was 153.
+  ClusterId: CL25
+  TemporalProfile: current
+- [TestResult] alt | verification_status=confirmed | clinical_status=improving | modalities=test_result | speakers=patient | evidence=T75
+  Summary: The patient's ALT dropped in January.
+  ClusterId: CL26
+  TemporalProfile: January, March
+- [Plan] vitamin d level | verification_status=unconfirmed | clinical_status=historical | modalities=plan | speakers=doctor | evidence=T79
+  Summary: The doctor will not be checking the vitamin D level for some time.
+  ClusterId: CL27
+  TemporalProfile: future
+- [Plan] lab test | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T79
+  Summary: The doctor will put the labs into the computer today.
+  ClusterId: CL28
+  TemporalProfile: today
+- [Plan] apply at night | verification_status=confirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T111
+  Summary: The patient should apply the benzoyl peroxide at night.
+  ClusterId: CL45
+  TemporalProfile: current
+- [Plan] avoid sun exposure | verification_status=confirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T111
+  Summary: The patient should avoid sun exposure.
+  ClusterId: CL46
+  TemporalProfile: current
+- [Plan] apply spermicide | verification_status=confirmed | clinical_status=planned | modalities=interview | speakers=doctor | evidence=T123
+  Summary: The patient should apply the spermicide before intercourse.
+  ClusterId: CL52
+  TemporalProfile: before intercourse
+- [TestResult] levels of everything | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T130
+  Summary: Levels of everything will be repeated.
+  ClusterId: CL56
+  TemporalProfile: future

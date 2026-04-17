@@ -1,0 +1,80 @@
+Case: D2N074
+
+Problem List and Visit State Tracking
+
+Problem List
+- headache location | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T5,T7,T9
+  Summary: The patient's headaches are located behind their eyes.
+  ClusterId: CL1
+  TemporalProfile: current
+  Updates:
+  - CAP12: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T5 :: The patient is experiencing headaches.
+  - CAP14: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T5 :: The patient reports headaches.
+  - CAP7: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T7 :: The patient's headaches are located behind their eyes.
+  - CAP17: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T9 :: The patient's headaches now have a severity of 6 out of 10.
+  - CAP18: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T9 :: The patient's headaches were initially 3 out of 10 in severity.
+  - CAP19: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T9 :: The patient's headaches have been getting worse over time.
+- dull ache | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T7,T9
+  Summary: The patient describes the headache as a dull ache.
+  ClusterId: CL2
+  TemporalProfile: current
+  Updates:
+  - CAP5: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T7 :: The patient describes the headache as a dull ache.
+  - CAP6: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T9 :: The patient describes a dull ache behind the eyes.
+  - CAP11: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T9 :: The patient describes a dull ache.
+- headache severity | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T9
+  Summary: The patient's headache severity is increasing.
+  ClusterId: CL3
+  TemporalProfile: current
+  Updates:
+  - CAP1: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T9 :: The patient reports headaches with a severity of 6 out of 10.
+  - CAP10: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T9 :: The patient's headache severity is increasing.
+- morning | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T9
+  Summary: The patient's headaches tend to be worse in the morning.
+  ClusterId: CL4
+  TemporalProfile: current
+  Updates:
+  - CAP2: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T9 :: The patient's headaches tend to be worse in the morning.
+- headache duration | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T9
+  Summary: The patient's headaches last for a few hours.
+  ClusterId: CL5
+  TemporalProfile: current
+  Updates:
+  - CAP3: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T9 :: The patient's headaches last a few hours at a time.
+  - CAP8: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T9 :: The patient's headaches last for a few hours.
+- relief | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T9
+  Summary: The patient states nothing makes the headaches better or worse.
+  ClusterId: CL6
+  TemporalProfile: current
+  Updates:
+  - CAP4: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T9 :: The patient states nothing makes the headaches better or worse.
+- headache worsening | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T9
+  Summary: The patient's headaches are worsening.
+  ClusterId: CL7
+  TemporalProfile: current
+  Updates:
+  - CAP13: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T9 :: The patient's headaches are worsening.
+- bumping into door frames | verification_status=unconfirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T11
+  Summary: The patient reports bumping into door frames.
+  ClusterId: CL8
+  TemporalProfile: recent
+  Updates:
+  - CAP9: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=recent turns=T11 :: The patient reports bumping into door frames.
+- numbness | verification_status=unconfirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T11
+  Summary: The patient reports numbness.
+  ClusterId: CL9
+  TemporalProfile: recent
+  Updates:
+  - CAP15: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=recent turns=T11 :: The patient reports numbness.
+- tingling | verification_status=unconfirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T11
+  Summary: The patient reports tingling.
+  ClusterId: CL10
+  TemporalProfile: recent
+  Updates:
+  - CAP16: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=recent turns=T11 :: The patient reports tingling.
+
+Medication Tracking
+- None
+
+Other Structured States
+- None

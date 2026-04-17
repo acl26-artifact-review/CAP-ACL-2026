@@ -1,0 +1,147 @@
+Case: D2N089
+
+Problem List and Visit State Tracking
+
+Problem List
+- rheumatoid arthritis | verification_status=confirmed | clinical_status=active | modalities=assessment,interview | speakers=doctor,patient | evidence=T3,T5
+  Summary: The patient has rheumatoid arthritis.
+  ClusterId: CL1
+  TemporalProfile: current, past
+  Updates:
+  - CAP12: content_source=doctor modality=assessment verification_status=confirmed clinical_status=active temporality=current turns=T3 :: The patient has rheumatoid arthritis.
+  - CAP1: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=past turns=T5 :: The patient has a past medical history significant for rheumatoid arthritis.
+- atrial fibrillation | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T5
+  Summary: The patient has a past medical history significant for atrial fibrillation.
+  ClusterId: CL2
+  TemporalProfile: past
+  Updates:
+  - CAP2: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=past turns=T5 :: The patient has a past medical history significant for atrial fibrillation.
+- reflux | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T5
+  Summary: The patient has a past medical history significant for reflux.
+  ClusterId: CL3
+  TemporalProfile: past
+  Updates:
+  - CAP3: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=past turns=T5 :: The patient has a past medical history significant for reflux.
+- joint pain | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T5
+  Summary: The patient has not had any joint pain recently.
+  ClusterId: CL4
+  TemporalProfile: current
+  Updates:
+  - CAP5: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T5 :: The patient has not had any joint pain recently.
+- flare ups | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T5
+  Summary: The patient has not had any flare ups recently.
+  ClusterId: CL5
+  TemporalProfile: current
+  Updates:
+  - CAP6: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T5 :: The patient has not had any flare ups recently.
+- stiffness | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T5
+  Summary: The patient has not had any stiffness recently.
+  ClusterId: CL6
+  TemporalProfile: current
+  Updates:
+  - CAP7: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T5 :: The patient has not had any stiffness recently.
+- palpitation | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T13
+  Summary: The patient reports experiencing palpitations.
+  ClusterId: CL8
+  TemporalProfile: current
+  Updates:
+  - CAP10: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T13 :: The patient reports experiencing palpitations.
+- stress | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T13
+  Summary: The patient reports stress.
+  ClusterId: CL9
+  TemporalProfile: current
+  Updates:
+  - CAP13: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T13 :: The patient reports stress.
+- pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T19,T33
+  Summary: The patient reports pain to palpation of the right elbow.
+  ClusterId: CL10
+  TemporalProfile: current
+  Updates:
+  - CAP4: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T19 :: The patient reports pain to palpation of the right elbow.
+  - CAP14: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T33 :: The patient reports pain.
+- edema | verification_status=confirmed | clinical_status=active | modalities=assessment | speakers=doctor | evidence=T19
+  Summary: The doctor observes edema in the right elbow.
+  ClusterId: CL11
+  TemporalProfile: current
+  Updates:
+  - CAP8: content_source=doctor modality=assessment verification_status=confirmed clinical_status=active temporality=current turns=T19 :: The doctor observes edema in the right elbow.
+- erythema | verification_status=confirmed | clinical_status=active | modalities=assessment | speakers=doctor | evidence=T19
+  Summary: The doctor observes erythema in the right elbow.
+  ClusterId: CL12
+  TemporalProfile: current
+  Updates:
+  - CAP9: content_source=doctor modality=assessment verification_status=confirmed clinical_status=active temporality=current turns=T19 :: The doctor observes erythema in the right elbow.
+- nasal congestion | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T19
+  Summary: The patient reports nasal congestion.
+  ClusterId: CL13
+  TemporalProfile: current
+  Updates:
+  - CAP11: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T19 :: The patient reports nasal congestion.
+
+Medication Tracking
+- [MedicationState] methotrexate | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=doctor | evidence=T5
+  Summary: The patient is taking methotrexate once a week.
+  ClusterId: CL7
+  TemporalProfile: current, weekly
+  CurrentRegimens:
+  - The patient is taking methotrexate once a week. (T5)
+  - The patient is on methotrexate. (T5)
+  Updates:
+  - CAP20: content_source=doctor modality=interview verification_status=confirmed clinical_status=active temporality=weekly turns=T5 :: The patient is taking methotrexate once a week.
+  - CAP23: content_source=doctor modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T5 :: The patient is on methotrexate.
+- [MedicationState] protonix | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=doctor | evidence=T19,T42
+  Summary: The patient should continue taking protonix 40 mg daily.
+  ClusterId: CL15
+  TemporalProfile: current, daily
+  CurrentRegimens:
+  - The patient is taking protonix. (T19)
+  - The patient should continue taking protonix 40 mg daily. (T42)
+  Updates:
+  - CAP24: content_source=doctor modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T19 :: The patient is taking protonix.
+  - CAP19: content_source=doctor modality=interview verification_status=confirmed clinical_status=active temporality=daily turns=T42 :: The patient should continue taking protonix 40 mg daily.
+- [MedicationState] dietary modifications | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T19
+  Summary: The patient has made dietary modifications.
+  ClusterId: CL16
+  TemporalProfile: past
+  CurrentRegimens:
+  - The patient has made dietary modifications. (T19)
+  Updates:
+  - CAP21: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=past turns=T19 :: The patient has made dietary modifications.
+- [MedicationChange] methotrexate | verification_status=confirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T37
+  Summary: The patient will continue on methotrexate.
+  ClusterId: CL19
+  TemporalProfile: current
+  PlannedChanges:
+  - The patient will continue on methotrexate. (T37)
+  Updates:
+  - CAP22: content_source=doctor modality=plan verification_status=confirmed clinical_status=planned temporality=current turns=T37 :: The patient will continue on methotrexate.
+- [MedicationChange] protonix | verification_status=confirmed | clinical_status=active | modalities=plan | speakers=doctor | evidence=T37
+  Summary: The patient will continue protonix.
+  ClusterId: CL20
+  TemporalProfile: current
+  PlannedChanges:
+  - The patient will continue protonix. (T37)
+  Updates:
+  - CAP25: content_source=doctor modality=plan verification_status=confirmed clinical_status=active temporality=current turns=T37 :: The patient will continue protonix.
+
+Other Structured States
+- [TestResult] atrial fibrillation | verification_status=confirmed | clinical_status=active | modalities=test_result | speakers=dragon | evidence=T19
+  Summary: The event monitor shows the patient is in and out of atrial fibrillation.
+  ClusterId: CL14
+  TemporalProfile: current
+- [Plan] cardiac ablation | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T34
+  Summary: A cardiac ablation is planned.
+  ClusterId: CL17
+  TemporalProfile: current
+- [Plan] referral to cardiology | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T36
+  Summary: A referral to cardiology is ordered.
+  ClusterId: CL18
+  TemporalProfile: current
+- [Plan] cardiology referral | verification_status=confirmed | clinical_status=planned | modalities=interview | speakers=doctor | evidence=T42
+  Summary: The doctor ordered a cardiology referral.
+  ClusterId: CL21
+  TemporalProfile: soon
+- [Plan] dietary modifications | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=doctor | evidence=T42
+  Summary: The patient should continue with dietary modifications, avoiding coffee and spicy foods.
+  ClusterId: CL22
+  TemporalProfile: ongoing

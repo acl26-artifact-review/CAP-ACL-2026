@@ -1,0 +1,131 @@
+Case: D2N113
+
+Problem List and Visit State Tracking
+
+Problem List
+- hepatitis c | verification_status=unconfirmed | clinical_status=historical | modalities=assessment,interview | speakers=doctor,patient | evidence=T1,T30
+  Summary: The doctor assesses hepatitis C.
+  ClusterId: CL1
+  TemporalProfile: past
+  Updates:
+  - CAP1: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=past turns=T1 :: The patient was surprised to learn they have hepatitis c.
+  - CAP7: content_source=doctor modality=assessment verification_status=unconfirmed clinical_status=historical temporality=past turns=T30 :: The doctor assesses hepatitis C.
+- anxiety | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T1
+  Summary: The patient reports feeling anxious.
+  ClusterId: CL2
+  TemporalProfile: current
+  Updates:
+  - CAP4: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T1 :: The patient reports feeling anxious.
+- iv drug use | verification_status=unconfirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T5
+  Summary: The patient used to party and use iv drugs.
+  ClusterId: CL3
+  TemporalProfile: years ago
+  Updates:
+  - CAP21: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=years ago turns=T5 :: The patient used to party and use iv drugs.
+- alcohol use | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T7
+  Summary: The patient drinks about a beer a day.
+  ClusterId: CL5
+  TemporalProfile: current
+  Updates:
+  - CAP23: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T7 :: The patient drinks about a beer a day.
+- decreased smoking | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T11
+  Summary: The patient has decreased their smoking.
+  ClusterId: CL6
+  TemporalProfile: current, recent
+  Updates:
+  - CAP3: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=recent turns=T11 :: The patient has decreased their smoking.
+  - CAP22: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T11 :: The patient smokes one to two cigarettes a day.
+- fatigue | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T19
+  Summary: The patient reports feeling tired.
+  ClusterId: CL8
+  TemporalProfile: current
+  Updates:
+  - CAP5: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T19 :: The patient reports feeling tired.
+- insomnia | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T19
+  Summary: The patient reports difficulty sleeping.
+  ClusterId: CL9
+  TemporalProfile: current
+  Updates:
+  - CAP6: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T19 :: The patient reports difficulty sleeping.
+- positive hcv antibody test | verification_status=confirmed | clinical_status=historical | modalities=assessment | speakers=doctor | evidence=T27
+  Summary: The patient's HCV antibody test is positive.
+  ClusterId: CL10
+  TemporalProfile: past
+  Updates:
+  - CAP2: content_source=doctor modality=assessment verification_status=confirmed clinical_status=historical temporality=past turns=T27 :: The patient's HCV antibody test is positive.
+- depression | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T27
+  Summary: The patient reports depression.
+  ClusterId: CL11
+  TemporalProfile: current
+  Updates:
+  - CAP8: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T27 :: The patient reports depression.
+  - CAP12: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T27 :: The patient reports depression.
+- hypertension | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T27
+  Summary: The patient reports hypertension.
+  ClusterId: CL12
+  TemporalProfile: current
+  Updates:
+  - CAP9: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T27 :: The patient reports hypertension.
+  - CAP11: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T27 :: The patient reports hypertension.
+- diabetes | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T27
+  Summary: The patient reports diabetes.
+  ClusterId: CL13
+  TemporalProfile: current
+  Updates:
+  - CAP10: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T27 :: The patient reports diabetes.
+
+Medication Tracking
+- [MedicationState] beer | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T7
+  Summary: The patient drinks beer.
+  ClusterId: CL4
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient drinks beer. (T7)
+  Updates:
+  - CAP20: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T7 :: The patient drinks beer.
+- [MedicationState] current medication | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T14
+  Summary: The patient is feeling good.
+  ClusterId: CL7
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient is feeling good. (T14)
+  Updates:
+  - CAP19: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T14 :: The patient is feeling good.
+- [MedicationChange] hepc rna | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T30
+  Summary: The doctor orders Hepc RNA testing.
+  ClusterId: CL17
+  TemporalProfile: future
+  PlannedChanges:
+  - The doctor orders Hepc RNA testing. (T30)
+  Updates:
+  - CAP16: content_source=doctor modality=plan verification_status=unconfirmed clinical_status=planned temporality=future turns=T30 :: The doctor orders Hepc RNA testing.
+- [MedicationChange] hcv genotype | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T30
+  Summary: The doctor orders HCV genotype testing.
+  ClusterId: CL18
+  TemporalProfile: future
+  PlannedChanges:
+  - The doctor orders HCV genotype testing. (T30)
+  Updates:
+  - CAP17: content_source=doctor modality=plan verification_status=unconfirmed clinical_status=planned temporality=future turns=T30 :: The doctor orders HCV genotype testing.
+- [MedicationChange] fibrosis ultrasound | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T30
+  Summary: The doctor orders a fibrosis ultrasound.
+  ClusterId: CL19
+  TemporalProfile: future
+  PlannedChanges:
+  - The doctor orders a fibrosis ultrasound. (T30)
+  Updates:
+  - CAP18: content_source=doctor modality=plan verification_status=unconfirmed clinical_status=planned temporality=future turns=T30 :: The doctor orders a fibrosis ultrasound.
+
+Other Structured States
+- [ExamFinding] murmur | verification_status=confirmed | clinical_status=stable | modalities=exam | speakers=doctor | evidence=T28
+  Summary: The patient has a two out of six systolic murmur.
+  ClusterId: CL14
+  TemporalProfile: current
+- [Plan] mri | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=clinician | evidence=T28
+  Summary: A cervical MRI is planned.
+  ClusterId: CL15
+  TemporalProfile: future
+- [TestResult] elevated ast | verification_status=confirmed | clinical_status=active | modalities=test_result | speakers=test_result | evidence=T30
+  Summary: The patient's AST is elevated at 39.
+  ClusterId: CL16
+  TemporalProfile: current

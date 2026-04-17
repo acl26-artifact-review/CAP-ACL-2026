@@ -1,0 +1,1707 @@
+{
+  "case_id": "D2N170",
+  "method": "cluster2sent",
+  "template": "soap",
+  "summary_text": "S:\nThe patient reports fatigue for the past couple of months. The patient denies blood in her stools. The patient reports no swelling in her legs. The patient reports a good support system.\n\nO:\nThe patient's hemoglobin level is 8.2, which is lower than expected. The clinician hears a slight two out of six systolic heart murmur.\n\nA:\nThe clinician suspects cervical radiculopathy. The clinician notes tenderness to palpation in the right lower quadrant.\n\nP:\nThe clinician plans a cervical MRI. The clinician plans an endoscopy and a colonoscopy. The clinician will order a referral to gastroenterology. The clinician will continue the patient on toprol, lisinopril, and lasix.",
+  "reference_summary": "CHIEF COMPLAINT\n\nFollow-up to an abnormal labs.\n\nHISTORY OF PRESENT ILLNESS\n\nJoyce Price is a 50-year-old female with a past medical history significant for COPD, congestive heart failure who presents for follow-up to an abnormal lab finding.\n\nThe patient reports that she has been feeling really tired lately. She reports that over the past couple of months, her energy has really gone down. She used to be really active, trying to be as healthy as she can be with running and climbing, at least an hour or two a day. Over the past month, her activity has slowly decreased. She reports that, due to her fatigue, she has not been able to keep up with her exercise. She reports that she had noticed a little weight loss, but she believes that was due to her doing really well with her exercises.\n\nThe patient reports that her COPD is doing well. She reports that she has not been smoking since she quit. She reports that during the changes of the season, it gets a little harder for her to breathe, but she believes that is because of her allergies.\n\nFrom a congestive heart failure standpoint, she reports that she has been doing really well with her diet. She reports that she has been staying away from French fries and all the other salty foods that she likes to eat. She denies any swelling in her legs.\n\nShe reports that she has a good support system with her boyfriend and her brother.\n\nShe reports that she has not noticed any blood in her stool at this time. She denies that her stools are dark or black in color. She denies that she has had any abnormal bleeding between menses. The patient denies any other symptoms such as chest pain, shortness of breath, fever, chills, or malaise.\n\nREVIEW OF SYSTEMS\n\n• Constitutional: Denies fevers, chills. Endorses weight loss. Endorses fatigue.\n• Cardiovascular: Denies chest pain or dyspnea.\n• Respiratory:   Endorses shortness of breath with seasonal changes.\n• Gastrointestinal: Denies hematochezia, melena.\n• Genitourinary: Denies abnormal bleeding between menses.\n• Neurological: Positive for dizziness.\n\nPHYSICAL EXAMINATION\n\n• Neck: Supple without cervical lymphadenopathy.\n• Respiratory: Lungs are clear to auscultation bilaterally. No wheezes, rales, or rhonchi.\n• Cardiovascular: Regular rate. Slight 2/6 systolic ejection murmur. No gallops or rubs. No extra heart sounds.\n• Gastrointestinal: Tenderness to palpation to the right lower quadrant.\n\nRESULTS\n\nHemoglobin A1c is 8.2.\nLabs are within normal limits.\nAnemia labs: Still pending.\n\nASSESSMENT AND PLAN\n\nJoyce Price is a 50-year-old female with a past medical history significant for COPD, congestive heart failure, who presents for follow up of abnormal labs.\n\n1. Abnormal labs.\n• Medical Reasoning: Her recent hemoglobin level was low at 8.2. Her available anemia labs were normal, but we need to wait for her pending labs for a definitive anemia diagnosis.\n• Additional Testing: I would like to obtain an endoscopy and colonoscopy to evaluate for gastrointestinal bleeding.\n• Specialist Referrals: We will put in a referral to gastroenterology to perform her endoscopy and colonoscopy.\n\n2. COPD.\n• Medical Reasoning: The patient is doing well. She ceased tobacco use several years ago and continues to abstain from this.\n• Medical Treatment: I do not think she needs any inhalers at this time. She should continue to stay away from smoking.\n\n3. Congestive heart failure.\n• Medical Reasoning: She is doing well and continues to follow dietary modifications, particularly with limiting her sodium intake.\n• Medical Treatment: Continue on Toprol and lisinopril, as well as her current dose of Lasix 20 mg a day.\n\nPatient Agreements: The patient understands and agrees with the recommended medical treatment plan.",
+  "source_cap": {
+    "atomic_propositions": [
+      {
+        "prop_id": "CAP1",
+        "cap_type": "Problem",
+        "canonical_concept": "heart murmur",
+        "category": "Problem",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "past",
+        "proposition_text": "The doctor heard a slight two out of six systolic heart murmur."
+      },
+      {
+        "prop_id": "CAP2",
+        "cap_type": "Problem",
+        "canonical_concept": "abdominal tenderness",
+        "category": "Problem",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The doctor noted tenderness to palpation in the right lower quadrant."
+      },
+      {
+        "prop_id": "CAP3",
+        "cap_type": "Problem",
+        "canonical_concept": "anemia",
+        "category": "Problem",
+        "speaker": "doctor",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The doctor needs to investigate why the patient's hemoglobin is low."
+      },
+      {
+        "prop_id": "CAP4",
+        "cap_type": "Symptom",
+        "canonical_concept": "left hand pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports pain in the left hand."
+      },
+      {
+        "prop_id": "CAP5",
+        "cap_type": "Problem",
+        "canonical_concept": "swelling in legs",
+        "category": "Problem",
+        "speaker": "doctor",
+        "predicate": "denies",
+        "status": "uncertain",
+        "visit_state": "historical",
+        "temporality": "past",
+        "proposition_text": "The patient denies swelling in their legs."
+      },
+      {
+        "prop_id": "CAP6",
+        "cap_type": "Problem",
+        "canonical_concept": "support system",
+        "category": "Problem",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient reports having a support system."
+      },
+      {
+        "prop_id": "CAP7",
+        "cap_type": "Problem",
+        "canonical_concept": "boyfriend",
+        "category": "Problem",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient reports having a boyfriend."
+      },
+      {
+        "prop_id": "CAP8",
+        "cap_type": "Problem",
+        "canonical_concept": "brother",
+        "category": "Problem",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient reports having a brother."
+      },
+      {
+        "prop_id": "CAP9",
+        "cap_type": "Problem",
+        "canonical_concept": "congestive heart failure",
+        "category": "Problem",
+        "speaker": "doctor",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient has congestive heart failure."
+      },
+      {
+        "prop_id": "CAP10",
+        "cap_type": "Symptom",
+        "canonical_concept": "chest pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports chest pain."
+      },
+      {
+        "prop_id": "CAP11",
+        "cap_type": "Symptom",
+        "canonical_concept": "no swelling",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports no swelling."
+      },
+      {
+        "prop_id": "CAP12",
+        "cap_type": "Symptom",
+        "canonical_concept": "fatigue",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports fatigue."
+      },
+      {
+        "prop_id": "CAP13",
+        "cap_type": "Symptom",
+        "canonical_concept": "dizziness",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports dizziness."
+      },
+      {
+        "prop_id": "CAP14",
+        "cap_type": "Problem",
+        "canonical_concept": "anemia",
+        "category": "Problem",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient is anemic."
+      },
+      {
+        "prop_id": "CAP15",
+        "cap_type": "Problem",
+        "canonical_concept": "copd",
+        "category": "Problem",
+        "speaker": "doctor",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient has COPD."
+      },
+      {
+        "prop_id": "CAP16",
+        "cap_type": "ExamFinding",
+        "canonical_concept": "vital signs",
+        "category": "ExamFinding",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The doctor assessed the patient's vital signs."
+      },
+      {
+        "prop_id": "CAP17",
+        "cap_type": "ExamFinding",
+        "canonical_concept": "hemoglobin",
+        "category": "ExamFinding",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "past",
+        "proposition_text": "The doctor found an abnormal hemoglobin level."
+      },
+      {
+        "prop_id": "CAP18",
+        "cap_type": "ExamFinding",
+        "canonical_concept": "heart",
+        "category": "ExamFinding",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The doctor listened to the patient's heart."
+      },
+      {
+        "prop_id": "CAP19",
+        "cap_type": "ExamFinding",
+        "canonical_concept": "lungs",
+        "category": "ExamFinding",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The doctor listened to the patient's lungs."
+      },
+      {
+        "prop_id": "CAP20",
+        "cap_type": "ExamFinding",
+        "canonical_concept": "belly",
+        "category": "ExamFinding",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The doctor palpated the patient's belly."
+      },
+      {
+        "prop_id": "CAP21",
+        "cap_type": "TestResult",
+        "canonical_concept": "hemoglobin",
+        "category": "TestResult",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "quantitative"
+        ],
+        "proposition_text": "The patient's hemoglobin level is 8.2."
+      },
+      {
+        "prop_id": "CAP22",
+        "cap_type": "Order",
+        "canonical_concept": "referral to gastroenterology",
+        "category": "Order",
+        "speaker": "doctor",
+        "status": "uncertain",
+        "visit_state": "planned",
+        "temporality": "future",
+        "proposition_text": "A referral to gastroenterology is ordered."
+      },
+      {
+        "prop_id": "CAP23",
+        "cap_type": "MedicationRequest",
+        "canonical_concept": "endoscopy",
+        "category": "MedicationRequest",
+        "speaker": "doctor",
+        "status": "uncertain",
+        "visit_state": "planned",
+        "temporality": "future",
+        "proposition_text": "A cervical endoscopy is planned."
+      },
+      {
+        "prop_id": "CAP24",
+        "cap_type": "MedicationRequest",
+        "canonical_concept": "colonoscopy",
+        "category": "MedicationRequest",
+        "speaker": "doctor",
+        "status": "uncertain",
+        "visit_state": "planned",
+        "temporality": "future",
+        "proposition_text": "A colonoscopy is planned."
+      },
+      {
+        "prop_id": "CAP25",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "french fries",
+        "category": "MedicationStatement",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "past",
+        "proposition_text": "The doctor mentioned french fries as one of his favorite foods."
+      },
+      {
+        "prop_id": "CAP26",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "fried chicken",
+        "category": "MedicationStatement",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "past",
+        "proposition_text": "The doctor mentioned fried chicken as one of his favorite foods."
+      },
+      {
+        "prop_id": "CAP27",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "salt intake",
+        "category": "MedicationStatement",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient is watching their salt intake."
+      },
+      {
+        "prop_id": "CAP28",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "lisinopril",
+        "category": "MedicationStatement",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient is taking lisinopril."
+      },
+      {
+        "prop_id": "CAP29",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "french fries",
+        "category": "MedicationStatement",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient avoids french fries."
+      },
+      {
+        "prop_id": "CAP30",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "toprol",
+        "category": "MedicationStatement",
+        "speaker": "doctor",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient is taking toprol."
+      },
+      {
+        "prop_id": "CAP31",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "lisinopril",
+        "category": "MedicationStatement",
+        "speaker": "doctor",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient is taking lisinopril."
+      },
+      {
+        "prop_id": "CAP32",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "lasix",
+        "category": "MedicationStatement",
+        "speaker": "doctor",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient is taking lasix."
+      },
+      {
+        "prop_id": "CAP33",
+        "cap_type": "ProblemHistory",
+        "canonical_concept": "weight loss",
+        "category": "ProblemHistory",
+        "speaker": "doctor",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "recent",
+        "proposition_text": "The patient reports a recent change in weight."
+      }
+    ],
+    "filtered_nonverifiable_units": []
+  },
+  "event_plan": null,
+  "summary_cap": {
+    "atomic_propositions": [],
+    "filtered_nonverifiable_units": [],
+    "runtime_seconds": 0.54
+  },
+  "cap_alignment": {
+    "cap_precision": 0.0,
+    "cap_recall": 0.0,
+    "cap_f1": 0.0,
+    "matched_count": 0,
+    "summary_prop_count": 0,
+    "source_prop_count": 33,
+    "matched_pairs": [],
+    "unsupported_summary_props": [],
+    "missing_source_props": [
+      {
+        "prop_id": "CAP1",
+        "cap_type": "Problem",
+        "canonical_concept": "heart murmur",
+        "category": "Problem",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "past",
+        "proposition_text": "The doctor heard a slight two out of six systolic heart murmur."
+      },
+      {
+        "prop_id": "CAP2",
+        "cap_type": "Problem",
+        "canonical_concept": "abdominal tenderness",
+        "category": "Problem",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The doctor noted tenderness to palpation in the right lower quadrant."
+      },
+      {
+        "prop_id": "CAP3",
+        "cap_type": "Problem",
+        "canonical_concept": "anemia",
+        "category": "Problem",
+        "speaker": "doctor",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The doctor needs to investigate why the patient's hemoglobin is low."
+      },
+      {
+        "prop_id": "CAP4",
+        "cap_type": "Symptom",
+        "canonical_concept": "left hand pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports pain in the left hand."
+      },
+      {
+        "prop_id": "CAP5",
+        "cap_type": "Problem",
+        "canonical_concept": "swelling in legs",
+        "category": "Problem",
+        "speaker": "doctor",
+        "predicate": "denies",
+        "status": "uncertain",
+        "visit_state": "historical",
+        "temporality": "past",
+        "proposition_text": "The patient denies swelling in their legs."
+      },
+      {
+        "prop_id": "CAP6",
+        "cap_type": "Problem",
+        "canonical_concept": "support system",
+        "category": "Problem",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient reports having a support system."
+      },
+      {
+        "prop_id": "CAP7",
+        "cap_type": "Problem",
+        "canonical_concept": "boyfriend",
+        "category": "Problem",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient reports having a boyfriend."
+      },
+      {
+        "prop_id": "CAP8",
+        "cap_type": "Problem",
+        "canonical_concept": "brother",
+        "category": "Problem",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient reports having a brother."
+      },
+      {
+        "prop_id": "CAP9",
+        "cap_type": "Problem",
+        "canonical_concept": "congestive heart failure",
+        "category": "Problem",
+        "speaker": "doctor",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient has congestive heart failure."
+      },
+      {
+        "prop_id": "CAP10",
+        "cap_type": "Symptom",
+        "canonical_concept": "chest pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports chest pain."
+      },
+      {
+        "prop_id": "CAP11",
+        "cap_type": "Symptom",
+        "canonical_concept": "no swelling",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports no swelling."
+      },
+      {
+        "prop_id": "CAP12",
+        "cap_type": "Symptom",
+        "canonical_concept": "fatigue",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports fatigue."
+      },
+      {
+        "prop_id": "CAP13",
+        "cap_type": "Symptom",
+        "canonical_concept": "dizziness",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports dizziness."
+      },
+      {
+        "prop_id": "CAP14",
+        "cap_type": "Problem",
+        "canonical_concept": "anemia",
+        "category": "Problem",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient is anemic."
+      },
+      {
+        "prop_id": "CAP15",
+        "cap_type": "Problem",
+        "canonical_concept": "copd",
+        "category": "Problem",
+        "speaker": "doctor",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient has COPD."
+      },
+      {
+        "prop_id": "CAP16",
+        "cap_type": "ExamFinding",
+        "canonical_concept": "vital signs",
+        "category": "ExamFinding",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The doctor assessed the patient's vital signs."
+      },
+      {
+        "prop_id": "CAP17",
+        "cap_type": "ExamFinding",
+        "canonical_concept": "hemoglobin",
+        "category": "ExamFinding",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "past",
+        "proposition_text": "The doctor found an abnormal hemoglobin level."
+      },
+      {
+        "prop_id": "CAP18",
+        "cap_type": "ExamFinding",
+        "canonical_concept": "heart",
+        "category": "ExamFinding",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The doctor listened to the patient's heart."
+      },
+      {
+        "prop_id": "CAP19",
+        "cap_type": "ExamFinding",
+        "canonical_concept": "lungs",
+        "category": "ExamFinding",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The doctor listened to the patient's lungs."
+      },
+      {
+        "prop_id": "CAP20",
+        "cap_type": "ExamFinding",
+        "canonical_concept": "belly",
+        "category": "ExamFinding",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The doctor palpated the patient's belly."
+      },
+      {
+        "prop_id": "CAP21",
+        "cap_type": "TestResult",
+        "canonical_concept": "hemoglobin",
+        "category": "TestResult",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "quantitative"
+        ],
+        "proposition_text": "The patient's hemoglobin level is 8.2."
+      },
+      {
+        "prop_id": "CAP22",
+        "cap_type": "Order",
+        "canonical_concept": "referral to gastroenterology",
+        "category": "Order",
+        "speaker": "doctor",
+        "status": "uncertain",
+        "visit_state": "planned",
+        "temporality": "future",
+        "proposition_text": "A referral to gastroenterology is ordered."
+      },
+      {
+        "prop_id": "CAP23",
+        "cap_type": "MedicationRequest",
+        "canonical_concept": "endoscopy",
+        "category": "MedicationRequest",
+        "speaker": "doctor",
+        "status": "uncertain",
+        "visit_state": "planned",
+        "temporality": "future",
+        "proposition_text": "A cervical endoscopy is planned."
+      },
+      {
+        "prop_id": "CAP24",
+        "cap_type": "MedicationRequest",
+        "canonical_concept": "colonoscopy",
+        "category": "MedicationRequest",
+        "speaker": "doctor",
+        "status": "uncertain",
+        "visit_state": "planned",
+        "temporality": "future",
+        "proposition_text": "A colonoscopy is planned."
+      },
+      {
+        "prop_id": "CAP25",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "french fries",
+        "category": "MedicationStatement",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "past",
+        "proposition_text": "The doctor mentioned french fries as one of his favorite foods."
+      },
+      {
+        "prop_id": "CAP26",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "fried chicken",
+        "category": "MedicationStatement",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "past",
+        "proposition_text": "The doctor mentioned fried chicken as one of his favorite foods."
+      },
+      {
+        "prop_id": "CAP27",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "salt intake",
+        "category": "MedicationStatement",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient is watching their salt intake."
+      },
+      {
+        "prop_id": "CAP28",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "lisinopril",
+        "category": "MedicationStatement",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient is taking lisinopril."
+      },
+      {
+        "prop_id": "CAP29",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "french fries",
+        "category": "MedicationStatement",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient avoids french fries."
+      },
+      {
+        "prop_id": "CAP30",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "toprol",
+        "category": "MedicationStatement",
+        "speaker": "doctor",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient is taking toprol."
+      },
+      {
+        "prop_id": "CAP31",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "lisinopril",
+        "category": "MedicationStatement",
+        "speaker": "doctor",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient is taking lisinopril."
+      },
+      {
+        "prop_id": "CAP32",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "lasix",
+        "category": "MedicationStatement",
+        "speaker": "doctor",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient is taking lasix."
+      },
+      {
+        "prop_id": "CAP33",
+        "cap_type": "ProblemHistory",
+        "canonical_concept": "weight loss",
+        "category": "ProblemHistory",
+        "speaker": "doctor",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "recent",
+        "proposition_text": "The patient reports a recent change in weight."
+      }
+    ]
+  },
+  "reference_gpt_f1_items": {
+    "active_problems_symptoms": [],
+    "negated_findings": [],
+    "uncertain_findings": [],
+    "medication_treatment": [],
+    "plan_followup": [],
+    "_chunk_count": [
+      "4"
+    ],
+    "_parse_failures": [
+      "{\"chunk_index\": 1, \"stage\": \"call_llm\", \"error\": \"LLM call failed after retries: Error code: 404\"}",
+      "{\"chunk_index\": 2, \"stage\": \"call_llm\", \"error\": \"LLM call failed after retries: Error code: 404\"}",
+      "{\"chunk_index\": 3, \"stage\": \"call_llm\", \"error\": \"LLM call failed after retries: Error code: 404\"}",
+      "{\"chunk_index\": 4, \"stage\": \"call_llm\", \"error\": \"LLM call failed after retries: Error code: 404\"}"
+    ]
+  },
+  "summary_gpt_f1_items": {
+    "active_problems_symptoms": [],
+    "negated_findings": [],
+    "uncertain_findings": [],
+    "medication_treatment": [],
+    "plan_followup": [],
+    "_chunk_count": [
+      "1"
+    ],
+    "_parse_failures": [
+      "{\"chunk_index\": 1, \"stage\": \"call_llm\", \"error\": \"LLM call failed after retries: Error code: 404\"}"
+    ]
+  },
+  "gpt_f1_alignment": {
+    "by_category": {
+      "active_problems_symptoms": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "matched_count": 0,
+        "pred_count": 0,
+        "ref_count": 0,
+        "matches": [],
+        "unsupported_pred_items": [],
+        "missing_ref_items": []
+      },
+      "negated_findings": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "matched_count": 0,
+        "pred_count": 0,
+        "ref_count": 0,
+        "matches": [],
+        "unsupported_pred_items": [],
+        "missing_ref_items": []
+      },
+      "uncertain_findings": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "matched_count": 0,
+        "pred_count": 0,
+        "ref_count": 0,
+        "matches": [],
+        "unsupported_pred_items": [],
+        "missing_ref_items": []
+      },
+      "medication_treatment": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "matched_count": 0,
+        "pred_count": 0,
+        "ref_count": 0,
+        "matches": [],
+        "unsupported_pred_items": [],
+        "missing_ref_items": []
+      },
+      "plan_followup": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "matched_count": 0,
+        "pred_count": 0,
+        "ref_count": 0,
+        "matches": [],
+        "unsupported_pred_items": [],
+        "missing_ref_items": []
+      }
+    }
+  },
+  "reference_nair_concepts": {
+    "sections": [
+      {
+        "heading": "Clinical Note",
+        "section_value": "CHIEF COMPLAINT\nFollow-up to an abnormal labs.\nHISTORY OF PRESENT ILLNESS\nJoyce Price is a 50-year-old female with a past medical history significant for COPD, congestive heart failure who presents for follow-up to an abnormal lab finding.\nThe patient reports that she has been feeling really tired lately. She reports that over the past couple of months, her energy has really gone down. She used to be really active, trying to be as healthy as she can be with running and climbing, at least an hour or two a day. Over the past month, her activity has slowly decreased. She reports that, due to her fatigue, she has not been able to keep up with her exercise. She reports that she had noticed a little weight loss, but she believes that was due to her doing really well with her exercises.\nThe patient reports that her COPD is doing well. She reports that she has not been smoking since she quit. She reports that during the changes of the season, it gets a little harder for her to breathe, but she believes that is because of her allergies.\nFrom a congestive heart failure standpoint, she reports that she has been doing really well with her diet. She reports that she has been staying away from French fries and all the other salty foods that she likes to eat. She denies any swelling in her legs.\nShe reports that she has a good support system with her boyfriend and her brother.",
+        "medical_concepts": [
+          "abnormal lab finding",
+          "COPD",
+          "congestive heart failure",
+          "tiredness",
+          "fatigue",
+          "decreased energy",
+          "decreased activity",
+          "weight loss",
+          "smoking",
+          "shortness of breath",
+          "allergies",
+          "diet",
+          "swelling in legs"
+        ]
+      },
+      {
+        "heading": "Clinical Note",
+        "section_value": "She reports that she has not noticed any blood in her stool at this time. She denies that her stools are dark or black in color. She denies that she has had any abnormal bleeding between menses. The patient denies any other symptoms such as chest pain, shortness of breath, fever, chills, or malaise.\nREVIEW OF SYSTEMS\n• Constitutional: Denies fevers, chills. Endorses weight loss. Endorses fatigue.\n• Cardiovascular: Denies chest pain or dyspnea.\n• Respiratory:   Endorses shortness of breath with seasonal changes.\n• Gastrointestinal: Denies hematochezia, melena.\n• Genitourinary: Denies abnormal bleeding between menses.\n• Neurological: Positive for dizziness.\nPHYSICAL EXAMINATION\n• Neck: Supple without cervical lymphadenopathy.",
+        "medical_concepts": [
+          "blood in stool",
+          "dark stool",
+          "black stool",
+          "abnormal bleeding between menses",
+          "chest pain",
+          "shortness of breath",
+          "fever",
+          "chills",
+          "malaise",
+          "weight loss",
+          "fatigue",
+          "dyspnea",
+          "hematochezia",
+          "melena",
+          "dizziness",
+          "cervical lymphadenopathy"
+        ]
+      },
+      {
+        "heading": "Clinical Note",
+        "section_value": "• Respiratory: Lungs are clear to auscultation bilaterally. No wheezes, rales, or rhonchi.\n• Cardiovascular: Regular rate. Slight 2/6 systolic ejection murmur. No gallops or rubs. No extra heart sounds.\n• Gastrointestinal: Tenderness to palpation to the right lower quadrant.\nRESULTS\nHemoglobin A1c is 8.2.\nLabs are within normal limits.\nAnemia labs: Still pending.\nASSESSMENT AND PLAN\nJoyce Price is a 50-year-old female with a past medical history significant for COPD, congestive heart failure, who presents for follow up of abnormal labs.\n1. Abnormal labs.",
+        "medical_concepts": [
+          "lungs clear to auscultation",
+          "wheezes",
+          "rales",
+          "rhonchi",
+          "regular heart rate",
+          "systolic ejection murmur",
+          "gallops",
+          "rubs",
+          "extra heart sounds",
+          "right lower quadrant tenderness",
+          "hemoglobin A1c",
+          "anemia labs",
+          "COPD",
+          "congestive heart failure",
+          "abnormal labs"
+        ]
+      },
+      {
+        "heading": "Clinical Note",
+        "section_value": "• Medical Reasoning: Her recent hemoglobin level was low at 8.2. Her available anemia labs were normal, but we need to wait for her pending labs for a definitive anemia diagnosis.\n• Additional Testing: I would like to obtain an endoscopy and colonoscopy to evaluate for gastrointestinal bleeding.\n• Specialist Referrals: We will put in a referral to gastroenterology to perform her endoscopy and colonoscopy.\n2. COPD.\n• Medical Reasoning: The patient is doing well. She ceased tobacco use several years ago and continues to abstain from this.\n• Medical Treatment: I do not think she needs any inhalers at this time. She should continue to stay away from smoking.\n3. Congestive heart failure.\n• Medical Reasoning: She is doing well and continues to follow dietary modifications, particularly with limiting her sodium intake.\n• Medical Treatment: Continue on Toprol and lisinopril, as well as her current dose of Lasix 20 mg a day.\nPatient Agreements: The patient understands and agrees with the recommended medical treatment plan.",
+        "medical_concepts": [
+          "low hemoglobin",
+          "hemoglobin level 8.2",
+          "anemia",
+          "anemia labs",
+          "endoscopy",
+          "colonoscopy",
+          "gastrointestinal bleeding",
+          "gastroenterology referral",
+          "COPD",
+          "tobacco use",
+          "smoking",
+          "inhalers",
+          "congestive heart failure",
+          "dietary modifications",
+          "sodium intake limitation",
+          "Toprol",
+          "lisinopril",
+          "Lasix 20 mg daily"
+        ]
+      }
+    ],
+    "medical_concepts": [
+      "abnormal lab finding",
+      "COPD",
+      "congestive heart failure",
+      "tiredness",
+      "fatigue",
+      "decreased energy",
+      "decreased activity",
+      "weight loss",
+      "smoking",
+      "shortness of breath",
+      "allergies",
+      "diet",
+      "swelling in legs",
+      "blood in stool",
+      "dark stool",
+      "black stool",
+      "abnormal bleeding between menses",
+      "chest pain",
+      "fever",
+      "chills",
+      "malaise",
+      "dyspnea",
+      "hematochezia",
+      "melena",
+      "dizziness",
+      "cervical lymphadenopathy",
+      "lungs clear to auscultation",
+      "wheezes",
+      "rales",
+      "rhonchi",
+      "regular heart rate",
+      "systolic ejection murmur",
+      "gallops",
+      "rubs",
+      "extra heart sounds",
+      "right lower quadrant tenderness",
+      "hemoglobin A1c",
+      "anemia labs",
+      "abnormal labs",
+      "low hemoglobin",
+      "hemoglobin level 8.2",
+      "anemia",
+      "endoscopy",
+      "colonoscopy",
+      "gastrointestinal bleeding",
+      "gastroenterology referral",
+      "tobacco use",
+      "inhalers",
+      "dietary modifications",
+      "sodium intake limitation",
+      "Toprol",
+      "lisinopril",
+      "Lasix 20 mg daily"
+    ],
+    "section_count": 4
+  },
+  "summary_nair_concepts": {
+    "sections": [
+      {
+        "heading": "S",
+        "section_value": "The patient reports fatigue for the past couple of months. The patient denies blood in her stools. The patient reports no swelling in her legs. The patient reports a good support system.",
+        "medical_concepts": [
+          "fatigue",
+          "blood in stool",
+          "leg swelling"
+        ]
+      },
+      {
+        "heading": "O",
+        "section_value": "The patient's hemoglobin level is 8.2, which is lower than expected. The clinician hears a slight two out of six systolic heart murmur.",
+        "medical_concepts": [
+          "hemoglobin level",
+          "anemia",
+          "systolic heart murmur"
+        ]
+      },
+      {
+        "heading": "A",
+        "section_value": "The clinician suspects cervical radiculopathy. The clinician notes tenderness to palpation in the right lower quadrant.",
+        "medical_concepts": [
+          "cervical radiculopathy",
+          "tenderness to palpation in the right lower quadrant"
+        ]
+      },
+      {
+        "heading": "P",
+        "section_value": "The clinician plans a cervical MRI. The clinician plans an endoscopy and a colonoscopy. The clinician will order a referral to gastroenterology. The clinician will continue the patient on toprol, lisinopril, and lasix.",
+        "medical_concepts": [
+          "cervical MRI",
+          "endoscopy",
+          "colonoscopy",
+          "referral to gastroenterology",
+          "toprol",
+          "lisinopril",
+          "lasix"
+        ]
+      }
+    ],
+    "medical_concepts": [
+      "fatigue",
+      "blood in stool",
+      "leg swelling",
+      "hemoglobin level",
+      "anemia",
+      "systolic heart murmur",
+      "cervical radiculopathy",
+      "tenderness to palpation in the right lower quadrant",
+      "cervical MRI",
+      "endoscopy",
+      "colonoscopy",
+      "referral to gastroenterology",
+      "toprol",
+      "lisinopril",
+      "lasix"
+    ],
+    "section_count": 4
+  },
+  "nair_alignment": {
+    "pred_concepts": [
+      "fatigue",
+      "blood in stool",
+      "leg swelling",
+      "hemoglobin level",
+      "anemia",
+      "systolic heart murmur",
+      "cervical radiculopathy",
+      "tenderness to palpation in the right lower quadrant",
+      "cervical MRI",
+      "endoscopy",
+      "colonoscopy",
+      "referral to gastroenterology",
+      "toprol",
+      "lisinopril",
+      "lasix"
+    ],
+    "ref_concepts": [
+      "abnormal lab finding",
+      "COPD",
+      "congestive heart failure",
+      "tiredness",
+      "fatigue",
+      "decreased energy",
+      "decreased activity",
+      "weight loss",
+      "smoking",
+      "shortness of breath",
+      "allergies",
+      "diet",
+      "swelling in legs",
+      "blood in stool",
+      "dark stool",
+      "black stool",
+      "abnormal bleeding between menses",
+      "chest pain",
+      "fever",
+      "chills",
+      "malaise",
+      "dyspnea",
+      "hematochezia",
+      "melena",
+      "dizziness",
+      "cervical lymphadenopathy",
+      "lungs clear to auscultation",
+      "wheezes",
+      "rales",
+      "rhonchi",
+      "regular heart rate",
+      "systolic ejection murmur",
+      "gallops",
+      "rubs",
+      "extra heart sounds",
+      "right lower quadrant tenderness",
+      "hemoglobin A1c",
+      "anemia labs",
+      "abnormal labs",
+      "low hemoglobin",
+      "hemoglobin level 8.2",
+      "anemia",
+      "endoscopy",
+      "colonoscopy",
+      "gastrointestinal bleeding",
+      "gastroenterology referral",
+      "tobacco use",
+      "inhalers",
+      "dietary modifications",
+      "sodium intake limitation",
+      "Toprol",
+      "lisinopril",
+      "Lasix 20 mg daily"
+    ],
+    "precision_alignment": {
+      "found_b": [
+        "fatigue",
+        "blood in stool",
+        "hemoglobin level",
+        "anemia",
+        "systolic heart murmur",
+        "tenderness to palpation in the right lower quadrant",
+        "endoscopy",
+        "colonoscopy",
+        "referral to gastroenterology",
+        "toprol",
+        "lisinopril",
+        "lasix"
+      ],
+      "not_found_b": [
+        "leg swelling",
+        "cervical radiculopathy",
+        "cervical MRI"
+      ],
+      "chunk_count": 1,
+      "chunk_results": [
+        {
+          "found_b": [
+            "fatigue",
+            "blood in stool",
+            "hemoglobin level",
+            "anemia",
+            "systolic heart murmur",
+            "tenderness to palpation in the right lower quadrant",
+            "endoscopy",
+            "colonoscopy",
+            "referral to gastroenterology",
+            "toprol",
+            "lisinopril",
+            "lasix"
+          ],
+          "not_found_b": [
+            "leg swelling",
+            "cervical radiculopathy",
+            "cervical MRI"
+          ]
+        }
+      ]
+    },
+    "recall_alignment": {
+      "found_b": [
+        "abnormal lab finding",
+        "tiredness",
+        "fatigue",
+        "swelling in legs",
+        "blood in stool",
+        "hematochezia",
+        "right lower quadrant tenderness",
+        "abnormal labs",
+        "low hemoglobin",
+        "hemoglobin level 8.2",
+        "anemia",
+        "endoscopy",
+        "colonoscopy",
+        "gastroenterology referral",
+        "Toprol",
+        "lisinopril"
+      ],
+      "not_found_b": [
+        "COPD",
+        "congestive heart failure",
+        "decreased energy",
+        "decreased activity",
+        "weight loss",
+        "smoking",
+        "shortness of breath",
+        "allergies",
+        "diet",
+        "dark stool",
+        "black stool",
+        "abnormal bleeding between menses",
+        "chest pain",
+        "fever",
+        "chills",
+        "malaise",
+        "dyspnea",
+        "melena",
+        "dizziness",
+        "cervical lymphadenopathy",
+        "lungs clear to auscultation",
+        "wheezes",
+        "rales",
+        "rhonchi",
+        "regular heart rate",
+        "systolic ejection murmur",
+        "gallops",
+        "rubs",
+        "extra heart sounds",
+        "hemoglobin A1c",
+        "anemia labs",
+        "gastrointestinal bleeding",
+        "tobacco use",
+        "inhalers",
+        "dietary modifications",
+        "sodium intake limitation",
+        "Lasix 20 mg daily"
+      ],
+      "chunk_count": 3,
+      "chunk_results": [
+        {
+          "found_b": [
+            "abnormal lab finding",
+            "tiredness",
+            "fatigue",
+            "swelling in legs",
+            "blood in stool",
+            "hematochezia"
+          ],
+          "not_found_b": [
+            "COPD",
+            "congestive heart failure",
+            "decreased energy",
+            "decreased activity",
+            "weight loss",
+            "smoking",
+            "shortness of breath",
+            "allergies",
+            "diet",
+            "dark stool",
+            "black stool",
+            "abnormal bleeding between menses",
+            "chest pain",
+            "fever",
+            "chills",
+            "malaise",
+            "dyspnea",
+            "melena"
+          ]
+        },
+        {
+          "found_b": [
+            "right lower quadrant tenderness",
+            "low hemoglobin",
+            "hemoglobin level 8.2",
+            "anemia",
+            "endoscopy",
+            "colonoscopy",
+            "gastroenterology referral",
+            "abnormal labs"
+          ],
+          "not_found_b": [
+            "dizziness",
+            "cervical lymphadenopathy",
+            "lungs clear to auscultation",
+            "wheezes",
+            "rales",
+            "rhonchi",
+            "regular heart rate",
+            "systolic ejection murmur",
+            "gallops",
+            "rubs",
+            "extra heart sounds",
+            "hemoglobin A1c",
+            "anemia labs",
+            "gastrointestinal bleeding",
+            "tobacco use",
+            "inhalers"
+          ]
+        },
+        {
+          "found_b": [
+            "Toprol",
+            "lisinopril"
+          ],
+          "not_found_b": [
+            "dietary modifications",
+            "sodium intake limitation",
+            "Lasix 20 mg daily"
+          ]
+        }
+      ]
+    }
+  },
+  "semantic_cap_audit": {
+    "source_cap_recall": [
+      {
+        "cap_id": "P1",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P2",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P3",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P4",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P5",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P6",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P7",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P8",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P9",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P10",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P11",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P12",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P13",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P14",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P15",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P16",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P1",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P2",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P3",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P4",
+        "judgment": "contradicted",
+        "reason": null
+      },
+      {
+        "cap_id": "P5",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P6",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P7",
+        "judgment": "contradicted",
+        "reason": null
+      },
+      {
+        "cap_id": "P8",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P9",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P10",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P11",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P12",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P13",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P14",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P15",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P16",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P1",
+        "judgment": "missing",
+        "reason": null
+      }
+    ],
+    "summary_cap_precision": [],
+    "metrics": {
+      "semantic_cap_precision": 0.0,
+      "semantic_cap_recall": 0.3788,
+      "semantic_cap_f1": 0.0,
+      "semantic_cap_precision_supported_count": 0,
+      "semantic_cap_precision_partial_count": 0,
+      "semantic_cap_precision_denominator": 0,
+      "semantic_cap_recall_supported_count": 10,
+      "semantic_cap_recall_partial_count": 5,
+      "semantic_cap_recall_denominator": 33,
+      "semantic_cap_low_value_source_count": 0,
+      "semantic_cap_low_value_summary_count": 0,
+      "semantic_cap_missing_count": 16,
+      "semantic_cap_unsupported_count": 0,
+      "semantic_cap_contradicted_source_count": 2,
+      "semantic_cap_contradicted_summary_count": 0
+    }
+  },
+  "safety_judgment": null,
+  "section_judgment": {
+    "section_miscategorizations": [
+      {
+        "text": "The clinician notes tenderness to palpation in the right lower quadrant.",
+        "current_section": "A",
+        "expected_section": "O",
+        "severity": "major",
+        "reason": "Tenderness to palpation is a physical exam finding and should be documented as an objective observation, not in the assessment section."
+      },
+      {
+        "text": "The clinician will continue the patient on toprol, lisinopril, and lasix.",
+        "current_section": "P",
+        "expected_section": "S",
+        "severity": "major",
+        "reason": "Continuation of existing medications reflects the current medication regimen rather than a new change or order; per instructions, current medications belong in the Subjective section unless framed as a treatment change."
+      }
+    ],
+    "summary_statistics": {
+      "section_appropriateness_score": 0.7,
+      "section_miscategorization_count": 2,
+      "major_section_miscategorization_count": 2
+    }
+  },
+  "pdsqi_judgment": {
+    "citation_applicable": 0,
+    "citation": 0,
+    "accurate": 1,
+    "thorough": 2,
+    "useful": 1,
+    "organized": 3,
+    "comprehensible": 3,
+    "succinct": 4,
+    "abstraction": 1,
+    "synthesized": 2,
+    "voice_summ": 0,
+    "voice_note": 0,
+    "pdsqi_core_mean": 2.2857
+  },
+  "llm_checklist_judgment": {
+    "content_preservation_core": 2,
+    "noise_suppression": 5,
+    "lay_expression_preservation": 3,
+    "state_update_fidelity": 1,
+    "temporality_preservation": 3,
+    "problem_evidence_linkage": 1,
+    "state_plan_separation": 3,
+    "section_organization_appropriateness": 2,
+    "overall_clinical_usability": 2,
+    "clinically_meaningful_omission": "Yes",
+    "clinically_concerning_hallucination": "Yes",
+    "checklist_a_mean": 3.3333,
+    "checklist_b_mean": 2.0,
+    "checklist_c_mean": 2.0,
+    "llm_checklist_abc_mean": 2.5,
+    "llm_checklist_mean_no_usability": 2.5,
+    "llm_checklist_total_score": 22,
+    "llm_checklist_mean": 2.4444,
+    "llm_checklist_meaningful_omission_yes": 1,
+    "llm_checklist_concerning_hallucination_yes": 1
+  },
+  "metrics": {
+    "case_id": "D2N170",
+    "method": "cluster2sent",
+    "template": "soap",
+    "source_cap_count": 33,
+    "event_plan_count": null,
+    "summary_cap_count": 0,
+    "cap_matched_count": 0,
+    "cap_precision": 0.0,
+    "cap_recall": 0.0,
+    "cap_f1": 0.0,
+    "unsupported_summary_cap_count": 0,
+    "missing_source_cap_count": 33,
+    "summary_runtime_seconds": null,
+    "summary_cap_runtime_seconds": 0.54,
+    "event_plan_runtime_seconds": null,
+    "rouge_l_f1_vs_reference": 0.1406,
+    "token_f1_vs_reference": 0.225,
+    "gptf1_macro_f1": 0.0,
+    "nair_gpt_precision": 0.8,
+    "nair_gpt_recall": 0.3019,
+    "nair_gpt_f1": 0.4384,
+    "semantic_cap_precision": 0.0,
+    "semantic_cap_recall": 0.3788,
+    "semantic_cap_f1": 0.0,
+    "hallucination_count": null,
+    "major_hallucination_count": null,
+    "omission_count": null,
+    "major_omission_count": null,
+    "section_appropriateness_score": 0.7,
+    "section_miscategorization_count": 2,
+    "major_section_miscategorization_count": 2,
+    "pdsqi_core_mean": 2.2857,
+    "pdsqi_accurate": 1,
+    "pdsqi_thorough": 2,
+    "llm_checklist_total_score": 22,
+    "llm_checklist_mean": 2.4444,
+    "llm_checklist_mean_no_usability": 2.5,
+    "checklist_a_mean": 3.3333,
+    "checklist_b_mean": 2.0,
+    "checklist_c_mean": 2.0,
+    "llm_checklist_abc_mean": 2.5,
+    "content_preservation_core": 2,
+    "noise_suppression": 5,
+    "lay_expression_preservation": 3,
+    "state_update_fidelity": 1,
+    "temporality_preservation": 3,
+    "problem_evidence_linkage": 1,
+    "state_plan_separation": 3,
+    "section_organization_appropriateness": 2,
+    "overall_clinical_usability": 2,
+    "llm_checklist_meaningful_omission_yes": 1,
+    "llm_checklist_concerning_hallucination_yes": 1,
+    "gptf1_active_problems_symptoms_precision": 0.0,
+    "gptf1_active_problems_symptoms_recall": 0.0,
+    "gptf1_active_problems_symptoms_f1": 0.0,
+    "gptf1_active_problems_symptoms_pred_count": 0,
+    "gptf1_active_problems_symptoms_ref_count": 0,
+    "gptf1_negated_findings_precision": 0.0,
+    "gptf1_negated_findings_recall": 0.0,
+    "gptf1_negated_findings_f1": 0.0,
+    "gptf1_negated_findings_pred_count": 0,
+    "gptf1_negated_findings_ref_count": 0,
+    "gptf1_uncertain_findings_precision": 0.0,
+    "gptf1_uncertain_findings_recall": 0.0,
+    "gptf1_uncertain_findings_f1": 0.0,
+    "gptf1_uncertain_findings_pred_count": 0,
+    "gptf1_uncertain_findings_ref_count": 0,
+    "gptf1_medication_treatment_precision": 0.0,
+    "gptf1_medication_treatment_recall": 0.0,
+    "gptf1_medication_treatment_f1": 0.0,
+    "gptf1_medication_treatment_pred_count": 0,
+    "gptf1_medication_treatment_ref_count": 0,
+    "gptf1_plan_followup_precision": 0.0,
+    "gptf1_plan_followup_recall": 0.0,
+    "gptf1_plan_followup_f1": 0.0,
+    "gptf1_plan_followup_pred_count": 0,
+    "gptf1_plan_followup_ref_count": 0,
+    "nair_pred_concept_count": 15,
+    "nair_ref_concept_count": 53,
+    "nair_precision_match_count": 12,
+    "nair_recall_match_count": 16,
+    "semantic_cap_precision_supported_count": 0,
+    "semantic_cap_precision_partial_count": 0,
+    "semantic_cap_precision_denominator": 0,
+    "semantic_cap_recall_supported_count": 10,
+    "semantic_cap_recall_partial_count": 5,
+    "semantic_cap_recall_denominator": 33,
+    "semantic_cap_low_value_source_count": 0,
+    "semantic_cap_low_value_summary_count": 0,
+    "semantic_cap_missing_count": 16,
+    "semantic_cap_unsupported_count": 0,
+    "semantic_cap_contradicted_source_count": 2,
+    "semantic_cap_contradicted_summary_count": 0,
+    "pdsqi_useful": 1,
+    "pdsqi_organized": 3,
+    "pdsqi_comprehensible": 3,
+    "pdsqi_succinct": 4,
+    "pdsqi_synthesized": 2
+  }
+}

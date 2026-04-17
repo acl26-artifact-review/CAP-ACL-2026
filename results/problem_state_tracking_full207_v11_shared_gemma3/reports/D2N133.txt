@@ -1,0 +1,63 @@
+Case: D2N133
+
+Problem List and Visit State Tracking
+
+Problem List
+- swimming | verification_status=unconfirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T5
+  Summary: The patient has taken up swimming more regularly.
+  ClusterId: CL1
+  TemporalProfile: regularly
+  Updates:
+  - CAP4: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=regularly turns=T5 :: The patient has taken up swimming more regularly.
+- depression | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T5
+  Summary: The patient has depression.
+  ClusterId: CL2
+  TemporalProfile: current
+  Updates:
+  - CAP8: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T5 :: The patient has depression.
+- carpal tunnel syndrome | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T5
+  Summary: The patient has a history of carpal tunnel syndrome.
+  ClusterId: CL3
+  TemporalProfile: couple of years ago
+  Updates:
+  - CAP10: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=couple of years ago turns=T5 :: The patient has a history of carpal tunnel syndrome.
+- knee pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T43,T7,T9
+  Summary: The patient reports pain in their right knee.
+  ClusterId: CL4
+  TemporalProfile: current
+  Updates:
+  - CAP2: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T7 :: The patient reports bad knee pain in their right knee.
+  - CAP1: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T9,T9,T9 :: The patient reports pain in their right knee.
+  - CAP7: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T43 :: The patient reports pain in their knees.
+- back pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T7
+  Summary: The patient has chronic back pain.
+  ClusterId: CL5
+  TemporalProfile: current
+  Updates:
+  - CAP11: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T7 :: The patient has chronic back pain.
+- discomfort | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T13
+  Summary: The patient is feeling more and more discomfort.
+  ClusterId: CL6
+  TemporalProfile: current
+  Updates:
+  - CAP5: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T13 :: The patient is feeling more and more discomfort.
+- chronic back pain | verification_status=confirmed | clinical_status=stable | modalities=interview | speakers=doctor,patient | evidence=T15,T48
+  Summary: The patient has a history of chronic back pain.
+  ClusterId: CL7
+  TemporalProfile: current, historical
+  Updates:
+  - CAP3: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=historical turns=T15 :: The patient has a history of chronic back pain.
+  - CAP6: content_source=doctor modality=interview verification_status=confirmed clinical_status=stable temporality=current turns=T48 :: The patient's chronic back pain is under control.
+
+Medication Tracking
+- [MedicationState] current medication | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=doctor | evidence=T56
+  Summary: The patient is currently taking their medication.
+  ClusterId: CL8
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient is currently taking their medication. (T56)
+  Updates:
+  - CAP9: content_source=doctor modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T56 :: The patient is currently taking their medication.
+
+Other Structured States
+- None

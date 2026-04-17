@@ -1,0 +1,586 @@
+{
+  "clusters": [
+    {
+      "cluster_id": "CL1",
+      "cluster_type": "ProblemState",
+      "canonical_concept": "pain",
+      "primary_cap_type": "Symptom",
+      "source_cap_types": [
+        "Symptom"
+      ],
+      "final_verification_status": "confirmed",
+      "clinical_status": "active",
+      "final_assertion": "present",
+      "visit_state": "active",
+      "source_speakers": [
+        "patient"
+      ],
+      "source_modalities": [
+        "interview"
+      ],
+      "temporal_profile": [
+        "current"
+      ],
+      "evidence_turn_ids": [
+        "T15"
+      ],
+      "supporting_cap_ids": [
+        "CAP7"
+      ],
+      "cluster_summary": "The patient reports pain.",
+      "salience_score": 10,
+      "is_low_value": false,
+      "updates": [
+        {
+          "cap_id": "CAP7",
+          "content_source": "patient",
+          "modality": "interview",
+          "verification_status": "confirmed",
+          "clinical_status": "active",
+          "assertion": "present",
+          "visit_state": "active",
+          "temporality": "current",
+          "turn_ids": [
+            "T15"
+          ],
+          "proposition_text": "The patient reports pain."
+        }
+      ]
+    },
+    {
+      "cluster_id": "CL2",
+      "cluster_type": "ProblemState",
+      "canonical_concept": "smoking",
+      "primary_cap_type": "Symptom",
+      "source_cap_types": [
+        "Symptom"
+      ],
+      "final_verification_status": "confirmed",
+      "clinical_status": "active",
+      "final_assertion": "present",
+      "visit_state": "active",
+      "source_speakers": [
+        "patient"
+      ],
+      "source_modalities": [
+        "interview"
+      ],
+      "temporal_profile": [
+        "current"
+      ],
+      "evidence_turn_ids": [
+        "T16"
+      ],
+      "supporting_cap_ids": [
+        "CAP4"
+      ],
+      "cluster_summary": "The patient reports difficulty quitting smoking.",
+      "salience_score": 10,
+      "is_low_value": false,
+      "updates": [
+        {
+          "cap_id": "CAP4",
+          "content_source": "patient",
+          "modality": "interview",
+          "verification_status": "confirmed",
+          "clinical_status": "active",
+          "assertion": "present",
+          "visit_state": "active",
+          "temporality": "current",
+          "turn_ids": [
+            "T16"
+          ],
+          "proposition_text": "The patient reports difficulty quitting smoking."
+        }
+      ]
+    },
+    {
+      "cluster_id": "CL3",
+      "cluster_type": "ProblemState",
+      "canonical_concept": "high blood pressure",
+      "primary_cap_type": "Problem",
+      "source_cap_types": [
+        "Problem"
+      ],
+      "final_verification_status": "confirmed",
+      "clinical_status": "active",
+      "final_assertion": "present",
+      "visit_state": "active",
+      "source_speakers": [
+        "patient"
+      ],
+      "source_modalities": [
+        "interview"
+      ],
+      "temporal_profile": [
+        "current",
+        "history"
+      ],
+      "evidence_turn_ids": [
+        "T18"
+      ],
+      "supporting_cap_ids": [
+        "CAP1",
+        "CAP2"
+      ],
+      "cluster_summary": "The patient has a history of high blood pressure.",
+      "salience_score": 10,
+      "is_low_value": false,
+      "updates": [
+        {
+          "cap_id": "CAP1",
+          "content_source": "patient",
+          "modality": "interview",
+          "verification_status": "confirmed",
+          "clinical_status": "active",
+          "assertion": "present",
+          "visit_state": "active",
+          "temporality": "current",
+          "turn_ids": [
+            "T18"
+          ],
+          "proposition_text": "The patient has a history of high blood pressure."
+        },
+        {
+          "cap_id": "CAP2",
+          "content_source": "patient",
+          "modality": "interview",
+          "verification_status": "confirmed",
+          "clinical_status": "active",
+          "assertion": "present",
+          "visit_state": "active",
+          "temporality": "history",
+          "turn_ids": [
+            "T18"
+          ],
+          "proposition_text": "The patient has a history of high blood pressure."
+        }
+      ]
+    },
+    {
+      "cluster_id": "CL4",
+      "cluster_type": "MedicationChange",
+      "canonical_concept": "blood pressure medication",
+      "primary_cap_type": "MedicationStatement",
+      "source_cap_types": [
+        "MedicationStatement"
+      ],
+      "final_verification_status": "unconfirmed",
+      "clinical_status": "planned",
+      "final_assertion": "hypothetical",
+      "visit_state": "planned",
+      "source_speakers": [
+        "doctor"
+      ],
+      "source_modalities": [
+        "interview"
+      ],
+      "temporal_profile": [
+        "today"
+      ],
+      "evidence_turn_ids": [
+        "T18"
+      ],
+      "supporting_cap_ids": [
+        "CAP12",
+        "CAP13"
+      ],
+      "cluster_summary": "The doctor wants the patient to start taking blood pressure medication.",
+      "salience_score": 8,
+      "is_low_value": false,
+      "updates": [
+        {
+          "cap_id": "CAP12",
+          "content_source": "doctor",
+          "modality": "interview",
+          "verification_status": "unconfirmed",
+          "clinical_status": "planned",
+          "assertion": "hypothetical",
+          "visit_state": "planned",
+          "temporality": "today",
+          "turn_ids": [
+            "T18"
+          ],
+          "proposition_text": "The doctor wants the patient to start taking blood pressure medication."
+        },
+        {
+          "cap_id": "CAP13",
+          "content_source": "doctor",
+          "modality": "interview",
+          "verification_status": "unconfirmed",
+          "clinical_status": "planned",
+          "assertion": "hypothetical",
+          "visit_state": "planned",
+          "temporality": "today",
+          "turn_ids": [
+            "T18"
+          ],
+          "proposition_text": "The doctor recommends taking blood pressure medication as prescribed."
+        }
+      ],
+      "planned_changes": [
+        {
+          "proposition_text": "The doctor wants the patient to start taking blood pressure medication.",
+          "turn_ids": [
+            "T18"
+          ],
+          "attributes": {}
+        },
+        {
+          "proposition_text": "The doctor recommends taking blood pressure medication as prescribed.",
+          "turn_ids": [
+            "T18"
+          ],
+          "attributes": {}
+        }
+      ]
+    },
+    {
+      "cluster_id": "CL5",
+      "cluster_type": "ProblemState",
+      "canonical_concept": "neovascular age-related macular degeneration",
+      "primary_cap_type": "Problem",
+      "source_cap_types": [
+        "Problem"
+      ],
+      "final_verification_status": "confirmed",
+      "clinical_status": "active",
+      "final_assertion": "present",
+      "visit_state": "active",
+      "source_speakers": [
+        "doctor"
+      ],
+      "source_modalities": [
+        "assessment"
+      ],
+      "temporal_profile": [
+        "current"
+      ],
+      "evidence_turn_ids": [
+        "T19"
+      ],
+      "supporting_cap_ids": [
+        "CAP3"
+      ],
+      "cluster_summary": "The patient has neovascular age-related macular degeneration.",
+      "salience_score": 10,
+      "is_low_value": false,
+      "updates": [
+        {
+          "cap_id": "CAP3",
+          "content_source": "doctor",
+          "modality": "assessment",
+          "verification_status": "confirmed",
+          "clinical_status": "active",
+          "assertion": "present",
+          "visit_state": "active",
+          "temporality": "current",
+          "turn_ids": [
+            "T19"
+          ],
+          "proposition_text": "The patient has neovascular age-related macular degeneration."
+        }
+      ]
+    },
+    {
+      "cluster_id": "CL6",
+      "cluster_type": "ProblemState",
+      "canonical_concept": "left hand pain",
+      "primary_cap_type": "Symptom",
+      "source_cap_types": [
+        "Symptom"
+      ],
+      "final_verification_status": "confirmed",
+      "clinical_status": "active",
+      "final_assertion": "present",
+      "visit_state": "active",
+      "source_speakers": [
+        "patient"
+      ],
+      "source_modalities": [
+        "interview"
+      ],
+      "temporal_profile": [
+        "current"
+      ],
+      "evidence_turn_ids": [
+        "T19"
+      ],
+      "supporting_cap_ids": [
+        "CAP5"
+      ],
+      "cluster_summary": "The patient reports left hand pain.",
+      "salience_score": 10,
+      "is_low_value": false,
+      "updates": [
+        {
+          "cap_id": "CAP5",
+          "content_source": "patient",
+          "modality": "interview",
+          "verification_status": "confirmed",
+          "clinical_status": "active",
+          "assertion": "present",
+          "visit_state": "active",
+          "temporality": "current",
+          "turn_ids": [
+            "T19"
+          ],
+          "proposition_text": "The patient reports left hand pain."
+        }
+      ]
+    },
+    {
+      "cluster_id": "CL7",
+      "cluster_type": "Plan",
+      "canonical_concept": "physical exam",
+      "primary_cap_type": "Order",
+      "source_cap_types": [
+        "Order"
+      ],
+      "final_verification_status": "unconfirmed",
+      "clinical_status": "planned",
+      "final_assertion": "hypothetical",
+      "visit_state": "planned",
+      "source_speakers": [
+        "doctor"
+      ],
+      "source_modalities": [
+        "interview"
+      ],
+      "temporal_profile": [
+        "today"
+      ],
+      "evidence_turn_ids": [
+        "T20"
+      ],
+      "supporting_cap_ids": [
+        "CAP8"
+      ],
+      "cluster_summary": "The doctor will perform a physical exam on the patient's eyes.",
+      "salience_score": 9,
+      "is_low_value": false,
+      "updates": [
+        {
+          "cap_id": "CAP8",
+          "content_source": "doctor",
+          "modality": "interview",
+          "verification_status": "unconfirmed",
+          "clinical_status": "planned",
+          "assertion": "hypothetical",
+          "visit_state": "planned",
+          "temporality": "today",
+          "turn_ids": [
+            "T20"
+          ],
+          "proposition_text": "The doctor will perform a physical exam on the patient's eyes."
+        }
+      ]
+    },
+    {
+      "cluster_id": "CL8",
+      "cluster_type": "Plan",
+      "canonical_concept": "pill bottle",
+      "primary_cap_type": "Order",
+      "source_cap_types": [
+        "Order"
+      ],
+      "final_verification_status": "unconfirmed",
+      "clinical_status": "planned",
+      "final_assertion": "hypothetical",
+      "visit_state": "planned",
+      "source_speakers": [
+        "doctor"
+      ],
+      "source_modalities": [
+        "plan"
+      ],
+      "temporal_profile": [
+        "today"
+      ],
+      "evidence_turn_ids": [
+        "T20"
+      ],
+      "supporting_cap_ids": [
+        "CAP9"
+      ],
+      "cluster_summary": "The doctor wants to place a pill bottle on the counter.",
+      "salience_score": 9,
+      "is_low_value": false,
+      "updates": [
+        {
+          "cap_id": "CAP9",
+          "content_source": "doctor",
+          "modality": "plan",
+          "verification_status": "unconfirmed",
+          "clinical_status": "planned",
+          "assertion": "hypothetical",
+          "visit_state": "planned",
+          "temporality": "today",
+          "turn_ids": [
+            "T20"
+          ],
+          "proposition_text": "The doctor wants to place a pill bottle on the counter."
+        }
+      ]
+    },
+    {
+      "cluster_id": "CL9",
+      "cluster_type": "MedicationChange",
+      "canonical_concept": "lucent",
+      "primary_cap_type": "MedicationRequest",
+      "source_cap_types": [
+        "MedicationRequest"
+      ],
+      "final_verification_status": "unconfirmed",
+      "clinical_status": "planned",
+      "final_assertion": "hypothetical",
+      "visit_state": "planned",
+      "source_speakers": [
+        "doctor"
+      ],
+      "source_modalities": [
+        "plan"
+      ],
+      "temporal_profile": [
+        "monthly"
+      ],
+      "evidence_turn_ids": [
+        "T22"
+      ],
+      "supporting_cap_ids": [
+        "CAP10"
+      ],
+      "cluster_summary": "The doctor plans to administer monthly lucent injections.",
+      "salience_score": 9,
+      "is_low_value": false,
+      "updates": [
+        {
+          "cap_id": "CAP10",
+          "content_source": "doctor",
+          "modality": "plan",
+          "verification_status": "unconfirmed",
+          "clinical_status": "planned",
+          "assertion": "hypothetical",
+          "visit_state": "planned",
+          "temporality": "monthly",
+          "turn_ids": [
+            "T22"
+          ],
+          "proposition_text": "The doctor plans to administer monthly lucent injections."
+        }
+      ],
+      "planned_changes": [
+        {
+          "proposition_text": "The doctor plans to administer monthly lucent injections.",
+          "turn_ids": [
+            "T22"
+          ],
+          "attributes": {}
+        }
+      ]
+    },
+    {
+      "cluster_id": "CL10",
+      "cluster_type": "ProblemState",
+      "canonical_concept": "vision loss",
+      "primary_cap_type": "Symptom",
+      "source_cap_types": [
+        "Symptom"
+      ],
+      "final_verification_status": "unconfirmed",
+      "clinical_status": "active",
+      "final_assertion": "uncertain",
+      "visit_state": "active",
+      "source_speakers": [
+        "patient"
+      ],
+      "source_modalities": [
+        "interview"
+      ],
+      "temporal_profile": [
+        "current"
+      ],
+      "evidence_turn_ids": [
+        "T28"
+      ],
+      "supporting_cap_ids": [
+        "CAP6"
+      ],
+      "cluster_summary": "The patient reports vision loss.",
+      "salience_score": 10,
+      "is_low_value": false,
+      "updates": [
+        {
+          "cap_id": "CAP6",
+          "content_source": "patient",
+          "modality": "interview",
+          "verification_status": "unconfirmed",
+          "clinical_status": "active",
+          "assertion": "uncertain",
+          "visit_state": "active",
+          "temporality": "current",
+          "turn_ids": [
+            "T28"
+          ],
+          "proposition_text": "The patient reports vision loss."
+        }
+      ]
+    },
+    {
+      "cluster_id": "CL11",
+      "cluster_type": "MedicationChange",
+      "canonical_concept": "injection",
+      "primary_cap_type": "MedicationRequest",
+      "source_cap_types": [
+        "MedicationRequest"
+      ],
+      "final_verification_status": "unconfirmed",
+      "clinical_status": "planned",
+      "final_assertion": "hypothetical",
+      "visit_state": "planned",
+      "source_speakers": [
+        "doctor"
+      ],
+      "source_modalities": [
+        "plan"
+      ],
+      "temporal_profile": [
+        "today"
+      ],
+      "evidence_turn_ids": [
+        "T32"
+      ],
+      "supporting_cap_ids": [
+        "CAP11"
+      ],
+      "cluster_summary": "The doctor orders an injection.",
+      "salience_score": 9,
+      "is_low_value": false,
+      "updates": [
+        {
+          "cap_id": "CAP11",
+          "content_source": "doctor",
+          "modality": "plan",
+          "verification_status": "unconfirmed",
+          "clinical_status": "planned",
+          "assertion": "hypothetical",
+          "visit_state": "planned",
+          "temporality": "today",
+          "turn_ids": [
+            "T32"
+          ],
+          "proposition_text": "The doctor orders an injection."
+        }
+      ],
+      "planned_changes": [
+        {
+          "proposition_text": "The doctor orders an injection.",
+          "turn_ids": [
+            "T32"
+          ],
+          "attributes": {}
+        }
+      ]
+    }
+  ]
+}

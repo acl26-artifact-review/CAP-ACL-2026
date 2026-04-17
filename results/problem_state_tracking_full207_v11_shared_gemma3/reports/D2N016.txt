@@ -1,0 +1,111 @@
+Case: D2N016
+
+Problem List and Visit State Tracking
+
+Problem List
+- depression | verification_status=confirmed | clinical_status=active | modalities=assessment,interview | speakers=doctor,patient | evidence=T10,T3,T6
+  Summary: Depression is the patient's first problem.
+  ClusterId: CL1
+  TemporalProfile: current, past
+  Updates:
+  - CAP4: content_source=doctor modality=assessment verification_status=confirmed clinical_status=active temporality=current turns=T3 :: Depression is the patient's first problem.
+  - CAP23: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=past turns=T6 :: The patient has a past medical history significant for depression.
+  - CAP7: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T10 :: The patient has depression.
+- hypertension | verification_status=confirmed | clinical_status=active | modalities=assessment,interview | speakers=doctor,patient | evidence=T17,T6
+  Summary: Hypertension is a second problem.
+  ClusterId: CL2
+  TemporalProfile: current, past
+  Updates:
+  - CAP24: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=past turns=T6 :: The patient has a past medical history significant for hypertension.
+  - CAP2: content_source=doctor modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T17 :: The patient's hypertension is not well controlled.
+  - CAP5: content_source=doctor modality=assessment verification_status=confirmed clinical_status=active temporality=current turns=T17 :: Hypertension is a second problem.
+- rotator cuff repair | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T6
+  Summary: The patient has a past medical history significant for prior rotator cuff repair.
+  ClusterId: CL3
+  TemporalProfile: past
+  Updates:
+  - CAP22: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=past turns=T6 :: The patient has a past medical history significant for prior rotator cuff repair.
+- left hand | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T7
+  Summary: The patient reports pain in the left hand.
+  ClusterId: CL4
+  TemporalProfile: current
+  Updates:
+  - CAP1: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T7 :: The patient reports pain in the left hand.
+- pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T7
+  Summary: The patient reports pain.
+  ClusterId: CL5
+  TemporalProfile: current
+  Updates:
+  - CAP6: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T7 :: The patient reports pain.
+- high blood pressure | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T13
+  Summary: The patient has high blood pressure.
+  ClusterId: CL7
+  TemporalProfile: current
+  Updates:
+  - CAP3: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T13 :: The patient has high blood pressure.
+
+Medication Tracking
+- [MedicationState] daily medication | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T10
+  Summary: The patient takes medication daily.
+  ClusterId: CL6
+  TemporalProfile: daily
+  CurrentRegimens:
+  - The patient takes medication daily. (T10)
+  Updates:
+  - CAP20: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=daily turns=T10 :: The patient takes medication daily.
+- [MedicationState] norvasc | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T23
+  Summary: The patient is taking norvasc.
+  ClusterId: CL9
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient is taking norvasc. (T23)
+  Updates:
+  - CAP21: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T23 :: The patient is taking norvasc.
+- [MedicationChange] norvasc | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T64
+  Summary: Norvasc will be increased to 10 mg a day.
+  ClusterId: CL15
+  TemporalProfile: current
+  PlannedChanges:
+  - Norvasc will be increased to 10 mg a day. (T64)
+  - Increase norvasc to 10 mg a day. (T64)
+  Updates:
+  - CAP11: content_source=doctor modality=plan verification_status=confirmed clinical_status=planned temporality=current turns=T64 :: Norvasc will be increased to 10 mg a day.
+  - CAP14: content_source=doctor modality=plan verification_status=unconfirmed clinical_status=planned temporality=current turns=T64 :: Increase norvasc to 10 mg a day.
+
+Other Structured States
+- [Plan] counseling | verification_status=confirmed | clinical_status=planned | modalities=interview | speakers=patient | evidence=T13
+  Summary: The patient attends counseling once a week.
+  ClusterId: CL8
+  TemporalProfile: weekly
+- [TestResult] blood pressure | verification_status=confirmed | clinical_status=active | modalities=exam,test_result | speakers=doctor,patient | evidence=T25,T44,T46
+  Summary: The patient checks blood pressure at home weekly.
+  ClusterId: CL10
+  TemporalProfile: past couple of months, today, weekly
+- [ExamFinding] murmur | verification_status=confirmed | clinical_status=stable | modalities=exam | speakers=doctor | evidence=T54
+  Summary: The doctor reports a slight three out of six systolic ejection murmur.
+  ClusterId: CL12
+  TemporalProfile: current
+- [ExamFinding] edema | verification_status=confirmed | clinical_status=active | modalities=exam | speakers=doctor | evidence=T54
+  Summary: The doctor reports 1 to 2+ pitting edema in the legs.
+  ClusterId: CL13
+  TemporalProfile: current
+- [Plan] dietary restriction | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T54
+  Summary: The doctor recommends decreasing salt intake.
+  ClusterId: CL14
+  TemporalProfile: future
+- [Plan] lipid panel | verification_status=confirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T64
+  Summary: A lipid panel will be ordered.
+  ClusterId: CL16
+  TemporalProfile: current
+- [Plan] echocardiogram | verification_status=confirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T64
+  Summary: An echocardiogram will be ordered.
+  ClusterId: CL17
+  TemporalProfile: current
+- [TestResult] lipid panel | verification_status=unconfirmed | clinical_status=planned | modalities=test_result | speakers=doctor | evidence=T64
+  Summary: Order a lipid panel.
+  ClusterId: CL18
+  TemporalProfile: current
+- [TestResult] echocardiogram | verification_status=unconfirmed | clinical_status=planned | modalities=test_result | speakers=doctor | evidence=T64
+  Summary: Order an echocardiogram.
+  ClusterId: CL19
+  TemporalProfile: current

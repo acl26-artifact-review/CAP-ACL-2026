@@ -1,0 +1,21 @@
+[Extraction Guidance]
+- Prefer clinically central CIUs rather than low-value fragments.
+- One CAP should capture exactly one clinical assertion.
+- Focus on chief complaint, HPI, active problems, diagnosis impressions, exam findings, key test results, medication states/changes, concrete orders, and follow-up.
+- On dense clinical chunks, returning 8 to 20 CAPs is acceptable if each CAP is atomic and clinically meaningful.
+- Keep `canonical_concept` short and normalized.
+- `proposition_text` should be a plain factual sentence, not a copy of the source turn.
+- Evidence may list only the supporting turn ids if span extraction is difficult.
+- Never invent details that are not explicitly supported by the provided text.
+- Do not create CAPs from pure questions, acknowledgements, scheduling chatter, consent language, or generic agreement phrases such as "I agree" or "okay".
+- Do not emit low-value CAPs such as "heart exam performed", "patient is present", "provider asked about X", or vague normals without a clinically meaningful finding.
+- For HPI, prioritize onset, mechanism, location, severity, course, associated neurologic symptoms, and clinically important negatives.
+- Prefer clinically central HPI, exam, result, medication-change, and order/follow-up content over minor preference details.
+- Use `Symptom` for symptom/ROS assertions (including negated findings); reserve `Problem` for condition-level abstractions.
+- If a single plan sentence contains multiple actions, split them into separate CAPs.
+- Avoid capturing conversational narrative details (small talk, social anecdotes) unless clinically consequential.
+- Treat a candidate as noise if removing it would not change diagnosis, reasoning, risk assessment, or management plan.
+- Keep lifestyle/context details only when they are explicitly linked to risk, differential interpretation, or plan.
+- Keep output JSON compact and stable: prefer `evidence` with only `turn_id`.
+- Avoid long `span_text` copies in evidence.
+- Keep `attributes` short and flat; do not generate verbose attribute objects.

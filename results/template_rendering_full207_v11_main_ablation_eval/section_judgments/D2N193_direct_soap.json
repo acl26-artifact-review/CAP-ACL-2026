@@ -1,0 +1,30 @@
+{
+  "section_miscategorizations": [
+    {
+      "text": "The patient reports blood pressure has been slightly elevated.",
+      "current_section": "O",
+      "expected_section": "S",
+      "severity": "major",
+      "reason": "This is a patient-reported history/symptom about home blood pressure, which belongs in the Subjective section, not in Objective findings."
+    },
+    {
+      "text": "The patient is on a hydrochlorothiazide 25mg daily.",
+      "current_section": "O",
+      "expected_section": "S",
+      "severity": "major",
+      "reason": "This is a current outpatient medication the patient is already taking; per instructions, such medications belong in Subjective unless framed as a treatment change or order."
+    },
+    {
+      "text": "Continue Metformin 500mg twice daily.",
+      "current_section": "P",
+      "expected_section": "A",
+      "severity": "minor",
+      "reason": "Without any prior mention of Metformin in the note, this appears as a new or unexplained medication in the Plan. However, it is likely intended as a continuation of an existing medication, which should have been documented in Subjective; the misplacement is organizational but not strongly misleading clinically."
+    }
+  ],
+  "summary_statistics": {
+    "section_appropriateness_score": 0.7,
+    "section_miscategorization_count": 3,
+    "major_section_miscategorization_count": 2
+  }
+}

@@ -1,0 +1,107 @@
+Case: D2N008
+
+Problem List and Visit State Tracking
+
+Problem List
+- congestive heart failure | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T13,T27,T5
+  Summary: The patient has congestive heart failure.
+  ClusterId: CL1
+  TemporalProfile: current, past
+  Updates:
+  - CAP19: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=past turns=T5 :: The patient has a past medical history of congestive heart failure.
+  - CAP23: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T13 :: The patient has congestive heart failure.
+  - CAP4: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T27 :: The patient has congestive heart failure.
+- dizziness | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T13,T5
+  Summary: The patient reports experiencing dizziness.
+  ClusterId: CL2
+  TemporalProfile: current, recent
+  Updates:
+  - CAP11: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=recent turns=T5 :: The patient reports dizziness.
+  - CAP5: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T13 :: The patient reports experiencing dizziness.
+- fatigue | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T5
+  Summary: The patient reports fatigue.
+  ClusterId: CL3
+  TemporalProfile: recent
+  Updates:
+  - CAP10: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=recent turns=T5 :: The patient reports fatigue.
+- kidney stones | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T5
+  Summary: The patient has a past medical history of kidney stones.
+  ClusterId: CL4
+  TemporalProfile: past
+  Updates:
+  - CAP20: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=past turns=T5 :: The patient has a past medical history of kidney stones.
+- colonoscopy | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T7
+  Summary: The patient has a prior colonoscopy.
+  ClusterId: CL5
+  TemporalProfile: past
+  Updates:
+  - CAP22: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=past turns=T7 :: The patient has a prior colonoscopy.
+- diverticulosis | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T13
+  Summary: The patient has a history of diverticulosis.
+  ClusterId: CL7
+  TemporalProfile: past
+  Updates:
+  - CAP21: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=past turns=T13 :: The patient has a history of diverticulosis.
+- swelling | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T19
+  Summary: The patient has noticed swelling in their legs.
+  ClusterId: CL8
+  TemporalProfile: current
+  Updates:
+  - CAP2: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T19 :: The patient has noticed swelling in their legs.
+  - CAP3: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T19 :: The patient reports swelling in their legs.
+- anemia | verification_status=unconfirmed | clinical_status=planned | modalities=assessment | speakers=doctor | evidence=T27
+  Summary: The doctor plans to send off more labs and an anemia profile.
+  ClusterId: CL9
+  TemporalProfile: future
+  Updates:
+  - CAP1: content_source=doctor modality=assessment verification_status=unconfirmed clinical_status=planned temporality=future turns=T27 :: The doctor plans to send off more labs and an anemia profile.
+- nasal congestion | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T27
+  Summary: The patient reports nasal congestion.
+  ClusterId: CL10
+  TemporalProfile: current
+  Updates:
+  - CAP6: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T27 :: The patient reports nasal congestion.
+  - CAP8: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T27 :: The patient reports nasal congestion.
+- seasonal allergies | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T27
+  Summary: The patient has seasonal allergies.
+  ClusterId: CL11
+  TemporalProfile: current
+  Updates:
+  - CAP7: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T27 :: The patient has seasonal allergies.
+  - CAP9: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T27 :: The patient has seasonal allergies.
+
+Medication Tracking
+- [MedicationState] salt intake | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T13
+  Summary: The patient has difficulty with salt intake.
+  ClusterId: CL6
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient has difficulty with salt intake. (T13)
+  Updates:
+  - CAP18: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T13 :: The patient has difficulty with salt intake.
+
+Other Structured States
+- [Plan] referral to gastroenterologist | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T27
+  Summary: The doctor orders a referral to the gastroenterologist.
+  ClusterId: CL12
+  TemporalProfile: future
+- [ExamFinding] systolic ejection murmur | verification_status=confirmed | clinical_status=stable | modalities=exam | speakers=doctor | evidence=T27
+  Summary: The doctor hears a systolic ejection murmur.
+  ClusterId: CL13
+  TemporalProfile: current
+- [TestResult] low hemoglobin | verification_status=confirmed | clinical_status=active | modalities=test_result | speakers=doctor | evidence=T27
+  Summary: The hemoglobin level is low at 8.2.
+  ClusterId: CL14
+  TemporalProfile: current
+- [ExamFinding] trace to one plus pitting edema | verification_status=confirmed | clinical_status=active | modalities=exam | speakers=doctor | evidence=T32
+  Summary: The doctor notes trace to one plus pitting edema in the ankles.
+  ClusterId: CL15
+  TemporalProfile: current
+- [Plan] endoscopy | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T37
+  Summary: The gastroenterologist will perform an endoscopy.
+  ClusterId: CL16
+  TemporalProfile: future
+- [Plan] colonoscopy | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T37
+  Summary: The gastroenterologist will perform a colonoscopy.
+  ClusterId: CL17
+  TemporalProfile: future

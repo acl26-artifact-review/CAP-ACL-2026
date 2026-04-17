@@ -1,0 +1,128 @@
+Case: D2N171
+
+Problem List and Visit State Tracking
+
+Problem List
+- herniated disc | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T7
+  Summary: The patient has a history of a herniated disc.
+  ClusterId: CL1
+  TemporalProfile: historical
+  Updates:
+  - CAP4: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=historical turns=T7 :: The patient has a history of a herniated disc.
+- no limitations in movement | verification_status=confirmed | clinical_status=stable | modalities=interview | speakers=patient | evidence=T7
+  Summary: The patient reports no limitations in movement.
+  ClusterId: CL2
+  TemporalProfile: current
+  Updates:
+  - CAP7: content_source=patient modality=interview verification_status=confirmed clinical_status=stable temporality=current turns=T7 :: The patient reports no limitations in movement.
+- back pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T7
+  Summary: The patient reports back pain.
+  ClusterId: CL3
+  TemporalProfile: current
+  Updates:
+  - CAP11: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T7 :: The patient reports back pain.
+- no recurrent issues | verification_status=confirmed | clinical_status=stable | modalities=interview | speakers=patient | evidence=T11
+  Summary: The patient reports no recurrent issues with their carpal tunnel.
+  ClusterId: CL4
+  TemporalProfile: current
+  Updates:
+  - CAP1: content_source=patient modality=interview verification_status=confirmed clinical_status=stable temporality=current turns=T11 :: The patient reports no recurrent issues with their carpal tunnel.
+- coronary artery disease | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T11,T45
+  Summary: The patient has a history of coronary artery disease.
+  ClusterId: CL5
+  TemporalProfile: current, historical
+  Updates:
+  - CAP5: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=historical turns=T11 :: The patient has a history of coronary artery disease.
+  - CAP8: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T45 :: The patient has known coronary artery disease.
+- stenting | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T14
+  Summary: The patient has a history of stenting.
+  ClusterId: CL7
+  TemporalProfile: past
+  Updates:
+  - CAP22: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=past turns=T14 :: The patient has a history of stenting.
+- chest pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T17,T27
+  Summary: The patient reports feeling a burning sensation in their chest.
+  ClusterId: CL8
+  TemporalProfile: current
+  Updates:
+  - CAP12: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T17 :: The patient reports chest pain.
+  - CAP3: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T27 :: The patient reports feeling a burning sensation in their chest.
+  - CAP6: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T27 :: The patient states the chest pain is not severe.
+- shortness of breath | verification_status=unconfirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T17
+  Summary: The patient reports shortness of breath.
+  ClusterId: CL9
+  TemporalProfile: past month
+  Updates:
+  - CAP9: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=past month turns=T17 :: The patient reports shortness of breath.
+- burning sensation | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T25
+  Summary: The patient describes the chest pain as a burning sensation.
+  ClusterId: CL10
+  TemporalProfile: current
+  Updates:
+  - CAP2: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T25 :: The patient describes the chest pain as a burning sensation.
+- chest pressure | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T29
+  Summary: The patient is experiencing chest pressure.
+  ClusterId: CL11
+  TemporalProfile: current
+  Updates:
+  - CAP10: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T29 :: The patient is experiencing chest pressure.
+- nasal congestion | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T35
+  Summary: The patient reports nasal congestion.
+  ClusterId: CL12
+  TemporalProfile: current
+  Updates:
+  - CAP13: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T35 :: The patient reports nasal congestion.
+- allergy | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T35
+  Summary: The patient has allergies.
+  ClusterId: CL13
+  TemporalProfile: current
+  Updates:
+  - CAP14: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T35 :: The patient has allergies.
+
+Medication Tracking
+- [MedicationState] heart vessels | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T14
+  Summary: The patient's heart vessels have been stented.
+  ClusterId: CL6
+  TemporalProfile: past
+  CurrentRegimens:
+  - The patient's heart vessels have been stented. (T14)
+  Updates:
+  - CAP19: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=past turns=T14 :: The patient's heart vessels have been stented.
+- [MedicationChange] crestor | verification_status=confirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T45
+  Summary: The patient will start crestor 20 mg once a day.
+  ClusterId: CL16
+  TemporalProfile: current
+  PlannedChanges:
+  - The patient will start crestor 20 mg once a day. (T45)
+  Updates:
+  - CAP18: content_source=doctor modality=plan verification_status=confirmed clinical_status=planned temporality=current turns=T45 :: The patient will start crestor 20 mg once a day.
+- [MedicationChange] aspirin | verification_status=confirmed | clinical_status=active | modalities=plan | speakers=doctor | evidence=T45
+  Summary: The patient will continue on aspirin.
+  ClusterId: CL17
+  TemporalProfile: current
+  PlannedChanges:
+  - The patient will continue on aspirin. (T45)
+  Updates:
+  - CAP20: content_source=doctor modality=plan verification_status=confirmed clinical_status=active temporality=current turns=T45 :: The patient will continue on aspirin.
+- [MedicationChange] toprol | verification_status=confirmed | clinical_status=active | modalities=plan | speakers=doctor | evidence=T45
+  Summary: The patient will continue on toprol.
+  ClusterId: CL18
+  TemporalProfile: current
+  PlannedChanges:
+  - The patient will continue on toprol. (T45)
+  Updates:
+  - CAP21: content_source=doctor modality=plan verification_status=confirmed clinical_status=active temporality=current turns=T45 :: The patient will continue on toprol.
+
+Other Structured States
+- [Plan] physical exam | verification_status=confirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T38
+  Summary: The doctor ordered a physical exam.
+  ClusterId: CL14
+  TemporalProfile: current
+- [Plan] lipid panel | verification_status=confirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T45
+  Summary: A lipid panel will be ordered.
+  ClusterId: CL15
+  TemporalProfile: current
+- [Plan] stress test | verification_status=confirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T50
+  Summary: A stress test will be ordered.
+  ClusterId: CL19
+  TemporalProfile: current

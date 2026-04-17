@@ -1,0 +1,131 @@
+Case: D2N176
+
+Problem List and Visit State Tracking
+
+Problem List
+- reflux | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T16,T4
+  Summary: The patient has a history of reflux.
+  ClusterId: CL1
+  TemporalProfile: current
+  Updates:
+  - CAP4: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T4 :: The patient has a history of reflux.
+  - CAP10: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T16 :: The patient's reflux was managed.
+- caffeine | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=doctor,patient | evidence=T12,T8
+  Summary: The patient was drinking so many energy drinks a day.
+  ClusterId: CL3
+  TemporalProfile: current, past
+  Updates:
+  - CAP5: content_source=doctor modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T8 :: The doctor recommends cutting back on caffeine.
+  - CAP1: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=past turns=T12 :: The patient was drinking so many energy drinks a day.
+- left hand pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T8
+  Summary: The patient reports pain in the left hand.
+  ClusterId: CL4
+  TemporalProfile: current
+  Updates:
+  - CAP2: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T8 :: The patient reports pain in the left hand.
+- spicy foods | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=doctor,patient | evidence=T14,T8
+  Summary: The doctor recommends cutting back on spicy foods.
+  ClusterId: CL5
+  TemporalProfile: current, past
+  Updates:
+  - CAP3: content_source=doctor modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T8 :: The doctor recommends cutting back on spicy foods.
+  - CAP8: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=past turns=T14 :: The patient was consuming spicy foods.
+- alcohol | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=doctor,patient | evidence=T14,T8
+  Summary: The doctor recommends cutting back on alcohol.
+  ClusterId: CL6
+  TemporalProfile: current, past
+  Updates:
+  - CAP6: content_source=doctor modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T8 :: The doctor recommends cutting back on alcohol.
+  - CAP11: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=past turns=T14 :: The patient was consuming alcohol.
+- comfortable | verification_status=confirmed | clinical_status=stable | modalities=interview | speakers=patient | evidence=T10
+  Summary: The patient feels comfortable.
+  ClusterId: CL7
+  TemporalProfile: current
+  Updates:
+  - CAP15: content_source=patient modality=interview verification_status=confirmed clinical_status=stable temporality=current turns=T10 :: The patient feels comfortable.
+- attitude | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T16
+  Summary: The patient's attitude improved.
+  ClusterId: CL9
+  TemporalProfile: current
+  Updates:
+  - CAP16: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T16 :: The patient's attitude improved.
+- shortness of breath | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T18
+  Summary: The patient denies shortness of breath.
+  ClusterId: CL10
+  TemporalProfile: current
+  Updates:
+  - CAP9: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T18 :: The patient denies shortness of breath.
+- chest pain | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T18
+  Summary: The patient denies chest pain.
+  ClusterId: CL11
+  TemporalProfile: current
+  Updates:
+  - CAP12: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T18 :: The patient denies chest pain.
+- belly pain | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T18
+  Summary: The patient denies belly pain.
+  ClusterId: CL12
+  TemporalProfile: current
+  Updates:
+  - CAP13: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T18 :: The patient denies belly pain.
+- nausea | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T18
+  Summary: The patient denies nausea.
+  ClusterId: CL13
+  TemporalProfile: current
+  Updates:
+  - CAP17: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T18 :: The patient denies nausea.
+- no symptoms | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T29
+  Summary: The patient reports no symptoms.
+  ClusterId: CL14
+  TemporalProfile: current
+  Updates:
+  - CAP14: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T29 :: The patient reports no symptoms.
+- gastritis | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T33
+  Summary: The patient had gastritis.
+  ClusterId: CL15
+  TemporalProfile: past
+  Updates:
+  - CAP18: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=past turns=T33 :: The patient had gastritis.
+- dietary modifications | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=clinician | evidence=T47
+  Summary: The patient should continue with dietary modifications.
+  ClusterId: CL18
+  TemporalProfile: ongoing
+  Updates:
+  - CAP7: content_source=clinician modality=interview verification_status=confirmed clinical_status=historical temporality=ongoing turns=T47 :: The patient should continue with dietary modifications.
+
+Medication Tracking
+- [MedicationState] protonix 40 mg a day | verification_status=confirmed | clinical_status=active | modalities=interview,plan | speakers=clinician,doctor | evidence=T46,T47,T7
+  Summary: The doctor wants the patient to take protonix 40 mg a day.
+  ClusterId: CL2
+  TemporalProfile: current, daily
+  CurrentRegimens:
+  - The doctor prescribed protonix. (T7)
+  - The doctor wants the patient to continue protonix. (T46)
+  - The doctor wants the patient to take protonix 40 mg a day. (T46)
+  - The patient should continue taking protonix 40 mg a day. (T47)
+  Updates:
+  - CAP28: content_source=doctor modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T7 :: The doctor prescribed protonix.
+  - CAP27: content_source=doctor modality=plan verification_status=confirmed clinical_status=active temporality=current turns=T46 :: The doctor wants the patient to continue protonix.
+  - CAP24: content_source=doctor modality=plan verification_status=confirmed clinical_status=active temporality=current turns=T46 :: The doctor wants the patient to take protonix 40 mg a day.
+  - CAP25: content_source=clinician modality=interview verification_status=confirmed clinical_status=active temporality=daily turns=T47 :: The patient should continue taking protonix 40 mg a day.
+- [MedicationState] green tea | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T12
+  Summary: The patient moved over from caffeine to green tea.
+  ClusterId: CL8
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient moved over from caffeine to green tea. (T12)
+  Updates:
+  - CAP26: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T12 :: The patient moved over from caffeine to green tea.
+
+Other Structured States
+- [ExamFinding] 1+ pitting edema | verification_status=confirmed | clinical_status=active | modalities=exam | speakers=doctor,exam | evidence=T36
+  Summary: The patient has 1+ pitting edema bilaterally in the lower extremities.
+  ClusterId: CL16
+  TemporalProfile: bilaterally, current
+- [ExamFinding] slight 2/6 systolic ejection murmur | verification_status=confirmed | clinical_status=stable | modalities=exam | speakers=doctor,exam | evidence=T36
+  Summary: The patient has a slight 2/6 systolic ejection murmur.
+  ClusterId: CL17
+  TemporalProfile: past
+- [Plan] lifestyle modifications | verification_status=confirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T47
+  Summary: The doctor recommends lifestyle modifications.
+  ClusterId: CL19
+  TemporalProfile: current

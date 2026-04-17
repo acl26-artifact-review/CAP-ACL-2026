@@ -1,0 +1,85 @@
+Case: D2N116
+
+Problem List and Visit State Tracking
+
+Problem List
+- shoulder pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T2
+  Summary: The patient reports pain in the right shoulder.
+  ClusterId: CL1
+  TemporalProfile: current
+  Updates:
+  - CAP2: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T2 :: The patient reports pain in the right shoulder.
+- shoulder injury | verification_status=unconfirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T5
+  Summary: The patient has a history of shoulder injury.
+  ClusterId: CL2
+  TemporalProfile: past
+  Updates:
+  - CAP14: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=past turns=T5 :: The patient has a history of shoulder injury.
+- pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T10,T11,T9
+  Summary: The patient reports pain on the outside of their arm.
+  ClusterId: CL3
+  TemporalProfile: current
+  Updates:
+  - CAP1: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T9 :: The patient reports pain on the outside of their arm.
+  - CAP8: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T9 :: The patient reports tenderness.
+  - CAP9: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T10 :: The patient experiences pain.
+  - CAP3: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T11 :: The patient reports pain when moving their arm.
+- left hand pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T19
+  Summary: The patient reports pain in the left hand.
+  ClusterId: CL6
+  TemporalProfile: current
+  Updates:
+  - CAP4: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T19 :: The patient reports pain in the left hand.
+- numbness | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T25
+  Summary: The patient denies numbness.
+  ClusterId: CL7
+  TemporalProfile: current
+  Updates:
+  - CAP10: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T25 :: The patient denies numbness.
+- foot pain | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T33
+  Summary: The patient reports foot pain.
+  ClusterId: CL8
+  TemporalProfile: current
+  Updates:
+  - CAP5: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T33 :: The patient reports foot pain.
+- ankle stiffness | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T33
+  Summary: The patient reports ankle stiffness.
+  ClusterId: CL9
+  TemporalProfile: current
+  Updates:
+  - CAP6: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T33 :: The patient reports ankle stiffness.
+- muscle soreness | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T33
+  Summary: The patient has muscle soreness.
+  ClusterId: CL10
+  TemporalProfile: current
+  Updates:
+  - CAP7: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T33 :: The patient has muscle soreness.
+
+Medication Tracking
+- [MedicationState] advil | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T17
+  Summary: The patient is taking advil for pain.
+  ClusterId: CL4
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient is taking advil for pain. (T17)
+  Updates:
+  - CAP12: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T17 :: The patient is taking advil for pain.
+- [MedicationState] icing | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T17
+  Summary: The patient is icing their arm.
+  ClusterId: CL5
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient is icing their arm. (T17)
+  Updates:
+  - CAP13: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T17 :: The patient is icing their arm.
+- [MedicationChange] epsom salt soak | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T34
+  Summary: The doctor recommends an Epsom salt soak.
+  ClusterId: CL11
+  TemporalProfile: current
+  PlannedChanges:
+  - The doctor recommends an Epsom salt soak. (T34)
+  Updates:
+  - CAP11: content_source=doctor modality=plan verification_status=unconfirmed clinical_status=planned temporality=current turns=T34 :: The doctor recommends an Epsom salt soak.
+
+Other Structured States
+- None

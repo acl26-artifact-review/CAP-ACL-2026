@@ -1,0 +1,96 @@
+Case: D2N197
+
+Problem List and Visit State Tracking
+
+Problem List
+- headache | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T1,T12,T21,T35
+  Summary: After taking Tylenol, the patient rates the headache as 4-5 out of 10.
+  ClusterId: CL1
+  TemporalProfile: current, first onset
+  Updates:
+  - CAP11: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T1 :: The patient reports having headaches.
+  - CAP5: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T12 :: After taking Tylenol, the patient rates the headache as 4-5 out of 10.
+  - CAP7: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=first onset turns=T12 :: The patient rates the initial headache as 7 out of 10.
+  - CAP12: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T12 :: The patient reports persistent headaches.
+  - CAP9: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T21 :: The patient reports headaches like this one.
+  - CAP13: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T35 :: The patient reports headaches.
+- high blood pressure | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T1
+  Summary: The patient reports that their blood pressure has been running high.
+  ClusterId: CL2
+  TemporalProfile: current
+  Updates:
+  - CAP6: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T1 :: The patient reports that their blood pressure has been running high.
+- blood sugar | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T7
+  Summary: The patient's blood sugar has been running at 120.
+  ClusterId: CL5
+  TemporalProfile: current
+  Updates:
+  - CAP1: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T7 :: The patient's blood sugar has been running at 120.
+  - CAP8: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T7 :: The patient's blood sugar has been running at 100.
+- runny nose | verification_status=unconfirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T23
+  Summary: The patient has not actually had any runny nose or cough or congestion along with the headache.
+  ClusterId: CL8
+  TemporalProfile: springtime
+  Updates:
+  - CAP2: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=springtime turns=T23 :: The patient has not actually had any runny nose or cough or congestion along with the headache.
+- congestion | verification_status=unconfirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T23
+  Summary: The patient thought maybe because it's springtime and they tend to get their allergies.
+  ClusterId: CL9
+  TemporalProfile: springtime
+  Updates:
+  - CAP4: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=springtime turns=T23 :: The patient thought maybe because it's springtime and they tend to get their allergies.
+- tenderness | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T25,T29
+  Summary: The patient has a little tenderness, not as much as I guess if I tap up here.
+  ClusterId: CL10
+  TemporalProfile: current
+  Updates:
+  - CAP10: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T25 :: The patient has tenderness right here.
+  - CAP3: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T29 :: The patient has a little tenderness, not as much as I guess if I tap up here.
+
+Medication Tracking
+- [MedicationState] lisinopril | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T4
+  Summary: The patient has been taking lisinopril.
+  ClusterId: CL4
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient has been taking lisinopril. (T4)
+  Updates:
+  - CAP19: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T4 :: The patient has been taking lisinopril.
+- [MedicationState] forgetting to take medication | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T11
+  Summary: The patient sometimes forgets to take lisinopril.
+  ClusterId: CL6
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient sometimes forgets to take lisinopril. (T11)
+  Updates:
+  - CAP18: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T11 :: The patient sometimes forgets to take lisinopril.
+- [MedicationState] tylenol | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T11
+  Summary: The patient takes Tylenol for headaches.
+  ClusterId: CL7
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient takes Tylenol for headaches. (T11)
+  Updates:
+  - CAP20: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T11 :: The patient takes Tylenol for headaches.
+- [MedicationChange] lisinopril | verification_status=confirmed | clinical_status=active | modalities=plan | speakers=doctor | evidence=T32
+  Summary: The doctor will increase the patient's lisinopril dose to 40 mg once daily.
+  ClusterId: CL11
+  TemporalProfile: current
+  PlannedChanges:
+  - The doctor will increase the patient's lisinopril dose to 40 mg once daily. (T32)
+  Updates:
+  - CAP17: content_source=doctor modality=plan verification_status=confirmed clinical_status=active temporality=current turns=T32 :: The doctor will increase the patient's lisinopril dose to 40 mg once daily.
+
+Other Structured States
+- [TestResult] blood pressure | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T4
+  Summary: The patient's blood pressure reading was 160 over 87.
+  ClusterId: CL3
+  TemporalProfile: current
+- [Plan] blood tests | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T34
+  Summary: The doctor will order blood tests.
+  ClusterId: CL12
+  TemporalProfile: future
+- [Plan] diabetes education | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T34
+  Summary: The doctor will provide diabetes education to the patient.
+  ClusterId: CL13
+  TemporalProfile: future

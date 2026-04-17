@@ -1,0 +1,58 @@
+{
+  "section_miscategorizations": [
+    {
+      "text": "The doctor's blood pressure is 124/76.",
+      "current_section": "O",
+      "expected_section": "O",
+      "severity": "minor",
+      "reason": "This appears to be a dictation error; vitals should refer to the patient, not the doctor. However, it is still clearly an objective vital sign, so the section is correct despite the wording issue."
+    },
+    {
+      "text": "The doctor's heart rate is 70.",
+      "current_section": "O",
+      "expected_section": "O",
+      "severity": "minor",
+      "reason": "Same as above: wording says 'doctor' but context indicates a patient vital sign; section is appropriate."
+    },
+    {
+      "text": "The doctor's respiration rate is 16.",
+      "current_section": "O",
+      "expected_section": "O",
+      "severity": "minor",
+      "reason": "Same dictation issue; still an objective vital sign, so section placement is acceptable."
+    },
+    {
+      "text": "The clinician orders a pulmonary function test (PFT).",
+      "current_section": "A",
+      "expected_section": "P",
+      "severity": "major",
+      "reason": "Orders and planned tests belong in the Plan section, not in the Assessment."
+    },
+    {
+      "text": "The clinician orders a PET CT.",
+      "current_section": "A",
+      "expected_section": "P",
+      "severity": "major",
+      "reason": "Imaging orders are management actions and should be documented in the Plan, not the Assessment."
+    },
+    {
+      "text": "The clinician suggests video assisted thoracoscopy removal of the nodule.",
+      "current_section": "A",
+      "expected_section": "P",
+      "severity": "major",
+      "reason": "A surgical recommendation is a management plan item and belongs in the Plan section."
+    },
+    {
+      "text": "The patient takes methotrexate seven and a half milligrams weekly.",
+      "current_section": "P",
+      "expected_section": "S",
+      "severity": "major",
+      "reason": "This is an existing medication regimen, not a new order or change; per instructions, current medications belong in the Subjective section."
+    }
+  ],
+  "summary_statistics": {
+    "section_appropriateness_score": 0.6,
+    "section_miscategorization_count": 7,
+    "major_section_miscategorization_count": 4
+  }
+}

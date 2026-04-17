@@ -1,0 +1,95 @@
+Case: D2N033
+
+Problem List and Visit State Tracking
+
+Problem List
+- right knee pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T5
+  Summary: The patient reports pain in their right knee.
+  ClusterId: CL1
+  TemporalProfile: four days ago
+  Updates:
+  - CAP5: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=four days ago turns=T5 :: The patient reports pain in their right knee.
+- swelling | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T5,T9
+  Summary: The patient reports swelling in their right knee.
+  ClusterId: CL2
+  TemporalProfile: afterward
+  Updates:
+  - CAP6: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=afterward turns=T5 :: The patient reports swelling in their right knee.
+  - CAP9: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=afterward turns=T9 :: The patient reports swelling.
+- pop | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T8
+  Summary: The patient reports hearing a pop when he injured his knee.
+  ClusterId: CL3
+  TemporalProfile: when he hurt it
+  Updates:
+  - CAP3: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=when he hurt it turns=T8 :: The patient reports hearing a pop when he injured his knee.
+- pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T10
+  Summary: The patient reports pain in the left knee.
+  ClusterId: CL4
+  TemporalProfile: current
+  Updates:
+  - CAP7: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T10 :: The patient reports pain in the left knee.
+  - CAP10: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T10 :: The patient reports pain.
+- difficulty with mobility | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T13
+  Summary: The patient reports difficulty with mobility.
+  ClusterId: CL7
+  TemporalProfile: current
+  Updates:
+  - CAP8: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T13 :: The patient reports difficulty with mobility.
+- diabetes | verification_status=confirmed | clinical_status=active | modalities=assessment | speakers=doctor | evidence=T18
+  Summary: The doctor is treating the patient's diabetes.
+  ClusterId: CL8
+  TemporalProfile: current
+  Updates:
+  - CAP1: content_source=doctor modality=assessment verification_status=confirmed clinical_status=active temporality=current turns=T18 :: The doctor is treating the patient's diabetes.
+- knee pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T25,T28
+  Summary: The patient reports pain in the knee.
+  ClusterId: CL9
+  TemporalProfile: current
+  Updates:
+  - CAP2: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T28,T25 :: The patient reports pain in the knee.
+- meniscus tear | verification_status=unconfirmed | clinical_status=historical | modalities=assessment | speakers=doctor | evidence=T32
+  Summary: The doctor is concerned about a torn or injured MCL.
+  ClusterId: CL10
+  TemporalProfile: current
+  Updates:
+  - CAP4: content_source=doctor modality=assessment verification_status=unconfirmed clinical_status=historical temporality=current turns=T32 :: The doctor is concerned about a torn or injured MCL.
+
+Medication Tracking
+- [MedicationState] ibuprofen | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T11
+  Summary: The patient took ibuprofen.
+  ClusterId: CL6
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient took ibuprofen. (T11)
+  Updates:
+  - CAP16: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T11 :: The patient took ibuprofen.
+- [MedicationChange] mobic | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T32
+  Summary: The doctor prescribes mobic.
+  ClusterId: CL13
+  TemporalProfile: current
+  PlannedChanges:
+  - The doctor prescribes mobic. (T32)
+  Updates:
+  - CAP15: content_source=doctor modality=plan verification_status=unconfirmed clinical_status=planned temporality=current turns=T32 :: The doctor prescribes mobic.
+- [MedicationChange] metformin | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T34
+  Summary: The doctor orders a refill on metformin.
+  ClusterId: CL14
+  TemporalProfile: current
+  PlannedChanges:
+  - The doctor orders a refill on metformin. (T34)
+  Updates:
+  - CAP11: content_source=doctor modality=plan verification_status=unconfirmed clinical_status=planned temporality=current turns=T34 :: The doctor orders a refill on metformin.
+
+Other Structured States
+- [Plan] ice | verification_status=confirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T11
+  Summary: The doctor recommends applying ice.
+  ClusterId: CL5
+  TemporalProfile: current
+- [Plan] straight leg brace | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T32
+  Summary: The doctor orders a straight leg brace.
+  ClusterId: CL11
+  TemporalProfile: current
+- [TestResult] mri | verification_status=unconfirmed | clinical_status=planned | modalities=assessment | speakers=doctor | evidence=T32
+  Summary: The doctor orders an MRI.
+  ClusterId: CL12
+  TemporalProfile: current

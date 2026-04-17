@@ -1,0 +1,2122 @@
+{
+  "case_id": "D2N015",
+  "method": "cap",
+  "template": "soap",
+  "summary_text": "S:\nThe patient reports experiencing intermittent shortness of breath, particularly during mild exercise or walking up her driveway, accompanied by palpitations. She describes this as happening more frequently lately. The patient also reports occasional moments of depression, exacerbated by the weather, and experiences low mood. She reports chronic back pain, which is often triggered by the same factors. The patient admits to smoking approximately once a day and has a history of smoking two packs per day. She states she gained weight during the COVID-19 pandemic and reports feeling extremely low.\n\nO:\nPhysical exam reveals mild wheezes in all lung fields. The patient's diaphragm appears flattened on chest x-ray. Blood pressure is mildly low. Heart rate is within normal limits. Neurologic examination is nonfocal. Pulmonary function tests indicate a possible asthma or COPD diagnosis.\n\nA:\nThe doctor diagnoses the patient with COPD. The patient may have asthma. The patient's depression is currently stable.\n\nP:\nThe doctor prescribes combivent (two puffs twice a day). The doctor prescribes albuterol (two puffs as needed). The doctor prescribes prednisone (taper pack). The doctor orders pulmonary function tests. The doctor orders a chest x-ray.",
+  "reference_summary": "CHIEF COMPLAINT\n\nShortness of breath.\n\nHISTORY OF PRESENT ILLNESS\n\nThe patient is a 48-year-old female who presents for shortness of breath. She has a history of depression, smoking and chronic back pain.\n\nThe patient reports shortness of breath with mild exercise and walking. She also notes some palpitations at times. She is not sure if it is due to her back pain or not. The patient states she has been exercising more. She continues to smoke but has decreased from two packs a day down to a couple of cigarettes daily.\n\nRegarding her depression, the patient feels that it is well managed on Effexor.\n\nRegarding her chronic back pain, the patient has been taking Neurontin, which she states is helping control her pain. She states she tries to get as much rest as she can. She is no longer doing yoga as she has not made it a habit.\n\nREVIEW OF SYSTEMS\n\n• Cardiovascular: Endorses dyspnea on exertion. Endorses palpitations.\n• Respiratory: Endorses shortness of breath.\n• Musculoskeletal: Endorses back pain.\n• Integumentary:\n• Psychiatric: Endorses depression.\n\nPHYSICAL EXAMINATION\n\n• Respiratory: Mild wheezes bilaterally.\n\nRESULTS\n\nPulmonary function test demonstrates mild asthma and the appearance of COPD.\n\nX-ray of the chest demonstrates flattening of the diaphragm which is consistent with COPD.\n\nASSESSMENT AND PLAN\n\nCOPD.\n• Medical Reasoning: The patient presents today with shortness of breath with exertion. Her pulmonary function tests suggest asthma or COPD and her most recent chest x-ray and physical examination today are also consistent with COPD.\n• Patient Education and Counseling: I counseled the patient on the importance of smoking cessation.\n• Medical Treatment: We will start the patient on Combivent, 2 puffs twice a day. I will also prescribe an albuterol inhaler, 2 puffs as needed, and a prednisone taper pack.\n\nDepression.\n• Medical Reasoning: It sounds like her depression is stable, so we will not change anything at this time.\n• Patient Education and Counseling: She will keep taking the Effexor. I encouraged her to practice yoga for depression relief as well as her back pain.\n\nChronic back pain.\n• Medical Reasoning: The patient says she is doing well on Neurontin with only occasional exacerbation of the pain.\n• Medical Treatment: She can continue Neurontin as is. I also encouraged her to practice yoga for her back pain.\n\nPatient Agreements: The patient understands and agrees with the recommended medical treatment plan.",
+  "source_cap": {
+    "atomic_propositions": [
+      {
+        "prop_id": "CAP1",
+        "cap_type": "Diagnosis",
+        "canonical_concept": "COPD",
+        "category": "Diagnosis",
+        "speaker": "doctor",
+        "predicate": "diagnoses",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "diagnostic"
+        ],
+        "proposition_text": "The doctor diagnoses the patient with COPD."
+      },
+      {
+        "prop_id": "CAP2",
+        "cap_type": "Problem",
+        "canonical_concept": "changes",
+        "category": "Problem",
+        "speaker": "patient",
+        "status": "uncertain",
+        "visit_state": "planned",
+        "temporality": "future",
+        "proposition_text": "The patient and provider have made changes to the patient's lifestyle."
+      },
+      {
+        "prop_id": "CAP3",
+        "cap_type": "Problem",
+        "canonical_concept": "covid 15",
+        "category": "Problem",
+        "speaker": "patient",
+        "status": "uncertain",
+        "visit_state": "historical",
+        "temporality": "past",
+        "claim_type_tags": [
+          "quantitative"
+        ],
+        "proposition_text": "The patient states they gained weight during the COVID-19 pandemic."
+      },
+      {
+        "prop_id": "CAP4",
+        "cap_type": "Symptom",
+        "canonical_concept": "smoking",
+        "category": "Symptom",
+        "speaker": "patient",
+        "status": "uncertain",
+        "visit_state": "historical",
+        "temporality": "past",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient previously smoked two packs of cigarettes per day."
+      },
+      {
+        "prop_id": "CAP5",
+        "cap_type": "Symptom",
+        "canonical_concept": "weather",
+        "category": "Symptom",
+        "speaker": "patient",
+        "status": "uncertain",
+        "visit_state": "historical",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient believes the weather may trigger their depression."
+      },
+      {
+        "prop_id": "CAP6",
+        "cap_type": "Symptom",
+        "canonical_concept": "exercise-induced shortness of breath",
+        "category": "Symptom",
+        "speaker": "patient",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient experiences shortness of breath during exercise."
+      },
+      {
+        "prop_id": "CAP7",
+        "cap_type": "Problem",
+        "canonical_concept": "covid 15",
+        "category": "Problem",
+        "speaker": "patient",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "causal",
+          "quantitative"
+        ],
+        "proposition_text": "The patient has gained weight due to COVID-19."
+      },
+      {
+        "prop_id": "CAP8",
+        "cap_type": "Symptom",
+        "canonical_concept": "left hand pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports pain in the left hand."
+      },
+      {
+        "prop_id": "CAP9",
+        "cap_type": "Symptom",
+        "canonical_concept": "smoking",
+        "category": "Symptom",
+        "speaker": "patient",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom",
+          "temporal"
+        ],
+        "proposition_text": "The patient currently smokes approximately once a day."
+      },
+      {
+        "prop_id": "CAP10",
+        "cap_type": "Problem",
+        "canonical_concept": "depression",
+        "category": "Problem",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "stable",
+        "temporality": "current",
+        "claim_type_tags": [
+          "temporal"
+        ],
+        "proposition_text": "The doctor states the patient's depression is stable."
+      },
+      {
+        "prop_id": "CAP11",
+        "cap_type": "Symptom",
+        "canonical_concept": "shortness of breath",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "recent",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports experiencing shortness of breath."
+      },
+      {
+        "prop_id": "CAP12",
+        "cap_type": "Symptom",
+        "canonical_concept": "depression",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports having moments of depression."
+      },
+      {
+        "prop_id": "CAP13",
+        "cap_type": "Symptom",
+        "canonical_concept": "depression",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports feeling extremely low."
+      },
+      {
+        "prop_id": "CAP14",
+        "cap_type": "Symptom",
+        "canonical_concept": "low mood",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports feeling extremely low."
+      },
+      {
+        "prop_id": "CAP15",
+        "cap_type": "Symptom",
+        "canonical_concept": "back pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports chronic back pain."
+      },
+      {
+        "prop_id": "CAP16",
+        "cap_type": "Symptom",
+        "canonical_concept": "shortness of breath",
+        "category": "Symptom",
+        "speaker": "doctor",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports shortness of breath."
+      },
+      {
+        "prop_id": "CAP17",
+        "cap_type": "Problem",
+        "canonical_concept": "asthma",
+        "category": "Problem",
+        "speaker": "doctor",
+        "status": "uncertain",
+        "visit_state": "historical",
+        "temporality": "current",
+        "proposition_text": "The patient may be having asthma."
+      },
+      {
+        "prop_id": "CAP18",
+        "cap_type": "Symptom",
+        "canonical_concept": "palpitations",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports experiencing palpitations."
+      },
+      {
+        "prop_id": "CAP19",
+        "cap_type": "Problem",
+        "canonical_concept": "COPD",
+        "category": "Problem",
+        "speaker": "doctor",
+        "status": "uncertain",
+        "visit_state": "historical",
+        "temporality": "current",
+        "proposition_text": "The patient may have COPD."
+      },
+      {
+        "prop_id": "CAP20",
+        "cap_type": "Symptom",
+        "canonical_concept": "wheeze",
+        "category": "Symptom",
+        "speaker": "doctor",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports mild wheezes."
+      },
+      {
+        "prop_id": "CAP21",
+        "cap_type": "Symptom",
+        "canonical_concept": "back pain",
+        "category": "Symptom",
+        "speaker": "doctor",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports back pain."
+      },
+      {
+        "prop_id": "CAP22",
+        "cap_type": "Symptom",
+        "canonical_concept": "pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports pain."
+      },
+      {
+        "prop_id": "CAP23",
+        "cap_type": "Order",
+        "canonical_concept": "pulmonary function tests",
+        "category": "Order",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "current",
+        "proposition_text": "Pulmonary function tests were ordered."
+      },
+      {
+        "prop_id": "CAP24",
+        "cap_type": "ExamFinding",
+        "canonical_concept": "diaphragm flatness",
+        "category": "ExamFinding",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient's diaphragm is flattened."
+      },
+      {
+        "prop_id": "CAP25",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "prednisone",
+        "category": "MedicationStatement",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "planned",
+        "temporality": "future",
+        "proposition_text": "The doctor will order a prednisone taper pack."
+      },
+      {
+        "prop_id": "CAP26",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "gabapentin neurontin",
+        "category": "MedicationStatement",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient is taking gabapentin neurontin."
+      },
+      {
+        "prop_id": "CAP27",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "effexor",
+        "category": "MedicationStatement",
+        "speaker": "doctor",
+        "predicate": "has",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient will continue taking effexor."
+      },
+      {
+        "prop_id": "CAP28",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "neurontin",
+        "category": "MedicationStatement",
+        "speaker": "doctor",
+        "predicate": "has",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient will continue taking neurontin."
+      },
+      {
+        "prop_id": "CAP29",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "effexor",
+        "category": "MedicationStatement",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient is taking effexor."
+      },
+      {
+        "prop_id": "CAP30",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "combivent",
+        "category": "MedicationStatement",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "planned",
+        "temporality": "future",
+        "proposition_text": "The doctor will order combivent."
+      },
+      {
+        "prop_id": "CAP31",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "albuterol",
+        "category": "MedicationStatement",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "planned",
+        "temporality": "future",
+        "proposition_text": "The doctor will order albuterol."
+      },
+      {
+        "prop_id": "CAP32",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "combivent",
+        "category": "MedicationStatement",
+        "speaker": "doctor",
+        "predicate": "prescribes",
+        "status": "affirmed",
+        "visit_state": "planned",
+        "temporality": "future",
+        "proposition_text": "The doctor prescribes combivent."
+      },
+      {
+        "prop_id": "CAP33",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "albuterol",
+        "category": "MedicationStatement",
+        "speaker": "doctor",
+        "predicate": "prescribes",
+        "status": "affirmed",
+        "visit_state": "planned",
+        "temporality": "future",
+        "proposition_text": "The doctor prescribes albuterol."
+      },
+      {
+        "prop_id": "CAP34",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "prednisone",
+        "category": "MedicationStatement",
+        "speaker": "doctor",
+        "predicate": "prescribes",
+        "status": "affirmed",
+        "visit_state": "planned",
+        "temporality": "future",
+        "proposition_text": "The doctor prescribes prednisone."
+      },
+      {
+        "prop_id": "CAP35",
+        "cap_type": "ProblemHistory",
+        "canonical_concept": "chronic back pain",
+        "category": "ProblemHistory",
+        "speaker": "doctor",
+        "status": "uncertain",
+        "visit_state": "historical",
+        "temporality": "historical",
+        "proposition_text": "The patient has a history of chronic back pain."
+      },
+      {
+        "prop_id": "CAP36",
+        "cap_type": "ProblemHistory",
+        "canonical_concept": "depression",
+        "category": "ProblemHistory",
+        "speaker": "doctor",
+        "status": "uncertain",
+        "visit_state": "historical",
+        "temporality": "historical",
+        "proposition_text": "The patient has a history of depression."
+      },
+      {
+        "prop_id": "CAP37",
+        "cap_type": "ProblemHistory",
+        "canonical_concept": "smoking",
+        "category": "ProblemHistory",
+        "speaker": "doctor",
+        "status": "uncertain",
+        "visit_state": "historical",
+        "temporality": "historical",
+        "proposition_text": "The patient is a smoker."
+      }
+    ],
+    "filtered_nonverifiable_units": []
+  },
+  "event_plan": null,
+  "summary_cap": {
+    "atomic_propositions": [
+      {
+        "prop_id": "P1",
+        "cap_type": "Symptom",
+        "canonical_concept": "intermittent shortness breath",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports intermittent shortness of breath."
+      },
+      {
+        "prop_id": "P2",
+        "cap_type": "Symptom",
+        "canonical_concept": "shortness breath during mild",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports shortness of breath during mild exercise."
+      },
+      {
+        "prop_id": "P3",
+        "cap_type": "Symptom",
+        "canonical_concept": "shortness breath when walking",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports shortness of breath when walking up her driveway."
+      },
+      {
+        "prop_id": "P4",
+        "cap_type": "Symptom",
+        "canonical_concept": "palpitations",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports palpitations."
+      },
+      {
+        "prop_id": "P5",
+        "cap_type": "Symptom",
+        "canonical_concept": "occasional moments depression",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports occasional moments of depression."
+      },
+      {
+        "prop_id": "P6",
+        "cap_type": "Symptom",
+        "canonical_concept": "low mood",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports low mood."
+      },
+      {
+        "prop_id": "P7",
+        "cap_type": "Symptom",
+        "canonical_concept": "pain:back",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports chronic back pain."
+      },
+      {
+        "prop_id": "P8",
+        "cap_type": "History",
+        "canonical_concept": "admits smoking approximately once",
+        "category": "History",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "past",
+        "claim_type_tags": [
+          "history"
+        ],
+        "proposition_text": "The patient admits to smoking approximately once a day."
+      },
+      {
+        "prop_id": "P9",
+        "cap_type": "History",
+        "canonical_concept": "history smoking two packs",
+        "category": "History",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "past",
+        "claim_type_tags": [
+          "history"
+        ],
+        "proposition_text": "The patient has a history of smoking two packs per day."
+      },
+      {
+        "prop_id": "P10",
+        "cap_type": "Finding",
+        "canonical_concept": "diagnoses copd",
+        "category": "Finding",
+        "speaker": "clinician",
+        "predicate": "diagnoses",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "diagnostic"
+        ],
+        "proposition_text": "The doctor diagnoses the patient with COPD."
+      },
+      {
+        "prop_id": "P11",
+        "cap_type": "ProblemHistory",
+        "canonical_concept": "may asthma",
+        "category": "ProblemHistory",
+        "speaker": "clinician",
+        "predicate": "suspects",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "problem"
+        ],
+        "proposition_text": "The patient may have asthma."
+      },
+      {
+        "prop_id": "P12",
+        "cap_type": "Finding",
+        "canonical_concept": "physical exam reveals mild",
+        "category": "Finding",
+        "speaker": "clinician",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "exam"
+        ],
+        "proposition_text": "Physical exam reveals mild wheezes in all lung fields."
+      },
+      {
+        "prop_id": "P13",
+        "cap_type": "Finding",
+        "canonical_concept": "diaphragm appears flattened chest",
+        "category": "Finding",
+        "speaker": "clinician",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "exam"
+        ],
+        "proposition_text": "The patient's diaphragm appears flattened on chest x-ray."
+      },
+      {
+        "prop_id": "P14",
+        "cap_type": "MedicationPlan",
+        "canonical_concept": "prescribes combivent two puffs",
+        "category": "MedicationPlan",
+        "speaker": "clinician",
+        "predicate": "prescribes",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "medication"
+        ],
+        "proposition_text": "The doctor prescribes combivent (two puffs twice a day)."
+      },
+      {
+        "prop_id": "P15",
+        "cap_type": "MedicationPlan",
+        "canonical_concept": "prescribes albuterol two puffs",
+        "category": "MedicationPlan",
+        "speaker": "clinician",
+        "predicate": "prescribes",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "medication"
+        ],
+        "proposition_text": "The doctor prescribes albuterol (two puffs as needed)."
+      },
+      {
+        "prop_id": "P16",
+        "cap_type": "MedicationPlan",
+        "canonical_concept": "prescribes prednisone taper pack",
+        "category": "MedicationPlan",
+        "speaker": "clinician",
+        "predicate": "prescribes",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "medication"
+        ],
+        "proposition_text": "The doctor prescribes prednisone (taper pack)."
+      },
+      {
+        "prop_id": "P17",
+        "cap_type": "TestPlan",
+        "canonical_concept": "orders pulmonary function tests",
+        "category": "TestPlan",
+        "speaker": "clinician",
+        "predicate": "orders",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "test"
+        ],
+        "proposition_text": "The doctor orders pulmonary function tests."
+      },
+      {
+        "prop_id": "P18",
+        "cap_type": "TestPlan",
+        "canonical_concept": "orders chest x-ray",
+        "category": "TestPlan",
+        "speaker": "clinician",
+        "predicate": "orders",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "test"
+        ],
+        "proposition_text": "The doctor orders a chest x-ray."
+      }
+    ],
+    "filtered_nonverifiable_units": [],
+    "runtime_seconds": 20.942
+  },
+  "cap_alignment": {
+    "cap_precision": 0.8333333333333334,
+    "cap_recall": 0.40540540540540543,
+    "cap_f1": 0.5454545454545455,
+    "matched_count": 15,
+    "summary_prop_count": 18,
+    "source_prop_count": 37,
+    "matched_pairs": [
+      {
+        "score": 1.0,
+        "summary_prop_id": "P10",
+        "source_prop_id": "CAP1",
+        "summary_text": "The doctor diagnoses the patient with COPD.",
+        "source_text": "The doctor diagnoses the patient with COPD."
+      },
+      {
+        "score": 1.0,
+        "summary_prop_id": "P7",
+        "source_prop_id": "CAP21",
+        "summary_text": "The patient reports chronic back pain.",
+        "source_text": "The patient reports back pain."
+      },
+      {
+        "score": 1.0,
+        "summary_prop_id": "P6",
+        "source_prop_id": "CAP14",
+        "summary_text": "The patient reports low mood.",
+        "source_text": "The patient reports feeling extremely low."
+      },
+      {
+        "score": 1.0,
+        "summary_prop_id": "P4",
+        "source_prop_id": "CAP18",
+        "summary_text": "The patient reports palpitations.",
+        "source_text": "The patient reports experiencing palpitations."
+      },
+      {
+        "score": 0.9231,
+        "summary_prop_id": "P1",
+        "source_prop_id": "CAP16",
+        "summary_text": "The patient reports intermittent shortness of breath.",
+        "source_text": "The patient reports shortness of breath."
+      },
+      {
+        "score": 0.8907,
+        "summary_prop_id": "P5",
+        "source_prop_id": "CAP12",
+        "summary_text": "The patient reports occasional moments of depression.",
+        "source_text": "The patient reports having moments of depression."
+      },
+      {
+        "score": 0.8571,
+        "summary_prop_id": "P17",
+        "source_prop_id": "CAP23",
+        "summary_text": "The doctor orders pulmonary function tests.",
+        "source_text": "Pulmonary function tests were ordered."
+      },
+      {
+        "score": 0.8235,
+        "summary_prop_id": "P2",
+        "source_prop_id": "CAP6",
+        "summary_text": "The patient reports shortness of breath during mild exercise.",
+        "source_text": "The patient experiences shortness of breath during exercise."
+      },
+      {
+        "score": 0.8,
+        "summary_prop_id": "P11",
+        "source_prop_id": "CAP19",
+        "summary_text": "The patient may have asthma.",
+        "source_text": "The patient may have COPD."
+      },
+      {
+        "score": 0.8,
+        "summary_prop_id": "P16",
+        "source_prop_id": "CAP34",
+        "summary_text": "The doctor prescribes prednisone (taper pack).",
+        "source_text": "The doctor prescribes prednisone."
+      },
+      {
+        "score": 0.7059,
+        "summary_prop_id": "P8",
+        "source_prop_id": "CAP9",
+        "summary_text": "The patient admits to smoking approximately once a day.",
+        "source_text": "The patient currently smokes approximately once a day."
+      },
+      {
+        "score": 0.69,
+        "summary_prop_id": "P9",
+        "source_prop_id": "CAP4",
+        "summary_text": "The patient has a history of smoking two packs per day.",
+        "source_text": "The patient previously smoked two packs of cigarettes per day."
+      },
+      {
+        "score": 0.6667,
+        "summary_prop_id": "P15",
+        "source_prop_id": "CAP33",
+        "summary_text": "The doctor prescribes albuterol (two puffs as needed).",
+        "source_text": "The doctor prescribes albuterol."
+      },
+      {
+        "score": 0.6667,
+        "summary_prop_id": "P3",
+        "source_prop_id": "CAP11",
+        "summary_text": "The patient reports shortness of breath when walking up her driveway.",
+        "source_text": "The patient reports experiencing shortness of breath."
+      },
+      {
+        "score": 0.6269,
+        "summary_prop_id": "P14",
+        "source_prop_id": "CAP32",
+        "summary_text": "The doctor prescribes combivent (two puffs twice a day).",
+        "source_text": "The doctor prescribes combivent."
+      }
+    ],
+    "unsupported_summary_props": [
+      {
+        "prop_id": "P12",
+        "cap_type": "Finding",
+        "canonical_concept": "physical exam reveals mild",
+        "category": "Finding",
+        "speaker": "clinician",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "exam"
+        ],
+        "proposition_text": "Physical exam reveals mild wheezes in all lung fields."
+      },
+      {
+        "prop_id": "P13",
+        "cap_type": "Finding",
+        "canonical_concept": "diaphragm appears flattened chest",
+        "category": "Finding",
+        "speaker": "clinician",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "exam"
+        ],
+        "proposition_text": "The patient's diaphragm appears flattened on chest x-ray."
+      },
+      {
+        "prop_id": "P18",
+        "cap_type": "TestPlan",
+        "canonical_concept": "orders chest x-ray",
+        "category": "TestPlan",
+        "speaker": "clinician",
+        "predicate": "orders",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "test"
+        ],
+        "proposition_text": "The doctor orders a chest x-ray."
+      }
+    ],
+    "missing_source_props": [
+      {
+        "prop_id": "CAP2",
+        "cap_type": "Problem",
+        "canonical_concept": "changes",
+        "category": "Problem",
+        "speaker": "patient",
+        "status": "uncertain",
+        "visit_state": "planned",
+        "temporality": "future",
+        "proposition_text": "The patient and provider have made changes to the patient's lifestyle."
+      },
+      {
+        "prop_id": "CAP3",
+        "cap_type": "Problem",
+        "canonical_concept": "covid 15",
+        "category": "Problem",
+        "speaker": "patient",
+        "status": "uncertain",
+        "visit_state": "historical",
+        "temporality": "past",
+        "claim_type_tags": [
+          "quantitative"
+        ],
+        "proposition_text": "The patient states they gained weight during the COVID-19 pandemic."
+      },
+      {
+        "prop_id": "CAP5",
+        "cap_type": "Symptom",
+        "canonical_concept": "weather",
+        "category": "Symptom",
+        "speaker": "patient",
+        "status": "uncertain",
+        "visit_state": "historical",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient believes the weather may trigger their depression."
+      },
+      {
+        "prop_id": "CAP7",
+        "cap_type": "Problem",
+        "canonical_concept": "covid 15",
+        "category": "Problem",
+        "speaker": "patient",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "causal",
+          "quantitative"
+        ],
+        "proposition_text": "The patient has gained weight due to COVID-19."
+      },
+      {
+        "prop_id": "CAP8",
+        "cap_type": "Symptom",
+        "canonical_concept": "left hand pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports pain in the left hand."
+      },
+      {
+        "prop_id": "CAP10",
+        "cap_type": "Problem",
+        "canonical_concept": "depression",
+        "category": "Problem",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "stable",
+        "temporality": "current",
+        "claim_type_tags": [
+          "temporal"
+        ],
+        "proposition_text": "The doctor states the patient's depression is stable."
+      },
+      {
+        "prop_id": "CAP13",
+        "cap_type": "Symptom",
+        "canonical_concept": "depression",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports feeling extremely low."
+      },
+      {
+        "prop_id": "CAP15",
+        "cap_type": "Symptom",
+        "canonical_concept": "back pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports chronic back pain."
+      },
+      {
+        "prop_id": "CAP17",
+        "cap_type": "Problem",
+        "canonical_concept": "asthma",
+        "category": "Problem",
+        "speaker": "doctor",
+        "status": "uncertain",
+        "visit_state": "historical",
+        "temporality": "current",
+        "proposition_text": "The patient may be having asthma."
+      },
+      {
+        "prop_id": "CAP20",
+        "cap_type": "Symptom",
+        "canonical_concept": "wheeze",
+        "category": "Symptom",
+        "speaker": "doctor",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports mild wheezes."
+      },
+      {
+        "prop_id": "CAP22",
+        "cap_type": "Symptom",
+        "canonical_concept": "pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports pain."
+      },
+      {
+        "prop_id": "CAP24",
+        "cap_type": "ExamFinding",
+        "canonical_concept": "diaphragm flatness",
+        "category": "ExamFinding",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient's diaphragm is flattened."
+      },
+      {
+        "prop_id": "CAP25",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "prednisone",
+        "category": "MedicationStatement",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "planned",
+        "temporality": "future",
+        "proposition_text": "The doctor will order a prednisone taper pack."
+      },
+      {
+        "prop_id": "CAP26",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "gabapentin neurontin",
+        "category": "MedicationStatement",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient is taking gabapentin neurontin."
+      },
+      {
+        "prop_id": "CAP27",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "effexor",
+        "category": "MedicationStatement",
+        "speaker": "doctor",
+        "predicate": "has",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient will continue taking effexor."
+      },
+      {
+        "prop_id": "CAP28",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "neurontin",
+        "category": "MedicationStatement",
+        "speaker": "doctor",
+        "predicate": "has",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient will continue taking neurontin."
+      },
+      {
+        "prop_id": "CAP29",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "effexor",
+        "category": "MedicationStatement",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient is taking effexor."
+      },
+      {
+        "prop_id": "CAP30",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "combivent",
+        "category": "MedicationStatement",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "planned",
+        "temporality": "future",
+        "proposition_text": "The doctor will order combivent."
+      },
+      {
+        "prop_id": "CAP31",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "albuterol",
+        "category": "MedicationStatement",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "planned",
+        "temporality": "future",
+        "proposition_text": "The doctor will order albuterol."
+      },
+      {
+        "prop_id": "CAP35",
+        "cap_type": "ProblemHistory",
+        "canonical_concept": "chronic back pain",
+        "category": "ProblemHistory",
+        "speaker": "doctor",
+        "status": "uncertain",
+        "visit_state": "historical",
+        "temporality": "historical",
+        "proposition_text": "The patient has a history of chronic back pain."
+      },
+      {
+        "prop_id": "CAP36",
+        "cap_type": "ProblemHistory",
+        "canonical_concept": "depression",
+        "category": "ProblemHistory",
+        "speaker": "doctor",
+        "status": "uncertain",
+        "visit_state": "historical",
+        "temporality": "historical",
+        "proposition_text": "The patient has a history of depression."
+      },
+      {
+        "prop_id": "CAP37",
+        "cap_type": "ProblemHistory",
+        "canonical_concept": "smoking",
+        "category": "ProblemHistory",
+        "speaker": "doctor",
+        "status": "uncertain",
+        "visit_state": "historical",
+        "temporality": "historical",
+        "proposition_text": "The patient is a smoker."
+      }
+    ]
+  },
+  "reference_gpt_f1_items": {
+    "active_problems_symptoms": [
+      "back pain",
+      "mild wheezes bilaterally",
+      "depression",
+      "mild asthma",
+      "COPD"
+    ],
+    "negated_findings": [],
+    "uncertain_findings": [],
+    "medication_treatment": [],
+    "plan_followup": [],
+    "_chunk_count": [
+      "3"
+    ]
+  },
+  "summary_gpt_f1_items": {
+    "active_problems_symptoms": [],
+    "negated_findings": [],
+    "uncertain_findings": [],
+    "medication_treatment": [],
+    "plan_followup": [],
+    "_chunk_count": [
+      "1"
+    ]
+  },
+  "gpt_f1_alignment": {
+    "by_category": {
+      "active_problems_symptoms": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "matched_count": 0,
+        "pred_count": 0,
+        "ref_count": 5,
+        "matches": [],
+        "unsupported_pred_items": [],
+        "missing_ref_items": [
+          "back pain",
+          "mild wheezes bilaterally",
+          "depression",
+          "mild asthma",
+          "COPD"
+        ]
+      },
+      "negated_findings": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "matched_count": 0,
+        "pred_count": 0,
+        "ref_count": 0,
+        "matches": [],
+        "unsupported_pred_items": [],
+        "missing_ref_items": []
+      },
+      "uncertain_findings": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "matched_count": 0,
+        "pred_count": 0,
+        "ref_count": 0,
+        "matches": [],
+        "unsupported_pred_items": [],
+        "missing_ref_items": []
+      },
+      "medication_treatment": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "matched_count": 0,
+        "pred_count": 0,
+        "ref_count": 0,
+        "matches": [],
+        "unsupported_pred_items": [],
+        "missing_ref_items": []
+      },
+      "plan_followup": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "matched_count": 0,
+        "pred_count": 0,
+        "ref_count": 0,
+        "matches": [],
+        "unsupported_pred_items": [],
+        "missing_ref_items": []
+      }
+    }
+  },
+  "reference_nair_concepts": {
+    "sections": [
+      {
+        "heading": "Clinical Note",
+        "section_value": "CHIEF COMPLAINT\nShortness of breath.\nHISTORY OF PRESENT ILLNESS\nThe patient is a 48-year-old female who presents for shortness of breath. She has a history of depression, smoking and chronic back pain.\nThe patient reports shortness of breath with mild exercise and walking. She also notes some palpitations at times. She is not sure if it is due to her back pain or not. The patient states she has been exercising more. She continues to smoke but has decreased from two packs a day down to a couple of cigarettes daily.\nRegarding her depression, the patient feels that it is well managed on Effexor.\nRegarding her chronic back pain, the patient has been taking Neurontin, which she states is helping control her pain. She states she tries to get as much rest as she can. She is no longer doing yoga as she has not made it a habit.\nREVIEW OF SYSTEMS\n• Cardiovascular: Endorses dyspnea on exertion. Endorses palpitations.\n• Respiratory: Endorses shortness of breath.",
+        "medical_concepts": [
+          "shortness of breath",
+          "dyspnea on exertion",
+          "palpitations",
+          "depression",
+          "smoking",
+          "chronic back pain",
+          "back pain",
+          "Effexor",
+          "Neurontin",
+          "yoga"
+        ]
+      },
+      {
+        "heading": "Clinical Note",
+        "section_value": "• Musculoskeletal: Endorses back pain.",
+        "medical_concepts": [
+          "back pain"
+        ]
+      },
+      {
+        "heading": "• Integumentary",
+        "section_value": "• Psychiatric: Endorses depression.\nPHYSICAL EXAMINATION\n• Respiratory: Mild wheezes bilaterally.\nRESULTS\nPulmonary function test demonstrates mild asthma and the appearance of COPD.\nX-ray of the chest demonstrates flattening of the diaphragm which is consistent with COPD.\nASSESSMENT AND PLAN\nCOPD.\n• Medical Reasoning: The patient presents today with shortness of breath with exertion. Her pulmonary function tests suggest asthma or COPD and her most recent chest x-ray and physical examination today are also consistent with COPD.\n• Patient Education and Counseling: I counseled the patient on the importance of smoking cessation.",
+        "medical_concepts": [
+          "depression",
+          "wheezes",
+          "pulmonary function test",
+          "asthma",
+          "chronic obstructive pulmonary disease",
+          "COPD",
+          "chest x-ray",
+          "flattening of the diaphragm",
+          "shortness of breath with exertion",
+          "smoking"
+        ]
+      },
+      {
+        "heading": "• Integumentary",
+        "section_value": "• Medical Treatment: We will start the patient on Combivent, 2 puffs twice a day. I will also prescribe an albuterol inhaler, 2 puffs as needed, and a prednisone taper pack.\nDepression.\n• Medical Reasoning: It sounds like her depression is stable, so we will not change anything at this time.\n• Patient Education and Counseling: She will keep taking the Effexor. I encouraged her to practice yoga for depression relief as well as her back pain.\nChronic back pain.\n• Medical Reasoning: The patient says she is doing well on Neurontin with only occasional exacerbation of the pain.\n• Medical Treatment: She can continue Neurontin as is. I also encouraged her to practice yoga for her back pain.\nPatient Agreements: The patient understands and agrees with the recommended medical treatment plan.",
+        "medical_concepts": [
+          "Combivent",
+          "albuterol inhaler",
+          "prednisone taper pack",
+          "depression",
+          "Effexor",
+          "yoga",
+          "back pain",
+          "chronic back pain",
+          "Neurontin",
+          "pain exacerbation"
+        ]
+      }
+    ],
+    "medical_concepts": [
+      "shortness of breath",
+      "dyspnea on exertion",
+      "palpitations",
+      "depression",
+      "smoking",
+      "chronic back pain",
+      "back pain",
+      "Effexor",
+      "Neurontin",
+      "yoga",
+      "wheezes",
+      "pulmonary function test",
+      "asthma",
+      "chronic obstructive pulmonary disease",
+      "COPD",
+      "chest x-ray",
+      "flattening of the diaphragm",
+      "shortness of breath with exertion",
+      "Combivent",
+      "albuterol inhaler",
+      "prednisone taper pack",
+      "pain exacerbation"
+    ],
+    "section_count": 4
+  },
+  "summary_nair_concepts": {
+    "sections": [
+      {
+        "heading": "S",
+        "section_value": "The patient reports experiencing intermittent shortness of breath, particularly during mild exercise or walking up her driveway, accompanied by palpitations. She describes this as happening more frequently lately. The patient also reports occasional moments of depression, exacerbated by the weather, and experiences low mood. She reports chronic back pain, which is often triggered by the same factors. The patient admits to smoking approximately once a day and has a history of smoking two packs per day. She states she gained weight during the COVID-19 pandemic and reports feeling extremely low.",
+        "medical_concepts": [
+          "shortness of breath",
+          "exertional dyspnea",
+          "palpitations",
+          "depression",
+          "low mood",
+          "chronic back pain",
+          "smoking",
+          "tobacco use",
+          "history of heavy smoking",
+          "weight gain",
+          "COVID-19 pandemic"
+        ]
+      },
+      {
+        "heading": "O",
+        "section_value": "Physical exam reveals mild wheezes in all lung fields. The patient's diaphragm appears flattened on chest x-ray. Blood pressure is mildly low. Heart rate is within normal limits. Neurologic examination is nonfocal. Pulmonary function tests indicate a possible asthma or COPD diagnosis.",
+        "medical_concepts": [
+          "wheezes",
+          "lung fields",
+          "flattened diaphragm",
+          "chest x-ray",
+          "blood pressure",
+          "hypotension",
+          "heart rate",
+          "neurologic examination",
+          "pulmonary function tests",
+          "asthma",
+          "COPD"
+        ]
+      },
+      {
+        "heading": "A",
+        "section_value": "The doctor diagnoses the patient with COPD. The patient may have asthma. The patient's depression is currently stable.",
+        "medical_concepts": [
+          "COPD",
+          "asthma",
+          "depression"
+        ]
+      },
+      {
+        "heading": "P",
+        "section_value": "The doctor prescribes combivent (two puffs twice a day). The doctor prescribes albuterol (two puffs as needed). The doctor prescribes prednisone (taper pack). The doctor orders pulmonary function tests. The doctor orders a chest x-ray.",
+        "medical_concepts": [
+          "combivent",
+          "albuterol",
+          "prednisone",
+          "pulmonary function tests",
+          "chest x-ray"
+        ]
+      }
+    ],
+    "medical_concepts": [
+      "shortness of breath",
+      "exertional dyspnea",
+      "palpitations",
+      "depression",
+      "low mood",
+      "chronic back pain",
+      "smoking",
+      "tobacco use",
+      "history of heavy smoking",
+      "weight gain",
+      "COVID-19 pandemic",
+      "wheezes",
+      "lung fields",
+      "flattened diaphragm",
+      "chest x-ray",
+      "blood pressure",
+      "hypotension",
+      "heart rate",
+      "neurologic examination",
+      "pulmonary function tests",
+      "asthma",
+      "COPD",
+      "combivent",
+      "albuterol",
+      "prednisone"
+    ],
+    "section_count": 4
+  },
+  "nair_alignment": {
+    "pred_concepts": [
+      "shortness of breath",
+      "exertional dyspnea",
+      "palpitations",
+      "depression",
+      "low mood",
+      "chronic back pain",
+      "smoking",
+      "tobacco use",
+      "history of heavy smoking",
+      "weight gain",
+      "COVID-19 pandemic",
+      "wheezes",
+      "lung fields",
+      "flattened diaphragm",
+      "chest x-ray",
+      "blood pressure",
+      "hypotension",
+      "heart rate",
+      "neurologic examination",
+      "pulmonary function tests",
+      "asthma",
+      "COPD",
+      "combivent",
+      "albuterol",
+      "prednisone"
+    ],
+    "ref_concepts": [
+      "shortness of breath",
+      "dyspnea on exertion",
+      "palpitations",
+      "depression",
+      "smoking",
+      "chronic back pain",
+      "back pain",
+      "Effexor",
+      "Neurontin",
+      "yoga",
+      "wheezes",
+      "pulmonary function test",
+      "asthma",
+      "chronic obstructive pulmonary disease",
+      "COPD",
+      "chest x-ray",
+      "flattening of the diaphragm",
+      "shortness of breath with exertion",
+      "Combivent",
+      "albuterol inhaler",
+      "prednisone taper pack",
+      "pain exacerbation"
+    ],
+    "precision_alignment": {
+      "found_b": [
+        "shortness of breath",
+        "exertional dyspnea",
+        "palpitations",
+        "depression",
+        "chronic back pain",
+        "smoking",
+        "tobacco use",
+        "history of heavy smoking",
+        "wheezes",
+        "flattened diaphragm",
+        "chest x-ray",
+        "pulmonary function tests",
+        "asthma",
+        "COPD",
+        "combivent",
+        "albuterol",
+        "prednisone"
+      ],
+      "not_found_b": [
+        "low mood",
+        "weight gain",
+        "COVID-19 pandemic",
+        "lung fields",
+        "blood pressure",
+        "hypotension",
+        "heart rate",
+        "neurologic examination"
+      ],
+      "chunk_count": 2,
+      "chunk_results": [
+        {
+          "found_b": [
+            "shortness of breath",
+            "exertional dyspnea",
+            "palpitations",
+            "depression",
+            "chronic back pain",
+            "smoking",
+            "tobacco use",
+            "history of heavy smoking",
+            "wheezes",
+            "flattened diaphragm",
+            "chest x-ray",
+            "pulmonary function tests",
+            "asthma",
+            "COPD",
+            "combivent",
+            "albuterol"
+          ],
+          "not_found_b": [
+            "low mood",
+            "weight gain",
+            "COVID-19 pandemic",
+            "lung fields",
+            "blood pressure",
+            "hypotension",
+            "heart rate",
+            "neurologic examination"
+          ]
+        },
+        {
+          "found_b": [
+            "prednisone"
+          ],
+          "not_found_b": []
+        }
+      ]
+    },
+    "recall_alignment": {
+      "found_b": [
+        "shortness of breath",
+        "dyspnea on exertion",
+        "palpitations",
+        "depression",
+        "smoking",
+        "chronic back pain",
+        "back pain",
+        "wheezes",
+        "pulmonary function test",
+        "asthma",
+        "chronic obstructive pulmonary disease",
+        "COPD",
+        "chest x-ray",
+        "flattening of the diaphragm",
+        "shortness of breath with exertion",
+        "Combivent",
+        "albuterol inhaler",
+        "prednisone taper pack",
+        "pain exacerbation"
+      ],
+      "not_found_b": [
+        "Effexor",
+        "Neurontin",
+        "yoga"
+      ],
+      "chunk_count": 1,
+      "chunk_results": [
+        {
+          "found_b": [
+            "shortness of breath",
+            "dyspnea on exertion",
+            "palpitations",
+            "depression",
+            "smoking",
+            "chronic back pain",
+            "back pain",
+            "wheezes",
+            "pulmonary function test",
+            "asthma",
+            "chronic obstructive pulmonary disease",
+            "COPD",
+            "chest x-ray",
+            "flattening of the diaphragm",
+            "shortness of breath with exertion",
+            "Combivent",
+            "albuterol inhaler",
+            "prednisone taper pack",
+            "pain exacerbation"
+          ],
+          "not_found_b": [
+            "Effexor",
+            "Neurontin",
+            "yoga"
+          ]
+        }
+      ]
+    }
+  },
+  "semantic_cap_audit": {
+    "source_cap_recall": [
+      {
+        "cap_id": "P1",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P2",
+        "judgment": "contradicted",
+        "reason": null
+      },
+      {
+        "cap_id": "P3",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P4",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P5",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P6",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P7",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P8",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P9",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P10",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P11",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P12",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P13",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P14",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P15",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P16",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P1",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P2",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P3",
+        "judgment": "contradicted",
+        "reason": null
+      },
+      {
+        "cap_id": "P4",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P5",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P6",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P7",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P8",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P9",
+        "judgment": "contradicted",
+        "reason": null
+      },
+      {
+        "cap_id": "P10",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P11",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P12",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P13",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P14",
+        "judgment": "contradicted",
+        "reason": null
+      },
+      {
+        "cap_id": "P15",
+        "judgment": "contradicted",
+        "reason": null
+      },
+      {
+        "cap_id": "P16",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P1",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P2",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P3",
+        "judgment": "contradicted",
+        "reason": null
+      },
+      {
+        "cap_id": "P4",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P5",
+        "judgment": "supported",
+        "reason": null
+      }
+    ],
+    "summary_cap_precision": [
+      {
+        "cap_id": "P1",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P2",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P3",
+        "judgment": "unsupported",
+        "reason": null
+      },
+      {
+        "cap_id": "P4",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P5",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P6",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P7",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P8",
+        "judgment": "contradicted",
+        "reason": null
+      },
+      {
+        "cap_id": "P9",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P10",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P11",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P12",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P13",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P14",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P15",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P16",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P1",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P2",
+        "judgment": "unsupported",
+        "reason": null
+      }
+    ],
+    "metrics": {
+      "semantic_cap_precision": 0.6389,
+      "semantic_cap_recall": 0.6216,
+      "semantic_cap_f1": 0.6301,
+      "semantic_cap_precision_supported_count": 8,
+      "semantic_cap_precision_partial_count": 7,
+      "semantic_cap_precision_denominator": 18,
+      "semantic_cap_recall_supported_count": 21,
+      "semantic_cap_recall_partial_count": 4,
+      "semantic_cap_recall_denominator": 37,
+      "semantic_cap_low_value_source_count": 0,
+      "semantic_cap_low_value_summary_count": 0,
+      "semantic_cap_missing_count": 6,
+      "semantic_cap_unsupported_count": 2,
+      "semantic_cap_contradicted_source_count": 6,
+      "semantic_cap_contradicted_summary_count": 1
+    }
+  },
+  "safety_judgment": null,
+  "section_judgment": {
+    "section_miscategorizations": [
+      {
+        "text": "Pulmonary function tests indicate a possible asthma or COPD diagnosis.",
+        "current_section": "O",
+        "expected_section": "A",
+        "severity": "major",
+        "reason": "This sentence is not just reporting raw test values but interpreting them into possible diagnoses, which is part of the clinician's diagnostic impression and belongs in the Assessment section."
+      },
+      {
+        "text": "The doctor orders pulmonary function tests.",
+        "current_section": "P",
+        "expected_section": "O",
+        "severity": "major",
+        "reason": "Pulmonary function tests are already described as completed and interpreted in the Objective section, so this statement functions as documentation of a procedure that has been performed rather than a new order; it should be in Objective to avoid confusion about test timing."
+      },
+      {
+        "text": "The doctor orders a chest x-ray.",
+        "current_section": "P",
+        "expected_section": "O",
+        "severity": "major",
+        "reason": "The chest x-ray findings are already documented in Objective, indicating the study has been done; this line therefore reflects a completed test, not a new plan, and should be placed in Objective to maintain temporal clarity."
+      }
+    ],
+    "summary_statistics": {
+      "section_appropriateness_score": 0.9,
+      "section_miscategorization_count": 3,
+      "major_section_miscategorization_count": 3
+    }
+  },
+  "pdsqi_judgment": {
+    "citation_applicable": 0,
+    "citation": 0,
+    "accurate": 2,
+    "thorough": 2,
+    "useful": 2,
+    "organized": 4,
+    "comprehensible": 4,
+    "succinct": 3,
+    "abstraction": 1,
+    "synthesized": 3,
+    "voice_summ": 0,
+    "voice_note": 0,
+    "pdsqi_core_mean": 2.8571
+  },
+  "llm_checklist_judgment": {
+    "content_preservation_core": 4,
+    "noise_suppression": 5,
+    "lay_expression_preservation": 3,
+    "state_update_fidelity": 2,
+    "temporality_preservation": 3,
+    "problem_evidence_linkage": 4,
+    "state_plan_separation": 3,
+    "section_organization_appropriateness": 3,
+    "overall_clinical_usability": 3,
+    "clinically_meaningful_omission": "Yes",
+    "clinically_concerning_hallucination": "Yes",
+    "checklist_a_mean": 4.0,
+    "checklist_b_mean": 2.5,
+    "checklist_c_mean": 3.3333,
+    "llm_checklist_abc_mean": 3.375,
+    "llm_checklist_mean_no_usability": 3.375,
+    "llm_checklist_total_score": 30,
+    "llm_checklist_mean": 3.3333,
+    "llm_checklist_meaningful_omission_yes": 1,
+    "llm_checklist_concerning_hallucination_yes": 1
+  },
+  "metrics": {
+    "case_id": "D2N015",
+    "method": "cap",
+    "template": "soap",
+    "source_cap_count": 37,
+    "event_plan_count": null,
+    "summary_cap_count": 18,
+    "cap_matched_count": 15,
+    "cap_precision": 0.8333,
+    "cap_recall": 0.4054,
+    "cap_f1": 0.5455,
+    "unsupported_summary_cap_count": 3,
+    "missing_source_cap_count": 22,
+    "summary_runtime_seconds": null,
+    "summary_cap_runtime_seconds": 20.942,
+    "event_plan_runtime_seconds": null,
+    "rouge_l_f1_vs_reference": 0.1993,
+    "token_f1_vs_reference": 0.3711,
+    "gptf1_macro_f1": 0.0,
+    "nair_gpt_precision": 0.68,
+    "nair_gpt_recall": 0.8636,
+    "nair_gpt_f1": 0.7609,
+    "semantic_cap_precision": 0.6389,
+    "semantic_cap_recall": 0.6216,
+    "semantic_cap_f1": 0.6301,
+    "hallucination_count": null,
+    "major_hallucination_count": null,
+    "omission_count": null,
+    "major_omission_count": null,
+    "section_appropriateness_score": 0.9,
+    "section_miscategorization_count": 3,
+    "major_section_miscategorization_count": 3,
+    "pdsqi_core_mean": 2.8571,
+    "pdsqi_accurate": 2,
+    "pdsqi_thorough": 2,
+    "llm_checklist_total_score": 30,
+    "llm_checklist_mean": 3.3333,
+    "llm_checklist_mean_no_usability": 3.375,
+    "checklist_a_mean": 4.0,
+    "checklist_b_mean": 2.5,
+    "checklist_c_mean": 3.3333,
+    "llm_checklist_abc_mean": 3.375,
+    "content_preservation_core": 4,
+    "noise_suppression": 5,
+    "lay_expression_preservation": 3,
+    "state_update_fidelity": 2,
+    "temporality_preservation": 3,
+    "problem_evidence_linkage": 4,
+    "state_plan_separation": 3,
+    "section_organization_appropriateness": 3,
+    "overall_clinical_usability": 3,
+    "llm_checklist_meaningful_omission_yes": 1,
+    "llm_checklist_concerning_hallucination_yes": 1,
+    "gptf1_active_problems_symptoms_precision": 0.0,
+    "gptf1_active_problems_symptoms_recall": 0.0,
+    "gptf1_active_problems_symptoms_f1": 0.0,
+    "gptf1_active_problems_symptoms_pred_count": 0,
+    "gptf1_active_problems_symptoms_ref_count": 5,
+    "gptf1_negated_findings_precision": 0.0,
+    "gptf1_negated_findings_recall": 0.0,
+    "gptf1_negated_findings_f1": 0.0,
+    "gptf1_negated_findings_pred_count": 0,
+    "gptf1_negated_findings_ref_count": 0,
+    "gptf1_uncertain_findings_precision": 0.0,
+    "gptf1_uncertain_findings_recall": 0.0,
+    "gptf1_uncertain_findings_f1": 0.0,
+    "gptf1_uncertain_findings_pred_count": 0,
+    "gptf1_uncertain_findings_ref_count": 0,
+    "gptf1_medication_treatment_precision": 0.0,
+    "gptf1_medication_treatment_recall": 0.0,
+    "gptf1_medication_treatment_f1": 0.0,
+    "gptf1_medication_treatment_pred_count": 0,
+    "gptf1_medication_treatment_ref_count": 0,
+    "gptf1_plan_followup_precision": 0.0,
+    "gptf1_plan_followup_recall": 0.0,
+    "gptf1_plan_followup_f1": 0.0,
+    "gptf1_plan_followup_pred_count": 0,
+    "gptf1_plan_followup_ref_count": 0,
+    "nair_pred_concept_count": 25,
+    "nair_ref_concept_count": 22,
+    "nair_precision_match_count": 17,
+    "nair_recall_match_count": 19,
+    "semantic_cap_precision_supported_count": 8,
+    "semantic_cap_precision_partial_count": 7,
+    "semantic_cap_precision_denominator": 18,
+    "semantic_cap_recall_supported_count": 21,
+    "semantic_cap_recall_partial_count": 4,
+    "semantic_cap_recall_denominator": 37,
+    "semantic_cap_low_value_source_count": 0,
+    "semantic_cap_low_value_summary_count": 0,
+    "semantic_cap_missing_count": 6,
+    "semantic_cap_unsupported_count": 2,
+    "semantic_cap_contradicted_source_count": 6,
+    "semantic_cap_contradicted_summary_count": 1,
+    "pdsqi_useful": 2,
+    "pdsqi_organized": 4,
+    "pdsqi_comprehensible": 4,
+    "pdsqi_succinct": 3,
+    "pdsqi_synthesized": 3
+  }
+}

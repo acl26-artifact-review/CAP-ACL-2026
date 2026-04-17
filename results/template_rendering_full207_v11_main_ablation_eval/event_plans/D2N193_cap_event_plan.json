@@ -1,0 +1,128 @@
+{
+  "events": [
+    {
+      "event_id": "CL16",
+      "event_type": "ProblemOrientedNoteBundle",
+      "canonical_concept": "diabetes",
+      "visit_state": "active",
+      "status": "affirmed",
+      "temporality": "current",
+      "speaker_source": "patient",
+      "clinical_priority": "high",
+      "title": "diabetes",
+      "event_summary": "Problem-oriented bundle for diabetes.",
+      "supporting_cap_ids": [
+        "CAP8",
+        "CAP16",
+        "CAP19",
+        "CAP12",
+        "CAP21"
+      ],
+      "anchor_problem_cap_id": "CAP8",
+      "anchor_problem": "diabetes",
+      "S_cap_ids": [
+        "CAP8",
+        "CAP19"
+      ],
+      "global_cap_ids": [
+        "CAP16",
+        "CAP12",
+        "CAP21"
+      ],
+      "supporting_evidence": [
+        "The patient's diabetes is currently being managed.",
+        "The patient has a cough."
+      ],
+      "current_state": [
+        "The patient's diabetes is currently being managed.",
+        "The patient has a cough."
+      ],
+      "care_context": [
+        "The patient reports a cough.",
+        "The patient is taking cough medication."
+      ],
+      "key_slots": {
+        "source_modalities": "interview",
+        "temporal_profile": "current",
+        "anchor_cluster_type": "ProblemState",
+        "anchor_primary_cap_type": "Problem",
+        "bundle_concepts": "diabetes; cough medication",
+        "history_context": "",
+        "related_factors": "",
+        "visit_primary": "true",
+        "render_in_note": "true",
+        "assessment_fallback": "The patient has diabetes.",
+        "bundle_design": "problem_oriented_note_bundle"
+      },
+      "render_sections": [
+        "S",
+        "O",
+        "A",
+        "P",
+        "History of Present Illness",
+        "Findings",
+        "Assessment",
+        "Plan"
+      ]
+    },
+    {
+      "event_id": "CL26",
+      "event_type": "ProblemOrientedNoteBundle",
+      "canonical_concept": "upper respiratory infection",
+      "visit_state": "active",
+      "status": "affirmed",
+      "temporality": "current",
+      "speaker_source": "doctor",
+      "clinical_priority": "high",
+      "title": "upper respiratory infection",
+      "event_summary": "Problem-oriented bundle for upper respiratory infection.",
+      "supporting_cap_ids": [
+        "CAP10",
+        "CAP30",
+        "CAP31"
+      ],
+      "anchor_problem_cap_id": "CAP10",
+      "anchor_problem": "upper respiratory infection",
+      "S_cap_ids": [
+        "CAP10"
+      ],
+      "P_cap_ids": [
+        "CAP30",
+        "CAP31"
+      ],
+      "supporting_evidence": [
+        "The doctor assesses an upper respiratory infection."
+      ],
+      "current_state": [
+        "The doctor assesses an upper respiratory infection."
+      ],
+      "planned_actions": [
+        "The doctor recommends coricidin hbp.",
+        "The doctor recommends cough medicine."
+      ],
+      "key_slots": {
+        "source_modalities": "assessment, plan",
+        "temporal_profile": "current",
+        "anchor_cluster_type": "ProblemState",
+        "anchor_primary_cap_type": "Problem",
+        "bundle_concepts": "upper respiratory infection; coricidin hbp; cough medicine",
+        "history_context": "",
+        "related_factors": "",
+        "visit_primary": "true",
+        "render_in_note": "true",
+        "assessment_fallback": "Symptoms are concerning for upper respiratory infection.",
+        "bundle_design": "problem_oriented_note_bundle"
+      },
+      "render_sections": [
+        "S",
+        "O",
+        "A",
+        "P",
+        "History of Present Illness",
+        "Findings",
+        "Assessment",
+        "Plan"
+      ]
+    }
+  ]
+}

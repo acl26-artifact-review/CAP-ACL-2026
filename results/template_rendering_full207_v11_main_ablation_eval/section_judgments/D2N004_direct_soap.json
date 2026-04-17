@@ -1,0 +1,23 @@
+{
+  "section_miscategorizations": [
+    {
+      "text": "The elevated A1c suggests suboptimal glycemic control.",
+      "current_section": "A",
+      "expected_section": "O",
+      "severity": "major",
+      "reason": "This is an interpretation of an objective lab value (A1c) that has not been documented in the Objective section; as written, it implies the existence of an elevated A1c result, which should first appear as an observed lab finding in O before being synthesized in A."
+    },
+    {
+      "text": "Increase metformin to 1000 mg twice daily.",
+      "current_section": "P",
+      "expected_section": "P",
+      "severity": "minor",
+      "reason": "This is framed as a medication change and correctly belongs in the Plan, but it conflicts with the Subjective statement that the patient is already taking metformin 1000 mg twice daily; the duplication creates organizational confusion between S (current regimen) and P (change in regimen), though the section choice for this line itself is appropriate."
+    }
+  ],
+  "summary_statistics": {
+    "section_appropriateness_score": 0.8,
+    "section_miscategorization_count": 2,
+    "major_section_miscategorization_count": 1
+  }
+}

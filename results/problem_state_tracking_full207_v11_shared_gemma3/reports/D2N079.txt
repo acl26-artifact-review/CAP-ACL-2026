@@ -1,0 +1,95 @@
+Case: D2N079
+
+Problem List and Visit State Tracking
+
+Problem List
+- shoulder pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T1
+  Summary: The patient reports left shoulder pain.
+  ClusterId: CL1
+  TemporalProfile: current
+  Updates:
+  - CAP7: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T1 :: The patient reports left shoulder pain.
+  - CAP9: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T1 :: The patient has shoulder pain.
+- aches and pains | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T9
+  Summary: The patient experiences aches and pains.
+  ClusterId: CL2
+  TemporalProfile: current
+  Updates:
+  - CAP8: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T9 :: The patient experiences aches and pains.
+- difficulty reaching | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T11
+  Summary: The patient reports difficulty reaching for objects.
+  ClusterId: CL3
+  TemporalProfile: current
+  Updates:
+  - CAP4: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T11 :: The patient reports difficulty reaching for objects.
+- pain with overhead reaching | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T11,T13,T17,T29
+  Summary: The patient reports pain when reaching overhead.
+  ClusterId: CL4
+  TemporalProfile: current
+  Updates:
+  - CAP5: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T11 :: The patient reports pain when reaching overhead.
+  - CAP3: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T13 :: The patient reports unbearable pain in the shoulder.
+  - CAP2: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T17 :: The patient experiences pain in the hand that worsens with pressure.
+  - CAP6: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T29 :: The patient reports pain in their shoulder.
+- numbness | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T23
+  Summary: The patient denies numbness.
+  ClusterId: CL6
+  TemporalProfile: current
+  Updates:
+  - CAP11: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T23 :: The patient denies numbness.
+- rotator cuff tendinopathy | verification_status=confirmed | clinical_status=active | modalities=assessment | speakers=doctor | evidence=T26
+  Summary: The patient's left shoulder pain is most likely due to a rotator cuff tendinopathy.
+  ClusterId: CL7
+  TemporalProfile: current
+  Updates:
+  - CAP1: content_source=doctor modality=assessment verification_status=confirmed clinical_status=active temporality=current turns=T26 :: The patient's left shoulder pain is most likely due to a rotator cuff tendinopathy.
+- chest pain | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T37
+  Summary: The patient reports chest pain.
+  ClusterId: CL14
+  TemporalProfile: current
+  Updates:
+  - CAP10: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T37 :: The patient reports chest pain.
+
+Medication Tracking
+- [MedicationState] extra strength tylenol | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T15
+  Summary: The patient is taking two extra strength tylenol every six to eight hours.
+  ClusterId: CL5
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient is taking two extra strength tylenol every six to eight hours. (T15)
+  Updates:
+  - CAP18: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T15 :: The patient is taking two extra strength tylenol every six to eight hours.
+- [MedicationChange] tylenol | verification_status=confirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T28
+  Summary: The doctor recommends the patient continue taking Tylenol.
+  ClusterId: CL11
+  TemporalProfile: ongoing
+  PlannedChanges:
+  - The doctor recommends the patient continue taking Tylenol. (T28)
+  Updates:
+  - CAP19: content_source=doctor modality=plan verification_status=confirmed clinical_status=planned temporality=ongoing turns=T28 :: The doctor recommends the patient continue taking Tylenol.
+- [MedicationState] tylenol | verification_status=unconfirmed | clinical_status=active | modalities=plan | speakers=doctor | evidence=T28
+  Summary: The patient should continue to take tylenol.
+  ClusterId: CL12
+  TemporalProfile: ongoing
+  CurrentRegimens:
+  - The patient should continue to take tylenol. (T28)
+  Updates:
+  - CAP20: content_source=doctor modality=plan verification_status=unconfirmed clinical_status=active temporality=ongoing turns=T28 :: The patient should continue to take tylenol.
+
+Other Structured States
+- [Plan] mri | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T26
+  Summary: A cervical MRI is ordered for the left shoulder.
+  ClusterId: CL8
+  TemporalProfile: soon
+- [Plan] physical therapy | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T28
+  Summary: The doctor is referring the patient to physical therapy for approximately six to eight weeks.
+  ClusterId: CL9
+  TemporalProfile: 6-8 weeks
+- [Plan] steroid injection | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T28
+  Summary: A steroid injection for the shoulder may be considered if symptoms do not improve.
+  ClusterId: CL10
+  TemporalProfile: if symptoms do not improve
+- [FollowUp] follow-up visit | verification_status=confirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T34
+  Summary: The doctor schedules a follow-up visit with the patient after they complete physical therapy.
+  ClusterId: CL13
+  TemporalProfile: after physical therapy

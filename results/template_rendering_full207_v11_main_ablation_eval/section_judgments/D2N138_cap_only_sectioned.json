@@ -1,0 +1,65 @@
+{
+  "section_miscategorizations": [
+    {
+      "text": "The patient has asthma.",
+      "current_section": "History of Present Illness",
+      "expected_section": "Assessment",
+      "severity": "major",
+      "reason": "A definitive statement of an existing diagnosis belongs in the Assessment as an active problem, not in the HPI, which should focus on symptoms and history narrative."
+    },
+    {
+      "text": "The patient is being evaluated for asthma.",
+      "current_section": "History of Present Illness",
+      "expected_section": "Assessment",
+      "severity": "minor",
+      "reason": "This reflects the diagnostic workup/clinical impression rather than the patient's symptom narrative; it fits better in Assessment but does not substantially mislead."
+    },
+    {
+      "text": "A spirometry test will be repeated in four months.",
+      "current_section": "Findings",
+      "expected_section": "Plan",
+      "severity": "major",
+      "reason": "This is a future diagnostic order/follow-up plan, not a current exam or test result, and should be in the Plan section."
+    },
+    {
+      "text": "The patient's numbers were lower at that time.",
+      "current_section": "Findings",
+      "expected_section": "Findings",
+      "severity": "minor",
+      "reason": "This refers to prior spirometry results and is somewhat vague; while it can be considered a finding, it would be clearer if explicitly tied to past test results or moved to HPI as historical context."
+    },
+    {
+      "text": "The patient carries an epinephrine auto-injector.",
+      "current_section": "Findings",
+      "expected_section": "History of Present Illness",
+      "severity": "minor",
+      "reason": "Carrying an epinephrine auto-injector reflects allergy history and current medication state rather than an exam finding; it is more appropriately part of the history/medication narrative."
+    },
+    {
+      "text": "The patient uses Zyrtec seasonally.",
+      "current_section": "Findings",
+      "expected_section": "History of Present Illness",
+      "severity": "minor",
+      "reason": "This is current/prior medication use, which fits better in the history/medication context than in objective findings."
+    },
+    {
+      "text": "The doctor will prescribe alvesco.",
+      "current_section": "Plan",
+      "expected_section": "Plan",
+      "severity": "minor",
+      "reason": "Content is appropriate for Plan, but it conflicts with the later instruction that the patient should take alvesco if needed, which is more consistent with a rescue medication; the organizational issue is internal inconsistency rather than section misplacement."
+    },
+    {
+      "text": "The patient is currently using Wixela.",
+      "current_section": "Plan",
+      "expected_section": "History of Present Illness",
+      "severity": "major",
+      "reason": "This describes current medication state rather than a new order or change; it belongs in the history/medication narrative, not in the Plan."
+    }
+  ],
+  "summary_statistics": {
+    "section_appropriateness_score": 0.7,
+    "section_miscategorization_count": 8,
+    "major_section_miscategorization_count": 3
+  }
+}

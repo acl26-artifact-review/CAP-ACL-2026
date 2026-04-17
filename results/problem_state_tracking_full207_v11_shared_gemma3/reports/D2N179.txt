@@ -1,0 +1,124 @@
+Case: D2N179
+
+Problem List and Visit State Tracking
+
+Problem List
+- numbness | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T4
+  Summary: The patient reports numbness.
+  ClusterId: CL1
+  TemporalProfile: current
+  Updates:
+  - CAP7: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T4 :: The patient reports numbness.
+- tingling | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T4
+  Summary: The patient reports tingling.
+  ClusterId: CL2
+  TemporalProfile: current
+  Updates:
+  - CAP8: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T4 :: The patient reports tingling.
+- car accident | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T4
+  Summary: The patient had a car accident last December.
+  ClusterId: CL3
+  TemporalProfile: last december
+  Updates:
+  - CAP21: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=last december turns=T4 :: The patient had a car accident last December.
+- stiffness | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T6
+  Summary: The patient reports stiffness.
+  ClusterId: CL4
+  TemporalProfile: current
+  Updates:
+  - CAP9: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T6 :: The patient reports stiffness.
+- neck contusion | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T6
+  Summary: The patient sustained a neck contusion during the accident.
+  ClusterId: CL5
+  TemporalProfile: during accident
+  Updates:
+  - CAP20: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=during accident turns=T6 :: The patient sustained a neck contusion during the accident.
+- splint | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T6
+  Summary: The patient is wearing a splint.
+  ClusterId: CL6
+  TemporalProfile: current
+  Updates:
+  - CAP22: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=current turns=T6 :: The patient is wearing a splint.
+- broken wrist | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T6
+  Summary: The patient's wrist was broken.
+  ClusterId: CL7
+  TemporalProfile: during healing
+  Updates:
+  - CAP23: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=during healing turns=T6 :: The patient's wrist was broken.
+- decreased sensation | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T24,T27
+  Summary: The patient reports decreased sensation in the third and fourth fingers of the right hand.
+  ClusterId: CL8
+  TemporalProfile: current
+  Updates:
+  - CAP1: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T24 :: The patient reports decreased sensation in the third and fourth fingers of the right hand.
+  - CAP2: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T27 :: The patient reports decreased sensation in the fourth and fifth fingers of the left hand.
+- left hand pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T27
+  Summary: The patient reports pain in the left hand.
+  ClusterId: CL9
+  TemporalProfile: current
+  Updates:
+  - CAP3: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T27 :: The patient reports pain in the left hand.
+- carpal tunnel syndrome | verification_status=unconfirmed | clinical_status=active | modalities=unknown | speakers=doctor | evidence=T34
+  Summary: The doctor suspects carpal tunnel syndrome.
+  ClusterId: CL11
+  TemporalProfile: current
+  Updates:
+  - CAP4: content_source=doctor modality=unknown verification_status=unconfirmed clinical_status=active temporality=current turns=T34 :: The doctor suspects carpal tunnel syndrome.
+- cubital tunnel syndrome | verification_status=unconfirmed | clinical_status=active | modalities=unknown | speakers=doctor | evidence=T34
+  Summary: The doctor considers cubital tunnel syndrome.
+  ClusterId: CL12
+  TemporalProfile: current
+  Updates:
+  - CAP5: content_source=doctor modality=unknown verification_status=unconfirmed clinical_status=active temporality=current turns=T34 :: The doctor considers cubital tunnel syndrome.
+- pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T34
+  Summary: The patient reports pain.
+  ClusterId: CL13
+  TemporalProfile: current
+  Updates:
+  - CAP10: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T34 :: The patient reports pain.
+- nerve irritation | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T36
+  Summary: The patient reports nerve irritation.
+  ClusterId: CL14
+  TemporalProfile: current
+  Updates:
+  - CAP6: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T36 :: The patient reports nerve irritation.
+
+Medication Tracking
+- [MedicationChange] emg test | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T36
+  Summary: The doctor orders an EMG test.
+  ClusterId: CL17
+  TemporalProfile: future
+  PlannedChanges:
+  - The doctor orders an EMG test. (T36)
+  Updates:
+  - CAP17: content_source=doctor modality=plan verification_status=unconfirmed clinical_status=planned temporality=future turns=T36 :: The doctor orders an EMG test.
+- [MedicationState] splint | verification_status=unconfirmed | clinical_status=active | modalities=plan | speakers=doctor | evidence=T40
+  Summary: The patient should continue wearing splints.
+  ClusterId: CL20
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient should continue wearing splints. (T40)
+  Updates:
+  - CAP18: content_source=doctor modality=plan verification_status=unconfirmed clinical_status=active temporality=current turns=T40 :: The patient should continue wearing splints.
+
+Other Structured States
+- [ExamFinding] reflexes | verification_status=confirmed | clinical_status=active | modalities=exam | speakers=doctor | evidence=T28
+  Summary: The patient's reflexes are 1+ and symmetric.
+  ClusterId: CL10
+  TemporalProfile: current
+- [Plan] emg test | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T36
+  Summary: A nerve test, called an EMG test, is scheduled.
+  ClusterId: CL15
+  TemporalProfile: future
+- [Plan] nerve test | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T36
+  Summary: The doctor plans to schedule a nerve test.
+  ClusterId: CL16
+  TemporalProfile: future
+- [Plan] referral | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T38
+  Summary: A referral to an orthopedist may be considered.
+  ClusterId: CL18
+  TemporalProfile: future
+- [FollowUp] follow-up visit | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T38
+  Summary: A follow-up visit will be scheduled.
+  ClusterId: CL19
+  TemporalProfile: future

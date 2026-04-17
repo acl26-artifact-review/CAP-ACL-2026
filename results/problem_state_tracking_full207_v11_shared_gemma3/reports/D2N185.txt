@@ -1,0 +1,213 @@
+Case: D2N185
+
+Problem List and Visit State Tracking
+
+Problem List
+- abdominal pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T9
+  Summary: The patient reports abdominal pain.
+  ClusterId: CL1
+  TemporalProfile: current
+  Updates:
+  - CAP20: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T9 :: The patient reports abdominal pain.
+- atrophy of kidney | verification_status=confirmed | clinical_status=historical | modalities=unknown | speakers=unknown | evidence=T9
+  Summary: One kidney is atrophied.
+  ClusterId: CL2
+  TemporalProfile: recent
+  Updates:
+  - CAP28: content_source=unknown modality=unknown verification_status=confirmed clinical_status=historical temporality=recent turns=T9 :: One kidney is atrophied.
+- vomiting | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T9
+  Summary: The patient is vomiting.
+  ClusterId: CL3
+  TemporalProfile: current
+  Updates:
+  - CAP29: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T9 :: The patient is vomiting.
+- pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T15,T23,T33
+  Summary: The patient complains about pain in her stomach.
+  ClusterId: CL4
+  TemporalProfile: current
+  Updates:
+  - CAP21: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T15 :: The patient is in pain.
+  - CAP4: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T23 :: The patient complains about pain in her stomach.
+  - CAP30: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T33 :: The patient reports pain.
+- swollen lymph nodes | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T19
+  Summary: The patient's lymph nodes are swollen.
+  ClusterId: CL5
+  TemporalProfile: current
+  Updates:
+  - CAP13: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T19 :: The patient's lymph nodes are swollen.
+- burning | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T25
+  Summary: The patient reports experiencing burning.
+  ClusterId: CL6
+  TemporalProfile: current
+  Updates:
+  - CAP22: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T25 :: The patient reports experiencing burning.
+- kidney infection | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T27
+  Summary: The patient had a severe infection that might have affected her kidney.
+  ClusterId: CL7
+  TemporalProfile: past
+  Updates:
+  - CAP39: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=past turns=T27 :: The patient had a severe infection that might have affected her kidney.
+  - CAP42: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=past turns=T27 :: The patient had a kidney infection.
+  - CAP40: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=past turns=T27 :: The patient had a severe infection at some point.
+- fever | verification_status=unconfirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T31
+  Summary: The patient experienced fever.
+  ClusterId: CL8
+  TemporalProfile: past
+  Updates:
+  - CAP31: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=past turns=T31 :: The patient experienced fever.
+- kidney problems | verification_status=unconfirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T31
+  Summary: The patient suspects they have kidney problems.
+  ClusterId: CL9
+  TemporalProfile: past
+  Updates:
+  - CAP41: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=past turns=T31 :: The patient suspects they have kidney problems.
+- renal disease | verification_status=unconfirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T37
+  Summary: The patient's family has a history of kidney disease.
+  ClusterId: CL10
+  TemporalProfile: family history
+  Updates:
+  - CAP2: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=family history turns=T37 :: The patient's family has a history of kidney disease.
+  - CAP5: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=family history turns=T37 :: The patient's father and cousins have renal disease.
+- breast cancer | verification_status=unconfirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T39
+  Summary: The patient's mother had breast cancer.
+  ClusterId: CL11
+  TemporalProfile: family history
+  Updates:
+  - CAP14: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=family history turns=T39 :: The patient's mother had breast cancer.
+- urinary retention | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T39
+  Summary: The patient had difficulty urinating correctly.
+  ClusterId: CL12
+  TemporalProfile: present
+  Updates:
+  - CAP15: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=present turns=T39 :: The patient had difficulty urinating correctly.
+- heart attack | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T45
+  Summary: The patient's father died of a massive heart attack.
+  ClusterId: CL13
+  TemporalProfile: death
+  Updates:
+  - CAP3: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=death turns=T45 :: The patient's father died of a massive heart attack.
+- obstructive neuropathy | verification_status=confirmed | clinical_status=historical | modalities=interview,unknown | speakers=patient,unknown | evidence=T47,T91
+  Summary: The patient was born with obstructive neuropathy.
+  ClusterId: CL14
+  TemporalProfile: past, present
+  Updates:
+  - CAP8: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=present turns=T47 :: The patient was born with obstructive neuropathy.
+  - CAP18: content_source=unknown modality=unknown verification_status=confirmed clinical_status=historical temporality=past turns=T91 :: The patient's grandfather had obstructive neuropathy.
+- chronic kidney disease | verification_status=confirmed | clinical_status=historical | modalities=interview,unknown | speakers=patient,unknown | evidence=T51,T91
+  Summary: Ashley has chronic kidney disease.
+  ClusterId: CL15
+  TemporalProfile: current, past
+  Updates:
+  - CAP24: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T51 :: Ashley has chronic kidney disease.
+  - CAP10: content_source=unknown modality=unknown verification_status=confirmed clinical_status=historical temporality=past turns=T91 :: The patient's grandfather had chronic kidney disease.
+- end-stage renal disease | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T51
+  Summary: Ashley has end-stage renal disease.
+  ClusterId: CL16
+  TemporalProfile: current
+  Updates:
+  - CAP23: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T51 :: Ashley has end-stage renal disease.
+- diabetes | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T51
+  Summary: Ashley has diabetes.
+  ClusterId: CL17
+  TemporalProfile: current
+  Updates:
+  - CAP32: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T51 :: Ashley has diabetes.
+- hypertension | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T51
+  Summary: Ashley has hypertension.
+  ClusterId: CL18
+  TemporalProfile: current
+  Updates:
+  - CAP33: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T51 :: Ashley has hypertension.
+- difficulty starting urination | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T57
+  Summary: The patient reports difficulty starting urination.
+  ClusterId: CL20
+  TemporalProfile: current
+  Updates:
+  - CAP16: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T57 :: The patient reports difficulty starting urination.
+- blood in urine | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T57
+  Summary: The patient reports blood in urine.
+  ClusterId: CL21
+  TemporalProfile: current
+  Updates:
+  - CAP17: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T57 :: The patient reports blood in urine.
+- stomach pain | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T57
+  Summary: The patient reports stomach pain.
+  ClusterId: CL22
+  TemporalProfile: current
+  Updates:
+  - CAP25: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T57 :: The patient reports stomach pain.
+- burning pain | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T57
+  Summary: The patient reports burning pain.
+  ClusterId: CL23
+  TemporalProfile: current
+  Updates:
+  - CAP26: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T57 :: The patient reports burning pain.
+- left hand pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T77
+  Summary: The patient reports pain in the left hand.
+  ClusterId: CL28
+  TemporalProfile: current
+  Updates:
+  - CAP6: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T77 :: The patient reports pain in the left hand.
+- kidney strain | verification_status=unconfirmed | clinical_status=active | modalities=assessment | speakers=clinician | evidence=T79
+  Summary: Dehydration puts tremendous strain on the kidneys.
+  ClusterId: CL29
+  TemporalProfile: current
+  Updates:
+  - CAP9: content_source=clinician modality=assessment verification_status=unconfirmed clinical_status=active temporality=current turns=T79 :: Dehydration puts tremendous strain on the kidneys.
+- posterior urethral strictures | verification_status=confirmed | clinical_status=historical | modalities=unknown | speakers=unknown | evidence=T91
+  Summary: The patient's grandfather had posterior urethral strictures.
+  ClusterId: CL30
+  TemporalProfile: past
+  Updates:
+  - CAP11: content_source=unknown modality=unknown verification_status=confirmed clinical_status=historical temporality=past turns=T91 :: The patient's grandfather had posterior urethral strictures.
+- death | verification_status=confirmed | clinical_status=historical | modalities=interview,unknown | speakers=patient,unknown | evidence=T91,T92
+  Summary: The patient's father died in his 40s.
+  ClusterId: CL31
+  TemporalProfile: in his 40s, past
+  Updates:
+  - CAP12: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=in his 40s turns=T91 :: The patient's father died in his 40s.
+  - CAP7: content_source=unknown modality=unknown verification_status=confirmed clinical_status=historical temporality=past turns=T92 :: The patient's grandfather died of a heart attack.
+- renal transplant failure | verification_status=confirmed | clinical_status=historical | modalities=unknown | speakers=unknown | evidence=T91
+  Summary: The patient's grandfather's renal transplant failed.
+  ClusterId: CL32
+  TemporalProfile: past
+  Updates:
+  - CAP19: content_source=unknown modality=unknown verification_status=confirmed clinical_status=historical temporality=past turns=T91 :: The patient's grandfather's renal transplant failed.
+- dialysis | verification_status=unconfirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T93
+  Summary: The patient reports utilizing dialysis.
+  ClusterId: CL33
+  TemporalProfile: utilizing dialysis
+  Updates:
+  - CAP27: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=utilizing dialysis turns=T93 :: The patient reports utilizing dialysis.
+
+Medication Tracking
+- [MedicationState] gatorade | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T63
+  Summary: The patient drinks Gatorade.
+  ClusterId: CL24
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient drinks Gatorade. (T63)
+  Updates:
+  - CAP37: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T63 :: The patient drinks Gatorade.
+- [MedicationState] water | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T63
+  Summary: The patient drinks water.
+  ClusterId: CL25
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient drinks water. (T63)
+  Updates:
+  - CAP38: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T63 :: The patient drinks water.
+- [MedicationChange] tylenol | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=clinician | evidence=T74
+  Summary: The doctor recommends using Tylenol instead of ibuprofen.
+  ClusterId: CL27
+  TemporalProfile: future
+  PlannedChanges:
+  - The doctor recommends using Tylenol instead of ibuprofen. (T74)
+  Updates:
+  - CAP35: content_source=clinician modality=plan verification_status=unconfirmed clinical_status=planned temporality=future turns=T74 :: The doctor recommends using Tylenol instead of ibuprofen.
+
+Other Structured States
+- [TestResult] genetic panel | verification_status=confirmed | clinical_status=historical | modalities=test_result | speakers=patient | evidence=T54
+  Summary: The genetic panel did not reveal clinically significant mutations.
+  ClusterId: CL19
+  TemporalProfile: past

@@ -1,0 +1,153 @@
+Case: D2N090
+
+Problem List and Visit State Tracking
+
+Problem List
+- hyperglycemia | verification_status=confirmed | clinical_status=active | modalities=assessment,interview | speakers=doctor | evidence=T3,T63
+  Summary: The patient has hyperglycemia.
+  ClusterId: CL1
+  TemporalProfile: current
+  Updates:
+  - CAP16: content_source=doctor modality=assessment verification_status=confirmed clinical_status=active temporality=current turns=T3 :: The patient has hyperglycemia.
+  - CAP3: content_source=doctor modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T63 :: The doctor wants to increase the patient's lantus to 20 units at night.
+- edema | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T3
+  Summary: The patient reports edema in the lower extremities.
+  ClusterId: CL2
+  TemporalProfile: current
+  Updates:
+  - CAP8: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T3 :: The patient reports edema in the lower extremities.
+- depression | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T35,T4
+  Summary: The patient reports having been struggling with depression for a year and a half.
+  ClusterId: CL3
+  TemporalProfile: current, past
+  Updates:
+  - CAP4: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=past turns=T4 :: The patient has a past medical history of depression.
+  - CAP2: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T35 :: The patient reports having been struggling with depression for a year and a half.
+- kidney transplant | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T4
+  Summary: The patient has a history of kidney transplant.
+  ClusterId: CL4
+  TemporalProfile: past
+  Updates:
+  - CAP6: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=past turns=T4 :: The patient has a history of kidney transplant.
+- diabetes | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T4
+  Summary: The patient has type 2 diabetes.
+  ClusterId: CL5
+  TemporalProfile: past
+  Updates:
+  - CAP12: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=past turns=T4 :: The patient has type 2 diabetes.
+- hypoglycemia | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T7
+  Summary: The patient felt woozy over the weekend.
+  ClusterId: CL6
+  TemporalProfile: weekend
+  Updates:
+  - CAP9: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=weekend turns=T7 :: The patient felt woozy over the weekend.
+- dizziness | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T7
+  Summary: The patient felt woozy.
+  ClusterId: CL7
+  TemporalProfile: weekend
+  Updates:
+  - CAP14: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=weekend turns=T7 :: The patient felt woozy.
+- poor diet | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T9
+  Summary: The patient was not monitoring what they were eating.
+  ClusterId: CL8
+  TemporalProfile: before that happened
+  Updates:
+  - CAP5: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=before that happened turns=T9 :: The patient was not monitoring what they were eating.
+- left hand pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T9
+  Summary: The patient reports pain in the left hand.
+  ClusterId: CL9
+  TemporalProfile: current
+  Updates:
+  - CAP7: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T9 :: The patient reports pain in the left hand.
+- hospital admission | verification_status=unconfirmed | clinical_status=planned | modalities=assessment | speakers=doctor | evidence=T13
+  Summary: The doctor does not want the patient to end up in the hospital again.
+  ClusterId: CL10
+  TemporalProfile: okay
+  Updates:
+  - CAP1: content_source=doctor modality=assessment verification_status=unconfirmed clinical_status=planned temporality=okay turns=T13 :: The doctor does not want the patient to end up in the hospital again.
+- hip replacement | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T13
+  Summary: The patient's mother had a hip replacement last week.
+  ClusterId: CL11
+  TemporalProfile: last week
+  Updates:
+  - CAP27: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=last week turns=T13 :: The patient's mother had a hip replacement last week.
+- feeling better | verification_status=confirmed | clinical_status=improving | modalities=interview | speakers=patient | evidence=T15
+  Summary: The patient felt better after returning home.
+  ClusterId: CL12
+  TemporalProfile: since then
+  Updates:
+  - CAP10: content_source=patient modality=interview verification_status=confirmed clinical_status=improving temporality=since then turns=T15 :: The patient felt better after returning home.
+- following diet closely | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T17
+  Summary: The patient is following their diet closely.
+  ClusterId: CL13
+  TemporalProfile: yes
+  Updates:
+  - CAP11: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=yes turns=T17 :: The patient is following their diet closely.
+- lightheadedness | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T46
+  Summary: The patient denies lightheadedness.
+  ClusterId: CL19
+  TemporalProfile: current
+  Updates:
+  - CAP15: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T46 :: The patient denies lightheadedness.
+- chest pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T47
+  Summary: The patient reports no chest pain.
+  ClusterId: CL20
+  TemporalProfile: current
+  Updates:
+  - CAP13: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T47 :: The patient reports no chest pain.
+
+Medication Tracking
+- [MedicationState] immunotherapy medication | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T18
+  Summary: The patient is taking immunotherapy medications.
+  ClusterId: CL14
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient is taking immunotherapy medications. (T18)
+  Updates:
+  - CAP26: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T18 :: The patient is taking immunotherapy medications.
+- [MedicationState] following doctor's orders | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T29
+  Summary: The patient is following doctor's orders regarding medication.
+  ClusterId: CL16
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient is following doctor's orders regarding medication. (T29)
+  Updates:
+  - CAP24: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T29 :: The patient is following doctor's orders regarding medication.
+- [MedicationChange] medication | verification_status=unconfirmed | clinical_status=active | modalities=assessment | speakers=doctor | evidence=T36
+  Summary: The doctor is holding off on medical therapy.
+  ClusterId: CL17
+  TemporalProfile: current
+  PlannedChanges:
+  - The doctor is holding off on medical therapy. (T36)
+  Updates:
+  - CAP25: content_source=doctor modality=assessment verification_status=unconfirmed clinical_status=active temporality=current turns=T36 :: The doctor is holding off on medical therapy.
+- [MedicationChange] lantus | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T70
+  Summary: The doctor orders a lantus dose increase.
+  ClusterId: CL24
+  TemporalProfile: current
+  PlannedChanges:
+  - The doctor orders a lantus dose increase. (T70)
+  Updates:
+  - CAP18: content_source=doctor modality=plan verification_status=unconfirmed clinical_status=planned temporality=current turns=T70 :: The doctor orders a lantus dose increase.
+
+Other Structured States
+- [Plan] relaxation | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T29
+  Summary: The patient should find time to relax in the afternoon.
+  ClusterId: CL15
+  TemporalProfile: afternoon
+- [Plan] meditation | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T41
+  Summary: The patient wants to continue meditation.
+  ClusterId: CL18
+  TemporalProfile: future
+- [TestResult] blood glucose | verification_status=confirmed | clinical_status=active | modalities=test_result | speakers=test_result | evidence=T61
+  Summary: The patient's blood glucose is 162.
+  ClusterId: CL21
+  TemporalProfile: current
+- [TestResult] hemoglobin a1c | verification_status=confirmed | clinical_status=active | modalities=test_result | speakers=doctor,test_result | evidence=T65
+  Summary: The patient's hemoglobin a1c is about 8.
+  ClusterId: CL22
+  TemporalProfile: current, future
+- [Plan] hemoglobin a1c | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T65
+  Summary: The doctor orders a hemoglobin a1c.
+  ClusterId: CL23
+  TemporalProfile: future

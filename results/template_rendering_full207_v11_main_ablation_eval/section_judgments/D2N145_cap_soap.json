@@ -1,0 +1,58 @@
+{
+  "section_miscategorizations": [
+    {
+      "text": "The patient has a rash.",
+      "current_section": "O",
+      "expected_section": "A",
+      "severity": "minor",
+      "reason": "The existence of the rash is already described subjectively in S and characterized objectively in O; restating it here in O as a bare problem label is more consistent with an assessment/problem list item."
+    },
+    {
+      "text": "The primary problem is a rash.",
+      "current_section": "A",
+      "expected_section": "O",
+      "severity": "minor",
+      "reason": "This sentence functions as a restatement of the observed condition rather than a nuanced diagnostic impression or differential; however, it does not substantially mislead and is acceptable as a problem statement in A."
+    },
+    {
+      "text": "The patient reports the rash has plateaued.",
+      "current_section": "A",
+      "expected_section": "S",
+      "severity": "major",
+      "reason": "This is explicitly a patient-reported course of symptoms and belongs in the subjective history, not in the clinician assessment."
+    },
+    {
+      "text": "The patient expressed worry about elidel.",
+      "current_section": "A",
+      "expected_section": "S",
+      "severity": "major",
+      "reason": "This is the patient's reported concern about a medication, which is subjective history rather than diagnostic assessment or problem synthesis."
+    },
+    {
+      "text": "The patient reports hand pain.",
+      "current_section": "A",
+      "expected_section": "S",
+      "severity": "major",
+      "reason": "This is a symptom directly reported by the patient and should be documented in the subjective section, not as part of the clinician's assessment."
+    },
+    {
+      "text": "The doctor recommends increasing doxycycline to twice a day.",
+      "current_section": "P",
+      "expected_section": "P",
+      "severity": "minor",
+      "reason": "This is a clear medication change and correctly placed in the plan."
+    },
+    {
+      "text": "The doctor recommends restarting doxycycline for another week.",
+      "current_section": "P",
+      "expected_section": "P",
+      "severity": "minor",
+      "reason": "This is an explicit treatment order and correctly belongs in the plan."
+    }
+  ],
+  "summary_statistics": {
+    "section_appropriateness_score": 0.7,
+    "section_miscategorization_count": 7,
+    "major_section_miscategorization_count": 3
+  }
+}

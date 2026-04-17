@@ -1,0 +1,79 @@
+{
+  "section_miscategorizations": [
+    {
+      "text": "The patient reports that his child is also pulling on his ears and has some ear pain.",
+      "current_section": "History of Present Illness",
+      "expected_section": "Findings",
+      "severity": "minor",
+      "reason": "This is an observed behavior (pulling on ears) that could reasonably be documented as an exam/observation finding rather than HPI narrative, though it does not substantially distort meaning in HPI."
+    },
+    {
+      "text": "The doctor recommends using a soft brush and baby oil.",
+      "current_section": "History of Present Illness",
+      "expected_section": "Plan",
+      "severity": "major",
+      "reason": "This is clearly a treatment recommendation and belongs in the Plan, not in the patient-reported history."
+    },
+    {
+      "text": "The patient reports feeling warm.",
+      "current_section": "Findings",
+      "expected_section": "History of Present Illness",
+      "severity": "minor",
+      "reason": "This is a subjective symptom reported by the patient rather than an objective exam or test result; it fits better in HPI, though its placement in Findings is not highly misleading."
+    },
+    {
+      "text": "The patient reports dizziness.",
+      "current_section": "Findings",
+      "expected_section": "History of Present Illness",
+      "severity": "minor",
+      "reason": "Dizziness is a subjective symptom and more appropriate for HPI than for objective Findings, but the misplacement is not severely misleading."
+    },
+    {
+      "text": "The patient suspects a viral infection.",
+      "current_section": "Assessment",
+      "expected_section": "History of Present Illness",
+      "severity": "major",
+      "reason": "This is the patient's own impression, not the clinician's diagnostic synthesis; it belongs in HPI as part of the patient's reported history rather than in the clinician Assessment."
+    },
+    {
+      "text": "Order shoulder radiographs, initiate physical therapy, and continue acetaminophen as needed.",
+      "current_section": "Plan",
+      "expected_section": "Assessment",
+      "severity": "major",
+      "reason": "These orders are unrelated to the documented respiratory/viral presentation and appear to pertain to a different problem (e.g., shoulder issue). Their inclusion in the Plan for this visit is misleading for the current assessment; they should either be tied to a corresponding assessment or omitted."
+    },
+    {
+      "text": "The doctor recommends using nizoral shampoo twice per week.",
+      "current_section": "Plan",
+      "expected_section": "History of Present Illness",
+      "severity": "major",
+      "reason": "No scalp or dermatologic complaint is documented in HPI or Assessment; introducing this treatment in the Plan without corresponding history/assessment is misleading. Either the related condition should be added to HPI/Assessment, or this recommendation belongs in a different encounter."
+    },
+    {
+      "text": "The doctor recommends using head & shoulder shampoo twice per week.",
+      "current_section": "Plan",
+      "expected_section": "History of Present Illness",
+      "severity": "major",
+      "reason": "As with the Nizoral recommendation, this plan item lacks any supporting symptom or diagnosis in HPI/Assessment, making its placement misleading for this visit's documented problems."
+    },
+    {
+      "text": "The doctor recommends using a soft brush.",
+      "current_section": "Plan",
+      "expected_section": "Plan",
+      "severity": "major",
+      "reason": "This recommendation is duplicated and already (incorrectly) appears in HPI. Having it both as history and plan without clear context is confusing; the HPI instance should be moved to Plan, and only one clear Plan statement retained."
+    },
+    {
+      "text": "The doctor recommends using baby oil.",
+      "current_section": "Plan",
+      "expected_section": "Plan",
+      "severity": "major",
+      "reason": "As with the soft brush recommendation, this duplicates a recommendation embedded in HPI. The HPI occurrence should be moved to Plan to avoid mixing clinician instructions into the history narrative."
+    }
+  ],
+  "summary_statistics": {
+    "section_appropriateness_score": 0.4,
+    "section_miscategorization_count": 10,
+    "major_section_miscategorization_count": 7
+  }
+}

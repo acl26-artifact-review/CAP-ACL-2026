@@ -1,0 +1,75 @@
+Case: D2N064
+
+Problem List and Visit State Tracking
+
+Problem List
+- fall | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T3
+  Summary: The patient fell on the curb.
+  ClusterId: CL1
+  TemporalProfile: yesterday
+  Updates:
+  - CAP12: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=yesterday turns=T3 :: The patient fell on the curb.
+- left ankle pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T9
+  Summary: The patient reports pain in the left ankle.
+  ClusterId: CL2
+  TemporalProfile: current
+  Updates:
+  - CAP1: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T9,T9 :: The patient reports pain in the left ankle.
+- left hand pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T9
+  Summary: The patient reports pain in the left hand.
+  ClusterId: CL3
+  TemporalProfile: current
+  Updates:
+  - CAP3: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T9 :: The patient reports pain in the left hand.
+- ankle injury | verification_status=unconfirmed | clinical_status=active | modalities=assessment | speakers=doctor | evidence=T9
+  Summary: The doctor suspects an ankle injury.
+  ClusterId: CL4
+  TemporalProfile: current
+  Updates:
+  - CAP4: content_source=doctor modality=assessment verification_status=unconfirmed clinical_status=active temporality=current turns=T9 :: The doctor suspects an ankle injury.
+- ankle sprain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=doctor | evidence=T22
+  Summary: The patient has an ankle sprain of the lateral ligament complex.
+  ClusterId: CL8
+  TemporalProfile: current
+  Updates:
+  - CAP2: content_source=doctor modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T22 :: The patient has an ankle sprain of the lateral ligament complex.
+
+Medication Tracking
+- [MedicationState] ibuprofen | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T11
+  Summary: The patient has taken ibuprofen.
+  ClusterId: CL7
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient has taken ibuprofen. (T11)
+  Updates:
+  - CAP11: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T11 :: The patient has taken ibuprofen.
+- [MedicationChange] air cast | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T22
+  Summary: The doctor will prescribe an air cast.
+  ClusterId: CL9
+  TemporalProfile: current
+  PlannedChanges:
+  - The doctor will prescribe an air cast. (T22)
+  Updates:
+  - CAP6: content_source=doctor modality=plan verification_status=unconfirmed clinical_status=planned temporality=current turns=T22 :: The doctor will prescribe an air cast.
+- [MedicationChange] crutches | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T22
+  Summary: The doctor will prescribe crutches.
+  ClusterId: CL10
+  TemporalProfile: current
+  PlannedChanges:
+  - The doctor will prescribe crutches. (T22)
+  Updates:
+  - CAP9: content_source=doctor modality=plan verification_status=unconfirmed clinical_status=planned temporality=current turns=T22 :: The doctor will prescribe crutches.
+
+Other Structured States
+- [Plan] ice | verification_status=confirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T11
+  Summary: The patient should elevate and ice the ankle.
+  ClusterId: CL5
+  TemporalProfile: current
+- [Plan] elevate | verification_status=confirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T11
+  Summary: The patient should elevate the ankle.
+  ClusterId: CL6
+  TemporalProfile: current
+- [FollowUp] follow-up visit | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T22
+  Summary: The doctor will schedule a follow-up visit in two weeks.
+  ClusterId: CL11
+  TemporalProfile: in two weeks

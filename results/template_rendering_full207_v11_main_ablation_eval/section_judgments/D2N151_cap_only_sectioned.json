@@ -1,0 +1,37 @@
+{
+  "section_miscategorizations": [
+    {
+      "text": "The patient is taking ibuprofen, metformin, and lisinopril.",
+      "current_section": "Findings",
+      "expected_section": "History of Present Illness",
+      "severity": "major",
+      "reason": "Current outpatient medications are part of the patient's history/medication state, not an exam or test finding."
+    },
+    {
+      "text": "The patient is taking ibuprofen.",
+      "current_section": "Plan",
+      "expected_section": "History of Present Illness",
+      "severity": "major",
+      "reason": "This is a statement of current medication use, not a new order or change; it belongs in the history/medication state rather than the treatment plan."
+    },
+    {
+      "text": "The patient has a history of hypertension and is being treated for diabetes.",
+      "current_section": "Assessment",
+      "expected_section": "History of Present Illness",
+      "severity": "minor",
+      "reason": "Past medical history and current treatment are typically documented in the history section; inclusion in Assessment is not misleading but is organizationally suboptimal."
+    },
+    {
+      "text": "The patient has a sweet tooth and makes senna rolls. He tried ice and bakes cakes in the past.",
+      "current_section": "History of Present Illness",
+      "expected_section": "History of Present Illness",
+      "severity": "minor",
+      "reason": "The reference to baking cakes and making senna rolls is social/lifestyle detail rather than symptom history; while not clinically wrong, it is loosely related to HPI and could be better placed in a social history or dietary habits context, but this is a soft organizational issue."
+    }
+  ],
+  "summary_statistics": {
+    "section_appropriateness_score": 0.7,
+    "section_miscategorization_count": 4,
+    "major_section_miscategorization_count": 2
+  }
+}

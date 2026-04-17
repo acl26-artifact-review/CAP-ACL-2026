@@ -1,0 +1,139 @@
+Case: D2N144
+
+Problem List and Visit State Tracking
+
+Problem List
+- rheumatoid arthritis | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T3
+  Summary: The patient has a history of rheumatoid arthritis.
+  ClusterId: CL1
+  TemporalProfile: prior
+  Updates:
+  - CAP25: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=prior turns=T3 :: The patient has a history of rheumatoid arthritis.
+- leg swelling | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T5
+  Summary: The patient reports leg swelling.
+  ClusterId: CL2
+  TemporalProfile: current
+  Updates:
+  - CAP7: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T5 :: The patient reports leg swelling.
+- pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T7
+  Summary: The patient reports pain at a 3/10 severity.
+  ClusterId: CL3
+  TemporalProfile: current
+  Updates:
+  - CAP2: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T7 :: The patient reports pain at a 3/10 severity.
+- stiffness | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T15
+  Summary: The patient reports stiffness.
+  ClusterId: CL7
+  TemporalProfile: current
+  Updates:
+  - CAP9: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T15 :: The patient reports stiffness.
+- difficulty getting up | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T19
+  Summary: The patient reports difficulty getting up.
+  ClusterId: CL8
+  TemporalProfile: current
+  Updates:
+  - CAP6: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T19 :: The patient reports difficulty getting up.
+- knee swelling | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T19
+  Summary: The patient reports knee swelling.
+  ClusterId: CL9
+  TemporalProfile: current
+  Updates:
+  - CAP8: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T19 :: The patient reports knee swelling.
+- inflammation | verification_status=confirmed | clinical_status=active | modalities=assessment | speakers=doctor | evidence=T26
+  Summary: The doctor notes inflammation in the knee.
+  ClusterId: CL12
+  TemporalProfile: current
+  Updates:
+  - CAP4: content_source=doctor modality=assessment verification_status=confirmed clinical_status=active temporality=current turns=T26 :: The doctor notes inflammation in the knee.
+- left hand pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T27
+  Summary: The patient reports pain in the left hand.
+  ClusterId: CL17
+  TemporalProfile: current
+  Updates:
+  - CAP3: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T27 :: The patient reports pain in the left hand.
+- knee pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T29
+  Summary: The patient reports pain in the knee.
+  ClusterId: CL18
+  TemporalProfile: current
+  Updates:
+  - CAP1: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T29,T29 :: The patient reports pain in the knee.
+- prop feet up | verification_status=confirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T31
+  Summary: The patient should prop their feet up.
+  ClusterId: CL19
+  TemporalProfile: today
+  Updates:
+  - CAP5: content_source=doctor modality=plan verification_status=confirmed clinical_status=planned temporality=today turns=T31 :: The patient should prop their feet up.
+- compression socks | verification_status=confirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T31
+  Summary: Compression socks are recommended.
+  ClusterId: CL20
+  TemporalProfile: today
+  Updates:
+  - CAP10: content_source=doctor modality=plan verification_status=confirmed clinical_status=planned temporality=today turns=T31 :: Compression socks are recommended.
+
+Medication Tracking
+- [MedicationState] compression socks | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T11
+  Summary: The patient previously wore compression socks.
+  ClusterId: CL4
+  TemporalProfile: prior
+  CurrentRegimens:
+  - The patient previously wore compression socks. (T11)
+  Updates:
+  - CAP22: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=prior turns=T11 :: The patient previously wore compression socks.
+- [MedicationState] xeljanz | verification_status=confirmed | clinical_status=active | modalities=assessment,interview,plan | speakers=doctor,patient | evidence=T13,T38
+  Summary: The doctor needs to check the patient's CMP levels every couple of months.
+  ClusterId: CL5
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient is taking Xeljanz. (T13)
+  - The doctor needs to check the patient's CMP levels every couple of months. (T38)
+  - The doctor will check the patient's CMP levels every couple of months. (T38)
+  Updates:
+  - CAP23: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T13 :: The patient is taking Xeljanz.
+  - CAP19: content_source=doctor modality=assessment verification_status=confirmed clinical_status=active temporality=current turns=T38 :: The doctor needs to check the patient's CMP levels every couple of months.
+  - CAP20: content_source=doctor modality=plan verification_status=confirmed clinical_status=active temporality=current turns=T38 :: The doctor will check the patient's CMP levels every couple of months.
+- [MedicationState] celebrex | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T13
+  Summary: The patient is taking Celebrex.
+  ClusterId: CL6
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient is taking Celebrex. (T13)
+  Updates:
+  - CAP24: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T13 :: The patient is taking Celebrex.
+- [MedicationChange] steroid injection | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T26
+  Summary: The doctor orders a steroid injection for the knee.
+  ClusterId: CL15
+  TemporalProfile: future
+  PlannedChanges:
+  - The doctor orders a steroid injection for the knee. (T26)
+  Updates:
+  - CAP13: content_source=doctor modality=plan verification_status=unconfirmed clinical_status=planned temporality=future turns=T26 :: The doctor orders a steroid injection for the knee.
+
+Other Structured States
+- [FollowUp] physical therapy | verification_status=confirmed | clinical_status=historical | modalities=plan | speakers=doctor | evidence=T19
+  Summary: The doctor wants to get the patient physical therapy again.
+  ClusterId: CL10
+  TemporalProfile: past
+- [TestResult] 11 milligrams | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T20
+  Summary: The patient's Xeljanz dose is 11 milligrams.
+  ClusterId: CL11
+  TemporalProfile: current
+- [TestResult] pitting | verification_status=confirmed | clinical_status=active | modalities=exam | speakers=doctor | evidence=T26
+  Summary: The doctor observes pitting around the knee and ankle.
+  ClusterId: CL13
+  TemporalProfile: current
+- [TestResult] capillary refill | verification_status=confirmed | clinical_status=active | modalities=exam | speakers=doctor | evidence=T26
+  Summary: The doctor confirms normal capillary refill in the toes.
+  ClusterId: CL14
+  TemporalProfile: current
+- [Plan] x-ray | verification_status=confirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T26,T30
+  Summary: The doctor orders an x-ray of the knee.
+  ClusterId: CL16
+  TemporalProfile: future, today
+- [Plan] steroid shot | verification_status=confirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T32
+  Summary: A steroid shot will be administered.
+  ClusterId: CL21
+  TemporalProfile: today
+- [TestResult] cmp levels | verification_status=confirmed | clinical_status=stable | modalities=test_result | speakers=doctor | evidence=T38
+  Summary: The patient's CMP levels are good.
+  ClusterId: CL22
+  TemporalProfile: current

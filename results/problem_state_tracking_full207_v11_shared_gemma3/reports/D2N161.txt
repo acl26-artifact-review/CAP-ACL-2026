@@ -1,0 +1,101 @@
+Case: D2N161
+
+Problem List and Visit State Tracking
+
+Problem List
+- chronic kidney disease | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T0
+  Summary: The patient has chronic kidney disease.
+  ClusterId: CL1
+  TemporalProfile: current
+  Updates:
+  - CAP2: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T0 :: The patient has chronic kidney disease.
+- hypertension | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T0
+  Summary: The patient has hypertension.
+  ClusterId: CL2
+  TemporalProfile: current
+  Updates:
+  - CAP8: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T0 :: The patient has hypertension.
+- shortness of breath | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T1
+  Summary: The patient reports shortness of breath.
+  ClusterId: CL3
+  TemporalProfile: current
+  Updates:
+  - CAP1: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T1 :: The patient reports shortness of breath.
+- chicken wings consumption | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T5
+  Summary: The patient consumes chicken wings frequently.
+  ClusterId: CL6
+  TemporalProfile: current
+  Updates:
+  - CAP3: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T5 :: The patient consumes chicken wings frequently.
+- ankle swelling | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T5
+  Summary: The patient reports ankle swelling.
+  ClusterId: CL7
+  TemporalProfile: current
+  Updates:
+  - CAP6: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T5 :: The patient reports ankle swelling.
+- pizza consumption | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T5
+  Summary: The patient consumes pizza frequently.
+  ClusterId: CL8
+  TemporalProfile: current
+  Updates:
+  - CAP7: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T5 :: The patient consumes pizza frequently.
+- congestive heart failure | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=doctor | evidence=T20
+  Summary: The patient has congestive heart failure.
+  ClusterId: CL9
+  TemporalProfile: current
+  Updates:
+  - CAP4: content_source=doctor modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T20 :: The patient has congestive heart failure.
+- kidney disease | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T28
+  Summary: The patient reports having kidney disease.
+  ClusterId: CL14
+  TemporalProfile: current
+  Updates:
+  - CAP5: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T28 :: The patient reports having kidney disease.
+
+Medication Tracking
+- [MedicationState] blood pressure medication | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T2
+  Summary: The patient is taking blood pressure medication.
+  ClusterId: CL4
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient is taking blood pressure medication. (T2)
+  Updates:
+  - CAP10: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T2 :: The patient is taking blood pressure medication.
+- [MedicationState] diuretic | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T3
+  Summary: The patient is taking a diuretic.
+  ClusterId: CL5
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient is taking a diuretic. (T3)
+  Updates:
+  - CAP11: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T3 :: The patient is taking a diuretic.
+- [MedicationState] bumex | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=doctor | evidence=T20
+  Summary: The patient should continue taking bumex.
+  ClusterId: CL10
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient should continue taking bumex. (T20)
+  Updates:
+  - CAP12: content_source=doctor modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T20 :: The patient should continue taking bumex.
+- [MedicationState] cozaar | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=doctor | evidence=T26
+  Summary: The patient should continue taking cozaar.
+  ClusterId: CL12
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient should continue taking cozaar. (T26)
+  Updates:
+  - CAP13: content_source=doctor modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T26 :: The patient should continue taking cozaar.
+- [MedicationState] norvasc | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=doctor | evidence=T26
+  Summary: The patient should continue taking norvasc.
+  ClusterId: CL13
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient should continue taking norvasc. (T26)
+  Updates:
+  - CAP14: content_source=doctor modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T26 :: The patient should continue taking norvasc.
+
+Other Structured States
+- [Plan] renal artery ultrasound | verification_status=unconfirmed | clinical_status=planned | modalities=interview | speakers=doctor | evidence=T26
+  Summary: The doctor ordered a renal artery ultrasound.
+  ClusterId: CL11
+  TemporalProfile: future

@@ -1,0 +1,37 @@
+{
+  "section_miscategorizations": [
+    {
+      "text": "The patient reports pain to palpation of the lumbar spine.",
+      "current_section": "S",
+      "expected_section": "O",
+      "severity": "major",
+      "reason": "Pain to palpation is a physical exam finding elicited by the clinician, not a typical patient-reported symptom; documenting it in Subjective could mislead a reader about the source of the finding."
+    },
+    {
+      "text": "The patient reports decreased range of motion.",
+      "current_section": "O",
+      "expected_section": "S",
+      "severity": "major",
+      "reason": "This is explicitly framed as a patient-reported limitation rather than an observed exam measurement, so it belongs in Subjective."
+    },
+    {
+      "text": "The patient's right strength is 4 out of 5.",
+      "current_section": "O",
+      "expected_section": "O",
+      "severity": "minor",
+      "reason": "This is correctly in Objective as an exam finding, but the surrounding sentence structure mixes in a patient-reported item in the same section; organizationally it would be clearer to separate purely observed strength testing from subjective reports."
+    },
+    {
+      "text": "The patient's left strength is 5 out of 5.",
+      "current_section": "O",
+      "expected_section": "O",
+      "severity": "minor",
+      "reason": "Same as for right strength: objectively appropriate, but grouped with a subjective statement in the same line, which slightly blurs section organization."
+    }
+  ],
+  "summary_statistics": {
+    "section_appropriateness_score": 0.7,
+    "section_miscategorization_count": 4,
+    "major_section_miscategorization_count": 2
+  }
+}

@@ -1,0 +1,1400 @@
+{
+  "case_id": "D2N072",
+  "method": "cap_event_only",
+  "template": "soap",
+  "summary_text": "S:\nThe patient reports experiencing persistent, sharp chest pain radiating to his left arm, which began approximately 2 hours ago. He states the pain is rated 8/10 and is not relieved by over-the-counter analgesics. He also reports shortness of breath and nausea. The patient denies any recent trauma or fever.\n\nO:\nBlood pressure is 140/90 mmHg. Heart rate is 92 bpm and regular. Oxygen saturation is 98% on room air. Auscultation reveals no murmurs or rubs. Lung sounds are clear bilaterally.\n\nA:\nThe patient's symptoms are concerning for acute myocardial infarction.\n\nP:\nActivate EMS and transport to the nearest hospital for immediate evaluation and treatment. Administer oxygen at 2L via nasal cannula. Start aspirin 325 mg.",
+  "reference_summary": "CC:\n\nRight finger pain.\n\nHPI:\n\nMs. Brooks is a 48-year-old female who presents today for an evaluation of right finger pain. She states she was skiing on Sunday and hyperextended her finger when it became caught in a strap on a jump. She has tried applying ice and taking Ibuprofen, but it is still very painful. She has pain with movement.\n\nCURRENT MEDICATIONS:\n\nMiraLax\n\nPAST MEDICAL HISTORY:\n\nConstipation.\n\nPAST SURGICAL HISTORY:\n\nAppendectomy.\n\nEXAM\n\nExamination of the right index finger shows tenderness over the distal phalanx. No tenderness over the proximal phalanx or the MP joint. Pain with flexion.\n\nRESULTS\n\nX-rays of the right hand show no obvious signs of fracture or bony abnormalities.\n\nIMPRESSION\n\nRight hand index finger contusion at the tip of the finger.\n\nPLAN\n\nAt this point, I discussed the diagnosis and treatment options with the patient. I have recommended a splint. She will take Motrin 600 mg every 6 hours for a week. If she does not improve, she will follow up with me. All questions were answered.",
+  "source_cap": {
+    "atomic_propositions": [
+      {
+        "prop_id": "CAP1",
+        "cap_type": "Symptom",
+        "canonical_concept": "finger pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports pain in the right finger."
+      },
+      {
+        "prop_id": "CAP2",
+        "cap_type": "Symptom",
+        "canonical_concept": "strap caught",
+        "category": "Symptom",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient's strap got caught on his finger."
+      },
+      {
+        "prop_id": "CAP3",
+        "cap_type": "Symptom",
+        "canonical_concept": "constipation",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "recent",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports suffering from constipation recently."
+      },
+      {
+        "prop_id": "CAP4",
+        "cap_type": "Symptom",
+        "canonical_concept": "bent finger",
+        "category": "Symptom",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The finger was bent back."
+      },
+      {
+        "prop_id": "CAP5",
+        "cap_type": "Problem",
+        "canonical_concept": "pain",
+        "category": "Problem",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient is experiencing pain."
+      },
+      {
+        "prop_id": "CAP6",
+        "cap_type": "Symptom",
+        "canonical_concept": "pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports pain."
+      },
+      {
+        "prop_id": "CAP7",
+        "cap_type": "Symptom",
+        "canonical_concept": "movement",
+        "category": "Symptom",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom",
+          "temporal"
+        ],
+        "proposition_text": "Movement worsens the pain."
+      },
+      {
+        "prop_id": "CAP8",
+        "cap_type": "Order",
+        "canonical_concept": "medication",
+        "category": "Order",
+        "speaker": "doctor",
+        "status": "uncertain",
+        "visit_state": "planned",
+        "temporality": "now",
+        "claim_type_tags": [
+          "medication"
+        ],
+        "proposition_text": "Order the medication and procedures we discussed."
+      },
+      {
+        "prop_id": "CAP9",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "ibuprofen",
+        "category": "MedicationStatement",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient is taking ibuprofen."
+      },
+      {
+        "prop_id": "CAP10",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "miralax",
+        "category": "MedicationStatement",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient takes miralax."
+      },
+      {
+        "prop_id": "CAP11",
+        "cap_type": "ProblemHistory",
+        "canonical_concept": "skiing",
+        "category": "ProblemHistory",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "weekend",
+        "proposition_text": "The patient was skiing over the weekend."
+      }
+    ],
+    "filtered_nonverifiable_units": []
+  },
+  "event_plan": {
+    "events": [
+      {
+        "event_id": "CL5",
+        "event_type": "ProblemOrientedNoteBundle",
+        "canonical_concept": "pain",
+        "visit_state": "active",
+        "status": "affirmed",
+        "temporality": "recent",
+        "speaker_source": "patient",
+        "clinical_priority": "high",
+        "title": "pain",
+        "event_summary": "Problem-oriented bundle for pain.",
+        "supporting_cap_ids": [
+          "CAP6",
+          "CAP5",
+          "CAP7",
+          "CAP3",
+          "CAP9",
+          "CAP10"
+        ],
+        "anchor_problem_cap_id": "CAP5",
+        "anchor_problem": "pain",
+        "S_cap_ids": [
+          "CAP5",
+          "CAP9",
+          "CAP10"
+        ],
+        "global_cap_ids": [
+          "CAP6",
+          "CAP7",
+          "CAP3"
+        ],
+        "supporting_evidence": [
+          "The patient is experiencing pain.",
+          "The patient is taking ibuprofen.",
+          "The patient takes miralax."
+        ],
+        "current_state": [
+          "The patient is experiencing pain.",
+          "The patient is taking ibuprofen.",
+          "The patient takes miralax."
+        ],
+        "care_context": [
+          "The patient reports pain.",
+          "Movement worsens the pain.",
+          "The patient reports suffering from constipation recently."
+        ],
+        "key_slots": {
+          "source_modalities": "interview",
+          "temporal_profile": "current, recent",
+          "anchor_cluster_type": "ProblemState",
+          "anchor_primary_cap_type": "Problem",
+          "bundle_concepts": "pain; movement; constipation; ibuprofen; miralax",
+          "history_context": "",
+          "related_factors": "",
+          "visit_primary": "false",
+          "render_in_note": "false",
+          "assessment_fallback": "",
+          "bundle_design": "problem_oriented_note_bundle"
+        },
+        "render_sections": [
+          "S",
+          "O",
+          "A",
+          "P",
+          "History of Present Illness",
+          "Findings",
+          "Assessment",
+          "Plan"
+        ]
+      }
+    ]
+  },
+  "summary_cap": {
+    "atomic_propositions": [
+      {
+        "prop_id": "P1",
+        "cap_type": "Symptom",
+        "canonical_concept": "pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports persistent, sharp chest pain radiating to his left arm"
+      },
+      {
+        "prop_id": "P2",
+        "cap_type": "Symptom",
+        "canonical_concept": "pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports the pain is rated 8/10"
+      },
+      {
+        "prop_id": "P3",
+        "cap_type": "Symptom",
+        "canonical_concept": "pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports the pain is not relieved by over-the-counter analgesics"
+      },
+      {
+        "prop_id": "P4",
+        "cap_type": "Symptom",
+        "canonical_concept": "shortness breath",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports shortness of breath"
+      },
+      {
+        "prop_id": "P5",
+        "cap_type": "Symptom",
+        "canonical_concept": "nausea",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports nausea"
+      },
+      {
+        "prop_id": "P6",
+        "cap_type": "Finding",
+        "canonical_concept": "denies any recent trauma",
+        "category": "Finding",
+        "speaker": "unknown",
+        "predicate": "denies",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "past",
+        "claim_type_tags": [
+          "safety_relevant"
+        ],
+        "proposition_text": "The patient denies any recent trauma"
+      },
+      {
+        "prop_id": "P7",
+        "cap_type": "Finding",
+        "canonical_concept": "denies fever",
+        "category": "Finding",
+        "speaker": "unknown",
+        "predicate": "denies",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "past",
+        "claim_type_tags": [
+          "safety_relevant"
+        ],
+        "proposition_text": "The patient denies fever"
+      },
+      {
+        "prop_id": "P8",
+        "cap_type": "Finding",
+        "canonical_concept": "blood pressure",
+        "category": "Finding",
+        "speaker": "unknown",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "exam"
+        ],
+        "proposition_text": "Blood pressure is 140/90 mmHg"
+      },
+      {
+        "prop_id": "P9",
+        "cap_type": "Finding",
+        "canonical_concept": "heart rate bpm and",
+        "category": "Finding",
+        "speaker": "unknown",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "exam"
+        ],
+        "proposition_text": "Heart rate is 92 bpm and regular"
+      },
+      {
+        "prop_id": "P10",
+        "cap_type": "Finding",
+        "canonical_concept": "oxygen saturation room air",
+        "category": "Finding",
+        "speaker": "unknown",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "exam"
+        ],
+        "proposition_text": "Oxygen saturation is 98% on room air"
+      },
+      {
+        "prop_id": "P11",
+        "cap_type": "Finding",
+        "canonical_concept": "auscultation reveals murmurs rubs",
+        "category": "Finding",
+        "speaker": "unknown",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "exam"
+        ],
+        "proposition_text": "Auscultation reveals no murmurs or rubs"
+      },
+      {
+        "prop_id": "P12",
+        "cap_type": "Finding",
+        "canonical_concept": "lung sounds are clear",
+        "category": "Finding",
+        "speaker": "unknown",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "exam"
+        ],
+        "proposition_text": "Lung sounds are clear bilaterally"
+      },
+      {
+        "prop_id": "P13",
+        "cap_type": "Diagnosis",
+        "canonical_concept": "symptoms are concerning for",
+        "category": "Diagnosis",
+        "speaker": "unknown",
+        "predicate": "suspects",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "diagnostic"
+        ],
+        "proposition_text": "The patient's symptoms are concerning for acute myocardial infarction"
+      }
+    ],
+    "filtered_nonverifiable_units": [],
+    "runtime_seconds": 20.116
+  },
+  "cap_alignment": {
+    "cap_precision": 0.23076923076923078,
+    "cap_recall": 0.2727272727272727,
+    "cap_f1": 0.24999999999999994,
+    "matched_count": 3,
+    "summary_prop_count": 13,
+    "source_prop_count": 11,
+    "matched_pairs": [
+      {
+        "score": 1.0,
+        "summary_prop_id": "P3",
+        "source_prop_id": "CAP6",
+        "summary_text": "The patient reports the pain is not relieved by over-the-counter analgesics",
+        "source_text": "The patient reports pain."
+      },
+      {
+        "score": 1.0,
+        "summary_prop_id": "P2",
+        "source_prop_id": "CAP5",
+        "summary_text": "The patient reports the pain is rated 8/10",
+        "source_text": "The patient is experiencing pain."
+      },
+      {
+        "score": 0.7933,
+        "summary_prop_id": "P1",
+        "source_prop_id": "CAP1",
+        "summary_text": "The patient reports persistent, sharp chest pain radiating to his left arm",
+        "source_text": "The patient reports pain in the right finger."
+      }
+    ],
+    "unsupported_summary_props": [
+      {
+        "prop_id": "P4",
+        "cap_type": "Symptom",
+        "canonical_concept": "shortness breath",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports shortness of breath"
+      },
+      {
+        "prop_id": "P5",
+        "cap_type": "Symptom",
+        "canonical_concept": "nausea",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports nausea"
+      },
+      {
+        "prop_id": "P6",
+        "cap_type": "Finding",
+        "canonical_concept": "denies any recent trauma",
+        "category": "Finding",
+        "speaker": "unknown",
+        "predicate": "denies",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "past",
+        "claim_type_tags": [
+          "safety_relevant"
+        ],
+        "proposition_text": "The patient denies any recent trauma"
+      },
+      {
+        "prop_id": "P7",
+        "cap_type": "Finding",
+        "canonical_concept": "denies fever",
+        "category": "Finding",
+        "speaker": "unknown",
+        "predicate": "denies",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "past",
+        "claim_type_tags": [
+          "safety_relevant"
+        ],
+        "proposition_text": "The patient denies fever"
+      },
+      {
+        "prop_id": "P8",
+        "cap_type": "Finding",
+        "canonical_concept": "blood pressure",
+        "category": "Finding",
+        "speaker": "unknown",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "exam"
+        ],
+        "proposition_text": "Blood pressure is 140/90 mmHg"
+      },
+      {
+        "prop_id": "P9",
+        "cap_type": "Finding",
+        "canonical_concept": "heart rate bpm and",
+        "category": "Finding",
+        "speaker": "unknown",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "exam"
+        ],
+        "proposition_text": "Heart rate is 92 bpm and regular"
+      },
+      {
+        "prop_id": "P10",
+        "cap_type": "Finding",
+        "canonical_concept": "oxygen saturation room air",
+        "category": "Finding",
+        "speaker": "unknown",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "exam"
+        ],
+        "proposition_text": "Oxygen saturation is 98% on room air"
+      },
+      {
+        "prop_id": "P11",
+        "cap_type": "Finding",
+        "canonical_concept": "auscultation reveals murmurs rubs",
+        "category": "Finding",
+        "speaker": "unknown",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "exam"
+        ],
+        "proposition_text": "Auscultation reveals no murmurs or rubs"
+      },
+      {
+        "prop_id": "P12",
+        "cap_type": "Finding",
+        "canonical_concept": "lung sounds are clear",
+        "category": "Finding",
+        "speaker": "unknown",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "exam"
+        ],
+        "proposition_text": "Lung sounds are clear bilaterally"
+      },
+      {
+        "prop_id": "P13",
+        "cap_type": "Diagnosis",
+        "canonical_concept": "symptoms are concerning for",
+        "category": "Diagnosis",
+        "speaker": "unknown",
+        "predicate": "suspects",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "diagnostic"
+        ],
+        "proposition_text": "The patient's symptoms are concerning for acute myocardial infarction"
+      }
+    ],
+    "missing_source_props": [
+      {
+        "prop_id": "CAP2",
+        "cap_type": "Symptom",
+        "canonical_concept": "strap caught",
+        "category": "Symptom",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient's strap got caught on his finger."
+      },
+      {
+        "prop_id": "CAP3",
+        "cap_type": "Symptom",
+        "canonical_concept": "constipation",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "recent",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports suffering from constipation recently."
+      },
+      {
+        "prop_id": "CAP4",
+        "cap_type": "Symptom",
+        "canonical_concept": "bent finger",
+        "category": "Symptom",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The finger was bent back."
+      },
+      {
+        "prop_id": "CAP7",
+        "cap_type": "Symptom",
+        "canonical_concept": "movement",
+        "category": "Symptom",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom",
+          "temporal"
+        ],
+        "proposition_text": "Movement worsens the pain."
+      },
+      {
+        "prop_id": "CAP8",
+        "cap_type": "Order",
+        "canonical_concept": "medication",
+        "category": "Order",
+        "speaker": "doctor",
+        "status": "uncertain",
+        "visit_state": "planned",
+        "temporality": "now",
+        "claim_type_tags": [
+          "medication"
+        ],
+        "proposition_text": "Order the medication and procedures we discussed."
+      },
+      {
+        "prop_id": "CAP9",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "ibuprofen",
+        "category": "MedicationStatement",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient is taking ibuprofen."
+      },
+      {
+        "prop_id": "CAP10",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "miralax",
+        "category": "MedicationStatement",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient takes miralax."
+      },
+      {
+        "prop_id": "CAP11",
+        "cap_type": "ProblemHistory",
+        "canonical_concept": "skiing",
+        "category": "ProblemHistory",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "weekend",
+        "proposition_text": "The patient was skiing over the weekend."
+      }
+    ]
+  },
+  "reference_gpt_f1_items": {
+    "active_problems_symptoms": [
+      "right finger pain",
+      "pain with movement",
+      "tenderness over the distal phalanx",
+      "pain with flexion"
+    ],
+    "negated_findings": [
+      "no obvious signs of fracture or bony abnormalities"
+    ],
+    "uncertain_findings": [],
+    "medication_treatment": [
+      "MiraLax",
+      "Motrin 600 mg every 6 hours for a week"
+    ],
+    "plan_followup": [
+      "recommended a splint",
+      "follow up with me"
+    ],
+    "_chunk_count": [
+      "2"
+    ]
+  },
+  "summary_gpt_f1_items": {
+    "active_problems_symptoms": [],
+    "negated_findings": [],
+    "uncertain_findings": [],
+    "medication_treatment": [],
+    "plan_followup": [],
+    "_chunk_count": [
+      "1"
+    ]
+  },
+  "gpt_f1_alignment": {
+    "by_category": {
+      "active_problems_symptoms": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "matched_count": 0,
+        "pred_count": 0,
+        "ref_count": 4,
+        "matches": [],
+        "unsupported_pred_items": [],
+        "missing_ref_items": [
+          "right finger pain",
+          "pain with movement",
+          "tenderness over the distal phalanx",
+          "pain with flexion"
+        ]
+      },
+      "negated_findings": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "matched_count": 0,
+        "pred_count": 0,
+        "ref_count": 1,
+        "matches": [],
+        "unsupported_pred_items": [],
+        "missing_ref_items": [
+          "no obvious signs of fracture or bony abnormalities"
+        ]
+      },
+      "uncertain_findings": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "matched_count": 0,
+        "pred_count": 0,
+        "ref_count": 0,
+        "matches": [],
+        "unsupported_pred_items": [],
+        "missing_ref_items": []
+      },
+      "medication_treatment": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "matched_count": 0,
+        "pred_count": 0,
+        "ref_count": 2,
+        "matches": [],
+        "unsupported_pred_items": [],
+        "missing_ref_items": [
+          "MiraLax",
+          "Motrin 600 mg every 6 hours for a week"
+        ]
+      },
+      "plan_followup": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "matched_count": 0,
+        "pred_count": 0,
+        "ref_count": 2,
+        "matches": [],
+        "unsupported_pred_items": [],
+        "missing_ref_items": [
+          "recommended a splint",
+          "follow up with me"
+        ]
+      }
+    }
+  },
+  "reference_nair_concepts": {
+    "sections": [
+      {
+        "heading": "CC",
+        "section_value": "Right finger pain.",
+        "medical_concepts": [
+          "right finger pain"
+        ]
+      },
+      {
+        "heading": "HPI",
+        "section_value": "Ms. Brooks is a 48-year-old female who presents today for an evaluation of right finger pain. She states she was skiing on Sunday and hyperextended her finger when it became caught in a strap on a jump. She has tried applying ice and taking Ibuprofen, but it is still very painful. She has pain with movement.",
+        "medical_concepts": [
+          "right finger pain",
+          "finger hyperextension",
+          "pain with movement",
+          "ice application",
+          "ibuprofen use"
+        ]
+      },
+      {
+        "heading": "CURRENT MEDICATIONS",
+        "section_value": "MiraLax",
+        "medical_concepts": [
+          "MiraLax"
+        ]
+      },
+      {
+        "heading": "PAST MEDICAL HISTORY",
+        "section_value": "Constipation.",
+        "medical_concepts": [
+          "constipation"
+        ]
+      },
+      {
+        "heading": "PAST SURGICAL HISTORY",
+        "section_value": "Appendectomy.\nEXAM\nExamination of the right index finger shows tenderness over the distal phalanx. No tenderness over the proximal phalanx or the MP joint. Pain with flexion.\nRESULTS\nX-rays of the right hand show no obvious signs of fracture or bony abnormalities.\nIMPRESSION\nRight hand index finger contusion at the tip of the finger.\nPLAN\nAt this point, I discussed the diagnosis and treatment options with the patient. I have recommended a splint. She will take Motrin 600 mg every 6 hours for a week. If she does not improve, she will follow up with me. All questions were answered.",
+        "medical_concepts": [
+          "appendectomy",
+          "tenderness of right index finger distal phalanx",
+          "tenderness of proximal phalanx",
+          "tenderness of metacarpophalangeal joint",
+          "pain with flexion",
+          "X-ray of right hand",
+          "fracture",
+          "bony abnormalities",
+          "right index finger contusion",
+          "finger contusion",
+          "splint",
+          "Motrin 600 mg every 6 hours for a week"
+        ]
+      }
+    ],
+    "medical_concepts": [
+      "right finger pain",
+      "finger hyperextension",
+      "pain with movement",
+      "ice application",
+      "ibuprofen use",
+      "MiraLax",
+      "constipation",
+      "appendectomy",
+      "tenderness of right index finger distal phalanx",
+      "tenderness of proximal phalanx",
+      "tenderness of metacarpophalangeal joint",
+      "pain with flexion",
+      "X-ray of right hand",
+      "fracture",
+      "bony abnormalities",
+      "right index finger contusion",
+      "finger contusion",
+      "splint",
+      "Motrin 600 mg every 6 hours for a week"
+    ],
+    "section_count": 5
+  },
+  "summary_nair_concepts": {
+    "sections": [
+      {
+        "heading": "S",
+        "section_value": "The patient reports experiencing persistent, sharp chest pain radiating to his left arm, which began approximately 2 hours ago. He states the pain is rated 8/10 and is not relieved by over-the-counter analgesics. He also reports shortness of breath and nausea. The patient denies any recent trauma or fever.",
+        "medical_concepts": [
+          "chest pain",
+          "left arm pain",
+          "shortness of breath",
+          "nausea",
+          "trauma",
+          "fever"
+        ]
+      },
+      {
+        "heading": "O",
+        "section_value": "Blood pressure is 140/90 mmHg. Heart rate is 92 bpm and regular. Oxygen saturation is 98% on room air. Auscultation reveals no murmurs or rubs. Lung sounds are clear bilaterally.",
+        "medical_concepts": [
+          "blood pressure",
+          "heart rate",
+          "oxygen saturation",
+          "room air",
+          "cardiac murmur",
+          "pericardial rub",
+          "lung sounds"
+        ]
+      },
+      {
+        "heading": "A",
+        "section_value": "The patient's symptoms are concerning for acute myocardial infarction.",
+        "medical_concepts": [
+          "acute myocardial infarction"
+        ]
+      },
+      {
+        "heading": "P",
+        "section_value": "Activate EMS and transport to the nearest hospital for immediate evaluation and treatment. Administer oxygen at 2L via nasal cannula. Start aspirin 325 mg.",
+        "medical_concepts": [
+          "oxygen",
+          "nasal cannula",
+          "aspirin"
+        ]
+      }
+    ],
+    "medical_concepts": [
+      "chest pain",
+      "left arm pain",
+      "shortness of breath",
+      "nausea",
+      "trauma",
+      "fever",
+      "blood pressure",
+      "heart rate",
+      "oxygen saturation",
+      "room air",
+      "cardiac murmur",
+      "pericardial rub",
+      "lung sounds",
+      "acute myocardial infarction",
+      "oxygen",
+      "nasal cannula",
+      "aspirin"
+    ],
+    "section_count": 4
+  },
+  "nair_alignment": {
+    "pred_concepts": [
+      "chest pain",
+      "left arm pain",
+      "shortness of breath",
+      "nausea",
+      "trauma",
+      "fever",
+      "blood pressure",
+      "heart rate",
+      "oxygen saturation",
+      "room air",
+      "cardiac murmur",
+      "pericardial rub",
+      "lung sounds",
+      "acute myocardial infarction",
+      "oxygen",
+      "nasal cannula",
+      "aspirin"
+    ],
+    "ref_concepts": [
+      "right finger pain",
+      "finger hyperextension",
+      "pain with movement",
+      "ice application",
+      "ibuprofen use",
+      "MiraLax",
+      "constipation",
+      "appendectomy",
+      "tenderness of right index finger distal phalanx",
+      "tenderness of proximal phalanx",
+      "tenderness of metacarpophalangeal joint",
+      "pain with flexion",
+      "X-ray of right hand",
+      "fracture",
+      "bony abnormalities",
+      "right index finger contusion",
+      "finger contusion",
+      "splint",
+      "Motrin 600 mg every 6 hours for a week"
+    ],
+    "precision_alignment": {
+      "found_b": [
+        "trauma"
+      ],
+      "not_found_b": [
+        "chest pain",
+        "left arm pain",
+        "shortness of breath",
+        "nausea",
+        "fever",
+        "blood pressure",
+        "heart rate",
+        "oxygen saturation",
+        "room air",
+        "cardiac murmur",
+        "pericardial rub",
+        "lung sounds",
+        "acute myocardial infarction",
+        "oxygen",
+        "nasal cannula",
+        "aspirin"
+      ],
+      "chunk_count": 1,
+      "chunk_results": [
+        {
+          "found_b": [
+            "trauma"
+          ],
+          "not_found_b": [
+            "chest pain",
+            "left arm pain",
+            "shortness of breath",
+            "nausea",
+            "fever",
+            "blood pressure",
+            "heart rate",
+            "oxygen saturation",
+            "room air",
+            "cardiac murmur",
+            "pericardial rub",
+            "lung sounds",
+            "acute myocardial infarction",
+            "oxygen",
+            "nasal cannula",
+            "aspirin"
+          ]
+        }
+      ]
+    },
+    "recall_alignment": {
+      "found_b": [],
+      "not_found_b": [
+        "right finger pain",
+        "finger hyperextension",
+        "pain with movement",
+        "ice application",
+        "ibuprofen use",
+        "MiraLax",
+        "constipation",
+        "appendectomy",
+        "tenderness of right index finger distal phalanx",
+        "tenderness of proximal phalanx",
+        "tenderness of metacarpophalangeal joint",
+        "pain with flexion",
+        "X-ray of right hand",
+        "fracture",
+        "bony abnormalities",
+        "right index finger contusion",
+        "finger contusion",
+        "splint",
+        "Motrin 600 mg every 6 hours for a week"
+      ],
+      "chunk_count": 1,
+      "chunk_results": [
+        {
+          "found_b": [],
+          "not_found_b": [
+            "right finger pain",
+            "finger hyperextension",
+            "pain with movement",
+            "ice application",
+            "ibuprofen use",
+            "MiraLax",
+            "constipation",
+            "appendectomy",
+            "tenderness of right index finger distal phalanx",
+            "tenderness of proximal phalanx",
+            "tenderness of metacarpophalangeal joint",
+            "pain with flexion",
+            "X-ray of right hand",
+            "fracture",
+            "bony abnormalities",
+            "right index finger contusion",
+            "finger contusion",
+            "splint",
+            "Motrin 600 mg every 6 hours for a week"
+          ]
+        }
+      ]
+    }
+  },
+  "semantic_cap_audit": {
+    "source_cap_recall": [
+      {
+        "cap_id": "P1",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P2",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P3",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P4",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P5",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P6",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P7",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P8",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P9",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P10",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P11",
+        "judgment": "missing",
+        "reason": null
+      }
+    ],
+    "summary_cap_precision": [
+      {
+        "cap_id": "P1",
+        "judgment": "unsupported",
+        "reason": null
+      },
+      {
+        "cap_id": "P2",
+        "judgment": "unsupported",
+        "reason": null
+      },
+      {
+        "cap_id": "P3",
+        "judgment": "unsupported",
+        "reason": null
+      },
+      {
+        "cap_id": "P4",
+        "judgment": "unsupported",
+        "reason": null
+      },
+      {
+        "cap_id": "P5",
+        "judgment": "unsupported",
+        "reason": null
+      },
+      {
+        "cap_id": "P6",
+        "judgment": "unsupported",
+        "reason": null
+      },
+      {
+        "cap_id": "P7",
+        "judgment": "unsupported",
+        "reason": null
+      },
+      {
+        "cap_id": "P8",
+        "judgment": "unsupported",
+        "reason": null
+      },
+      {
+        "cap_id": "P9",
+        "judgment": "unsupported",
+        "reason": null
+      },
+      {
+        "cap_id": "P10",
+        "judgment": "unsupported",
+        "reason": null
+      },
+      {
+        "cap_id": "P11",
+        "judgment": "unsupported",
+        "reason": null
+      },
+      {
+        "cap_id": "P12",
+        "judgment": "unsupported",
+        "reason": null
+      },
+      {
+        "cap_id": "P13",
+        "judgment": "unsupported",
+        "reason": null
+      }
+    ],
+    "metrics": {
+      "semantic_cap_precision": 0.0,
+      "semantic_cap_recall": 0.0,
+      "semantic_cap_f1": 0.0,
+      "semantic_cap_precision_supported_count": 0,
+      "semantic_cap_precision_partial_count": 0,
+      "semantic_cap_precision_denominator": 13,
+      "semantic_cap_recall_supported_count": 0,
+      "semantic_cap_recall_partial_count": 0,
+      "semantic_cap_recall_denominator": 11,
+      "semantic_cap_low_value_source_count": 0,
+      "semantic_cap_low_value_summary_count": 0,
+      "semantic_cap_missing_count": 11,
+      "semantic_cap_unsupported_count": 13,
+      "semantic_cap_contradicted_source_count": 0,
+      "semantic_cap_contradicted_summary_count": 0
+    }
+  },
+  "safety_judgment": null,
+  "section_judgment": {
+    "section_miscategorizations": [],
+    "summary_statistics": {
+      "section_appropriateness_score": 1.0,
+      "section_miscategorization_count": 0,
+      "major_section_miscategorization_count": 0
+    }
+  },
+  "pdsqi_judgment": {
+    "citation_applicable": 0,
+    "citation": 0,
+    "accurate": 1,
+    "thorough": 1,
+    "useful": 1,
+    "organized": 2,
+    "comprehensible": 4,
+    "succinct": 3,
+    "abstraction": 1,
+    "synthesized": 1,
+    "voice_summ": 0,
+    "voice_note": 0,
+    "pdsqi_core_mean": 1.8571
+  },
+  "llm_checklist_judgment": {
+    "content_preservation_core": 1,
+    "noise_suppression": 3,
+    "lay_expression_preservation": 1,
+    "state_update_fidelity": 1,
+    "temporality_preservation": 2,
+    "problem_evidence_linkage": 1,
+    "state_plan_separation": 2,
+    "section_organization_appropriateness": 2,
+    "overall_clinical_usability": 1,
+    "clinically_meaningful_omission": "Yes",
+    "clinically_concerning_hallucination": "Yes",
+    "checklist_a_mean": 1.6667,
+    "checklist_b_mean": 1.5,
+    "checklist_c_mean": 1.6667,
+    "llm_checklist_abc_mean": 1.625,
+    "llm_checklist_mean_no_usability": 1.625,
+    "llm_checklist_total_score": 14,
+    "llm_checklist_mean": 1.5556,
+    "llm_checklist_meaningful_omission_yes": 1,
+    "llm_checklist_concerning_hallucination_yes": 1
+  },
+  "metrics": {
+    "case_id": "D2N072",
+    "method": "cap_event_only",
+    "template": "soap",
+    "source_cap_count": 11,
+    "event_plan_count": 1,
+    "summary_cap_count": 13,
+    "cap_matched_count": 3,
+    "cap_precision": 0.2308,
+    "cap_recall": 0.2727,
+    "cap_f1": 0.25,
+    "unsupported_summary_cap_count": 10,
+    "missing_source_cap_count": 8,
+    "summary_runtime_seconds": null,
+    "summary_cap_runtime_seconds": 20.116,
+    "event_plan_runtime_seconds": null,
+    "rouge_l_f1_vs_reference": 0.1017,
+    "token_f1_vs_reference": 0.2034,
+    "gptf1_macro_f1": 0.0,
+    "nair_gpt_precision": 0.0588,
+    "nair_gpt_recall": 0.0,
+    "nair_gpt_f1": 0.0,
+    "semantic_cap_precision": 0.0,
+    "semantic_cap_recall": 0.0,
+    "semantic_cap_f1": 0.0,
+    "hallucination_count": null,
+    "major_hallucination_count": null,
+    "omission_count": null,
+    "major_omission_count": null,
+    "section_appropriateness_score": 1.0,
+    "section_miscategorization_count": 0,
+    "major_section_miscategorization_count": 0,
+    "pdsqi_core_mean": 1.8571,
+    "pdsqi_accurate": 1,
+    "pdsqi_thorough": 1,
+    "llm_checklist_total_score": 14,
+    "llm_checklist_mean": 1.5556,
+    "llm_checklist_mean_no_usability": 1.625,
+    "checklist_a_mean": 1.6667,
+    "checklist_b_mean": 1.5,
+    "checklist_c_mean": 1.6667,
+    "llm_checklist_abc_mean": 1.625,
+    "content_preservation_core": 1,
+    "noise_suppression": 3,
+    "lay_expression_preservation": 1,
+    "state_update_fidelity": 1,
+    "temporality_preservation": 2,
+    "problem_evidence_linkage": 1,
+    "state_plan_separation": 2,
+    "section_organization_appropriateness": 2,
+    "overall_clinical_usability": 1,
+    "llm_checklist_meaningful_omission_yes": 1,
+    "llm_checklist_concerning_hallucination_yes": 1,
+    "gptf1_active_problems_symptoms_precision": 0.0,
+    "gptf1_active_problems_symptoms_recall": 0.0,
+    "gptf1_active_problems_symptoms_f1": 0.0,
+    "gptf1_active_problems_symptoms_pred_count": 0,
+    "gptf1_active_problems_symptoms_ref_count": 4,
+    "gptf1_negated_findings_precision": 0.0,
+    "gptf1_negated_findings_recall": 0.0,
+    "gptf1_negated_findings_f1": 0.0,
+    "gptf1_negated_findings_pred_count": 0,
+    "gptf1_negated_findings_ref_count": 1,
+    "gptf1_uncertain_findings_precision": 0.0,
+    "gptf1_uncertain_findings_recall": 0.0,
+    "gptf1_uncertain_findings_f1": 0.0,
+    "gptf1_uncertain_findings_pred_count": 0,
+    "gptf1_uncertain_findings_ref_count": 0,
+    "gptf1_medication_treatment_precision": 0.0,
+    "gptf1_medication_treatment_recall": 0.0,
+    "gptf1_medication_treatment_f1": 0.0,
+    "gptf1_medication_treatment_pred_count": 0,
+    "gptf1_medication_treatment_ref_count": 2,
+    "gptf1_plan_followup_precision": 0.0,
+    "gptf1_plan_followup_recall": 0.0,
+    "gptf1_plan_followup_f1": 0.0,
+    "gptf1_plan_followup_pred_count": 0,
+    "gptf1_plan_followup_ref_count": 2,
+    "nair_pred_concept_count": 17,
+    "nair_ref_concept_count": 19,
+    "nair_precision_match_count": 1,
+    "nair_recall_match_count": 0,
+    "semantic_cap_precision_supported_count": 0,
+    "semantic_cap_precision_partial_count": 0,
+    "semantic_cap_precision_denominator": 13,
+    "semantic_cap_recall_supported_count": 0,
+    "semantic_cap_recall_partial_count": 0,
+    "semantic_cap_recall_denominator": 11,
+    "semantic_cap_low_value_source_count": 0,
+    "semantic_cap_low_value_summary_count": 0,
+    "semantic_cap_missing_count": 11,
+    "semantic_cap_unsupported_count": 13,
+    "semantic_cap_contradicted_source_count": 0,
+    "semantic_cap_contradicted_summary_count": 0,
+    "pdsqi_useful": 1,
+    "pdsqi_organized": 2,
+    "pdsqi_comprehensible": 4,
+    "pdsqi_succinct": 3,
+    "pdsqi_synthesized": 1
+  }
+}

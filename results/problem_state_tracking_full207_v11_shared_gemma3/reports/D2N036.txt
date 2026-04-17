@@ -1,0 +1,83 @@
+Case: D2N036
+
+Problem List and Visit State Tracking
+
+Problem List
+- numbness | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T0,T14,T15,T16,T5
+  Summary: The patient experiences numbness in their fingers.
+  ClusterId: CL1
+  TemporalProfile: current
+  Updates:
+  - CAP7: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T0 :: The patient reports numbness in their fingers.
+  - CAP18: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T5 :: The patient's hands are sometimes asleep.
+  - CAP2: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T14,T15 :: The patient experiences numbness in their fingers.
+  - CAP4: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T16 :: The patient reports numbness in their little finger.
+- wrist pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T0,T1,T3
+  Summary: The patient has wrist pain.
+  ClusterId: CL2
+  TemporalProfile: current, night, several months
+  Updates:
+  - CAP8: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T0 :: The patient reports pain in their wrist.
+  - CAP10: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T1 :: The patient has wrist pain.
+  - CAP16: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=several months turns=T1 :: The patient's wrist and hand has been bothering them for several months.
+  - CAP17: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=night turns=T3 :: The patient notices pain mostly at night.
+- tingling | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T0
+  Summary: The patient reports tingling in their fingers.
+  ClusterId: CL3
+  TemporalProfile: current
+  Updates:
+  - CAP9: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T0 :: The patient reports tingling in their fingers.
+- repetitive type movements | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T12
+  Summary: The patient describes repetitive type movements.
+  ClusterId: CL4
+  TemporalProfile: current
+  Updates:
+  - CAP3: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T12,T12 :: The patient describes repetitive type movements.
+- left hand pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T13,T19
+  Summary: The patient reports pain in the left hand.
+  ClusterId: CL5
+  TemporalProfile: current
+  Updates:
+  - CAP1: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T13,T19 :: The patient reports pain in the left hand.
+- rheumatoid arthritis | verification_status=unconfirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T22
+  Summary: The patient denies a history of rheumatoid arthritis.
+  ClusterId: CL7
+  TemporalProfile: historical
+  Updates:
+  - CAP6: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=historical turns=T22 :: The patient denies a history of rheumatoid arthritis.
+- weakness | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T27
+  Summary: The patient reports weakness in the left hand.
+  ClusterId: CL8
+  TemporalProfile: current
+  Updates:
+  - CAP5: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T27 :: The patient reports weakness in the left hand.
+- dropping | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T28
+  Summary: The patient reports dropping things.
+  ClusterId: CL9
+  TemporalProfile: current
+  Updates:
+  - CAP11: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T28 :: The patient reports dropping things.
+
+Medication Tracking
+- [MedicationState] beer | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T21
+  Summary: The patient drinks a beer or two on Fridays and Saturdays.
+  ClusterId: CL6
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient drinks a beer or two on Fridays and Saturdays. (T21)
+  Updates:
+  - CAP14: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T21 :: The patient drinks a beer or two on Fridays and Saturdays.
+
+Other Structured States
+- [Plan] nurse in | verification_status=confirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T46
+  Summary: The doctor will have a nurse in.
+  ClusterId: CL10
+  TemporalProfile: future
+- [Plan] discharge patient | verification_status=confirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T46
+  Summary: The doctor will discharge the patient.
+  ClusterId: CL11
+  TemporalProfile: future
+- [FollowUp] see patient in two weeks | verification_status=confirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T48
+  Summary: The doctor will see the patient in two weeks.
+  ClusterId: CL12
+  TemporalProfile: two weeks

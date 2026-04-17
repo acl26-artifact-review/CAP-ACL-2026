@@ -1,0 +1,122 @@
+Case: D2N165
+
+Problem List and Visit State Tracking
+
+Problem List
+- knee pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T1,T4,T7,T9
+  Summary: The patient reports knee pain.
+  ClusterId: CL1
+  TemporalProfile: 6 months, current
+  Updates:
+  - CAP13: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T1 :: The patient experiences pain.
+  - CAP9: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=6 months turns=T1 :: The patient reports knee pain.
+  - CAP4: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T4 :: The patient describes pain as deep and achy.
+  - CAP1: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T7 :: The patient reports pain when getting from a seated position to standing.
+  - CAP2: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T7 :: The patient reports pain when going up and down stairs.
+  - CAP6: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T7 :: The patient reports pain after watching TV.
+  - CAP14: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T7 :: The patient reports pain.
+  - CAP11: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T9 :: The patient reports knee pain.
+- creaking | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T5
+  Summary: The patient reports hearing creaking in their knees.
+  ClusterId: CL2
+  TemporalProfile: current
+  Updates:
+  - CAP3: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T5 :: The patient reports hearing creaking in their knees.
+- leg pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T9
+  Summary: The patient reports leg pain.
+  ClusterId: CL3
+  TemporalProfile: current
+  Updates:
+  - CAP10: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T9 :: The patient reports leg pain.
+- initial pain | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T9
+  Summary: The patient initially experienced pain.
+  ClusterId: CL4
+  TemporalProfile: initial
+  Updates:
+  - CAP25: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=initial turns=T9 :: The patient initially experienced pain.
+- ice application | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T11
+  Summary: The patient previously applied ice.
+  ClusterId: CL8
+  TemporalProfile: past
+  Updates:
+  - CAP26: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=past turns=T11 :: The patient previously applied ice.
+- decreased mileage | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T13
+  Summary: The patient's mileage has decreased.
+  ClusterId: CL9
+  TemporalProfile: current
+  Updates:
+  - CAP12: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T13 :: The patient's mileage has decreased.
+- knee injury | verification_status=unconfirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T23
+  Summary: The patient has never broken a bone.
+  ClusterId: CL13
+  TemporalProfile: past
+  Updates:
+  - CAP7: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=past turns=T23 :: The patient has never broken a bone.
+- patellofemoral pain syndrome | verification_status=confirmed | clinical_status=active | modalities=assessment | speakers=doctor | evidence=T34
+  Summary: The patient has patellofemoral pain syndrome.
+  ClusterId: CL16
+  TemporalProfile: current
+  Updates:
+  - CAP8: content_source=doctor modality=assessment verification_status=confirmed clinical_status=active temporality=current turns=T34 :: The patient has patellofemoral pain syndrome.
+- left hand pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T39
+  Summary: The patient reports pain in the left hand.
+  ClusterId: CL19
+  TemporalProfile: current
+  Updates:
+  - CAP5: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T39 :: The patient reports pain in the left hand.
+
+Medication Tracking
+- [MedicationState] ibuprofen | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T11
+  Summary: The patient takes ibuprofen.
+  ClusterId: CL6
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient takes ibuprofen. (T11)
+  Updates:
+  - CAP23: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T11 :: The patient takes ibuprofen.
+- [MedicationState] aleve | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T11
+  Summary: The patient takes aleve.
+  ClusterId: CL7
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient takes aleve. (T11)
+  Updates:
+  - CAP24: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T11 :: The patient takes aleve.
+- [MedicationChange] ibuprofen | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T34
+  Summary: The patient will take ibuprofen as needed.
+  ClusterId: CL18
+  TemporalProfile: future
+  PlannedChanges:
+  - The patient will take ibuprofen as needed. (T34)
+  Updates:
+  - CAP22: content_source=doctor modality=plan verification_status=unconfirmed clinical_status=planned temporality=future turns=T34 :: The patient will take ibuprofen as needed.
+
+Other Structured States
+- [Plan] ice | verification_status=confirmed | clinical_status=planned | modalities=interview | speakers=patient | evidence=T11
+  Summary: The patient previously took ice.
+  ClusterId: CL5
+  TemporalProfile: current
+- [Plan] treadmill running | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T15
+  Summary: The doctor recommends treadmill running.
+  ClusterId: CL10
+  TemporalProfile: future
+- [ExamFinding] no swelling or redness | verification_status=confirmed | clinical_status=stable | modalities=exam | speakers=doctor | evidence=T20
+  Summary: The patient denies swelling or redness in their knees.
+  ClusterId: CL11
+  TemporalProfile: current
+- [Plan] outdoor running | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T20
+  Summary: The doctor recommends outdoor running.
+  ClusterId: CL12
+  TemporalProfile: future
+- [ExamFinding] regular heart rate and rhythm | verification_status=confirmed | clinical_status=stable | modalities=exam | speakers=doctor | evidence=T28
+  Summary: The doctor heard a regular heart rate and rhythm with no murmurs.
+  ClusterId: CL14
+  TemporalProfile: current
+- [ExamFinding] normal gait | verification_status=confirmed | clinical_status=stable | modalities=exam | speakers=doctor | evidence=T28
+  Summary: The patient has normal gait.
+  ClusterId: CL15
+  TemporalProfile: current
+- [Plan] physical therapy | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T34
+  Summary: The patient will receive physical therapy.
+  ClusterId: CL17
+  TemporalProfile: future

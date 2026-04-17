@@ -1,0 +1,1767 @@
+{
+  "case_id": "D2N152",
+  "method": "cap_only",
+  "template": "soap",
+  "summary_text": "S:\nThe patient reports that their blood sugar levels have bumped towards the higher side. The patient reports that their blood sugar levels have been trending higher. The patient reports trying to test their blood sugar in the mornings. The patient reports pain in the lower back. The patient reports back pain. The patient reports left hand pain. The patient reports irritation in the left eye. The patient reports pain. The patient recalls a previous episode of left hand pain. The patient suspects a possible injury.\n\nO:\nBlood pressure is mildly low. Heart rate is within normal limits. Neurologic examination is nonfocal. A1c is pending.\n\nA:\nThe clinician's impression is that the patient has diabetes. The clinician believes the patient has a musculoskeletal low back strain. The patient has a history of left hand pain.\n\nP:\nThe doctor ordered a low back x-ray. The doctor will lift the patient's right leg. The doctor ordered an a1c test. The clinician orders physical therapy. The clinician prescribes ibuprofen. The clinician prescribes flexeril. The clinician continues metformin. The doctor recommends taking tylenol.",
+  "reference_summary": "CHIEF COMPLAINT\n\nBack pain.\n\nMEDICAL HISTORY\n\nPatient reports history of diabetes.\n\nSOCIAL HISTORY\n\nThe patient's family owns and runs a bakery.\n\nMEDICATIONS\n\nPatient reports taking metformin twice daily.\n\nREVIEW OF SYSTEMS\n\nMusculoskeletal: Reports back pain.\nNeurological: Denies numbness or tingling in feet.\n\nPHYSICAL EXAM\n\nEyes\n- Examination: No redness, discharge, or icterus.\n\nEars, Nose, Mouth, and Throat\n- Examination of Ears: Auditory canal and tympanic membranes are clear.\n\nRespiratory\n- Auscultation of Lungs: Clear bilaterally.\n\nCardiovascular\n- Auscultation of Heart: Regular rate and rhythm.\nMusculoskeletal\n- Examination: No pain to palpation of the upper back. Pain to palpation of the midline of the lower back, especially on the left. No pain to palpation on the right lower back. Mildly positive straight leg rise on the right Positive straight leg rise on the left.\n\nASSESSMENT AND PLAN\n\n1. Low back pain.\n- Medical Reasoning: I believe he has a musculoskeletal low back strain. I do not expect to see anything significant on x-ray, but we will obtain one for further evaluation of any possible disc issues.\n- Patient Education and Counseling: We discussed his diagnosis at length today. I explained that physical therapy can help with the pain, but also strengthen some of the muscles in the back. I explained that he needs to be careful while taking medications, such as an overuse of muscle relaxers if he is doing any strenuous or hazardous activities such as driving.\n- Medical Treatment: Low back x-ray ordered. Referral to physical therapy provided. He will take 400 mg of ibuprofen up to 3 times per day. Tylenol can be used for severe pain. Prescription for Flexeril also provided.\n\n2. Diabetes.\n- Medical Reasoning: His diabetes is currently under control.\n- Patient Education and Counseling: We discussed the importance of maintaining a healthy lifestyle. I encouraged him to try an avoid foods high in sugar. He asked many questions and I feel he is confident in the plan at this point.\n- Medical Treatment: Hemoglobin A1c ordered as he has not had an updated one in almost 5 months. He will continue with his diet and exercise. Continue current dose of metformin for the time being. The patient will be checking his blood sugar in the morning and will log this information for me.\n\nPatient Agreements: The patient understands and agrees with the recommended medical treatment plan.",
+  "source_cap": {
+    "atomic_propositions": [
+      {
+        "prop_id": "CAP1",
+        "cap_type": "Symptom",
+        "canonical_concept": "blood sugar",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports that their blood sugar levels have bumped towards the higher side."
+      },
+      {
+        "prop_id": "CAP2",
+        "cap_type": "Symptom",
+        "canonical_concept": "high blood sugar",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports that their blood sugar levels have been trending higher."
+      },
+      {
+        "prop_id": "CAP3",
+        "cap_type": "Symptom",
+        "canonical_concept": "blood sugar",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "morning",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports trying to test their blood sugar in the mornings."
+      },
+      {
+        "prop_id": "CAP4",
+        "cap_type": "Problem",
+        "canonical_concept": "musculoskeletal low back strain",
+        "category": "Problem",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The doctor believes the patient has a musculoskeletal low back strain."
+      },
+      {
+        "prop_id": "CAP5",
+        "cap_type": "Problem",
+        "canonical_concept": "musculoskeletal low back strain",
+        "category": "Problem",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The clinician believes the patient has a musculoskeletal low back strain."
+      },
+      {
+        "prop_id": "CAP6",
+        "cap_type": "Problem",
+        "canonical_concept": "diabetes",
+        "category": "Problem",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The clinician's impression is that the patient's diabetes is under control."
+      },
+      {
+        "prop_id": "CAP7",
+        "cap_type": "Problem",
+        "canonical_concept": "diabetes",
+        "category": "Problem",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The doctor's impression is that the patient has diabetes."
+      },
+      {
+        "prop_id": "CAP8",
+        "cap_type": "Symptom",
+        "canonical_concept": "left eye irritation",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports irritation in the left eye."
+      },
+      {
+        "prop_id": "CAP9",
+        "cap_type": "Symptom",
+        "canonical_concept": "low back pain",
+        "category": "Symptom",
+        "speaker": "doctor",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports pain in the lower back."
+      },
+      {
+        "prop_id": "CAP10",
+        "cap_type": "Symptom",
+        "canonical_concept": "left hand pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports pain in the left hand."
+      },
+      {
+        "prop_id": "CAP11",
+        "cap_type": "Symptom",
+        "canonical_concept": "low back pain",
+        "category": "Symptom",
+        "speaker": "doctor",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports pain in their low back."
+      },
+      {
+        "prop_id": "CAP12",
+        "cap_type": "Symptom",
+        "canonical_concept": "low back pain",
+        "category": "Symptom",
+        "speaker": "doctor",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports low back pain."
+      },
+      {
+        "prop_id": "CAP13",
+        "cap_type": "Problem",
+        "canonical_concept": "low back pain",
+        "category": "Problem",
+        "speaker": "doctor",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient reports low back pain."
+      },
+      {
+        "prop_id": "CAP14",
+        "cap_type": "Symptom",
+        "canonical_concept": "back pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports back pain."
+      },
+      {
+        "prop_id": "CAP15",
+        "cap_type": "Symptom",
+        "canonical_concept": "skiing",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "past",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports skiing."
+      },
+      {
+        "prop_id": "CAP16",
+        "cap_type": "Symptom",
+        "canonical_concept": "pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports pain."
+      },
+      {
+        "prop_id": "CAP17",
+        "cap_type": "Order",
+        "canonical_concept": "lift right leg",
+        "category": "Order",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "planned",
+        "temporality": "current",
+        "proposition_text": "The doctor will lift the patient's right leg."
+      },
+      {
+        "prop_id": "CAP18",
+        "cap_type": "Order",
+        "canonical_concept": "lift legs",
+        "category": "Order",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "planned",
+        "temporality": "current",
+        "proposition_text": "The doctor will lift the patient's legs."
+      },
+      {
+        "prop_id": "CAP19",
+        "cap_type": "Order",
+        "canonical_concept": "low back x-ray",
+        "category": "Order",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "planned",
+        "temporality": "outpatient",
+        "proposition_text": "The doctor ordered a low back x-ray."
+      },
+      {
+        "prop_id": "CAP20",
+        "cap_type": "Order",
+        "canonical_concept": "low back x-ray",
+        "category": "Order",
+        "speaker": "doctor",
+        "predicate": "orders",
+        "status": "affirmed",
+        "visit_state": "planned",
+        "temporality": "soon",
+        "claim_type_tags": [
+          "plan"
+        ],
+        "proposition_text": "The clinician orders a low back x-ray."
+      },
+      {
+        "prop_id": "CAP21",
+        "cap_type": "TestResult",
+        "canonical_concept": "a1c",
+        "category": "TestResult",
+        "speaker": "doctor",
+        "status": "uncertain",
+        "visit_state": "planned",
+        "temporality": "future",
+        "claim_type_tags": [
+          "quantitative"
+        ],
+        "proposition_text": "The doctor ordered an a1c test."
+      },
+      {
+        "prop_id": "CAP22",
+        "cap_type": "Order",
+        "canonical_concept": "a1c test",
+        "category": "Order",
+        "speaker": "doctor",
+        "predicate": "orders",
+        "status": "affirmed",
+        "visit_state": "planned",
+        "temporality": "soon",
+        "claim_type_tags": [
+          "plan",
+          "quantitative"
+        ],
+        "proposition_text": "The clinician orders an a1c test."
+      },
+      {
+        "prop_id": "CAP23",
+        "cap_type": "Order",
+        "canonical_concept": "physical therapy",
+        "category": "Order",
+        "speaker": "doctor",
+        "predicate": "orders",
+        "status": "affirmed",
+        "visit_state": "planned",
+        "temporality": "two for two reasons",
+        "claim_type_tags": [
+          "plan"
+        ],
+        "proposition_text": "The clinician orders physical therapy."
+      },
+      {
+        "prop_id": "CAP24",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "metformin",
+        "category": "MedicationStatement",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "medication"
+        ],
+        "proposition_text": "The patient is taking metformin twice a day."
+      },
+      {
+        "prop_id": "CAP25",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "metformin",
+        "category": "MedicationStatement",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "medication"
+        ],
+        "proposition_text": "The patient is taking metformin."
+      },
+      {
+        "prop_id": "CAP26",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "tylenol",
+        "category": "MedicationStatement",
+        "speaker": "doctor",
+        "predicate": "recommends",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "plan"
+        ],
+        "proposition_text": "The clinician recommends taking tylenol."
+      },
+      {
+        "prop_id": "CAP27",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "ibuprofen",
+        "category": "MedicationStatement",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "planned",
+        "temporality": "current",
+        "proposition_text": "The doctor prescribed ibuprofen."
+      },
+      {
+        "prop_id": "CAP28",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "flexeril",
+        "category": "MedicationStatement",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "planned",
+        "temporality": "current",
+        "proposition_text": "The doctor prescribed flexeril."
+      },
+      {
+        "prop_id": "CAP29",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "ibuprofen",
+        "category": "MedicationStatement",
+        "speaker": "doctor",
+        "predicate": "prescribes",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The clinician prescribes ibuprofen."
+      },
+      {
+        "prop_id": "CAP30",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "flexeril",
+        "category": "MedicationStatement",
+        "speaker": "doctor",
+        "predicate": "prescribes",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The clinician prescribes flexeril."
+      },
+      {
+        "prop_id": "CAP31",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "metformin",
+        "category": "MedicationStatement",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "medication"
+        ],
+        "proposition_text": "The clinician continues metformin."
+      },
+      {
+        "prop_id": "CAP32",
+        "cap_type": "ProblemHistory",
+        "canonical_concept": "history of left hand pain",
+        "category": "ProblemHistory",
+        "speaker": "patient",
+        "status": "uncertain",
+        "visit_state": "historical",
+        "temporality": "past",
+        "proposition_text": "The patient recalls a previous episode of left hand pain."
+      },
+      {
+        "prop_id": "CAP33",
+        "cap_type": "ProblemHistory",
+        "canonical_concept": "possible injury",
+        "category": "ProblemHistory",
+        "speaker": "patient",
+        "predicate": "suspects",
+        "status": "uncertain",
+        "visit_state": "historical",
+        "temporality": "past",
+        "proposition_text": "The patient suspects a possible injury."
+      },
+      {
+        "prop_id": "CAP34",
+        "cap_type": "Counseling",
+        "canonical_concept": "diet and exercise",
+        "category": "Counseling",
+        "speaker": "doctor",
+        "predicate": "has",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The clinician advises the patient to continue with diet and exercise."
+      }
+    ],
+    "filtered_nonverifiable_units": []
+  },
+  "event_plan": null,
+  "summary_cap": {
+    "atomic_propositions": [],
+    "filtered_nonverifiable_units": [],
+    "runtime_seconds": 0.543
+  },
+  "cap_alignment": {
+    "cap_precision": 0.0,
+    "cap_recall": 0.0,
+    "cap_f1": 0.0,
+    "matched_count": 0,
+    "summary_prop_count": 0,
+    "source_prop_count": 34,
+    "matched_pairs": [],
+    "unsupported_summary_props": [],
+    "missing_source_props": [
+      {
+        "prop_id": "CAP1",
+        "cap_type": "Symptom",
+        "canonical_concept": "blood sugar",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports that their blood sugar levels have bumped towards the higher side."
+      },
+      {
+        "prop_id": "CAP2",
+        "cap_type": "Symptom",
+        "canonical_concept": "high blood sugar",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports that their blood sugar levels have been trending higher."
+      },
+      {
+        "prop_id": "CAP3",
+        "cap_type": "Symptom",
+        "canonical_concept": "blood sugar",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "morning",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports trying to test their blood sugar in the mornings."
+      },
+      {
+        "prop_id": "CAP4",
+        "cap_type": "Problem",
+        "canonical_concept": "musculoskeletal low back strain",
+        "category": "Problem",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The doctor believes the patient has a musculoskeletal low back strain."
+      },
+      {
+        "prop_id": "CAP5",
+        "cap_type": "Problem",
+        "canonical_concept": "musculoskeletal low back strain",
+        "category": "Problem",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The clinician believes the patient has a musculoskeletal low back strain."
+      },
+      {
+        "prop_id": "CAP6",
+        "cap_type": "Problem",
+        "canonical_concept": "diabetes",
+        "category": "Problem",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The clinician's impression is that the patient's diabetes is under control."
+      },
+      {
+        "prop_id": "CAP7",
+        "cap_type": "Problem",
+        "canonical_concept": "diabetes",
+        "category": "Problem",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The doctor's impression is that the patient has diabetes."
+      },
+      {
+        "prop_id": "CAP8",
+        "cap_type": "Symptom",
+        "canonical_concept": "left eye irritation",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports irritation in the left eye."
+      },
+      {
+        "prop_id": "CAP9",
+        "cap_type": "Symptom",
+        "canonical_concept": "low back pain",
+        "category": "Symptom",
+        "speaker": "doctor",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports pain in the lower back."
+      },
+      {
+        "prop_id": "CAP10",
+        "cap_type": "Symptom",
+        "canonical_concept": "left hand pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports pain in the left hand."
+      },
+      {
+        "prop_id": "CAP11",
+        "cap_type": "Symptom",
+        "canonical_concept": "low back pain",
+        "category": "Symptom",
+        "speaker": "doctor",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports pain in their low back."
+      },
+      {
+        "prop_id": "CAP12",
+        "cap_type": "Symptom",
+        "canonical_concept": "low back pain",
+        "category": "Symptom",
+        "speaker": "doctor",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports low back pain."
+      },
+      {
+        "prop_id": "CAP13",
+        "cap_type": "Problem",
+        "canonical_concept": "low back pain",
+        "category": "Problem",
+        "speaker": "doctor",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient reports low back pain."
+      },
+      {
+        "prop_id": "CAP14",
+        "cap_type": "Symptom",
+        "canonical_concept": "back pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports back pain."
+      },
+      {
+        "prop_id": "CAP15",
+        "cap_type": "Symptom",
+        "canonical_concept": "skiing",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "past",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports skiing."
+      },
+      {
+        "prop_id": "CAP16",
+        "cap_type": "Symptom",
+        "canonical_concept": "pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports pain."
+      },
+      {
+        "prop_id": "CAP17",
+        "cap_type": "Order",
+        "canonical_concept": "lift right leg",
+        "category": "Order",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "planned",
+        "temporality": "current",
+        "proposition_text": "The doctor will lift the patient's right leg."
+      },
+      {
+        "prop_id": "CAP18",
+        "cap_type": "Order",
+        "canonical_concept": "lift legs",
+        "category": "Order",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "planned",
+        "temporality": "current",
+        "proposition_text": "The doctor will lift the patient's legs."
+      },
+      {
+        "prop_id": "CAP19",
+        "cap_type": "Order",
+        "canonical_concept": "low back x-ray",
+        "category": "Order",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "planned",
+        "temporality": "outpatient",
+        "proposition_text": "The doctor ordered a low back x-ray."
+      },
+      {
+        "prop_id": "CAP20",
+        "cap_type": "Order",
+        "canonical_concept": "low back x-ray",
+        "category": "Order",
+        "speaker": "doctor",
+        "predicate": "orders",
+        "status": "affirmed",
+        "visit_state": "planned",
+        "temporality": "soon",
+        "claim_type_tags": [
+          "plan"
+        ],
+        "proposition_text": "The clinician orders a low back x-ray."
+      },
+      {
+        "prop_id": "CAP21",
+        "cap_type": "TestResult",
+        "canonical_concept": "a1c",
+        "category": "TestResult",
+        "speaker": "doctor",
+        "status": "uncertain",
+        "visit_state": "planned",
+        "temporality": "future",
+        "claim_type_tags": [
+          "quantitative"
+        ],
+        "proposition_text": "The doctor ordered an a1c test."
+      },
+      {
+        "prop_id": "CAP22",
+        "cap_type": "Order",
+        "canonical_concept": "a1c test",
+        "category": "Order",
+        "speaker": "doctor",
+        "predicate": "orders",
+        "status": "affirmed",
+        "visit_state": "planned",
+        "temporality": "soon",
+        "claim_type_tags": [
+          "plan",
+          "quantitative"
+        ],
+        "proposition_text": "The clinician orders an a1c test."
+      },
+      {
+        "prop_id": "CAP23",
+        "cap_type": "Order",
+        "canonical_concept": "physical therapy",
+        "category": "Order",
+        "speaker": "doctor",
+        "predicate": "orders",
+        "status": "affirmed",
+        "visit_state": "planned",
+        "temporality": "two for two reasons",
+        "claim_type_tags": [
+          "plan"
+        ],
+        "proposition_text": "The clinician orders physical therapy."
+      },
+      {
+        "prop_id": "CAP24",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "metformin",
+        "category": "MedicationStatement",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "medication"
+        ],
+        "proposition_text": "The patient is taking metformin twice a day."
+      },
+      {
+        "prop_id": "CAP25",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "metformin",
+        "category": "MedicationStatement",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "medication"
+        ],
+        "proposition_text": "The patient is taking metformin."
+      },
+      {
+        "prop_id": "CAP26",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "tylenol",
+        "category": "MedicationStatement",
+        "speaker": "doctor",
+        "predicate": "recommends",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "plan"
+        ],
+        "proposition_text": "The clinician recommends taking tylenol."
+      },
+      {
+        "prop_id": "CAP27",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "ibuprofen",
+        "category": "MedicationStatement",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "planned",
+        "temporality": "current",
+        "proposition_text": "The doctor prescribed ibuprofen."
+      },
+      {
+        "prop_id": "CAP28",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "flexeril",
+        "category": "MedicationStatement",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "planned",
+        "temporality": "current",
+        "proposition_text": "The doctor prescribed flexeril."
+      },
+      {
+        "prop_id": "CAP29",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "ibuprofen",
+        "category": "MedicationStatement",
+        "speaker": "doctor",
+        "predicate": "prescribes",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The clinician prescribes ibuprofen."
+      },
+      {
+        "prop_id": "CAP30",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "flexeril",
+        "category": "MedicationStatement",
+        "speaker": "doctor",
+        "predicate": "prescribes",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The clinician prescribes flexeril."
+      },
+      {
+        "prop_id": "CAP31",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "metformin",
+        "category": "MedicationStatement",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "medication"
+        ],
+        "proposition_text": "The clinician continues metformin."
+      },
+      {
+        "prop_id": "CAP32",
+        "cap_type": "ProblemHistory",
+        "canonical_concept": "history of left hand pain",
+        "category": "ProblemHistory",
+        "speaker": "patient",
+        "status": "uncertain",
+        "visit_state": "historical",
+        "temporality": "past",
+        "proposition_text": "The patient recalls a previous episode of left hand pain."
+      },
+      {
+        "prop_id": "CAP33",
+        "cap_type": "ProblemHistory",
+        "canonical_concept": "possible injury",
+        "category": "ProblemHistory",
+        "speaker": "patient",
+        "predicate": "suspects",
+        "status": "uncertain",
+        "visit_state": "historical",
+        "temporality": "past",
+        "proposition_text": "The patient suspects a possible injury."
+      },
+      {
+        "prop_id": "CAP34",
+        "cap_type": "Counseling",
+        "canonical_concept": "diet and exercise",
+        "category": "Counseling",
+        "speaker": "doctor",
+        "predicate": "has",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The clinician advises the patient to continue with diet and exercise."
+      }
+    ]
+  },
+  "reference_gpt_f1_items": {
+    "active_problems_symptoms": [],
+    "negated_findings": [],
+    "uncertain_findings": [],
+    "medication_treatment": [],
+    "plan_followup": [],
+    "_chunk_count": [
+      "4"
+    ],
+    "_parse_failures": [
+      "{\"chunk_index\": 1, \"stage\": \"call_llm\", \"error\": \"LLM call failed after retries: Error code: 404\"}",
+      "{\"chunk_index\": 2, \"stage\": \"call_llm\", \"error\": \"LLM call failed after retries: Error code: 404\"}",
+      "{\"chunk_index\": 3, \"stage\": \"call_llm\", \"error\": \"LLM call failed after retries: Error code: 404\"}",
+      "{\"chunk_index\": 4, \"stage\": \"call_llm\", \"error\": \"LLM call failed after retries: Error code: 404\"}"
+    ]
+  },
+  "summary_gpt_f1_items": {
+    "active_problems_symptoms": [],
+    "negated_findings": [],
+    "uncertain_findings": [],
+    "medication_treatment": [],
+    "plan_followup": [],
+    "_chunk_count": [
+      "1"
+    ],
+    "_parse_failures": [
+      "{\"chunk_index\": 1, \"stage\": \"call_llm\", \"error\": \"LLM call failed after retries: Error code: 404\"}"
+    ]
+  },
+  "gpt_f1_alignment": {
+    "by_category": {
+      "active_problems_symptoms": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "matched_count": 0,
+        "pred_count": 0,
+        "ref_count": 0,
+        "matches": [],
+        "unsupported_pred_items": [],
+        "missing_ref_items": []
+      },
+      "negated_findings": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "matched_count": 0,
+        "pred_count": 0,
+        "ref_count": 0,
+        "matches": [],
+        "unsupported_pred_items": [],
+        "missing_ref_items": []
+      },
+      "uncertain_findings": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "matched_count": 0,
+        "pred_count": 0,
+        "ref_count": 0,
+        "matches": [],
+        "unsupported_pred_items": [],
+        "missing_ref_items": []
+      },
+      "medication_treatment": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "matched_count": 0,
+        "pred_count": 0,
+        "ref_count": 0,
+        "matches": [],
+        "unsupported_pred_items": [],
+        "missing_ref_items": []
+      },
+      "plan_followup": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "matched_count": 0,
+        "pred_count": 0,
+        "ref_count": 0,
+        "matches": [],
+        "unsupported_pred_items": [],
+        "missing_ref_items": []
+      }
+    }
+  },
+  "reference_nair_concepts": {
+    "sections": [
+      {
+        "heading": "Clinical Note",
+        "section_value": "CHIEF COMPLAINT\nBack pain.\nMEDICAL HISTORY\nPatient reports history of diabetes.\nSOCIAL HISTORY\nThe patient's family owns and runs a bakery.\nMEDICATIONS\nPatient reports taking metformin twice daily.\nREVIEW OF SYSTEMS\nMusculoskeletal: Reports back pain.",
+        "medical_concepts": [
+          "back pain",
+          "diabetes",
+          "metformin"
+        ]
+      },
+      {
+        "heading": "Clinical Note",
+        "section_value": "Neurological: Denies numbness or tingling in feet.\nPHYSICAL EXAM\nEyes\n- Examination: No redness, discharge, or icterus.\nEars, Nose, Mouth, and Throat\n- Examination of Ears: Auditory canal and tympanic membranes are clear.\nRespiratory\n- Auscultation of Lungs: Clear bilaterally.\nCardiovascular\n- Auscultation of Heart: Regular rate and rhythm.",
+        "medical_concepts": [
+          "numbness in feet",
+          "tingling in feet",
+          "eye redness",
+          "eye discharge",
+          "icterus",
+          "auditory canal",
+          "tympanic membranes",
+          "lung auscultation",
+          "heart auscultation",
+          "regular heart rate and rhythm"
+        ]
+      },
+      {
+        "heading": "Clinical Note",
+        "section_value": "Musculoskeletal\n- Examination: No pain to palpation of the upper back. Pain to palpation of the midline of the lower back, especially on the left. No pain to palpation on the right lower back. Mildly positive straight leg rise on the right Positive straight leg rise on the left.\nASSESSMENT AND PLAN\n1. Low back pain.\n- Medical Reasoning: I believe he has a musculoskeletal low back strain. I do not expect to see anything significant on x-ray, but we will obtain one for further evaluation of any possible disc issues.\n- Patient Education and Counseling: We discussed his diagnosis at length today. I explained that physical therapy can help with the pain, but also strengthen some of the muscles in the back. I explained that he needs to be careful while taking medications, such as an overuse of muscle relaxers if he is doing any strenuous or hazardous activities such as driving.\n- Medical Treatment: Low back x-ray ordered. Referral to physical therapy provided. He will take 400 mg of ibuprofen up to 3 times per day. Tylenol can be used for severe pain. Prescription for Flexeril also provided.\n2. Diabetes.\n- Medical Reasoning: His diabetes is currently under control.",
+        "medical_concepts": [
+          "upper back pain",
+          "lower back pain",
+          "midline lower back pain",
+          "left lower back pain",
+          "right lower back pain",
+          "straight leg raise test",
+          "low back pain",
+          "musculoskeletal low back strain",
+          "x-ray",
+          "low back x-ray",
+          "disc disease",
+          "physical therapy",
+          "muscle relaxants",
+          "ibuprofen",
+          "Tylenol",
+          "Flexeril",
+          "diabetes"
+        ]
+      },
+      {
+        "heading": "Clinical Note",
+        "section_value": "- Patient Education and Counseling: We discussed the importance of maintaining a healthy lifestyle. I encouraged him to try an avoid foods high in sugar. He asked many questions and I feel he is confident in the plan at this point.\n- Medical Treatment: Hemoglobin A1c ordered as he has not had an updated one in almost 5 months. He will continue with his diet and exercise. Continue current dose of metformin for the time being. The patient will be checking his blood sugar in the morning and will log this information for me.\nPatient Agreements: The patient understands and agrees with the recommended medical treatment plan.",
+        "medical_concepts": [
+          "Hemoglobin A1c",
+          "diet",
+          "exercise",
+          "metformin",
+          "blood sugar"
+        ]
+      }
+    ],
+    "medical_concepts": [
+      "back pain",
+      "diabetes",
+      "metformin",
+      "numbness in feet",
+      "tingling in feet",
+      "eye redness",
+      "eye discharge",
+      "icterus",
+      "auditory canal",
+      "tympanic membranes",
+      "lung auscultation",
+      "heart auscultation",
+      "regular heart rate and rhythm",
+      "upper back pain",
+      "lower back pain",
+      "midline lower back pain",
+      "left lower back pain",
+      "right lower back pain",
+      "straight leg raise test",
+      "low back pain",
+      "musculoskeletal low back strain",
+      "x-ray",
+      "low back x-ray",
+      "disc disease",
+      "physical therapy",
+      "muscle relaxants",
+      "ibuprofen",
+      "Tylenol",
+      "Flexeril",
+      "Hemoglobin A1c",
+      "diet",
+      "exercise",
+      "blood sugar"
+    ],
+    "section_count": 4
+  },
+  "summary_nair_concepts": {
+    "sections": [
+      {
+        "heading": "S",
+        "section_value": "The patient reports that their blood sugar levels have bumped towards the higher side. The patient reports that their blood sugar levels have been trending higher. The patient reports trying to test their blood sugar in the mornings. The patient reports pain in the lower back. The patient reports back pain. The patient reports left hand pain. The patient reports irritation in the left eye. The patient reports pain. The patient recalls a previous episode of left hand pain. The patient suspects a possible injury.",
+        "medical_concepts": [
+          "elevated blood sugar",
+          "blood sugar levels",
+          "back pain",
+          "lower back pain",
+          "left hand pain",
+          "eye irritation",
+          "left eye irritation",
+          "pain",
+          "injury"
+        ]
+      },
+      {
+        "heading": "O",
+        "section_value": "Blood pressure is mildly low. Heart rate is within normal limits. Neurologic examination is nonfocal. A1c is pending.",
+        "medical_concepts": [
+          "low blood pressure",
+          "heart rate",
+          "neurologic examination",
+          "A1c"
+        ]
+      },
+      {
+        "heading": "A",
+        "section_value": "The clinician's impression is that the patient has diabetes. The clinician believes the patient has a musculoskeletal low back strain. The patient has a history of left hand pain.",
+        "medical_concepts": [
+          "diabetes",
+          "musculoskeletal low back strain",
+          "low back strain",
+          "left hand pain"
+        ]
+      },
+      {
+        "heading": "P",
+        "section_value": "The doctor ordered a low back x-ray. The doctor will lift the patient's right leg. The doctor ordered an a1c test. The clinician orders physical therapy. The clinician prescribes ibuprofen. The clinician prescribes flexeril. The clinician continues metformin. The doctor recommends taking tylenol.",
+        "medical_concepts": [
+          "low back x-ray",
+          "leg raise test",
+          "a1c test",
+          "physical therapy",
+          "ibuprofen",
+          "flexeril",
+          "metformin",
+          "tylenol"
+        ]
+      }
+    ],
+    "medical_concepts": [
+      "elevated blood sugar",
+      "blood sugar levels",
+      "back pain",
+      "lower back pain",
+      "left hand pain",
+      "eye irritation",
+      "left eye irritation",
+      "pain",
+      "injury",
+      "low blood pressure",
+      "heart rate",
+      "neurologic examination",
+      "A1c",
+      "diabetes",
+      "musculoskeletal low back strain",
+      "low back strain",
+      "low back x-ray",
+      "leg raise test",
+      "a1c test",
+      "physical therapy",
+      "ibuprofen",
+      "flexeril",
+      "metformin",
+      "tylenol"
+    ],
+    "section_count": 4
+  },
+  "nair_alignment": {
+    "pred_concepts": [
+      "elevated blood sugar",
+      "blood sugar levels",
+      "back pain",
+      "lower back pain",
+      "left hand pain",
+      "eye irritation",
+      "left eye irritation",
+      "pain",
+      "injury",
+      "low blood pressure",
+      "heart rate",
+      "neurologic examination",
+      "A1c",
+      "diabetes",
+      "musculoskeletal low back strain",
+      "low back strain",
+      "low back x-ray",
+      "leg raise test",
+      "a1c test",
+      "physical therapy",
+      "ibuprofen",
+      "flexeril",
+      "metformin",
+      "tylenol"
+    ],
+    "ref_concepts": [
+      "back pain",
+      "diabetes",
+      "metformin",
+      "numbness in feet",
+      "tingling in feet",
+      "eye redness",
+      "eye discharge",
+      "icterus",
+      "auditory canal",
+      "tympanic membranes",
+      "lung auscultation",
+      "heart auscultation",
+      "regular heart rate and rhythm",
+      "upper back pain",
+      "lower back pain",
+      "midline lower back pain",
+      "left lower back pain",
+      "right lower back pain",
+      "straight leg raise test",
+      "low back pain",
+      "musculoskeletal low back strain",
+      "x-ray",
+      "low back x-ray",
+      "disc disease",
+      "physical therapy",
+      "muscle relaxants",
+      "ibuprofen",
+      "Tylenol",
+      "Flexeril",
+      "Hemoglobin A1c",
+      "diet",
+      "exercise",
+      "blood sugar"
+    ],
+    "precision_alignment": {
+      "found_b": [
+        "blood sugar levels",
+        "back pain",
+        "lower back pain",
+        "pain",
+        "heart rate",
+        "A1c",
+        "diabetes",
+        "musculoskeletal low back strain",
+        "low back x-ray",
+        "leg raise test",
+        "a1c test",
+        "physical therapy",
+        "ibuprofen",
+        "flexeril",
+        "metformin",
+        "tylenol"
+      ],
+      "not_found_b": [
+        "elevated blood sugar",
+        "left hand pain",
+        "eye irritation",
+        "left eye irritation",
+        "injury",
+        "low blood pressure",
+        "neurologic examination",
+        "low back strain"
+      ],
+      "chunk_count": 1,
+      "chunk_results": [
+        {
+          "found_b": [
+            "blood sugar levels",
+            "back pain",
+            "lower back pain",
+            "pain",
+            "heart rate",
+            "A1c",
+            "diabetes",
+            "musculoskeletal low back strain",
+            "low back x-ray",
+            "leg raise test",
+            "a1c test",
+            "physical therapy",
+            "ibuprofen",
+            "flexeril",
+            "metformin",
+            "tylenol"
+          ],
+          "not_found_b": [
+            "elevated blood sugar",
+            "left hand pain",
+            "eye irritation",
+            "left eye irritation",
+            "injury",
+            "low blood pressure",
+            "neurologic examination",
+            "low back strain"
+          ]
+        }
+      ]
+    },
+    "recall_alignment": {
+      "found_b": [
+        "back pain",
+        "diabetes",
+        "metformin",
+        "eye redness",
+        "lower back pain",
+        "low back pain",
+        "musculoskeletal low back strain",
+        "x-ray",
+        "low back x-ray",
+        "physical therapy",
+        "muscle relaxants",
+        "ibuprofen",
+        "Tylenol",
+        "Flexeril",
+        "Hemoglobin A1c",
+        "blood sugar"
+      ],
+      "not_found_b": [
+        "numbness in feet",
+        "tingling in feet",
+        "eye discharge",
+        "icterus",
+        "auditory canal",
+        "tympanic membranes",
+        "lung auscultation",
+        "heart auscultation",
+        "regular heart rate and rhythm",
+        "upper back pain",
+        "midline lower back pain",
+        "left lower back pain",
+        "right lower back pain",
+        "straight leg raise test",
+        "disc disease",
+        "diet",
+        "exercise"
+      ],
+      "chunk_count": 2,
+      "chunk_results": [
+        {
+          "found_b": [
+            "back pain",
+            "diabetes",
+            "metformin",
+            "eye redness",
+            "lower back pain",
+            "low back pain",
+            "musculoskeletal low back strain",
+            "x-ray",
+            "low back x-ray"
+          ],
+          "not_found_b": [
+            "numbness in feet",
+            "tingling in feet",
+            "eye discharge",
+            "icterus",
+            "auditory canal",
+            "tympanic membranes",
+            "lung auscultation",
+            "heart auscultation",
+            "regular heart rate and rhythm",
+            "upper back pain",
+            "midline lower back pain",
+            "left lower back pain",
+            "right lower back pain",
+            "straight leg raise test",
+            "disc disease"
+          ]
+        },
+        {
+          "found_b": [
+            "physical therapy",
+            "muscle relaxants",
+            "ibuprofen",
+            "Tylenol",
+            "Flexeril",
+            "Hemoglobin A1c",
+            "blood sugar"
+          ],
+          "not_found_b": [
+            "diet",
+            "exercise"
+          ]
+        }
+      ]
+    }
+  },
+  "semantic_cap_audit": {
+    "source_cap_recall": [
+      {
+        "cap_id": "P1",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P2",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P3",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P4",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P5",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P6",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P7",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P8",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P9",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P10",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P11",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P12",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P13",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P14",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P15",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P16",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P1",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P2",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P3",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P4",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P5",
+        "judgment": "contradicted",
+        "reason": null
+      },
+      {
+        "cap_id": "P6",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P7",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P8",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P9",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P10",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P11",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P12",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P13",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P14",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P15",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P16",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P1",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P2",
+        "judgment": "missing",
+        "reason": null
+      }
+    ],
+    "summary_cap_precision": [],
+    "metrics": {
+      "semantic_cap_precision": 0.0,
+      "semantic_cap_recall": 0.6618,
+      "semantic_cap_f1": 0.0,
+      "semantic_cap_precision_supported_count": 0,
+      "semantic_cap_precision_partial_count": 0,
+      "semantic_cap_precision_denominator": 0,
+      "semantic_cap_recall_supported_count": 19,
+      "semantic_cap_recall_partial_count": 7,
+      "semantic_cap_recall_denominator": 34,
+      "semantic_cap_low_value_source_count": 0,
+      "semantic_cap_low_value_summary_count": 0,
+      "semantic_cap_missing_count": 7,
+      "semantic_cap_unsupported_count": 0,
+      "semantic_cap_contradicted_source_count": 1,
+      "semantic_cap_contradicted_summary_count": 0
+    }
+  },
+  "safety_judgment": null,
+  "section_judgment": {
+    "section_miscategorizations": [
+      {
+        "text": "The doctor will lift the patient's right leg.",
+        "current_section": "P",
+        "expected_section": "O",
+        "severity": "major",
+        "reason": "This is a component of the physical exam (straight leg raise-type maneuver), not a future management plan or order. Documenting it in the plan could mislead a reader about what has already been examined versus what is being recommended."
+      },
+      {
+        "text": "The clinician continues metformin.",
+        "current_section": "P",
+        "expected_section": "P",
+        "severity": "minor",
+        "reason": "Continuing an existing medication is a management decision and belongs in the Plan, but per the template rules, current medications the patient is already taking generally belong in S unless framed clearly as a treatment change. This sentence straddles both; it is acceptable in P but could be clearer as an explicit continuation order."
+      }
+    ],
+    "summary_statistics": {
+      "section_appropriateness_score": 0.7,
+      "section_miscategorization_count": 2,
+      "major_section_miscategorization_count": 1
+    }
+  },
+  "pdsqi_judgment": {
+    "citation_applicable": 0,
+    "citation": 0,
+    "accurate": 1,
+    "thorough": 2,
+    "useful": 2,
+    "organized": 2,
+    "comprehensible": 3,
+    "succinct": 3,
+    "abstraction": 1,
+    "synthesized": 2,
+    "voice_summ": 0,
+    "voice_note": 0,
+    "pdsqi_core_mean": 2.1429
+  },
+  "llm_checklist_judgment": {
+    "content_preservation_core": 2,
+    "noise_suppression": 4,
+    "lay_expression_preservation": 2,
+    "state_update_fidelity": 2,
+    "temporality_preservation": 3,
+    "problem_evidence_linkage": 2,
+    "state_plan_separation": 3,
+    "section_organization_appropriateness": 2,
+    "overall_clinical_usability": 2,
+    "clinically_meaningful_omission": "Yes",
+    "clinically_concerning_hallucination": "Yes",
+    "checklist_a_mean": 2.6667,
+    "checklist_b_mean": 2.5,
+    "checklist_c_mean": 2.3333,
+    "llm_checklist_abc_mean": 2.5,
+    "llm_checklist_mean_no_usability": 2.5,
+    "llm_checklist_total_score": 22,
+    "llm_checklist_mean": 2.4444,
+    "llm_checklist_meaningful_omission_yes": 1,
+    "llm_checklist_concerning_hallucination_yes": 1
+  },
+  "metrics": {
+    "case_id": "D2N152",
+    "method": "cap_only",
+    "template": "soap",
+    "source_cap_count": 34,
+    "event_plan_count": null,
+    "summary_cap_count": 0,
+    "cap_matched_count": 0,
+    "cap_precision": 0.0,
+    "cap_recall": 0.0,
+    "cap_f1": 0.0,
+    "unsupported_summary_cap_count": 0,
+    "missing_source_cap_count": 34,
+    "summary_runtime_seconds": null,
+    "summary_cap_runtime_seconds": 0.543,
+    "event_plan_runtime_seconds": null,
+    "rouge_l_f1_vs_reference": 0.1555,
+    "token_f1_vs_reference": 0.318,
+    "gptf1_macro_f1": 0.0,
+    "nair_gpt_precision": 0.6667,
+    "nair_gpt_recall": 0.4848,
+    "nair_gpt_f1": 0.5614,
+    "semantic_cap_precision": 0.0,
+    "semantic_cap_recall": 0.6618,
+    "semantic_cap_f1": 0.0,
+    "hallucination_count": null,
+    "major_hallucination_count": null,
+    "omission_count": null,
+    "major_omission_count": null,
+    "section_appropriateness_score": 0.7,
+    "section_miscategorization_count": 2,
+    "major_section_miscategorization_count": 1,
+    "pdsqi_core_mean": 2.1429,
+    "pdsqi_accurate": 1,
+    "pdsqi_thorough": 2,
+    "llm_checklist_total_score": 22,
+    "llm_checklist_mean": 2.4444,
+    "llm_checklist_mean_no_usability": 2.5,
+    "checklist_a_mean": 2.6667,
+    "checklist_b_mean": 2.5,
+    "checklist_c_mean": 2.3333,
+    "llm_checklist_abc_mean": 2.5,
+    "content_preservation_core": 2,
+    "noise_suppression": 4,
+    "lay_expression_preservation": 2,
+    "state_update_fidelity": 2,
+    "temporality_preservation": 3,
+    "problem_evidence_linkage": 2,
+    "state_plan_separation": 3,
+    "section_organization_appropriateness": 2,
+    "overall_clinical_usability": 2,
+    "llm_checklist_meaningful_omission_yes": 1,
+    "llm_checklist_concerning_hallucination_yes": 1,
+    "gptf1_active_problems_symptoms_precision": 0.0,
+    "gptf1_active_problems_symptoms_recall": 0.0,
+    "gptf1_active_problems_symptoms_f1": 0.0,
+    "gptf1_active_problems_symptoms_pred_count": 0,
+    "gptf1_active_problems_symptoms_ref_count": 0,
+    "gptf1_negated_findings_precision": 0.0,
+    "gptf1_negated_findings_recall": 0.0,
+    "gptf1_negated_findings_f1": 0.0,
+    "gptf1_negated_findings_pred_count": 0,
+    "gptf1_negated_findings_ref_count": 0,
+    "gptf1_uncertain_findings_precision": 0.0,
+    "gptf1_uncertain_findings_recall": 0.0,
+    "gptf1_uncertain_findings_f1": 0.0,
+    "gptf1_uncertain_findings_pred_count": 0,
+    "gptf1_uncertain_findings_ref_count": 0,
+    "gptf1_medication_treatment_precision": 0.0,
+    "gptf1_medication_treatment_recall": 0.0,
+    "gptf1_medication_treatment_f1": 0.0,
+    "gptf1_medication_treatment_pred_count": 0,
+    "gptf1_medication_treatment_ref_count": 0,
+    "gptf1_plan_followup_precision": 0.0,
+    "gptf1_plan_followup_recall": 0.0,
+    "gptf1_plan_followup_f1": 0.0,
+    "gptf1_plan_followup_pred_count": 0,
+    "gptf1_plan_followup_ref_count": 0,
+    "nair_pred_concept_count": 24,
+    "nair_ref_concept_count": 33,
+    "nair_precision_match_count": 16,
+    "nair_recall_match_count": 16,
+    "semantic_cap_precision_supported_count": 0,
+    "semantic_cap_precision_partial_count": 0,
+    "semantic_cap_precision_denominator": 0,
+    "semantic_cap_recall_supported_count": 19,
+    "semantic_cap_recall_partial_count": 7,
+    "semantic_cap_recall_denominator": 34,
+    "semantic_cap_low_value_source_count": 0,
+    "semantic_cap_low_value_summary_count": 0,
+    "semantic_cap_missing_count": 7,
+    "semantic_cap_unsupported_count": 0,
+    "semantic_cap_contradicted_source_count": 1,
+    "semantic_cap_contradicted_summary_count": 0,
+    "pdsqi_useful": 2,
+    "pdsqi_organized": 2,
+    "pdsqi_comprehensible": 3,
+    "pdsqi_succinct": 3,
+    "pdsqi_synthesized": 2
+  }
+}

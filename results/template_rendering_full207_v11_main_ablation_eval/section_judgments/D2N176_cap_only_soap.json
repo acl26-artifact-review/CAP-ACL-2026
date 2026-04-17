@@ -1,0 +1,51 @@
+{
+  "section_miscategorizations": [
+    {
+      "text": "The patient reports no symptoms.",
+      "current_section": "O",
+      "expected_section": "S",
+      "severity": "major",
+      "reason": "A statement explicitly framed as patient report belongs in the Subjective section, not Objective findings."
+    },
+    {
+      "text": "The patient has a history of reflux.",
+      "current_section": "A",
+      "expected_section": "S",
+      "severity": "minor",
+      "reason": "Past medical history is typically documented in the Subjective portion; in Assessment it would usually be framed as an active problem or diagnostic impression."
+    },
+    {
+      "text": "The patient's reflux was managed.",
+      "current_section": "A",
+      "expected_section": "P",
+      "severity": "major",
+      "reason": "This implies prior or ongoing management/treatment rather than a diagnostic impression; management actions and treatment course belong in the Plan."
+    },
+    {
+      "text": "The patient's attitude improved.",
+      "current_section": "A",
+      "expected_section": "S",
+      "severity": "minor",
+      "reason": "This is a change in the patient's reported/observed state over time; without explicit diagnostic framing, it fits better as a subjective report than as an assessment."
+    },
+    {
+      "text": "The patient has a history of caffeine consumption.",
+      "current_section": "A",
+      "expected_section": "S",
+      "severity": "minor",
+      "reason": "This is social/dietary history rather than a diagnostic impression or problem synthesis, so it fits better in Subjective."
+    },
+    {
+      "text": "The doctor wants the patient to continue protonix.",
+      "current_section": "P",
+      "expected_section": "A",
+      "severity": "minor",
+      "reason": "As written, this is a restatement of intent rather than a concrete order; the actual actionable plan is already captured by the explicit prescription and dosing statements. However, it does not substantially mislead, so this is a minor organizational issue."
+    }
+  ],
+  "summary_statistics": {
+    "section_appropriateness_score": 0.7,
+    "section_miscategorization_count": 6,
+    "major_section_miscategorization_count": 2
+  }
+}

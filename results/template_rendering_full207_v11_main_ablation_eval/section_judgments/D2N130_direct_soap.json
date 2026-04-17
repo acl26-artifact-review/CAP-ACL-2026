@@ -1,0 +1,30 @@
+{
+  "section_miscategorizations": [
+    {
+      "text": "She is tolerating current medications.",
+      "current_section": "A",
+      "expected_section": "S",
+      "severity": "minor",
+      "reason": "This is a patient-reported/current medication tolerance statement rather than an assessment or diagnostic impression."
+    },
+    {
+      "text": "Continue Keppra 500 mg twice daily.",
+      "current_section": "P",
+      "expected_section": "A",
+      "severity": "major",
+      "reason": "As written, this appears to be a restatement of an existing regimen rather than a new or modified order; without explicit framing as a change, it functions as current medication state, which should not be in the Plan."
+    },
+    {
+      "text": "Continue Protonix 40 mg daily.",
+      "current_section": "P",
+      "expected_section": "A",
+      "severity": "major",
+      "reason": "Similar to the Keppra statement, this reads as an existing ongoing medication rather than a new management action; current medications belong outside the Plan unless clearly framed as a treatment decision."
+    }
+  ],
+  "summary_statistics": {
+    "section_appropriateness_score": 0.9,
+    "section_miscategorization_count": 3,
+    "major_section_miscategorization_count": 2
+  }
+}

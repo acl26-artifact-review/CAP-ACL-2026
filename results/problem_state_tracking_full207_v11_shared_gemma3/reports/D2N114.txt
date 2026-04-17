@@ -1,0 +1,79 @@
+Case: D2N114
+
+Problem List and Visit State Tracking
+
+Problem List
+- headache | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T9
+  Summary: The patient reports headaches.
+  ClusterId: CL1
+  TemporalProfile: current
+  Updates:
+  - CAP2: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T9,T9 :: The patient reports headaches.
+- ringing in ears | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T9
+  Summary: The patient reports ringing in their ears.
+  ClusterId: CL2
+  TemporalProfile: current
+  Updates:
+  - CAP4: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T9 :: The patient reports ringing in their ears.
+- blurred vision | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T9
+  Summary: The patient reports blurred vision.
+  ClusterId: CL3
+  TemporalProfile: current
+  Updates:
+  - CAP5: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T9 :: The patient reports blurred vision.
+- numbness | verification_status=unconfirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T11
+  Summary: The patient reports experiencing numbness.
+  ClusterId: CL4
+  TemporalProfile: historical
+  Updates:
+  - CAP6: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=historical turns=T11 :: The patient reports experiencing numbness.
+- tingling | verification_status=unconfirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T11
+  Summary: The patient reports experiencing tingling.
+  ClusterId: CL5
+  TemporalProfile: historical
+  Updates:
+  - CAP7: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=historical turns=T11 :: The patient reports experiencing tingling.
+- running | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T13,T19
+  Summary: The patient enjoys running.
+  ClusterId: CL6
+  TemporalProfile: current
+  Updates:
+  - CAP1: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T13,T19,T19 :: The patient enjoys running.
+- idiopathic intracranial hypertension | verification_status=unconfirmed | clinical_status=active | modalities=assessment | speakers=doctor | evidence=T28
+  Summary: The patient is concerned for idiopathic intracranial hypertension.
+  ClusterId: CL11
+  TemporalProfile: current
+  Updates:
+  - CAP3: content_source=doctor modality=assessment verification_status=unconfirmed clinical_status=active temporality=current turns=T28 :: The patient is concerned for idiopathic intracranial hypertension.
+
+Medication Tracking
+- [MedicationState] new balance | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=doctor | evidence=T14
+  Summary: The doctor recommends New Balance shoes.
+  ClusterId: CL7
+  TemporalProfile: current
+  CurrentRegimens:
+  - The doctor recommends New Balance shoes. (T14)
+  Updates:
+  - CAP9: content_source=doctor modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T14 :: The doctor recommends New Balance shoes.
+- [MedicationState] asics | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=doctor | evidence=T14
+  Summary: The doctor recommends Asics shoes.
+  ClusterId: CL8
+  TemporalProfile: current
+  CurrentRegimens:
+  - The doctor recommends Asics shoes. (T14)
+  Updates:
+  - CAP10: content_source=doctor modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T14 :: The doctor recommends Asics shoes.
+- [MedicationState] nike | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=doctor | evidence=T15
+  Summary: The doctor recommends Nike shoes.
+  ClusterId: CL9
+  TemporalProfile: current
+  CurrentRegimens:
+  - The doctor recommends Nike shoes. (T15)
+  Updates:
+  - CAP11: content_source=doctor modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T15 :: The doctor recommends Nike shoes.
+
+Other Structured States
+- [TestResult] papilledema | verification_status=confirmed | clinical_status=active | modalities=assessment | speakers=doctor | evidence=T25
+  Summary: The patient has papilledema.
+  ClusterId: CL10
+  TemporalProfile: current

@@ -1,0 +1,105 @@
+Case: D2N186
+
+Problem List and Visit State Tracking
+
+Problem List
+- back pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T0
+  Summary: The patient reports back pain.
+  ClusterId: CL1
+  TemporalProfile: current
+  Updates:
+  - CAP14: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T0 :: The patient reports back pain.
+- microdiscectomy | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T8
+  Summary: The patient had a microdiscectomy.
+  ClusterId: CL2
+  TemporalProfile: November 2020
+  Updates:
+  - CAP17: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=November 2020 turns=T8 :: The patient had a microdiscectomy.
+- lower back pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T9
+  Summary: The patient reports lower back pain.
+  ClusterId: CL3
+  TemporalProfile: current
+  Updates:
+  - CAP11: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T9 :: The patient reports lower back pain.
+- leg pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T9
+  Summary: The patient reports leg pain.
+  ClusterId: CL4
+  TemporalProfile: current
+  Updates:
+  - CAP16: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T9 :: The patient reports leg pain.
+- nerve pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T10
+  Summary: The patient reports nerve pain.
+  ClusterId: CL5
+  TemporalProfile: current
+  Updates:
+  - CAP15: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T10 :: The patient reports nerve pain.
+- bending | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T19
+  Summary: The patient reports that bending over makes their pain worse.
+  ClusterId: CL6
+  TemporalProfile: current
+  Updates:
+  - CAP2: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T19 :: The patient reports that bending over makes their pain worse.
+- random pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T23,T25,T30,T36,T42
+  Summary: The patient reports that the pain occurs randomly.
+  ClusterId: CL7
+  TemporalProfile: current
+  Updates:
+  - CAP5: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T23 :: The patient reports that the pain occurs randomly.
+  - CAP3: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T25 :: The patient reports pain located around the surgical site.
+  - CAP6: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T25 :: The patient reports pain depending on the day.
+  - CAP19: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T25 :: The patient reports pain.
+  - CAP8: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T30 :: The patient reports pain in their back.
+  - CAP9: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T36 :: The patient reports no pain with dorsiflexion.
+  - CAP1: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T42 :: The patient reports no pain with palpation to the right side.
+  - CAP12: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T42 :: The patient reports pain with weightbearing.
+  - CAP13: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T42 :: The patient reports pain with palpation.
+- hand pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T25
+  Summary: The patient reports pain in the left hand.
+  ClusterId: CL8
+  TemporalProfile: current
+  Updates:
+  - CAP4: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T25 :: The patient reports pain in the left hand.
+- icing | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T28
+  Summary: The patient denies using icing.
+  ClusterId: CL9
+  TemporalProfile: current
+  Updates:
+  - CAP18: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T28 :: The patient denies using icing.
+- pain management | verification_status=confirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T54
+  Summary: The doctor writes a referral to pain management.
+  ClusterId: CL12
+  TemporalProfile: future, immediate
+  Updates:
+  - CAP7: content_source=doctor modality=plan verification_status=unconfirmed clinical_status=planned temporality=future turns=T54 :: The doctor writes a referral to pain management.
+  - CAP10: content_source=doctor modality=plan verification_status=confirmed clinical_status=planned temporality=immediate turns=T54 :: A referral to pain management is ordered.
+
+Medication Tracking
+- [MedicationState] ibuprofen | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T33
+  Summary: The patient reports taking ibuprofen 800 milligrams a day.
+  ClusterId: CL10
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient reports taking ibuprofen 800 milligrams a day. (T33)
+  Updates:
+  - CAP23: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T33 :: The patient reports taking ibuprofen 800 milligrams a day.
+- [MedicationChange] meloxicam | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T52
+  Summary: The doctor prescribes meloxicam.
+  ClusterId: CL11
+  TemporalProfile: future
+  PlannedChanges:
+  - The doctor prescribes meloxicam. (T52)
+  Updates:
+  - CAP20: content_source=doctor modality=plan verification_status=unconfirmed clinical_status=planned temporality=future turns=T52 :: The doctor prescribes meloxicam.
+- [MedicationChange] demerol | verification_status=confirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T56
+  Summary: The doctor prescribes demerol.
+  ClusterId: CL13
+  TemporalProfile: future, immediate
+  PlannedChanges:
+  - The doctor prescribes demerol. (T56)
+  - The doctor prescribes demerol. (T56)
+  Updates:
+  - CAP21: content_source=doctor modality=plan verification_status=unconfirmed clinical_status=planned temporality=future turns=T56 :: The doctor prescribes demerol.
+  - CAP22: content_source=doctor modality=plan verification_status=confirmed clinical_status=planned temporality=immediate turns=T56 :: The doctor prescribes demerol.
+
+Other Structured States
+- None

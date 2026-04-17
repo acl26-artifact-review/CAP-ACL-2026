@@ -1,0 +1,44 @@
+{
+  "section_miscategorizations": [
+    {
+      "text": "The patient reports newly diagnosed allergic asthma.",
+      "current_section": "S",
+      "expected_section": "A",
+      "severity": "minor",
+      "reason": "A new diagnosis is an assessment/impression; while the patient can report it, documenting it as 'newly diagnosed' functions more as an assessment than a symptom."
+    },
+    {
+      "text": "The patient has newly diagnosed asthma.",
+      "current_section": "A",
+      "expected_section": "O",
+      "severity": "minor",
+      "reason": "The phrasing suggests a known, established diagnosis (an objective problem) rather than the clinician's interpretive assessment or differential; it could reasonably be placed in O as an existing condition."
+    },
+    {
+      "text": "The patient has dyspnea.",
+      "current_section": "A",
+      "expected_section": "S",
+      "severity": "minor",
+      "reason": "Dyspnea here is a restatement of the patient's reported shortness of breath rather than a distinct diagnostic impression; it fits better as a subjective symptom."
+    },
+    {
+      "text": "The patient reports diarrhea.",
+      "current_section": "A",
+      "expected_section": "S",
+      "severity": "major",
+      "reason": "This is a patient-reported symptom, not an assessment or diagnosis; placing it in A could mislead a reader into thinking diarrhea is a formal problem assessment rather than a reported symptom."
+    },
+    {
+      "text": "The patient uses an inhaler.",
+      "current_section": "O",
+      "expected_section": "S",
+      "severity": "minor",
+      "reason": "Use of an inhaler reflects current treatment/medication state; unless specifically observed or administered in clinic, it belongs with patient-reported medication history."
+    }
+  ],
+  "summary_statistics": {
+    "section_appropriateness_score": 0.8,
+    "section_miscategorization_count": 5,
+    "major_section_miscategorization_count": 1
+  }
+}

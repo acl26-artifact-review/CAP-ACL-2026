@@ -1,0 +1,44 @@
+{
+  "section_miscategorizations": [
+    {
+      "text": "The patient reports 1-2+ pitting edema in his legs.",
+      "current_section": "O",
+      "expected_section": "S",
+      "severity": "major",
+      "reason": "Pitting edema grading (1-2+) is an objective physical exam-style description; placing it as something the patient reports blurs subjective vs. objective data and could mislead a reader about how the finding was obtained."
+    },
+    {
+      "text": "The patient's EKG shows no evidence of coronary artery disease.",
+      "current_section": "O",
+      "expected_section": "A",
+      "severity": "minor",
+      "reason": "While EKG is an objective test and belongs in O, stating that it shows 'no evidence of coronary artery disease' is an interpretive diagnostic conclusion rather than a raw finding; this interpretive synthesis more appropriately belongs in the assessment."
+    },
+    {
+      "text": "Depression is the patient's first problem.",
+      "current_section": "A",
+      "expected_section": "A",
+      "severity": "minor",
+      "reason": "The content (prioritizing depression as a problem) is appropriate for Assessment, but the phrasing is awkward and could be misread as a historical statement; however, it does not clearly belong in another section, so this is only a minor organizational issue."
+    },
+    {
+      "text": "The patient has a past medical history significant for prior rotator cuff repair and depression.",
+      "current_section": "A",
+      "expected_section": "S",
+      "severity": "minor",
+      "reason": "Past medical history is typically documented in the subjective/history portion rather than in the assessment, which should focus on current diagnostic impressions and active problems."
+    },
+    {
+      "text": "Schedule counseling once a week.",
+      "current_section": "P",
+      "expected_section": "P",
+      "severity": "major",
+      "reason": "In this note, the patient already reports receiving counseling once a week in the Subjective section; restating 'Schedule counseling once a week' in the Plan implies a new order rather than continuation of an existing therapy, which could mislead about what is changing. It would be clearer either as confirmation of continuation or omitted as a new action."
+    }
+  ],
+  "summary_statistics": {
+    "section_appropriateness_score": 0.7,
+    "section_miscategorization_count": 5,
+    "major_section_miscategorization_count": 2
+  }
+}

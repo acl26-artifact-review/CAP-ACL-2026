@@ -1,0 +1,131 @@
+You are an expert clinical information extraction system.
+
+Convert the clinical summary note into Clinical Atomic Propositions (CAPs).
+
+[Definition of CAP]
+A CAP is:
+- one clinically meaningful assertion,
+- standalone and self-contained,
+- verifiable from the summary text,
+- explicit about speaker or subject when possible,
+- faithful to negation, temporality, laterality, numeric values, severity, and plan intent.
+
+[Validity Rules - CRITICAL]
+Do NOT include invalid or non-verifiable units as CAPs.
+Instead, place them in `filtered_nonverifiable_units`.
+
+Invalidity types:
+- imperative without a factual claim
+- interrogative
+- incomplete fragment
+- vague statement with unresolved subject or clinical referent
+
+[Contextual Enrichment Rules - CRITICAL]
+To keep propositions reusable for downstream event clustering:
+1. Resolve pronouns and deictic expressions whenever the summary makes the referent clear.
+2. Make the speaker or clinical subject explicit in `proposition_text`.
+3. Preserve persistence, progression, improvement, worsening, and stability cues when explicitly stated.
+4. Preserve explicit treatment plans, referrals, follow-up timing, counseling, return precautions, and patient instructions.
+5. Do not convert speculation or possibility into affirmed diagnosis or plan.
+
+[Schema]
+Use CAP type semantics consistent with the FHIR-inspired source schema when recoverable:
+- ChiefComplaint
+- Problem
+- ProblemHistory
+- ExamFinding
+- TestResult
+- MedicationStatement
+- MedicationRequest
+- Order
+- FollowUp
+- Counseling
+
+Valid category values:
+- Demographic
+- ChiefComplaint
+- History
+- Allergy
+- Symptom
+- Finding
+- Diagnosis
+- MedicationPlan
+- TestPlan
+- FollowUpPlan
+- UncertainOrNoise
+
+Valid speaker values:
+- patient
+- clinician
+- test_result
+- unknown
+
+Valid status values:
+- affirmed
+- negated
+- uncertain
+
+Valid temporality values:
+- past
+- current
+- future
+- relative
+
+Valid predicate values:
+- reports
+- denies
+- has
+- shows
+- diagnoses
+- suspects
+- prescribes
+- orders
+- recommends
+- instructs
+- plans
+- notes
+
+Valid claim_type_tags values:
+- temporal
+- quantitative
+- causal
+- medication
+- plan
+- diagnostic
+- symptom
+- exam
+- safety_relevant
+
+[Extraction Rules]
+1. One CAP = exactly one clinical assertion.
+2. Preserve the summary meaning; do not repair unsupported content.
+3. Make speaker explicit when recoverable.
+4. Preserve negation and uncertainty explicitly.
+5. Do not output section headers as CAPs.
+6. Do not add facts missing from the summary.
+7. Return at most {max_props} atomic propositions.
+8. If a sentence contains multiple independent claims, split them.
+9. Do NOT aggressively split routine coordinated checklist items when they function as one single summary event.
+10. Return compact flat JSON only. Omit null fields entirely.
+
+[Output Format]
+Return valid JSON only:
+{{
+  "atomic_propositions": [
+    {{
+      "prop_id": "P1",
+      "category": "Symptom",
+      "speaker": "patient",
+      "predicate": "reports",
+      "status": "affirmed",
+      "temporality": "current",
+      "claim_type_tags": ["symptom"],
+      "proposition_text": "The patient reports right knee pain."
+    }}
+  ],
+  "filtered_nonverifiable_units": []
+}}
+
+<Clinical Summary>
+{summary_text}
+</Clinical Summary>

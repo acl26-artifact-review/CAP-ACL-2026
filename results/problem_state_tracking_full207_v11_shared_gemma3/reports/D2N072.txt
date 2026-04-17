@@ -1,0 +1,72 @@
+Case: D2N072
+
+Problem List and Visit State Tracking
+
+Problem List
+- skiing | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T5
+  Summary: The patient was skiing over the weekend.
+  ClusterId: CL1
+  TemporalProfile: weekend
+  Updates:
+  - CAP11: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=weekend turns=T5 :: The patient was skiing over the weekend.
+- finger pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T7
+  Summary: The patient reports pain in the right finger.
+  ClusterId: CL2
+  TemporalProfile: current
+  Updates:
+  - CAP1: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T7 :: The patient reports pain in the right finger.
+- strap caught | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T7
+  Summary: The patient's strap got caught on his finger.
+  ClusterId: CL3
+  TemporalProfile: current
+  Updates:
+  - CAP2: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T7 :: The patient's strap got caught on his finger.
+- bent finger | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T7
+  Summary: The finger was bent back.
+  ClusterId: CL4
+  TemporalProfile: current
+  Updates:
+  - CAP4: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T7 :: The finger was bent back.
+- pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T17,T37
+  Summary: The patient is experiencing pain.
+  ClusterId: CL5
+  TemporalProfile: current
+  Updates:
+  - CAP6: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T17 :: The patient reports pain.
+  - CAP5: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T37 :: The patient is experiencing pain.
+- movement | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T19
+  Summary: Movement worsens the pain.
+  ClusterId: CL7
+  TemporalProfile: current
+  Updates:
+  - CAP7: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T19 :: Movement worsens the pain.
+- constipation | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T23
+  Summary: The patient reports suffering from constipation recently.
+  ClusterId: CL8
+  TemporalProfile: recent
+  Updates:
+  - CAP3: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=recent turns=T23 :: The patient reports suffering from constipation recently.
+
+Medication Tracking
+- [MedicationState] ibuprofen | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T17
+  Summary: The patient is taking ibuprofen.
+  ClusterId: CL6
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient is taking ibuprofen. (T17)
+  Updates:
+  - CAP9: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T17 :: The patient is taking ibuprofen.
+- [MedicationState] miralax | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T27
+  Summary: The patient takes miralax.
+  ClusterId: CL9
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient takes miralax. (T27)
+  Updates:
+  - CAP10: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T27 :: The patient takes miralax.
+
+Other Structured States
+- [Plan] medication | verification_status=unconfirmed | clinical_status=planned | modalities=interview | speakers=doctor | evidence=T48
+  Summary: Order the medication and procedures we discussed.
+  ClusterId: CL10
+  TemporalProfile: now

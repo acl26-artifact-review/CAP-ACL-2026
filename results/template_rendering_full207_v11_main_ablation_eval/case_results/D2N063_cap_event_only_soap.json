@@ -1,0 +1,2190 @@
+{
+  "case_id": "D2N063",
+  "method": "cap_event_only",
+  "template": "soap",
+  "summary_text": "S:\nThe patient reports intermittent dizziness for one week, worse when standing. He denies chest pain, dyspnea, or syncope. He also reports some lower back pain, rated 4 out of 10.\n\nO:\nBlood pressure is 90/60 mmHg. Heart rate is 88 bpm, regular. Neurologic exam is unremarkable. Tenderness is noted to palpation in the lumbar paraspinal region.\n\nA:\nThe patient's symptoms are most consistent with orthostatic hypotension and possible lumbar strain. No acute neurological deficits are identified.\n\nP:\nOrder a trial of lasix 60 mg IV daily. Order albuterol PRN for shortness of breath. Order atrovent PRN for bronchospasm. Order physical therapy referral. Order naproxen 500 mg twice daily. Schedule follow-up in 1 week to assess response to treatment.",
+  "reference_summary": "CHIEF COMPLAINT\n\nDyspnea.\n\nMEDICAL HISTORY\n\nPatient reports history of diabetes, back pain, congestive heart failure, and chronic obstructive pulmonary disease.\n\nSOCIAL HISTORY\n\nPatient reports living a sedentary lifestyle.\n\nMEDICATIONS\n\nPatient reports she is not consistent with taking Lasix and metformin.\n\nREVIEW OF SYSTEMS\n\nConstitutional: Reports 10 pound weight gain. Denies fever.\nCardiovascular: Denies chest pain or tightness.\nRespiratory: Reports orthopnea and productive cough. Denies dyspnea on exertion.\nGastrointestinal: Denies nausea, vomiting, or diarrhea.\nGenitourinary: Reports polyuria.\nMusculoskeletal: Reports back pain and lower extremity edema.\nNeurological: Denies lower extremity weakness or numbness.\n\nVITALS\n\nOxygen saturation: 92%\n\nPHYSICAL EXAM\n\nNeck\n- General Examination: Slight swelling. Mild JVD. No bruits.\n\nRespiratory\n- Auscultation of Lungs: Mild rales heard at the base bilaterally and slight intermittent wheezing.\n\nCardiovascular\n- Auscultation of Heart: 2 out of 6 systolic ejection murmur, otherwise regular rate and rhythm.\n\nGastrointestinal\n- Examination of Abdomen: Slightly distended. No tenderness or guarding.\n\nMusculoskeletal\n- Examination: 1.5+ pitting edema in the ankles bilaterally. No calf tenderness. Negative Homan's sign. Slight tenderness in the paraspinal area, mostly in the lower back. No midline tenderness. Good reflexes.\n\nRESULTS\n\nHemoglobin A1c: 7.5\n\nASSESSMENT AND PLAN\n\n1. Shortness of breath.\n- Medical Reasoning: I believe this is an exacerbation of her congestive heart failure.\n- Patient Education and Counseling: I advised the patient to monitor her weight daily.\n- Medical Treatment: She will increase her dose of Lasix from 20 mg to 60 mg for the next 4 days. She should also use her albuterol and Atrovent inhalers as needed. If her symptoms don't improve in the next couple of days, we will either increase her doses or have her go to the hospital.\n\n2. Diabetes type 2.\n- Medical Reasoning: Her recent blood glucose levels have been elevated.\n- Patient Education and Counseling: We discussed the possibility of needing to add another medication to her regimen.\n- Medical Treatment: We are going to order a repeat hemoglobin A1c and adjust her dose of metformin accordingly.\n\n3. Back pain.\n- Medical Reasoning: This appears to be all muscular pain.\n- Patient Education and Counseling: We discussed exercises she can do to help her pain and that ff this doesn't help we can consider physical therapy.\n- Medical Treatment: Prescriptions provided for Naprosyn and Flexeril.\n\nPatient Agreements: The patient understands and agrees with the recommended medical treatment plan.\n\nINSTRUCTIONS\n\nWe will have her follow up in a couple of days.",
+  "source_cap": {
+    "atomic_propositions": [
+      {
+        "prop_id": "CAP1",
+        "cap_type": "Problem",
+        "canonical_concept": "congestive heart failure",
+        "category": "Problem",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The doctor believes the patient has an exacerbation of congestive heart failure."
+      },
+      {
+        "prop_id": "CAP2",
+        "cap_type": "Problem",
+        "canonical_concept": "high blood sugars",
+        "category": "Problem",
+        "speaker": "patient",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "Blood sugars have been running a little bit high."
+      },
+      {
+        "prop_id": "CAP3",
+        "cap_type": "Problem",
+        "canonical_concept": "difficulty controlling diet",
+        "category": "Problem",
+        "speaker": "patient",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "It's been a challenge to control the diet."
+      },
+      {
+        "prop_id": "CAP4",
+        "cap_type": "Symptom",
+        "canonical_concept": "high blood sugars",
+        "category": "Symptom",
+        "speaker": "patient",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "recent",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient's blood sugars have been running high."
+      },
+      {
+        "prop_id": "CAP5",
+        "cap_type": "Symptom",
+        "canonical_concept": "swelling",
+        "category": "Symptom",
+        "speaker": "doctor",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports swelling in their ankles."
+      },
+      {
+        "prop_id": "CAP6",
+        "cap_type": "Symptom",
+        "canonical_concept": "shortness of breath",
+        "category": "Symptom",
+        "speaker": "doctor",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports shortness of breath."
+      },
+      {
+        "prop_id": "CAP7",
+        "cap_type": "Problem",
+        "canonical_concept": "diabetes",
+        "category": "Problem",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The doctor has a diabetes problem."
+      },
+      {
+        "prop_id": "CAP8",
+        "cap_type": "Symptom",
+        "canonical_concept": "difficulty breathing",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports difficulty breathing."
+      },
+      {
+        "prop_id": "CAP9",
+        "cap_type": "Problem",
+        "canonical_concept": "weight gain",
+        "category": "Problem",
+        "speaker": "doctor",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient reports weight gain."
+      },
+      {
+        "prop_id": "CAP10",
+        "cap_type": "Symptom",
+        "canonical_concept": "weight gain",
+        "category": "Symptom",
+        "speaker": "doctor",
+        "predicate": "reports",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports weight gain."
+      },
+      {
+        "prop_id": "CAP11",
+        "cap_type": "Symptom",
+        "canonical_concept": "chest pain",
+        "category": "Symptom",
+        "speaker": "doctor",
+        "predicate": "denies",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient denies chest pain."
+      },
+      {
+        "prop_id": "CAP12",
+        "cap_type": "Symptom",
+        "canonical_concept": "nausea",
+        "category": "Symptom",
+        "speaker": "patient",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient is feeling crazy."
+      },
+      {
+        "prop_id": "CAP13",
+        "cap_type": "Symptom",
+        "canonical_concept": "pain",
+        "category": "Symptom",
+        "speaker": "doctor",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports pain."
+      },
+      {
+        "prop_id": "CAP14",
+        "cap_type": "Problem",
+        "canonical_concept": "diabetes",
+        "category": "Problem",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient has diabetes."
+      },
+      {
+        "prop_id": "CAP15",
+        "cap_type": "Symptom",
+        "canonical_concept": "pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports pain."
+      },
+      {
+        "prop_id": "CAP16",
+        "cap_type": "MedicationRequest",
+        "canonical_concept": "lasix",
+        "category": "MedicationRequest",
+        "speaker": "doctor",
+        "predicate": "orders",
+        "status": "uncertain",
+        "visit_state": "planned",
+        "temporality": "next 4 days",
+        "claim_type_tags": [
+          "medication",
+          "plan",
+          "quantitative"
+        ],
+        "proposition_text": "The doctor orders an increase in lasix dose to 60 milligrams for the next four days."
+      },
+      {
+        "prop_id": "CAP17",
+        "cap_type": "ExamFinding",
+        "canonical_concept": "tenderness",
+        "category": "ExamFinding",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The doctor finds tenderness in the paraspinal areas of the patient's back."
+      },
+      {
+        "prop_id": "CAP18",
+        "cap_type": "TestResult",
+        "canonical_concept": "hemoglobin a1c",
+        "category": "TestResult",
+        "speaker": "doctor",
+        "predicate": "orders",
+        "status": "uncertain",
+        "visit_state": "planned",
+        "temporality": "within 2 days",
+        "claim_type_tags": [
+          "plan",
+          "quantitative"
+        ],
+        "proposition_text": "The doctor orders a hemoglobin a1c test."
+      },
+      {
+        "prop_id": "CAP19",
+        "cap_type": "MedicationRequest",
+        "canonical_concept": "albuterol",
+        "category": "MedicationRequest",
+        "speaker": "doctor",
+        "predicate": "orders",
+        "status": "uncertain",
+        "visit_state": "planned",
+        "temporality": "as needed",
+        "claim_type_tags": [
+          "plan"
+        ],
+        "proposition_text": "The doctor orders albuterol as needed."
+      },
+      {
+        "prop_id": "CAP20",
+        "cap_type": "MedicationRequest",
+        "canonical_concept": "atrovent",
+        "category": "MedicationRequest",
+        "speaker": "doctor",
+        "predicate": "orders",
+        "status": "uncertain",
+        "visit_state": "planned",
+        "temporality": "as needed",
+        "claim_type_tags": [
+          "plan"
+        ],
+        "proposition_text": "The doctor orders atrovent as needed."
+      },
+      {
+        "prop_id": "CAP21",
+        "cap_type": "Order",
+        "canonical_concept": "physical therapy",
+        "category": "Order",
+        "speaker": "doctor",
+        "predicate": "orders",
+        "status": "uncertain",
+        "visit_state": "planned",
+        "temporality": "future",
+        "claim_type_tags": [
+          "plan"
+        ],
+        "proposition_text": "The doctor orders physical therapy."
+      },
+      {
+        "prop_id": "CAP22",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "insulin",
+        "category": "MedicationStatement",
+        "speaker": "doctor",
+        "status": "uncertain",
+        "visit_state": "planned",
+        "temporality": "future",
+        "proposition_text": "We had talked about avoiding going to insulin."
+      },
+      {
+        "prop_id": "CAP23",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "diet control",
+        "category": "MedicationStatement",
+        "speaker": "doctor",
+        "status": "uncertain",
+        "visit_state": "historical",
+        "temporality": "past",
+        "proposition_text": "The patient was on diet control."
+      },
+      {
+        "prop_id": "CAP24",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "lasix",
+        "category": "MedicationStatement",
+        "speaker": "doctor",
+        "status": "uncertain",
+        "visit_state": "historical",
+        "temporality": "past",
+        "proposition_text": "The patient was taking lasix."
+      },
+      {
+        "prop_id": "CAP25",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "naproxen",
+        "category": "MedicationStatement",
+        "speaker": "doctor",
+        "predicate": "orders",
+        "status": "uncertain",
+        "visit_state": "planned",
+        "temporality": "future",
+        "claim_type_tags": [
+          "plan"
+        ],
+        "proposition_text": "The doctor orders naproxen."
+      },
+      {
+        "prop_id": "CAP26",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "flexeril",
+        "category": "MedicationStatement",
+        "speaker": "doctor",
+        "predicate": "orders",
+        "status": "uncertain",
+        "visit_state": "planned",
+        "temporality": "future",
+        "claim_type_tags": [
+          "plan"
+        ],
+        "proposition_text": "The doctor orders flexeril."
+      }
+    ],
+    "filtered_nonverifiable_units": []
+  },
+  "event_plan": {
+    "events": [
+      {
+        "event_id": "CL16",
+        "event_type": "ProblemOrientedNoteBundle",
+        "canonical_concept": "diabetes",
+        "visit_state": "active",
+        "status": "affirmed",
+        "temporality": "future",
+        "speaker_source": "doctor",
+        "clinical_priority": "high",
+        "title": "diabetes",
+        "event_summary": "Problem-oriented bundle for diabetes.",
+        "supporting_cap_ids": [
+          "CAP7",
+          "CAP14",
+          "CAP16",
+          "CAP19",
+          "CAP20",
+          "CAP17",
+          "CAP21",
+          "CAP25",
+          "CAP26"
+        ],
+        "anchor_problem_cap_id": "CAP7",
+        "anchor_problem": "diabetes",
+        "S_cap_ids": [
+          "CAP7",
+          "CAP14"
+        ],
+        "O_cap_ids": [
+          "CAP17"
+        ],
+        "P_cap_ids": [
+          "CAP16",
+          "CAP19",
+          "CAP20",
+          "CAP21",
+          "CAP25",
+          "CAP26"
+        ],
+        "supporting_evidence": [
+          "The doctor has a diabetes problem.",
+          "The patient has diabetes.",
+          "The doctor finds tenderness in the paraspinal areas of the patient's back."
+        ],
+        "current_state": [
+          "The doctor has a diabetes problem.",
+          "The patient has diabetes."
+        ],
+        "planned_actions": [
+          "The doctor orders an increase in lasix dose to 60 milligrams for the next four days.",
+          "The doctor orders albuterol as needed.",
+          "The doctor orders atrovent as needed.",
+          "The doctor orders physical therapy.",
+          "The doctor orders naproxen."
+        ],
+        "key_slots": {
+          "source_modalities": "assessment, interview, plan, exam",
+          "temporal_profile": "current, next 4 days, as needed, future",
+          "anchor_cluster_type": "ProblemState",
+          "anchor_primary_cap_type": "Problem",
+          "bundle_concepts": "diabetes; lasix; albuterol; atrovent; tenderness; physical therapy; naproxen; flexeril",
+          "history_context": "",
+          "related_factors": "",
+          "visit_primary": "true",
+          "render_in_note": "true",
+          "assessment_fallback": "The patient has diabetes.",
+          "bundle_design": "problem_oriented_note_bundle"
+        },
+        "render_sections": [
+          "S",
+          "O",
+          "A",
+          "P",
+          "History of Present Illness",
+          "Findings",
+          "Assessment",
+          "Plan"
+        ]
+      }
+    ]
+  },
+  "summary_cap": {
+    "atomic_propositions": [
+      {
+        "prop_id": "P1",
+        "cap_type": "Symptom",
+        "canonical_concept": "intermittent dizziness",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports intermittent dizziness."
+      },
+      {
+        "prop_id": "P2",
+        "cap_type": "Symptom",
+        "canonical_concept": "dizziness worse when standing",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "worsening",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports dizziness worse when standing."
+      },
+      {
+        "prop_id": "P3",
+        "cap_type": "Symptom",
+        "canonical_concept": "pain:back",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports lower back pain."
+      },
+      {
+        "prop_id": "P4",
+        "cap_type": "Symptom",
+        "canonical_concept": "pain:back",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports lower back pain rated 4 out of 10."
+      },
+      {
+        "prop_id": "P5",
+        "cap_type": "Finding",
+        "canonical_concept": "pain",
+        "category": "Finding",
+        "speaker": "clinician",
+        "predicate": "denies",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "exam"
+        ],
+        "proposition_text": "The patient denies chest pain."
+      },
+      {
+        "prop_id": "P6",
+        "cap_type": "Finding",
+        "canonical_concept": "denies dyspnea",
+        "category": "Finding",
+        "speaker": "clinician",
+        "predicate": "denies",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "exam"
+        ],
+        "proposition_text": "The patient denies dyspnea."
+      },
+      {
+        "prop_id": "P7",
+        "cap_type": "Finding",
+        "canonical_concept": "denies syncope",
+        "category": "Finding",
+        "speaker": "clinician",
+        "predicate": "denies",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "exam"
+        ],
+        "proposition_text": "The patient denies syncope."
+      },
+      {
+        "prop_id": "P8",
+        "cap_type": "ExamFinding",
+        "canonical_concept": "blood pressure",
+        "category": "ExamFinding",
+        "speaker": "clinician",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "exam"
+        ],
+        "proposition_text": "Blood pressure is 90/60 mmHg."
+      },
+      {
+        "prop_id": "P9",
+        "cap_type": "ExamFinding",
+        "canonical_concept": "heart rate bpm",
+        "category": "ExamFinding",
+        "speaker": "clinician",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "quantitative"
+        ],
+        "proposition_text": "Heart rate is 88 bpm."
+      },
+      {
+        "prop_id": "P10",
+        "cap_type": "ExamFinding",
+        "canonical_concept": "heart rate regular",
+        "category": "ExamFinding",
+        "speaker": "clinician",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "Heart rate is regular."
+      },
+      {
+        "prop_id": "P11",
+        "cap_type": "Finding",
+        "canonical_concept": "neurologic exam unremarkable",
+        "category": "Finding",
+        "speaker": "clinician",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "exam"
+        ],
+        "proposition_text": "Neurologic exam is unremarkable."
+      },
+      {
+        "prop_id": "P12",
+        "cap_type": "Finding",
+        "canonical_concept": "tenderness noted palpation lumbar",
+        "category": "Finding",
+        "speaker": "clinician",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "exam"
+        ],
+        "proposition_text": "Tenderness is noted to palpation in the lumbar paraspinal region."
+      },
+      {
+        "prop_id": "P13",
+        "cap_type": "Diagnosis",
+        "canonical_concept": "symptoms are most consistent",
+        "category": "Diagnosis",
+        "speaker": "clinician",
+        "predicate": "suspects",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "diagnostic"
+        ],
+        "proposition_text": "The patient's symptoms are most consistent with orthostatic hypotension."
+      },
+      {
+        "prop_id": "P14",
+        "cap_type": "Diagnosis",
+        "canonical_concept": "symptoms are most consistent",
+        "category": "Diagnosis",
+        "speaker": "clinician",
+        "predicate": "suspects",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "diagnostic"
+        ],
+        "proposition_text": "The patient's symptoms are most consistent with possible lumbar strain."
+      }
+    ],
+    "filtered_nonverifiable_units": [],
+    "runtime_seconds": 24.228
+  },
+  "cap_alignment": {
+    "cap_precision": 0.21428571428571427,
+    "cap_recall": 0.11538461538461539,
+    "cap_f1": 0.15,
+    "matched_count": 3,
+    "summary_prop_count": 14,
+    "source_prop_count": 26,
+    "matched_pairs": [
+      {
+        "score": 1.0,
+        "summary_prop_id": "P5",
+        "source_prop_id": "CAP15",
+        "summary_text": "The patient denies chest pain.",
+        "source_text": "The patient reports pain."
+      },
+      {
+        "score": 0.9433,
+        "summary_prop_id": "P3",
+        "source_prop_id": "CAP13",
+        "summary_text": "The patient reports lower back pain.",
+        "source_text": "The patient reports pain."
+      },
+      {
+        "score": 0.6015,
+        "summary_prop_id": "P12",
+        "source_prop_id": "CAP17",
+        "summary_text": "Tenderness is noted to palpation in the lumbar paraspinal region.",
+        "source_text": "The doctor finds tenderness in the paraspinal areas of the patient's back."
+      }
+    ],
+    "unsupported_summary_props": [
+      {
+        "prop_id": "P1",
+        "cap_type": "Symptom",
+        "canonical_concept": "intermittent dizziness",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports intermittent dizziness."
+      },
+      {
+        "prop_id": "P2",
+        "cap_type": "Symptom",
+        "canonical_concept": "dizziness worse when standing",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "worsening",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports dizziness worse when standing."
+      },
+      {
+        "prop_id": "P4",
+        "cap_type": "Symptom",
+        "canonical_concept": "pain:back",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports lower back pain rated 4 out of 10."
+      },
+      {
+        "prop_id": "P6",
+        "cap_type": "Finding",
+        "canonical_concept": "denies dyspnea",
+        "category": "Finding",
+        "speaker": "clinician",
+        "predicate": "denies",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "exam"
+        ],
+        "proposition_text": "The patient denies dyspnea."
+      },
+      {
+        "prop_id": "P7",
+        "cap_type": "Finding",
+        "canonical_concept": "denies syncope",
+        "category": "Finding",
+        "speaker": "clinician",
+        "predicate": "denies",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "exam"
+        ],
+        "proposition_text": "The patient denies syncope."
+      },
+      {
+        "prop_id": "P8",
+        "cap_type": "ExamFinding",
+        "canonical_concept": "blood pressure",
+        "category": "ExamFinding",
+        "speaker": "clinician",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "exam"
+        ],
+        "proposition_text": "Blood pressure is 90/60 mmHg."
+      },
+      {
+        "prop_id": "P9",
+        "cap_type": "ExamFinding",
+        "canonical_concept": "heart rate bpm",
+        "category": "ExamFinding",
+        "speaker": "clinician",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "quantitative"
+        ],
+        "proposition_text": "Heart rate is 88 bpm."
+      },
+      {
+        "prop_id": "P10",
+        "cap_type": "ExamFinding",
+        "canonical_concept": "heart rate regular",
+        "category": "ExamFinding",
+        "speaker": "clinician",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "Heart rate is regular."
+      },
+      {
+        "prop_id": "P11",
+        "cap_type": "Finding",
+        "canonical_concept": "neurologic exam unremarkable",
+        "category": "Finding",
+        "speaker": "clinician",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "exam"
+        ],
+        "proposition_text": "Neurologic exam is unremarkable."
+      },
+      {
+        "prop_id": "P13",
+        "cap_type": "Diagnosis",
+        "canonical_concept": "symptoms are most consistent",
+        "category": "Diagnosis",
+        "speaker": "clinician",
+        "predicate": "suspects",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "diagnostic"
+        ],
+        "proposition_text": "The patient's symptoms are most consistent with orthostatic hypotension."
+      },
+      {
+        "prop_id": "P14",
+        "cap_type": "Diagnosis",
+        "canonical_concept": "symptoms are most consistent",
+        "category": "Diagnosis",
+        "speaker": "clinician",
+        "predicate": "suspects",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "diagnostic"
+        ],
+        "proposition_text": "The patient's symptoms are most consistent with possible lumbar strain."
+      }
+    ],
+    "missing_source_props": [
+      {
+        "prop_id": "CAP1",
+        "cap_type": "Problem",
+        "canonical_concept": "congestive heart failure",
+        "category": "Problem",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The doctor believes the patient has an exacerbation of congestive heart failure."
+      },
+      {
+        "prop_id": "CAP2",
+        "cap_type": "Problem",
+        "canonical_concept": "high blood sugars",
+        "category": "Problem",
+        "speaker": "patient",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "Blood sugars have been running a little bit high."
+      },
+      {
+        "prop_id": "CAP3",
+        "cap_type": "Problem",
+        "canonical_concept": "difficulty controlling diet",
+        "category": "Problem",
+        "speaker": "patient",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "It's been a challenge to control the diet."
+      },
+      {
+        "prop_id": "CAP4",
+        "cap_type": "Symptom",
+        "canonical_concept": "high blood sugars",
+        "category": "Symptom",
+        "speaker": "patient",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "recent",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient's blood sugars have been running high."
+      },
+      {
+        "prop_id": "CAP5",
+        "cap_type": "Symptom",
+        "canonical_concept": "swelling",
+        "category": "Symptom",
+        "speaker": "doctor",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports swelling in their ankles."
+      },
+      {
+        "prop_id": "CAP6",
+        "cap_type": "Symptom",
+        "canonical_concept": "shortness of breath",
+        "category": "Symptom",
+        "speaker": "doctor",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports shortness of breath."
+      },
+      {
+        "prop_id": "CAP7",
+        "cap_type": "Problem",
+        "canonical_concept": "diabetes",
+        "category": "Problem",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The doctor has a diabetes problem."
+      },
+      {
+        "prop_id": "CAP8",
+        "cap_type": "Symptom",
+        "canonical_concept": "difficulty breathing",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports difficulty breathing."
+      },
+      {
+        "prop_id": "CAP9",
+        "cap_type": "Problem",
+        "canonical_concept": "weight gain",
+        "category": "Problem",
+        "speaker": "doctor",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient reports weight gain."
+      },
+      {
+        "prop_id": "CAP10",
+        "cap_type": "Symptom",
+        "canonical_concept": "weight gain",
+        "category": "Symptom",
+        "speaker": "doctor",
+        "predicate": "reports",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports weight gain."
+      },
+      {
+        "prop_id": "CAP11",
+        "cap_type": "Symptom",
+        "canonical_concept": "chest pain",
+        "category": "Symptom",
+        "speaker": "doctor",
+        "predicate": "denies",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient denies chest pain."
+      },
+      {
+        "prop_id": "CAP12",
+        "cap_type": "Symptom",
+        "canonical_concept": "nausea",
+        "category": "Symptom",
+        "speaker": "patient",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient is feeling crazy."
+      },
+      {
+        "prop_id": "CAP14",
+        "cap_type": "Problem",
+        "canonical_concept": "diabetes",
+        "category": "Problem",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient has diabetes."
+      },
+      {
+        "prop_id": "CAP16",
+        "cap_type": "MedicationRequest",
+        "canonical_concept": "lasix",
+        "category": "MedicationRequest",
+        "speaker": "doctor",
+        "predicate": "orders",
+        "status": "uncertain",
+        "visit_state": "planned",
+        "temporality": "next 4 days",
+        "claim_type_tags": [
+          "medication",
+          "plan",
+          "quantitative"
+        ],
+        "proposition_text": "The doctor orders an increase in lasix dose to 60 milligrams for the next four days."
+      },
+      {
+        "prop_id": "CAP18",
+        "cap_type": "TestResult",
+        "canonical_concept": "hemoglobin a1c",
+        "category": "TestResult",
+        "speaker": "doctor",
+        "predicate": "orders",
+        "status": "uncertain",
+        "visit_state": "planned",
+        "temporality": "within 2 days",
+        "claim_type_tags": [
+          "plan",
+          "quantitative"
+        ],
+        "proposition_text": "The doctor orders a hemoglobin a1c test."
+      },
+      {
+        "prop_id": "CAP19",
+        "cap_type": "MedicationRequest",
+        "canonical_concept": "albuterol",
+        "category": "MedicationRequest",
+        "speaker": "doctor",
+        "predicate": "orders",
+        "status": "uncertain",
+        "visit_state": "planned",
+        "temporality": "as needed",
+        "claim_type_tags": [
+          "plan"
+        ],
+        "proposition_text": "The doctor orders albuterol as needed."
+      },
+      {
+        "prop_id": "CAP20",
+        "cap_type": "MedicationRequest",
+        "canonical_concept": "atrovent",
+        "category": "MedicationRequest",
+        "speaker": "doctor",
+        "predicate": "orders",
+        "status": "uncertain",
+        "visit_state": "planned",
+        "temporality": "as needed",
+        "claim_type_tags": [
+          "plan"
+        ],
+        "proposition_text": "The doctor orders atrovent as needed."
+      },
+      {
+        "prop_id": "CAP21",
+        "cap_type": "Order",
+        "canonical_concept": "physical therapy",
+        "category": "Order",
+        "speaker": "doctor",
+        "predicate": "orders",
+        "status": "uncertain",
+        "visit_state": "planned",
+        "temporality": "future",
+        "claim_type_tags": [
+          "plan"
+        ],
+        "proposition_text": "The doctor orders physical therapy."
+      },
+      {
+        "prop_id": "CAP22",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "insulin",
+        "category": "MedicationStatement",
+        "speaker": "doctor",
+        "status": "uncertain",
+        "visit_state": "planned",
+        "temporality": "future",
+        "proposition_text": "We had talked about avoiding going to insulin."
+      },
+      {
+        "prop_id": "CAP23",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "diet control",
+        "category": "MedicationStatement",
+        "speaker": "doctor",
+        "status": "uncertain",
+        "visit_state": "historical",
+        "temporality": "past",
+        "proposition_text": "The patient was on diet control."
+      },
+      {
+        "prop_id": "CAP24",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "lasix",
+        "category": "MedicationStatement",
+        "speaker": "doctor",
+        "status": "uncertain",
+        "visit_state": "historical",
+        "temporality": "past",
+        "proposition_text": "The patient was taking lasix."
+      },
+      {
+        "prop_id": "CAP25",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "naproxen",
+        "category": "MedicationStatement",
+        "speaker": "doctor",
+        "predicate": "orders",
+        "status": "uncertain",
+        "visit_state": "planned",
+        "temporality": "future",
+        "claim_type_tags": [
+          "plan"
+        ],
+        "proposition_text": "The doctor orders naproxen."
+      },
+      {
+        "prop_id": "CAP26",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "flexeril",
+        "category": "MedicationStatement",
+        "speaker": "doctor",
+        "predicate": "orders",
+        "status": "uncertain",
+        "visit_state": "planned",
+        "temporality": "future",
+        "claim_type_tags": [
+          "plan"
+        ],
+        "proposition_text": "The doctor orders flexeril."
+      }
+    ]
+  },
+  "reference_gpt_f1_items": {
+    "active_problems_symptoms": [
+      "Dyspnea",
+      "diabetes",
+      "back pain",
+      "congestive heart failure",
+      "chronic obstructive pulmonary disease",
+      "10 pound weight gain",
+      "slight swelling",
+      "mild JVD",
+      "mild rales",
+      "slight intermittent wheezing",
+      "2 out of 6 systolic ejection murmur",
+      "1.5+ pitting edema",
+      "slight tenderness in the paraspinal area",
+      "slight tenderness in the lower back"
+    ],
+    "negated_findings": [
+      "Denies fever"
+    ],
+    "uncertain_findings": [],
+    "medication_treatment": [
+      "not consistent with taking Lasix and metformin",
+      "Naprosyn",
+      "Flexeril"
+    ],
+    "plan_followup": [
+      "follow up in a couple of days"
+    ],
+    "_chunk_count": [
+      "5"
+    ]
+  },
+  "summary_gpt_f1_items": {
+    "active_problems_symptoms": [
+      "intermittent dizziness",
+      "lower back pain",
+      "orthostatic hypotension",
+      "shortness of breath",
+      "bronchospasm"
+    ],
+    "negated_findings": [
+      "chest pain",
+      "dyspnea",
+      "syncope"
+    ],
+    "uncertain_findings": [
+      "lumbar strain"
+    ],
+    "medication_treatment": [
+      "lasix 60 mg IV daily",
+      "albuterol PRN",
+      "atrovent PRN",
+      "naproxen 500 mg twice daily"
+    ],
+    "plan_followup": [
+      "schedule follow-up in 1 week"
+    ],
+    "_chunk_count": [
+      "1"
+    ]
+  },
+  "gpt_f1_alignment": {
+    "by_category": {
+      "active_problems_symptoms": {
+        "precision": 0.2,
+        "recall": 0.07142857142857142,
+        "f1": 0.10526315789473682,
+        "matched_count": 1,
+        "pred_count": 5,
+        "ref_count": 14,
+        "matches": [
+          {
+            "score": 0.8,
+            "pred_text": "lower back pain",
+            "ref_text": "back pain"
+          }
+        ],
+        "unsupported_pred_items": [
+          "intermittent dizziness",
+          "orthostatic hypotension",
+          "shortness of breath",
+          "bronchospasm"
+        ],
+        "missing_ref_items": [
+          "Dyspnea",
+          "diabetes",
+          "congestive heart failure",
+          "chronic obstructive pulmonary disease",
+          "10 pound weight gain",
+          "slight swelling",
+          "mild JVD",
+          "mild rales",
+          "slight intermittent wheezing",
+          "2 out of 6 systolic ejection murmur",
+          "1.5+ pitting edema",
+          "slight tenderness in the paraspinal area",
+          "slight tenderness in the lower back"
+        ]
+      },
+      "negated_findings": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "matched_count": 0,
+        "pred_count": 3,
+        "ref_count": 1,
+        "matches": [],
+        "unsupported_pred_items": [
+          "chest pain",
+          "dyspnea",
+          "syncope"
+        ],
+        "missing_ref_items": [
+          "Denies fever"
+        ]
+      },
+      "uncertain_findings": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "matched_count": 0,
+        "pred_count": 1,
+        "ref_count": 0,
+        "matches": [],
+        "unsupported_pred_items": [
+          "lumbar strain"
+        ],
+        "missing_ref_items": []
+      },
+      "medication_treatment": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "matched_count": 0,
+        "pred_count": 4,
+        "ref_count": 3,
+        "matches": [],
+        "unsupported_pred_items": [
+          "lasix 60 mg IV daily",
+          "albuterol PRN",
+          "atrovent PRN",
+          "naproxen 500 mg twice daily"
+        ],
+        "missing_ref_items": [
+          "not consistent with taking Lasix and metformin",
+          "Naprosyn",
+          "Flexeril"
+        ]
+      },
+      "plan_followup": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "matched_count": 0,
+        "pred_count": 1,
+        "ref_count": 1,
+        "matches": [],
+        "unsupported_pred_items": [
+          "schedule follow-up in 1 week"
+        ],
+        "missing_ref_items": [
+          "follow up in a couple of days"
+        ]
+      }
+    }
+  },
+  "reference_nair_concepts": {
+    "sections": [
+      {
+        "heading": "Clinical Note",
+        "section_value": "CHIEF COMPLAINT\nDyspnea.\nMEDICAL HISTORY\nPatient reports history of diabetes, back pain, congestive heart failure, and chronic obstructive pulmonary disease.\nSOCIAL HISTORY\nPatient reports living a sedentary lifestyle.\nMEDICATIONS\nPatient reports she is not consistent with taking Lasix and metformin.\nREVIEW OF SYSTEMS\nConstitutional: Reports 10 pound weight gain. Denies fever.",
+        "medical_concepts": [
+          "dyspnea",
+          "diabetes",
+          "back pain",
+          "congestive heart failure",
+          "chronic obstructive pulmonary disease",
+          "sedentary lifestyle",
+          "Lasix",
+          "metformin",
+          "weight gain",
+          "fever"
+        ]
+      },
+      {
+        "heading": "Clinical Note",
+        "section_value": "Cardiovascular: Denies chest pain or tightness.\nRespiratory: Reports orthopnea and productive cough. Denies dyspnea on exertion.\nGastrointestinal: Denies nausea, vomiting, or diarrhea.\nGenitourinary: Reports polyuria.\nMusculoskeletal: Reports back pain and lower extremity edema.\nNeurological: Denies lower extremity weakness or numbness.\nVITALS\nOxygen saturation: 92%\nPHYSICAL EXAM\nNeck",
+        "medical_concepts": [
+          "chest pain",
+          "chest tightness",
+          "orthopnea",
+          "productive cough",
+          "dyspnea on exertion",
+          "nausea",
+          "vomiting",
+          "diarrhea",
+          "polyuria",
+          "back pain",
+          "lower extremity edema",
+          "lower extremity weakness",
+          "lower extremity numbness",
+          "oxygen saturation"
+        ]
+      },
+      {
+        "heading": "Clinical Note",
+        "section_value": "- General Examination: Slight swelling. Mild JVD. No bruits.\nRespiratory\n- Auscultation of Lungs: Mild rales heard at the base bilaterally and slight intermittent wheezing.\nCardiovascular\n- Auscultation of Heart: 2 out of 6 systolic ejection murmur, otherwise regular rate and rhythm.\nGastrointestinal\n- Examination of Abdomen: Slightly distended. No tenderness or guarding.\nMusculoskeletal\n- Examination: 1.5+ pitting edema in the ankles bilaterally. No calf tenderness. Negative Homan's sign. Slight tenderness in the paraspinal area, mostly in the lower back. No midline tenderness. Good reflexes.\nRESULTS",
+        "medical_concepts": [
+          "swelling",
+          "jugular venous distention",
+          "bruits",
+          "rales",
+          "wheezing",
+          "systolic ejection murmur",
+          "distended abdomen",
+          "abdominal tenderness",
+          "guarding",
+          "pitting edema",
+          "ankle edema",
+          "calf tenderness",
+          "Homan's sign",
+          "paraspinal tenderness",
+          "low back pain",
+          "midline tenderness",
+          "reflexes"
+        ]
+      },
+      {
+        "heading": "Clinical Note",
+        "section_value": "Hemoglobin A1c: 7.5\nASSESSMENT AND PLAN\n1. Shortness of breath.\n- Medical Reasoning: I believe this is an exacerbation of her congestive heart failure.\n- Patient Education and Counseling: I advised the patient to monitor her weight daily.\n- Medical Treatment: She will increase her dose of Lasix from 20 mg to 60 mg for the next 4 days. She should also use her albuterol and Atrovent inhalers as needed. If her symptoms don't improve in the next couple of days, we will either increase her doses or have her go to the hospital.\n2. Diabetes type 2.\n- Medical Reasoning: Her recent blood glucose levels have been elevated.\n- Patient Education and Counseling: We discussed the possibility of needing to add another medication to her regimen.\n- Medical Treatment: We are going to order a repeat hemoglobin A1c and adjust her dose of metformin accordingly.",
+        "medical_concepts": [
+          "hemoglobin A1c",
+          "shortness of breath",
+          "congestive heart failure",
+          "weight monitoring",
+          "Lasix",
+          "albuterol",
+          "Atrovent",
+          "hospitalization",
+          "diabetes type 2",
+          "elevated blood glucose",
+          "metformin"
+        ]
+      },
+      {
+        "heading": "Clinical Note",
+        "section_value": "3. Back pain.\n- Medical Reasoning: This appears to be all muscular pain.\n- Patient Education and Counseling: We discussed exercises she can do to help her pain and that ff this doesn't help we can consider physical therapy.\n- Medical Treatment: Prescriptions provided for Naprosyn and Flexeril.\nPatient Agreements: The patient understands and agrees with the recommended medical treatment plan.\nINSTRUCTIONS\nWe will have her follow up in a couple of days.",
+        "medical_concepts": [
+          "back pain",
+          "muscular pain",
+          "physical therapy",
+          "Naprosyn",
+          "Flexeril"
+        ]
+      }
+    ],
+    "medical_concepts": [
+      "dyspnea",
+      "diabetes",
+      "back pain",
+      "congestive heart failure",
+      "chronic obstructive pulmonary disease",
+      "sedentary lifestyle",
+      "Lasix",
+      "metformin",
+      "weight gain",
+      "fever",
+      "chest pain",
+      "chest tightness",
+      "orthopnea",
+      "productive cough",
+      "dyspnea on exertion",
+      "nausea",
+      "vomiting",
+      "diarrhea",
+      "polyuria",
+      "lower extremity edema",
+      "lower extremity weakness",
+      "lower extremity numbness",
+      "oxygen saturation",
+      "swelling",
+      "jugular venous distention",
+      "bruits",
+      "rales",
+      "wheezing",
+      "systolic ejection murmur",
+      "distended abdomen",
+      "abdominal tenderness",
+      "guarding",
+      "pitting edema",
+      "ankle edema",
+      "calf tenderness",
+      "Homan's sign",
+      "paraspinal tenderness",
+      "low back pain",
+      "midline tenderness",
+      "reflexes",
+      "hemoglobin A1c",
+      "shortness of breath",
+      "weight monitoring",
+      "albuterol",
+      "Atrovent",
+      "hospitalization",
+      "diabetes type 2",
+      "elevated blood glucose",
+      "muscular pain",
+      "physical therapy",
+      "Naprosyn",
+      "Flexeril"
+    ],
+    "section_count": 5
+  },
+  "summary_nair_concepts": {
+    "sections": [
+      {
+        "heading": "S",
+        "section_value": "The patient reports intermittent dizziness for one week, worse when standing. He denies chest pain, dyspnea, or syncope. He also reports some lower back pain, rated 4 out of 10.",
+        "medical_concepts": [
+          "dizziness",
+          "chest pain",
+          "dyspnea",
+          "syncope",
+          "lower back pain"
+        ]
+      },
+      {
+        "heading": "O",
+        "section_value": "Blood pressure is 90/60 mmHg. Heart rate is 88 bpm, regular. Neurologic exam is unremarkable. Tenderness is noted to palpation in the lumbar paraspinal region.",
+        "medical_concepts": [
+          "blood pressure",
+          "heart rate",
+          "neurologic exam",
+          "lumbar paraspinal tenderness",
+          "lumbar paraspinal region"
+        ]
+      },
+      {
+        "heading": "A",
+        "section_value": "The patient's symptoms are most consistent with orthostatic hypotension and possible lumbar strain. No acute neurological deficits are identified.",
+        "medical_concepts": [
+          "orthostatic hypotension",
+          "lumbar strain",
+          "neurological deficits"
+        ]
+      },
+      {
+        "heading": "P",
+        "section_value": "Order a trial of lasix 60 mg IV daily. Order albuterol PRN for shortness of breath. Order atrovent PRN for bronchospasm. Order physical therapy referral. Order naproxen 500 mg twice daily. Schedule follow-up in 1 week to assess response to treatment.",
+        "medical_concepts": [
+          "lasix",
+          "albuterol",
+          "shortness of breath",
+          "atrovent",
+          "bronchospasm",
+          "physical therapy",
+          "naproxen",
+          "follow-up"
+        ]
+      }
+    ],
+    "medical_concepts": [
+      "dizziness",
+      "chest pain",
+      "dyspnea",
+      "syncope",
+      "lower back pain",
+      "blood pressure",
+      "heart rate",
+      "neurologic exam",
+      "lumbar paraspinal tenderness",
+      "lumbar paraspinal region",
+      "orthostatic hypotension",
+      "lumbar strain",
+      "neurological deficits",
+      "lasix",
+      "albuterol",
+      "shortness of breath",
+      "atrovent",
+      "bronchospasm",
+      "physical therapy",
+      "naproxen",
+      "follow-up"
+    ],
+    "section_count": 4
+  },
+  "nair_alignment": {
+    "pred_concepts": [
+      "dizziness",
+      "chest pain",
+      "dyspnea",
+      "syncope",
+      "lower back pain",
+      "blood pressure",
+      "heart rate",
+      "neurologic exam",
+      "lumbar paraspinal tenderness",
+      "lumbar paraspinal region",
+      "orthostatic hypotension",
+      "lumbar strain",
+      "neurological deficits",
+      "lasix",
+      "albuterol",
+      "shortness of breath",
+      "atrovent",
+      "bronchospasm",
+      "physical therapy",
+      "naproxen",
+      "follow-up"
+    ],
+    "ref_concepts": [
+      "dyspnea",
+      "diabetes",
+      "back pain",
+      "congestive heart failure",
+      "chronic obstructive pulmonary disease",
+      "sedentary lifestyle",
+      "Lasix",
+      "metformin",
+      "weight gain",
+      "fever",
+      "chest pain",
+      "chest tightness",
+      "orthopnea",
+      "productive cough",
+      "dyspnea on exertion",
+      "nausea",
+      "vomiting",
+      "diarrhea",
+      "polyuria",
+      "lower extremity edema",
+      "lower extremity weakness",
+      "lower extremity numbness",
+      "oxygen saturation",
+      "swelling",
+      "jugular venous distention",
+      "bruits",
+      "rales",
+      "wheezing",
+      "systolic ejection murmur",
+      "distended abdomen",
+      "abdominal tenderness",
+      "guarding",
+      "pitting edema",
+      "ankle edema",
+      "calf tenderness",
+      "Homan's sign",
+      "paraspinal tenderness",
+      "low back pain",
+      "midline tenderness",
+      "reflexes",
+      "hemoglobin A1c",
+      "shortness of breath",
+      "weight monitoring",
+      "albuterol",
+      "Atrovent",
+      "hospitalization",
+      "diabetes type 2",
+      "elevated blood glucose",
+      "muscular pain",
+      "physical therapy",
+      "Naprosyn",
+      "Flexeril"
+    ],
+    "precision_alignment": {
+      "found_b": [
+        "chest pain",
+        "dyspnea",
+        "lower back pain",
+        "lumbar paraspinal tenderness",
+        "lumbar paraspinal region",
+        "lasix",
+        "albuterol",
+        "shortness of breath",
+        "atrovent",
+        "physical therapy",
+        "follow-up"
+      ],
+      "not_found_b": [
+        "dizziness",
+        "syncope",
+        "blood pressure",
+        "heart rate",
+        "neurologic exam",
+        "orthostatic hypotension",
+        "lumbar strain",
+        "neurological deficits",
+        "bronchospasm",
+        "naproxen"
+      ],
+      "chunk_count": 1,
+      "chunk_results": [
+        {
+          "found_b": [
+            "chest pain",
+            "dyspnea",
+            "lower back pain",
+            "lumbar paraspinal tenderness",
+            "lumbar paraspinal region",
+            "lasix",
+            "albuterol",
+            "shortness of breath",
+            "atrovent",
+            "physical therapy",
+            "follow-up"
+          ],
+          "not_found_b": [
+            "dizziness",
+            "syncope",
+            "blood pressure",
+            "heart rate",
+            "neurologic exam",
+            "orthostatic hypotension",
+            "lumbar strain",
+            "neurological deficits",
+            "bronchospasm",
+            "naproxen"
+          ]
+        }
+      ]
+    },
+    "recall_alignment": {
+      "found_b": [
+        "dyspnea",
+        "back pain",
+        "Lasix",
+        "chest pain",
+        "paraspinal tenderness",
+        "low back pain",
+        "shortness of breath",
+        "albuterol",
+        "Atrovent",
+        "muscular pain",
+        "physical therapy",
+        "Naprosyn"
+      ],
+      "not_found_b": [
+        "diabetes",
+        "congestive heart failure",
+        "chronic obstructive pulmonary disease",
+        "sedentary lifestyle",
+        "metformin",
+        "weight gain",
+        "fever",
+        "chest tightness",
+        "orthopnea",
+        "productive cough",
+        "dyspnea on exertion",
+        "nausea",
+        "vomiting",
+        "diarrhea",
+        "polyuria",
+        "lower extremity edema",
+        "lower extremity weakness",
+        "lower extremity numbness",
+        "oxygen saturation",
+        "swelling",
+        "jugular venous distention",
+        "bruits",
+        "rales",
+        "wheezing",
+        "systolic ejection murmur",
+        "distended abdomen",
+        "abdominal tenderness",
+        "guarding",
+        "pitting edema",
+        "ankle edema",
+        "calf tenderness",
+        "Homan's sign",
+        "midline tenderness",
+        "reflexes",
+        "hemoglobin A1c",
+        "weight monitoring",
+        "hospitalization",
+        "diabetes type 2",
+        "elevated blood glucose",
+        "Flexeril"
+      ],
+      "chunk_count": 3,
+      "chunk_results": [
+        {
+          "found_b": [
+            "dyspnea",
+            "back pain",
+            "Lasix",
+            "chest pain"
+          ],
+          "not_found_b": [
+            "diabetes",
+            "congestive heart failure",
+            "chronic obstructive pulmonary disease",
+            "sedentary lifestyle",
+            "metformin",
+            "weight gain",
+            "fever",
+            "chest tightness",
+            "orthopnea",
+            "productive cough",
+            "dyspnea on exertion",
+            "nausea",
+            "vomiting",
+            "diarrhea",
+            "polyuria",
+            "lower extremity edema",
+            "lower extremity weakness",
+            "lower extremity numbness",
+            "oxygen saturation",
+            "swelling"
+          ]
+        },
+        {
+          "found_b": [
+            "paraspinal tenderness",
+            "low back pain",
+            "shortness of breath",
+            "albuterol",
+            "Atrovent"
+          ],
+          "not_found_b": [
+            "jugular venous distention",
+            "bruits",
+            "rales",
+            "wheezing",
+            "systolic ejection murmur",
+            "distended abdomen",
+            "abdominal tenderness",
+            "guarding",
+            "pitting edema",
+            "ankle edema",
+            "calf tenderness",
+            "Homan's sign",
+            "midline tenderness",
+            "reflexes",
+            "hemoglobin A1c",
+            "weight monitoring",
+            "hospitalization",
+            "diabetes type 2",
+            "elevated blood glucose"
+          ]
+        },
+        {
+          "found_b": [
+            "muscular pain",
+            "physical therapy",
+            "Naprosyn"
+          ],
+          "not_found_b": [
+            "Flexeril"
+          ]
+        }
+      ]
+    }
+  },
+  "semantic_cap_audit": {
+    "source_cap_recall": [
+      {
+        "cap_id": "P1",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P2",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P3",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P4",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P5",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P6",
+        "judgment": "contradicted",
+        "reason": null
+      },
+      {
+        "cap_id": "P7",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P8",
+        "judgment": "contradicted",
+        "reason": null
+      },
+      {
+        "cap_id": "P9",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P10",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P11",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P12",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P13",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P14",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P15",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P16",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P1",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P2",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P3",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P4",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P5",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P6",
+        "judgment": "contradicted",
+        "reason": null
+      },
+      {
+        "cap_id": "P7",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P8",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P9",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P10",
+        "judgment": "missing",
+        "reason": null
+      }
+    ],
+    "summary_cap_precision": [
+      {
+        "cap_id": "P1",
+        "judgment": "unsupported",
+        "reason": null
+      },
+      {
+        "cap_id": "P2",
+        "judgment": "unsupported",
+        "reason": null
+      },
+      {
+        "cap_id": "P3",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P4",
+        "judgment": "unsupported",
+        "reason": null
+      },
+      {
+        "cap_id": "P5",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P6",
+        "judgment": "contradicted",
+        "reason": null
+      },
+      {
+        "cap_id": "P7",
+        "judgment": "unsupported",
+        "reason": null
+      },
+      {
+        "cap_id": "P8",
+        "judgment": "unsupported",
+        "reason": null
+      },
+      {
+        "cap_id": "P9",
+        "judgment": "unsupported",
+        "reason": null
+      },
+      {
+        "cap_id": "P10",
+        "judgment": "unsupported",
+        "reason": null
+      },
+      {
+        "cap_id": "P11",
+        "judgment": "unsupported",
+        "reason": null
+      },
+      {
+        "cap_id": "P12",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P13",
+        "judgment": "unsupported",
+        "reason": null
+      },
+      {
+        "cap_id": "P14",
+        "judgment": "unsupported",
+        "reason": null
+      }
+    ],
+    "metrics": {
+      "semantic_cap_precision": 0.1429,
+      "semantic_cap_recall": 0.3269,
+      "semantic_cap_f1": 0.1988,
+      "semantic_cap_precision_supported_count": 1,
+      "semantic_cap_precision_partial_count": 2,
+      "semantic_cap_precision_denominator": 14,
+      "semantic_cap_recall_supported_count": 7,
+      "semantic_cap_recall_partial_count": 3,
+      "semantic_cap_recall_denominator": 26,
+      "semantic_cap_low_value_source_count": 0,
+      "semantic_cap_low_value_summary_count": 0,
+      "semantic_cap_missing_count": 13,
+      "semantic_cap_unsupported_count": 10,
+      "semantic_cap_contradicted_source_count": 3,
+      "semantic_cap_contradicted_summary_count": 1
+    }
+  },
+  "safety_judgment": null,
+  "section_judgment": {
+    "section_miscategorizations": [],
+    "summary_statistics": {
+      "section_appropriateness_score": 1.0,
+      "section_miscategorization_count": 0,
+      "major_section_miscategorization_count": 0
+    }
+  },
+  "pdsqi_judgment": {
+    "citation_applicable": 0,
+    "citation": 0,
+    "accurate": 1,
+    "thorough": 1,
+    "useful": 1,
+    "organized": 2,
+    "comprehensible": 3,
+    "succinct": 3,
+    "abstraction": 1,
+    "synthesized": 1,
+    "voice_summ": 0,
+    "voice_note": 0,
+    "pdsqi_core_mean": 1.7143
+  },
+  "llm_checklist_judgment": {
+    "content_preservation_core": 1,
+    "noise_suppression": 4,
+    "lay_expression_preservation": 1,
+    "state_update_fidelity": 1,
+    "temporality_preservation": 2,
+    "problem_evidence_linkage": 2,
+    "state_plan_separation": 2,
+    "section_organization_appropriateness": 2,
+    "overall_clinical_usability": 1,
+    "clinically_meaningful_omission": "Yes",
+    "clinically_concerning_hallucination": "Yes",
+    "checklist_a_mean": 2.0,
+    "checklist_b_mean": 1.5,
+    "checklist_c_mean": 2.0,
+    "llm_checklist_abc_mean": 1.875,
+    "llm_checklist_mean_no_usability": 1.875,
+    "llm_checklist_total_score": 16,
+    "llm_checklist_mean": 1.7778,
+    "llm_checklist_meaningful_omission_yes": 1,
+    "llm_checklist_concerning_hallucination_yes": 1
+  },
+  "metrics": {
+    "case_id": "D2N063",
+    "method": "cap_event_only",
+    "template": "soap",
+    "source_cap_count": 26,
+    "event_plan_count": 1,
+    "summary_cap_count": 14,
+    "cap_matched_count": 3,
+    "cap_precision": 0.2143,
+    "cap_recall": 0.1154,
+    "cap_f1": 0.15,
+    "unsupported_summary_cap_count": 11,
+    "missing_source_cap_count": 23,
+    "summary_runtime_seconds": null,
+    "summary_cap_runtime_seconds": 24.228,
+    "event_plan_runtime_seconds": null,
+    "rouge_l_f1_vs_reference": 0.124,
+    "token_f1_vs_reference": 0.2519,
+    "gptf1_macro_f1": 0.0211,
+    "nair_gpt_precision": 0.5238,
+    "nair_gpt_recall": 0.2308,
+    "nair_gpt_f1": 0.3204,
+    "semantic_cap_precision": 0.1429,
+    "semantic_cap_recall": 0.3269,
+    "semantic_cap_f1": 0.1988,
+    "hallucination_count": null,
+    "major_hallucination_count": null,
+    "omission_count": null,
+    "major_omission_count": null,
+    "section_appropriateness_score": 1.0,
+    "section_miscategorization_count": 0,
+    "major_section_miscategorization_count": 0,
+    "pdsqi_core_mean": 1.7143,
+    "pdsqi_accurate": 1,
+    "pdsqi_thorough": 1,
+    "llm_checklist_total_score": 16,
+    "llm_checklist_mean": 1.7778,
+    "llm_checklist_mean_no_usability": 1.875,
+    "checklist_a_mean": 2.0,
+    "checklist_b_mean": 1.5,
+    "checklist_c_mean": 2.0,
+    "llm_checklist_abc_mean": 1.875,
+    "content_preservation_core": 1,
+    "noise_suppression": 4,
+    "lay_expression_preservation": 1,
+    "state_update_fidelity": 1,
+    "temporality_preservation": 2,
+    "problem_evidence_linkage": 2,
+    "state_plan_separation": 2,
+    "section_organization_appropriateness": 2,
+    "overall_clinical_usability": 1,
+    "llm_checklist_meaningful_omission_yes": 1,
+    "llm_checklist_concerning_hallucination_yes": 1,
+    "gptf1_active_problems_symptoms_precision": 0.2,
+    "gptf1_active_problems_symptoms_recall": 0.0714,
+    "gptf1_active_problems_symptoms_f1": 0.1053,
+    "gptf1_active_problems_symptoms_pred_count": 5,
+    "gptf1_active_problems_symptoms_ref_count": 14,
+    "gptf1_negated_findings_precision": 0.0,
+    "gptf1_negated_findings_recall": 0.0,
+    "gptf1_negated_findings_f1": 0.0,
+    "gptf1_negated_findings_pred_count": 3,
+    "gptf1_negated_findings_ref_count": 1,
+    "gptf1_uncertain_findings_precision": 0.0,
+    "gptf1_uncertain_findings_recall": 0.0,
+    "gptf1_uncertain_findings_f1": 0.0,
+    "gptf1_uncertain_findings_pred_count": 1,
+    "gptf1_uncertain_findings_ref_count": 0,
+    "gptf1_medication_treatment_precision": 0.0,
+    "gptf1_medication_treatment_recall": 0.0,
+    "gptf1_medication_treatment_f1": 0.0,
+    "gptf1_medication_treatment_pred_count": 4,
+    "gptf1_medication_treatment_ref_count": 3,
+    "gptf1_plan_followup_precision": 0.0,
+    "gptf1_plan_followup_recall": 0.0,
+    "gptf1_plan_followup_f1": 0.0,
+    "gptf1_plan_followup_pred_count": 1,
+    "gptf1_plan_followup_ref_count": 1,
+    "nair_pred_concept_count": 21,
+    "nair_ref_concept_count": 52,
+    "nair_precision_match_count": 11,
+    "nair_recall_match_count": 12,
+    "semantic_cap_precision_supported_count": 1,
+    "semantic_cap_precision_partial_count": 2,
+    "semantic_cap_precision_denominator": 14,
+    "semantic_cap_recall_supported_count": 7,
+    "semantic_cap_recall_partial_count": 3,
+    "semantic_cap_recall_denominator": 26,
+    "semantic_cap_low_value_source_count": 0,
+    "semantic_cap_low_value_summary_count": 0,
+    "semantic_cap_missing_count": 13,
+    "semantic_cap_unsupported_count": 10,
+    "semantic_cap_contradicted_source_count": 3,
+    "semantic_cap_contradicted_summary_count": 1,
+    "pdsqi_useful": 1,
+    "pdsqi_organized": 2,
+    "pdsqi_comprehensible": 3,
+    "pdsqi_succinct": 3,
+    "pdsqi_synthesized": 1
+  }
+}

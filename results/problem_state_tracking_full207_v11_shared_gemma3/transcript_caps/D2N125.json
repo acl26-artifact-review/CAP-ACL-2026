@@ -1,0 +1,695 @@
+{
+  "caps": [
+    {
+      "cap_id": "CAP1",
+      "cap_type": "Diagnosis",
+      "content_source": "doctor",
+      "modality": "assessment",
+      "canonical_concept": "trigeminal neuralgia",
+      "verification_status": "confirmed",
+      "clinical_status": "historical",
+      "temporality": "future",
+      "proposition_text": "The doctor suggests the patient may have trigeminal neuralgia.",
+      "evidence": [
+        {
+          "turn_id": "T35",
+          "turn_speaker": "doctor",
+          "span_text": "and i looked at your mri and it appears to have small blood vessel that is abutting and perhaps even pinching the trigeminal nerve the trigeminal nerve is nerve that comes from the brainstem that goes out to the face and provides the sensory inflammation from the face and you may have a condition called trigeminal neuralgia",
+          "char_start": 4299,
+          "char_end": 4624
+        }
+      ],
+      "assertion": "historical",
+      "visit_state": "historical",
+      "linked_problem": null,
+      "event_cluster_id": "CL15"
+    },
+    {
+      "cap_id": "CAP2",
+      "cap_type": "Symptom",
+      "content_source": "patient",
+      "modality": "interview",
+      "canonical_concept": "trigger",
+      "verification_status": "unconfirmed",
+      "clinical_status": "active",
+      "temporality": "current",
+      "proposition_text": "The patient reports triggers for the pain.",
+      "evidence": [
+        {
+          "turn_id": "T10",
+          "turn_speaker": "patient",
+          "span_text": "sometimes if i'm if certain temperatures seem to trigger it sometimes or if it's super where it's cold i get a trigger sometimes",
+          "char_start": 1706,
+          "char_end": 1834
+        },
+        {
+          "turn_id": "T11",
+          "turn_speaker": "doctor",
+          "span_text": "sometimes certain kind of sensory outside of the wind sometimes that seems to trigger it but that's about it",
+          "char_start": 1844,
+          "char_end": 1952
+        },
+        {
+          "turn_id": "T10",
+          "turn_speaker": "patient",
+          "span_text": "sometimes if i'm if certain temperatures seem to trigger it sometimes or if it's super where it's cold i get a trigger sometimes",
+          "char_start": 1706,
+          "char_end": 1834
+        }
+      ],
+      "assertion": "uncertain",
+      "visit_state": "active",
+      "linked_problem": null,
+      "event_cluster_id": "CL7"
+    },
+    {
+      "cap_id": "CAP3",
+      "cap_type": "Symptom",
+      "content_source": "patient",
+      "modality": "interview",
+      "canonical_concept": "pain",
+      "verification_status": "confirmed",
+      "clinical_status": "active",
+      "temporality": "current",
+      "attributes": {
+        "severity": "10",
+        "quality": "stabbing"
+      },
+      "proposition_text": "The patient reports pain that is rated as a 10 and described as stabbing.",
+      "evidence": [
+        {
+          "turn_id": "T26",
+          "turn_speaker": "patient",
+          "span_text": "you can hear it on the other side as well",
+          "char_start": 3657,
+          "char_end": 3698
+        },
+        {
+          "turn_id": "T26",
+          "turn_speaker": "patient",
+          "span_text": "you can hear it on the other side as well",
+          "char_start": 3657,
+          "char_end": 3698
+        }
+      ],
+      "assertion": "present",
+      "visit_state": "active",
+      "linked_problem": null,
+      "event_cluster_id": "CL11"
+    },
+    {
+      "cap_id": "CAP4",
+      "cap_type": "Problem",
+      "content_source": "patient",
+      "modality": "interview",
+      "canonical_concept": "nerve compression",
+      "verification_status": "confirmed",
+      "clinical_status": "active",
+      "temporality": "current",
+      "proposition_text": "The patient's nerve compression is the root cause of the problem.",
+      "evidence": [
+        {
+          "turn_id": "T42",
+          "turn_speaker": "patient",
+          "span_text": "for considering a surgery to decompress the nerve the root cause of the problem is the compression of the blood vessel against the nerve",
+          "char_start": 5256,
+          "char_end": 5392
+        }
+      ],
+      "assertion": "present",
+      "visit_state": "active",
+      "linked_problem": null,
+      "event_cluster_id": "CL18"
+    },
+    {
+      "cap_id": "CAP5",
+      "cap_type": "Symptom",
+      "content_source": "patient",
+      "modality": "interview",
+      "canonical_concept": "sharp pain",
+      "verification_status": "confirmed",
+      "clinical_status": "active",
+      "temporality": "current",
+      "proposition_text": "The patient reports sharp pain on their left side.",
+      "evidence": [
+        {
+          "turn_id": "T32",
+          "turn_speaker": "patient",
+          "span_text": "it feels a little bit dull on my left on my right side my left side it feels sharp",
+          "char_start": 4130,
+          "char_end": 4212
+        }
+      ],
+      "assertion": "present",
+      "visit_state": "active",
+      "linked_problem": null,
+      "event_cluster_id": "CL14"
+    },
+    {
+      "cap_id": "CAP6",
+      "cap_type": "Symptom",
+      "content_source": "patient",
+      "modality": "interview",
+      "canonical_concept": "numbness",
+      "verification_status": "confirmed",
+      "clinical_status": "active",
+      "temporality": "current",
+      "proposition_text": "The patient reports numbness on their right side.",
+      "evidence": [
+        {
+          "turn_id": "T30",
+          "turn_speaker": "patient",
+          "span_text": "yeah it's a little bit numb on my right side not so much on my left side",
+          "char_start": 3841,
+          "char_end": 3913
+        }
+      ],
+      "assertion": "present",
+      "visit_state": "active",
+      "linked_problem": null,
+      "event_cluster_id": "CL4"
+    },
+    {
+      "cap_id": "CAP7",
+      "cap_type": "Symptom",
+      "content_source": "patient",
+      "modality": "interview",
+      "canonical_concept": "cold sensitivity",
+      "verification_status": "confirmed",
+      "clinical_status": "active",
+      "temporality": "current",
+      "proposition_text": "The patient reports that cold triggers pain.",
+      "evidence": [
+        {
+          "turn_id": "T10",
+          "turn_speaker": "patient",
+          "span_text": "sometimes if i'm if certain temperatures seem to trigger it sometimes or if it's super where it's cold i get a trigger sometimes",
+          "char_start": 1706,
+          "char_end": 1834
+        }
+      ],
+      "assertion": "present",
+      "visit_state": "active",
+      "linked_problem": null,
+      "event_cluster_id": "CL8"
+    },
+    {
+      "cap_id": "CAP8",
+      "cap_type": "Symptom",
+      "content_source": "patient",
+      "modality": "interview",
+      "canonical_concept": "temperature sensitivity",
+      "verification_status": "confirmed",
+      "clinical_status": "active",
+      "temporality": "current",
+      "proposition_text": "The patient reports that temperature triggers pain.",
+      "evidence": [
+        {
+          "turn_id": "T10",
+          "turn_speaker": "patient",
+          "span_text": "sometimes if i'm if certain temperatures seem to trigger it sometimes or if it's super where it's cold i get a trigger sometimes",
+          "char_start": 1706,
+          "char_end": 1834
+        }
+      ],
+      "assertion": "present",
+      "visit_state": "active",
+      "linked_problem": null,
+      "event_cluster_id": "CL9"
+    },
+    {
+      "cap_id": "CAP9",
+      "cap_type": "Symptom",
+      "content_source": "patient",
+      "modality": "interview",
+      "canonical_concept": "facial shooting electrical pain",
+      "verification_status": "confirmed",
+      "clinical_status": "active",
+      "temporality": "current",
+      "proposition_text": "The patient reports facial shooting electrical pain.",
+      "evidence": [
+        {
+          "turn_id": "T38",
+          "turn_speaker": "patient",
+          "span_text": "well the first line would be to try some medications usually we start with medications that are called gabapentin",
+          "char_start": 4763,
+          "char_end": 4876
+        }
+      ],
+      "assertion": "present",
+      "visit_state": "active",
+      "linked_problem": null,
+      "event_cluster_id": "CL16"
+    },
+    {
+      "cap_id": "CAP10",
+      "cap_type": "Problem",
+      "content_source": "patient",
+      "modality": "interview",
+      "canonical_concept": "neurosurgeon referral",
+      "verification_status": "unconfirmed",
+      "clinical_status": "planned",
+      "temporality": "future",
+      "proposition_text": "The patient needs a neurosurgeon referral.",
+      "evidence": [
+        {
+          "turn_id": "T12",
+          "turn_speaker": "patient",
+          "span_text": "okay and anything that you've done to to that helps for a little bit when you",
+          "char_start": 1963,
+          "char_end": 2040
+        }
+      ],
+      "assertion": "hypothetical",
+      "visit_state": "planned",
+      "linked_problem": null,
+      "event_cluster_id": "CL10"
+    },
+    {
+      "cap_id": "CAP11",
+      "cap_type": "Symptom",
+      "content_source": "patient",
+      "modality": "interview",
+      "canonical_concept": "facial pain",
+      "verification_status": "confirmed",
+      "clinical_status": "active",
+      "temporality": "current",
+      "proposition_text": "The patient reports facial pain.",
+      "evidence": [
+        {
+          "turn_id": "T0",
+          "turn_speaker": "patient",
+          "span_text": "miss edwards is here for evaluation of facial pain this is a 54 -year-old male",
+          "char_start": 10,
+          "char_end": 88
+        }
+      ],
+      "assertion": "present",
+      "visit_state": "active",
+      "linked_problem": null,
+      "event_cluster_id": "CL1"
+    },
+    {
+      "cap_id": "CAP12",
+      "cap_type": "Symptom",
+      "content_source": "patient",
+      "modality": "interview",
+      "canonical_concept": "stabbing pain",
+      "verification_status": "confirmed",
+      "clinical_status": "active",
+      "temporality": "current",
+      "proposition_text": "The patient describes stabbing pain.",
+      "evidence": [
+        {
+          "turn_id": "T0",
+          "turn_speaker": "patient",
+          "span_text": "miss edwards is here for evaluation of facial pain this is a 54 -year-old male",
+          "char_start": 10,
+          "char_end": 88
+        }
+      ],
+      "assertion": "present",
+      "visit_state": "active",
+      "linked_problem": null,
+      "event_cluster_id": "CL2"
+    },
+    {
+      "cap_id": "CAP13",
+      "cap_type": "Symptom",
+      "content_source": "patient",
+      "modality": "interview",
+      "canonical_concept": "shooting pain",
+      "verification_status": "confirmed",
+      "clinical_status": "active",
+      "temporality": "current",
+      "proposition_text": "The patient reports shooting pain.",
+      "evidence": [
+        {
+          "turn_id": "T3",
+          "turn_speaker": "doctor",
+          "span_text": "tell me what's been going on yeah so i've got this stabbing shooting pain i've had for a while you know and it it especially right here in my right face right in that cheek bone area it's sometimes it gets super hot i've had it for i think a couple of months now and i went to my family doctor and they said i should come see you",
+          "char_start": 210,
+          "char_end": 539
+        }
+      ],
+      "assertion": "present",
+      "visit_state": "active",
+      "linked_problem": null,
+      "event_cluster_id": "CL3"
+    },
+    {
+      "cap_id": "CAP14",
+      "cap_type": "Symptom",
+      "content_source": "patient",
+      "modality": "interview",
+      "canonical_concept": "pain",
+      "verification_status": "confirmed",
+      "clinical_status": "active",
+      "temporality": "current",
+      "proposition_text": "The patient reports excruciating pain.",
+      "evidence": [
+        {
+          "turn_id": "T13",
+          "turn_speaker": "doctor",
+          "span_text": "pain excess",
+          "char_start": 2050,
+          "char_end": 2061
+        }
+      ],
+      "assertion": "present",
+      "visit_state": "active",
+      "linked_problem": null,
+      "event_cluster_id": "CL11"
+    },
+    {
+      "cap_id": "CAP15",
+      "cap_type": "Symptom",
+      "content_source": "patient",
+      "modality": "interview",
+      "canonical_concept": "pain",
+      "verification_status": "unconfirmed",
+      "clinical_status": "active",
+      "temporality": "current",
+      "proposition_text": "The patient reports stabbing pain.",
+      "evidence": [
+        {
+          "turn_id": "T14",
+          "turn_speaker": "patient",
+          "span_text": "you know i've tried ibuprofen and motrin that had really has n't helped it just comes on suddenly and then it's kinda stabbing excruciating pain i've tried rubbing some you know some tiger balm on it that did n't work",
+          "char_start": 2072,
+          "char_end": 2289
+        }
+      ],
+      "assertion": "uncertain",
+      "visit_state": "active",
+      "linked_problem": null,
+      "event_cluster_id": "CL11"
+    },
+    {
+      "cap_id": "CAP16",
+      "cap_type": "Symptom",
+      "content_source": "patient",
+      "modality": "interview",
+      "canonical_concept": "headache",
+      "verification_status": "unconfirmed",
+      "clinical_status": "active",
+      "temporality": "current",
+      "proposition_text": "The patient reports occasional headaches.",
+      "evidence": [
+        {
+          "turn_id": "T19",
+          "turn_speaker": "doctor",
+          "span_text": "no nothing like that alright any other kinda headache symptoms that have anything like you had migraines or anything related to the headaches i mean i get occasional headaches but not really i do n't have a history of migraines but i occasionally get headaches like everybody else i take some tylenol that usually goes away but this is different",
+          "char_start": 2697,
+          "char_end": 3042
+        }
+      ],
+      "assertion": "uncertain",
+      "visit_state": "active",
+      "linked_problem": null,
+      "event_cluster_id": "CL12"
+    },
+    {
+      "cap_id": "CAP17",
+      "cap_type": "Symptom",
+      "content_source": "patient",
+      "modality": "interview",
+      "canonical_concept": "headache",
+      "verification_status": "unconfirmed",
+      "clinical_status": "historical",
+      "temporality": "occasional",
+      "proposition_text": "The patient occasionally gets headaches.",
+      "evidence": [
+        {
+          "turn_id": "T19",
+          "turn_speaker": "doctor",
+          "span_text": "no nothing like that alright any other kinda headache symptoms that have anything like you had migraines or anything related to the headaches i mean i get occasional headaches but not really i do n't have a history of migraines but i occasionally get headaches like everybody else i take some tylenol that usually goes away but this is different",
+          "char_start": 2697,
+          "char_end": 3042
+        }
+      ],
+      "assertion": "historical",
+      "visit_state": "historical",
+      "linked_problem": null,
+      "event_cluster_id": "CL12"
+    },
+    {
+      "cap_id": "CAP18",
+      "cap_type": "Symptom",
+      "content_source": "patient",
+      "modality": "interview",
+      "canonical_concept": "numbness",
+      "verification_status": "unconfirmed",
+      "clinical_status": "active",
+      "temporality": "current",
+      "proposition_text": "The patient denies numbness.",
+      "evidence": [
+        {
+          "turn_id": "T6",
+          "turn_speaker": "patient",
+          "span_text": "mm-hmm do you have any sensory loss meaning like numbness or tingling in that part of your face",
+          "char_start": 889,
+          "char_end": 984
+        }
+      ],
+      "assertion": "uncertain",
+      "visit_state": "active",
+      "linked_problem": null,
+      "event_cluster_id": "CL4"
+    },
+    {
+      "cap_id": "CAP19",
+      "cap_type": "Symptom",
+      "content_source": "patient",
+      "modality": "interview",
+      "canonical_concept": "tingling",
+      "verification_status": "unconfirmed",
+      "clinical_status": "active",
+      "temporality": "current",
+      "proposition_text": "The patient denies tingling.",
+      "evidence": [
+        {
+          "turn_id": "T6",
+          "turn_speaker": "patient",
+          "span_text": "mm-hmm do you have any sensory loss meaning like numbness or tingling in that part of your face",
+          "char_start": 889,
+          "char_end": 984
+        }
+      ],
+      "assertion": "uncertain",
+      "visit_state": "active",
+      "linked_problem": null,
+      "event_cluster_id": "CL5"
+    },
+    {
+      "cap_id": "CAP20",
+      "cap_type": "Symptom",
+      "content_source": "patient",
+      "modality": "interview",
+      "canonical_concept": "weakness",
+      "verification_status": "unconfirmed",
+      "clinical_status": "active",
+      "temporality": "current",
+      "proposition_text": "The patient denies weakness.",
+      "evidence": [
+        {
+          "turn_id": "T8",
+          "turn_speaker": "patient",
+          "span_text": "no it's just on the right side mostly not on the left side just on the right side of my face",
+          "char_start": 1134,
+          "char_end": 1226
+        }
+      ],
+      "assertion": "uncertain",
+      "visit_state": "active",
+      "linked_problem": null,
+      "event_cluster_id": "CL6"
+    },
+    {
+      "cap_id": "CAP21",
+      "cap_type": "Symptom",
+      "content_source": "patient",
+      "modality": "interview",
+      "canonical_concept": "weakness",
+      "verification_status": "unconfirmed",
+      "clinical_status": "active",
+      "temporality": "current",
+      "proposition_text": "The patient reports weakness.",
+      "evidence": [
+        {
+          "turn_id": "T10",
+          "turn_speaker": "patient",
+          "span_text": "sometimes if i'm if certain temperatures seem to trigger it sometimes or if it's super where it's cold i get a trigger sometimes",
+          "char_start": 1706,
+          "char_end": 1834
+        }
+      ],
+      "assertion": "uncertain",
+      "visit_state": "active",
+      "linked_problem": null,
+      "event_cluster_id": "CL6"
+    },
+    {
+      "cap_id": "CAP22",
+      "cap_type": "TestResult",
+      "content_source": "patient",
+      "modality": "test_result",
+      "canonical_concept": "genetic testing",
+      "verification_status": "unconfirmed",
+      "clinical_status": "planned",
+      "temporality": "future",
+      "proposition_text": "The patient wants genetic testing.",
+      "evidence": [
+        {
+          "turn_id": "T46",
+          "turn_speaker": "patient",
+          "span_text": "skin reaction to this medication and particularly people who have eustachian descent so that we may do some genetic testing just to make sure that it will be safe for you",
+          "char_start": 5910,
+          "char_end": 6080
+        }
+      ],
+      "assertion": "hypothetical",
+      "visit_state": "planned",
+      "linked_problem": null,
+      "event_cluster_id": "CL21"
+    },
+    {
+      "cap_id": "CAP23",
+      "cap_type": "MedicationStatement",
+      "content_source": "doctor",
+      "modality": "interview",
+      "canonical_concept": "dermatologic skin reaction",
+      "verification_status": "confirmed",
+      "clinical_status": "active",
+      "temporality": "potential",
+      "proposition_text": "The doctor mentions potential dermatologic skin reactions as a side effect.",
+      "evidence": [
+        {
+          "turn_id": "T45",
+          "turn_speaker": "doctor",
+          "span_text": "it's always a little bit of trial and error to figure out what the right dosing that would work for you but some common side effects can include you know memory loss tingling imbalance some people can actually have like dermatologic",
+          "char_start": 5667,
+          "char_end": 5899
+        }
+      ],
+      "assertion": "present",
+      "visit_state": "active",
+      "linked_problem": null,
+      "event_cluster_id": "CL20"
+    },
+    {
+      "cap_id": "CAP24",
+      "cap_type": "MedicationStatement",
+      "content_source": "patient",
+      "modality": "interview",
+      "canonical_concept": "gabapentin",
+      "verification_status": "confirmed",
+      "clinical_status": "planned",
+      "temporality": "future",
+      "proposition_text": "The patient wants to try gabapentin.",
+      "evidence": [
+        {
+          "turn_id": "T38",
+          "turn_speaker": "patient",
+          "span_text": "well the first line would be to try some medications usually we start with medications that are called gabapentin",
+          "char_start": 4763,
+          "char_end": 4876
+        }
+      ],
+      "assertion": "hypothetical",
+      "visit_state": "planned",
+      "linked_problem": null,
+      "event_cluster_id": "CL17"
+    },
+    {
+      "cap_id": "CAP25",
+      "cap_type": "MedicationStatement",
+      "content_source": "doctor",
+      "modality": "interview",
+      "canonical_concept": "gabapentin",
+      "verification_status": "confirmed",
+      "clinical_status": "planned",
+      "temporality": "initial",
+      "proposition_text": "The doctor recommends starting with gabapentin.",
+      "evidence": [
+        {
+          "turn_id": "T38",
+          "turn_speaker": "patient",
+          "span_text": "well the first line would be to try some medications usually we start with medications that are called gabapentin",
+          "char_start": 4763,
+          "char_end": 4876
+        }
+      ],
+      "assertion": "hypothetical",
+      "visit_state": "planned",
+      "linked_problem": null,
+      "event_cluster_id": "CL17"
+    },
+    {
+      "cap_id": "CAP26",
+      "cap_type": "MedicationStatement",
+      "content_source": "doctor",
+      "modality": "interview",
+      "canonical_concept": "tegretol",
+      "verification_status": "confirmed",
+      "clinical_status": "planned",
+      "temporality": "initial",
+      "proposition_text": "The doctor recommends starting with tegretol.",
+      "evidence": [
+        {
+          "turn_id": "T43",
+          "turn_speaker": "doctor",
+          "span_text": "okay so we should be tried which one would you recommend the tegretol or yeah i think we could start with the tegretol to start with i just want to make sure that you understand some of the potential side effects that you can have with this",
+          "char_start": 5402,
+          "char_end": 5642
+        }
+      ],
+      "assertion": "hypothetical",
+      "visit_state": "planned",
+      "linked_problem": null,
+      "event_cluster_id": "CL19"
+    },
+    {
+      "cap_id": "CAP27",
+      "cap_type": "MedicationStatement",
+      "content_source": "patient",
+      "modality": "interview",
+      "canonical_concept": "tylenol",
+      "verification_status": "confirmed",
+      "clinical_status": "active",
+      "temporality": "current",
+      "proposition_text": "The patient takes some tylenol.",
+      "evidence": [
+        {
+          "turn_id": "T19",
+          "turn_speaker": "doctor",
+          "span_text": "no nothing like that alright any other kinda headache symptoms that have anything like you had migraines or anything related to the headaches i mean i get occasional headaches but not really i do n't have a history of migraines but i occasionally get headaches like everybody else i take some tylenol that usually goes away but this is different",
+          "char_start": 2697,
+          "char_end": 3042
+        }
+      ],
+      "assertion": "present",
+      "visit_state": "active",
+      "linked_problem": null,
+      "event_cluster_id": "CL13"
+    }
+  ],
+  "filtered_nonverifiable_units": [
+    "Is the pain worse at night?",
+    "how long do these episodes last",
+    "any history of something like multiple sclerosis or any brain tumors that you know",
+    "how severe is the pain on a scale of one to ten",
+    "okay",
+    "yeah",
+    "a little bit",
+    "What is the patient's family history?",
+    "What is the patient's current medication list?",
+    "what kind of genetic testing"
+  ],
+  "chunk_count": 6,
+  "rescue_used": false,
+  "rescue_attempted": false,
+  "legacy_fallback_chunk_count": 0,
+  "extraction_mode": "single_call",
+  "runtime_seconds": 130.647
+}

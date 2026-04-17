@@ -1,0 +1,2498 @@
+{
+  "case_id": "D2N051",
+  "method": "cluster2sent",
+  "template": "soap",
+  "summary_text": "S:\nThe patient reports fatigue for the past two months. The patient reports pain in his foot. The patient reports occasional numbness and tingling in his feet. The patient reports a history of smoking at least two packs per day for over twenty years. The patient reports a history of a heart attack in 2018. The patient reports taking aspirin daily.\n\nO:\nThe clinician observes a two by three centimeter ulcerated lesion on the right lateral foot. The clinician observes granulation tissue and purulent discharge from the wound. The clinician observes no jugular venous distention. The clinician observes no carotid bruits. The clinician observes clear lung sounds. The clinician notes no pain upon palpation of the right foot.\n\nA:\nThe clinician suspects cervical radiculopathy. The patient's symptoms are consistent with peripheral neuropathy and vascular compromise.\n\nP:\nThe clinician plans a cervical MRI. The clinician orders an arterial ultrasound of the lower extremities. The clinician orders a podiatry consult for the wound. The clinician recommends continued aspirin therapy. The clinician recommends discussing diabetes management with the primary care physician. The clinician recommends continued statin therapy.",
+  "reference_summary": "CHIEF COMPLAINT\n\nRight foot ulcer.\n\nHISTORY OF PRESENT ILLNESS\n\nJeremy Roberts is a 79-year-old male who presents today for evaluation of a right foot ulcer. He reports an ulcer on his right foot has been present for approximately 6 to 8 weeks. He first noticed the ulcer after working outside. There is no associated pain, however, he feels the ulcer may have worsened from when he first noticed it. He denies experiencing any fevers or chills. He does however experience tension headaches quite frequently. He denies any pain in his calves when he walks. At this time the patient does not have a podiatrist for yearly foot exams.\n\nHe is a diabetic and takes insulin. His blood sugar has been running higher than normal and his last hemoglobin A1c was higher than 9. Occasionally he will also experience numbness and tingling in his feet, especially with colder weather.\n\nIn terms of his heart disease, the patient sustained a heart attack in 2018 and underwent stent placement at the right coronary artery. He is currently taking aspirin 81 mg daily. He denies chest pain or shortness of breath.\n\nMEDICAL HISTORY\n\nPatient reports history of diabetes and heart disease. He sustained a heart attack in 2018.\n\nSURGICAL HISTORY\n\nPatient reports undergoing stent placement at the right coronary artery.\n\nSOCIAL HISTORY\n\nPatient reports he is a former smoker. He previously smoked 2 packs a day for 20 years and was able to stop smoking approximately 4 years ago. Currently he is not very active but he does work around the house.\n\nMEDICATIONS\n\nPatient reports taking aspirin 81 mg daily and insulin.\n\nREVIEW OF SYSTEMS\n\nConstitutional: Denies fevers and chills.\nCardiovascular: Denies chest pain.\nRespiratory: Denies dyspnea.\nSkin: Patient reports right foot ulcer.\nNeurological: Patient reports headaches and numbness and tingling in feet.\n\nVITALS\n\nNo fever.\nBlood pressure: 127/80\nHeart rate: 60s\n\nPHYSICAL EXAM\n\nCV: 2/6 systolic ejection murmur heard at the left base.\nRESPIRATORY: Clear to auscultation bilaterally\nNECK: No jugular venous distention or carotid bruits\nMSK: Examination of the right lower extremity: No palpable dorsalis pedis or posterior tibial pulses. There is a 2 x 3 cm ulcerated lesion on the right lateral foot near the 5th metacarpal metatarsophalangeal joint. No associated cellulitis. No pain to palpation of the right foot. There is associated granulation tissue and some slight purulent discharge from the wound.\n\nASSESSMENT\n\n1. Non-healing ulcer, right foot\n2. Diabetes\n3. Coronary artery disease\n\nPLAN\n\nAfter reviewing the patient's examination findings today, I have had a lengthy discussion with the patient in regards to his current symptoms. We discussed that his right foot ulcer is fairly sizable and will require wound care. I advised him that the ulcer does not appear to be healing and that further studies will be needed to assess if he has adequate blood supply to heal his foot wound. He was advised that due to his diabetes it is possible surgical intervention such as stent placement or bypass surgery may be required to improve his blood supply. I also advised him that I believe we will be able to heal his wound. At this time, I have recommended continued wound care and for him to also continue taking aspirin 81 mg daily. We will order an arterial ultrasound of the lower extremities. He will also be referred to podiatry for a consult.\n\nRegarding his diabetes, this appears to be unstable as the patient reports his last hemoglobin a1c was greater than 9 and is now experiencing a non-healing right foot ulcer. We discussed the importance of blood sugar control as this will impact his wound healing. At this time, I have recommended that he follow-up with his primary care physician for further care.\n\nThe patient's coronary artery disease is currently stable. It is recommended that he continue to take his statin as prescribed. I will contact his cardiologist for medical clearance should surgical intervention be required for his non-healing right foot ulcer.",
+  "source_cap": {
+    "atomic_propositions": [
+      {
+        "prop_id": "CAP1",
+        "cap_type": "Symptom",
+        "canonical_concept": "high blood sugar",
+        "category": "Symptom",
+        "speaker": "patient",
+        "status": "uncertain",
+        "visit_state": "historical",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient's blood sugar has been running higher than normal."
+      },
+      {
+        "prop_id": "CAP2",
+        "cap_type": "Symptom",
+        "canonical_concept": "neuropathy",
+        "category": "Symptom",
+        "speaker": "doctor",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "occasional",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports occasional numbness and tingling in their feet."
+      },
+      {
+        "prop_id": "CAP3",
+        "cap_type": "Problem",
+        "canonical_concept": "stent",
+        "category": "Problem",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "right coronary artery",
+        "proposition_text": "The patient has a stent in the right coronary artery."
+      },
+      {
+        "prop_id": "CAP4",
+        "cap_type": "Problem",
+        "canonical_concept": "stent",
+        "category": "Problem",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "past",
+        "proposition_text": "The patient received a stent in the right coronary artery."
+      },
+      {
+        "prop_id": "CAP5",
+        "cap_type": "Symptom",
+        "canonical_concept": "foot pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports mild pain in the right foot."
+      },
+      {
+        "prop_id": "CAP6",
+        "cap_type": "Problem",
+        "canonical_concept": "ulcer",
+        "category": "Problem",
+        "speaker": "doctor",
+        "status": "uncertain",
+        "visit_state": "historical",
+        "temporality": "6-8 weeks",
+        "proposition_text": "The patient has an ulcer on their right foot."
+      },
+      {
+        "prop_id": "CAP7",
+        "cap_type": "Symptom",
+        "canonical_concept": "cold",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports sensation taking longer to warm up."
+      },
+      {
+        "prop_id": "CAP8",
+        "cap_type": "Problem",
+        "canonical_concept": "high blood sugar",
+        "category": "Problem",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient's sugars are running higher than normal."
+      },
+      {
+        "prop_id": "CAP9",
+        "cap_type": "Problem",
+        "canonical_concept": "heart attack",
+        "category": "Problem",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "2018",
+        "claim_type_tags": [
+          "quantitative"
+        ],
+        "proposition_text": "The patient had a heart attack in 2018."
+      },
+      {
+        "prop_id": "CAP10",
+        "cap_type": "Problem",
+        "canonical_concept": "heart attack",
+        "category": "Problem",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "2018",
+        "claim_type_tags": [
+          "quantitative"
+        ],
+        "proposition_text": "The patient experienced a heart attack in 2018."
+      },
+      {
+        "prop_id": "CAP11",
+        "cap_type": "Symptom",
+        "canonical_concept": "no pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "denies",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient denies pain in their foot."
+      },
+      {
+        "prop_id": "CAP12",
+        "cap_type": "Symptom",
+        "canonical_concept": "foot pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports pain in their foot."
+      },
+      {
+        "prop_id": "CAP13",
+        "cap_type": "Problem",
+        "canonical_concept": "smoking cessation",
+        "category": "Problem",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "4 years ago",
+        "claim_type_tags": [
+          "quantitative"
+        ],
+        "proposition_text": "The patient quit smoking 4 years ago."
+      },
+      {
+        "prop_id": "CAP14",
+        "cap_type": "Problem",
+        "canonical_concept": "smoking history",
+        "category": "Problem",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "20+ years",
+        "claim_type_tags": [
+          "quantitative"
+        ],
+        "proposition_text": "The patient smoked for 20+ years."
+      },
+      {
+        "prop_id": "CAP15",
+        "cap_type": "Problem",
+        "canonical_concept": "shortness of breath",
+        "category": "Problem",
+        "speaker": "doctor",
+        "predicate": "reports",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient reports shortness of breath."
+      },
+      {
+        "prop_id": "CAP16",
+        "cap_type": "Symptom",
+        "canonical_concept": "shortness of breath",
+        "category": "Symptom",
+        "speaker": "doctor",
+        "predicate": "denies",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient denies shortness of breath."
+      },
+      {
+        "prop_id": "CAP17",
+        "cap_type": "Problem",
+        "canonical_concept": "coronary artery disease",
+        "category": "Problem",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "ongoing",
+        "proposition_text": "The patient has coronary artery disease."
+      },
+      {
+        "prop_id": "CAP18",
+        "cap_type": "Problem",
+        "canonical_concept": "diabetes",
+        "category": "Problem",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient is a diabetic."
+      },
+      {
+        "prop_id": "CAP19",
+        "cap_type": "Problem",
+        "canonical_concept": "ulcer",
+        "category": "Problem",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient has an ulcer."
+      },
+      {
+        "prop_id": "CAP20",
+        "cap_type": "Symptom",
+        "canonical_concept": "headache",
+        "category": "Symptom",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient experiences tension headaches."
+      },
+      {
+        "prop_id": "CAP21",
+        "cap_type": "Problem",
+        "canonical_concept": "chest pain",
+        "category": "Problem",
+        "speaker": "doctor",
+        "predicate": "reports",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient reports chest pain."
+      },
+      {
+        "prop_id": "CAP22",
+        "cap_type": "Symptom",
+        "canonical_concept": "chest pain",
+        "category": "Symptom",
+        "speaker": "doctor",
+        "predicate": "denies",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient denies chest pain."
+      },
+      {
+        "prop_id": "CAP23",
+        "cap_type": "Problem",
+        "canonical_concept": "granulation tissue",
+        "category": "Problem",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient has granulation tissue."
+      },
+      {
+        "prop_id": "CAP24",
+        "cap_type": "Problem",
+        "canonical_concept": "purulent discharge",
+        "category": "Problem",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient has purulent discharge."
+      },
+      {
+        "prop_id": "CAP25",
+        "cap_type": "Symptom",
+        "canonical_concept": "wound",
+        "category": "Symptom",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient has a wound."
+      },
+      {
+        "prop_id": "CAP26",
+        "cap_type": "Problem",
+        "canonical_concept": "diabetes",
+        "category": "Problem",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient has diabetes."
+      },
+      {
+        "prop_id": "CAP27",
+        "cap_type": "Symptom",
+        "canonical_concept": "numbness",
+        "category": "Symptom",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient experiences numbness."
+      },
+      {
+        "prop_id": "CAP28",
+        "cap_type": "Problem",
+        "canonical_concept": "neuropathy",
+        "category": "Problem",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient has neuropathy."
+      },
+      {
+        "prop_id": "CAP29",
+        "cap_type": "Order",
+        "canonical_concept": "arterial ultrasound",
+        "category": "Order",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "planned",
+        "temporality": "soon",
+        "proposition_text": "A lower extremity arterial ultrasound is ordered."
+      },
+      {
+        "prop_id": "CAP30",
+        "cap_type": "Order",
+        "canonical_concept": "podiatry consult",
+        "category": "Order",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "planned",
+        "temporality": "soon",
+        "proposition_text": "A podiatry consult is ordered."
+      },
+      {
+        "prop_id": "CAP31",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "statin",
+        "category": "MedicationStatement",
+        "speaker": "doctor",
+        "predicate": "has",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "ongoing",
+        "proposition_text": "The patient should continue with a statin."
+      },
+      {
+        "prop_id": "CAP32",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "aspirin",
+        "category": "MedicationStatement",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient is taking aspirin daily."
+      },
+      {
+        "prop_id": "CAP33",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "insulin",
+        "category": "MedicationStatement",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient is taking insulin."
+      },
+      {
+        "prop_id": "CAP34",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "insulin",
+        "category": "MedicationStatement",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient is on insulin."
+      },
+      {
+        "prop_id": "CAP35",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "aspirin",
+        "category": "MedicationStatement",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient is taking aspirin."
+      }
+    ],
+    "filtered_nonverifiable_units": []
+  },
+  "event_plan": null,
+  "summary_cap": {
+    "atomic_propositions": [
+      {
+        "prop_id": "P1",
+        "cap_type": "Symptom",
+        "canonical_concept": "fatigue",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "past",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports fatigue."
+      },
+      {
+        "prop_id": "P2",
+        "cap_type": "Symptom",
+        "canonical_concept": "pain:foot",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "past",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports pain in his foot."
+      },
+      {
+        "prop_id": "P3",
+        "cap_type": "Symptom",
+        "canonical_concept": "sensory change",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports occasional numbness."
+      },
+      {
+        "prop_id": "P4",
+        "cap_type": "Symptom",
+        "canonical_concept": "sensory change",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports tingling."
+      },
+      {
+        "prop_id": "P5",
+        "cap_type": "History",
+        "canonical_concept": "history smoking least two",
+        "category": "History",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "past",
+        "claim_type_tags": [
+          "history"
+        ],
+        "proposition_text": "The patient reports a history of smoking at least two packs per day for over twenty years."
+      },
+      {
+        "prop_id": "P6",
+        "cap_type": "History",
+        "canonical_concept": "history heart attack",
+        "category": "History",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "past",
+        "claim_type_tags": [
+          "history"
+        ],
+        "proposition_text": "The patient reports a history of a heart attack in 2018."
+      },
+      {
+        "prop_id": "P7",
+        "cap_type": "MedicationPlan",
+        "canonical_concept": "takes aspirin daily",
+        "category": "MedicationPlan",
+        "speaker": "patient",
+        "predicate": "takes",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "medication"
+        ],
+        "proposition_text": "The patient takes aspirin daily."
+      },
+      {
+        "prop_id": "P8",
+        "cap_type": "Finding",
+        "canonical_concept": "observes two three centimeter",
+        "category": "Finding",
+        "speaker": "clinician",
+        "predicate": "observes",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "exam"
+        ],
+        "proposition_text": "The clinician observes a two by three centimeter ulcerated lesion on the right lateral foot."
+      },
+      {
+        "prop_id": "P9",
+        "cap_type": "Finding",
+        "canonical_concept": "observes granulation tissue and",
+        "category": "Finding",
+        "speaker": "clinician",
+        "predicate": "observes",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "exam"
+        ],
+        "proposition_text": "The clinician observes granulation tissue and purulent discharge from the wound."
+      },
+      {
+        "prop_id": "P10",
+        "cap_type": "Finding",
+        "canonical_concept": "observes jugular venous distention",
+        "category": "Finding",
+        "speaker": "clinician",
+        "predicate": "observes",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "exam"
+        ],
+        "proposition_text": "The clinician observes no jugular venous distention."
+      },
+      {
+        "prop_id": "P11",
+        "cap_type": "Finding",
+        "canonical_concept": "observes carotid bruits",
+        "category": "Finding",
+        "speaker": "clinician",
+        "predicate": "observes",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "exam"
+        ],
+        "proposition_text": "The clinician observes no carotid bruits."
+      },
+      {
+        "prop_id": "P12",
+        "cap_type": "Finding",
+        "canonical_concept": "observes clear lung sounds",
+        "category": "Finding",
+        "speaker": "clinician",
+        "predicate": "observes",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "exam"
+        ],
+        "proposition_text": "The clinician observes clear lung sounds."
+      },
+      {
+        "prop_id": "P13",
+        "cap_type": "Finding",
+        "canonical_concept": "pain:foot",
+        "category": "Finding",
+        "speaker": "clinician",
+        "predicate": "notes",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "exam"
+        ],
+        "proposition_text": "The clinician notes no pain upon palpation of the right foot."
+      },
+      {
+        "prop_id": "P14",
+        "cap_type": "Problem",
+        "canonical_concept": "suspects cervical radiculopathy",
+        "category": "Problem",
+        "speaker": "clinician",
+        "predicate": "suspects",
+        "status": "uncertain",
+        "visit_state": "uncertain",
+        "temporality": "current",
+        "claim_type_tags": [
+          "diagnosis"
+        ],
+        "proposition_text": "The clinician suspects cervical radiculopathy."
+      },
+      {
+        "prop_id": "P15",
+        "cap_type": "MedicationPlan",
+        "canonical_concept": "plans cervical mri",
+        "category": "MedicationPlan",
+        "speaker": "clinician",
+        "predicate": "plans",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "medication"
+        ],
+        "proposition_text": "The clinician plans a cervical MRI."
+      },
+      {
+        "prop_id": "P16",
+        "cap_type": "TestPlan",
+        "canonical_concept": "orders arterial ultrasound lower",
+        "category": "TestPlan",
+        "speaker": "clinician",
+        "predicate": "orders",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "test"
+        ],
+        "proposition_text": "The clinician orders an arterial ultrasound of the lower extremities."
+      },
+      {
+        "prop_id": "P17",
+        "cap_type": "Referral",
+        "canonical_concept": "orders podiatry consult for",
+        "category": "Referral",
+        "speaker": "clinician",
+        "predicate": "orders",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "referral"
+        ],
+        "proposition_text": "The clinician orders a podiatry consult for the wound."
+      },
+      {
+        "prop_id": "P18",
+        "cap_type": "MedicationPlan",
+        "canonical_concept": "recommends continued aspirin therapy",
+        "category": "MedicationPlan",
+        "speaker": "clinician",
+        "predicate": "recommends",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "medication"
+        ],
+        "proposition_text": "The clinician recommends continued aspirin therapy."
+      },
+      {
+        "prop_id": "P19",
+        "cap_type": "Referral",
+        "canonical_concept": "diabetes",
+        "category": "Referral",
+        "speaker": "clinician",
+        "predicate": "recommends",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "referral"
+        ],
+        "proposition_text": "The clinician recommends discussing diabetes management with the primary care physician."
+      },
+      {
+        "prop_id": "P20",
+        "cap_type": "MedicationPlan",
+        "canonical_concept": "recommends continued statin therapy",
+        "category": "MedicationPlan",
+        "speaker": "clinician",
+        "predicate": "recommends",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "medication"
+        ],
+        "proposition_text": "The clinician recommends continued statin therapy."
+      }
+    ],
+    "filtered_nonverifiable_units": [],
+    "runtime_seconds": 29.549
+  },
+  "cap_alignment": {
+    "cap_precision": 0.4,
+    "cap_recall": 0.22857142857142856,
+    "cap_f1": 0.2909090909090909,
+    "matched_count": 8,
+    "summary_prop_count": 20,
+    "source_prop_count": 35,
+    "matched_pairs": [
+      {
+        "score": 1.0,
+        "summary_prop_id": "P19",
+        "source_prop_id": "CAP26",
+        "summary_text": "The clinician recommends discussing diabetes management with the primary care physician.",
+        "source_text": "The patient has diabetes."
+      },
+      {
+        "score": 1.0,
+        "summary_prop_id": "P13",
+        "source_prop_id": "CAP12",
+        "summary_text": "The clinician notes no pain upon palpation of the right foot.",
+        "source_text": "The patient reports pain in their foot."
+      },
+      {
+        "score": 1.0,
+        "summary_prop_id": "P2",
+        "source_prop_id": "CAP5",
+        "summary_text": "The patient reports pain in his foot.",
+        "source_text": "The patient reports mild pain in the right foot."
+      },
+      {
+        "score": 0.8516,
+        "summary_prop_id": "P6",
+        "source_prop_id": "CAP10",
+        "summary_text": "The patient reports a history of a heart attack in 2018.",
+        "source_text": "The patient experienced a heart attack in 2018."
+      },
+      {
+        "score": 0.8023,
+        "summary_prop_id": "P7",
+        "source_prop_id": "CAP32",
+        "summary_text": "The patient takes aspirin daily.",
+        "source_text": "The patient is taking aspirin daily."
+      },
+      {
+        "score": 0.8,
+        "summary_prop_id": "P17",
+        "source_prop_id": "CAP30",
+        "summary_text": "The clinician orders a podiatry consult for the wound.",
+        "source_text": "A podiatry consult is ordered."
+      },
+      {
+        "score": 0.6721,
+        "summary_prop_id": "P9",
+        "source_prop_id": "CAP23",
+        "summary_text": "The clinician observes granulation tissue and purulent discharge from the wound.",
+        "source_text": "The patient has granulation tissue."
+      },
+      {
+        "score": 0.6667,
+        "summary_prop_id": "P16",
+        "source_prop_id": "CAP29",
+        "summary_text": "The clinician orders an arterial ultrasound of the lower extremities.",
+        "source_text": "A lower extremity arterial ultrasound is ordered."
+      }
+    ],
+    "unsupported_summary_props": [
+      {
+        "prop_id": "P1",
+        "cap_type": "Symptom",
+        "canonical_concept": "fatigue",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "past",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports fatigue."
+      },
+      {
+        "prop_id": "P3",
+        "cap_type": "Symptom",
+        "canonical_concept": "sensory change",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports occasional numbness."
+      },
+      {
+        "prop_id": "P4",
+        "cap_type": "Symptom",
+        "canonical_concept": "sensory change",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports tingling."
+      },
+      {
+        "prop_id": "P5",
+        "cap_type": "History",
+        "canonical_concept": "history smoking least two",
+        "category": "History",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "past",
+        "claim_type_tags": [
+          "history"
+        ],
+        "proposition_text": "The patient reports a history of smoking at least two packs per day for over twenty years."
+      },
+      {
+        "prop_id": "P8",
+        "cap_type": "Finding",
+        "canonical_concept": "observes two three centimeter",
+        "category": "Finding",
+        "speaker": "clinician",
+        "predicate": "observes",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "exam"
+        ],
+        "proposition_text": "The clinician observes a two by three centimeter ulcerated lesion on the right lateral foot."
+      },
+      {
+        "prop_id": "P10",
+        "cap_type": "Finding",
+        "canonical_concept": "observes jugular venous distention",
+        "category": "Finding",
+        "speaker": "clinician",
+        "predicate": "observes",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "exam"
+        ],
+        "proposition_text": "The clinician observes no jugular venous distention."
+      },
+      {
+        "prop_id": "P11",
+        "cap_type": "Finding",
+        "canonical_concept": "observes carotid bruits",
+        "category": "Finding",
+        "speaker": "clinician",
+        "predicate": "observes",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "exam"
+        ],
+        "proposition_text": "The clinician observes no carotid bruits."
+      },
+      {
+        "prop_id": "P12",
+        "cap_type": "Finding",
+        "canonical_concept": "observes clear lung sounds",
+        "category": "Finding",
+        "speaker": "clinician",
+        "predicate": "observes",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "exam"
+        ],
+        "proposition_text": "The clinician observes clear lung sounds."
+      },
+      {
+        "prop_id": "P14",
+        "cap_type": "Problem",
+        "canonical_concept": "suspects cervical radiculopathy",
+        "category": "Problem",
+        "speaker": "clinician",
+        "predicate": "suspects",
+        "status": "uncertain",
+        "visit_state": "uncertain",
+        "temporality": "current",
+        "claim_type_tags": [
+          "diagnosis"
+        ],
+        "proposition_text": "The clinician suspects cervical radiculopathy."
+      },
+      {
+        "prop_id": "P15",
+        "cap_type": "MedicationPlan",
+        "canonical_concept": "plans cervical mri",
+        "category": "MedicationPlan",
+        "speaker": "clinician",
+        "predicate": "plans",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "medication"
+        ],
+        "proposition_text": "The clinician plans a cervical MRI."
+      },
+      {
+        "prop_id": "P18",
+        "cap_type": "MedicationPlan",
+        "canonical_concept": "recommends continued aspirin therapy",
+        "category": "MedicationPlan",
+        "speaker": "clinician",
+        "predicate": "recommends",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "medication"
+        ],
+        "proposition_text": "The clinician recommends continued aspirin therapy."
+      },
+      {
+        "prop_id": "P20",
+        "cap_type": "MedicationPlan",
+        "canonical_concept": "recommends continued statin therapy",
+        "category": "MedicationPlan",
+        "speaker": "clinician",
+        "predicate": "recommends",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "medication"
+        ],
+        "proposition_text": "The clinician recommends continued statin therapy."
+      }
+    ],
+    "missing_source_props": [
+      {
+        "prop_id": "CAP1",
+        "cap_type": "Symptom",
+        "canonical_concept": "high blood sugar",
+        "category": "Symptom",
+        "speaker": "patient",
+        "status": "uncertain",
+        "visit_state": "historical",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient's blood sugar has been running higher than normal."
+      },
+      {
+        "prop_id": "CAP2",
+        "cap_type": "Symptom",
+        "canonical_concept": "neuropathy",
+        "category": "Symptom",
+        "speaker": "doctor",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "occasional",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports occasional numbness and tingling in their feet."
+      },
+      {
+        "prop_id": "CAP3",
+        "cap_type": "Problem",
+        "canonical_concept": "stent",
+        "category": "Problem",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "right coronary artery",
+        "proposition_text": "The patient has a stent in the right coronary artery."
+      },
+      {
+        "prop_id": "CAP4",
+        "cap_type": "Problem",
+        "canonical_concept": "stent",
+        "category": "Problem",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "past",
+        "proposition_text": "The patient received a stent in the right coronary artery."
+      },
+      {
+        "prop_id": "CAP6",
+        "cap_type": "Problem",
+        "canonical_concept": "ulcer",
+        "category": "Problem",
+        "speaker": "doctor",
+        "status": "uncertain",
+        "visit_state": "historical",
+        "temporality": "6-8 weeks",
+        "proposition_text": "The patient has an ulcer on their right foot."
+      },
+      {
+        "prop_id": "CAP7",
+        "cap_type": "Symptom",
+        "canonical_concept": "cold",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports sensation taking longer to warm up."
+      },
+      {
+        "prop_id": "CAP8",
+        "cap_type": "Problem",
+        "canonical_concept": "high blood sugar",
+        "category": "Problem",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient's sugars are running higher than normal."
+      },
+      {
+        "prop_id": "CAP9",
+        "cap_type": "Problem",
+        "canonical_concept": "heart attack",
+        "category": "Problem",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "2018",
+        "claim_type_tags": [
+          "quantitative"
+        ],
+        "proposition_text": "The patient had a heart attack in 2018."
+      },
+      {
+        "prop_id": "CAP11",
+        "cap_type": "Symptom",
+        "canonical_concept": "no pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "denies",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient denies pain in their foot."
+      },
+      {
+        "prop_id": "CAP13",
+        "cap_type": "Problem",
+        "canonical_concept": "smoking cessation",
+        "category": "Problem",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "4 years ago",
+        "claim_type_tags": [
+          "quantitative"
+        ],
+        "proposition_text": "The patient quit smoking 4 years ago."
+      },
+      {
+        "prop_id": "CAP14",
+        "cap_type": "Problem",
+        "canonical_concept": "smoking history",
+        "category": "Problem",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "20+ years",
+        "claim_type_tags": [
+          "quantitative"
+        ],
+        "proposition_text": "The patient smoked for 20+ years."
+      },
+      {
+        "prop_id": "CAP15",
+        "cap_type": "Problem",
+        "canonical_concept": "shortness of breath",
+        "category": "Problem",
+        "speaker": "doctor",
+        "predicate": "reports",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient reports shortness of breath."
+      },
+      {
+        "prop_id": "CAP16",
+        "cap_type": "Symptom",
+        "canonical_concept": "shortness of breath",
+        "category": "Symptom",
+        "speaker": "doctor",
+        "predicate": "denies",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient denies shortness of breath."
+      },
+      {
+        "prop_id": "CAP17",
+        "cap_type": "Problem",
+        "canonical_concept": "coronary artery disease",
+        "category": "Problem",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "ongoing",
+        "proposition_text": "The patient has coronary artery disease."
+      },
+      {
+        "prop_id": "CAP18",
+        "cap_type": "Problem",
+        "canonical_concept": "diabetes",
+        "category": "Problem",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient is a diabetic."
+      },
+      {
+        "prop_id": "CAP19",
+        "cap_type": "Problem",
+        "canonical_concept": "ulcer",
+        "category": "Problem",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient has an ulcer."
+      },
+      {
+        "prop_id": "CAP20",
+        "cap_type": "Symptom",
+        "canonical_concept": "headache",
+        "category": "Symptom",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient experiences tension headaches."
+      },
+      {
+        "prop_id": "CAP21",
+        "cap_type": "Problem",
+        "canonical_concept": "chest pain",
+        "category": "Problem",
+        "speaker": "doctor",
+        "predicate": "reports",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient reports chest pain."
+      },
+      {
+        "prop_id": "CAP22",
+        "cap_type": "Symptom",
+        "canonical_concept": "chest pain",
+        "category": "Symptom",
+        "speaker": "doctor",
+        "predicate": "denies",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient denies chest pain."
+      },
+      {
+        "prop_id": "CAP24",
+        "cap_type": "Problem",
+        "canonical_concept": "purulent discharge",
+        "category": "Problem",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient has purulent discharge."
+      },
+      {
+        "prop_id": "CAP25",
+        "cap_type": "Symptom",
+        "canonical_concept": "wound",
+        "category": "Symptom",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient has a wound."
+      },
+      {
+        "prop_id": "CAP27",
+        "cap_type": "Symptom",
+        "canonical_concept": "numbness",
+        "category": "Symptom",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient experiences numbness."
+      },
+      {
+        "prop_id": "CAP28",
+        "cap_type": "Problem",
+        "canonical_concept": "neuropathy",
+        "category": "Problem",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient has neuropathy."
+      },
+      {
+        "prop_id": "CAP31",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "statin",
+        "category": "MedicationStatement",
+        "speaker": "doctor",
+        "predicate": "has",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "ongoing",
+        "proposition_text": "The patient should continue with a statin."
+      },
+      {
+        "prop_id": "CAP33",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "insulin",
+        "category": "MedicationStatement",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient is taking insulin."
+      },
+      {
+        "prop_id": "CAP34",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "insulin",
+        "category": "MedicationStatement",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient is on insulin."
+      },
+      {
+        "prop_id": "CAP35",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "aspirin",
+        "category": "MedicationStatement",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient is taking aspirin."
+      }
+    ]
+  },
+  "reference_gpt_f1_items": {
+    "active_problems_symptoms": [
+      "right foot ulcer",
+      "headaches",
+      "numbness and tingling in feet",
+      "2 x 3 cm ulcerated lesion on the right lateral foot near the 5th metacarpal metatarsophalangeal joint",
+      "2/6 systolic ejection murmur heard at the left base",
+      "No palpable dorsalis pedis or posterior tibial pulses",
+      "granulation tissue and some slight purulent discharge from the wound"
+    ],
+    "negated_findings": [
+      "Denies fevers and chills",
+      "Denies chest pain",
+      "Denies dyspnea",
+      "No fever",
+      "No jugular venous distention",
+      "No carotid bruits",
+      "Clear to auscultation bilaterally"
+    ],
+    "uncertain_findings": [],
+    "medication_treatment": [
+      "aspirin 81 mg daily",
+      "insulin"
+    ],
+    "plan_followup": [],
+    "_chunk_count": [
+      "4"
+    ]
+  },
+  "summary_gpt_f1_items": {
+    "active_problems_symptoms": [
+      "fatigue",
+      "pain in foot",
+      "numbness",
+      "tingling in feet",
+      "history of smoking",
+      "history of heart attack",
+      "aspirin therapy"
+    ],
+    "negated_findings": [
+      "no jugular venous distention",
+      "no carotid bruits",
+      "clear lung sounds",
+      "no pain upon palpation of the right foot"
+    ],
+    "uncertain_findings": [
+      "cervical radiculopathy",
+      "peripheral neuropathy",
+      "vascular compromise"
+    ],
+    "medication_treatment": [
+      "aspirin therapy",
+      "statin therapy"
+    ],
+    "plan_followup": [
+      "cervical MRI",
+      "arterial ultrasound of the lower extremities",
+      "podiatry consult",
+      "discussing diabetes management with the primary care physician"
+    ],
+    "_chunk_count": [
+      "1"
+    ]
+  },
+  "gpt_f1_alignment": {
+    "by_category": {
+      "active_problems_symptoms": {
+        "precision": 0.14285714285714285,
+        "recall": 0.14285714285714285,
+        "f1": 0.14285714285714285,
+        "matched_count": 1,
+        "pred_count": 7,
+        "ref_count": 7,
+        "matches": [
+          {
+            "score": 0.75,
+            "pred_text": "tingling in feet",
+            "ref_text": "numbness and tingling in feet"
+          }
+        ],
+        "unsupported_pred_items": [
+          "fatigue",
+          "pain in foot",
+          "numbness",
+          "history of smoking",
+          "history of heart attack",
+          "aspirin therapy"
+        ],
+        "missing_ref_items": [
+          "right foot ulcer",
+          "headaches",
+          "2 x 3 cm ulcerated lesion on the right lateral foot near the 5th metacarpal metatarsophalangeal joint",
+          "2/6 systolic ejection murmur heard at the left base",
+          "No palpable dorsalis pedis or posterior tibial pulses",
+          "granulation tissue and some slight purulent discharge from the wound"
+        ]
+      },
+      "negated_findings": {
+        "precision": 0.5,
+        "recall": 0.2857142857142857,
+        "f1": 0.36363636363636365,
+        "matched_count": 2,
+        "pred_count": 4,
+        "ref_count": 7,
+        "matches": [
+          {
+            "score": 1.0,
+            "pred_text": "no carotid bruits",
+            "ref_text": "No carotid bruits"
+          },
+          {
+            "score": 1.0,
+            "pred_text": "no jugular venous distention",
+            "ref_text": "No jugular venous distention"
+          }
+        ],
+        "unsupported_pred_items": [
+          "clear lung sounds",
+          "no pain upon palpation of the right foot"
+        ],
+        "missing_ref_items": [
+          "Denies fevers and chills",
+          "Denies chest pain",
+          "Denies dyspnea",
+          "No fever",
+          "Clear to auscultation bilaterally"
+        ]
+      },
+      "uncertain_findings": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "matched_count": 0,
+        "pred_count": 3,
+        "ref_count": 0,
+        "matches": [],
+        "unsupported_pred_items": [
+          "cervical radiculopathy",
+          "peripheral neuropathy",
+          "vascular compromise"
+        ],
+        "missing_ref_items": []
+      },
+      "medication_treatment": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "matched_count": 0,
+        "pred_count": 2,
+        "ref_count": 2,
+        "matches": [],
+        "unsupported_pred_items": [
+          "aspirin therapy",
+          "statin therapy"
+        ],
+        "missing_ref_items": [
+          "aspirin 81 mg daily",
+          "insulin"
+        ]
+      },
+      "plan_followup": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "matched_count": 0,
+        "pred_count": 4,
+        "ref_count": 0,
+        "matches": [],
+        "unsupported_pred_items": [
+          "cervical MRI",
+          "arterial ultrasound of the lower extremities",
+          "podiatry consult",
+          "discussing diabetes management with the primary care physician"
+        ],
+        "missing_ref_items": []
+      }
+    }
+  },
+  "reference_nair_concepts": {
+    "sections": [
+      {
+        "heading": "Clinical Note",
+        "section_value": "CHIEF COMPLAINT\nRight foot ulcer.\nHISTORY OF PRESENT ILLNESS\nJeremy Roberts is a 79-year-old male who presents today for evaluation of a right foot ulcer. He reports an ulcer on his right foot has been present for approximately 6 to 8 weeks. He first noticed the ulcer after working outside. There is no associated pain, however, he feels the ulcer may have worsened from when he first noticed it. He denies experiencing any fevers or chills. He does however experience tension headaches quite frequently. He denies any pain in his calves when he walks. At this time the patient does not have a podiatrist for yearly foot exams.\nHe is a diabetic and takes insulin. His blood sugar has been running higher than normal and his last hemoglobin A1c was higher than 9. Occasionally he will also experience numbness and tingling in his feet, especially with colder weather.\nIn terms of his heart disease, the patient sustained a heart attack in 2018 and underwent stent placement at the right coronary artery. He is currently taking aspirin 81 mg daily. He denies chest pain or shortness of breath.\nMEDICAL HISTORY\nPatient reports history of diabetes and heart disease. He sustained a heart attack in 2018.\nSURGICAL HISTORY\nPatient reports undergoing stent placement at the right coronary artery.",
+        "medical_concepts": [
+          "right foot ulcer",
+          "ulcer",
+          "fevers",
+          "chills",
+          "tension headaches",
+          "calf pain with walking",
+          "podiatry foot exam",
+          "diabetes",
+          "insulin",
+          "high blood sugar",
+          "hemoglobin A1c",
+          "numbness in feet",
+          "tingling in feet",
+          "heart disease",
+          "heart attack",
+          "myocardial infarction",
+          "stent placement",
+          "right coronary artery stent",
+          "aspirin 81 mg",
+          "chest pain"
+        ]
+      },
+      {
+        "heading": "Clinical Note",
+        "section_value": "SOCIAL HISTORY\nPatient reports he is a former smoker. He previously smoked 2 packs a day for 20 years and was able to stop smoking approximately 4 years ago. Currently he is not very active but he does work around the house.\nMEDICATIONS\nPatient reports taking aspirin 81 mg daily and insulin.\nREVIEW OF SYSTEMS\nConstitutional: Denies fevers and chills.\nCardiovascular: Denies chest pain.\nRespiratory: Denies dyspnea.\nSkin: Patient reports right foot ulcer.\nNeurological: Patient reports headaches and numbness and tingling in feet.",
+        "medical_concepts": [
+          "smoking",
+          "aspirin",
+          "insulin",
+          "fever",
+          "chills",
+          "chest pain",
+          "dyspnea",
+          "right foot ulcer",
+          "headache",
+          "numbness in feet",
+          "tingling in feet"
+        ]
+      },
+      {
+        "heading": "Clinical Note",
+        "section_value": "VITALS\nNo fever.\nBlood pressure: 127/80\nHeart rate: 60s\nPHYSICAL EXAM\nCV: 2/6 systolic ejection murmur heard at the left base.\nRESPIRATORY: Clear to auscultation bilaterally\nNECK: No jugular venous distention or carotid bruits\nMSK: Examination of the right lower extremity: No palpable dorsalis pedis or posterior tibial pulses. There is a 2 x 3 cm ulcerated lesion on the right lateral foot near the 5th metacarpal metatarsophalangeal joint. No associated cellulitis. No pain to palpation of the right foot. There is associated granulation tissue and some slight purulent discharge from the wound.\nASSESSMENT",
+        "medical_concepts": [
+          "fever",
+          "blood pressure",
+          "heart rate",
+          "systolic ejection murmur",
+          "jugular venous distention",
+          "carotid bruits",
+          "dorsalis pedis pulse",
+          "posterior tibial pulse",
+          "ulcerated lesion",
+          "right lateral foot ulcer",
+          "metatarsophalangeal joint",
+          "cellulitis",
+          "granulation tissue",
+          "purulent discharge",
+          "wound"
+        ]
+      },
+      {
+        "heading": "Clinical Note",
+        "section_value": "1. Non-healing ulcer, right foot\n2. Diabetes\n3. Coronary artery disease\nPLAN\nAfter reviewing the patient's examination findings today, I have had a lengthy discussion with the patient in regards to his current symptoms. We discussed that his right foot ulcer is fairly sizable and will require wound care. I advised him that the ulcer does not appear to be healing and that further studies will be needed to assess if he has adequate blood supply to heal his foot wound. He was advised that due to his diabetes it is possible surgical intervention such as stent placement or bypass surgery may be required to improve his blood supply. I also advised him that I believe we will be able to heal his wound. At this time, I have recommended continued wound care and for him to also continue taking aspirin 81 mg daily. We will order an arterial ultrasound of the lower extremities. He will also be referred to podiatry for a consult.\nRegarding his diabetes, this appears to be unstable as the patient reports his last hemoglobin a1c was greater than 9 and is now experiencing a non-healing right foot ulcer. We discussed the importance of blood sugar control as this will impact his wound healing. At this time, I have recommended that he follow-up with his primary care physician for further care.",
+        "medical_concepts": [
+          "non-healing ulcer",
+          "right foot ulcer",
+          "foot wound",
+          "diabetes",
+          "coronary artery disease",
+          "surgical intervention",
+          "stent placement",
+          "bypass surgery",
+          "aspirin 81 mg",
+          "arterial ultrasound of the lower extremities",
+          "podiatry consult",
+          "unstable diabetes",
+          "hemoglobin A1c",
+          "blood sugar control",
+          "wound care",
+          "wound healing"
+        ]
+      },
+      {
+        "heading": "Clinical Note",
+        "section_value": "The patient's coronary artery disease is currently stable. It is recommended that he continue to take his statin as prescribed. I will contact his cardiologist for medical clearance should surgical intervention be required for his non-healing right foot ulcer.",
+        "medical_concepts": [
+          "coronary artery disease",
+          "statin",
+          "cardiologist",
+          "surgical intervention",
+          "non-healing right foot ulcer"
+        ]
+      }
+    ],
+    "medical_concepts": [
+      "right foot ulcer",
+      "ulcer",
+      "fevers",
+      "chills",
+      "tension headaches",
+      "calf pain with walking",
+      "podiatry foot exam",
+      "diabetes",
+      "insulin",
+      "high blood sugar",
+      "hemoglobin A1c",
+      "numbness in feet",
+      "tingling in feet",
+      "heart disease",
+      "heart attack",
+      "myocardial infarction",
+      "stent placement",
+      "right coronary artery stent",
+      "aspirin 81 mg",
+      "chest pain",
+      "smoking",
+      "aspirin",
+      "fever",
+      "dyspnea",
+      "headache",
+      "blood pressure",
+      "heart rate",
+      "systolic ejection murmur",
+      "jugular venous distention",
+      "carotid bruits",
+      "dorsalis pedis pulse",
+      "posterior tibial pulse",
+      "ulcerated lesion",
+      "right lateral foot ulcer",
+      "metatarsophalangeal joint",
+      "cellulitis",
+      "granulation tissue",
+      "purulent discharge",
+      "wound",
+      "non-healing ulcer",
+      "foot wound",
+      "coronary artery disease",
+      "surgical intervention",
+      "bypass surgery",
+      "arterial ultrasound of the lower extremities",
+      "podiatry consult",
+      "unstable diabetes",
+      "blood sugar control",
+      "wound care",
+      "wound healing",
+      "statin",
+      "cardiologist",
+      "non-healing right foot ulcer"
+    ],
+    "section_count": 5
+  },
+  "summary_nair_concepts": {
+    "sections": [
+      {
+        "heading": "S",
+        "section_value": "The patient reports fatigue for the past two months. The patient reports pain in his foot. The patient reports occasional numbness and tingling in his feet. The patient reports a history of smoking at least two packs per day for over twenty years. The patient reports a history of a heart attack in 2018. The patient reports taking aspirin daily.",
+        "medical_concepts": [
+          "fatigue",
+          "foot pain",
+          "numbness in feet",
+          "tingling in feet",
+          "smoking history",
+          "heart attack",
+          "aspirin"
+        ]
+      },
+      {
+        "heading": "O",
+        "section_value": "The clinician observes a two by three centimeter ulcerated lesion on the right lateral foot. The clinician observes granulation tissue and purulent discharge from the wound. The clinician observes no jugular venous distention. The clinician observes no carotid bruits. The clinician observes clear lung sounds. The clinician notes no pain upon palpation of the right foot.",
+        "medical_concepts": [
+          "ulcerated lesion",
+          "right lateral foot",
+          "granulation tissue",
+          "purulent discharge",
+          "wound",
+          "jugular venous distention",
+          "carotid bruits",
+          "lung sounds",
+          "pain upon palpation of the right foot"
+        ]
+      },
+      {
+        "heading": "A",
+        "section_value": "The clinician suspects cervical radiculopathy. The patient's symptoms are consistent with peripheral neuropathy and vascular compromise.",
+        "medical_concepts": [
+          "cervical radiculopathy",
+          "peripheral neuropathy",
+          "vascular compromise"
+        ]
+      },
+      {
+        "heading": "P",
+        "section_value": "The clinician plans a cervical MRI. The clinician orders an arterial ultrasound of the lower extremities. The clinician orders a podiatry consult for the wound. The clinician recommends continued aspirin therapy. The clinician recommends discussing diabetes management with the primary care physician. The clinician recommends continued statin therapy.",
+        "medical_concepts": [
+          "cervical MRI",
+          "arterial ultrasound of the lower extremities",
+          "podiatry consult",
+          "wound",
+          "aspirin therapy",
+          "diabetes management",
+          "statin therapy"
+        ]
+      }
+    ],
+    "medical_concepts": [
+      "fatigue",
+      "foot pain",
+      "numbness in feet",
+      "tingling in feet",
+      "smoking history",
+      "heart attack",
+      "aspirin",
+      "ulcerated lesion",
+      "right lateral foot",
+      "granulation tissue",
+      "purulent discharge",
+      "wound",
+      "jugular venous distention",
+      "carotid bruits",
+      "lung sounds",
+      "pain upon palpation of the right foot",
+      "cervical radiculopathy",
+      "peripheral neuropathy",
+      "vascular compromise",
+      "cervical MRI",
+      "arterial ultrasound of the lower extremities",
+      "podiatry consult",
+      "aspirin therapy",
+      "diabetes management",
+      "statin therapy"
+    ],
+    "section_count": 4
+  },
+  "nair_alignment": {
+    "pred_concepts": [
+      "fatigue",
+      "foot pain",
+      "numbness in feet",
+      "tingling in feet",
+      "smoking history",
+      "heart attack",
+      "aspirin",
+      "ulcerated lesion",
+      "right lateral foot",
+      "granulation tissue",
+      "purulent discharge",
+      "wound",
+      "jugular venous distention",
+      "carotid bruits",
+      "lung sounds",
+      "pain upon palpation of the right foot",
+      "cervical radiculopathy",
+      "peripheral neuropathy",
+      "vascular compromise",
+      "cervical MRI",
+      "arterial ultrasound of the lower extremities",
+      "podiatry consult",
+      "aspirin therapy",
+      "diabetes management",
+      "statin therapy"
+    ],
+    "ref_concepts": [
+      "right foot ulcer",
+      "ulcer",
+      "fevers",
+      "chills",
+      "tension headaches",
+      "calf pain with walking",
+      "podiatry foot exam",
+      "diabetes",
+      "insulin",
+      "high blood sugar",
+      "hemoglobin A1c",
+      "numbness in feet",
+      "tingling in feet",
+      "heart disease",
+      "heart attack",
+      "myocardial infarction",
+      "stent placement",
+      "right coronary artery stent",
+      "aspirin 81 mg",
+      "chest pain",
+      "smoking",
+      "aspirin",
+      "fever",
+      "dyspnea",
+      "headache",
+      "blood pressure",
+      "heart rate",
+      "systolic ejection murmur",
+      "jugular venous distention",
+      "carotid bruits",
+      "dorsalis pedis pulse",
+      "posterior tibial pulse",
+      "ulcerated lesion",
+      "right lateral foot ulcer",
+      "metatarsophalangeal joint",
+      "cellulitis",
+      "granulation tissue",
+      "purulent discharge",
+      "wound",
+      "non-healing ulcer",
+      "foot wound",
+      "coronary artery disease",
+      "surgical intervention",
+      "bypass surgery",
+      "arterial ultrasound of the lower extremities",
+      "podiatry consult",
+      "unstable diabetes",
+      "blood sugar control",
+      "wound care",
+      "wound healing",
+      "statin",
+      "cardiologist",
+      "non-healing right foot ulcer"
+    ],
+    "precision_alignment": {
+      "found_b": [
+        "numbness in feet",
+        "tingling in feet",
+        "heart attack",
+        "aspirin",
+        "ulcerated lesion",
+        "right lateral foot",
+        "granulation tissue",
+        "purulent discharge",
+        "wound",
+        "jugular venous distention",
+        "carotid bruits",
+        "arterial ultrasound of the lower extremities",
+        "podiatry consult",
+        "statin therapy"
+      ],
+      "not_found_b": [
+        "fatigue",
+        "foot pain",
+        "smoking history",
+        "lung sounds",
+        "pain upon palpation of the right foot",
+        "cervical radiculopathy",
+        "peripheral neuropathy",
+        "vascular compromise",
+        "cervical MRI",
+        "aspirin therapy",
+        "diabetes management"
+      ],
+      "chunk_count": 2,
+      "chunk_results": [
+        {
+          "found_b": [
+            "numbness in feet",
+            "tingling in feet",
+            "heart attack",
+            "aspirin",
+            "ulcerated lesion",
+            "right lateral foot",
+            "granulation tissue",
+            "purulent discharge",
+            "wound",
+            "jugular venous distention",
+            "carotid bruits",
+            "arterial ultrasound of the lower extremities",
+            "podiatry consult"
+          ],
+          "not_found_b": [
+            "fatigue",
+            "foot pain",
+            "smoking history",
+            "lung sounds",
+            "pain upon palpation of the right foot",
+            "cervical radiculopathy",
+            "peripheral neuropathy",
+            "vascular compromise",
+            "cervical MRI",
+            "aspirin therapy",
+            "diabetes management"
+          ]
+        },
+        {
+          "found_b": [
+            "statin therapy"
+          ],
+          "not_found_b": []
+        }
+      ]
+    },
+    "recall_alignment": {
+      "found_b": [
+        "right foot ulcer",
+        "ulcer",
+        "numbness in feet",
+        "tingling in feet",
+        "heart disease",
+        "heart attack",
+        "myocardial infarction",
+        "smoking",
+        "aspirin",
+        "jugular venous distention",
+        "carotid bruits",
+        "ulcerated lesion",
+        "right lateral foot ulcer",
+        "granulation tissue",
+        "purulent discharge",
+        "wound",
+        "non-healing ulcer",
+        "foot wound",
+        "coronary artery disease",
+        "arterial ultrasound of the lower extremities",
+        "podiatry consult",
+        "unstable diabetes",
+        "blood sugar control",
+        "statin",
+        "non-healing right foot ulcer"
+      ],
+      "not_found_b": [
+        "fevers",
+        "chills",
+        "tension headaches",
+        "calf pain with walking",
+        "podiatry foot exam",
+        "diabetes",
+        "insulin",
+        "high blood sugar",
+        "hemoglobin A1c",
+        "stent placement",
+        "right coronary artery stent",
+        "aspirin 81 mg",
+        "chest pain",
+        "fever",
+        "dyspnea",
+        "headache",
+        "blood pressure",
+        "heart rate",
+        "systolic ejection murmur",
+        "dorsalis pedis pulse",
+        "posterior tibial pulse",
+        "metatarsophalangeal joint",
+        "cellulitis",
+        "surgical intervention",
+        "bypass surgery",
+        "wound care",
+        "wound healing",
+        "cardiologist"
+      ],
+      "chunk_count": 3,
+      "chunk_results": [
+        {
+          "found_b": [
+            "right foot ulcer",
+            "ulcer",
+            "numbness in feet",
+            "tingling in feet",
+            "heart disease",
+            "heart attack",
+            "myocardial infarction",
+            "smoking",
+            "aspirin"
+          ],
+          "not_found_b": [
+            "fevers",
+            "chills",
+            "tension headaches",
+            "calf pain with walking",
+            "podiatry foot exam",
+            "diabetes",
+            "insulin",
+            "high blood sugar",
+            "hemoglobin A1c",
+            "stent placement",
+            "right coronary artery stent",
+            "aspirin 81 mg",
+            "chest pain",
+            "fever",
+            "dyspnea"
+          ]
+        },
+        {
+          "found_b": [
+            "jugular venous distention",
+            "carotid bruits",
+            "ulcerated lesion",
+            "right lateral foot ulcer",
+            "granulation tissue",
+            "purulent discharge",
+            "wound",
+            "non-healing ulcer",
+            "foot wound",
+            "coronary artery disease",
+            "arterial ultrasound of the lower extremities",
+            "podiatry consult",
+            "unstable diabetes",
+            "blood sugar control"
+          ],
+          "not_found_b": [
+            "headache",
+            "blood pressure",
+            "heart rate",
+            "systolic ejection murmur",
+            "dorsalis pedis pulse",
+            "posterior tibial pulse",
+            "metatarsophalangeal joint",
+            "cellulitis",
+            "surgical intervention",
+            "bypass surgery"
+          ]
+        },
+        {
+          "found_b": [
+            "statin",
+            "non-healing right foot ulcer"
+          ],
+          "not_found_b": [
+            "wound care",
+            "wound healing",
+            "cardiologist"
+          ]
+        }
+      ]
+    }
+  },
+  "semantic_cap_audit": {
+    "source_cap_recall": [
+      {
+        "cap_id": "P1",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P2",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P3",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P4",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P5",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P6",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P7",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P8",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P9",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P10",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P11",
+        "judgment": "contradicted",
+        "reason": null
+      },
+      {
+        "cap_id": "P12",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P13",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P14",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P15",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P16",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P1",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P2",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P3",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P4",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P5",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P6",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P7",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P8",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P9",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P10",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P11",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P12",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P13",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P14",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P15",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P16",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P1",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P2",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P3",
+        "judgment": "supported",
+        "reason": null
+      }
+    ],
+    "summary_cap_precision": [
+      {
+        "cap_id": "P1",
+        "judgment": "unsupported",
+        "reason": null
+      },
+      {
+        "cap_id": "P2",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P3",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P4",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P5",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P6",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P7",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P8",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P9",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P10",
+        "judgment": "unsupported",
+        "reason": null
+      },
+      {
+        "cap_id": "P11",
+        "judgment": "unsupported",
+        "reason": null
+      },
+      {
+        "cap_id": "P12",
+        "judgment": "unsupported",
+        "reason": null
+      },
+      {
+        "cap_id": "P13",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P14",
+        "judgment": "unsupported",
+        "reason": null
+      },
+      {
+        "cap_id": "P15",
+        "judgment": "unsupported",
+        "reason": null
+      },
+      {
+        "cap_id": "P16",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P1",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P2",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P3",
+        "judgment": "unsupported",
+        "reason": null
+      },
+      {
+        "cap_id": "P4",
+        "judgment": "supported",
+        "reason": null
+      }
+    ],
+    "metrics": {
+      "semantic_cap_precision": 0.45,
+      "semantic_cap_recall": 0.5143,
+      "semantic_cap_f1": 0.48,
+      "semantic_cap_precision_supported_count": 5,
+      "semantic_cap_precision_partial_count": 8,
+      "semantic_cap_precision_denominator": 20,
+      "semantic_cap_recall_supported_count": 15,
+      "semantic_cap_recall_partial_count": 6,
+      "semantic_cap_recall_denominator": 35,
+      "semantic_cap_low_value_source_count": 0,
+      "semantic_cap_low_value_summary_count": 0,
+      "semantic_cap_missing_count": 13,
+      "semantic_cap_unsupported_count": 7,
+      "semantic_cap_contradicted_source_count": 1,
+      "semantic_cap_contradicted_summary_count": 0
+    }
+  },
+  "safety_judgment": null,
+  "section_judgment": {
+    "section_miscategorizations": [],
+    "summary_statistics": {
+      "section_appropriateness_score": 1.0,
+      "section_miscategorization_count": 0,
+      "major_section_miscategorization_count": 0
+    }
+  },
+  "pdsqi_judgment": {
+    "citation_applicable": 0,
+    "citation": 0,
+    "accurate": 1,
+    "thorough": 2,
+    "useful": 1,
+    "organized": 3,
+    "comprehensible": 3,
+    "succinct": 4,
+    "abstraction": 1,
+    "synthesized": 2,
+    "voice_summ": 0,
+    "voice_note": 0,
+    "pdsqi_core_mean": 2.2857
+  },
+  "llm_checklist_judgment": {
+    "content_preservation_core": 2,
+    "noise_suppression": 4,
+    "lay_expression_preservation": 2,
+    "state_update_fidelity": 1,
+    "temporality_preservation": 3,
+    "problem_evidence_linkage": 2,
+    "state_plan_separation": 3,
+    "section_organization_appropriateness": 2,
+    "overall_clinical_usability": 2,
+    "clinically_meaningful_omission": "Yes",
+    "clinically_concerning_hallucination": "Yes",
+    "checklist_a_mean": 2.6667,
+    "checklist_b_mean": 2.0,
+    "checklist_c_mean": 2.3333,
+    "llm_checklist_abc_mean": 2.375,
+    "llm_checklist_mean_no_usability": 2.375,
+    "llm_checklist_total_score": 21,
+    "llm_checklist_mean": 2.3333,
+    "llm_checklist_meaningful_omission_yes": 1,
+    "llm_checklist_concerning_hallucination_yes": 1
+  },
+  "metrics": {
+    "case_id": "D2N051",
+    "method": "cluster2sent",
+    "template": "soap",
+    "source_cap_count": 35,
+    "event_plan_count": null,
+    "summary_cap_count": 20,
+    "cap_matched_count": 8,
+    "cap_precision": 0.4,
+    "cap_recall": 0.2286,
+    "cap_f1": 0.2909,
+    "unsupported_summary_cap_count": 12,
+    "missing_source_cap_count": 27,
+    "summary_runtime_seconds": null,
+    "summary_cap_runtime_seconds": 29.549,
+    "event_plan_runtime_seconds": null,
+    "rouge_l_f1_vs_reference": 0.1831,
+    "token_f1_vs_reference": 0.277,
+    "gptf1_macro_f1": 0.1013,
+    "nair_gpt_precision": 0.56,
+    "nair_gpt_recall": 0.4717,
+    "nair_gpt_f1": 0.5121,
+    "semantic_cap_precision": 0.45,
+    "semantic_cap_recall": 0.5143,
+    "semantic_cap_f1": 0.48,
+    "hallucination_count": null,
+    "major_hallucination_count": null,
+    "omission_count": null,
+    "major_omission_count": null,
+    "section_appropriateness_score": 1.0,
+    "section_miscategorization_count": 0,
+    "major_section_miscategorization_count": 0,
+    "pdsqi_core_mean": 2.2857,
+    "pdsqi_accurate": 1,
+    "pdsqi_thorough": 2,
+    "llm_checklist_total_score": 21,
+    "llm_checklist_mean": 2.3333,
+    "llm_checklist_mean_no_usability": 2.375,
+    "checklist_a_mean": 2.6667,
+    "checklist_b_mean": 2.0,
+    "checklist_c_mean": 2.3333,
+    "llm_checklist_abc_mean": 2.375,
+    "content_preservation_core": 2,
+    "noise_suppression": 4,
+    "lay_expression_preservation": 2,
+    "state_update_fidelity": 1,
+    "temporality_preservation": 3,
+    "problem_evidence_linkage": 2,
+    "state_plan_separation": 3,
+    "section_organization_appropriateness": 2,
+    "overall_clinical_usability": 2,
+    "llm_checklist_meaningful_omission_yes": 1,
+    "llm_checklist_concerning_hallucination_yes": 1,
+    "gptf1_active_problems_symptoms_precision": 0.1429,
+    "gptf1_active_problems_symptoms_recall": 0.1429,
+    "gptf1_active_problems_symptoms_f1": 0.1429,
+    "gptf1_active_problems_symptoms_pred_count": 7,
+    "gptf1_active_problems_symptoms_ref_count": 7,
+    "gptf1_negated_findings_precision": 0.5,
+    "gptf1_negated_findings_recall": 0.2857,
+    "gptf1_negated_findings_f1": 0.3636,
+    "gptf1_negated_findings_pred_count": 4,
+    "gptf1_negated_findings_ref_count": 7,
+    "gptf1_uncertain_findings_precision": 0.0,
+    "gptf1_uncertain_findings_recall": 0.0,
+    "gptf1_uncertain_findings_f1": 0.0,
+    "gptf1_uncertain_findings_pred_count": 3,
+    "gptf1_uncertain_findings_ref_count": 0,
+    "gptf1_medication_treatment_precision": 0.0,
+    "gptf1_medication_treatment_recall": 0.0,
+    "gptf1_medication_treatment_f1": 0.0,
+    "gptf1_medication_treatment_pred_count": 2,
+    "gptf1_medication_treatment_ref_count": 2,
+    "gptf1_plan_followup_precision": 0.0,
+    "gptf1_plan_followup_recall": 0.0,
+    "gptf1_plan_followup_f1": 0.0,
+    "gptf1_plan_followup_pred_count": 4,
+    "gptf1_plan_followup_ref_count": 0,
+    "nair_pred_concept_count": 25,
+    "nair_ref_concept_count": 53,
+    "nair_precision_match_count": 14,
+    "nair_recall_match_count": 25,
+    "semantic_cap_precision_supported_count": 5,
+    "semantic_cap_precision_partial_count": 8,
+    "semantic_cap_precision_denominator": 20,
+    "semantic_cap_recall_supported_count": 15,
+    "semantic_cap_recall_partial_count": 6,
+    "semantic_cap_recall_denominator": 35,
+    "semantic_cap_low_value_source_count": 0,
+    "semantic_cap_low_value_summary_count": 0,
+    "semantic_cap_missing_count": 13,
+    "semantic_cap_unsupported_count": 7,
+    "semantic_cap_contradicted_source_count": 1,
+    "semantic_cap_contradicted_summary_count": 0,
+    "pdsqi_useful": 1,
+    "pdsqi_organized": 3,
+    "pdsqi_comprehensible": 3,
+    "pdsqi_succinct": 4,
+    "pdsqi_synthesized": 2
+  }
+}

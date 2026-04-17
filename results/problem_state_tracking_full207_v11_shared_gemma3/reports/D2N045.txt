@@ -1,0 +1,64 @@
+Case: D2N045
+
+Problem List and Visit State Tracking
+
+Problem List
+- knee pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T13,T15,T17,T2
+  Summary: The patient reports knee pain.
+  ClusterId: CL1
+  TemporalProfile: current
+  Updates:
+  - CAP8: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T2 :: The patient reports pain.
+  - CAP6: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T2 :: The patient reports knee pain.
+  - CAP1: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T13 :: The patient reports pain is isolated to the right.
+  - CAP2: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T13 :: The patient reports pain in the left knee.
+  - CAP5: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T15 :: The patient reports pain towards the afternoon.
+  - CAP7: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T17 :: The patient has knee pain.
+- right knee pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T23
+  Summary: The patient reports pain in the right knee.
+  ClusterId: CL4
+  TemporalProfile: current
+  Updates:
+  - CAP3: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T23 :: The patient reports pain in the right knee.
+- left hand pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T27
+  Summary: The patient reports pain in the left hand.
+  ClusterId: CL8
+  TemporalProfile: current
+  Updates:
+  - CAP4: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T27 :: The patient reports pain in the left hand.
+
+Medication Tracking
+- [MedicationState] ibuprofen | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T5
+  Summary: The patient takes ibuprofen.
+  ClusterId: CL2
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient takes ibuprofen. (T5)
+  Updates:
+  - CAP11: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T5 :: The patient takes ibuprofen.
+- [MedicationChange] tylenol | verification_status=confirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T26
+  Summary: The doctor prescribed Tylenol.
+  ClusterId: CL6
+  TemporalProfile: current
+  PlannedChanges:
+  - The doctor prescribed Tylenol. (T26)
+  Updates:
+  - CAP12: content_source=doctor modality=plan verification_status=confirmed clinical_status=planned temporality=current turns=T26 :: The doctor prescribed Tylenol.
+- [MedicationChange] ibuprofen | verification_status=confirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T26
+  Summary: The doctor prescribed Ibuprofen.
+  ClusterId: CL7
+  TemporalProfile: current
+  PlannedChanges:
+  - The doctor prescribed Ibuprofen. (T26)
+  Updates:
+  - CAP13: content_source=doctor modality=plan verification_status=confirmed clinical_status=planned temporality=current turns=T26 :: The doctor prescribed Ibuprofen.
+
+Other Structured States
+- [Plan] ice | verification_status=confirmed | clinical_status=planned | modalities=interview | speakers=doctor | evidence=T8
+  Summary: The doctor recommends ice.
+  ClusterId: CL3
+  TemporalProfile: current
+- [Plan] physical therapy | verification_status=confirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T26
+  Summary: The doctor ordered physical therapy.
+  ClusterId: CL5
+  TemporalProfile: current

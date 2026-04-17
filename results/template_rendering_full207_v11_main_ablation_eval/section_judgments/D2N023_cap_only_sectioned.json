@@ -1,0 +1,44 @@
+{
+  "section_miscategorizations": [
+    {
+      "text": "The patient's cholesterol is 5 months later.",
+      "current_section": "Findings",
+      "expected_section": "Assessment",
+      "severity": "major",
+      "reason": "This appears to be an interpretive/temporal statement about cholesterol status rather than a concrete exam, lab value, or imaging result; as written it functions more like a clinical interpretation and belongs in the diagnostic/assessment synthesis."
+    },
+    {
+      "text": "The patient's testosterone levels are elevated.",
+      "current_section": "Assessment",
+      "expected_section": "Findings",
+      "severity": "major",
+      "reason": "This is a specific lab result (elevated testosterone level) and should be documented as an objective finding rather than as part of the diagnostic impression."
+    },
+    {
+      "text": "The patient's blood thickness is at increased risk.",
+      "current_section": "Assessment",
+      "expected_section": "Findings",
+      "severity": "minor",
+      "reason": "This reads as a semi-objective characterization of a lab-related parameter (e.g., coagulability) rather than a formal diagnosis; it could reasonably be in Findings as an interpretation of labs, though its placement in Assessment is not strongly misleading."
+    },
+    {
+      "text": "Start finasteride at half a pill, which is the 5 milligram version.",
+      "current_section": "Plan",
+      "expected_section": "History of Present Illness",
+      "severity": "major",
+      "reason": "The HPI states the patient is currently taking finasteride, but the Plan states to start finasteride at a specific dose, which is contradictory. If this reflects the patient's existing regimen, it belongs in HPI as current medication state; if it is a new order, it should not be described as currently taken in HPI. As written, it is miscategorized relative to the HPI content."
+    },
+    {
+      "text": "Order a prescription for cialis.",
+      "current_section": "Plan",
+      "expected_section": "History of Present Illness",
+      "severity": "major",
+      "reason": "The HPI documents that the patient is currently taking cialis, while the Plan orders a prescription for cialis, implying it is a new or adjusted therapy. If cialis is truly current medication, it belongs only in HPI; if it is a new prescription, it should not be listed as current in HPI. The conflicting placement creates a misleading categorization between HPI and Plan."
+    }
+  ],
+  "summary_statistics": {
+    "section_appropriateness_score": 0.7,
+    "section_miscategorization_count": 5,
+    "major_section_miscategorization_count": 4
+  }
+}

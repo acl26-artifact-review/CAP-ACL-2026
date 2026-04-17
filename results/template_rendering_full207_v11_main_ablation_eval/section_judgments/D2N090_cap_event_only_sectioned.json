@@ -1,0 +1,30 @@
+{
+  "section_miscategorizations": [
+    {
+      "text": "The patient's blood glucose is 162 and his hemoglobin A1c is 8.",
+      "current_section": "H",
+      "expected_section": "F",
+      "severity": "major",
+      "reason": "These are objective lab values and belong in Findings rather than in the History of Present Illness."
+    },
+    {
+      "text": "The patient reports edema in the lower extremities.",
+      "current_section": "F",
+      "expected_section": "H",
+      "severity": "minor",
+      "reason": "This is a patient-reported symptom and fits better in History of Present Illness; however, repetition in Findings is not highly misleading."
+    },
+    {
+      "text": "The patient is taking immunotherapy medications.",
+      "current_section": "P",
+      "expected_section": "H",
+      "severity": "major",
+      "reason": "This is the current medication state, not a new order or change, so it belongs in History of Present Illness rather than the Plan."
+    }
+  ],
+  "summary_statistics": {
+    "section_appropriateness_score": 0.7,
+    "section_miscategorization_count": 3,
+    "major_section_miscategorization_count": 2
+  }
+}

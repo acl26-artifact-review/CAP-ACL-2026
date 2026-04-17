@@ -1,0 +1,80 @@
+Case: D2N069
+
+Problem List and Visit State Tracking
+
+Problem List
+- knee injury | verification_status=unconfirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T5
+  Summary: The patient sustained a knee injury.
+  ClusterId: CL1
+  TemporalProfile: yesterday
+  Updates:
+  - CAP6: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=yesterday turns=T5 :: The patient sustained a knee injury.
+- knee pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T11,T13
+  Summary: The patient reports pain in the inside of his right knee.
+  ClusterId: CL3
+  TemporalProfile: current, yesterday
+  Updates:
+  - CAP1: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T11,T13 :: The patient reports pain in the inside of his right knee.
+  - CAP2: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=yesterday turns=T11 :: The patient reports pain in the inside of their knee.
+- ibuprofen | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T15
+  Summary: The patient is taking ibuprofen.
+  ClusterId: CL4
+  TemporalProfile: current
+  Updates:
+  - CAP7: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T15 :: The patient is taking ibuprofen.
+- fall | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T16
+  Summary: The patient fell a couple days ago.
+  ClusterId: CL5
+  TemporalProfile: recent
+  Updates:
+  - CAP4: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=recent turns=T16 :: The patient fell a couple days ago.
+- left hand pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T37
+  Summary: The patient reports pain in the left hand.
+  ClusterId: CL6
+  TemporalProfile: current
+  Updates:
+  - CAP3: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T37 :: The patient reports pain in the left hand.
+- tenderness | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T38
+  Summary: The patient reports tenderness.
+  ClusterId: CL7
+  TemporalProfile: current
+  Updates:
+  - CAP8: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T38 :: The patient reports tenderness.
+- medial meniscus sprain | verification_status=unconfirmed | clinical_status=active | modalities=unknown | speakers=clinician | evidence=T42
+  Summary: The clinician suspects a medial meniscus sprain.
+  ClusterId: CL10
+  TemporalProfile: current
+  Updates:
+  - CAP5: content_source=clinician modality=unknown verification_status=unconfirmed clinical_status=active temporality=current turns=T42 :: The clinician suspects a medial meniscus sprain.
+
+Medication Tracking
+- [MedicationChange] none | verification_status=unconfirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T7
+  Summary: The patient denies any medication changes.
+  ClusterId: CL2
+  TemporalProfile: yesterday
+  PlannedChanges:
+  - The patient denies any medication changes. (T7)
+  Updates:
+  - CAP12: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=yesterday turns=T7 :: The patient denies any medication changes.
+- [MedicationChange] motrin | verification_status=confirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T44
+  Summary: The doctor recommends giving motrin.
+  ClusterId: CL11
+  TemporalProfile: current
+  PlannedChanges:
+  - The doctor recommends giving motrin. (T44)
+  Updates:
+  - CAP13: content_source=doctor modality=plan verification_status=confirmed clinical_status=planned temporality=current turns=T44 :: The doctor recommends giving motrin.
+
+Other Structured States
+- [ExamFinding] normal sensation | verification_status=confirmed | clinical_status=active | modalities=exam | speakers=clinician | evidence=T38
+  Summary: The clinician notes normal sensation.
+  ClusterId: CL8
+  TemporalProfile: current
+- [ExamFinding] tenderness | verification_status=confirmed | clinical_status=active | modalities=exam | speakers=clinician | evidence=T38
+  Summary: The clinician observes tenderness.
+  ClusterId: CL9
+  TemporalProfile: current
+- [Plan] medication order | verification_status=unconfirmed | clinical_status=planned | modalities=interview | speakers=doctor | evidence=T48
+  Summary: The doctor ordered the medications and procedures discussed.
+  ClusterId: CL12
+  TemporalProfile: now

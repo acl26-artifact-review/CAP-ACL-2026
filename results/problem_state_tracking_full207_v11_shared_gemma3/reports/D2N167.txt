@@ -1,0 +1,90 @@
+Case: D2N167
+
+Problem List and Visit State Tracking
+
+Problem List
+- knee injury | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T11,T3,T9
+  Summary: The patient has a knee injury.
+  ClusterId: CL1
+  TemporalProfile: current, within the past week
+  Updates:
+  - CAP17: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=within the past week turns=T3 :: The patient fell and twisted his knee approximately one week ago.
+  - CAP1: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T9,T9,T11,T9 :: The patient has a knee injury.
+- knee pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T14,T15,T29,T30,T8
+  Summary: The patient reports pain in the left knee.
+  ClusterId: CL2
+  TemporalProfile: current
+  Updates:
+  - CAP4: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T8 :: The patient reports pain in the left knee.
+  - CAP2: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T14,T15 :: The patient reports throbbing pain in both sides of the knee.
+  - CAP8: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T29 :: The patient has knee pain.
+  - CAP7: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T29 :: The patient reports pain in the knee.
+  - CAP9: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T30 :: The patient reports pain.
+- limping | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T9
+  Summary: The patient has been limping since the injury.
+  ClusterId: CL3
+  TemporalProfile: current
+  Updates:
+  - CAP5: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T9 :: The patient has been limping since the injury.
+- left hand pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T27
+  Summary: The patient reports pain in the left hand.
+  ClusterId: CL6
+  TemporalProfile: current
+  Updates:
+  - CAP6: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T27 :: The patient reports pain in the left hand.
+- liver damage | verification_status=unconfirmed | clinical_status=planned | modalities=interview | speakers=patient | evidence=T29
+  Summary: The patient is at risk for liver damage from excessive Tylenol.
+  ClusterId: CL7
+  TemporalProfile: future
+  Updates:
+  - CAP3: content_source=patient modality=interview verification_status=unconfirmed clinical_status=planned temporality=future turns=T29 :: The patient is at risk for liver damage from excessive Tylenol.
+
+Medication Tracking
+- [MedicationState] ibuprofen | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T17,T22
+  Summary: The patient previously took ibuprofen.
+  ClusterId: CL4
+  TemporalProfile: current, past
+  CurrentRegimens:
+  - The patient previously took ibuprofen. (T17)
+  - The patient cannot take ibuprofen. (T22)
+  Updates:
+  - CAP15: content_source=patient modality=interview verification_status=refuted clinical_status=historical temporality=past turns=T17 :: The patient previously took ibuprofen.
+  - CAP16: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T22 :: The patient cannot take ibuprofen.
+- [MedicationState] tylenol | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T19
+  Summary: The patient is taking Tylenol.
+  ClusterId: CL5
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient is taking Tylenol. (T19)
+  Updates:
+  - CAP14: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T19 :: The patient is taking Tylenol.
+- [MedicationChange] tramadol | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T32
+  Summary: The doctor will prescribe tramadol.
+  ClusterId: CL10
+  TemporalProfile: future
+  PlannedChanges:
+  - The doctor will prescribe tramadol. (T32)
+  Updates:
+  - CAP12: content_source=doctor modality=plan verification_status=unconfirmed clinical_status=planned temporality=future turns=T32 :: The doctor will prescribe tramadol.
+- [MedicationChange] tylenol | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T32
+  Summary: The doctor will prescribe Tylenol.
+  ClusterId: CL11
+  TemporalProfile: future
+  PlannedChanges:
+  - The doctor will prescribe Tylenol. (T32)
+  Updates:
+  - CAP13: content_source=doctor modality=plan verification_status=unconfirmed clinical_status=planned temporality=future turns=T32 :: The doctor will prescribe Tylenol.
+
+Other Structured States
+- [Plan] ice | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T32
+  Summary: The doctor will advise the patient to ice the knee.
+  ClusterId: CL8
+  TemporalProfile: future
+- [Plan] knee immobilizer | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T32
+  Summary: The doctor will prescribe a knee immobilizer.
+  ClusterId: CL9
+  TemporalProfile: future
+- [Plan] icing | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T34
+  Summary: The doctor will advise the patient to ice the knee.
+  ClusterId: CL12
+  TemporalProfile: future

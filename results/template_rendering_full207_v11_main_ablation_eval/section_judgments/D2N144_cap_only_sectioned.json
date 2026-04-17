@@ -1,0 +1,44 @@
+{
+  "section_miscategorizations": [
+    {
+      "text": "The patient's Xeljanz dose is 11 milligrams.",
+      "current_section": "Findings",
+      "expected_section": "History of Present Illness",
+      "severity": "major",
+      "reason": "This is current medication state rather than an exam or test finding; placing it under Findings could mislead a reader into thinking it is a new result rather than part of the ongoing regimen."
+    },
+    {
+      "text": "The patient is taking Xeljanz and Celebrex.",
+      "current_section": "Findings",
+      "expected_section": "History of Present Illness",
+      "severity": "major",
+      "reason": "This describes current medications, which belong in the history/medication context, not in exam or test findings."
+    },
+    {
+      "text": "A cervical x-ray is planned.",
+      "current_section": "Findings",
+      "expected_section": "Plan",
+      "severity": "major",
+      "reason": "This is a future diagnostic order, which is part of the management plan, not an existing exam or imaging result."
+    },
+    {
+      "text": "The patient reports prop feet up.",
+      "current_section": "History of Present Illness",
+      "expected_section": "Plan",
+      "severity": "minor",
+      "reason": "This appears to be an instruction or management strategy (elevating feet) rather than a symptom; however, the phrasing is ambiguous enough that it could reflect patient-reported behavior."
+    },
+    {
+      "text": "A cervical x-ray is planned.",
+      "current_section": "Plan",
+      "expected_section": "Plan",
+      "severity": "minor",
+      "reason": "This statement is duplicated in both Findings and Plan; its presence in Plan is appropriate, but the duplication contributes to organizational confusion."
+    }
+  ],
+  "summary_statistics": {
+    "section_appropriateness_score": 0.8,
+    "section_miscategorization_count": 5,
+    "major_section_miscategorization_count": 3
+  }
+}

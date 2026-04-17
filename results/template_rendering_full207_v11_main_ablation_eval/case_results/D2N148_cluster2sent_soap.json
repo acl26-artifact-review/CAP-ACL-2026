@@ -1,0 +1,1663 @@
+{
+  "case_id": "D2N148",
+  "method": "cluster2sent",
+  "template": "soap",
+  "summary_text": "S:\nThe patient reports a history of back injury from approximately three months ago, with persistent pain exacerbated by certain movements and sleeping positions. He describes sharp pain followed by relief with specific positioning. He has been taking Tylenol and ibuprofen for pain relief, with no significant stomach upset from the ibuprofen. He reports no bladder or bowel issues or incontinence. He had a total knee replacement in 2018 and a prior knee surgery two years ago. He denies fever or chills. The patient reports no pain upon palpation of the lumbar spine.\n\nO:\nVital signs are within normal limits: blood pressure 117/75, heart rate 68, oxygen saturation 95% on room air. The lumbar spine x-ray showed no acute bony abnormality. Lower extremity strength is equal bilaterally. There is some spasm of the paraspinal muscles of the lumbar spine.\n\nA:\nThe patient has an acute disk herniation, likely related to his prior injury. There is evidence of musculoskeletal issues in the lumbar spine.\n\nP:\nI am ordering a lumbar spine MRI. I am prescribing meloxicam 15 mg once daily. I am referring the patient to physical therapy.",
+  "reference_summary": "HISTORY OF PRESENT ILLNESS\n\nJeremy Adams is a pleasant 57-year-old male who presents to the clinic today for the evaluation of low back pain. The onset of his pain began 4 months ago, when he was moving boxes out of his son’s college dorm. At that time, he noted tingling in his right toes, which resolved after approximately 1 hour. After his injury, he felt as though he was unable to support his upper body weight. The patient reports weakness in his legs when carrying heavy objects. He reports a sharp pain in his lower back when he turns a certain way or rolls over in his sleep. The pain will resolve with repositioning. The patient was seen at urgent care and was referred to obtain an MRI, however he did not undergo this secondary to insurance issues. He has been utilizing Tylenol, ibuprofen, heat, and ice for pain, which does not provide relief. The patient notes the ibuprofen is slightly more beneficial than the Tylenol, however it does not relieve his symptoms. He denies upset stomach with the use of ibuprofen. Additionally, he attempted physical therapy at his gym without any relief. He denies any bladder or bowels issues, fevers, and chills.\n\nSURGICAL HISTORY\n\nThe patient has a history of a right total knee arthroplasty 2 years ago, in spring of 2020. He states that his right knee feels 95% improved since the surgery.\n\nREVIEW OF SYSTEMS\n\nConstitutional: Denies fevers or chills.\nGastrointestinal: Denies bowel issues.\nGenitourinary: Denies bladder issues.\nMusculoskeletal: Reports lower back pain.\n\nVITALS\n\nTemperature: Normal.\nBlood pressure: 117/56 mm Hg.\nHeart rate: 68 BPM.\nOxygenation: 95% on room air.\n\nPHYSICAL EXAM\n\nNECK: Bony protuberance of the C5-C6. No pain to palpation of the C5-C6\nMSK: Examination of the Lumbar spine: No pain to palpation of the lumbar spine. Decreased flexion and extension of the lower back. Positive straight leg raise. Spasm of the paraspinal muscles of the lumbar spine. Strength is equal bilaterally.\n\nRESULTS\n\nX-rays of the lumbar spine were reviewed. These reveal no acute bony abnormalities.\n\nASSESSMENT\n\nLow back pain, possible acute disc herniation.\n\nPLAN\n\nAfter reviewing the patient's examination and radiographic findings today, I have had a lengthy discussion with the patient in regards to his current symptoms. His x-rays did not reveal any signs of a fracture. I would like to obtain an MRI of the lumbar spine to evaluate for a possible acute disc herniation. I have prescribed the patient meloxicam 15 mg to treat his pain. He will continue with physical therapy and a referral was provided for this today.",
+  "source_cap": {
+    "atomic_propositions": [
+      {
+        "prop_id": "CAP1",
+        "cap_type": "Problem",
+        "canonical_concept": "acute disk herniation",
+        "category": "Problem",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The doctor believes the patient has an acute disk herniation."
+      },
+      {
+        "prop_id": "CAP2",
+        "cap_type": "Problem",
+        "canonical_concept": "back injury",
+        "category": "Problem",
+        "speaker": "patient",
+        "status": "uncertain",
+        "visit_state": "historical",
+        "temporality": "four months ago",
+        "proposition_text": "The patient sustained a back injury four months ago."
+      },
+      {
+        "prop_id": "CAP3",
+        "cap_type": "Symptom",
+        "canonical_concept": "low back pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports pain in their lower back."
+      },
+      {
+        "prop_id": "CAP4",
+        "cap_type": "Symptom",
+        "canonical_concept": "pain",
+        "category": "Symptom",
+        "speaker": "doctor",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports sharp pain upon certain movements."
+      },
+      {
+        "prop_id": "CAP5",
+        "cap_type": "Problem",
+        "canonical_concept": "fear of carrying heavy objects",
+        "category": "Problem",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient is nervous about carrying heavy objects."
+      },
+      {
+        "prop_id": "CAP6",
+        "cap_type": "Symptom",
+        "canonical_concept": "left hand pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports pain in the left hand."
+      },
+      {
+        "prop_id": "CAP7",
+        "cap_type": "Symptom",
+        "canonical_concept": "positive straight leg raise",
+        "category": "Symptom",
+        "speaker": "doctor",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports a positive straight leg raise."
+      },
+      {
+        "prop_id": "CAP8",
+        "cap_type": "Symptom",
+        "canonical_concept": "tingling",
+        "category": "Symptom",
+        "speaker": "doctor",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports tingling in their feet."
+      },
+      {
+        "prop_id": "CAP9",
+        "cap_type": "Problem",
+        "canonical_concept": "nervousness",
+        "category": "Problem",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient is a little nervous."
+      },
+      {
+        "prop_id": "CAP10",
+        "cap_type": "Symptom",
+        "canonical_concept": "numbness",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports periodic numbness."
+      },
+      {
+        "prop_id": "CAP11",
+        "cap_type": "Symptom",
+        "canonical_concept": "pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient feels a sensation."
+      },
+      {
+        "prop_id": "CAP12",
+        "cap_type": "Symptom",
+        "canonical_concept": "neck pain",
+        "category": "Symptom",
+        "speaker": "doctor",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports neck pain."
+      },
+      {
+        "prop_id": "CAP13",
+        "cap_type": "Symptom",
+        "canonical_concept": "no pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "denies",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient denies pain."
+      },
+      {
+        "prop_id": "CAP14",
+        "cap_type": "Symptom",
+        "canonical_concept": "spasm",
+        "category": "Symptom",
+        "speaker": "doctor",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports spasm."
+      },
+      {
+        "prop_id": "CAP15",
+        "cap_type": "Symptom",
+        "canonical_concept": "pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports pain."
+      },
+      {
+        "prop_id": "CAP16",
+        "cap_type": "Order",
+        "canonical_concept": "MRI",
+        "category": "Order",
+        "speaker": "patient",
+        "status": "uncertain",
+        "visit_state": "planned",
+        "temporality": "future",
+        "claim_type_tags": [
+          "causal"
+        ],
+        "proposition_text": "The patient was concerned because he thinks we maxed out our insurance so he did not do it."
+      },
+      {
+        "prop_id": "CAP17",
+        "cap_type": "Order",
+        "canonical_concept": "epidural steroid injection",
+        "category": "Order",
+        "speaker": "doctor",
+        "status": "uncertain",
+        "visit_state": "planned",
+        "temporality": "when appropriate",
+        "proposition_text": "The doctor will consider an epidural steroid injection if the patient has a herniated disk."
+      },
+      {
+        "prop_id": "CAP18",
+        "cap_type": "Order",
+        "canonical_concept": "MRI",
+        "category": "Order",
+        "speaker": "patient",
+        "status": "uncertain",
+        "visit_state": "planned",
+        "temporality": "future",
+        "proposition_text": "The patient wants to move forward with an MRI."
+      },
+      {
+        "prop_id": "CAP19",
+        "cap_type": "Order",
+        "canonical_concept": "lumbar spine MRI",
+        "category": "Order",
+        "speaker": "doctor",
+        "predicate": "orders",
+        "status": "uncertain",
+        "visit_state": "planned",
+        "temporality": "future",
+        "claim_type_tags": [
+          "plan"
+        ],
+        "proposition_text": "The doctor orders a lumbar spine MRI."
+      },
+      {
+        "prop_id": "CAP20",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "meloxicam",
+        "category": "MedicationStatement",
+        "speaker": "doctor",
+        "predicate": "prescribes",
+        "status": "affirmed",
+        "visit_state": "planned",
+        "temporality": "daily",
+        "proposition_text": "The doctor prescribes meloxicam fifteen milligrams once a day."
+      },
+      {
+        "prop_id": "CAP21",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "tylenol",
+        "category": "MedicationStatement",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "past",
+        "proposition_text": "The patient took some tylenol."
+      },
+      {
+        "prop_id": "CAP22",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "ibuprofen",
+        "category": "MedicationStatement",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "past",
+        "proposition_text": "The patient took some ibuprofen."
+      },
+      {
+        "prop_id": "CAP23",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "acetaminophen",
+        "category": "MedicationStatement",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient took acetaminophen."
+      },
+      {
+        "prop_id": "CAP24",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "ibuprofen",
+        "category": "MedicationStatement",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient took ibuprofen."
+      },
+      {
+        "prop_id": "CAP25",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "heat",
+        "category": "MedicationStatement",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient applied heat."
+      },
+      {
+        "prop_id": "CAP26",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "ice",
+        "category": "MedicationStatement",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient applied ice."
+      },
+      {
+        "prop_id": "CAP27",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "heat",
+        "category": "MedicationStatement",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "past",
+        "proposition_text": "The patient tried heat."
+      },
+      {
+        "prop_id": "CAP28",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "ice",
+        "category": "MedicationStatement",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "past",
+        "proposition_text": "The patient tried ice."
+      },
+      {
+        "prop_id": "CAP29",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "meloxicam",
+        "category": "MedicationStatement",
+        "speaker": "doctor",
+        "predicate": "prescribes",
+        "status": "uncertain",
+        "visit_state": "planned",
+        "temporality": "future",
+        "proposition_text": "The doctor prescribes meloxicam."
+      },
+      {
+        "prop_id": "CAP30",
+        "cap_type": "Counseling",
+        "canonical_concept": "physical therapy",
+        "category": "Counseling",
+        "speaker": "doctor",
+        "predicate": "recommends",
+        "status": "uncertain",
+        "visit_state": "planned",
+        "temporality": "future",
+        "claim_type_tags": [
+          "plan"
+        ],
+        "proposition_text": "The doctor recommends physical therapy."
+      }
+    ],
+    "filtered_nonverifiable_units": []
+  },
+  "event_plan": null,
+  "summary_cap": {
+    "atomic_propositions": [],
+    "filtered_nonverifiable_units": [],
+    "runtime_seconds": 0.531
+  },
+  "cap_alignment": {
+    "cap_precision": 0.0,
+    "cap_recall": 0.0,
+    "cap_f1": 0.0,
+    "matched_count": 0,
+    "summary_prop_count": 0,
+    "source_prop_count": 30,
+    "matched_pairs": [],
+    "unsupported_summary_props": [],
+    "missing_source_props": [
+      {
+        "prop_id": "CAP1",
+        "cap_type": "Problem",
+        "canonical_concept": "acute disk herniation",
+        "category": "Problem",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The doctor believes the patient has an acute disk herniation."
+      },
+      {
+        "prop_id": "CAP2",
+        "cap_type": "Problem",
+        "canonical_concept": "back injury",
+        "category": "Problem",
+        "speaker": "patient",
+        "status": "uncertain",
+        "visit_state": "historical",
+        "temporality": "four months ago",
+        "proposition_text": "The patient sustained a back injury four months ago."
+      },
+      {
+        "prop_id": "CAP3",
+        "cap_type": "Symptom",
+        "canonical_concept": "low back pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports pain in their lower back."
+      },
+      {
+        "prop_id": "CAP4",
+        "cap_type": "Symptom",
+        "canonical_concept": "pain",
+        "category": "Symptom",
+        "speaker": "doctor",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports sharp pain upon certain movements."
+      },
+      {
+        "prop_id": "CAP5",
+        "cap_type": "Problem",
+        "canonical_concept": "fear of carrying heavy objects",
+        "category": "Problem",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient is nervous about carrying heavy objects."
+      },
+      {
+        "prop_id": "CAP6",
+        "cap_type": "Symptom",
+        "canonical_concept": "left hand pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports pain in the left hand."
+      },
+      {
+        "prop_id": "CAP7",
+        "cap_type": "Symptom",
+        "canonical_concept": "positive straight leg raise",
+        "category": "Symptom",
+        "speaker": "doctor",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports a positive straight leg raise."
+      },
+      {
+        "prop_id": "CAP8",
+        "cap_type": "Symptom",
+        "canonical_concept": "tingling",
+        "category": "Symptom",
+        "speaker": "doctor",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports tingling in their feet."
+      },
+      {
+        "prop_id": "CAP9",
+        "cap_type": "Problem",
+        "canonical_concept": "nervousness",
+        "category": "Problem",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient is a little nervous."
+      },
+      {
+        "prop_id": "CAP10",
+        "cap_type": "Symptom",
+        "canonical_concept": "numbness",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports periodic numbness."
+      },
+      {
+        "prop_id": "CAP11",
+        "cap_type": "Symptom",
+        "canonical_concept": "pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient feels a sensation."
+      },
+      {
+        "prop_id": "CAP12",
+        "cap_type": "Symptom",
+        "canonical_concept": "neck pain",
+        "category": "Symptom",
+        "speaker": "doctor",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports neck pain."
+      },
+      {
+        "prop_id": "CAP13",
+        "cap_type": "Symptom",
+        "canonical_concept": "no pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "denies",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient denies pain."
+      },
+      {
+        "prop_id": "CAP14",
+        "cap_type": "Symptom",
+        "canonical_concept": "spasm",
+        "category": "Symptom",
+        "speaker": "doctor",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports spasm."
+      },
+      {
+        "prop_id": "CAP15",
+        "cap_type": "Symptom",
+        "canonical_concept": "pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports pain."
+      },
+      {
+        "prop_id": "CAP16",
+        "cap_type": "Order",
+        "canonical_concept": "MRI",
+        "category": "Order",
+        "speaker": "patient",
+        "status": "uncertain",
+        "visit_state": "planned",
+        "temporality": "future",
+        "claim_type_tags": [
+          "causal"
+        ],
+        "proposition_text": "The patient was concerned because he thinks we maxed out our insurance so he did not do it."
+      },
+      {
+        "prop_id": "CAP17",
+        "cap_type": "Order",
+        "canonical_concept": "epidural steroid injection",
+        "category": "Order",
+        "speaker": "doctor",
+        "status": "uncertain",
+        "visit_state": "planned",
+        "temporality": "when appropriate",
+        "proposition_text": "The doctor will consider an epidural steroid injection if the patient has a herniated disk."
+      },
+      {
+        "prop_id": "CAP18",
+        "cap_type": "Order",
+        "canonical_concept": "MRI",
+        "category": "Order",
+        "speaker": "patient",
+        "status": "uncertain",
+        "visit_state": "planned",
+        "temporality": "future",
+        "proposition_text": "The patient wants to move forward with an MRI."
+      },
+      {
+        "prop_id": "CAP19",
+        "cap_type": "Order",
+        "canonical_concept": "lumbar spine MRI",
+        "category": "Order",
+        "speaker": "doctor",
+        "predicate": "orders",
+        "status": "uncertain",
+        "visit_state": "planned",
+        "temporality": "future",
+        "claim_type_tags": [
+          "plan"
+        ],
+        "proposition_text": "The doctor orders a lumbar spine MRI."
+      },
+      {
+        "prop_id": "CAP20",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "meloxicam",
+        "category": "MedicationStatement",
+        "speaker": "doctor",
+        "predicate": "prescribes",
+        "status": "affirmed",
+        "visit_state": "planned",
+        "temporality": "daily",
+        "proposition_text": "The doctor prescribes meloxicam fifteen milligrams once a day."
+      },
+      {
+        "prop_id": "CAP21",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "tylenol",
+        "category": "MedicationStatement",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "past",
+        "proposition_text": "The patient took some tylenol."
+      },
+      {
+        "prop_id": "CAP22",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "ibuprofen",
+        "category": "MedicationStatement",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "past",
+        "proposition_text": "The patient took some ibuprofen."
+      },
+      {
+        "prop_id": "CAP23",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "acetaminophen",
+        "category": "MedicationStatement",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient took acetaminophen."
+      },
+      {
+        "prop_id": "CAP24",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "ibuprofen",
+        "category": "MedicationStatement",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient took ibuprofen."
+      },
+      {
+        "prop_id": "CAP25",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "heat",
+        "category": "MedicationStatement",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient applied heat."
+      },
+      {
+        "prop_id": "CAP26",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "ice",
+        "category": "MedicationStatement",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient applied ice."
+      },
+      {
+        "prop_id": "CAP27",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "heat",
+        "category": "MedicationStatement",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "past",
+        "proposition_text": "The patient tried heat."
+      },
+      {
+        "prop_id": "CAP28",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "ice",
+        "category": "MedicationStatement",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "past",
+        "proposition_text": "The patient tried ice."
+      },
+      {
+        "prop_id": "CAP29",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "meloxicam",
+        "category": "MedicationStatement",
+        "speaker": "doctor",
+        "predicate": "prescribes",
+        "status": "uncertain",
+        "visit_state": "planned",
+        "temporality": "future",
+        "proposition_text": "The doctor prescribes meloxicam."
+      },
+      {
+        "prop_id": "CAP30",
+        "cap_type": "Counseling",
+        "canonical_concept": "physical therapy",
+        "category": "Counseling",
+        "speaker": "doctor",
+        "predicate": "recommends",
+        "status": "uncertain",
+        "visit_state": "planned",
+        "temporality": "future",
+        "claim_type_tags": [
+          "plan"
+        ],
+        "proposition_text": "The doctor recommends physical therapy."
+      }
+    ]
+  },
+  "reference_gpt_f1_items": {
+    "active_problems_symptoms": [],
+    "negated_findings": [],
+    "uncertain_findings": [],
+    "medication_treatment": [],
+    "plan_followup": [],
+    "_chunk_count": [
+      "3"
+    ],
+    "_parse_failures": [
+      "{\"chunk_index\": 1, \"stage\": \"call_llm\", \"error\": \"LLM call failed after retries: Error code: 404\"}",
+      "{\"chunk_index\": 2, \"stage\": \"call_llm\", \"error\": \"LLM call failed after retries: Error code: 404\"}",
+      "{\"chunk_index\": 3, \"stage\": \"call_llm\", \"error\": \"LLM call failed after retries: Error code: 404\"}"
+    ]
+  },
+  "summary_gpt_f1_items": {
+    "active_problems_symptoms": [],
+    "negated_findings": [],
+    "uncertain_findings": [],
+    "medication_treatment": [],
+    "plan_followup": [],
+    "_chunk_count": [
+      "1"
+    ],
+    "_parse_failures": [
+      "{\"chunk_index\": 1, \"stage\": \"call_llm\", \"error\": \"LLM call failed after retries: Error code: 404\"}"
+    ]
+  },
+  "gpt_f1_alignment": {
+    "by_category": {
+      "active_problems_symptoms": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "matched_count": 0,
+        "pred_count": 0,
+        "ref_count": 0,
+        "matches": [],
+        "unsupported_pred_items": [],
+        "missing_ref_items": []
+      },
+      "negated_findings": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "matched_count": 0,
+        "pred_count": 0,
+        "ref_count": 0,
+        "matches": [],
+        "unsupported_pred_items": [],
+        "missing_ref_items": []
+      },
+      "uncertain_findings": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "matched_count": 0,
+        "pred_count": 0,
+        "ref_count": 0,
+        "matches": [],
+        "unsupported_pred_items": [],
+        "missing_ref_items": []
+      },
+      "medication_treatment": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "matched_count": 0,
+        "pred_count": 0,
+        "ref_count": 0,
+        "matches": [],
+        "unsupported_pred_items": [],
+        "missing_ref_items": []
+      },
+      "plan_followup": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "matched_count": 0,
+        "pred_count": 0,
+        "ref_count": 0,
+        "matches": [],
+        "unsupported_pred_items": [],
+        "missing_ref_items": []
+      }
+    }
+  },
+  "reference_nair_concepts": {
+    "sections": [
+      {
+        "heading": "Clinical Note",
+        "section_value": "HISTORY OF PRESENT ILLNESS\nJeremy Adams is a pleasant 57-year-old male who presents to the clinic today for the evaluation of low back pain. The onset of his pain began 4 months ago, when he was moving boxes out of his son’s college dorm. At that time, he noted tingling in his right toes, which resolved after approximately 1 hour. After his injury, he felt as though he was unable to support his upper body weight. The patient reports weakness in his legs when carrying heavy objects. He reports a sharp pain in his lower back when he turns a certain way or rolls over in his sleep. The pain will resolve with repositioning. The patient was seen at urgent care and was referred to obtain an MRI, however he did not undergo this secondary to insurance issues. He has been utilizing Tylenol, ibuprofen, heat, and ice for pain, which does not provide relief. The patient notes the ibuprofen is slightly more beneficial than the Tylenol, however it does not relieve his symptoms. He denies upset stomach with the use of ibuprofen. Additionally, he attempted physical therapy at his gym without any relief. He denies any bladder or bowels issues, fevers, and chills.\nSURGICAL HISTORY\nThe patient has a history of a right total knee arthroplasty 2 years ago, in spring of 2020. He states that his right knee feels 95% improved since the surgery.\nREVIEW OF SYSTEMS\nConstitutional: Denies fevers or chills.",
+        "medical_concepts": [
+          "low back pain",
+          "tingling in toes",
+          "right toe tingling",
+          "weakness in legs",
+          "sharp lower back pain",
+          "pain with movement",
+          "bladder issues",
+          "bowel issues",
+          "fevers",
+          "chills",
+          "upset stomach",
+          "MRI",
+          "Tylenol",
+          "ibuprofen",
+          "heat therapy",
+          "ice therapy",
+          "physical therapy",
+          "right total knee arthroplasty",
+          "knee surgery",
+          "right knee pain"
+        ]
+      },
+      {
+        "heading": "Clinical Note",
+        "section_value": "Gastrointestinal: Denies bowel issues.\nGenitourinary: Denies bladder issues.\nMusculoskeletal: Reports lower back pain.\nVITALS\nTemperature: Normal.\nBlood pressure: 117/56 mm Hg.\nHeart rate: 68 BPM.\nOxygenation: 95% on room air.\nPHYSICAL EXAM\nNECK: Bony protuberance of the C5-C6. No pain to palpation of the C5-C6",
+        "medical_concepts": [
+          "bowel issues",
+          "bladder issues",
+          "lower back pain",
+          "temperature",
+          "blood pressure",
+          "heart rate",
+          "oxygenation",
+          "bony protuberance of the C5-C6",
+          "pain to palpation of the C5-C6"
+        ]
+      },
+      {
+        "heading": "Clinical Note",
+        "section_value": "MSK: Examination of the Lumbar spine: No pain to palpation of the lumbar spine. Decreased flexion and extension of the lower back. Positive straight leg raise. Spasm of the paraspinal muscles of the lumbar spine. Strength is equal bilaterally.\nRESULTS\nX-rays of the lumbar spine were reviewed. These reveal no acute bony abnormalities.\nASSESSMENT\nLow back pain, possible acute disc herniation.\nPLAN\nAfter reviewing the patient's examination and radiographic findings today, I have had a lengthy discussion with the patient in regards to his current symptoms. His x-rays did not reveal any signs of a fracture. I would like to obtain an MRI of the lumbar spine to evaluate for a possible acute disc herniation. I have prescribed the patient meloxicam 15 mg to treat his pain. He will continue with physical therapy and a referral was provided for this today.",
+        "medical_concepts": [
+          "lumbar spine pain",
+          "decreased lumbar flexion",
+          "decreased lumbar extension",
+          "positive straight leg raise",
+          "paraspinal muscle spasm",
+          "low back pain",
+          "acute disc herniation",
+          "fracture",
+          "X-ray of the lumbar spine",
+          "MRI of the lumbar spine",
+          "meloxicam 15 mg",
+          "physical therapy"
+        ]
+      }
+    ],
+    "medical_concepts": [
+      "low back pain",
+      "tingling in toes",
+      "right toe tingling",
+      "weakness in legs",
+      "sharp lower back pain",
+      "pain with movement",
+      "bladder issues",
+      "bowel issues",
+      "fevers",
+      "chills",
+      "upset stomach",
+      "MRI",
+      "Tylenol",
+      "ibuprofen",
+      "heat therapy",
+      "ice therapy",
+      "physical therapy",
+      "right total knee arthroplasty",
+      "knee surgery",
+      "right knee pain",
+      "lower back pain",
+      "temperature",
+      "blood pressure",
+      "heart rate",
+      "oxygenation",
+      "bony protuberance of the C5-C6",
+      "pain to palpation of the C5-C6",
+      "lumbar spine pain",
+      "decreased lumbar flexion",
+      "decreased lumbar extension",
+      "positive straight leg raise",
+      "paraspinal muscle spasm",
+      "acute disc herniation",
+      "fracture",
+      "X-ray of the lumbar spine",
+      "MRI of the lumbar spine",
+      "meloxicam 15 mg"
+    ],
+    "section_count": 3
+  },
+  "summary_nair_concepts": {
+    "sections": [
+      {
+        "heading": "S",
+        "section_value": "The patient reports a history of back injury from approximately three months ago, with persistent pain exacerbated by certain movements and sleeping positions. He describes sharp pain followed by relief with specific positioning. He has been taking Tylenol and ibuprofen for pain relief, with no significant stomach upset from the ibuprofen. He reports no bladder or bowel issues or incontinence. He had a total knee replacement in 2018 and a prior knee surgery two years ago. He denies fever or chills. The patient reports no pain upon palpation of the lumbar spine.",
+        "medical_concepts": [
+          "back injury",
+          "back pain",
+          "sharp pain",
+          "bladder issues",
+          "bowel issues",
+          "incontinence",
+          "fever",
+          "chills",
+          "lumbar spine pain",
+          "Tylenol",
+          "ibuprofen",
+          "stomach upset",
+          "total knee replacement",
+          "knee surgery"
+        ]
+      },
+      {
+        "heading": "O",
+        "section_value": "Vital signs are within normal limits: blood pressure 117/75, heart rate 68, oxygen saturation 95% on room air. The lumbar spine x-ray showed no acute bony abnormality. Lower extremity strength is equal bilaterally. There is some spasm of the paraspinal muscles of the lumbar spine.",
+        "medical_concepts": [
+          "vital signs",
+          "blood pressure",
+          "heart rate",
+          "oxygen saturation",
+          "room air",
+          "lumbar spine x-ray",
+          "bony abnormality",
+          "lower extremity strength",
+          "muscle spasm",
+          "paraspinal muscles",
+          "lumbar spine"
+        ]
+      },
+      {
+        "heading": "A",
+        "section_value": "The patient has an acute disk herniation, likely related to his prior injury. There is evidence of musculoskeletal issues in the lumbar spine.",
+        "medical_concepts": [
+          "acute disk herniation",
+          "prior injury",
+          "musculoskeletal issues",
+          "lumbar spine"
+        ]
+      },
+      {
+        "heading": "P",
+        "section_value": "I am ordering a lumbar spine MRI. I am prescribing meloxicam 15 mg once daily. I am referring the patient to physical therapy.",
+        "medical_concepts": [
+          "lumbar spine MRI",
+          "meloxicam",
+          "physical therapy"
+        ]
+      }
+    ],
+    "medical_concepts": [
+      "back injury",
+      "back pain",
+      "sharp pain",
+      "bladder issues",
+      "bowel issues",
+      "incontinence",
+      "fever",
+      "chills",
+      "lumbar spine pain",
+      "Tylenol",
+      "ibuprofen",
+      "stomach upset",
+      "total knee replacement",
+      "knee surgery",
+      "vital signs",
+      "blood pressure",
+      "heart rate",
+      "oxygen saturation",
+      "room air",
+      "lumbar spine x-ray",
+      "bony abnormality",
+      "lower extremity strength",
+      "muscle spasm",
+      "paraspinal muscles",
+      "lumbar spine",
+      "acute disk herniation",
+      "prior injury",
+      "musculoskeletal issues",
+      "lumbar spine MRI",
+      "meloxicam",
+      "physical therapy"
+    ],
+    "section_count": 4
+  },
+  "nair_alignment": {
+    "pred_concepts": [
+      "back injury",
+      "back pain",
+      "sharp pain",
+      "bladder issues",
+      "bowel issues",
+      "incontinence",
+      "fever",
+      "chills",
+      "lumbar spine pain",
+      "Tylenol",
+      "ibuprofen",
+      "stomach upset",
+      "total knee replacement",
+      "knee surgery",
+      "vital signs",
+      "blood pressure",
+      "heart rate",
+      "oxygen saturation",
+      "room air",
+      "lumbar spine x-ray",
+      "bony abnormality",
+      "lower extremity strength",
+      "muscle spasm",
+      "paraspinal muscles",
+      "lumbar spine",
+      "acute disk herniation",
+      "prior injury",
+      "musculoskeletal issues",
+      "lumbar spine MRI",
+      "meloxicam",
+      "physical therapy"
+    ],
+    "ref_concepts": [
+      "low back pain",
+      "tingling in toes",
+      "right toe tingling",
+      "weakness in legs",
+      "sharp lower back pain",
+      "pain with movement",
+      "bladder issues",
+      "bowel issues",
+      "fevers",
+      "chills",
+      "upset stomach",
+      "MRI",
+      "Tylenol",
+      "ibuprofen",
+      "heat therapy",
+      "ice therapy",
+      "physical therapy",
+      "right total knee arthroplasty",
+      "knee surgery",
+      "right knee pain",
+      "lower back pain",
+      "temperature",
+      "blood pressure",
+      "heart rate",
+      "oxygenation",
+      "bony protuberance of the C5-C6",
+      "pain to palpation of the C5-C6",
+      "lumbar spine pain",
+      "decreased lumbar flexion",
+      "decreased lumbar extension",
+      "positive straight leg raise",
+      "paraspinal muscle spasm",
+      "acute disc herniation",
+      "fracture",
+      "X-ray of the lumbar spine",
+      "MRI of the lumbar spine",
+      "meloxicam 15 mg"
+    ],
+    "precision_alignment": {
+      "found_b": [
+        "back injury",
+        "back pain",
+        "sharp pain",
+        "bladder issues",
+        "bowel issues",
+        "fever",
+        "chills",
+        "lumbar spine pain",
+        "Tylenol",
+        "ibuprofen",
+        "stomach upset",
+        "total knee replacement",
+        "knee surgery",
+        "vital signs",
+        "blood pressure",
+        "heart rate",
+        "oxygen saturation",
+        "room air",
+        "lumbar spine x-ray",
+        "bony abnormality",
+        "lower extremity strength",
+        "muscle spasm",
+        "paraspinal muscles",
+        "lumbar spine",
+        "acute disk herniation",
+        "prior injury",
+        "musculoskeletal issues",
+        "lumbar spine MRI",
+        "meloxicam",
+        "physical therapy"
+      ],
+      "not_found_b": [
+        "incontinence"
+      ],
+      "chunk_count": 2,
+      "chunk_results": [
+        {
+          "found_b": [
+            "back injury",
+            "back pain",
+            "sharp pain",
+            "bladder issues",
+            "bowel issues",
+            "fever",
+            "chills",
+            "lumbar spine pain",
+            "Tylenol",
+            "ibuprofen",
+            "stomach upset",
+            "total knee replacement",
+            "knee surgery",
+            "vital signs",
+            "blood pressure",
+            "heart rate",
+            "oxygen saturation",
+            "room air",
+            "lumbar spine x-ray",
+            "bony abnormality",
+            "lower extremity strength",
+            "muscle spasm",
+            "paraspinal muscles"
+          ],
+          "not_found_b": [
+            "incontinence"
+          ]
+        },
+        {
+          "found_b": [
+            "lumbar spine",
+            "acute disk herniation",
+            "prior injury",
+            "musculoskeletal issues",
+            "lumbar spine MRI",
+            "meloxicam",
+            "physical therapy"
+          ],
+          "not_found_b": []
+        }
+      ]
+    },
+    "recall_alignment": {
+      "found_b": [
+        "low back pain",
+        "sharp lower back pain",
+        "pain with movement",
+        "bladder issues",
+        "bowel issues",
+        "fevers",
+        "chills",
+        "upset stomach",
+        "MRI",
+        "Tylenol",
+        "ibuprofen",
+        "physical therapy",
+        "knee surgery",
+        "lower back pain",
+        "blood pressure",
+        "heart rate",
+        "oxygenation",
+        "lumbar spine pain",
+        "paraspinal muscle spasm",
+        "acute disc herniation",
+        "X-ray of the lumbar spine",
+        "MRI of the lumbar spine",
+        "meloxicam 15 mg"
+      ],
+      "not_found_b": [
+        "tingling in toes",
+        "right toe tingling",
+        "weakness in legs",
+        "heat therapy",
+        "ice therapy",
+        "right total knee arthroplasty",
+        "right knee pain",
+        "temperature",
+        "bony protuberance of the C5-C6",
+        "pain to palpation of the C5-C6",
+        "decreased lumbar flexion",
+        "decreased lumbar extension",
+        "positive straight leg raise",
+        "fracture"
+      ],
+      "chunk_count": 2,
+      "chunk_results": [
+        {
+          "found_b": [
+            "low back pain",
+            "sharp lower back pain",
+            "pain with movement",
+            "bladder issues",
+            "bowel issues",
+            "fevers",
+            "chills",
+            "upset stomach",
+            "MRI",
+            "Tylenol",
+            "ibuprofen",
+            "physical therapy",
+            "knee surgery",
+            "lower back pain",
+            "blood pressure",
+            "heart rate"
+          ],
+          "not_found_b": [
+            "tingling in toes",
+            "right toe tingling",
+            "weakness in legs",
+            "heat therapy",
+            "ice therapy",
+            "right total knee arthroplasty",
+            "right knee pain",
+            "temperature"
+          ]
+        },
+        {
+          "found_b": [
+            "oxygenation",
+            "lumbar spine pain",
+            "paraspinal muscle spasm",
+            "acute disc herniation",
+            "X-ray of the lumbar spine",
+            "MRI of the lumbar spine",
+            "meloxicam 15 mg"
+          ],
+          "not_found_b": [
+            "bony protuberance of the C5-C6",
+            "pain to palpation of the C5-C6",
+            "decreased lumbar flexion",
+            "decreased lumbar extension",
+            "positive straight leg raise",
+            "fracture"
+          ]
+        }
+      ]
+    }
+  },
+  "semantic_cap_audit": {
+    "source_cap_recall": [
+      {
+        "cap_id": "P1",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P2",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P3",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P4",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P5",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P6",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P7",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P8",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P9",
+        "judgment": "low_value",
+        "reason": null
+      },
+      {
+        "cap_id": "P10",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P11",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P12",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P13",
+        "judgment": "contradicted",
+        "reason": null
+      },
+      {
+        "cap_id": "P14",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P15",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P16",
+        "judgment": "contradicted",
+        "reason": null
+      },
+      {
+        "cap_id": "P1",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P2",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P3",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P4",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P5",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P6",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P7",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P8",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P9",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P10",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P11",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P12",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P13",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P14",
+        "judgment": "supported",
+        "reason": null
+      }
+    ],
+    "summary_cap_precision": [],
+    "metrics": {
+      "semantic_cap_precision": 0.0,
+      "semantic_cap_recall": 0.3793,
+      "semantic_cap_f1": 0.0,
+      "semantic_cap_precision_supported_count": 0,
+      "semantic_cap_precision_partial_count": 0,
+      "semantic_cap_precision_denominator": 0,
+      "semantic_cap_recall_supported_count": 8,
+      "semantic_cap_recall_partial_count": 6,
+      "semantic_cap_recall_denominator": 29,
+      "semantic_cap_low_value_source_count": 1,
+      "semantic_cap_low_value_summary_count": 0,
+      "semantic_cap_missing_count": 13,
+      "semantic_cap_unsupported_count": 0,
+      "semantic_cap_contradicted_source_count": 2,
+      "semantic_cap_contradicted_summary_count": 0
+    }
+  },
+  "safety_judgment": null,
+  "section_judgment": {
+    "section_miscategorizations": [
+      {
+        "text": "The patient reports no pain upon palpation of the lumbar spine.",
+        "current_section": "S",
+        "expected_section": "O",
+        "severity": "minor",
+        "reason": "Absence of pain on palpation is a physical exam finding; even if the patient comments on it, it is typically documented as an objective exam element rather than subjective history."
+      }
+    ],
+    "summary_statistics": {
+      "section_appropriateness_score": 0.9,
+      "section_miscategorization_count": 1,
+      "major_section_miscategorization_count": 0
+    }
+  },
+  "pdsqi_judgment": {
+    "citation_applicable": 0,
+    "citation": 0,
+    "accurate": 2,
+    "thorough": 2,
+    "useful": 2,
+    "organized": 4,
+    "comprehensible": 4,
+    "succinct": 4,
+    "abstraction": 1,
+    "synthesized": 3,
+    "voice_summ": 0,
+    "voice_note": 0,
+    "pdsqi_core_mean": 3.0
+  },
+  "llm_checklist_judgment": {
+    "content_preservation_core": 3,
+    "noise_suppression": 5,
+    "lay_expression_preservation": 3,
+    "state_update_fidelity": 2,
+    "temporality_preservation": 3,
+    "problem_evidence_linkage": 3,
+    "state_plan_separation": 4,
+    "section_organization_appropriateness": 3,
+    "overall_clinical_usability": 3,
+    "clinically_meaningful_omission": "Yes",
+    "clinically_concerning_hallucination": "Yes",
+    "checklist_a_mean": 3.6667,
+    "checklist_b_mean": 2.5,
+    "checklist_c_mean": 3.3333,
+    "llm_checklist_abc_mean": 3.25,
+    "llm_checklist_mean_no_usability": 3.25,
+    "llm_checklist_total_score": 29,
+    "llm_checklist_mean": 3.2222,
+    "llm_checklist_meaningful_omission_yes": 1,
+    "llm_checklist_concerning_hallucination_yes": 1
+  },
+  "metrics": {
+    "case_id": "D2N148",
+    "method": "cluster2sent",
+    "template": "soap",
+    "source_cap_count": 30,
+    "event_plan_count": null,
+    "summary_cap_count": 0,
+    "cap_matched_count": 0,
+    "cap_precision": 0.0,
+    "cap_recall": 0.0,
+    "cap_f1": 0.0,
+    "unsupported_summary_cap_count": 0,
+    "missing_source_cap_count": 30,
+    "summary_runtime_seconds": null,
+    "summary_cap_runtime_seconds": 0.531,
+    "event_plan_runtime_seconds": null,
+    "rouge_l_f1_vs_reference": 0.2456,
+    "token_f1_vs_reference": 0.4306,
+    "gptf1_macro_f1": 0.0,
+    "nair_gpt_precision": 0.9677,
+    "nair_gpt_recall": 0.6216,
+    "nair_gpt_f1": 0.757,
+    "semantic_cap_precision": 0.0,
+    "semantic_cap_recall": 0.3793,
+    "semantic_cap_f1": 0.0,
+    "hallucination_count": null,
+    "major_hallucination_count": null,
+    "omission_count": null,
+    "major_omission_count": null,
+    "section_appropriateness_score": 0.9,
+    "section_miscategorization_count": 1,
+    "major_section_miscategorization_count": 0,
+    "pdsqi_core_mean": 3.0,
+    "pdsqi_accurate": 2,
+    "pdsqi_thorough": 2,
+    "llm_checklist_total_score": 29,
+    "llm_checklist_mean": 3.2222,
+    "llm_checklist_mean_no_usability": 3.25,
+    "checklist_a_mean": 3.6667,
+    "checklist_b_mean": 2.5,
+    "checklist_c_mean": 3.3333,
+    "llm_checklist_abc_mean": 3.25,
+    "content_preservation_core": 3,
+    "noise_suppression": 5,
+    "lay_expression_preservation": 3,
+    "state_update_fidelity": 2,
+    "temporality_preservation": 3,
+    "problem_evidence_linkage": 3,
+    "state_plan_separation": 4,
+    "section_organization_appropriateness": 3,
+    "overall_clinical_usability": 3,
+    "llm_checklist_meaningful_omission_yes": 1,
+    "llm_checklist_concerning_hallucination_yes": 1,
+    "gptf1_active_problems_symptoms_precision": 0.0,
+    "gptf1_active_problems_symptoms_recall": 0.0,
+    "gptf1_active_problems_symptoms_f1": 0.0,
+    "gptf1_active_problems_symptoms_pred_count": 0,
+    "gptf1_active_problems_symptoms_ref_count": 0,
+    "gptf1_negated_findings_precision": 0.0,
+    "gptf1_negated_findings_recall": 0.0,
+    "gptf1_negated_findings_f1": 0.0,
+    "gptf1_negated_findings_pred_count": 0,
+    "gptf1_negated_findings_ref_count": 0,
+    "gptf1_uncertain_findings_precision": 0.0,
+    "gptf1_uncertain_findings_recall": 0.0,
+    "gptf1_uncertain_findings_f1": 0.0,
+    "gptf1_uncertain_findings_pred_count": 0,
+    "gptf1_uncertain_findings_ref_count": 0,
+    "gptf1_medication_treatment_precision": 0.0,
+    "gptf1_medication_treatment_recall": 0.0,
+    "gptf1_medication_treatment_f1": 0.0,
+    "gptf1_medication_treatment_pred_count": 0,
+    "gptf1_medication_treatment_ref_count": 0,
+    "gptf1_plan_followup_precision": 0.0,
+    "gptf1_plan_followup_recall": 0.0,
+    "gptf1_plan_followup_f1": 0.0,
+    "gptf1_plan_followup_pred_count": 0,
+    "gptf1_plan_followup_ref_count": 0,
+    "nair_pred_concept_count": 31,
+    "nair_ref_concept_count": 37,
+    "nair_precision_match_count": 30,
+    "nair_recall_match_count": 23,
+    "semantic_cap_precision_supported_count": 0,
+    "semantic_cap_precision_partial_count": 0,
+    "semantic_cap_precision_denominator": 0,
+    "semantic_cap_recall_supported_count": 8,
+    "semantic_cap_recall_partial_count": 6,
+    "semantic_cap_recall_denominator": 29,
+    "semantic_cap_low_value_source_count": 1,
+    "semantic_cap_low_value_summary_count": 0,
+    "semantic_cap_missing_count": 13,
+    "semantic_cap_unsupported_count": 0,
+    "semantic_cap_contradicted_source_count": 2,
+    "semantic_cap_contradicted_summary_count": 0,
+    "pdsqi_useful": 2,
+    "pdsqi_organized": 4,
+    "pdsqi_comprehensible": 4,
+    "pdsqi_succinct": 4,
+    "pdsqi_synthesized": 3
+  }
+}

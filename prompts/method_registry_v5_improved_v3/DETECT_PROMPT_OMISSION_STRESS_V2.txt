@@ -1,0 +1,109 @@
+You are a Senior Clinical Auditor checking for omissions in a clinical summary.
+
+You are given:
+1. TranscriptEvents as indexed structured clinical events (TE0, TE1, ...)
+2. SummarySentences as indexed body sentences from the summary (S0, S1, ...)
+
+TranscriptEvents are the source of truth.
+Judge omissions from TranscriptEvents only.
+The summary does NOT need to repeat facts verbatim.
+An event is omitted only when its clinically relevant meaning is not recoverable anywhere in the summary.
+
+Each TranscriptEvent may represent one or more transcript facts that describe the same underlying clinical event.
+Return omissions at the event level, not at the raw fact level.
+Do not split one TranscriptEvent into multiple omissions unless it truly contains distinct missing clinical gaps with different downstream consequences.
+
+This detector serves two downstream evaluation axes at once:
+1. injection-faithful omission recovery
+2. clinical-priority omission auditing
+
+So your job is NOT only to find high-severity omissions.
+You should also return clearly missing Current Issues / Information and Plan / PMFS events when they are explicitly present in the transcript event and genuinely absent from the summary, even if they are minor.
+
+Use this internal decision ladder for EACH TranscriptEvent:
+Step 1. Recoverability gate
+- Is the core meaning already present anywhere in the summary?
+- If YES, do NOT return it as omission.
+- Recoverable means the summary may paraphrase, compress, abstract, or merge the event, as long as the core clinical meaning is still there.
+- A detail is still recoverable if the summary expresses the same event at a higher level.
+- Do NOT require exact wording, exact section placement, or exact sentence alignment.
+
+Step 2. Contradiction gate
+- If the summary states the opposite or an incompatible claim for the same event, do NOT mark omission.
+- That belongs under hallucination / contradiction, not omission.
+
+Step 3. Missingness gate
+- If the event is not recoverable anywhere in the summary, decide whether it is:
+  - Missing and clinically important
+  - Missing but minor / lower-priority
+
+Return BOTH types when they are genuinely missing.
+However, if several TranscriptEvents are just over-segmented support details of the same missing event, return only the most representative one.
+
+Important: do NOT let clinical-priority bias hide a true injected omission.
+If a transcript event is clearly present in the transcript and clearly absent from the summary, it can still be a valid omission even when it is not the most safety-critical omission in the case.
+
+Recoverability examples:
+- If the transcript says the patient is doing well postoperatively, and the summary says the patient is doing well and progressing with home exercises, that is usually recoverable, so do NOT return omission.
+- If the transcript says vitals look good and blood pressure / heart rate are normal, and the summary keeps only temperature normal, the normal blood pressure / heart rate event is NOT recoverable and may be omitted.
+- If the transcript says follow-up in 1-2 weeks and discuss lithotripsy if not improved, and the summary includes that same follow-up plan in different words, do NOT return omission.
+
+Prioritize event families using the following taxonomy, but do not use it as a hard filter:
+- CurrentIssueMissing: active symptoms, symptom burden, persistence, progression, important negatives, active current issues
+- InformationPlanMissing: assessment, treatment, test, referral, follow-up, return precautions, safety-net, patient instructions
+- PMFSMissing: past medical history, medications, allergies, family/social history when relevant to current diagnosis or management
+- KeyResultValueMissing: important findings, abnormal or safety-relevant results, quantitative values
+
+Clinical-priority guidance:
+- High priority usually includes treatment plans, medication instructions, referrals, procedure planning, follow-up timing, safety instructions, key results, active main-problem symptoms, and final clinically consequential states.
+- Lower priority may include isolated background details, low-value specificity, minor exam granularity, or contextual phrasing.
+- But lower priority does NOT mean “not an omission.” If the event is clearly present in the transcript and clearly absent from the summary, you may still return it.
+
+Over-segmentation control:
+- If several transcript facts describe the same missing symptom state, plan, medication instruction, or finding bundle, return only the single most representative TranscriptEvent.
+- Prefer the clinically central event over subordinate rationale or support detail.
+- Do not return structural labels, list numbering, clinician questions, clarification turns, conversational scaffolding, or social filler.
+
+History handling:
+- Treat History events conservatively.
+- Return them when they are clearly relevant or when they correspond to a direct synthetic omission target that is truly absent from the summary.
+
+Do NOT return omission labels for:
+- information already recoverable elsewhere in the summary
+- exact-wording mismatches only
+- local section-placement differences only
+- contradictions or incompatible opposite claims
+- tiny support details when a larger parent event is already present in the summary
+
+Taxonomy tags you may use in reasons:
+- CurrentIssueMissing
+- InformationPlanMissing
+- PMFSMissing
+- KeyResultValueMissing
+- SafetyCritical
+- FinalState
+- ClinicalPriority
+
+Return strict JSON only.
+Important:
+- In `omitted_event_ids`, return the indexed TranscriptEvent IDs exactly as `TE0`, `TE1`, `TE2`, ...
+- Each reason should begin with its matching `TE\#` ID.
+- `total_omission_count` must equal the number of unique IDs returned.
+- Be conservative about semantic recoverability, but not so conservative that clearly removed injected events disappear.
+
+{{
+  "omitted_event_ids": ["TE19", "TE24"],
+  "omission_reasons": [
+    "TE19 [InformationPlanMissing][ClinicalPriority]: follow-up instruction is clearly absent from the summary.",
+    "TE24 [CurrentIssueMissing]: normal blood pressure and heart rate are stated in the transcript event but not recoverable from the summary."
+  ],
+  "total_omission_count": 2
+}}
+
+<TranscriptEvents>
+{indexed_facts}
+</TranscriptEvents>
+
+<SummarySentences>
+{indexed_summary_sentences}
+</SummarySentences>

@@ -1,0 +1,30 @@
+{
+  "section_miscategorizations": [
+    {
+      "text": "The patient reports tenderness on the medial joint line of his knee.",
+      "current_section": "S",
+      "expected_section": "O",
+      "severity": "major",
+      "reason": "Tenderness on palpation is a physical exam finding observed by the clinician, not something a patient can reliably report as a discrete anatomic sign."
+    },
+    {
+      "text": "The clinician describes their profession as a baby rocker in a children's hospital.",
+      "current_section": "O",
+      "expected_section": "S",
+      "severity": "minor",
+      "reason": "This is patient history/social information, not an observed clinical finding, exam, or test result."
+    },
+    {
+      "text": "The patient reports negative McMurray tests on both knees.",
+      "current_section": "O",
+      "expected_section": "S",
+      "severity": "major",
+      "reason": "McMurray test results are objective exam findings and should be documented as clinician-observed, not as patient-reported information."
+    }
+  ],
+  "summary_statistics": {
+    "section_appropriateness_score": 0.4,
+    "section_miscategorization_count": 3,
+    "major_section_miscategorization_count": 2
+  }
+}

@@ -1,0 +1,1363 @@
+{
+  "case_id": "D2N094",
+  "method": "medsum_ent",
+  "template": "soap",
+  "summary_text": "S:\nThe patient reports finger pain following a skiing accident five days ago, rated as a 7/10. He took ibuprofen without significant relief. He denies any other injuries sustained during the incident. The patient also reports chronic constipation and takes miralax. He had an appendectomy at age seven. He reports no other surgeries.\n\nO:\nThe right index finger x-ray demonstrates no fractures or bony abnormalities. Physical examination reveals tenderness to palpation, pain with joint movement, and pain with compression of the DIP joint. Vital signs are within normal limits.\n\nA:\nThe patient has a sprain of the distal interphalangeal joint of the right index finger. This is supported by the physical exam and x-ray findings.\n\nP:\nRescribe a strong antiinflammatory medication, mobic, at 15 mg once daily. Order a splint for the right index finger. Schedule a follow-up appointment in two weeks to assess healing. Arrange for hand therapy if needed at that time. Dragon, please order the medications and procedures mentioned.",
+  "reference_summary": "CC:\n\nRight index finger pain.\n\nHPI:\n\nMs. James is a 42-year-old female who presents today for an evaluation of right index finger pain. She states she injured it while skiing. She states she fell and jammed her finger. She took Ibuprofen on but it did not help her. She denies any icing it or wearing a splint. She rates her pain 7/10.\n\nCURRENT MEDICATIONS:\n\nMiraLAX\n\nPAST MEDICAL HISTORY:\n\nChronic constipation\n\nPAST SURGICAL HISTORY:\n\nAppendectomy at age 7.\n\nEXAM\n\nExamination of the right hand reveals pain to palpation of the MCP and DIP joints.\n\nRESULTS\n\nX-rays of the right index finger show no obvious signs of fracture.\n\nIMPRESSION\n\nRight index finger DIP joint sprain.\n\nPLAN\n\nAt this point, I discussed the diagnosis and treatment options with the patient. I have recommended a splint. A prescription is provided for Mobic 15 mg once a day, dispense 14. She will follow up with me in 2 weeks for a repeat evaluation. If she is unimproved, we will consider hand therapy at that time. All questions were answered.",
+  "source_cap": {
+    "atomic_propositions": [
+      {
+        "prop_id": "CAP1",
+        "cap_type": "Symptom",
+        "canonical_concept": "pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "quantitative",
+          "symptom"
+        ],
+        "proposition_text": "The patient reports pain, rated 7 out of 10."
+      },
+      {
+        "prop_id": "CAP2",
+        "cap_type": "Symptom",
+        "canonical_concept": "right finger pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports pain in the right index finger."
+      },
+      {
+        "prop_id": "CAP3",
+        "cap_type": "Symptom",
+        "canonical_concept": "hand pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports pain in the hand."
+      },
+      {
+        "prop_id": "CAP4",
+        "cap_type": "Problem",
+        "canonical_concept": "no injury",
+        "category": "Problem",
+        "speaker": "patient",
+        "predicate": "denies",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "past",
+        "proposition_text": "The patient denies any other injuries."
+      },
+      {
+        "prop_id": "CAP5",
+        "cap_type": "Problem",
+        "canonical_concept": "hand injury",
+        "category": "Problem",
+        "speaker": "patient",
+        "status": "uncertain",
+        "visit_state": "historical",
+        "temporality": "past",
+        "proposition_text": "The patient sustained an injury."
+      },
+      {
+        "prop_id": "CAP6",
+        "cap_type": "Symptom",
+        "canonical_concept": "constipation",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports chronic constipation."
+      },
+      {
+        "prop_id": "CAP7",
+        "cap_type": "Order",
+        "canonical_concept": "splint",
+        "category": "Order",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "planned",
+        "temporality": "future",
+        "proposition_text": "The doctor will put a splint on the right finger."
+      },
+      {
+        "prop_id": "CAP8",
+        "cap_type": "Order",
+        "canonical_concept": "splint",
+        "category": "Order",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "planned",
+        "temporality": "soon",
+        "proposition_text": "A splint will be applied to the finger."
+      },
+      {
+        "prop_id": "CAP9",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "mobic",
+        "category": "MedicationStatement",
+        "speaker": "doctor",
+        "predicate": "has",
+        "status": "affirmed",
+        "visit_state": "planned",
+        "temporality": "daily",
+        "claim_type_tags": [
+          "quantitative"
+        ],
+        "proposition_text": "The patient will take 15 milligrams of mobic once a day."
+      },
+      {
+        "prop_id": "CAP10",
+        "cap_type": "FollowUp",
+        "canonical_concept": "hand therapy",
+        "category": "FollowUp",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "planned",
+        "temporality": "in two weeks",
+        "proposition_text": "The doctor wants the patient to return in two weeks."
+      },
+      {
+        "prop_id": "CAP11",
+        "cap_type": "FollowUp",
+        "canonical_concept": "hand therapy",
+        "category": "FollowUp",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "planned",
+        "temporality": "in two weeks",
+        "claim_type_tags": [
+          "temporal"
+        ],
+        "proposition_text": "The patient will return for follow-up in two weeks."
+      },
+      {
+        "prop_id": "CAP12",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "mobic",
+        "category": "MedicationStatement",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "planned",
+        "temporality": "future",
+        "proposition_text": "The doctor will prescribe mobic."
+      },
+      {
+        "prop_id": "CAP13",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "miralax",
+        "category": "MedicationStatement",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient takes miralax."
+      }
+    ],
+    "filtered_nonverifiable_units": []
+  },
+  "event_plan": null,
+  "summary_cap": {
+    "atomic_propositions": [
+      {
+        "prop_id": "P1",
+        "cap_type": "Symptom",
+        "canonical_concept": "pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports finger pain"
+      },
+      {
+        "prop_id": "P2",
+        "cap_type": "History",
+        "canonical_concept": "pain",
+        "category": "History",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "past",
+        "claim_type_tags": [
+          "history"
+        ],
+        "proposition_text": "The patient reports finger pain following a skiing accident five days ago"
+      },
+      {
+        "prop_id": "P3",
+        "cap_type": "Symptom",
+        "canonical_concept": "pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports finger pain rated as 7/10"
+      },
+      {
+        "prop_id": "P4",
+        "cap_type": "MedicationPlan",
+        "canonical_concept": "prescribes ibuprofen",
+        "category": "MedicationPlan",
+        "speaker": "clinician",
+        "predicate": "prescribes",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "medication"
+        ],
+        "proposition_text": "The clinician prescribes ibuprofen"
+      },
+      {
+        "prop_id": "P5",
+        "cap_type": "Finding",
+        "canonical_concept": "right index finger x-ray",
+        "category": "Finding",
+        "speaker": "test_result",
+        "predicate": "shows",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "exam"
+        ],
+        "proposition_text": "The right index finger x-ray demonstrates no fractures or bony abnormalities"
+      },
+      {
+        "prop_id": "P6",
+        "cap_type": "Finding",
+        "canonical_concept": "physical examination reveals tenderness",
+        "category": "Finding",
+        "speaker": "clinician",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "exam"
+        ],
+        "proposition_text": "Physical examination reveals tenderness to palpation"
+      },
+      {
+        "prop_id": "P7",
+        "cap_type": "Finding",
+        "canonical_concept": "pain",
+        "category": "Finding",
+        "speaker": "clinician",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "exam"
+        ],
+        "proposition_text": "Physical examination reveals pain with joint movement"
+      },
+      {
+        "prop_id": "P8",
+        "cap_type": "Finding",
+        "canonical_concept": "pain",
+        "category": "Finding",
+        "speaker": "clinician",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "exam"
+        ],
+        "proposition_text": "Physical examination reveals pain with compression of the DIP joint"
+      },
+      {
+        "prop_id": "P9",
+        "cap_type": "Diagnosis",
+        "canonical_concept": "sprain distal interphalangeal joint",
+        "category": "Diagnosis",
+        "speaker": "clinician",
+        "predicate": "diagnoses",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "diagnostic"
+        ],
+        "proposition_text": "The patient has a sprain of the distal interphalangeal joint of the right index finger"
+      },
+      {
+        "prop_id": "P10",
+        "cap_type": "MedicationPlan",
+        "canonical_concept": "prescribes strong antiinflammatory medication",
+        "category": "MedicationPlan",
+        "speaker": "clinician",
+        "predicate": "prescribes",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "medication"
+        ],
+        "proposition_text": "The clinician prescribes a strong antiinflammatory medication, mobic, at 15 mg once daily"
+      },
+      {
+        "prop_id": "P11",
+        "cap_type": "Plan",
+        "canonical_concept": "orders splint for right",
+        "category": "Plan",
+        "speaker": "clinician",
+        "predicate": "orders",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "future",
+        "claim_type_tags": [
+          "plan"
+        ],
+        "proposition_text": "The clinician orders a splint for the right index finger"
+      },
+      {
+        "prop_id": "P12",
+        "cap_type": "FollowUpPlan",
+        "canonical_concept": "schedules follow-up appointment two",
+        "category": "FollowUpPlan",
+        "speaker": "clinician",
+        "predicate": "plans",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "future",
+        "claim_type_tags": [
+          "followup"
+        ],
+        "proposition_text": "The clinician schedules a follow-up appointment in two weeks to assess healing"
+      },
+      {
+        "prop_id": "P13",
+        "cap_type": "Plan",
+        "canonical_concept": "arranges for hand therapy",
+        "category": "Plan",
+        "speaker": "clinician",
+        "predicate": "plans",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "future",
+        "claim_type_tags": [
+          "plan"
+        ],
+        "proposition_text": "The clinician arranges for hand therapy if needed at that time"
+      }
+    ],
+    "filtered_nonverifiable_units": [],
+    "runtime_seconds": 31.337
+  },
+  "cap_alignment": {
+    "cap_precision": 0.38461538461538464,
+    "cap_recall": 0.38461538461538464,
+    "cap_f1": 0.38461538461538464,
+    "matched_count": 5,
+    "summary_prop_count": 13,
+    "source_prop_count": 13,
+    "matched_pairs": [
+      {
+        "score": 1.0,
+        "summary_prop_id": "P8",
+        "source_prop_id": "CAP1",
+        "summary_text": "Physical examination reveals pain with compression of the DIP joint",
+        "source_text": "The patient reports pain, rated 7 out of 10."
+      },
+      {
+        "score": 0.9133,
+        "summary_prop_id": "P1",
+        "source_prop_id": "CAP3",
+        "summary_text": "The patient reports finger pain",
+        "source_text": "The patient reports pain in the hand."
+      },
+      {
+        "score": 0.805,
+        "summary_prop_id": "P3",
+        "source_prop_id": "CAP2",
+        "summary_text": "The patient reports finger pain rated as 7/10",
+        "source_text": "The patient reports pain in the right index finger."
+      },
+      {
+        "score": 0.8,
+        "summary_prop_id": "P13",
+        "source_prop_id": "CAP11",
+        "summary_text": "The clinician arranges for hand therapy if needed at that time",
+        "source_text": "The patient will return for follow-up in two weeks."
+      },
+      {
+        "score": 0.665,
+        "summary_prop_id": "P11",
+        "source_prop_id": "CAP7",
+        "summary_text": "The clinician orders a splint for the right index finger",
+        "source_text": "The doctor will put a splint on the right finger."
+      }
+    ],
+    "unsupported_summary_props": [
+      {
+        "prop_id": "P2",
+        "cap_type": "History",
+        "canonical_concept": "pain",
+        "category": "History",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "past",
+        "claim_type_tags": [
+          "history"
+        ],
+        "proposition_text": "The patient reports finger pain following a skiing accident five days ago"
+      },
+      {
+        "prop_id": "P4",
+        "cap_type": "MedicationPlan",
+        "canonical_concept": "prescribes ibuprofen",
+        "category": "MedicationPlan",
+        "speaker": "clinician",
+        "predicate": "prescribes",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "medication"
+        ],
+        "proposition_text": "The clinician prescribes ibuprofen"
+      },
+      {
+        "prop_id": "P5",
+        "cap_type": "Finding",
+        "canonical_concept": "right index finger x-ray",
+        "category": "Finding",
+        "speaker": "test_result",
+        "predicate": "shows",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "exam"
+        ],
+        "proposition_text": "The right index finger x-ray demonstrates no fractures or bony abnormalities"
+      },
+      {
+        "prop_id": "P6",
+        "cap_type": "Finding",
+        "canonical_concept": "physical examination reveals tenderness",
+        "category": "Finding",
+        "speaker": "clinician",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "exam"
+        ],
+        "proposition_text": "Physical examination reveals tenderness to palpation"
+      },
+      {
+        "prop_id": "P7",
+        "cap_type": "Finding",
+        "canonical_concept": "pain",
+        "category": "Finding",
+        "speaker": "clinician",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "exam"
+        ],
+        "proposition_text": "Physical examination reveals pain with joint movement"
+      },
+      {
+        "prop_id": "P9",
+        "cap_type": "Diagnosis",
+        "canonical_concept": "sprain distal interphalangeal joint",
+        "category": "Diagnosis",
+        "speaker": "clinician",
+        "predicate": "diagnoses",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "diagnostic"
+        ],
+        "proposition_text": "The patient has a sprain of the distal interphalangeal joint of the right index finger"
+      },
+      {
+        "prop_id": "P10",
+        "cap_type": "MedicationPlan",
+        "canonical_concept": "prescribes strong antiinflammatory medication",
+        "category": "MedicationPlan",
+        "speaker": "clinician",
+        "predicate": "prescribes",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "medication"
+        ],
+        "proposition_text": "The clinician prescribes a strong antiinflammatory medication, mobic, at 15 mg once daily"
+      },
+      {
+        "prop_id": "P12",
+        "cap_type": "FollowUpPlan",
+        "canonical_concept": "schedules follow-up appointment two",
+        "category": "FollowUpPlan",
+        "speaker": "clinician",
+        "predicate": "plans",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "future",
+        "claim_type_tags": [
+          "followup"
+        ],
+        "proposition_text": "The clinician schedules a follow-up appointment in two weeks to assess healing"
+      }
+    ],
+    "missing_source_props": [
+      {
+        "prop_id": "CAP4",
+        "cap_type": "Problem",
+        "canonical_concept": "no injury",
+        "category": "Problem",
+        "speaker": "patient",
+        "predicate": "denies",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "past",
+        "proposition_text": "The patient denies any other injuries."
+      },
+      {
+        "prop_id": "CAP5",
+        "cap_type": "Problem",
+        "canonical_concept": "hand injury",
+        "category": "Problem",
+        "speaker": "patient",
+        "status": "uncertain",
+        "visit_state": "historical",
+        "temporality": "past",
+        "proposition_text": "The patient sustained an injury."
+      },
+      {
+        "prop_id": "CAP6",
+        "cap_type": "Symptom",
+        "canonical_concept": "constipation",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports chronic constipation."
+      },
+      {
+        "prop_id": "CAP8",
+        "cap_type": "Order",
+        "canonical_concept": "splint",
+        "category": "Order",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "planned",
+        "temporality": "soon",
+        "proposition_text": "A splint will be applied to the finger."
+      },
+      {
+        "prop_id": "CAP9",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "mobic",
+        "category": "MedicationStatement",
+        "speaker": "doctor",
+        "predicate": "has",
+        "status": "affirmed",
+        "visit_state": "planned",
+        "temporality": "daily",
+        "claim_type_tags": [
+          "quantitative"
+        ],
+        "proposition_text": "The patient will take 15 milligrams of mobic once a day."
+      },
+      {
+        "prop_id": "CAP10",
+        "cap_type": "FollowUp",
+        "canonical_concept": "hand therapy",
+        "category": "FollowUp",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "planned",
+        "temporality": "in two weeks",
+        "proposition_text": "The doctor wants the patient to return in two weeks."
+      },
+      {
+        "prop_id": "CAP12",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "mobic",
+        "category": "MedicationStatement",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "planned",
+        "temporality": "future",
+        "proposition_text": "The doctor will prescribe mobic."
+      },
+      {
+        "prop_id": "CAP13",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "miralax",
+        "category": "MedicationStatement",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient takes miralax."
+      }
+    ]
+  },
+  "reference_gpt_f1_items": {
+    "active_problems_symptoms": [
+      "Right index finger pain",
+      "Chronic constipation",
+      "pain to palpation of the MCP and DIP joints",
+      "DIP joint sprain"
+    ],
+    "negated_findings": [
+      "Denies icing",
+      "Denies wearing a splint",
+      "no obvious signs of fracture"
+    ],
+    "uncertain_findings": [],
+    "medication_treatment": [
+      "MiraLAX",
+      "prescription is provided for Mobic 15 mg once a day"
+    ],
+    "plan_followup": [
+      "recommended a splint",
+      "she will follow up with me in 2 weeks for a repeat evaluation",
+      "If she is unimproved, we will consider hand therapy at that time"
+    ],
+    "_chunk_count": [
+      "2"
+    ]
+  },
+  "summary_gpt_f1_items": {
+    "active_problems_symptoms": [],
+    "negated_findings": [],
+    "uncertain_findings": [],
+    "medication_treatment": [],
+    "plan_followup": [],
+    "_chunk_count": [
+      "1"
+    ]
+  },
+  "gpt_f1_alignment": {
+    "by_category": {
+      "active_problems_symptoms": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "matched_count": 0,
+        "pred_count": 0,
+        "ref_count": 4,
+        "matches": [],
+        "unsupported_pred_items": [],
+        "missing_ref_items": [
+          "Right index finger pain",
+          "Chronic constipation",
+          "pain to palpation of the MCP and DIP joints",
+          "DIP joint sprain"
+        ]
+      },
+      "negated_findings": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "matched_count": 0,
+        "pred_count": 0,
+        "ref_count": 3,
+        "matches": [],
+        "unsupported_pred_items": [],
+        "missing_ref_items": [
+          "Denies icing",
+          "Denies wearing a splint",
+          "no obvious signs of fracture"
+        ]
+      },
+      "uncertain_findings": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "matched_count": 0,
+        "pred_count": 0,
+        "ref_count": 0,
+        "matches": [],
+        "unsupported_pred_items": [],
+        "missing_ref_items": []
+      },
+      "medication_treatment": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "matched_count": 0,
+        "pred_count": 0,
+        "ref_count": 2,
+        "matches": [],
+        "unsupported_pred_items": [],
+        "missing_ref_items": [
+          "MiraLAX",
+          "prescription is provided for Mobic 15 mg once a day"
+        ]
+      },
+      "plan_followup": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "matched_count": 0,
+        "pred_count": 0,
+        "ref_count": 3,
+        "matches": [],
+        "unsupported_pred_items": [],
+        "missing_ref_items": [
+          "recommended a splint",
+          "she will follow up with me in 2 weeks for a repeat evaluation",
+          "If she is unimproved, we will consider hand therapy at that time"
+        ]
+      }
+    }
+  },
+  "reference_nair_concepts": {
+    "sections": [
+      {
+        "heading": "CC",
+        "section_value": "Right index finger pain.",
+        "medical_concepts": [
+          "right index finger pain"
+        ]
+      },
+      {
+        "heading": "HPI",
+        "section_value": "Ms. James is a 42-year-old female who presents today for an evaluation of right index finger pain. She states she injured it while skiing. She states she fell and jammed her finger. She took Ibuprofen on but it did not help her. She denies any icing it or wearing a splint. She rates her pain 7/10.",
+        "medical_concepts": [
+          "right index finger pain",
+          "finger injury",
+          "Ibuprofen",
+          "pain severity 7/10"
+        ]
+      },
+      {
+        "heading": "CURRENT MEDICATIONS",
+        "section_value": "MiraLAX",
+        "medical_concepts": [
+          "MiraLAX"
+        ]
+      },
+      {
+        "heading": "PAST MEDICAL HISTORY",
+        "section_value": "Chronic constipation",
+        "medical_concepts": [
+          "chronic constipation"
+        ]
+      },
+      {
+        "heading": "PAST SURGICAL HISTORY",
+        "section_value": "Appendectomy at age 7.\nEXAM\nExamination of the right hand reveals pain to palpation of the MCP and DIP joints.\nRESULTS\nX-rays of the right index finger show no obvious signs of fracture.\nIMPRESSION\nRight index finger DIP joint sprain.\nPLAN\nAt this point, I discussed the diagnosis and treatment options with the patient. I have recommended a splint. A prescription is provided for Mobic 15 mg once a day, dispense 14. She will follow up with me in 2 weeks for a repeat evaluation. If she is unimproved, we will consider hand therapy at that time. All questions were answered.",
+        "medical_concepts": [
+          "appendectomy",
+          "pain",
+          "metacarpophalangeal joint",
+          "distal interphalangeal joint",
+          "x-ray",
+          "fracture",
+          "distal interphalangeal joint sprain",
+          "splint",
+          "Mobic",
+          "hand therapy"
+        ]
+      }
+    ],
+    "medical_concepts": [
+      "right index finger pain",
+      "finger injury",
+      "Ibuprofen",
+      "pain severity 7/10",
+      "MiraLAX",
+      "chronic constipation",
+      "appendectomy",
+      "pain",
+      "metacarpophalangeal joint",
+      "distal interphalangeal joint",
+      "x-ray",
+      "fracture",
+      "distal interphalangeal joint sprain",
+      "splint",
+      "Mobic",
+      "hand therapy"
+    ],
+    "section_count": 5
+  },
+  "summary_nair_concepts": {
+    "sections": [
+      {
+        "heading": "S",
+        "section_value": "The patient reports finger pain following a skiing accident five days ago, rated as a 7/10. He took ibuprofen without significant relief. He denies any other injuries sustained during the incident. The patient also reports chronic constipation and takes miralax. He had an appendectomy at age seven. He reports no other surgeries.",
+        "medical_concepts": [
+          "finger pain",
+          "skiing accident",
+          "ibuprofen",
+          "constipation",
+          "miralax",
+          "appendectomy"
+        ]
+      },
+      {
+        "heading": "O",
+        "section_value": "The right index finger x-ray demonstrates no fractures or bony abnormalities. Physical examination reveals tenderness to palpation, pain with joint movement, and pain with compression of the DIP joint. Vital signs are within normal limits.",
+        "medical_concepts": [
+          "right index finger x-ray",
+          "fracture",
+          "bony abnormality",
+          "tenderness to palpation",
+          "joint pain",
+          "pain with joint movement",
+          "pain with compression of the DIP joint",
+          "vital signs"
+        ]
+      },
+      {
+        "heading": "A",
+        "section_value": "The patient has a sprain of the distal interphalangeal joint of the right index finger. This is supported by the physical exam and x-ray findings.",
+        "medical_concepts": [
+          "sprain of the distal interphalangeal joint of the right index finger",
+          "physical exam",
+          "x-ray"
+        ]
+      },
+      {
+        "heading": "P",
+        "section_value": "Rescribe a strong antiinflammatory medication, mobic, at 15 mg once daily. Order a splint for the right index finger. Schedule a follow-up appointment in two weeks to assess healing. Arrange for hand therapy if needed at that time. Dragon, please order the medications and procedures mentioned.",
+        "medical_concepts": [
+          "antiinflammatory medication",
+          "mobic",
+          "15 mg once daily",
+          "splint",
+          "right index finger",
+          "follow-up appointment",
+          "hand therapy"
+        ]
+      }
+    ],
+    "medical_concepts": [
+      "finger pain",
+      "skiing accident",
+      "ibuprofen",
+      "constipation",
+      "miralax",
+      "appendectomy",
+      "right index finger x-ray",
+      "fracture",
+      "bony abnormality",
+      "tenderness to palpation",
+      "joint pain",
+      "pain with joint movement",
+      "pain with compression of the DIP joint",
+      "vital signs",
+      "sprain of the distal interphalangeal joint of the right index finger",
+      "physical exam",
+      "x-ray",
+      "antiinflammatory medication",
+      "mobic",
+      "15 mg once daily",
+      "splint",
+      "right index finger",
+      "follow-up appointment",
+      "hand therapy"
+    ],
+    "section_count": 4
+  },
+  "nair_alignment": {
+    "pred_concepts": [
+      "finger pain",
+      "skiing accident",
+      "ibuprofen",
+      "constipation",
+      "miralax",
+      "appendectomy",
+      "right index finger x-ray",
+      "fracture",
+      "bony abnormality",
+      "tenderness to palpation",
+      "joint pain",
+      "pain with joint movement",
+      "pain with compression of the DIP joint",
+      "vital signs",
+      "sprain of the distal interphalangeal joint of the right index finger",
+      "physical exam",
+      "x-ray",
+      "antiinflammatory medication",
+      "mobic",
+      "15 mg once daily",
+      "splint",
+      "right index finger",
+      "follow-up appointment",
+      "hand therapy"
+    ],
+    "ref_concepts": [
+      "right index finger pain",
+      "finger injury",
+      "Ibuprofen",
+      "pain severity 7/10",
+      "MiraLAX",
+      "chronic constipation",
+      "appendectomy",
+      "pain",
+      "metacarpophalangeal joint",
+      "distal interphalangeal joint",
+      "x-ray",
+      "fracture",
+      "distal interphalangeal joint sprain",
+      "splint",
+      "Mobic",
+      "hand therapy"
+    ],
+    "precision_alignment": {
+      "found_b": [
+        "finger pain",
+        "skiing accident",
+        "ibuprofen",
+        "constipation",
+        "miralax",
+        "appendectomy",
+        "right index finger x-ray",
+        "fracture",
+        "tenderness to palpation",
+        "joint pain",
+        "sprain of the distal interphalangeal joint of the right index finger",
+        "physical exam",
+        "x-ray",
+        "antiinflammatory medication",
+        "mobic",
+        "15 mg once daily",
+        "splint",
+        "right index finger",
+        "follow-up appointment",
+        "hand therapy"
+      ],
+      "not_found_b": [
+        "bony abnormality",
+        "pain with joint movement",
+        "pain with compression of the DIP joint",
+        "vital signs"
+      ],
+      "chunk_count": 1,
+      "chunk_results": [
+        {
+          "found_b": [
+            "finger pain",
+            "skiing accident",
+            "ibuprofen",
+            "constipation",
+            "miralax",
+            "appendectomy",
+            "right index finger x-ray",
+            "fracture",
+            "tenderness to palpation",
+            "joint pain",
+            "sprain of the distal interphalangeal joint of the right index finger",
+            "physical exam",
+            "x-ray",
+            "antiinflammatory medication",
+            "mobic",
+            "15 mg once daily",
+            "splint",
+            "right index finger",
+            "follow-up appointment",
+            "hand therapy"
+          ],
+          "not_found_b": [
+            "bony abnormality",
+            "pain with joint movement",
+            "pain with compression of the DIP joint",
+            "vital signs"
+          ]
+        }
+      ]
+    },
+    "recall_alignment": {
+      "found_b": [
+        "right index finger pain",
+        "finger injury",
+        "Ibuprofen",
+        "pain severity 7/10",
+        "MiraLAX",
+        "chronic constipation",
+        "appendectomy",
+        "pain",
+        "distal interphalangeal joint",
+        "x-ray",
+        "fracture",
+        "distal interphalangeal joint sprain",
+        "splint",
+        "Mobic",
+        "hand therapy"
+      ],
+      "not_found_b": [
+        "metacarpophalangeal joint"
+      ],
+      "chunk_count": 1,
+      "chunk_results": [
+        {
+          "found_b": [
+            "right index finger pain",
+            "finger injury",
+            "Ibuprofen",
+            "pain severity 7/10",
+            "MiraLAX",
+            "chronic constipation",
+            "appendectomy",
+            "pain",
+            "distal interphalangeal joint",
+            "x-ray",
+            "fracture",
+            "distal interphalangeal joint sprain",
+            "splint",
+            "Mobic",
+            "hand therapy"
+          ],
+          "not_found_b": [
+            "metacarpophalangeal joint"
+          ]
+        }
+      ]
+    }
+  },
+  "semantic_cap_audit": {
+    "source_cap_recall": [
+      {
+        "cap_id": "P1",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P2",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P3",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P4",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P5",
+        "judgment": "contradicted",
+        "reason": null
+      },
+      {
+        "cap_id": "P6",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P7",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P8",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P9",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P10",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P11",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P12",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P13",
+        "judgment": "supported",
+        "reason": null
+      }
+    ],
+    "summary_cap_precision": [
+      {
+        "cap_id": "P1",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P2",
+        "judgment": "unsupported",
+        "reason": null
+      },
+      {
+        "cap_id": "P3",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P4",
+        "judgment": "unsupported",
+        "reason": null
+      },
+      {
+        "cap_id": "P5",
+        "judgment": "unsupported",
+        "reason": null
+      },
+      {
+        "cap_id": "P6",
+        "judgment": "unsupported",
+        "reason": null
+      },
+      {
+        "cap_id": "P7",
+        "judgment": "unsupported",
+        "reason": null
+      },
+      {
+        "cap_id": "P8",
+        "judgment": "unsupported",
+        "reason": null
+      },
+      {
+        "cap_id": "P9",
+        "judgment": "unsupported",
+        "reason": null
+      },
+      {
+        "cap_id": "P10",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P11",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P12",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P13",
+        "judgment": "unsupported",
+        "reason": null
+      }
+    ],
+    "metrics": {
+      "semantic_cap_precision": 0.3077,
+      "semantic_cap_recall": 0.7692,
+      "semantic_cap_f1": 0.4396,
+      "semantic_cap_precision_supported_count": 3,
+      "semantic_cap_precision_partial_count": 2,
+      "semantic_cap_precision_denominator": 13,
+      "semantic_cap_recall_supported_count": 8,
+      "semantic_cap_recall_partial_count": 4,
+      "semantic_cap_recall_denominator": 13,
+      "semantic_cap_low_value_source_count": 0,
+      "semantic_cap_low_value_summary_count": 0,
+      "semantic_cap_missing_count": 0,
+      "semantic_cap_unsupported_count": 8,
+      "semantic_cap_contradicted_source_count": 1,
+      "semantic_cap_contradicted_summary_count": 0
+    }
+  },
+  "safety_judgment": null,
+  "section_judgment": {
+    "section_miscategorizations": [],
+    "summary_statistics": {
+      "section_appropriateness_score": 1.0,
+      "section_miscategorization_count": 0,
+      "major_section_miscategorization_count": 0
+    }
+  },
+  "pdsqi_judgment": {
+    "citation_applicable": 0,
+    "citation": 0,
+    "accurate": 4,
+    "thorough": 4,
+    "useful": 4,
+    "organized": 5,
+    "comprehensible": 5,
+    "succinct": 5,
+    "abstraction": 1,
+    "synthesized": 4,
+    "voice_summ": 0,
+    "voice_note": 0,
+    "pdsqi_core_mean": 4.4286
+  },
+  "llm_checklist_judgment": {
+    "content_preservation_core": 4,
+    "noise_suppression": 5,
+    "lay_expression_preservation": 4,
+    "state_update_fidelity": 5,
+    "temporality_preservation": 5,
+    "problem_evidence_linkage": 5,
+    "state_plan_separation": 4,
+    "section_organization_appropriateness": 4,
+    "overall_clinical_usability": 4,
+    "clinically_meaningful_omission": "No",
+    "clinically_concerning_hallucination": "Yes",
+    "checklist_a_mean": 4.3333,
+    "checklist_b_mean": 5.0,
+    "checklist_c_mean": 4.3333,
+    "llm_checklist_abc_mean": 4.5,
+    "llm_checklist_mean_no_usability": 4.5,
+    "llm_checklist_total_score": 40,
+    "llm_checklist_mean": 4.4444,
+    "llm_checklist_meaningful_omission_yes": 0,
+    "llm_checklist_concerning_hallucination_yes": 1
+  },
+  "metrics": {
+    "case_id": "D2N094",
+    "method": "medsum_ent",
+    "template": "soap",
+    "source_cap_count": 13,
+    "event_plan_count": null,
+    "summary_cap_count": 13,
+    "cap_matched_count": 5,
+    "cap_precision": 0.3846,
+    "cap_recall": 0.3846,
+    "cap_f1": 0.3846,
+    "unsupported_summary_cap_count": 8,
+    "missing_source_cap_count": 8,
+    "summary_runtime_seconds": null,
+    "summary_cap_runtime_seconds": 31.337,
+    "event_plan_runtime_seconds": null,
+    "rouge_l_f1_vs_reference": 0.2674,
+    "token_f1_vs_reference": 0.4651,
+    "gptf1_macro_f1": 0.0,
+    "nair_gpt_precision": 0.8333,
+    "nair_gpt_recall": 0.9375,
+    "nair_gpt_f1": 0.8824,
+    "semantic_cap_precision": 0.3077,
+    "semantic_cap_recall": 0.7692,
+    "semantic_cap_f1": 0.4396,
+    "hallucination_count": null,
+    "major_hallucination_count": null,
+    "omission_count": null,
+    "major_omission_count": null,
+    "section_appropriateness_score": 1.0,
+    "section_miscategorization_count": 0,
+    "major_section_miscategorization_count": 0,
+    "pdsqi_core_mean": 4.4286,
+    "pdsqi_accurate": 4,
+    "pdsqi_thorough": 4,
+    "llm_checklist_total_score": 40,
+    "llm_checklist_mean": 4.4444,
+    "llm_checklist_mean_no_usability": 4.5,
+    "checklist_a_mean": 4.3333,
+    "checklist_b_mean": 5.0,
+    "checklist_c_mean": 4.3333,
+    "llm_checklist_abc_mean": 4.5,
+    "content_preservation_core": 4,
+    "noise_suppression": 5,
+    "lay_expression_preservation": 4,
+    "state_update_fidelity": 5,
+    "temporality_preservation": 5,
+    "problem_evidence_linkage": 5,
+    "state_plan_separation": 4,
+    "section_organization_appropriateness": 4,
+    "overall_clinical_usability": 4,
+    "llm_checklist_meaningful_omission_yes": 0,
+    "llm_checklist_concerning_hallucination_yes": 1,
+    "gptf1_active_problems_symptoms_precision": 0.0,
+    "gptf1_active_problems_symptoms_recall": 0.0,
+    "gptf1_active_problems_symptoms_f1": 0.0,
+    "gptf1_active_problems_symptoms_pred_count": 0,
+    "gptf1_active_problems_symptoms_ref_count": 4,
+    "gptf1_negated_findings_precision": 0.0,
+    "gptf1_negated_findings_recall": 0.0,
+    "gptf1_negated_findings_f1": 0.0,
+    "gptf1_negated_findings_pred_count": 0,
+    "gptf1_negated_findings_ref_count": 3,
+    "gptf1_uncertain_findings_precision": 0.0,
+    "gptf1_uncertain_findings_recall": 0.0,
+    "gptf1_uncertain_findings_f1": 0.0,
+    "gptf1_uncertain_findings_pred_count": 0,
+    "gptf1_uncertain_findings_ref_count": 0,
+    "gptf1_medication_treatment_precision": 0.0,
+    "gptf1_medication_treatment_recall": 0.0,
+    "gptf1_medication_treatment_f1": 0.0,
+    "gptf1_medication_treatment_pred_count": 0,
+    "gptf1_medication_treatment_ref_count": 2,
+    "gptf1_plan_followup_precision": 0.0,
+    "gptf1_plan_followup_recall": 0.0,
+    "gptf1_plan_followup_f1": 0.0,
+    "gptf1_plan_followup_pred_count": 0,
+    "gptf1_plan_followup_ref_count": 3,
+    "nair_pred_concept_count": 24,
+    "nair_ref_concept_count": 16,
+    "nair_precision_match_count": 20,
+    "nair_recall_match_count": 15,
+    "semantic_cap_precision_supported_count": 3,
+    "semantic_cap_precision_partial_count": 2,
+    "semantic_cap_precision_denominator": 13,
+    "semantic_cap_recall_supported_count": 8,
+    "semantic_cap_recall_partial_count": 4,
+    "semantic_cap_recall_denominator": 13,
+    "semantic_cap_low_value_source_count": 0,
+    "semantic_cap_low_value_summary_count": 0,
+    "semantic_cap_missing_count": 0,
+    "semantic_cap_unsupported_count": 8,
+    "semantic_cap_contradicted_source_count": 1,
+    "semantic_cap_contradicted_summary_count": 0,
+    "pdsqi_useful": 4,
+    "pdsqi_organized": 5,
+    "pdsqi_comprehensible": 5,
+    "pdsqi_succinct": 5,
+    "pdsqi_synthesized": 4
+  }
+}

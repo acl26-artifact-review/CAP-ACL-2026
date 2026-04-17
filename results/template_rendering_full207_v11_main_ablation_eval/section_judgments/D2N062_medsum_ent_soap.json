@@ -1,0 +1,30 @@
+{
+  "section_miscategorizations": [
+    {
+      "text": "An upper endoscopy is scheduled.",
+      "current_section": "O",
+      "expected_section": "P",
+      "severity": "major",
+      "reason": "Scheduling an upper endoscopy is a management action/plan item, not an already-performed procedure or observed finding."
+    },
+    {
+      "text": "Cute esophagitis is suspected based on the patient's reported symptoms and barium swallow findings.",
+      "current_section": "A",
+      "expected_section": "O",
+      "severity": "major",
+      "reason": "This sentence references barium swallow findings, which are objective test results and belong in the Objective section; the diagnostic impression of esophagitis itself is appropriate for Assessment, but the explicit mention of test findings is miscategorized."
+    },
+    {
+      "text": "Schedule an upper endoscopy for follow-up.",
+      "current_section": "P",
+      "expected_section": "P",
+      "severity": "minor",
+      "reason": "This is correctly a plan item, but it duplicates the earlier miscategorized statement in O; organizationally it would be clearer to keep the scheduling action only in the Plan section."
+    }
+  ],
+  "summary_statistics": {
+    "section_appropriateness_score": 0.7,
+    "section_miscategorization_count": 3,
+    "major_section_miscategorization_count": 2
+  }
+}

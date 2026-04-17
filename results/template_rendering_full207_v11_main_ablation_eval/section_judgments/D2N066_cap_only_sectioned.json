@@ -1,0 +1,44 @@
+{
+  "section_miscategorizations": [
+    {
+      "text": "The patient has diabetes.",
+      "current_section": "A",
+      "expected_section": "H",
+      "severity": "minor",
+      "reason": "Past medical history is typically documented in the history (HPI/past history) section; in Assessment it would usually be framed as an active problem with some interpretive context. As written, it reads more like background history than diagnostic synthesis."
+    },
+    {
+      "text": "The patient will take metformin 500 milligrams twice a day.",
+      "current_section": "P",
+      "expected_section": "A",
+      "severity": "major",
+      "reason": "This is a continuation of an existing chronic medication (metformin) without any stated change; as written it describes current regimen rather than a new plan. It belongs with current medication state, not as a new treatment order."
+    },
+    {
+      "text": "The patient will take hydrochlorothiazide 10 milligrams once a day.",
+      "current_section": "P",
+      "expected_section": "A",
+      "severity": "major",
+      "reason": "Similar to the metformin statement, this reads as the patient's ongoing regimen rather than a new change or order. Without explicit change, it functions as current medication information, not a plan item."
+    },
+    {
+      "text": "The patient is taking metformin.",
+      "current_section": "P",
+      "expected_section": "H",
+      "severity": "major",
+      "reason": "This clearly describes current medication state, which belongs in the history (HPI/medication history) rather than in the Plan, which should focus on changes, orders, and instructions."
+    },
+    {
+      "text": "The patient is taking norvasc 5 milligrams once a day.",
+      "current_section": "P",
+      "expected_section": "H",
+      "severity": "major",
+      "reason": "This is current medication information, not a new order or change. It should be documented in the history/medication history rather than in the Plan section."
+    }
+  ],
+  "summary_statistics": {
+    "section_appropriateness_score": 0.7,
+    "section_miscategorization_count": 5,
+    "major_section_miscategorization_count": 4
+  }
+}

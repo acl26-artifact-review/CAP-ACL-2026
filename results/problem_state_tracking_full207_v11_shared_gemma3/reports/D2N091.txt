@@ -1,0 +1,66 @@
+Case: D2N091
+
+Problem List and Visit State Tracking
+
+Problem List
+- pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T5
+  Summary: The patient reports pain in the left hand.
+  ClusterId: CL1
+  TemporalProfile: current
+  Updates:
+  - CAP2: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T5 :: The patient reports pain in the left hand.
+- insomnia | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T24,T5
+  Summary: The patient reports lack of sleep.
+  ClusterId: CL2
+  TemporalProfile: current
+  Updates:
+  - CAP4: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T5 :: The patient reports lack of sleep.
+  - CAP6: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T24 :: The patient reports insomnia.
+- stress | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T5
+  Summary: The patient reports a stressful summer.
+  ClusterId: CL3
+  TemporalProfile: recent
+  Updates:
+  - CAP10: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=recent turns=T5 :: The patient reports a stressful summer.
+- joint pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T9
+  Summary: The patient reports issues with their joints.
+  ClusterId: CL4
+  TemporalProfile: current
+  Updates:
+  - CAP3: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T9 :: The patient reports issues with their joints.
+- knee surgery | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T22
+  Summary: The patient has a lingering issue with their knee surgery.
+  ClusterId: CL6
+  TemporalProfile: current
+  Updates:
+  - CAP1: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=current turns=T22 :: The patient has a lingering issue with their knee surgery.
+- chest pain | verification_status=refuted | clinical_status=historical | modalities=interview | speakers=patient | evidence=T28
+  Summary: The patient denies chest pain.
+  ClusterId: CL7
+  TemporalProfile: current
+  Updates:
+  - CAP5: content_source=patient modality=interview verification_status=refuted clinical_status=historical temporality=current turns=T28 :: The patient denies chest pain.
+
+Medication Tracking
+- [MedicationState] fosamax | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T9
+  Summary: The patient is taking fosamax.
+  ClusterId: CL5
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient is taking fosamax. (T9)
+  Updates:
+  - CAP9: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T9 :: The patient is taking fosamax.
+- [MedicationChange] fosamax | verification_status=confirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T37
+  Summary: The doctor will continue the patient on fosamax.
+  ClusterId: CL9
+  TemporalProfile: future
+  PlannedChanges:
+  - The doctor will continue the patient on fosamax. (T37)
+  Updates:
+  - CAP8: content_source=doctor modality=plan verification_status=confirmed clinical_status=planned temporality=future turns=T37 :: The doctor will continue the patient on fosamax.
+
+Other Structured States
+- [Plan] refill | verification_status=confirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T37
+  Summary: The doctor will order a refill on fosamax.
+  ClusterId: CL8
+  TemporalProfile: future

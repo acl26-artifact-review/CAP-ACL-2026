@@ -1,0 +1,271 @@
+Case: D2N031
+
+Problem List and Visit State Tracking
+
+Problem List
+- hand pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T19,T2,T27
+  Summary: The patient reports pain in the left hand.
+  ClusterId: CL1
+  TemporalProfile: current
+  Updates:
+  - CAP7: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T2 :: The patient reports pain in the left hand.
+  - CAP26: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T19 :: The patient reports pain.
+  - CAP27: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T27 :: The patient reports pain.
+  - CAP8: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T27 :: The patient reports pain in the left hand.
+- breast cancer | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T8
+  Summary: The patient had a right breast lumpectomy last year.
+  ClusterId: CL2
+  TemporalProfile: historical
+  Updates:
+  - CAP5: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=historical turns=T8 :: The patient had a right breast lumpectomy last year.
+- malignancy | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T18
+  Summary: The polyp was not malignant.
+  ClusterId: CL4
+  TemporalProfile: 2018
+  Updates:
+  - CAP19: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=2018 turns=T18 :: The polyp was not malignant.
+- benign tubular adenoma | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T19,T27
+  Summary: The polyp was a benign tubular adenoma.
+  ClusterId: CL5
+  TemporalProfile: 2018, past
+  Updates:
+  - CAP11: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=2018 turns=T19 :: The polyp was a benign tubular adenoma.
+  - CAP12: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=past turns=T27 :: The polyp was a benign tubular adenoma.
+- polyp | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T27
+  Summary: The patient had one polyp in the sigmoid colon in 2018.
+  ClusterId: CL7
+  TemporalProfile: 2018, past
+  Updates:
+  - CAP2: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=2018 turns=T27 :: The patient had one polyp in the sigmoid colon in 2018.
+  - CAP9: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=past turns=T27 :: The patient had a polyp removed in 2018.
+- miscarriage | verification_status=unconfirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T27
+  Summary: The patient experienced miscarriages.
+  ClusterId: CL8
+  TemporalProfile: past
+  Updates:
+  - CAP28: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=past turns=T27 :: The patient experienced miscarriages.
+- termination | verification_status=unconfirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T27
+  Summary: The patient experienced terminations.
+  ClusterId: CL9
+  TemporalProfile: past
+  Updates:
+  - CAP29: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=past turns=T27 :: The patient experienced terminations.
+- menstruation | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T29
+  Summary: The patient's last menstrual period was approximately 30 years ago.
+  ClusterId: CL10
+  TemporalProfile: approximately 30 years ago
+  Updates:
+  - CAP3: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=approximately 30 years ago turns=T29 :: The patient's last menstrual period was approximately 30 years ago.
+- back pain | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T40
+  Summary: The patient reports back pain.
+  ClusterId: CL18
+  TemporalProfile: current
+  Updates:
+  - CAP20: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T40 :: The patient reports back pain.
+- joint pain | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T40
+  Summary: The patient reports joint pain.
+  ClusterId: CL19
+  TemporalProfile: current
+  Updates:
+  - CAP21: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T40 :: The patient reports joint pain.
+- high cholesterol | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T41
+  Summary: The patient has a new diagnosis of high cholesterol.
+  ClusterId: CL20
+  TemporalProfile: new
+  Updates:
+  - CAP6: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=new turns=T41 :: The patient has a new diagnosis of high cholesterol.
+- chest pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T45
+  Summary: The patient reports chest pain.
+  ClusterId: CL21
+  TemporalProfile: current
+  Updates:
+  - CAP22: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T45 :: The patient reports chest pain.
+- tubes tied | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T47
+  Summary: The patient had tubes tied.
+  ClusterId: CL23
+  TemporalProfile: past
+  Updates:
+  - CAP48: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=past turns=T47 :: The patient had tubes tied.
+- prostate cancer | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T49
+  Summary: The patient's father had prostate cancer.
+  ClusterId: CL24
+  TemporalProfile: past
+  Updates:
+  - CAP44: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=past turns=T49 :: The patient's father had prostate cancer.
+- non-hodgkin's lymphoma | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T49
+  Summary: The patient's mother had non-Hodgkin's lymphoma.
+  ClusterId: CL25
+  TemporalProfile: past
+  Updates:
+  - CAP45: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=past turns=T49 :: The patient's mother had non-Hodgkin's lymphoma.
+- heart disease | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T49
+  Summary: The patient's father had heart disease.
+  ClusterId: CL26
+  TemporalProfile: past
+  Updates:
+  - CAP46: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=past turns=T49 :: The patient's father had heart disease.
+- penicillin | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T57
+  Summary: The patient is allergic to penicillin.
+  ClusterId: CL27
+  TemporalProfile: current
+  Updates:
+  - CAP47: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T57 :: The patient is allergic to penicillin.
+- breast skin thickening | verification_status=confirmed | clinical_status=active | modalities=assessment | speakers=doctor | evidence=T59
+  Summary: The patient has skin thickening at the medial inferior aspect of the right breast.
+  ClusterId: CL28
+  TemporalProfile: current
+  Updates:
+  - CAP1: content_source=doctor modality=assessment verification_status=confirmed clinical_status=active temporality=current turns=T59 :: The patient has skin thickening at the medial inferior aspect of the right breast.
+- invasive ductal carcinoma | verification_status=confirmed | clinical_status=historical | modalities=assessment,interview | speakers=doctor | evidence=T65
+  Summary: The patient has invasive ductal carcinoma.
+  ClusterId: CL32
+  TemporalProfile: past
+  Updates:
+  - CAP4: content_source=doctor modality=interview verification_status=confirmed clinical_status=historical temporality=past turns=T65 :: The patient has invasive ductal carcinoma of the right breast.
+  - CAP15: content_source=doctor modality=assessment verification_status=confirmed clinical_status=historical temporality=past turns=T65 :: The patient has invasive ductal carcinoma.
+- negative mammogram | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=doctor | evidence=T65
+  Summary: The patient's mammogram in January 2021 was negative.
+  ClusterId: CL33
+  TemporalProfile: past
+  Updates:
+  - CAP10: content_source=doctor modality=interview verification_status=confirmed clinical_status=historical temporality=past turns=T65 :: The patient's mammogram in January 2021 was negative.
+- dcis | verification_status=confirmed | clinical_status=historical | modalities=assessment | speakers=doctor | evidence=T65
+  Summary: The patient has stage zero DCIS.
+  ClusterId: CL34
+  TemporalProfile: past
+  Updates:
+  - CAP13: content_source=doctor modality=assessment verification_status=confirmed clinical_status=historical temporality=past turns=T65 :: The patient has stage zero DCIS.
+- er/pr positive | verification_status=confirmed | clinical_status=historical | modalities=assessment | speakers=doctor | evidence=T65
+  Summary: The patient's tumor is ER/PR positive.
+  ClusterId: CL35
+  TemporalProfile: past
+  Updates:
+  - CAP14: content_source=doctor modality=assessment verification_status=confirmed clinical_status=historical temporality=past turns=T65 :: The patient's tumor is ER/PR positive.
+- benign lymph nodes | verification_status=confirmed | clinical_status=historical | modalities=assessment | speakers=doctor | evidence=T65
+  Summary: The patient's lymph nodes were benign.
+  ClusterId: CL36
+  TemporalProfile: past
+  Updates:
+  - CAP16: content_source=doctor modality=assessment verification_status=confirmed clinical_status=historical temporality=past turns=T65 :: The patient's lymph nodes were benign.
+- stage zero | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=doctor | evidence=T65
+  Summary: The patient's DCIS is stage zero.
+  ClusterId: CL37
+  TemporalProfile: past
+  Updates:
+  - CAP17: content_source=doctor modality=interview verification_status=confirmed clinical_status=historical temporality=past turns=T65 :: The patient's DCIS is stage zero.
+- lumpectomy | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=doctor | evidence=T65
+  Summary: The patient underwent a lumpectomy.
+  ClusterId: CL38
+  TemporalProfile: past
+  Updates:
+  - CAP23: content_source=doctor modality=interview verification_status=confirmed clinical_status=historical temporality=past turns=T65 :: The patient underwent a lumpectomy.
+- radiation therapy | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=doctor | evidence=T65
+  Summary: The patient received radiation therapy.
+  ClusterId: CL39
+  TemporalProfile: past
+  Updates:
+  - CAP24: content_source=doctor modality=interview verification_status=confirmed clinical_status=historical temporality=past turns=T65 :: The patient received radiation therapy.
+- no recurrence | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=doctor | evidence=T69
+  Summary: There is no evidence of recurrence.
+  ClusterId: CL42
+  TemporalProfile: current
+  Updates:
+  - CAP18: content_source=doctor modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T69 :: There is no evidence of recurrence.
+- no endocrine therapy | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=doctor | evidence=T69
+  Summary: The patient declined endocrine therapy.
+  ClusterId: CL43
+  TemporalProfile: past
+  Updates:
+  - CAP25: content_source=doctor modality=interview verification_status=confirmed clinical_status=historical temporality=past turns=T69 :: The patient declined endocrine therapy.
+
+Medication Tracking
+- [MedicationState] hormone replacement therapy | verification_status=unconfirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T38
+  Summary: The patient has been on hormone replacement therapy.
+  ClusterId: CL12
+  TemporalProfile: past
+  CurrentRegimens:
+  - The patient has been on hormone replacement therapy. (T38)
+  Updates:
+  - CAP35: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=past turns=T38 :: The patient has been on hormone replacement therapy.
+- [MedicationState] vitamin d | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T39
+  Summary: The patient takes vitamin d.
+  ClusterId: CL13
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient takes vitamin d. (T39)
+  Updates:
+  - CAP36: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T39 :: The patient takes vitamin d.
+- [MedicationState] vitamin c | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T39
+  Summary: The patient takes vitamin c.
+  ClusterId: CL14
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient takes vitamin c. (T39)
+  Updates:
+  - CAP37: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T39 :: The patient takes vitamin c.
+- [MedicationState] fish oil | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T39
+  Summary: The patient takes fish oil.
+  ClusterId: CL15
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient takes fish oil. (T39)
+  Updates:
+  - CAP38: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T39 :: The patient takes fish oil.
+- [MedicationState] elderberry fruit | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T39
+  Summary: The patient takes elderberry fruit.
+  ClusterId: CL16
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient takes elderberry fruit. (T39)
+  Updates:
+  - CAP39: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T39 :: The patient takes elderberry fruit.
+- [MedicationState] coq10 | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T39
+  Summary: The patient takes coq10.
+  ClusterId: CL17
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient takes coq10. (T39)
+  Updates:
+  - CAP42: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T39 :: The patient takes coq10.
+- [MedicationState] endocrine therapy | verification_status=refuted | clinical_status=historical | modalities=plan | speakers=doctor | evidence=T62
+  Summary: The patient declined endocrine therapy.
+  ClusterId: CL30
+  TemporalProfile: past
+  CurrentRegimens:
+  - The patient declined endocrine therapy. (T62)
+  Updates:
+  - CAP41: content_source=doctor modality=plan verification_status=refuted clinical_status=historical temporality=past turns=T62 :: The patient declined endocrine therapy.
+- [MedicationState] radiation therapy | verification_status=confirmed | clinical_status=historical | modalities=plan | speakers=doctor | evidence=T63
+  Summary: The patient received radiation therapy.
+  ClusterId: CL31
+  TemporalProfile: past
+  CurrentRegimens:
+  - The patient received radiation therapy. (T63)
+  Updates:
+  - CAP40: content_source=doctor modality=plan verification_status=confirmed clinical_status=historical temporality=past turns=T63 :: The patient received radiation therapy.
+
+Other Structured States
+- [ExamFinding] breast calcification | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T8
+  Summary: A calcification was found in the right breast during a mammogram in October 2019.
+  ClusterId: CL3
+  TemporalProfile: October 2019
+- [TestResult] mammogram | verification_status=confirmed | clinical_status=historical | modalities=test_result | speakers=test_result | evidence=T20
+  Summary: The patient's last mammogram was in January 2021 and was normal.
+  ClusterId: CL6
+  TemporalProfile: January 2021
+- [Demographics] number of children | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T31
+  Summary: The patient has five children.
+  ClusterId: CL11
+  TemporalProfile: current
+- [TestResult] ecog performance status | verification_status=confirmed | clinical_status=active | modalities=assessment | speakers=doctor | evidence=T60
+  Summary: The patient's ECOG performance status is zero.
+  ClusterId: CL29
+  TemporalProfile: today
+- [Plan] observe | verification_status=confirmed | clinical_status=planned | modalities=interview | speakers=doctor | evidence=T66
+  Summary: The patient should continue to be observed.
+  ClusterId: CL40
+  TemporalProfile: future
+- [Plan] mammogram | verification_status=confirmed | clinical_status=planned | modalities=interview | speakers=doctor | evidence=T68
+  Summary: The patient should have another mammogram in April 2022.
+  ClusterId: CL41
+  TemporalProfile: future

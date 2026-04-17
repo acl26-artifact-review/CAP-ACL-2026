@@ -1,0 +1,100 @@
+{
+  "caps": [
+    {
+      "cap_id": "CAP1",
+      "cap_type": "Problem",
+      "content_source": "clinician",
+      "modality": "assessment",
+      "canonical_concept": "type 2 diabetes",
+      "verification_status": "confirmed",
+      "clinical_status": "active",
+      "temporality": "current",
+      "proposition_text": "The clinician assesses type 2 diabetes.",
+      "evidence": [
+        {
+          "turn_id": "S22",
+          "turn_speaker": "note",
+          "span_text": "2. Type 2 diabetes.",
+          "char_start": 0,
+          "char_end": 19
+        }
+      ],
+      "assertion": "present",
+      "visit_state": "active",
+      "linked_problem": null
+    },
+    {
+      "cap_id": "CAP2",
+      "cap_type": "Problem",
+      "content_source": "clinician",
+      "modality": "assessment",
+      "canonical_concept": "hypertension",
+      "verification_status": "confirmed",
+      "clinical_status": "active",
+      "temporality": "current",
+      "proposition_text": "The clinician assesses uncontrolled hypertension.",
+      "evidence": [
+        {
+          "turn_id": "S18",
+          "turn_speaker": "note",
+          "span_text": "1. Hypertension, uncontrolled.",
+          "char_start": 0,
+          "char_end": 30
+        }
+      ],
+      "assertion": "present",
+      "visit_state": "active",
+      "linked_problem": null
+    },
+    {
+      "cap_id": "CAP3",
+      "cap_type": "ExamFinding",
+      "content_source": "clinician",
+      "modality": "assessment",
+      "canonical_concept": "Jugular venous distention",
+      "verification_status": "refuted",
+      "clinical_status": "active",
+      "temporality": "current",
+      "proposition_text": "The clinician finds no jugular venous distention.",
+      "evidence": [
+        {
+          "turn_id": "S10",
+          "turn_speaker": "note",
+          "span_text": "- General Examination: No jugular venous distention. No carotid bruits.",
+          "char_start": 0,
+          "char_end": 71
+        }
+      ],
+      "assertion": "absent",
+      "visit_state": "active",
+      "linked_problem": null
+    },
+    {
+      "cap_id": "CAP4",
+      "cap_type": "MedicationStatement",
+      "content_source": "clinician",
+      "modality": "unknown",
+      "canonical_concept": "medication regimen",
+      "verification_status": "confirmed",
+      "clinical_status": "active",
+      "temporality": "current",
+      "proposition_text": "The patient will continue her current medication regimen.",
+      "evidence": [
+        {
+          "turn_id": "S21",
+          "turn_speaker": "note",
+          "span_text": "- Medical Treatment: She will continue her current medication regimen.",
+          "char_start": 0,
+          "char_end": 70
+        }
+      ],
+      "assertion": "present",
+      "visit_state": "active",
+      "linked_problem": null
+    }
+  ],
+  "filtered_nonverifiable_units": [],
+  "chunk_count": 4,
+  "extraction_mode": "single_call",
+  "runtime_seconds": 21.281
+}

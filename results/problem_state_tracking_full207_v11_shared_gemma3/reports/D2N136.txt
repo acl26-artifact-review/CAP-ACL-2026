@@ -1,0 +1,101 @@
+Case: D2N136
+
+Problem List and Visit State Tracking
+
+Problem List
+- stair workouts | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T5
+  Summary: The patient has been doing stair workouts.
+  ClusterId: CL1
+  TemporalProfile: current
+  Updates:
+  - CAP2: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T5 :: The patient has been doing stair workouts.
+- knee pain | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T7,T9
+  Summary: The patient reports knee pain.
+  ClusterId: CL2
+  TemporalProfile: current
+  Updates:
+  - CAP6: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T7 :: The patient reports knee pain.
+  - CAP8: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T9 :: The patient reports pain.
+  - CAP10: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T9 :: The patient reports pain.
+- swelling | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T9
+  Summary: The patient denies swelling in their legs.
+  ClusterId: CL3
+  TemporalProfile: current
+  Updates:
+  - CAP3: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T9 :: The patient denies swelling in their legs.
+- pins and needles | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T9
+  Summary: The patient denies pins and needles.
+  ClusterId: CL4
+  TemporalProfile: current
+  Updates:
+  - CAP4: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T9 :: The patient denies pins and needles.
+- rotator cuff repair | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T11
+  Summary: The patient had a rotator cuff repair two years ago.
+  ClusterId: CL5
+  TemporalProfile: two years ago
+  Updates:
+  - CAP17: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=two years ago turns=T11 :: The patient had a rotator cuff repair two years ago.
+- diabetes | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T19
+  Summary: The patient has diabetes.
+  ClusterId: CL6
+  TemporalProfile: current
+  Updates:
+  - CAP9: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T19 :: The patient has diabetes.
+- high blood pressure | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T25
+  Summary: The patient reports high blood pressure.
+  ClusterId: CL7
+  TemporalProfile: current
+  Updates:
+  - CAP5: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T25 :: The patient reports high blood pressure.
+- joint pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T25
+  Summary: The patient reports joint pain.
+  ClusterId: CL8
+  TemporalProfile: current
+  Updates:
+  - CAP7: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T25 :: The patient reports joint pain.
+- left hand pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T37
+  Summary: The patient reports pain in the left hand.
+  ClusterId: CL10
+  TemporalProfile: current
+  Updates:
+  - CAP1: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T37 :: The patient reports pain in the left hand.
+
+Medication Tracking
+- [MedicationState] norvasc | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=doctor | evidence=T26
+  Summary: The patient is taking norvasc at a dosage of 5 mg per day.
+  ClusterId: CL9
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient is taking norvasc at a dosage of 5 mg per day. (T26)
+  Updates:
+  - CAP14: content_source=doctor modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T26 :: The patient is taking norvasc at a dosage of 5 mg per day.
+- [MedicationState] metformin | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=doctor | evidence=T44
+  Summary: The doctor continued the patient on metformin 500 mg twice a day.
+  ClusterId: CL14
+  TemporalProfile: twice a day
+  CurrentRegimens:
+  - The doctor continued the patient on metformin 500 mg twice a day. (T44)
+  Updates:
+  - CAP15: content_source=doctor modality=interview verification_status=confirmed clinical_status=active temporality=twice a day turns=T44 :: The doctor continued the patient on metformin 500 mg twice a day.
+- [MedicationState] meloxicam | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=doctor | evidence=T44
+  Summary: The doctor ordered meloxicam 15 mg once a day.
+  ClusterId: CL15
+  TemporalProfile: once a day
+  CurrentRegimens:
+  - The doctor ordered meloxicam 15 mg once a day. (T44)
+  Updates:
+  - CAP16: content_source=doctor modality=interview verification_status=confirmed clinical_status=active temporality=once a day turns=T44 :: The doctor ordered meloxicam 15 mg once a day.
+
+Other Structured States
+- [Plan] physical therapy referral | verification_status=confirmed | clinical_status=planned | modalities=interview | speakers=doctor | evidence=T44
+  Summary: The doctor ordered a physical therapy referral.
+  ClusterId: CL11
+  TemporalProfile: soon
+- [Plan] autoimmune profile | verification_status=confirmed | clinical_status=planned | modalities=interview | speakers=doctor | evidence=T44
+  Summary: The doctor ordered an autoimmune profile.
+  ClusterId: CL12
+  TemporalProfile: soon
+- [Plan] lipid profile | verification_status=confirmed | clinical_status=planned | modalities=interview | speakers=doctor | evidence=T44
+  Summary: The doctor ordered a lipid profile.
+  ClusterId: CL13
+  TemporalProfile: soon

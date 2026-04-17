@@ -1,0 +1,72 @@
+Case: D2N011
+
+Problem List and Visit State Tracking
+
+Problem List
+- shortness of breath | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T5
+  Summary: The patient reports shortness of breath.
+  ClusterId: CL1
+  TemporalProfile: current
+  Updates:
+  - CAP1: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T5 :: The patient reports shortness of breath.
+- chest pain | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T15,T5
+  Summary: The patient reports chest pain.
+  ClusterId: CL2
+  TemporalProfile: current
+  Updates:
+  - CAP2: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T5 :: The patient reports chest pain.
+  - CAP3: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T15 :: The patient reports chest pain.
+- yard work | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T5
+  Summary: The patient performed yard work.
+  ClusterId: CL3
+  TemporalProfile: weekend
+  Updates:
+  - CAP10: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=weekend turns=T5 :: The patient performed yard work.
+- heat | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T5
+  Summary: The patient experienced heat.
+  ClusterId: CL4
+  TemporalProfile: weekend
+  Updates:
+  - CAP11: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=weekend turns=T5 :: The patient experienced heat.
+- no other symptoms | verification_status=confirmed | clinical_status=stable | modalities=interview | speakers=patient | evidence=T13
+  Summary: The patient denies other symptoms.
+  ClusterId: CL5
+  TemporalProfile: current
+  Updates:
+  - CAP4: content_source=patient modality=interview verification_status=confirmed clinical_status=stable temporality=current turns=T13 :: The patient denies other symptoms.
+- knee surgery | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T16
+  Summary: The patient had knee surgery a couple months ago.
+  ClusterId: CL6
+  TemporalProfile: couple months ago
+  Updates:
+  - CAP8: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=couple months ago turns=T16 :: The patient had knee surgery a couple months ago.
+- rehab and recovery | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T19
+  Summary: The patient felt no problem in rehab and recovery.
+  ClusterId: CL7
+  TemporalProfile: recent
+  Updates:
+  - CAP9: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=recent turns=T19 :: The patient felt no problem in rehab and recovery.
+
+Medication Tracking
+- [MedicationChange] carvedilol | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T33
+  Summary: The doctor will prescribe carvedilol.
+  ClusterId: CL9
+  TemporalProfile: future
+  PlannedChanges:
+  - The doctor will prescribe carvedilol. (T33)
+  Updates:
+  - CAP6: content_source=doctor modality=plan verification_status=unconfirmed clinical_status=planned temporality=future turns=T33 :: The doctor will prescribe carvedilol.
+- [MedicationChange] lisinopril | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T33
+  Summary: The doctor will prescribe lisinopril.
+  ClusterId: CL10
+  TemporalProfile: future
+  PlannedChanges:
+  - The doctor will prescribe lisinopril. (T33)
+  Updates:
+  - CAP7: content_source=doctor modality=plan verification_status=unconfirmed clinical_status=planned temporality=future turns=T33 :: The doctor will prescribe lisinopril.
+
+Other Structured States
+- [Plan] cardiac catheterization | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T33
+  Summary: The doctor will order a cardiac catheterization.
+  ClusterId: CL8
+  TemporalProfile: future

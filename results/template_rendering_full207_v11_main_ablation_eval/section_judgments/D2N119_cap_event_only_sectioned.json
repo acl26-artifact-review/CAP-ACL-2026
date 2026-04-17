@@ -1,0 +1,37 @@
+{
+  "section_miscategorizations": [
+    {
+      "text": "The patient is diagnosed with moderate to intermediate asthma.",
+      "current_section": "Assessment",
+      "expected_section": "Assessment",
+      "severity": "minor",
+      "reason": "This appears to be a wording error (likely intended to be 'moderate intermittent asthma') rather than a section misplacement; content type (diagnostic impression) is appropriate for Assessment."
+    },
+    {
+      "text": "The patient is diagnosed with moderate intermittent asthma.",
+      "current_section": "Assessment",
+      "expected_section": "Assessment",
+      "severity": "minor",
+      "reason": "This is a diagnostic statement and belongs in Assessment; duplication with the prior sentence is a documentation quality issue but not a section miscategorization."
+    },
+    {
+      "text": "The patient has a history of asthma.",
+      "current_section": "Assessment",
+      "expected_section": "History of Present Illness",
+      "severity": "minor",
+      "reason": "Past medical history relevant to the current problem is typically documented in HPI; however, stating it in Assessment as part of diagnostic context is common and not seriously misleading."
+    },
+    {
+      "text": "The patient uses an inhaler.",
+      "current_section": "Plan",
+      "expected_section": "History of Present Illness",
+      "severity": "major",
+      "reason": "This is a statement of existing medication use (current medication state), not a new instruction or change. In the Plan section it could be misread as a directive rather than a historical fact."
+    }
+  ],
+  "summary_statistics": {
+    "section_appropriateness_score": 0.6,
+    "section_miscategorization_count": 4,
+    "major_section_miscategorization_count": 1
+  }
+}

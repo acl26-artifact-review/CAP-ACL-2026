@@ -1,0 +1,2333 @@
+{
+  "case_id": "D2N004",
+  "method": "cluster2sent",
+  "template": "soap",
+  "summary_text": "S:\nThe patient reports back pain, which he attributes to golfing. He describes a pop in his back followed by immediate need to hit the ground. The patient reports the back pain has loosened up somewhat by Monday morning, but is still pretty sore. He reports struggling with his right foot and right leg. The patient reports a history of lower back surgery and congestive heart failure. He is currently taking medications for heart failure and avoids salty foods. The patient reports a weight gain of five pounds over the summer. He monitors his blood sugars at home and is taking metformin.\n\nO:\nThe nurse reviewed symptoms of back pain and weakness in the right leg. The doctor's examination revealed a 2 out of 6 systolic ejection murmur. The doctor's examination revealed pain to palpation of the lumbar 5 or lumbar spine at the level of L5. The doctor's examination revealed decreased range of motion with flexion and extension. The doctor's examination revealed a positive straight leg raise. The x-ray shows normal lumbar spine alignment. The diabetic lab shows a hemoglobin A1c of 8. The doctor's examination revealed a strength of 4 out of 5 on the right and 5 out of 5 on the left.\n\nA:\nThe doctor suspects a lumbar strain. The doctor orders a lumbar MRI if symptoms persist.\n\nP:\nThe doctor prescribes meloxicam 15 milligrams once a day. The doctor orders a physical therapy referral. The doctor orders a hemoglobin A1c in a couple of months. The doctor increases metformin to 1,000 milligrams twice daily. The doctor continues the patient on lisinopril 20 milligrams once a day. The doctor continues the patient on lasix.",
+  "reference_summary": "CHIEF COMPLAINT\n\nBack pain.\n\nHISTORY OF PRESENT ILLNESS\n\nJames Allen is a 57-year-old male with a past medical history significant for congestive heart failure and type 2 diabetes, who presents today with back pain.\n\nThe patient states he was golfing and hurt his back. This happened approximately 4 days ago when he felt a pop in his back. The patient notes that he immediately hit the ground trying to loosen up his back. He reports taking some Tylenol, ibuprofen, and using ice and heat which did not relieve the pain. By Monday morning it loosened up a little bit, but it is still pretty sore. He had some right lower extremity weakness and some drop foot that he felt that for a while, and it got a little better this morning but not much. He had surgery about 10 years ago in his lower back.\n\nRegarding his congestive heart failure, he has been watching his diet and trying to exercise regularly. He is avoiding the salty foods and has been compliant with medications. He has gained a little weight over the summer but nothing more than 5 pounds. He has no problems lying flat to go to bed.\n\nRegarding his diabetes, he is watching his blood sugars at home, not always consistently. He is still on his metformin.\n\nREVIEW OF SYSTEMS\n\n• Constitutional: Denies weight loss. Endorses weight gain.\n• Musculoskeletal: Endorses back pain. Endorses right leg weakness and drop foot.\n\nPHYSICAL EXAMINATION\n\n• Cardiovascular: Grade 2/6 systolic ejection murmur, stable.\n• Musculoskeletal: Examination of his back reveals pain to palpation at L5. Decreased range of motion with flexion and extension. Positive straight leg raise. Strength is 4/5 on the right and 5/5 on the left.\n\nResults:\n\nX-ray lumbar spine, ordered and obtained in the office today, is unremarkable with good bony alignment.\n\nHemoglobin A1c is elevated at 8.\n\nASSESSMENT AND PLAN\n\nJames Allen is a 57-year-old male with a past medical history significant for congestive heart failure and type 2 diabetes, who presents today with back pain.\n\nAcute lumbar strain.\n• Medical Reasoning: The patient reports feeling a 'pop' and immediate pain while golfing approximately 4 days ago. He has tried Tylenol and ibuprofen without significant relief.\n• Additional Testing: If he continues to have pain, we will obtain an MRI for further evaluation.\n• Medical Treatment: Initiate meloxicam 15 mg once daily.\n• Specialist Referrals: We will refer him to physical therapy to work on strengthening the area.\n\nDiabetes type 2.\n• Medical Reasoning: He has been compliant with metformin and dietary modifications, but his recent hemoglobin A1c was 8.\n• Additional Testing: Repeat hemoglobin A1c in a couple of months.\n• Medical Treatment: Increase metformin to 1000 mg twice daily.\n\nCongestive heart failure.\n• Medical Reasoning: He is doing well from this standpoint. He has been compliant with his medications, dietary modifications, and regular physical activity.\n• Medical Treatment: Continue lisinopril 20 mg once daily and Lasix. Lisinopril was refilled today.\n\nPatient Agreements: The patient understands and agrees with the recommended medical treatment plan.\n\nINSTRUCTIONS\n\nThe patient will follow-up in 2 weeks.",
+  "source_cap": {
+    "atomic_propositions": [
+      {
+        "prop_id": "CAP1",
+        "cap_type": "Symptom",
+        "canonical_concept": "lumbar pain",
+        "category": "Symptom",
+        "speaker": "doctor",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports pain to palpation of the lumbar spine."
+      },
+      {
+        "prop_id": "CAP2",
+        "cap_type": "Problem",
+        "canonical_concept": "acute lumbar strain",
+        "category": "Problem",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The doctor assesses the patient has an acute lumbar strain."
+      },
+      {
+        "prop_id": "CAP3",
+        "cap_type": "Symptom",
+        "canonical_concept": "pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports pain in the left hand."
+      },
+      {
+        "prop_id": "CAP4",
+        "cap_type": "Symptom",
+        "canonical_concept": "weakness",
+        "category": "Symptom",
+        "speaker": "patient",
+        "status": "uncertain",
+        "visit_state": "historical",
+        "temporality": "past",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient experienced difficulty with their right foot."
+      },
+      {
+        "prop_id": "CAP5",
+        "cap_type": "Symptom",
+        "canonical_concept": "weakness",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports weakness in their right leg."
+      },
+      {
+        "prop_id": "CAP6",
+        "cap_type": "Symptom",
+        "canonical_concept": "positive straight leg raise",
+        "category": "Symptom",
+        "speaker": "doctor",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports a positive straight leg raise."
+      },
+      {
+        "prop_id": "CAP7",
+        "cap_type": "Symptom",
+        "canonical_concept": "decreased range of motion",
+        "category": "Symptom",
+        "speaker": "doctor",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports decreased range of motion."
+      },
+      {
+        "prop_id": "CAP8",
+        "cap_type": "Symptom",
+        "canonical_concept": "sweet tooth",
+        "category": "Symptom",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient has a sweet tooth."
+      },
+      {
+        "prop_id": "CAP9",
+        "cap_type": "Symptom",
+        "canonical_concept": "back pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports back pain."
+      },
+      {
+        "prop_id": "CAP10",
+        "cap_type": "Symptom",
+        "canonical_concept": "pop sound",
+        "category": "Symptom",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "immediately",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient felt a pop."
+      },
+      {
+        "prop_id": "CAP11",
+        "cap_type": "Problem",
+        "canonical_concept": "back pain",
+        "category": "Problem",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient has back pain."
+      },
+      {
+        "prop_id": "CAP12",
+        "cap_type": "Symptom",
+        "canonical_concept": "weight gain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports weight gain."
+      },
+      {
+        "prop_id": "CAP13",
+        "cap_type": "Symptom",
+        "canonical_concept": "tingling",
+        "category": "Symptom",
+        "speaker": "patient",
+        "status": "uncertain",
+        "visit_state": "historical",
+        "temporality": "past",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient experienced tingling."
+      },
+      {
+        "prop_id": "CAP14",
+        "cap_type": "Problem",
+        "canonical_concept": "diabetes",
+        "category": "Problem",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient has diabetes."
+      },
+      {
+        "prop_id": "CAP15",
+        "cap_type": "MedicationRequest",
+        "canonical_concept": "lisinopril",
+        "category": "MedicationRequest",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "planned",
+        "temporality": "daily",
+        "claim_type_tags": [
+          "quantitative"
+        ],
+        "proposition_text": "The doctor ordered a refill of lisinopril 20 milligrams once a day."
+      },
+      {
+        "prop_id": "CAP16",
+        "cap_type": "ExamFinding",
+        "canonical_concept": "2 out of 6 systolic ejection murmur",
+        "category": "ExamFinding",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "stable",
+        "temporality": "past",
+        "claim_type_tags": [
+          "quantitative"
+        ],
+        "proposition_text": "The doctor appreciates a 2 out of 6 systolic ejection murmur."
+      },
+      {
+        "prop_id": "CAP17",
+        "cap_type": "ExamFinding",
+        "canonical_concept": "strength",
+        "category": "ExamFinding",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "quantitative"
+        ],
+        "proposition_text": "The patient's right strength is 4 out of 5."
+      },
+      {
+        "prop_id": "CAP18",
+        "cap_type": "ExamFinding",
+        "canonical_concept": "strength",
+        "category": "ExamFinding",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "quantitative"
+        ],
+        "proposition_text": "The patient's left strength is 5 out of 5."
+      },
+      {
+        "prop_id": "CAP19",
+        "cap_type": "Order",
+        "canonical_concept": "physical exam",
+        "category": "Order",
+        "speaker": "doctor",
+        "predicate": "plans",
+        "status": "affirmed",
+        "visit_state": "planned",
+        "temporality": "current",
+        "claim_type_tags": [
+          "plan"
+        ],
+        "proposition_text": "The doctor plans to perform a physical exam."
+      },
+      {
+        "prop_id": "CAP20",
+        "cap_type": "TestResult",
+        "canonical_concept": "hemoglobin a1c",
+        "category": "TestResult",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "quantitative"
+        ],
+        "proposition_text": "The patient's hemoglobin a1c is 8."
+      },
+      {
+        "prop_id": "CAP21",
+        "cap_type": "TestResult",
+        "canonical_concept": "hemoglobin a1c",
+        "category": "TestResult",
+        "speaker": "doctor",
+        "status": "uncertain",
+        "visit_state": "historical",
+        "temporality": "past",
+        "claim_type_tags": [
+          "quantitative"
+        ],
+        "proposition_text": "The patient's hemoglobin a1c was 8."
+      },
+      {
+        "prop_id": "CAP22",
+        "cap_type": "TestResult",
+        "canonical_concept": "hemoglobin a1c",
+        "category": "TestResult",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "last",
+        "claim_type_tags": [
+          "quantitative"
+        ],
+        "proposition_text": "The patient's hemoglobin a1c is 8."
+      },
+      {
+        "prop_id": "CAP23",
+        "cap_type": "Order",
+        "canonical_concept": "physical therapy",
+        "category": "Order",
+        "speaker": "doctor",
+        "predicate": "orders",
+        "status": "affirmed",
+        "visit_state": "planned",
+        "temporality": "current",
+        "claim_type_tags": [
+          "plan"
+        ],
+        "proposition_text": "The doctor orders physical therapy."
+      },
+      {
+        "prop_id": "CAP24",
+        "cap_type": "Order",
+        "canonical_concept": "MRI",
+        "category": "Order",
+        "speaker": "doctor",
+        "predicate": "orders",
+        "status": "affirmed",
+        "visit_state": "planned",
+        "temporality": "current",
+        "claim_type_tags": [
+          "plan"
+        ],
+        "proposition_text": "The doctor orders an MRI."
+      },
+      {
+        "prop_id": "CAP25",
+        "cap_type": "FollowUp",
+        "canonical_concept": "follow_up",
+        "category": "FollowUp",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "planned",
+        "temporality": "in a couple weeks",
+        "proposition_text": "The doctor wants to see the patient in a couple weeks."
+      },
+      {
+        "prop_id": "CAP26",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "meloxicam",
+        "category": "MedicationStatement",
+        "speaker": "doctor",
+        "predicate": "prescribes",
+        "status": "affirmed",
+        "visit_state": "planned",
+        "temporality": "current",
+        "claim_type_tags": [
+          "quantitative"
+        ],
+        "proposition_text": "The doctor prescribes meloxicam 15 milligrams once a day."
+      },
+      {
+        "prop_id": "CAP27",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "metformin",
+        "category": "MedicationStatement",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "medication",
+          "temporal"
+        ],
+        "proposition_text": "The patient is currently taking metformin."
+      },
+      {
+        "prop_id": "CAP28",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "metformin",
+        "category": "MedicationStatement",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "medication"
+        ],
+        "proposition_text": "The patient is taking metformin."
+      },
+      {
+        "prop_id": "CAP29",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "tylenol",
+        "category": "MedicationStatement",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient took Tylenol."
+      },
+      {
+        "prop_id": "CAP30",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "ibuprofen",
+        "category": "MedicationStatement",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient took Ibuprofen."
+      },
+      {
+        "prop_id": "CAP31",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "ice",
+        "category": "MedicationStatement",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient tried ice."
+      },
+      {
+        "prop_id": "CAP32",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "heat",
+        "category": "MedicationStatement",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient tried heat."
+      },
+      {
+        "prop_id": "CAP33",
+        "cap_type": "ProblemHistory",
+        "canonical_concept": "back surgery",
+        "category": "ProblemHistory",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "10 years ago",
+        "claim_type_tags": [
+          "quantitative"
+        ],
+        "proposition_text": "The patient had surgery on their lower back approximately 10 years ago."
+      }
+    ],
+    "filtered_nonverifiable_units": []
+  },
+  "event_plan": null,
+  "summary_cap": {
+    "atomic_propositions": [
+      {
+        "prop_id": "P1",
+        "cap_type": "Symptom",
+        "canonical_concept": "pain:back",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports back pain"
+      },
+      {
+        "prop_id": "P2",
+        "cap_type": "History",
+        "canonical_concept": "pain:back",
+        "category": "History",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "past",
+        "claim_type_tags": [
+          "history"
+        ],
+        "proposition_text": "The patient attributes the back pain to golfing"
+      },
+      {
+        "prop_id": "P3",
+        "cap_type": "Symptom",
+        "canonical_concept": "pop his back",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports a pop in his back"
+      },
+      {
+        "prop_id": "P4",
+        "cap_type": "Symptom",
+        "canonical_concept": "immediate need hit ground",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports immediate need to hit the ground"
+      },
+      {
+        "prop_id": "P5",
+        "cap_type": "Symptom",
+        "canonical_concept": "pain:back",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports the back pain has loosened up somewhat"
+      },
+      {
+        "prop_id": "P6",
+        "cap_type": "Symptom",
+        "canonical_concept": "pain:back",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports the back pain is still pretty sore"
+      },
+      {
+        "prop_id": "P7",
+        "cap_type": "Symptom",
+        "canonical_concept": "struggling his right foot",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports struggling with his right foot"
+      },
+      {
+        "prop_id": "P8",
+        "cap_type": "History",
+        "canonical_concept": "history lower back surgery",
+        "category": "History",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "past",
+        "claim_type_tags": [
+          "history"
+        ],
+        "proposition_text": "The patient reports a history of lower back surgery"
+      },
+      {
+        "prop_id": "P9",
+        "cap_type": "Problem",
+        "canonical_concept": "congestive heart failure",
+        "category": "Problem",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "problem"
+        ],
+        "proposition_text": "The patient reports congestive heart failure"
+      },
+      {
+        "prop_id": "P10",
+        "cap_type": "MedicationPlan",
+        "canonical_concept": "taking medications for heart",
+        "category": "MedicationPlan",
+        "speaker": "patient",
+        "predicate": "takes",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "medication"
+        ],
+        "proposition_text": "The patient is currently taking medications for heart failure"
+      },
+      {
+        "prop_id": "P11",
+        "cap_type": "Lifestyle",
+        "canonical_concept": "avoids salty foods",
+        "category": "Lifestyle",
+        "speaker": "patient",
+        "predicate": "avoids",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "plan"
+        ],
+        "proposition_text": "The patient avoids salty foods"
+      },
+      {
+        "prop_id": "P12",
+        "cap_type": "Finding",
+        "canonical_concept": "weight gain five pounds",
+        "category": "Finding",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "exam"
+        ],
+        "proposition_text": "The patient reports a weight gain of five pounds over the summer"
+      },
+      {
+        "prop_id": "P13",
+        "cap_type": "TestResult",
+        "canonical_concept": "monitors his blood sugars",
+        "category": "TestResult",
+        "speaker": "patient",
+        "predicate": "monitors",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "test"
+        ],
+        "proposition_text": "The patient monitors his blood sugars at home"
+      },
+      {
+        "prop_id": "P14",
+        "cap_type": "MedicationPlan",
+        "canonical_concept": "metformin",
+        "category": "MedicationPlan",
+        "speaker": "patient",
+        "predicate": "takes",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "medication"
+        ],
+        "proposition_text": "The patient is taking metformin"
+      },
+      {
+        "prop_id": "P15",
+        "cap_type": "Problem",
+        "canonical_concept": "suspects lumbar strain",
+        "category": "Problem",
+        "speaker": "clinician",
+        "predicate": "suspects",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "diagnostic"
+        ],
+        "proposition_text": "The clinician suspects a lumbar strain."
+      },
+      {
+        "prop_id": "P16",
+        "cap_type": "MedicationPlan",
+        "canonical_concept": "prescribes meloxicam milligrams once",
+        "category": "MedicationPlan",
+        "speaker": "clinician",
+        "predicate": "prescribes",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "medication"
+        ],
+        "proposition_text": "The clinician prescribes meloxicam 15 milligrams once a day."
+      },
+      {
+        "prop_id": "P17",
+        "cap_type": "MedicationPlan",
+        "canonical_concept": "metformin",
+        "category": "MedicationPlan",
+        "speaker": "clinician",
+        "predicate": "increases",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "medication"
+        ],
+        "proposition_text": "The clinician increases metformin to 1,000 milligrams twice daily."
+      },
+      {
+        "prop_id": "P18",
+        "cap_type": "MedicationPlan",
+        "canonical_concept": "lisinopril",
+        "category": "MedicationPlan",
+        "speaker": "clinician",
+        "predicate": "continues",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "medication"
+        ],
+        "proposition_text": "The clinician continues the patient on lisinopril 20 milligrams once a day."
+      },
+      {
+        "prop_id": "P19",
+        "cap_type": "MedicationPlan",
+        "canonical_concept": "continues lasix",
+        "category": "MedicationPlan",
+        "speaker": "clinician",
+        "predicate": "continues",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "medication"
+        ],
+        "proposition_text": "The clinician continues the patient on lasix."
+      },
+      {
+        "prop_id": "P20",
+        "cap_type": "Order",
+        "canonical_concept": "orders lumbar mri symptoms",
+        "category": "Order",
+        "speaker": "clinician",
+        "predicate": "orders",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "future",
+        "claim_type_tags": [
+          "plan"
+        ],
+        "proposition_text": "The clinician orders a lumbar MRI if symptoms persist."
+      },
+      {
+        "prop_id": "P21",
+        "cap_type": "Order",
+        "canonical_concept": "orders physical therapy referral",
+        "category": "Order",
+        "speaker": "clinician",
+        "predicate": "orders",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "future",
+        "claim_type_tags": [
+          "plan"
+        ],
+        "proposition_text": "The clinician orders a physical therapy referral."
+      },
+      {
+        "prop_id": "P22",
+        "cap_type": "TestPlan",
+        "canonical_concept": "orders hemoglobin a1c couple",
+        "category": "TestPlan",
+        "speaker": "clinician",
+        "predicate": "orders",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "future",
+        "claim_type_tags": [
+          "diagnostic"
+        ],
+        "proposition_text": "The clinician orders a hemoglobin A1c in a couple of months."
+      }
+    ],
+    "filtered_nonverifiable_units": [],
+    "runtime_seconds": 29.336
+  },
+  "cap_alignment": {
+    "cap_precision": 0.5909090909090909,
+    "cap_recall": 0.3939393939393939,
+    "cap_f1": 0.4727272727272727,
+    "matched_count": 13,
+    "summary_prop_count": 22,
+    "source_prop_count": 33,
+    "matched_pairs": [
+      {
+        "score": 1.0,
+        "summary_prop_id": "P18",
+        "source_prop_id": "CAP15",
+        "summary_text": "The clinician continues the patient on lisinopril 20 milligrams once a day.",
+        "source_text": "The doctor ordered a refill of lisinopril 20 milligrams once a day."
+      },
+      {
+        "score": 1.0,
+        "summary_prop_id": "P17",
+        "source_prop_id": "CAP28",
+        "summary_text": "The clinician increases metformin to 1,000 milligrams twice daily.",
+        "source_text": "The patient is taking metformin."
+      },
+      {
+        "score": 1.0,
+        "summary_prop_id": "P14",
+        "source_prop_id": "CAP27",
+        "summary_text": "The patient is taking metformin",
+        "source_text": "The patient is currently taking metformin."
+      },
+      {
+        "score": 1.0,
+        "summary_prop_id": "P6",
+        "source_prop_id": "CAP11",
+        "summary_text": "The patient reports the back pain is still pretty sore",
+        "source_text": "The patient has back pain."
+      },
+      {
+        "score": 1.0,
+        "summary_prop_id": "P5",
+        "source_prop_id": "CAP9",
+        "summary_text": "The patient reports the back pain has loosened up somewhat",
+        "source_text": "The patient reports back pain."
+      },
+      {
+        "score": 0.8903,
+        "summary_prop_id": "P1",
+        "source_prop_id": "CAP3",
+        "summary_text": "The patient reports back pain",
+        "source_text": "The patient reports pain in the left hand."
+      },
+      {
+        "score": 0.8889,
+        "summary_prop_id": "P16",
+        "source_prop_id": "CAP26",
+        "summary_text": "The clinician prescribes meloxicam 15 milligrams once a day.",
+        "source_text": "The doctor prescribes meloxicam 15 milligrams once a day."
+      },
+      {
+        "score": 0.818,
+        "summary_prop_id": "P12",
+        "source_prop_id": "CAP12",
+        "summary_text": "The patient reports a weight gain of five pounds over the summer",
+        "source_text": "The patient reports weight gain."
+      },
+      {
+        "score": 0.8033,
+        "summary_prop_id": "P21",
+        "source_prop_id": "CAP23",
+        "summary_text": "The clinician orders a physical therapy referral.",
+        "source_text": "The doctor orders physical therapy."
+      },
+      {
+        "score": 0.7176,
+        "summary_prop_id": "P8",
+        "source_prop_id": "CAP33",
+        "summary_text": "The patient reports a history of lower back surgery",
+        "source_text": "The patient had surgery on their lower back approximately 10 years ago."
+      },
+      {
+        "score": 0.6667,
+        "summary_prop_id": "P22",
+        "source_prop_id": "CAP22",
+        "summary_text": "The clinician orders a hemoglobin A1c in a couple of months.",
+        "source_text": "The patient's hemoglobin a1c is 8."
+      },
+      {
+        "score": 0.6667,
+        "summary_prop_id": "P15",
+        "source_prop_id": "CAP2",
+        "summary_text": "The clinician suspects a lumbar strain.",
+        "source_text": "The doctor assesses the patient has an acute lumbar strain."
+      },
+      {
+        "score": 0.6029,
+        "summary_prop_id": "P20",
+        "source_prop_id": "CAP24",
+        "summary_text": "The clinician orders a lumbar MRI if symptoms persist.",
+        "source_text": "The doctor orders an MRI."
+      }
+    ],
+    "unsupported_summary_props": [
+      {
+        "prop_id": "P2",
+        "cap_type": "History",
+        "canonical_concept": "pain:back",
+        "category": "History",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "past",
+        "claim_type_tags": [
+          "history"
+        ],
+        "proposition_text": "The patient attributes the back pain to golfing"
+      },
+      {
+        "prop_id": "P3",
+        "cap_type": "Symptom",
+        "canonical_concept": "pop his back",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports a pop in his back"
+      },
+      {
+        "prop_id": "P4",
+        "cap_type": "Symptom",
+        "canonical_concept": "immediate need hit ground",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports immediate need to hit the ground"
+      },
+      {
+        "prop_id": "P7",
+        "cap_type": "Symptom",
+        "canonical_concept": "struggling his right foot",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports struggling with his right foot"
+      },
+      {
+        "prop_id": "P9",
+        "cap_type": "Problem",
+        "canonical_concept": "congestive heart failure",
+        "category": "Problem",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "problem"
+        ],
+        "proposition_text": "The patient reports congestive heart failure"
+      },
+      {
+        "prop_id": "P10",
+        "cap_type": "MedicationPlan",
+        "canonical_concept": "taking medications for heart",
+        "category": "MedicationPlan",
+        "speaker": "patient",
+        "predicate": "takes",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "medication"
+        ],
+        "proposition_text": "The patient is currently taking medications for heart failure"
+      },
+      {
+        "prop_id": "P11",
+        "cap_type": "Lifestyle",
+        "canonical_concept": "avoids salty foods",
+        "category": "Lifestyle",
+        "speaker": "patient",
+        "predicate": "avoids",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "plan"
+        ],
+        "proposition_text": "The patient avoids salty foods"
+      },
+      {
+        "prop_id": "P13",
+        "cap_type": "TestResult",
+        "canonical_concept": "monitors his blood sugars",
+        "category": "TestResult",
+        "speaker": "patient",
+        "predicate": "monitors",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "test"
+        ],
+        "proposition_text": "The patient monitors his blood sugars at home"
+      },
+      {
+        "prop_id": "P19",
+        "cap_type": "MedicationPlan",
+        "canonical_concept": "continues lasix",
+        "category": "MedicationPlan",
+        "speaker": "clinician",
+        "predicate": "continues",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "medication"
+        ],
+        "proposition_text": "The clinician continues the patient on lasix."
+      }
+    ],
+    "missing_source_props": [
+      {
+        "prop_id": "CAP1",
+        "cap_type": "Symptom",
+        "canonical_concept": "lumbar pain",
+        "category": "Symptom",
+        "speaker": "doctor",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports pain to palpation of the lumbar spine."
+      },
+      {
+        "prop_id": "CAP4",
+        "cap_type": "Symptom",
+        "canonical_concept": "weakness",
+        "category": "Symptom",
+        "speaker": "patient",
+        "status": "uncertain",
+        "visit_state": "historical",
+        "temporality": "past",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient experienced difficulty with their right foot."
+      },
+      {
+        "prop_id": "CAP5",
+        "cap_type": "Symptom",
+        "canonical_concept": "weakness",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports weakness in their right leg."
+      },
+      {
+        "prop_id": "CAP6",
+        "cap_type": "Symptom",
+        "canonical_concept": "positive straight leg raise",
+        "category": "Symptom",
+        "speaker": "doctor",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports a positive straight leg raise."
+      },
+      {
+        "prop_id": "CAP7",
+        "cap_type": "Symptom",
+        "canonical_concept": "decreased range of motion",
+        "category": "Symptom",
+        "speaker": "doctor",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports decreased range of motion."
+      },
+      {
+        "prop_id": "CAP8",
+        "cap_type": "Symptom",
+        "canonical_concept": "sweet tooth",
+        "category": "Symptom",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient has a sweet tooth."
+      },
+      {
+        "prop_id": "CAP10",
+        "cap_type": "Symptom",
+        "canonical_concept": "pop sound",
+        "category": "Symptom",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "immediately",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient felt a pop."
+      },
+      {
+        "prop_id": "CAP13",
+        "cap_type": "Symptom",
+        "canonical_concept": "tingling",
+        "category": "Symptom",
+        "speaker": "patient",
+        "status": "uncertain",
+        "visit_state": "historical",
+        "temporality": "past",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient experienced tingling."
+      },
+      {
+        "prop_id": "CAP14",
+        "cap_type": "Problem",
+        "canonical_concept": "diabetes",
+        "category": "Problem",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient has diabetes."
+      },
+      {
+        "prop_id": "CAP16",
+        "cap_type": "ExamFinding",
+        "canonical_concept": "2 out of 6 systolic ejection murmur",
+        "category": "ExamFinding",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "stable",
+        "temporality": "past",
+        "claim_type_tags": [
+          "quantitative"
+        ],
+        "proposition_text": "The doctor appreciates a 2 out of 6 systolic ejection murmur."
+      },
+      {
+        "prop_id": "CAP17",
+        "cap_type": "ExamFinding",
+        "canonical_concept": "strength",
+        "category": "ExamFinding",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "quantitative"
+        ],
+        "proposition_text": "The patient's right strength is 4 out of 5."
+      },
+      {
+        "prop_id": "CAP18",
+        "cap_type": "ExamFinding",
+        "canonical_concept": "strength",
+        "category": "ExamFinding",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "quantitative"
+        ],
+        "proposition_text": "The patient's left strength is 5 out of 5."
+      },
+      {
+        "prop_id": "CAP19",
+        "cap_type": "Order",
+        "canonical_concept": "physical exam",
+        "category": "Order",
+        "speaker": "doctor",
+        "predicate": "plans",
+        "status": "affirmed",
+        "visit_state": "planned",
+        "temporality": "current",
+        "claim_type_tags": [
+          "plan"
+        ],
+        "proposition_text": "The doctor plans to perform a physical exam."
+      },
+      {
+        "prop_id": "CAP20",
+        "cap_type": "TestResult",
+        "canonical_concept": "hemoglobin a1c",
+        "category": "TestResult",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "quantitative"
+        ],
+        "proposition_text": "The patient's hemoglobin a1c is 8."
+      },
+      {
+        "prop_id": "CAP21",
+        "cap_type": "TestResult",
+        "canonical_concept": "hemoglobin a1c",
+        "category": "TestResult",
+        "speaker": "doctor",
+        "status": "uncertain",
+        "visit_state": "historical",
+        "temporality": "past",
+        "claim_type_tags": [
+          "quantitative"
+        ],
+        "proposition_text": "The patient's hemoglobin a1c was 8."
+      },
+      {
+        "prop_id": "CAP25",
+        "cap_type": "FollowUp",
+        "canonical_concept": "follow_up",
+        "category": "FollowUp",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "planned",
+        "temporality": "in a couple weeks",
+        "proposition_text": "The doctor wants to see the patient in a couple weeks."
+      },
+      {
+        "prop_id": "CAP29",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "tylenol",
+        "category": "MedicationStatement",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient took Tylenol."
+      },
+      {
+        "prop_id": "CAP30",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "ibuprofen",
+        "category": "MedicationStatement",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient took Ibuprofen."
+      },
+      {
+        "prop_id": "CAP31",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "ice",
+        "category": "MedicationStatement",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient tried ice."
+      },
+      {
+        "prop_id": "CAP32",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "heat",
+        "category": "MedicationStatement",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient tried heat."
+      }
+    ]
+  },
+  "reference_gpt_f1_items": {
+    "active_problems_symptoms": [
+      "congestive heart failure",
+      "type 2 diabetes",
+      "back pain",
+      "elevated hemoglobin A1c",
+      "systolic ejection murmur",
+      "Diabetes type 2",
+      "pain"
+    ],
+    "negated_findings": [],
+    "uncertain_findings": [
+      "acute lumbar strain"
+    ],
+    "medication_treatment": [
+      "Initiate meloxicam 15 mg once daily",
+      "Increase metformin to 1000 mg twice daily",
+      "Continue lisinopril 20 mg once daily",
+      "Lasix",
+      "metformin",
+      "dietary modifications"
+    ],
+    "plan_followup": [
+      "Repeat hemoglobin A1c in a couple of months",
+      "obtain an MRI for further evaluation",
+      "referral to physical therapy",
+      "follow-up in 2 weeks"
+    ],
+    "_chunk_count": [
+      "4"
+    ]
+  },
+  "summary_gpt_f1_items": {
+    "active_problems_symptoms": [
+      "meloxicam 15 milligrams once a day",
+      "lasix"
+    ],
+    "negated_findings": [],
+    "uncertain_findings": [],
+    "medication_treatment": [
+      "meloxicam 15 milligrams once a day",
+      "metformin 1,000 milligrams twice daily",
+      "lisinopril 20 milligrams once a day"
+    ],
+    "plan_followup": [
+      "physical therapy referral",
+      "hemoglobin A1c in a couple of months"
+    ],
+    "_chunk_count": [
+      "2"
+    ]
+  },
+  "gpt_f1_alignment": {
+    "by_category": {
+      "active_problems_symptoms": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "matched_count": 0,
+        "pred_count": 2,
+        "ref_count": 7,
+        "matches": [],
+        "unsupported_pred_items": [
+          "meloxicam 15 milligrams once a day",
+          "lasix"
+        ],
+        "missing_ref_items": [
+          "congestive heart failure",
+          "type 2 diabetes",
+          "back pain",
+          "elevated hemoglobin A1c",
+          "systolic ejection murmur",
+          "Diabetes type 2",
+          "pain"
+        ]
+      },
+      "negated_findings": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "matched_count": 0,
+        "pred_count": 0,
+        "ref_count": 0,
+        "matches": [],
+        "unsupported_pred_items": [],
+        "missing_ref_items": []
+      },
+      "uncertain_findings": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "matched_count": 0,
+        "pred_count": 0,
+        "ref_count": 1,
+        "matches": [],
+        "unsupported_pred_items": [],
+        "missing_ref_items": [
+          "acute lumbar strain"
+        ]
+      },
+      "medication_treatment": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "matched_count": 0,
+        "pred_count": 3,
+        "ref_count": 6,
+        "matches": [],
+        "unsupported_pred_items": [
+          "meloxicam 15 milligrams once a day",
+          "metformin 1,000 milligrams twice daily",
+          "lisinopril 20 milligrams once a day"
+        ],
+        "missing_ref_items": [
+          "Initiate meloxicam 15 mg once daily",
+          "Increase metformin to 1000 mg twice daily",
+          "Continue lisinopril 20 mg once daily",
+          "Lasix",
+          "metformin",
+          "dietary modifications"
+        ]
+      },
+      "plan_followup": {
+        "precision": 1.0,
+        "recall": 0.5,
+        "f1": 0.6666666666666666,
+        "matched_count": 2,
+        "pred_count": 2,
+        "ref_count": 4,
+        "matches": [
+          {
+            "score": 0.9333,
+            "pred_text": "hemoglobin A1c in a couple of months",
+            "ref_text": "Repeat hemoglobin A1c in a couple of months"
+          },
+          {
+            "score": 0.8571,
+            "pred_text": "physical therapy referral",
+            "ref_text": "referral to physical therapy"
+          }
+        ],
+        "unsupported_pred_items": [],
+        "missing_ref_items": [
+          "obtain an MRI for further evaluation",
+          "follow-up in 2 weeks"
+        ]
+      }
+    }
+  },
+  "reference_nair_concepts": {
+    "sections": [
+      {
+        "heading": "Clinical Note",
+        "section_value": "CHIEF COMPLAINT\nBack pain.\nHISTORY OF PRESENT ILLNESS\nJames Allen is a 57-year-old male with a past medical history significant for congestive heart failure and type 2 diabetes, who presents today with back pain.\nThe patient states he was golfing and hurt his back. This happened approximately 4 days ago when he felt a pop in his back. The patient notes that he immediately hit the ground trying to loosen up his back. He reports taking some Tylenol, ibuprofen, and using ice and heat which did not relieve the pain. By Monday morning it loosened up a little bit, but it is still pretty sore. He had some right lower extremity weakness and some drop foot that he felt that for a while, and it got a little better this morning but not much. He had surgery about 10 years ago in his lower back.\nRegarding his congestive heart failure, he has been watching his diet and trying to exercise regularly. He is avoiding the salty foods and has been compliant with medications. He has gained a little weight over the summer but nothing more than 5 pounds. He has no problems lying flat to go to bed.\nRegarding his diabetes, he is watching his blood sugars at home, not always consistently. He is still on his metformin.\nREVIEW OF SYSTEMS\n• Constitutional: Denies weight loss. Endorses weight gain.\n• Musculoskeletal: Endorses back pain. Endorses right leg weakness and drop foot.",
+        "medical_concepts": [
+          "back pain",
+          "congestive heart failure",
+          "type 2 diabetes",
+          "right lower extremity weakness",
+          "drop foot",
+          "surgery in lower back",
+          "weight gain",
+          "weight loss",
+          "metformin",
+          "Tylenol",
+          "ibuprofen",
+          "ice",
+          "heat",
+          "blood sugar monitoring"
+        ]
+      },
+      {
+        "heading": "Clinical Note",
+        "section_value": "PHYSICAL EXAMINATION\n• Cardiovascular: Grade 2/6 systolic ejection murmur, stable.\n• Musculoskeletal: Examination of his back reveals pain to palpation at L5. Decreased range of motion with flexion and extension. Positive straight leg raise. Strength is 4/5 on the right and 5/5 on the left.",
+        "medical_concepts": [
+          "systolic ejection murmur",
+          "back pain",
+          "pain to palpation at L5",
+          "decreased range of motion",
+          "decreased range of motion with flexion",
+          "decreased range of motion with extension",
+          "positive straight leg raise",
+          "muscle strength 4/5 on the right",
+          "muscle strength 5/5 on the left"
+        ]
+      },
+      {
+        "heading": "Results",
+        "section_value": "X-ray lumbar spine, ordered and obtained in the office today, is unremarkable with good bony alignment.\nHemoglobin A1c is elevated at 8.\nASSESSMENT AND PLAN\nJames Allen is a 57-year-old male with a past medical history significant for congestive heart failure and type 2 diabetes, who presents today with back pain.\nAcute lumbar strain.\n• Medical Reasoning: The patient reports feeling a 'pop' and immediate pain while golfing approximately 4 days ago. He has tried Tylenol and ibuprofen without significant relief.\n• Additional Testing: If he continues to have pain, we will obtain an MRI for further evaluation.\n• Medical Treatment: Initiate meloxicam 15 mg once daily.\n• Specialist Referrals: We will refer him to physical therapy to work on strengthening the area.\nDiabetes type 2.",
+        "medical_concepts": [
+          "X-ray lumbar spine",
+          "Hemoglobin A1c",
+          "congestive heart failure",
+          "type 2 diabetes",
+          "back pain",
+          "acute lumbar strain",
+          "Tylenol",
+          "ibuprofen",
+          "MRI",
+          "meloxicam",
+          "physical therapy",
+          "Diabetes type 2"
+        ]
+      },
+      {
+        "heading": "Results",
+        "section_value": "• Medical Reasoning: He has been compliant with metformin and dietary modifications, but his recent hemoglobin A1c was 8.\n• Additional Testing: Repeat hemoglobin A1c in a couple of months.\n• Medical Treatment: Increase metformin to 1000 mg twice daily.\nCongestive heart failure.\n• Medical Reasoning: He is doing well from this standpoint. He has been compliant with his medications, dietary modifications, and regular physical activity.\n• Medical Treatment: Continue lisinopril 20 mg once daily and Lasix. Lisinopril was refilled today.\nPatient Agreements: The patient understands and agrees with the recommended medical treatment plan.\nINSTRUCTIONS\nThe patient will follow-up in 2 weeks.",
+        "medical_concepts": [
+          "metformin",
+          "dietary modifications",
+          "hemoglobin A1c",
+          "congestive heart failure",
+          "lisinopril",
+          "Lasix",
+          "regular physical activity",
+          "follow-up"
+        ]
+      }
+    ],
+    "medical_concepts": [
+      "back pain",
+      "congestive heart failure",
+      "type 2 diabetes",
+      "right lower extremity weakness",
+      "drop foot",
+      "surgery in lower back",
+      "weight gain",
+      "weight loss",
+      "metformin",
+      "Tylenol",
+      "ibuprofen",
+      "ice",
+      "heat",
+      "blood sugar monitoring",
+      "systolic ejection murmur",
+      "pain to palpation at L5",
+      "decreased range of motion",
+      "decreased range of motion with flexion",
+      "decreased range of motion with extension",
+      "positive straight leg raise",
+      "muscle strength 4/5 on the right",
+      "muscle strength 5/5 on the left",
+      "X-ray lumbar spine",
+      "Hemoglobin A1c",
+      "acute lumbar strain",
+      "MRI",
+      "meloxicam",
+      "physical therapy",
+      "Diabetes type 2",
+      "dietary modifications",
+      "lisinopril",
+      "Lasix",
+      "regular physical activity",
+      "follow-up"
+    ],
+    "section_count": 4
+  },
+  "summary_nair_concepts": {
+    "sections": [
+      {
+        "heading": "S",
+        "section_value": "The patient reports back pain, which he attributes to golfing. He describes a pop in his back followed by immediate need to hit the ground. The patient reports the back pain has loosened up somewhat by Monday morning, but is still pretty sore. He reports struggling with his right foot and right leg. The patient reports a history of lower back surgery and congestive heart failure. He is currently taking medications for heart failure and avoids salty foods. The patient reports a weight gain of five pounds over the summer. He monitors his blood sugars at home and is taking metformin.",
+        "medical_concepts": [
+          "back pain",
+          "right foot weakness",
+          "right leg weakness",
+          "lower back surgery",
+          "congestive heart failure",
+          "heart failure",
+          "weight gain",
+          "blood sugar monitoring",
+          "metformin"
+        ]
+      },
+      {
+        "heading": "O",
+        "section_value": "The nurse reviewed symptoms of back pain and weakness in the right leg. The doctor's examination revealed a 2 out of 6 systolic ejection murmur. The doctor's examination revealed pain to palpation of the lumbar 5 or lumbar spine at the level of L5. The doctor's examination revealed decreased range of motion with flexion and extension. The doctor's examination revealed a positive straight leg raise. The x-ray shows normal lumbar spine alignment. The diabetic lab shows a hemoglobin A1c of 8. The doctor's examination revealed a strength of 4 out of 5 on the right and 5 out of 5 on the left.",
+        "medical_concepts": [
+          "back pain",
+          "weakness in the right leg",
+          "systolic ejection murmur",
+          "lumbar spine pain",
+          "decreased range of motion",
+          "positive straight leg raise",
+          "lumbar spine x-ray",
+          "normal lumbar spine alignment",
+          "diabetic lab",
+          "hemoglobin A1c",
+          "hemoglobin A1c of 8",
+          "muscle strength 4 out of 5 on the right",
+          "muscle strength 5 out of 5 on the left"
+        ]
+      },
+      {
+        "heading": "A",
+        "section_value": "The doctor suspects a lumbar strain. The doctor orders a lumbar MRI if symptoms persist.",
+        "medical_concepts": [
+          "lumbar strain",
+          "lumbar MRI"
+        ]
+      },
+      {
+        "heading": "P",
+        "section_value": "The doctor prescribes meloxicam 15 milligrams once a day. The doctor orders a physical therapy referral. The doctor orders a hemoglobin A1c in a couple of months. The doctor increases metformin to 1,000 milligrams twice daily. The doctor continues the patient on lisinopril 20 milligrams once a day. The doctor continues the patient on lasix.",
+        "medical_concepts": [
+          "meloxicam",
+          "physical therapy",
+          "hemoglobin A1c",
+          "metformin",
+          "lisinopril",
+          "lasix"
+        ]
+      }
+    ],
+    "medical_concepts": [
+      "back pain",
+      "right foot weakness",
+      "right leg weakness",
+      "lower back surgery",
+      "congestive heart failure",
+      "heart failure",
+      "weight gain",
+      "blood sugar monitoring",
+      "metformin",
+      "weakness in the right leg",
+      "systolic ejection murmur",
+      "lumbar spine pain",
+      "decreased range of motion",
+      "positive straight leg raise",
+      "lumbar spine x-ray",
+      "normal lumbar spine alignment",
+      "diabetic lab",
+      "hemoglobin A1c",
+      "hemoglobin A1c of 8",
+      "muscle strength 4 out of 5 on the right",
+      "muscle strength 5 out of 5 on the left",
+      "lumbar strain",
+      "lumbar MRI",
+      "meloxicam",
+      "physical therapy",
+      "lisinopril",
+      "lasix"
+    ],
+    "section_count": 4
+  },
+  "nair_alignment": {
+    "pred_concepts": [
+      "back pain",
+      "right foot weakness",
+      "right leg weakness",
+      "lower back surgery",
+      "congestive heart failure",
+      "heart failure",
+      "weight gain",
+      "blood sugar monitoring",
+      "metformin",
+      "weakness in the right leg",
+      "systolic ejection murmur",
+      "lumbar spine pain",
+      "decreased range of motion",
+      "positive straight leg raise",
+      "lumbar spine x-ray",
+      "normal lumbar spine alignment",
+      "diabetic lab",
+      "hemoglobin A1c",
+      "hemoglobin A1c of 8",
+      "muscle strength 4 out of 5 on the right",
+      "muscle strength 5 out of 5 on the left",
+      "lumbar strain",
+      "lumbar MRI",
+      "meloxicam",
+      "physical therapy",
+      "lisinopril",
+      "lasix"
+    ],
+    "ref_concepts": [
+      "back pain",
+      "congestive heart failure",
+      "type 2 diabetes",
+      "right lower extremity weakness",
+      "drop foot",
+      "surgery in lower back",
+      "weight gain",
+      "weight loss",
+      "metformin",
+      "Tylenol",
+      "ibuprofen",
+      "ice",
+      "heat",
+      "blood sugar monitoring",
+      "systolic ejection murmur",
+      "pain to palpation at L5",
+      "decreased range of motion",
+      "decreased range of motion with flexion",
+      "decreased range of motion with extension",
+      "positive straight leg raise",
+      "muscle strength 4/5 on the right",
+      "muscle strength 5/5 on the left",
+      "X-ray lumbar spine",
+      "Hemoglobin A1c",
+      "acute lumbar strain",
+      "MRI",
+      "meloxicam",
+      "physical therapy",
+      "Diabetes type 2",
+      "dietary modifications",
+      "lisinopril",
+      "Lasix",
+      "regular physical activity",
+      "follow-up"
+    ],
+    "precision_alignment": {
+      "found_b": [
+        "back pain",
+        "right leg weakness",
+        "lower back surgery",
+        "congestive heart failure",
+        "heart failure",
+        "weight gain",
+        "blood sugar monitoring",
+        "metformin",
+        "weakness in the right leg",
+        "systolic ejection murmur",
+        "lumbar spine pain",
+        "decreased range of motion",
+        "positive straight leg raise",
+        "lumbar spine x-ray",
+        "normal lumbar spine alignment",
+        "diabetic lab",
+        "hemoglobin A1c",
+        "hemoglobin A1c of 8",
+        "muscle strength 4 out of 5 on the right",
+        "muscle strength 5 out of 5 on the left",
+        "lumbar strain",
+        "lumbar MRI",
+        "meloxicam",
+        "physical therapy",
+        "lisinopril",
+        "lasix"
+      ],
+      "not_found_b": [
+        "right foot weakness"
+      ],
+      "chunk_count": 2,
+      "chunk_results": [
+        {
+          "found_b": [
+            "back pain",
+            "right leg weakness",
+            "lower back surgery",
+            "congestive heart failure",
+            "heart failure",
+            "weight gain",
+            "blood sugar monitoring",
+            "metformin",
+            "weakness in the right leg",
+            "systolic ejection murmur",
+            "lumbar spine pain",
+            "decreased range of motion",
+            "positive straight leg raise",
+            "lumbar spine x-ray",
+            "normal lumbar spine alignment",
+            "diabetic lab",
+            "hemoglobin A1c",
+            "hemoglobin A1c of 8",
+            "muscle strength 4 out of 5 on the right",
+            "muscle strength 5 out of 5 on the left",
+            "lumbar strain",
+            "lumbar MRI",
+            "meloxicam"
+          ],
+          "not_found_b": [
+            "right foot weakness"
+          ]
+        },
+        {
+          "found_b": [
+            "physical therapy",
+            "lisinopril",
+            "lasix"
+          ],
+          "not_found_b": []
+        }
+      ]
+    },
+    "recall_alignment": {
+      "found_b": [
+        "back pain",
+        "congestive heart failure",
+        "type 2 diabetes",
+        "right lower extremity weakness",
+        "surgery in lower back",
+        "weight gain",
+        "metformin",
+        "blood sugar monitoring",
+        "systolic ejection murmur",
+        "pain to palpation at L5",
+        "decreased range of motion",
+        "decreased range of motion with flexion",
+        "decreased range of motion with extension",
+        "positive straight leg raise",
+        "muscle strength 4/5 on the right",
+        "muscle strength 5/5 on the left",
+        "X-ray lumbar spine",
+        "Hemoglobin A1c",
+        "acute lumbar strain",
+        "MRI",
+        "meloxicam",
+        "physical therapy",
+        "dietary modifications",
+        "lisinopril",
+        "Lasix",
+        "follow-up"
+      ],
+      "not_found_b": [
+        "drop foot",
+        "weight loss",
+        "Tylenol",
+        "ibuprofen",
+        "ice",
+        "heat",
+        "Diabetes type 2",
+        "regular physical activity"
+      ],
+      "chunk_count": 2,
+      "chunk_results": [
+        {
+          "found_b": [
+            "back pain",
+            "congestive heart failure",
+            "type 2 diabetes",
+            "right lower extremity weakness",
+            "surgery in lower back",
+            "weight gain",
+            "metformin",
+            "blood sugar monitoring",
+            "systolic ejection murmur",
+            "pain to palpation at L5",
+            "decreased range of motion",
+            "decreased range of motion with flexion",
+            "decreased range of motion with extension",
+            "positive straight leg raise",
+            "muscle strength 4/5 on the right",
+            "muscle strength 5/5 on the left",
+            "X-ray lumbar spine",
+            "Hemoglobin A1c"
+          ],
+          "not_found_b": [
+            "drop foot",
+            "weight loss",
+            "Tylenol",
+            "ibuprofen",
+            "ice",
+            "heat"
+          ]
+        },
+        {
+          "found_b": [
+            "acute lumbar strain",
+            "MRI",
+            "meloxicam",
+            "physical therapy",
+            "dietary modifications",
+            "lisinopril",
+            "Lasix",
+            "follow-up"
+          ],
+          "not_found_b": [
+            "Diabetes type 2",
+            "regular physical activity"
+          ]
+        }
+      ]
+    }
+  },
+  "semantic_cap_audit": {
+    "source_cap_recall": [
+      {
+        "cap_id": "P1",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P2",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P3",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P4",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P5",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P6",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P7",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P8",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P9",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P10",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P11",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P12",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P13",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P14",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P15",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P16",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P1",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P2",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P3",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P4",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P5",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P6",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P7",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P8",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P9",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P10",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P11",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P12",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P13",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P14",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P15",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P16",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P1",
+        "judgment": "partial",
+        "reason": null
+      }
+    ],
+    "summary_cap_precision": [
+      {
+        "cap_id": "P1",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P2",
+        "judgment": "unsupported",
+        "reason": null
+      },
+      {
+        "cap_id": "P3",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P4",
+        "judgment": "unsupported",
+        "reason": null
+      },
+      {
+        "cap_id": "P5",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P6",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P7",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P8",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P9",
+        "judgment": "unsupported",
+        "reason": null
+      },
+      {
+        "cap_id": "P10",
+        "judgment": "unsupported",
+        "reason": null
+      },
+      {
+        "cap_id": "P11",
+        "judgment": "unsupported",
+        "reason": null
+      },
+      {
+        "cap_id": "P12",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P13",
+        "judgment": "unsupported",
+        "reason": null
+      },
+      {
+        "cap_id": "P14",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P15",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P16",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P1",
+        "judgment": "unsupported",
+        "reason": null
+      },
+      {
+        "cap_id": "P2",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P3",
+        "judgment": "unsupported",
+        "reason": null
+      },
+      {
+        "cap_id": "P4",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P5",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P6",
+        "judgment": "partial",
+        "reason": null
+      }
+    ],
+    "metrics": {
+      "semantic_cap_precision": 0.4091,
+      "semantic_cap_recall": 0.5606,
+      "semantic_cap_f1": 0.473,
+      "semantic_cap_precision_supported_count": 4,
+      "semantic_cap_precision_partial_count": 10,
+      "semantic_cap_precision_denominator": 22,
+      "semantic_cap_recall_supported_count": 15,
+      "semantic_cap_recall_partial_count": 7,
+      "semantic_cap_recall_denominator": 33,
+      "semantic_cap_low_value_source_count": 0,
+      "semantic_cap_low_value_summary_count": 0,
+      "semantic_cap_missing_count": 11,
+      "semantic_cap_unsupported_count": 8,
+      "semantic_cap_contradicted_source_count": 0,
+      "semantic_cap_contradicted_summary_count": 0
+    }
+  },
+  "safety_judgment": null,
+  "section_judgment": {
+    "section_miscategorizations": [
+      {
+        "text": "The doctor orders a lumbar MRI if symptoms persist.",
+        "current_section": "A",
+        "expected_section": "P",
+        "severity": "major",
+        "reason": "This is a conditional diagnostic order/plan (management action) and belongs in the Plan rather than the Assessment."
+      }
+    ],
+    "summary_statistics": {
+      "section_appropriateness_score": 0.9,
+      "section_miscategorization_count": 1,
+      "major_section_miscategorization_count": 1
+    }
+  },
+  "pdsqi_judgment": {
+    "citation_applicable": 0,
+    "citation": 0,
+    "accurate": 4,
+    "thorough": 3,
+    "useful": 4,
+    "organized": 4,
+    "comprehensible": 5,
+    "succinct": 4,
+    "abstraction": 1,
+    "synthesized": 4,
+    "voice_summ": 0,
+    "voice_note": 0,
+    "pdsqi_core_mean": 4.0
+  },
+  "llm_checklist_judgment": {
+    "content_preservation_core": 4,
+    "noise_suppression": 5,
+    "lay_expression_preservation": 4,
+    "state_update_fidelity": 4,
+    "temporality_preservation": 4,
+    "problem_evidence_linkage": 4,
+    "state_plan_separation": 4,
+    "section_organization_appropriateness": 4,
+    "overall_clinical_usability": 4,
+    "clinically_meaningful_omission": "Yes",
+    "clinically_concerning_hallucination": "No",
+    "checklist_a_mean": 4.3333,
+    "checklist_b_mean": 4.0,
+    "checklist_c_mean": 4.0,
+    "llm_checklist_abc_mean": 4.125,
+    "llm_checklist_mean_no_usability": 4.125,
+    "llm_checklist_total_score": 37,
+    "llm_checklist_mean": 4.1111,
+    "llm_checklist_meaningful_omission_yes": 1,
+    "llm_checklist_concerning_hallucination_yes": 0
+  },
+  "metrics": {
+    "case_id": "D2N004",
+    "method": "cluster2sent",
+    "template": "soap",
+    "source_cap_count": 33,
+    "event_plan_count": null,
+    "summary_cap_count": 22,
+    "cap_matched_count": 13,
+    "cap_precision": 0.5909,
+    "cap_recall": 0.3939,
+    "cap_f1": 0.4727,
+    "unsupported_summary_cap_count": 9,
+    "missing_source_cap_count": 20,
+    "summary_runtime_seconds": null,
+    "summary_cap_runtime_seconds": 29.336,
+    "event_plan_runtime_seconds": null,
+    "rouge_l_f1_vs_reference": 0.3065,
+    "token_f1_vs_reference": 0.4472,
+    "gptf1_macro_f1": 0.1667,
+    "nair_gpt_precision": 0.963,
+    "nair_gpt_recall": 0.7647,
+    "nair_gpt_f1": 0.8525,
+    "semantic_cap_precision": 0.4091,
+    "semantic_cap_recall": 0.5606,
+    "semantic_cap_f1": 0.473,
+    "hallucination_count": null,
+    "major_hallucination_count": null,
+    "omission_count": null,
+    "major_omission_count": null,
+    "section_appropriateness_score": 0.9,
+    "section_miscategorization_count": 1,
+    "major_section_miscategorization_count": 1,
+    "pdsqi_core_mean": 4.0,
+    "pdsqi_accurate": 4,
+    "pdsqi_thorough": 3,
+    "llm_checklist_total_score": 37,
+    "llm_checklist_mean": 4.1111,
+    "llm_checklist_mean_no_usability": 4.125,
+    "checklist_a_mean": 4.3333,
+    "checklist_b_mean": 4.0,
+    "checklist_c_mean": 4.0,
+    "llm_checklist_abc_mean": 4.125,
+    "content_preservation_core": 4,
+    "noise_suppression": 5,
+    "lay_expression_preservation": 4,
+    "state_update_fidelity": 4,
+    "temporality_preservation": 4,
+    "problem_evidence_linkage": 4,
+    "state_plan_separation": 4,
+    "section_organization_appropriateness": 4,
+    "overall_clinical_usability": 4,
+    "llm_checklist_meaningful_omission_yes": 1,
+    "llm_checklist_concerning_hallucination_yes": 0,
+    "gptf1_active_problems_symptoms_precision": 0.0,
+    "gptf1_active_problems_symptoms_recall": 0.0,
+    "gptf1_active_problems_symptoms_f1": 0.0,
+    "gptf1_active_problems_symptoms_pred_count": 2,
+    "gptf1_active_problems_symptoms_ref_count": 7,
+    "gptf1_negated_findings_precision": 0.0,
+    "gptf1_negated_findings_recall": 0.0,
+    "gptf1_negated_findings_f1": 0.0,
+    "gptf1_negated_findings_pred_count": 0,
+    "gptf1_negated_findings_ref_count": 0,
+    "gptf1_uncertain_findings_precision": 0.0,
+    "gptf1_uncertain_findings_recall": 0.0,
+    "gptf1_uncertain_findings_f1": 0.0,
+    "gptf1_uncertain_findings_pred_count": 0,
+    "gptf1_uncertain_findings_ref_count": 1,
+    "gptf1_medication_treatment_precision": 0.0,
+    "gptf1_medication_treatment_recall": 0.0,
+    "gptf1_medication_treatment_f1": 0.0,
+    "gptf1_medication_treatment_pred_count": 3,
+    "gptf1_medication_treatment_ref_count": 6,
+    "gptf1_plan_followup_precision": 1.0,
+    "gptf1_plan_followup_recall": 0.5,
+    "gptf1_plan_followup_f1": 0.6667,
+    "gptf1_plan_followup_pred_count": 2,
+    "gptf1_plan_followup_ref_count": 4,
+    "nair_pred_concept_count": 27,
+    "nair_ref_concept_count": 34,
+    "nair_precision_match_count": 26,
+    "nair_recall_match_count": 26,
+    "semantic_cap_precision_supported_count": 4,
+    "semantic_cap_precision_partial_count": 10,
+    "semantic_cap_precision_denominator": 22,
+    "semantic_cap_recall_supported_count": 15,
+    "semantic_cap_recall_partial_count": 7,
+    "semantic_cap_recall_denominator": 33,
+    "semantic_cap_low_value_source_count": 0,
+    "semantic_cap_low_value_summary_count": 0,
+    "semantic_cap_missing_count": 11,
+    "semantic_cap_unsupported_count": 8,
+    "semantic_cap_contradicted_source_count": 0,
+    "semantic_cap_contradicted_summary_count": 0,
+    "pdsqi_useful": 4,
+    "pdsqi_organized": 4,
+    "pdsqi_comprehensible": 5,
+    "pdsqi_succinct": 4,
+    "pdsqi_synthesized": 4
+  }
+}

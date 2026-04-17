@@ -1,0 +1,120 @@
+Case: D2N184
+
+Problem List and Visit State Tracking
+
+Problem List
+- right medial unicompartmental arthroplasty | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T0
+  Summary: The patient is six weeks post-right medial unicompartmental arthroplasty.
+  ClusterId: CL1
+  TemporalProfile: six weeks post-op
+  Updates:
+  - CAP4: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=six weeks post-op turns=T0 :: The patient is six weeks post-right medial unicompartmental arthroplasty.
+- numbness | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T8,T9
+  Summary: The patient reports numbness on this side.
+  ClusterId: CL2
+  TemporalProfile: current
+  Updates:
+  - CAP6: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T8 :: The patient reports numbness on this side.
+  - CAP8: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T9 :: The patient reports numbness.
+- knee pathology | verification_status=confirmed | clinical_status=active | modalities=unknown | speakers=doctor | evidence=T16
+  Summary: The doctor explains that the incision looks nice and everything is lined up nicely.
+  ClusterId: CL5
+  TemporalProfile: current
+  Updates:
+  - CAP1: content_source=doctor modality=unknown verification_status=confirmed clinical_status=active temporality=current turns=T16 :: The doctor explains that the incision looks nice and everything is lined up nicely.
+- pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T16
+  Summary: The patient reports pain.
+  ClusterId: CL6
+  TemporalProfile: current
+  Updates:
+  - CAP7: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T16 :: The patient reports pain.
+- aches and pains | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=doctor | evidence=T19
+  Summary: The doctor states the patient may have aches and pains occasionally.
+  ClusterId: CL7
+  TemporalProfile: occasional
+  Updates:
+  - CAP2: content_source=doctor modality=interview verification_status=confirmed clinical_status=active temporality=occasional turns=T19 :: The doctor states the patient may have aches and pains occasionally.
+- left hand pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T24
+  Summary: The patient reports pain in the left hand.
+  ClusterId: CL10
+  TemporalProfile: current
+  Updates:
+  - CAP5: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T24 :: The patient reports pain in the left hand.
+- ups job | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=doctor | evidence=T25
+  Summary: The doctor states the patient cannot do a UPS job.
+  ClusterId: CL11
+  TemporalProfile: future
+  Updates:
+  - CAP3: content_source=doctor modality=interview verification_status=confirmed clinical_status=historical temporality=future turns=T25 :: The doctor states the patient cannot do a UPS job.
+
+Medication Tracking
+- [MedicationChange] physical therapy | verification_status=confirmed | clinical_status=planned | modalities=unknown | speakers=doctor | evidence=T9
+  Summary: The doctor recommends the patient continue doing physical therapy.
+  ClusterId: CL3
+  TemporalProfile: future
+  PlannedChanges:
+  - The doctor recommends the patient continue doing physical therapy. (T9)
+  Updates:
+  - CAP23: content_source=doctor modality=unknown verification_status=confirmed clinical_status=planned temporality=future turns=T9 :: The doctor recommends the patient continue doing physical therapy.
+
+Other Structured States
+- [TestResult] x-ray | verification_status=confirmed | clinical_status=historical | modalities=test_result | speakers=doctor | evidence=T15
+  Summary: The doctor states that the x-rays look good.
+  ClusterId: CL4
+  TemporalProfile: current
+- [Plan] telemedicine visit | verification_status=unconfirmed | clinical_status=planned | modalities=interview | speakers=doctor | evidence=T21
+  Summary: A telemedicine visit is planned in six weeks.
+  ClusterId: CL8
+  TemporalProfile: six weeks
+- [Plan] follow-up | verification_status=unconfirmed | clinical_status=planned | modalities=interview | speakers=doctor | evidence=T21
+  Summary: The doctor will talk to the patient again in six weeks.
+  ClusterId: CL9
+  TemporalProfile: six weeks
+- [Plan] note | verification_status=unconfirmed | clinical_status=planned | modalities=interview | speakers=doctor | evidence=T27
+  Summary: The doctor will write a note to excuse the patient.
+  ClusterId: CL12
+  TemporalProfile: future
+- [ExamFinding] no assistive device use | verification_status=confirmed | clinical_status=active | modalities=exam | speakers=doctor | evidence=T41
+  Summary: The patient was not using an assistive device.
+  ClusterId: CL13
+  TemporalProfile: current
+- [ExamFinding] radiographs were three views of the right knee | verification_status=confirmed | clinical_status=active | modalities=exam | speakers=doctor | evidence=T41
+  Summary: Three-view radiographs of the right knee were taken.
+  ClusterId: CL14
+  TemporalProfile: current
+- [ExamFinding] antalgic gait | verification_status=confirmed | clinical_status=active | modalities=exam | speakers=doctor | evidence=T41
+  Summary: The patient presented with an antalgic gait.
+  ClusterId: CL15
+  TemporalProfile: current
+- [ExamFinding] healed surgical scar | verification_status=confirmed | clinical_status=historical | modalities=exam | speakers=doctor | evidence=T41
+  Summary: The patient has a healed surgical scar.
+  ClusterId: CL16
+  TemporalProfile: past
+- [ExamFinding] slight limp | verification_status=confirmed | clinical_status=active | modalities=exam | speakers=doctor | evidence=T41
+  Summary: The patient exhibited a slight limp.
+  ClusterId: CL17
+  TemporalProfile: current
+- [ExamFinding] decreased velocity | verification_status=confirmed | clinical_status=active | modalities=exam | speakers=doctor | evidence=T41
+  Summary: The patient's velocity was decreased.
+  ClusterId: CL18
+  TemporalProfile: current
+- [ExamFinding] mild swelling | verification_status=confirmed | clinical_status=active | modalities=exam | speakers=doctor | evidence=T41
+  Summary: The patient exhibits mild swelling.
+  ClusterId: CL19
+  TemporalProfile: current
+- [ExamFinding] tenderness | verification_status=confirmed | clinical_status=active | modalities=exam | speakers=doctor | evidence=T41
+  Summary: The patient exhibits tenderness.
+  ClusterId: CL20
+  TemporalProfile: current
+- [ExamFinding] range of motion 0-120 degrees | verification_status=confirmed | clinical_status=active | modalities=exam | speakers=doctor | evidence=T42
+  Summary: The patient's range of motion is 0 to 120 degrees.
+  ClusterId: CL21
+  TemporalProfile: current
+- [ExamFinding] implants in stable position | verification_status=confirmed | clinical_status=active | modalities=exam | speakers=doctor | evidence=T42
+  Summary: Implants are in a stable position.
+  ClusterId: CL22
+  TemporalProfile: current
+- [ExamFinding] no evidence of loosening or early complications | verification_status=confirmed | clinical_status=active | modalities=exam | speakers=doctor | evidence=T43
+  Summary: There is no evidence of loosening or early complications.
+  ClusterId: CL23
+  TemporalProfile: current

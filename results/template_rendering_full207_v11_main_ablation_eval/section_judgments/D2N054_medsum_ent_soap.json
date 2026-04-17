@@ -1,0 +1,37 @@
+{
+  "section_miscategorizations": [
+    {
+      "text": "An MRI is ordered to assess ligament injuries.",
+      "current_section": "A",
+      "expected_section": "P",
+      "severity": "major",
+      "reason": "Ordering an MRI is a management action and belongs in the Plan, not in the Assessment."
+    },
+    {
+      "text": "S The patient reports a sore right foot, with intermittent swelling and tenderness. He reports a previous ankle injury twenty years ago that occasionally causes soreness. He also reports soreness in his other ankle and has had surgery on that ankle. He describes the initial foot injury as dropping a landscape brick on his foot, causing immediate pain and swelling. He rated his current pain as eleven out of ten. He reports numbness in the entire foot since the incident. He has been taking no medications for the pain.",
+      "current_section": "P",
+      "expected_section": "S",
+      "severity": "major",
+      "reason": "This entire block is subjective history and symptoms but is duplicated and appended to the Plan section, which could confuse the distinction between patient-reported information and management actions."
+    },
+    {
+      "text": "O Physical exam reveals bruising on the bottom and top of the right foot. Swelling is present. Capillary refill is brisk. Dorsalis pedis pulse is strong and bounding. Neurovascular exam is intact. X-ray shows dorsal displacement of the base of the second metatarsal with a three millimeter separation of the first and second metatarsal bases and presence of bony fragments.",
+      "current_section": "P",
+      "expected_section": "O",
+      "severity": "major",
+      "reason": "This block is objective exam and imaging data but is duplicated and appended to the Plan section, mixing findings with management actions."
+    },
+    {
+      "text": "A The patient's right foot pain is due to a Lisfranc fracture. The x-ray findings indicate a dorsal displacement of the second metatarsal and separation of the first and second metatarsals. Given the bony fragments, surgery is likely indicated to restore proper alignment and prevent long-term complications such as arch loss, flatfoot, and arthritis. An MRI is ordered to assess ligament injuries.",
+      "current_section": "P",
+      "expected_section": "A",
+      "severity": "major",
+      "reason": "This block is the diagnostic assessment and rationale but is duplicated and appended to the Plan section, conflating problem synthesis with treatment planning."
+    }
+  ],
+  "summary_statistics": {
+    "section_appropriateness_score": 0.6,
+    "section_miscategorization_count": 4,
+    "major_section_miscategorization_count": 4
+  }
+}

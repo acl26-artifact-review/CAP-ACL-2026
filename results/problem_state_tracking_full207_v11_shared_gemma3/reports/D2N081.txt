@@ -1,0 +1,75 @@
+Case: D2N081
+
+Problem List and Visit State Tracking
+
+Problem List
+- light dry cough | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T11,T3
+  Summary: The patient has a light dry cough.
+  ClusterId: CL1
+  TemporalProfile: current, lingering, light
+  Updates:
+  - CAP1: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T3,T11 :: The patient reports a lingering light dry cough.
+  - CAP9: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T11 :: The patient has a cough.
+  - CAP3: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=lingering, light turns=T11 :: The patient reports a lingering, light dry cough.
+  - CAP5: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T11 :: The patient has a light dry cough.
+- persistent sore throat | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T15,T3
+  Summary: The patient has a persistent sore throat.
+  ClusterId: CL2
+  TemporalProfile: current, persistent, comes and goes
+  Updates:
+  - CAP7: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T3 :: The patient reports a sore throat.
+  - CAP2: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=persistent, comes and goes turns=T15 :: The patient reports a persistent sore throat that comes and goes.
+  - CAP6: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T15 :: The patient has a persistent sore throat.
+- fatigue | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T25,T6
+  Summary: The patient reports feeling fatigued.
+  ClusterId: CL3
+  TemporalProfile: current
+  Updates:
+  - CAP8: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T6 :: The patient reports feeling fatigued.
+  - CAP11: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T25 :: The patient reports fatigue.
+- eating | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T19
+  Summary: The patient has been eating, but not as much as normally.
+  ClusterId: CL6
+  TemporalProfile: current
+  Updates:
+  - CAP15: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T19 :: The patient has been eating, but not as much as normally.
+- nausea | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T25
+  Summary: The patient reports nausea.
+  ClusterId: CL7
+  TemporalProfile: current
+  Updates:
+  - CAP10: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T25 :: The patient reports nausea.
+  - CAP16: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T25 :: The patient denies feeling stuck.
+- left hand | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T29
+  Summary: The patient's pain is in the left hand.
+  ClusterId: CL8
+  TemporalProfile: current
+  Updates:
+  - CAP4: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T29 :: The patient's pain is in the left hand.
+- pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T29
+  Summary: The patient reports pain.
+  ClusterId: CL9
+  TemporalProfile: current
+  Updates:
+  - CAP12: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T29 :: The patient reports pain.
+
+Medication Tracking
+- [MedicationState] cisplatin | verification_status=confirmed | clinical_status=active | modalities=unknown | speakers=doctor | evidence=T18
+  Summary: The patient is receiving cisplatin.
+  ClusterId: CL4
+  TemporalProfile: past
+  CurrentRegimens:
+  - The patient is receiving cisplatin. (T18)
+  Updates:
+  - CAP13: content_source=doctor modality=unknown verification_status=confirmed clinical_status=active temporality=past turns=T18 :: The patient is receiving cisplatin.
+- [MedicationState] epirubicin | verification_status=confirmed | clinical_status=active | modalities=unknown | speakers=doctor | evidence=T18
+  Summary: The patient is receiving epirubicin.
+  ClusterId: CL5
+  TemporalProfile: past
+  CurrentRegimens:
+  - The patient is receiving epirubicin. (T18)
+  Updates:
+  - CAP14: content_source=doctor modality=unknown verification_status=confirmed clinical_status=active temporality=past turns=T18 :: The patient is receiving epirubicin.
+
+Other Structured States
+- None

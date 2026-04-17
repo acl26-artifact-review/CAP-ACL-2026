@@ -1,0 +1,44 @@
+{
+  "section_miscategorizations": [
+    {
+      "text": "He has had a baby with intestinal surgery at one month old.",
+      "current_section": "S",
+      "expected_section": "O",
+      "severity": "minor",
+      "reason": "This is a past surgical history detail (objective medical history) rather than a current subjective symptom or concern; however, it does not substantially mislead the clinical meaning."
+    },
+    {
+      "text": "Physical exam reveals well-healed abdominal surgical scars.",
+      "current_section": "O",
+      "expected_section": "S",
+      "severity": "minor",
+      "reason": "The presence of abdominal surgical scars implies a prior surgery that is not otherwise documented; this would more cleanly belong in past history, but its placement in O as an exam finding is acceptable and only a minor organizational issue."
+    },
+    {
+      "text": "A trial of proton pump inhibitors is warranted.",
+      "current_section": "A",
+      "expected_section": "P",
+      "severity": "major",
+      "reason": "This is a management decision (treatment plan) rather than diagnostic assessment; it should be documented as part of the plan, not the assessment."
+    },
+    {
+      "text": "An upper endoscopy is recommended to evaluate for underlying causes of GERD.",
+      "current_section": "A",
+      "expected_section": "P",
+      "severity": "major",
+      "reason": "This is an order/recommendation for a diagnostic procedure and belongs in the plan section, not in the assessment."
+    },
+    {
+      "text": "Rescribe nexium 40 mg twice daily.",
+      "current_section": "P",
+      "expected_section": "P",
+      "severity": "minor",
+      "reason": "The wording suggests a continuation or renewal of an existing medication, which is appropriate in P as a treatment change/order; no true miscategorization, but the intent could be clearer."
+    }
+  ],
+  "summary_statistics": {
+    "section_appropriateness_score": 0.8,
+    "section_miscategorization_count": 5,
+    "major_section_miscategorization_count": 2
+  }
+}

@@ -1,0 +1,87 @@
+Case: D2N198
+
+Problem List and Visit State Tracking
+
+Problem List
+- back pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T3
+  Summary: The patient reports back pain.
+  ClusterId: CL1
+  TemporalProfile: current
+  Updates:
+  - CAP8: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T3 :: The patient reports back pain.
+  - CAP10: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T3 :: The patient has back pain.
+- fatigue | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T5
+  Summary: The patient reports increased fatigue.
+  ClusterId: CL2
+  TemporalProfile: current
+  Updates:
+  - CAP9: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T5 :: The patient reports increased fatigue.
+- nocturia | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T17
+  Summary: The patient reports waking up more often during the night to urinate.
+  ClusterId: CL3
+  TemporalProfile: current
+  Updates:
+  - CAP1: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T17 :: The patient reports waking up more often during the night to urinate.
+- urinary frequency | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T17
+  Summary: The patient reports increased urine output.
+  ClusterId: CL5
+  TemporalProfile: current
+  Updates:
+  - CAP6: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T17 :: The patient reports increased urine output.
+- bicycle riding | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T19
+  Summary: The patient rides a bicycle occasionally.
+  ClusterId: CL6
+  TemporalProfile: current
+  Updates:
+  - CAP7: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=current turns=T19 :: The patient rides a bicycle occasionally.
+- left hand pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T29
+  Summary: The patient reports pain in the left hand.
+  ClusterId: CL7
+  TemporalProfile: current
+  Updates:
+  - CAP5: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T29 :: The patient reports pain in the left hand.
+- smoking | verification_status=unconfirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T35
+  Summary: The patient's brother smokes.
+  ClusterId: CL8
+  TemporalProfile: current
+  Updates:
+  - CAP13: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=current turns=T35 :: The patient's brother smokes.
+- streptococcal pharyngitis | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T37
+  Summary: The patient has had four sore throats in the last five months.
+  ClusterId: CL9
+  TemporalProfile: last five months
+  Updates:
+  - CAP2: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=last five months turns=T37 :: The patient has had four sore throats in the last five months.
+- recurrent strep throat | verification_status=unconfirmed | clinical_status=active | modalities=assessment | speakers=doctor | evidence=T37
+  Summary: The patient has a history of recurrent strep throat.
+  ClusterId: CL10
+  TemporalProfile: ongoing
+  Updates:
+  - CAP3: content_source=doctor modality=assessment verification_status=unconfirmed clinical_status=active temporality=ongoing turns=T37 :: The patient has a history of recurrent strep throat.
+- sore throat | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T39
+  Summary: The patient reports sore throat.
+  ClusterId: CL11
+  TemporalProfile: current
+  Updates:
+  - CAP11: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T39 :: The patient reports sore throat.
+- bfs | verification_status=unconfirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T39
+  Summary: The patient reports having BFS.
+  ClusterId: CL12
+  TemporalProfile: past
+  Updates:
+  - CAP12: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=past turns=T39 :: The patient reports having BFS.
+- pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T55
+  Summary: The patient reports pain.
+  ClusterId: CL13
+  TemporalProfile: current
+  Updates:
+  - CAP14: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T55 :: The patient reports pain.
+
+Medication Tracking
+- None
+
+Other Structured States
+- [Plan] follow-up | verification_status=confirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T68,T69
+  Summary: The doctor orders the patient to return in one week.
+  ClusterId: CL14
+  TemporalProfile: if results are normal, next week

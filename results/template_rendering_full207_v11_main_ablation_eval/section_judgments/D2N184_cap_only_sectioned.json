@@ -1,0 +1,51 @@
+{
+  "section_miscategorizations": [
+    {
+      "text": "Radiographs were three views of the right knee.",
+      "current_section": "Findings",
+      "expected_section": "Plan",
+      "severity": "major",
+      "reason": "This is an imaging order/selection rather than a reported result; it belongs in the plan as a diagnostic order, not in the findings section."
+    },
+    {
+      "text": "There is no evidence of loosening or early complications.",
+      "current_section": "Findings",
+      "expected_section": "Assessment",
+      "severity": "major",
+      "reason": "This is an interpretive diagnostic impression synthesizing imaging/exam, which fits the assessment rather than raw objective findings."
+    },
+    {
+      "text": "Post-operative complications following a right medial unicompartmental arthroplasty, complicated by neuropathic symptoms and altered gait.",
+      "current_section": "Assessment",
+      "expected_section": "History of Present Illness",
+      "severity": "major",
+      "reason": "The rest of the note's history and chief complaint concern new left hand pain and numbness; this assessment introduces a different problem (right knee arthroplasty complications) not supported by the HPI and would mislead the reader about the visit's diagnostic focus."
+    },
+    {
+      "text": "Continue current medications and monitor for any signs of infection or mechanical failure of the implant.",
+      "current_section": "Plan",
+      "expected_section": "Assessment",
+      "severity": "major",
+      "reason": "This plan is directed at managing a right knee implant and its complications, which are not established as active problems in the HPI for left hand pain; it reflects a mismatched problem set and would mislead the reader about the visit's management focus."
+    },
+    {
+      "text": "The patient's range of motion is 0 to 120 degrees.",
+      "current_section": "Findings",
+      "expected_section": "Findings",
+      "severity": "minor",
+      "reason": "As an exam finding it is correctly in Findings, but it appears to refer to the right knee rather than the symptomatic left hand, creating contextual inconsistency with the HPI; organizationally the finding should match the documented chief complaint/problem."
+    },
+    {
+      "text": "Radiographs were three views of the right knee. The patient presented with an antalgic gait. The patient has a healed surgical scar. The patient exhibits a slight limp. Implants are in a stable position. The patient's velocity was decreased.",
+      "current_section": "Findings",
+      "expected_section": "Findings",
+      "severity": "minor",
+      "reason": "Individually these are appropriate exam/imaging findings, but collectively they describe a right knee arthroplasty follow-up rather than the left hand complaint documented in the HPI, causing a problem-section mismatch that could confuse the reader about which condition is being evaluated."
+    }
+  ],
+  "summary_statistics": {
+    "section_appropriateness_score": 0.2,
+    "section_miscategorization_count": 6,
+    "major_section_miscategorization_count": 4
+  }
+}

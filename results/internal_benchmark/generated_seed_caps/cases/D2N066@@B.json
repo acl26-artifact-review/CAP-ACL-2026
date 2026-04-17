@@ -1,0 +1,593 @@
+{
+  "case_id": "D2N066",
+  "annotator": "B",
+  "seed_gold_caps": [
+    {
+      "gold_id": "G1",
+      "fact_text": "The patient is a 43-year-old male named Gabriel",
+      "category": "Demographics",
+      "speaker": "clinician",
+      "temporality": "current",
+      "certainty": "high",
+      "provenance_sentence": "2"
+    },
+    {
+      "gold_id": "G2",
+      "fact_text": "The patient is being seen today for evaluation of back pain",
+      "category": "Chief Complaint",
+      "speaker": "clinician",
+      "temporality": "current",
+      "certainty": "high",
+      "provenance_sentence": "2"
+    },
+    {
+      "gold_id": "G3",
+      "fact_text": "The patient has a past medical history of diabetes",
+      "category": "Past Medical History",
+      "speaker": "clinician",
+      "temporality": "unknown",
+      "certainty": "high",
+      "provenance_sentence": "2"
+    },
+    {
+      "gold_id": "G4",
+      "fact_text": "The patient has a past medical history of high blood pressure",
+      "category": "Past Medical History",
+      "speaker": "clinician",
+      "temporality": "unknown",
+      "certainty": "high",
+      "provenance_sentence": "2"
+    },
+    {
+      "gold_id": "G5",
+      "fact_text": "The patient has a past medical history of high cholesterol",
+      "category": "Past Medical History",
+      "speaker": "clinician",
+      "temporality": "unknown",
+      "certainty": "high",
+      "provenance_sentence": "2"
+    },
+    {
+      "gold_id": "G6",
+      "fact_text": "The patient developed lower back pain while working in the yard and bending over to pick something up",
+      "category": "Symptom",
+      "speaker": "patient",
+      "temporality": "past",
+      "certainty": "high",
+      "provenance_sentence": "3"
+    },
+    {
+      "gold_id": "G7",
+      "fact_text": "The patient describes pain across the lower part of the back",
+      "category": "Symptom",
+      "speaker": "patient",
+      "temporality": "unknown",
+      "certainty": "high",
+      "provenance_sentence": "3"
+    },
+    {
+      "gold_id": "G8",
+      "fact_text": "The patient reports that the back pain radiated down the left leg",
+      "category": "Symptom",
+      "speaker": "patient",
+      "temporality": "unknown",
+      "certainty": "high",
+      "provenance_sentence": "3,9"
+    },
+    {
+      "gold_id": "G9",
+      "fact_text": "The patient reports the back and leg pain has been present for about four days",
+      "category": "Symptom",
+      "speaker": "patient",
+      "temporality": "current",
+      "certainty": "high",
+      "provenance_sentence": "3"
+    },
+    {
+      "gold_id": "G10",
+      "fact_text": "The patient reports the back pain does not seem to be getting any better over the four days",
+      "category": "Symptom",
+      "speaker": "patient",
+      "temporality": "current",
+      "certainty": "high",
+      "provenance_sentence": "3"
+    },
+    {
+      "gold_id": "G11",
+      "fact_text": "The patient is not usually a big gardener and was carrying things in the yard at his wife's urging",
+      "category": "Social History",
+      "speaker": "patient",
+      "temporality": "past",
+      "certainty": "high",
+      "provenance_sentence": "5"
+    },
+    {
+      "gold_id": "G12",
+      "fact_text": "The patient reports tingling in the leg in certain positions",
+      "category": "Symptom",
+      "speaker": "patient",
+      "temporality": "current",
+      "certainty": "high",
+      "provenance_sentence": "11"
+    },
+    {
+      "gold_id": "G13",
+      "fact_text": "The patient reports mostly pain rather than numbness or weakness in the legs",
+      "category": "Symptom",
+      "speaker": "patient",
+      "temporality": "current",
+      "certainty": "high",
+      "provenance_sentence": "10-11"
+    },
+    {
+      "gold_id": "G14",
+      "fact_text": "The patient denies loss of bowel function",
+      "category": "Review of Systems",
+      "speaker": "patient",
+      "temporality": "current",
+      "certainty": "high",
+      "provenance_sentence": "12-13"
+    },
+    {
+      "gold_id": "G15",
+      "fact_text": "The patient denies loss of bladder function",
+      "category": "Review of Systems",
+      "speaker": "patient",
+      "temporality": "current",
+      "certainty": "high",
+      "provenance_sentence": "12-13"
+    },
+    {
+      "gold_id": "G16",
+      "fact_text": "The patient has had no prior back surgeries",
+      "category": "Past Medical History",
+      "speaker": "patient",
+      "temporality": "past",
+      "certainty": "high",
+      "provenance_sentence": "14-15"
+    },
+    {
+      "gold_id": "G17",
+      "fact_text": "The patient has had occasional back pain over the years",
+      "category": "Past Medical History",
+      "speaker": "patient",
+      "temporality": "unknown",
+      "certainty": "high",
+      "provenance_sentence": "15"
+    },
+    {
+      "gold_id": "G18",
+      "fact_text": "The patient has taken ibuprofen for the current back pain",
+      "category": "Medication",
+      "speaker": "patient",
+      "temporality": "current",
+      "certainty": "high",
+      "provenance_sentence": "17"
+    },
+    {
+      "gold_id": "G19",
+      "fact_text": "Ibuprofen has helped the patient's back pain somewhat",
+      "category": "Medication",
+      "speaker": "patient",
+      "temporality": "current",
+      "certainty": "high",
+      "provenance_sentence": "17"
+    },
+    {
+      "gold_id": "G20",
+      "fact_text": "The patient has diabetes and is on metformin 500 mg twice a day",
+      "category": "Medication",
+      "speaker": "clinician",
+      "temporality": "unknown",
+      "certainty": "high",
+      "provenance_sentence": "18"
+    },
+    {
+      "gold_id": "G21",
+      "fact_text": "The patient checks blood sugar two or three times a week",
+      "category": "Lifestyle",
+      "speaker": "patient",
+      "temporality": "current",
+      "certainty": "high",
+      "provenance_sentence": "19"
+    },
+    {
+      "gold_id": "G22",
+      "fact_text": "The patient's home blood sugars are usually in the 120 to 140 range",
+      "category": "Test Result",
+      "speaker": "patient",
+      "temporality": "current",
+      "certainty": "high",
+      "provenance_sentence": "19"
+    },
+    {
+      "gold_id": "G23",
+      "fact_text": "The patient reports taking diabetes medicine as prescribed",
+      "category": "Medication",
+      "speaker": "patient",
+      "temporality": "unknown",
+      "certainty": "high",
+      "provenance_sentence": "21"
+    },
+    {
+      "gold_id": "G24",
+      "fact_text": "The patient reports diet is okay but feels he could lose about 15 pounds",
+      "category": "Lifestyle",
+      "speaker": "patient",
+      "temporality": "current",
+      "certainty": "high",
+      "provenance_sentence": "21"
+    },
+    {
+      "gold_id": "G25",
+      "fact_text": "The patient believes his blood sugar control has been okay",
+      "category": "Assessment",
+      "speaker": "patient",
+      "temporality": "current",
+      "certainty": "high",
+      "provenance_sentence": "23"
+    },
+    {
+      "gold_id": "G26",
+      "fact_text": "The patient's last hemoglobin A1c was 7.1",
+      "category": "Test Result",
+      "speaker": "clinician",
+      "temporality": "past",
+      "certainty": "high",
+      "provenance_sentence": "24"
+    },
+    {
+      "gold_id": "G27",
+      "fact_text": "The clinician assesses the A1c of 7.1 as good but could be better",
+      "category": "Assessment",
+      "speaker": "clinician",
+      "temporality": "past",
+      "certainty": "high",
+      "provenance_sentence": "24"
+    },
+    {
+      "gold_id": "G28",
+      "fact_text": "The clinician and patient had previously discussed improving diet to control diabetes",
+      "category": "Counseling",
+      "speaker": "clinician",
+      "temporality": "past",
+      "certainty": "high",
+      "provenance_sentence": "24"
+    },
+    {
+      "gold_id": "G29",
+      "fact_text": "The patient reports his wife still makes cookies and he still eats them",
+      "category": "Lifestyle",
+      "speaker": "patient",
+      "temporality": "unknown",
+      "certainty": "high",
+      "provenance_sentence": "25"
+    },
+    {
+      "gold_id": "G30",
+      "fact_text": "The patient and his wife are trying to reduce carbohydrate intake and sweets",
+      "category": "Lifestyle",
+      "speaker": "patient",
+      "temporality": "current",
+      "certainty": "high",
+      "provenance_sentence": "25"
+    },
+    {
+      "gold_id": "G31",
+      "fact_text": "The clinician educates that diet and exercise control are important to prevent diabetes complications such as kidney failure and eye problems",
+      "category": "Education",
+      "speaker": "clinician",
+      "temporality": "current",
+      "certainty": "high",
+      "provenance_sentence": "26"
+    },
+    {
+      "gold_id": "G32",
+      "fact_text": "The clinician plans to order another hemoglobin A1c today",
+      "category": "Plan",
+      "speaker": "clinician",
+      "temporality": "future",
+      "certainty": "high",
+      "provenance_sentence": "26"
+    },
+    {
+      "gold_id": "G33",
+      "fact_text": "The clinician emphasizes controlling diet and exercise for diabetes management",
+      "category": "Counseling",
+      "speaker": "clinician",
+      "temporality": "current",
+      "certainty": "high",
+      "provenance_sentence": "26"
+    },
+    {
+      "gold_id": "G34",
+      "fact_text": "The patient's blood pressure in the clinic is about 120/70",
+      "category": "Test Result",
+      "speaker": "clinician",
+      "temporality": "current",
+      "certainty": "high",
+      "provenance_sentence": "28"
+    },
+    {
+      "gold_id": "G35",
+      "fact_text": "The patient is on Norvasc 5 mg once a day for high blood pressure",
+      "category": "Medication",
+      "speaker": "clinician",
+      "temporality": "unknown",
+      "certainty": "high",
+      "provenance_sentence": "28"
+    },
+    {
+      "gold_id": "G36",
+      "fact_text": "The patient checks blood pressure about once a week or two to three times a month",
+      "category": "Lifestyle",
+      "speaker": "patient",
+      "temporality": "current",
+      "certainty": "high",
+      "provenance_sentence": "29"
+    },
+    {
+      "gold_id": "G37",
+      "fact_text": "The patient's home blood pressures are usually 120 to 130 over 70 to 80",
+      "category": "Test Result",
+      "speaker": "patient",
+      "temporality": "current",
+      "certainty": "high",
+      "provenance_sentence": "29"
+    },
+    {
+      "gold_id": "G38",
+      "fact_text": "The patient feels his blood pressure is okay",
+      "category": "Assessment",
+      "speaker": "patient",
+      "temporality": "current",
+      "certainty": "high",
+      "provenance_sentence": "29"
+    },
+    {
+      "gold_id": "G39",
+      "fact_text": "The patient reports no real problems with blood pressure control",
+      "category": "Symptom",
+      "speaker": "patient",
+      "temporality": "current",
+      "certainty": "high",
+      "provenance_sentence": "31"
+    },
+    {
+      "gold_id": "G40",
+      "fact_text": "The patient reports swelling in the ankles",
+      "category": "Symptom",
+      "speaker": "patient",
+      "temporality": "current",
+      "certainty": "high",
+      "provenance_sentence": "31"
+    },
+    {
+      "gold_id": "G41",
+      "fact_text": "The ankle swelling started about one to two months after starting Norvasc",
+      "category": "Symptom",
+      "speaker": "patient",
+      "temporality": "unknown",
+      "certainty": "high",
+      "provenance_sentence": "33"
+    },
+    {
+      "gold_id": "G42",
+      "fact_text": "The patient wonders if the ankle swelling might be related to Norvasc",
+      "category": "Assessment",
+      "speaker": "patient",
+      "temporality": "current",
+      "certainty": "medium",
+      "provenance_sentence": "35"
+    },
+    {
+      "gold_id": "G43",
+      "fact_text": "The clinician agrees that Norvasc could be causing the ankle swelling",
+      "category": "Assessment",
+      "speaker": "clinician",
+      "temporality": "current",
+      "certainty": "medium",
+      "provenance_sentence": "36"
+    },
+    {
+      "gold_id": "G44",
+      "fact_text": "The patient reports nothing else is bothering him today",
+      "category": "Review of Systems",
+      "speaker": "patient",
+      "temporality": "current",
+      "certainty": "high",
+      "provenance_sentence": "38-39"
+    },
+    {
+      "gold_id": "G45",
+      "fact_text": "Neck exam shows no jugular venous distention",
+      "category": "Physical Exam",
+      "speaker": "clinician",
+      "temporality": "current",
+      "certainty": "high",
+      "provenance_sentence": "42"
+    },
+    {
+      "gold_id": "G46",
+      "fact_text": "Neck exam reveals no bruits",
+      "category": "Physical Exam",
+      "speaker": "clinician",
+      "temporality": "current",
+      "certainty": "high",
+      "provenance_sentence": "42"
+    },
+    {
+      "gold_id": "G47",
+      "fact_text": "Lung exam shows no rales",
+      "category": "Physical Exam",
+      "speaker": "clinician",
+      "temporality": "current",
+      "certainty": "high",
+      "provenance_sentence": "42"
+    },
+    {
+      "gold_id": "G48",
+      "fact_text": "Lung exam shows no wheezing",
+      "category": "Physical Exam",
+      "speaker": "clinician",
+      "temporality": "current",
+      "certainty": "high",
+      "provenance_sentence": "42"
+    },
+    {
+      "gold_id": "G49",
+      "fact_text": "Heart exam reveals a 2/6 systolic ejection murmur",
+      "category": "Physical Exam",
+      "speaker": "clinician",
+      "temporality": "current",
+      "certainty": "high",
+      "provenance_sentence": "42"
+    },
+    {
+      "gold_id": "G50",
+      "fact_text": "The systolic ejection murmur has been present in the past",
+      "category": "Past Medical History",
+      "speaker": "clinician",
+      "temporality": "unknown",
+      "certainty": "high",
+      "provenance_sentence": "42"
+    },
+    {
+      "gold_id": "G51",
+      "fact_text": "The clinician is not very worried about the patient's systolic ejection murmur",
+      "category": "Assessment",
+      "speaker": "clinician",
+      "temporality": "current",
+      "certainty": "high",
+      "provenance_sentence": "42"
+    },
+    {
+      "gold_id": "G52",
+      "fact_text": "Heart exam otherwise shows regular rate and rhythm",
+      "category": "Physical Exam",
+      "speaker": "clinician",
+      "temporality": "current",
+      "certainty": "high",
+      "provenance_sentence": "42"
+    },
+    {
+      "gold_id": "G53",
+      "fact_text": "Abdominal exam is soft",
+      "category": "Physical Exam",
+      "speaker": "clinician",
+      "temporality": "current",
+      "certainty": "high",
+      "provenance_sentence": "42"
+    },
+    {
+      "gold_id": "G54",
+      "fact_text": "Back exam shows tenderness in the left paraspinal area",
+      "category": "Physical Exam",
+      "speaker": "clinician",
+      "temporality": "current",
+      "certainty": "high",
+      "provenance_sentence": "42"
+    },
+    {
+      "gold_id": "G55",
+      "fact_text": "Straight leg raise test is negative",
+      "category": "Physical Exam",
+      "speaker": "clinician",
+      "temporality": "current",
+      "certainty": "high",
+      "provenance_sentence": "42"
+    },
+    {
+      "gold_id": "G56",
+      "fact_text": "Reflexes are normal on exam",
+      "category": "Physical Exam",
+      "speaker": "clinician",
+      "temporality": "current",
+      "certainty": "high",
+      "provenance_sentence": "42"
+    },
+    {
+      "gold_id": "G57",
+      "fact_text": "There is tenderness in the lower back paraspinal area on palpation",
+      "category": "Physical Exam",
+      "speaker": "clinician",
+      "temporality": "current",
+      "certainty": "high",
+      "provenance_sentence": "42"
+    },
+    {
+      "gold_id": "G58",
+      "fact_text": "Neurological exam is otherwise normal",
+      "category": "Physical Exam",
+      "speaker": "clinician",
+      "temporality": "current",
+      "certainty": "high",
+      "provenance_sentence": "42"
+    },
+    {
+      "gold_id": "G59",
+      "fact_text": "Extremity exam shows 1+ nonpitting edema of the lower extremities with ankle swelling",
+      "category": "Physical Exam",
+      "speaker": "clinician",
+      "temporality": "current",
+      "certainty": "high",
+      "provenance_sentence": "42"
+    },
+    {
+      "gold_id": "G60",
+      "fact_text": "There is no calf tenderness on exam",
+      "category": "Physical Exam",
+      "speaker": "clinician",
+      "temporality": "current",
+      "certainty": "high",
+      "provenance_sentence": "42"
+    },
+    {
+      "gold_id": "G61",
+      "fact_text": "Homan's sign is negative",
+      "category": "Physical Exam",
+      "speaker": "clinician",
+      "temporality": "current",
+      "certainty": "high",
+      "provenance_sentence": "42"
+    },
+    {
+      "gold_id": "G62",
+      "fact_text": "The clinician finds no signs of blood clot in the legs on exam",
+      "category": "Assessment",
+      "speaker": "clinician",
+      "temporality": "current",
+      "certainty": "high",
+      "provenance_sentence": "42"
+    },
+    {
+      "gold_id": "G63",
+      "fact_text": "The clinician assesses the back pain as more likely a muscular sprain",
+      "category": "Assessment",
+      "speaker": "clinician",
+      "temporality": "current",
+      "certainty": "medium",
+      "provenance_sentence": "42"
+    },
+    {
+      "gold_id": "G64",
+      "fact_text": "The clinician plans to start naprosyn 500 mg twice a day for back pain",
+      "category": "MedicationPlan",
+      "speaker": "clinician",
+      "temporality": "future",
+      "certainty": "high",
+      "provenance_sentence": "42"
+    },
+    {
+      "gold_id": "G65",
+      "fact_text": "The clinician plans to start flexeril 10 mg twice a day for back pain",
+      "category": "MedicationPlan",
+      "speaker": "clinician",
+      "temporality": "future",
+      "certainty": "high",
+      "provenance_sentence": "42"
+    }
+  ],
+  "generator_model": "gpt-5.1",
+  "generated_at": "2026-04-11T09:00:37.316234+00:00"
+}

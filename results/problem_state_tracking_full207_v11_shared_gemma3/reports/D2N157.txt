@@ -1,0 +1,190 @@
+Case: D2N157
+
+Problem List and Visit State Tracking
+
+Problem List
+- medication side effects | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T1
+  Summary: The patient reports concern about medication side effects.
+  ClusterId: CL1
+  TemporalProfile: current
+  Updates:
+  - CAP2: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T1 :: The patient reports concern about medication side effects.
+- dizziness | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T7
+  Summary: The patient reports dizziness.
+  ClusterId: CL5
+  TemporalProfile: current
+  Updates:
+  - CAP12: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T7 :: The patient reports dizziness.
+- coronary artery disease | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=doctor | evidence=T11
+  Summary: The patient has coronary artery disease.
+  ClusterId: CL6
+  TemporalProfile: current
+  Updates:
+  - CAP6: content_source=doctor modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T11 :: The patient has coronary artery disease.
+- stent | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T11
+  Summary: The patient has a stent.
+  ClusterId: CL7
+  TemporalProfile: past
+  Updates:
+  - CAP8: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=past turns=T11 :: The patient has a stent.
+- shortness of breath | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T12
+  Summary: The patient reports shortness of breath.
+  ClusterId: CL8
+  TemporalProfile: current
+  Updates:
+  - CAP7: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T12 :: The patient reports shortness of breath.
+- chest pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T12
+  Summary: The patient reports chest pain.
+  ClusterId: CL9
+  TemporalProfile: current
+  Updates:
+  - CAP9: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T12 :: The patient reports chest pain.
+- diabetes | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=doctor,patient | evidence=T13,T50
+  Summary: The patient has diabetes.
+  ClusterId: CL10
+  TemporalProfile: current, history
+  Updates:
+  - CAP13: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=history turns=T13 :: The patient has diabetes.
+  - CAP14: content_source=doctor modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T50 :: The patient has diabetes.
+- pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T27
+  Summary: The patient reports pain in the left hand.
+  ClusterId: CL11
+  TemporalProfile: current
+  Updates:
+  - CAP3: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T27 :: The patient reports pain in the left hand.
+- chronic kidney disease | verification_status=confirmed | clinical_status=active | modalities=assessment | speakers=doctor | evidence=T27
+  Summary: The patient has stage three chronic kidney disease.
+  ClusterId: CL12
+  TemporalProfile: historical
+  Updates:
+  - CAP4: content_source=doctor modality=assessment verification_status=confirmed clinical_status=active temporality=historical turns=T27 :: The patient has stage three chronic kidney disease.
+- heart attack | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=doctor | evidence=T53
+  Summary: The patient has a history of heart attack.
+  ClusterId: CL20
+  TemporalProfile: past
+  Updates:
+  - CAP5: content_source=doctor modality=interview verification_status=confirmed clinical_status=historical temporality=past turns=T53 :: The patient has a history of heart attack.
+- sadness | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T55
+  Summary: The patient reports feeling down.
+  ClusterId: CL21
+  TemporalProfile: recent
+  Updates:
+  - CAP10: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=recent turns=T55 :: The patient reports feeling down.
+- feeling down | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T55
+  Summary: The patient reports feeling down.
+  ClusterId: CL22
+  TemporalProfile: current
+  Updates:
+  - CAP11: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T55 :: The patient reports feeling down.
+- depression | verification_status=unconfirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T62
+  Summary: The patient is experiencing difficulty adjusting after having a heart attack.
+  ClusterId: CL23
+  TemporalProfile: after heart attack
+  Updates:
+  - CAP1: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=after heart attack turns=T62 :: The patient is experiencing difficulty adjusting after having a heart attack.
+
+Medication Tracking
+- [MedicationState] aspirin | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=clinician,doctor | evidence=T10,T2,T44
+  Summary: The patient will be on aspirin.
+  ClusterId: CL2
+  TemporalProfile: current, ongoing
+  CurrentRegimens:
+  - The patient is taking aspirin. (T2)
+  - The patient will be on aspirin. (T10)
+  - The patient will take aspirin. (T44)
+  Updates:
+  - CAP26: content_source=doctor modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T2 :: The patient is taking aspirin.
+  - CAP24: content_source=clinician modality=interview verification_status=confirmed clinical_status=active temporality=ongoing turns=T10 :: The patient will be on aspirin.
+  - CAP31: content_source=doctor modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T44 :: The patient will take aspirin.
+- [MedicationState] brilinta | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=clinician,doctor | evidence=T10,T2
+  Summary: The patient will be on brilinta.
+  ClusterId: CL3
+  TemporalProfile: current, ongoing
+  CurrentRegimens:
+  - The patient is taking brilinta. (T2)
+  - The patient will be on brilinta. (T10)
+  Updates:
+  - CAP27: content_source=doctor modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T2 :: The patient is taking brilinta.
+  - CAP25: content_source=clinician modality=interview verification_status=confirmed clinical_status=active temporality=ongoing turns=T10 :: The patient will be on brilinta.
+- [MedicationState] metoprolol | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=doctor | evidence=T44,T6
+  Summary: The patient is taking metoprolol.
+  ClusterId: CL4
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient is taking metoprolol. (T6)
+  - The patient will take metoprolol. (T44)
+  Updates:
+  - CAP28: content_source=doctor modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T6 :: The patient is taking metoprolol.
+  - CAP29: content_source=doctor modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T44 :: The patient will take metoprolol.
+- [MedicationState] motrin | verification_status=confirmed | clinical_status=active | modalities=assessment | speakers=doctor | evidence=T28
+  Summary: The doctor instructed the patient to avoid motrin.
+  ClusterId: CL13
+  TemporalProfile: current
+  CurrentRegimens:
+  - The doctor instructed the patient to avoid motrin. (T28)
+  Updates:
+  - CAP22: content_source=doctor modality=assessment verification_status=confirmed clinical_status=active temporality=current turns=T28 :: The doctor instructed the patient to avoid motrin.
+- [MedicationState] advil | verification_status=confirmed | clinical_status=active | modalities=assessment | speakers=doctor | evidence=T28
+  Summary: The doctor instructed the patient to avoid advil.
+  ClusterId: CL14
+  TemporalProfile: current
+  CurrentRegimens:
+  - The doctor instructed the patient to avoid advil. (T28)
+  Updates:
+  - CAP23: content_source=doctor modality=assessment verification_status=confirmed clinical_status=active temporality=current turns=T28 :: The doctor instructed the patient to avoid advil.
+- [MedicationState] crestor | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=doctor | evidence=T44
+  Summary: The patient will take crestor.
+  ClusterId: CL16
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient will take crestor. (T44)
+  Updates:
+  - CAP30: content_source=doctor modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T44 :: The patient will take crestor.
+- [MedicationChange] dietitian referral | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T50
+  Summary: A referral to a dietitian will be placed.
+  ClusterId: CL17
+  TemporalProfile: future
+  PlannedChanges:
+  - A referral to a dietitian will be placed. (T50)
+  Updates:
+  - CAP16: content_source=doctor modality=plan verification_status=unconfirmed clinical_status=planned temporality=future turns=T50 :: A referral to a dietitian will be placed.
+- [MedicationChange] insulin regimen | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T50
+  Summary: The patient's insulin regimen will be reviewed.
+  ClusterId: CL18
+  TemporalProfile: future
+  PlannedChanges:
+  - The patient's insulin regimen will be reviewed. (T50)
+  Updates:
+  - CAP17: content_source=doctor modality=plan verification_status=unconfirmed clinical_status=planned temporality=future turns=T50 :: The patient's insulin regimen will be reviewed.
+- [MedicationChange] hemoglobin a1c | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T50
+  Summary: A hemoglobin a1c will be ordered.
+  ClusterId: CL19
+  TemporalProfile: future
+  PlannedChanges:
+  - A hemoglobin a1c will be ordered. (T50)
+  Updates:
+  - CAP18: content_source=doctor modality=plan verification_status=unconfirmed clinical_status=planned temporality=future turns=T50 :: A hemoglobin a1c will be ordered.
+- [MedicationChange] referral to psychiatry | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T62
+  Summary: A referral to psychiatry is placed.
+  ClusterId: CL24
+  TemporalProfile: future
+  PlannedChanges:
+  - A referral to psychiatry is placed. (T62)
+  Updates:
+  - CAP19: content_source=doctor modality=plan verification_status=unconfirmed clinical_status=planned temporality=future turns=T62 :: A referral to psychiatry is placed.
+- [MedicationChange] medication refill | verification_status=confirmed | clinical_status=planned | modalities=plan | speakers=clinician,doctor | evidence=T65
+  Summary: Medication refills will be done automatically.
+  ClusterId: CL25
+  TemporalProfile: automatic, future
+  PlannedChanges:
+  - Medication refills will be done automatically. (T65)
+  - The patient's medication refill will be put into the computer. (T65)
+  Updates:
+  - CAP20: content_source=doctor modality=plan verification_status=unconfirmed clinical_status=planned temporality=automatic turns=T65 :: Medication refills will be done automatically.
+  - CAP21: content_source=clinician modality=plan verification_status=confirmed clinical_status=planned temporality=future turns=T65 :: The patient's medication refill will be put into the computer.
+
+Other Structured States
+- [Plan] cardiac rehab | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T44
+  Summary: The patient will be referred for cardiac rehab.
+  ClusterId: CL15
+  TemporalProfile: future

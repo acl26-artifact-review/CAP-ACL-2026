@@ -1,0 +1,130 @@
+Case: D2N102
+
+Problem List and Visit State Tracking
+
+Problem List
+- dysuria | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T3
+  Summary: The patient reported constant need to pee and it hurt something terrible.
+  ClusterId: CL1
+  TemporalProfile: recent
+  Updates:
+  - CAP4: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=recent turns=T3 :: The patient reported constant need to pee and it hurt something terrible.
+- hematuria | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T3
+  Summary: The patient reports bright red urine the color of cherry kool-aid.
+  ClusterId: CL2
+  TemporalProfile: recent
+  Updates:
+  - CAP6: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=recent turns=T3 :: The patient reports bright red urine the color of cherry kool-aid.
+- pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T10
+  Summary: The patient reported pain at an 8 on a scale of 0 to 10.
+  ClusterId: CL4
+  TemporalProfile: current, recent
+  Updates:
+  - CAP2: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=recent turns=T10 :: The patient reported pain at an 8 on a scale of 0 to 10.
+  - CAP11: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T10 :: The patient reports pain in the left hand.
+- kidney stones | verification_status=confirmed | clinical_status=active | modalities=interview,unknown | speakers=doctor | evidence=T10
+  Summary: The patient previously experienced blood in the urine due to kidney stones.
+  ClusterId: CL5
+  TemporalProfile: current, past
+  Updates:
+  - CAP5: content_source=doctor modality=interview verification_status=confirmed clinical_status=historical temporality=past turns=T10 :: The patient previously experienced blood in the urine due to kidney stones.
+  - CAP10: content_source=doctor modality=unknown verification_status=confirmed clinical_status=active temporality=current turns=T10 :: The patient has one stone in the left kidney.
+- dehydration | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=doctor,patient | evidence=T12,T13
+  Summary: Dehydration increases the risk of kidney stone formation.
+  ClusterId: CL7
+  TemporalProfile: current, present
+  Updates:
+  - CAP12: content_source=doctor modality=interview verification_status=confirmed clinical_status=active temporality=present turns=T12 :: Dehydration increases the risk of kidney stone formation.
+  - CAP13: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T13 :: The patient admits to not drinking enough water.
+- sodium intake | verification_status=confirmed | clinical_status=planned | modalities=interview | speakers=doctor | evidence=T13,T18
+  Summary: The doctor recommends limiting sodium intake to less than 1,000 milligrams a day.
+  ClusterId: CL8
+  TemporalProfile: present
+  Updates:
+  - CAP8: content_source=doctor modality=interview verification_status=confirmed clinical_status=active temporality=present turns=T13 :: High sodium intake increases the risk of kidney stone formation.
+  - CAP3: content_source=doctor modality=interview verification_status=confirmed clinical_status=planned temporality=present turns=T18 :: The doctor recommends limiting sodium intake to less than 1,000 milligrams a day.
+- animal protein intake | verification_status=confirmed | clinical_status=planned | modalities=interview | speakers=doctor | evidence=T13,T18
+  Summary: High animal protein intake increases the risk of kidney stone formation.
+  ClusterId: CL9
+  TemporalProfile: present
+  Updates:
+  - CAP7: content_source=doctor modality=interview verification_status=confirmed clinical_status=active temporality=present turns=T13 :: High animal protein intake increases the risk of kidney stone formation.
+  - CAP14: content_source=doctor modality=interview verification_status=confirmed clinical_status=planned temporality=present turns=T18 :: The doctor recommends limiting animal protein intake.
+- oxalate intake | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=doctor | evidence=T13
+  Summary: High oxalate intake increases the risk of kidney stone formation.
+  ClusterId: CL10
+  TemporalProfile: present
+  Updates:
+  - CAP9: content_source=doctor modality=interview verification_status=confirmed clinical_status=active temporality=present turns=T13 :: High oxalate intake increases the risk of kidney stone formation.
+- handout | verification_status=confirmed | clinical_status=planned | modalities=unknown | speakers=doctor | evidence=T22
+  Summary: A handout is provided to the patient.
+  ClusterId: CL18
+  TemporalProfile: future
+  Updates:
+  - CAP15: content_source=doctor modality=unknown verification_status=confirmed clinical_status=planned temporality=future turns=T22 :: A handout is provided to the patient.
+
+Medication Tracking
+- [MedicationState] alavert | verification_status=confirmed | clinical_status=active | modalities=assessment | speakers=doctor | evidence=T5
+  Summary: The patient is taking alavert 10 milligrams a day.
+  ClusterId: CL3
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient is taking alavert 10 milligrams a day. (T5)
+  Updates:
+  - CAP18: content_source=doctor modality=assessment verification_status=confirmed clinical_status=active temporality=current turns=T5 :: The patient is taking alavert 10 milligrams a day.
+- [MedicationChange] sodium oxalate | verification_status=confirmed | clinical_status=planned | modalities=unknown | speakers=doctor | evidence=T18
+  Summary: The patient should avoid food rich in sodium oxalate.
+  ClusterId: CL12
+  TemporalProfile: future
+  PlannedChanges:
+  - The patient should consume less than 1,000 milligrams of sodium a day. (T18)
+  - The patient should avoid food rich in sodium oxalate. (T18)
+  Updates:
+  - CAP17: content_source=doctor modality=unknown verification_status=confirmed clinical_status=planned temporality=future turns=T18 :: The patient should consume less than 1,000 milligrams of sodium a day.
+  - CAP19: content_source=doctor modality=unknown verification_status=confirmed clinical_status=planned temporality=future turns=T18 :: The patient should avoid food rich in sodium oxalate.
+- [MedicationChange] beef | verification_status=confirmed | clinical_status=planned | modalities=unknown | speakers=doctor | evidence=T18
+  Summary: The patient should reduce the amount of beef.
+  ClusterId: CL13
+  TemporalProfile: future
+  PlannedChanges:
+  - The patient should reduce the amount of beef. (T18)
+  Updates:
+  - CAP20: content_source=doctor modality=unknown verification_status=confirmed clinical_status=planned temporality=future turns=T18 :: The patient should reduce the amount of beef.
+- [MedicationChange] poultry | verification_status=confirmed | clinical_status=planned | modalities=unknown | speakers=doctor | evidence=T18
+  Summary: The patient should reduce the amount of poultry.
+  ClusterId: CL14
+  TemporalProfile: future
+  PlannedChanges:
+  - The patient should reduce the amount of poultry. (T18)
+  Updates:
+  - CAP21: content_source=doctor modality=unknown verification_status=confirmed clinical_status=planned temporality=future turns=T18 :: The patient should reduce the amount of poultry.
+- [MedicationChange] fish | verification_status=confirmed | clinical_status=planned | modalities=unknown | speakers=doctor | evidence=T18
+  Summary: The patient should reduce the amount of fish.
+  ClusterId: CL15
+  TemporalProfile: future
+  PlannedChanges:
+  - The patient should reduce the amount of fish. (T18)
+  Updates:
+  - CAP22: content_source=doctor modality=unknown verification_status=confirmed clinical_status=planned temporality=future turns=T18 :: The patient should reduce the amount of fish.
+- [MedicationChange] pork | verification_status=confirmed | clinical_status=planned | modalities=unknown | speakers=doctor | evidence=T18
+  Summary: The patient should reduce the amount of pork.
+  ClusterId: CL16
+  TemporalProfile: future
+  PlannedChanges:
+  - The patient should reduce the amount of pork. (T18)
+  Updates:
+  - CAP23: content_source=doctor modality=unknown verification_status=confirmed clinical_status=planned temporality=future turns=T18 :: The patient should reduce the amount of pork.
+- [MedicationChange] animal protein | verification_status=confirmed | clinical_status=planned | modalities=unknown | speakers=doctor | evidence=T18
+  Summary: The patient should avoid animal protein.
+  ClusterId: CL17
+  TemporalProfile: future
+  PlannedChanges:
+  - The patient should avoid animal protein. (T18)
+  Updates:
+  - CAP24: content_source=doctor modality=unknown verification_status=confirmed clinical_status=planned temporality=future turns=T18 :: The patient should avoid animal protein.
+
+Other Structured States
+- [Plan] no surgical intervention | verification_status=confirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T10
+  Summary: No surgical intervention is recommended at this time.
+  ClusterId: CL6
+  TemporalProfile: future

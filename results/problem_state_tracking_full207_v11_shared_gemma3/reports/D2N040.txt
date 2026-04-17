@@ -1,0 +1,130 @@
+Case: D2N040
+
+Problem List and Visit State Tracking
+
+Problem List
+- headache | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T10,T18,T2,T26,T3
+  Summary: The patient has a headache.
+  ClusterId: CL1
+  TemporalProfile: current
+  Updates:
+  - CAP10: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T2 :: The patient has a headache.
+  - CAP8: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T3 :: The patient reports a headache.
+  - CAP12: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T10 :: The patient has a headache.
+  - CAP24: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T10 :: The patient has a history of headaches.
+  - CAP13: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T18 :: The patient reports a headache.
+  - CAP15: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T26 :: The patient has a headache.
+- flushing | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T3
+  Summary: The patient reports flushing in their ears.
+  ClusterId: CL2
+  TemporalProfile: current
+  Updates:
+  - CAP4: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T3 :: The patient reports flushing in their ears.
+- dull pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T3
+  Summary: The patient describes a dull pain.
+  ClusterId: CL3
+  TemporalProfile: current
+  Updates:
+  - CAP6: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T3 :: The patient describes a dull pain.
+- dizziness | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T3
+  Summary: The patient reports feeling dizzy.
+  ClusterId: CL4
+  TemporalProfile: current
+  Updates:
+  - CAP9: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T3 :: The patient reports feeling dizzy.
+- stress | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T11,T25
+  Summary: The patient reports experiencing stress.
+  ClusterId: CL7
+  TemporalProfile: current, last week
+  Updates:
+  - CAP11: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T11 :: The patient reports experiencing stress.
+  - CAP25: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T11 :: The patient reports experiencing stress.
+  - CAP14: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=last week turns=T25 :: The patient has been stressed.
+- fever | verification_status=refuted | clinical_status=historical | modalities=interview | speakers=patient | evidence=T13
+  Summary: The patient denies fever.
+  ClusterId: CL8
+  TemporalProfile: current
+  Updates:
+  - CAP16: content_source=patient modality=interview verification_status=refuted clinical_status=historical temporality=current turns=T13 :: The patient denies fever.
+- poor diet | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T25
+  Summary: The patient has not been eating well.
+  ClusterId: CL10
+  TemporalProfile: last week
+  Updates:
+  - CAP5: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=last week turns=T25 :: The patient has not been eating well.
+- exercise | verification_status=unconfirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T25
+  Summary: The patient has not been exercising.
+  ClusterId: CL11
+  TemporalProfile: past week
+  Updates:
+  - CAP7: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=past week turns=T25 :: The patient has not been exercising.
+- left hand pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T27
+  Summary: The patient reports pain in the left hand.
+  ClusterId: CL12
+  TemporalProfile: current
+  Updates:
+  - CAP2: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T27 :: The patient reports pain in the left hand.
+- computer use | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T33
+  Summary: The patient is still working on the computer.
+  ClusterId: CL14
+  TemporalProfile: current
+  Updates:
+  - CAP3: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T33 :: The patient is still working on the computer.
+- taking breaks | verification_status=unconfirmed | clinical_status=planned | modalities=interview | speakers=patient | evidence=T35
+  Summary: The patient does not get the opportunity to take breaks.
+  ClusterId: CL15
+  TemporalProfile: hourly
+  Updates:
+  - CAP1: content_source=patient modality=interview verification_status=unconfirmed clinical_status=planned temporality=hourly turns=T35 :: The patient does not get the opportunity to take breaks.
+
+Medication Tracking
+- [MedicationState] acetaminophen | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T7
+  Summary: The patient takes acetaminophen.
+  ClusterId: CL5
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient takes acetaminophen. (T7)
+  Updates:
+  - CAP22: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T7 :: The patient takes acetaminophen.
+- [MedicationState] ibuprofen | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T7
+  Summary: The patient takes ibuprofen.
+  ClusterId: CL6
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient takes ibuprofen. (T7)
+  Updates:
+  - CAP23: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T7 :: The patient takes ibuprofen.
+- [MedicationChange] metformin | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=doctor | evidence=T22
+  Summary: The patient's metformin dose was increased to 500 mg twice a day.
+  ClusterId: CL9
+  TemporalProfile: current
+  PlannedChanges:
+  - The patient's metformin dose was increased to 500 mg twice a day. (T22)
+  Updates:
+  - CAP19: content_source=doctor modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T22 :: The patient's metformin dose was increased to 500 mg twice a day.
+- [MedicationChange] getting better | verification_status=unconfirmed | clinical_status=planned | modalities=interview | speakers=doctor | evidence=T32
+  Summary: We'll get you feeling better.
+  ClusterId: CL13
+  TemporalProfile: future
+  PlannedChanges:
+  - We'll get you feeling better. (T32)
+  Updates:
+  - CAP21: content_source=doctor modality=interview verification_status=unconfirmed clinical_status=planned temporality=future turns=T32 :: We'll get you feeling better.
+- [MedicationChange] flexeril | verification_status=unconfirmed | clinical_status=planned | modalities=interview | speakers=doctor | evidence=T38
+  Summary: The doctor wants to schedule an appointment in four weeks.
+  ClusterId: CL18
+  TemporalProfile: future
+  PlannedChanges:
+  - The doctor wants to schedule an appointment in four weeks. (T38)
+  Updates:
+  - CAP20: content_source=doctor modality=interview verification_status=unconfirmed clinical_status=planned temporality=future turns=T38 :: The doctor wants to schedule an appointment in four weeks.
+
+Other Structured States
+- [Plan] call | verification_status=unconfirmed | clinical_status=planned | modalities=interview | speakers=doctor | evidence=T38
+  Summary: The doctor wants the patient to call if the headache is not better or if it gets worse.
+  ClusterId: CL16
+  TemporalProfile: future
+- [Plan] follow-up | verification_status=unconfirmed | clinical_status=planned | modalities=interview | speakers=doctor | evidence=T38
+  Summary: The doctor wants to see the patient back in four weeks if the headache is not better.
+  ClusterId: CL17
+  TemporalProfile: future

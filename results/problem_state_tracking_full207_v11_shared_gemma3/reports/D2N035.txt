@@ -1,0 +1,118 @@
+Case: D2N035
+
+Problem List and Visit State Tracking
+
+Problem List
+- heart failure | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T0
+  Summary: The patient has heart failure.
+  ClusterId: CL1
+  TemporalProfile: current
+  Updates:
+  - CAP9: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T0 :: The patient has heart failure.
+- high blood pressure | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T5
+  Summary: The patient's blood pressure is high.
+  ClusterId: CL2
+  TemporalProfile: current
+  Updates:
+  - CAP4: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T5 :: The patient's blood pressure is high.
+- ankle swelling | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T5
+  Summary: The patient reports ankle swelling.
+  ClusterId: CL3
+  TemporalProfile: current
+  Updates:
+  - CAP7: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T5 :: The patient reports ankle swelling.
+- difficulty breathing | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T5
+  Summary: The patient reports difficulty breathing.
+  ClusterId: CL4
+  TemporalProfile: current
+  Updates:
+  - CAP8: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T5 :: The patient reports difficulty breathing.
+- sodium intake | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T15
+  Summary: The patient consumes a high amount of sodium.
+  ClusterId: CL6
+  TemporalProfile: current
+  Updates:
+  - CAP2: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T15 :: The patient consumes a high amount of sodium.
+- salt and vinegar potato chips | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T17
+  Summary: The patient enjoys salt and vinegar potato chips.
+  ClusterId: CL9
+  TemporalProfile: current
+  Updates:
+  - CAP1: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T17 :: The patient enjoys salt and vinegar potato chips.
+- shortness of breath | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T25,T37
+  Summary: The patient reports decreased shortness of breath.
+  ClusterId: CL10
+  TemporalProfile: current
+  Updates:
+  - CAP3: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T25 :: The patient reports decreased shortness of breath.
+  - CAP5: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T25 :: The patient has shortness of breath.
+  - CAP6: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T37 :: The patient reports shortness of breath.
+- incontinence | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T27
+  Summary: The patient reports incontinence.
+  ClusterId: CL11
+  TemporalProfile: current
+  Updates:
+  - CAP11: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T27 :: The patient reports incontinence.
+  - CAP12: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T27 :: The patient reports incontinence.
+- insomnia | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T47
+  Summary: The patient reports problems sleeping.
+  ClusterId: CL18
+  TemporalProfile: current
+  Updates:
+  - CAP10: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T47 :: The patient reports problems sleeping.
+
+Medication Tracking
+- [MedicationState] medication | verification_status=unconfirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T8
+  Summary: The patient may be missing medication doses.
+  ClusterId: CL5
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient may be missing medication doses. (T8)
+  Updates:
+  - CAP22: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=current turns=T8 :: The patient may be missing medication doses.
+- [MedicationState] blood pressure medication | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T30
+  Summary: The patient reports difficulty remembering to take blood pressure medication.
+  ClusterId: CL12
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient reports difficulty remembering to take blood pressure medication. (T30)
+  Updates:
+  - CAP20: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T30 :: The patient reports difficulty remembering to take blood pressure medication.
+- [MedicationState] blood pressure cuff | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T38
+  Summary: The patient already had a blood pressure cuff.
+  ClusterId: CL15
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient already had a blood pressure cuff. (T38)
+  Updates:
+  - CAP21: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=current turns=T38 :: The patient already had a blood pressure cuff.
+
+Other Structured States
+- [Plan] medication adherence | verification_status=confirmed | clinical_status=planned | modalities=interview | speakers=doctor | evidence=T15
+  Summary: The doctor recommends consistent medication adherence.
+  ClusterId: CL7
+  TemporalProfile: future
+- [Plan] diet modification | verification_status=confirmed | clinical_status=planned | modalities=interview | speakers=doctor | evidence=T15
+  Summary: The doctor recommends dietary modification.
+  ClusterId: CL8
+  TemporalProfile: future
+- [Plan] pill box | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T36
+  Summary: Setting an alarm on the phone might really help.
+  ClusterId: CL13
+  TemporalProfile: future
+- [Plan] blood pressure cuff | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T38
+  Summary: Have a blood pressure cuff to have at home.
+  ClusterId: CL14
+  TemporalProfile: future
+- [Plan] use blood pressure cuff | verification_status=unconfirmed | clinical_status=planned | modalities=interview | speakers=doctor | evidence=T43
+  Summary: The patient will try to use the blood pressure cuff every day.
+  ClusterId: CL16
+  TemporalProfile: current
+- [Plan] change eating habits | verification_status=unconfirmed | clinical_status=planned | modalities=interview | speakers=doctor | evidence=T44
+  Summary: The patient may need to change their eating habits.
+  ClusterId: CL17
+  TemporalProfile: current
+- [Plan] log blood pressures | verification_status=unconfirmed | clinical_status=planned | modalities=interview | speakers=doctor | evidence=T47
+  Summary: The patient will keep a log of blood pressures.
+  ClusterId: CL19
+  TemporalProfile: current

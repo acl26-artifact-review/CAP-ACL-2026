@@ -1,0 +1,1854 @@
+{
+  "case_id": "D2N020",
+  "method": "cluster2sent",
+  "template": "soap",
+  "summary_text": "S:\nThe patient reports experiencing lightheadedness and nausea, particularly when sitting in a car. He reports a slight nick from chopping onions and a slightly decreased appetite. He denies significant weight loss or night sweats.\n\nO:\nThe patient's hemoglobin is 8.2 g/dL. A slight polyp was identified during endoscopy and biopsied. The patient has tenderness to the right lower quadrant upon palpation of the abdomen.\n\nA:\nThe patient has anemia and gastritis with a mild polyp. The patient's symptoms are consistent with gastritis and possible bleeding.\n\nP:\nOrder protonix 40 milligrams once daily. Order a complete blood count. Follow up in 2 weeks to assess response to protonix and hemoglobin level.",
+  "reference_summary": "CHIEF COMPLAINT\n\nAbnormal labs.\n\nHISTORY OF PRESENT ILLNESS\n\nMr. Vincent Young is a 56-year-old male who presents to the clinic today for evaluation of abnormal labs.\n\nThe patient was seen in the emergency room where he was found to have low hemoglobin. He notes that he has been very lightheaded. He denies any hematochezia. The patient does note some decrease in appetite. The patient reports some nausea when he is sitting in the back of the car. He denies any abdominal pain, fever, chills, vomiting, or recent weight loss. The patient also denies night sweats, or a cough.\n\nThe patient notes that he is doing well status post knee arthroplasty. He is walking around without any problems.\n\nThe patient had a biopsy a few years ago for potential lung cancer, however the nodule was benign. He is doing well.\n\nREVIEW OF SYSTEMS\n\n• Constitutional: No fevers, chills, or weight loss.\n• Gastrointestinal: Endorses decreased appetite and mild nausea. Denies hematochezia.\n• Neurological: Endorse lightheadedness.\n\nPHYSICAL EXAMINATION\n\n• Constitutional: in no apparent distress.\n• Neck: Supple without thyromegaly or lymphadenopathy.\n• Respiratory: Lungs are clear to auscultation bilaterally. No wheezes, rales, or rhonchi.\n• Cardiovascular: Regular rate and rhythm. No murmurs, gallops, or rubs. No extra heart sounds.\n• Gastrointestinal: Right lower quadrant tender to palpation.\n• Musculoskeletal: No lower extremity edema\n\nRESULTS\n\nHemoglobin- 8.2, which is low for his height and weight.\n\nEndoscopy from the emergency room showed gastritis and a slight polyp. The biopsy results are still pending.\n\nASSESSMENT AND PLAN\n\nVincent Young is a 56-year-old male who presents today for lab review.\n\nNew found anemia.\n• Medical Reasoning: His hemoglobin was 8.2, which is low for his height and weight. Endoscopy from the hospital showed gastritis which could be the source of bleeding. The endoscopy also showed a polyp and a polypectomy was performed. The pathology is still pending.\n• Patient Education and Counseling: I encouraged the patient to reduce his caffeine consumption avoid NSAIDs and alcohol.\n• Additional Testing: Repeat CBC was ordered.\n• Medical Treatment: I prescribed Protonix 40 mg once a day for gastritis.\n\nPatient Agreements: The patient understands and agrees with the recommended medical treatment plan.",
+  "source_cap": {
+    "atomic_propositions": [
+      {
+        "prop_id": "CAP1",
+        "cap_type": "Symptom",
+        "canonical_concept": "tenderness",
+        "category": "Symptom",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient has tenderness to the right lower quadrant."
+      },
+      {
+        "prop_id": "CAP2",
+        "cap_type": "Symptom",
+        "canonical_concept": "pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports pain in the left hand."
+      },
+      {
+        "prop_id": "CAP3",
+        "cap_type": "Problem",
+        "canonical_concept": "knee replacement",
+        "category": "Problem",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "past",
+        "proposition_text": "The patient had a knee replacement last year."
+      },
+      {
+        "prop_id": "CAP4",
+        "cap_type": "Problem",
+        "canonical_concept": "lung cancer",
+        "category": "Problem",
+        "speaker": "unknown",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "past",
+        "proposition_text": "The patient had a possible lung cancer scare."
+      },
+      {
+        "prop_id": "CAP5",
+        "cap_type": "Problem",
+        "canonical_concept": "blood in stools",
+        "category": "Problem",
+        "speaker": "doctor",
+        "predicate": "denies",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "past",
+        "proposition_text": "The patient denies blood in their stools."
+      },
+      {
+        "prop_id": "CAP6",
+        "cap_type": "Symptom",
+        "canonical_concept": "nausea",
+        "category": "Symptom",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient experiences nausea at times."
+      },
+      {
+        "prop_id": "CAP7",
+        "cap_type": "Symptom",
+        "canonical_concept": "anemia",
+        "category": "Symptom",
+        "speaker": "doctor",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports having newfound anemia."
+      },
+      {
+        "prop_id": "CAP8",
+        "cap_type": "Symptom",
+        "canonical_concept": "lightheadedness",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports feeling lightheaded."
+      },
+      {
+        "prop_id": "CAP9",
+        "cap_type": "Symptom",
+        "canonical_concept": "decreased appetite",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports decreased appetite."
+      },
+      {
+        "prop_id": "CAP10",
+        "cap_type": "Problem",
+        "canonical_concept": "weight loss",
+        "category": "Problem",
+        "speaker": "patient",
+        "predicate": "denies",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "past",
+        "proposition_text": "The patient denies weight loss."
+      },
+      {
+        "prop_id": "CAP11",
+        "cap_type": "Problem",
+        "canonical_concept": "lung cancer",
+        "category": "Problem",
+        "speaker": "unknown",
+        "status": "affirmed",
+        "visit_state": "resolved",
+        "temporality": "past",
+        "proposition_text": "The lung cancer was benign."
+      },
+      {
+        "prop_id": "CAP12",
+        "cap_type": "Problem",
+        "canonical_concept": "hand pain",
+        "category": "Problem",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient reports hand pain."
+      },
+      {
+        "prop_id": "CAP13",
+        "cap_type": "Symptom",
+        "canonical_concept": "nausea",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports nausea."
+      },
+      {
+        "prop_id": "CAP14",
+        "cap_type": "Problem",
+        "canonical_concept": "fever",
+        "category": "Problem",
+        "speaker": "doctor",
+        "predicate": "denies",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "past",
+        "proposition_text": "The patient denies fever."
+      },
+      {
+        "prop_id": "CAP15",
+        "cap_type": "Problem",
+        "canonical_concept": "chills",
+        "category": "Problem",
+        "speaker": "doctor",
+        "predicate": "denies",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "past",
+        "proposition_text": "The patient denies chills."
+      },
+      {
+        "prop_id": "CAP16",
+        "cap_type": "Symptom",
+        "canonical_concept": "pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports pain."
+      },
+      {
+        "prop_id": "CAP17",
+        "cap_type": "Symptom",
+        "canonical_concept": "pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient experiences pain."
+      },
+      {
+        "prop_id": "CAP18",
+        "cap_type": "Problem",
+        "canonical_concept": "anemia",
+        "category": "Problem",
+        "speaker": "doctor",
+        "predicate": "suspects",
+        "status": "uncertain",
+        "visit_state": "planned",
+        "temporality": "future",
+        "proposition_text": "The doctor suspects anemia."
+      },
+      {
+        "prop_id": "CAP19",
+        "cap_type": "Order",
+        "canonical_concept": "complete blood count",
+        "category": "Order",
+        "speaker": "doctor",
+        "status": "uncertain",
+        "visit_state": "planned",
+        "temporality": "soon",
+        "proposition_text": "A complete blood count will be ordered."
+      },
+      {
+        "prop_id": "CAP20",
+        "cap_type": "MedicationRequest",
+        "canonical_concept": "CBC",
+        "category": "MedicationRequest",
+        "speaker": "doctor",
+        "status": "uncertain",
+        "visit_state": "planned",
+        "temporality": "soon",
+        "proposition_text": "The nurse will finalize the note."
+      },
+      {
+        "prop_id": "CAP21",
+        "cap_type": "TestResult",
+        "canonical_concept": "hemoglobin",
+        "category": "TestResult",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "quantitative"
+        ],
+        "proposition_text": "The patient's hemoglobin is 8.2."
+      },
+      {
+        "prop_id": "CAP22",
+        "cap_type": "FollowUp",
+        "canonical_concept": "follow up",
+        "category": "FollowUp",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "planned",
+        "temporality": "current",
+        "claim_type_tags": [
+          "temporal"
+        ],
+        "proposition_text": "The doctor schedules a follow-up appointment in a couple of weeks."
+      },
+      {
+        "prop_id": "CAP23",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "protonix",
+        "category": "MedicationStatement",
+        "speaker": "doctor",
+        "predicate": "orders",
+        "status": "affirmed",
+        "visit_state": "planned",
+        "temporality": "current",
+        "claim_type_tags": [
+          "plan",
+          "quantitative"
+        ],
+        "proposition_text": "The doctor orders protonix 40 milligrams once a day."
+      },
+      {
+        "prop_id": "CAP24",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "protonix",
+        "category": "MedicationStatement",
+        "speaker": "patient",
+        "predicate": "plans",
+        "status": "uncertain",
+        "visit_state": "planned",
+        "temporality": "future",
+        "claim_type_tags": [
+          "plan"
+        ],
+        "proposition_text": "The doctor plans to prescribe protonix."
+      },
+      {
+        "prop_id": "CAP25",
+        "cap_type": "ProblemHistory",
+        "canonical_concept": "knife injury",
+        "category": "ProblemHistory",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "past",
+        "proposition_text": "The patient reports a slight nick from a knife while chopping onions."
+      },
+      {
+        "prop_id": "CAP26",
+        "cap_type": "Counseling",
+        "canonical_concept": "caffeine",
+        "category": "Counseling",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "planned",
+        "temporality": "current",
+        "proposition_text": "The doctor advises the patient to cut down on caffeine intake."
+      },
+      {
+        "prop_id": "CAP27",
+        "cap_type": "Counseling",
+        "canonical_concept": "ibuprofen",
+        "category": "Counseling",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "planned",
+        "temporality": "current",
+        "proposition_text": "The doctor advises the patient to avoid taking ibuprofen."
+      },
+      {
+        "prop_id": "CAP28",
+        "cap_type": "Counseling",
+        "canonical_concept": "alcohol intake",
+        "category": "Counseling",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "planned",
+        "temporality": "current",
+        "proposition_text": "The doctor advises the patient to reduce alcohol intake."
+      }
+    ],
+    "filtered_nonverifiable_units": []
+  },
+  "event_plan": null,
+  "summary_cap": {
+    "atomic_propositions": [
+      {
+        "prop_id": "P1",
+        "cap_type": "Symptom",
+        "canonical_concept": "experiencing lightheadedness",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports experiencing lightheadedness."
+      },
+      {
+        "prop_id": "P2",
+        "cap_type": "Symptom",
+        "canonical_concept": "experiencing nausea",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports experiencing nausea."
+      },
+      {
+        "prop_id": "P3",
+        "cap_type": "Symptom",
+        "canonical_concept": "lightheadedness and nausea particularly",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports lightheadedness and nausea particularly when sitting in a car."
+      },
+      {
+        "prop_id": "P4",
+        "cap_type": "History",
+        "canonical_concept": "slight nick chopping onions",
+        "category": "History",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "past",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports a slight nick from chopping onions."
+      },
+      {
+        "prop_id": "P5",
+        "cap_type": "Symptom",
+        "canonical_concept": "decreased appetite",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports a slightly decreased appetite."
+      },
+      {
+        "prop_id": "P6",
+        "cap_type": "Denial",
+        "canonical_concept": "denies significant weight loss",
+        "category": "Denial",
+        "speaker": "patient",
+        "predicate": "denies",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient denies significant weight loss."
+      },
+      {
+        "prop_id": "P7",
+        "cap_type": "Denial",
+        "canonical_concept": "denies night sweats",
+        "category": "Denial",
+        "speaker": "patient",
+        "predicate": "denies",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient denies night sweats."
+      },
+      {
+        "prop_id": "P8",
+        "cap_type": "Finding",
+        "canonical_concept": "hemoglobin g/dl",
+        "category": "Finding",
+        "speaker": "clinician",
+        "predicate": "has",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "exam"
+        ],
+        "proposition_text": "The patient's hemoglobin is 8.2 g/dL."
+      },
+      {
+        "prop_id": "P9",
+        "cap_type": "Finding",
+        "canonical_concept": "slight polyp was identified",
+        "category": "Finding",
+        "speaker": "clinician",
+        "predicate": "has",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "exam"
+        ],
+        "proposition_text": "A slight polyp was identified during endoscopy and biopsied."
+      },
+      {
+        "prop_id": "P10",
+        "cap_type": "Finding",
+        "canonical_concept": "tenderness right lower quadrant",
+        "category": "Finding",
+        "speaker": "clinician",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "exam"
+        ],
+        "proposition_text": "The patient has tenderness to the right lower quadrant upon palpation of the abdomen."
+      },
+      {
+        "prop_id": "P11",
+        "cap_type": "Diagnosis",
+        "canonical_concept": "anemia",
+        "category": "Diagnosis",
+        "speaker": "clinician",
+        "predicate": "diagnoses",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "diagnostic"
+        ],
+        "proposition_text": "The patient has anemia."
+      },
+      {
+        "prop_id": "P12",
+        "cap_type": "Diagnosis",
+        "canonical_concept": "gastritis",
+        "category": "Diagnosis",
+        "speaker": "clinician",
+        "predicate": "diagnoses",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "diagnostic"
+        ],
+        "proposition_text": "The patient has gastritis."
+      },
+      {
+        "prop_id": "P13",
+        "cap_type": "Finding",
+        "canonical_concept": "symptoms are consistent gastritis",
+        "category": "Finding",
+        "speaker": "clinician",
+        "predicate": "suspects",
+        "status": "uncertain",
+        "visit_state": "uncertain",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient's symptoms are consistent with gastritis and possible bleeding."
+      },
+      {
+        "prop_id": "P14",
+        "cap_type": "MedicationPlan",
+        "canonical_concept": "order protonix milligrams once",
+        "category": "MedicationPlan",
+        "speaker": "clinician",
+        "predicate": "prescribes",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "medication"
+        ],
+        "proposition_text": "Order protonix 40 milligrams once daily."
+      }
+    ],
+    "filtered_nonverifiable_units": [],
+    "runtime_seconds": 34.443
+  },
+  "cap_alignment": {
+    "cap_precision": 0.7142857142857143,
+    "cap_recall": 0.35714285714285715,
+    "cap_f1": 0.4761904761904762,
+    "matched_count": 10,
+    "summary_prop_count": 14,
+    "source_prop_count": 28,
+    "matched_pairs": [
+      {
+        "score": 1.0,
+        "summary_prop_id": "P11",
+        "source_prop_id": "CAP18",
+        "summary_text": "The patient has anemia.",
+        "source_text": "The doctor suspects anemia."
+      },
+      {
+        "score": 1.0,
+        "summary_prop_id": "P5",
+        "source_prop_id": "CAP9",
+        "summary_text": "The patient reports a slightly decreased appetite.",
+        "source_text": "The patient reports decreased appetite."
+      },
+      {
+        "score": 1.0,
+        "summary_prop_id": "P2",
+        "source_prop_id": "CAP13",
+        "summary_text": "The patient reports experiencing nausea.",
+        "source_text": "The patient reports nausea."
+      },
+      {
+        "score": 0.9091,
+        "summary_prop_id": "P6",
+        "source_prop_id": "CAP10",
+        "summary_text": "The patient denies significant weight loss.",
+        "source_text": "The patient denies weight loss."
+      },
+      {
+        "score": 0.8833,
+        "summary_prop_id": "P1",
+        "source_prop_id": "CAP8",
+        "summary_text": "The patient reports experiencing lightheadedness.",
+        "source_text": "The patient reports feeling lightheaded."
+      },
+      {
+        "score": 0.875,
+        "summary_prop_id": "P8",
+        "source_prop_id": "CAP21",
+        "summary_text": "The patient's hemoglobin is 8.2 g/dL.",
+        "source_text": "The patient's hemoglobin is 8.2."
+      },
+      {
+        "score": 0.8571,
+        "summary_prop_id": "P4",
+        "source_prop_id": "CAP25",
+        "summary_text": "The patient reports a slight nick from chopping onions.",
+        "source_text": "The patient reports a slight nick from a knife while chopping onions."
+      },
+      {
+        "score": 0.7826,
+        "summary_prop_id": "P10",
+        "source_prop_id": "CAP1",
+        "summary_text": "The patient has tenderness to the right lower quadrant upon palpation of the abdomen.",
+        "source_text": "The patient has tenderness to the right lower quadrant."
+      },
+      {
+        "score": 0.65,
+        "summary_prop_id": "P3",
+        "source_prop_id": "CAP6",
+        "summary_text": "The patient reports lightheadedness and nausea particularly when sitting in a car.",
+        "source_text": "The patient experiences nausea at times."
+      },
+      {
+        "score": 0.6,
+        "summary_prop_id": "P14",
+        "source_prop_id": "CAP23",
+        "summary_text": "Order protonix 40 milligrams once daily.",
+        "source_text": "The doctor orders protonix 40 milligrams once a day."
+      }
+    ],
+    "unsupported_summary_props": [
+      {
+        "prop_id": "P7",
+        "cap_type": "Denial",
+        "canonical_concept": "denies night sweats",
+        "category": "Denial",
+        "speaker": "patient",
+        "predicate": "denies",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient denies night sweats."
+      },
+      {
+        "prop_id": "P9",
+        "cap_type": "Finding",
+        "canonical_concept": "slight polyp was identified",
+        "category": "Finding",
+        "speaker": "clinician",
+        "predicate": "has",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "exam"
+        ],
+        "proposition_text": "A slight polyp was identified during endoscopy and biopsied."
+      },
+      {
+        "prop_id": "P12",
+        "cap_type": "Diagnosis",
+        "canonical_concept": "gastritis",
+        "category": "Diagnosis",
+        "speaker": "clinician",
+        "predicate": "diagnoses",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "diagnostic"
+        ],
+        "proposition_text": "The patient has gastritis."
+      },
+      {
+        "prop_id": "P13",
+        "cap_type": "Finding",
+        "canonical_concept": "symptoms are consistent gastritis",
+        "category": "Finding",
+        "speaker": "clinician",
+        "predicate": "suspects",
+        "status": "uncertain",
+        "visit_state": "uncertain",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient's symptoms are consistent with gastritis and possible bleeding."
+      }
+    ],
+    "missing_source_props": [
+      {
+        "prop_id": "CAP2",
+        "cap_type": "Symptom",
+        "canonical_concept": "pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports pain in the left hand."
+      },
+      {
+        "prop_id": "CAP3",
+        "cap_type": "Problem",
+        "canonical_concept": "knee replacement",
+        "category": "Problem",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "past",
+        "proposition_text": "The patient had a knee replacement last year."
+      },
+      {
+        "prop_id": "CAP4",
+        "cap_type": "Problem",
+        "canonical_concept": "lung cancer",
+        "category": "Problem",
+        "speaker": "unknown",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "past",
+        "proposition_text": "The patient had a possible lung cancer scare."
+      },
+      {
+        "prop_id": "CAP5",
+        "cap_type": "Problem",
+        "canonical_concept": "blood in stools",
+        "category": "Problem",
+        "speaker": "doctor",
+        "predicate": "denies",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "past",
+        "proposition_text": "The patient denies blood in their stools."
+      },
+      {
+        "prop_id": "CAP7",
+        "cap_type": "Symptom",
+        "canonical_concept": "anemia",
+        "category": "Symptom",
+        "speaker": "doctor",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports having newfound anemia."
+      },
+      {
+        "prop_id": "CAP11",
+        "cap_type": "Problem",
+        "canonical_concept": "lung cancer",
+        "category": "Problem",
+        "speaker": "unknown",
+        "status": "affirmed",
+        "visit_state": "resolved",
+        "temporality": "past",
+        "proposition_text": "The lung cancer was benign."
+      },
+      {
+        "prop_id": "CAP12",
+        "cap_type": "Problem",
+        "canonical_concept": "hand pain",
+        "category": "Problem",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient reports hand pain."
+      },
+      {
+        "prop_id": "CAP14",
+        "cap_type": "Problem",
+        "canonical_concept": "fever",
+        "category": "Problem",
+        "speaker": "doctor",
+        "predicate": "denies",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "past",
+        "proposition_text": "The patient denies fever."
+      },
+      {
+        "prop_id": "CAP15",
+        "cap_type": "Problem",
+        "canonical_concept": "chills",
+        "category": "Problem",
+        "speaker": "doctor",
+        "predicate": "denies",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "past",
+        "proposition_text": "The patient denies chills."
+      },
+      {
+        "prop_id": "CAP16",
+        "cap_type": "Symptom",
+        "canonical_concept": "pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports pain."
+      },
+      {
+        "prop_id": "CAP17",
+        "cap_type": "Symptom",
+        "canonical_concept": "pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient experiences pain."
+      },
+      {
+        "prop_id": "CAP19",
+        "cap_type": "Order",
+        "canonical_concept": "complete blood count",
+        "category": "Order",
+        "speaker": "doctor",
+        "status": "uncertain",
+        "visit_state": "planned",
+        "temporality": "soon",
+        "proposition_text": "A complete blood count will be ordered."
+      },
+      {
+        "prop_id": "CAP20",
+        "cap_type": "MedicationRequest",
+        "canonical_concept": "CBC",
+        "category": "MedicationRequest",
+        "speaker": "doctor",
+        "status": "uncertain",
+        "visit_state": "planned",
+        "temporality": "soon",
+        "proposition_text": "The nurse will finalize the note."
+      },
+      {
+        "prop_id": "CAP22",
+        "cap_type": "FollowUp",
+        "canonical_concept": "follow up",
+        "category": "FollowUp",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "planned",
+        "temporality": "current",
+        "claim_type_tags": [
+          "temporal"
+        ],
+        "proposition_text": "The doctor schedules a follow-up appointment in a couple of weeks."
+      },
+      {
+        "prop_id": "CAP24",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "protonix",
+        "category": "MedicationStatement",
+        "speaker": "patient",
+        "predicate": "plans",
+        "status": "uncertain",
+        "visit_state": "planned",
+        "temporality": "future",
+        "claim_type_tags": [
+          "plan"
+        ],
+        "proposition_text": "The doctor plans to prescribe protonix."
+      },
+      {
+        "prop_id": "CAP26",
+        "cap_type": "Counseling",
+        "canonical_concept": "caffeine",
+        "category": "Counseling",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "planned",
+        "temporality": "current",
+        "proposition_text": "The doctor advises the patient to cut down on caffeine intake."
+      },
+      {
+        "prop_id": "CAP27",
+        "cap_type": "Counseling",
+        "canonical_concept": "ibuprofen",
+        "category": "Counseling",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "planned",
+        "temporality": "current",
+        "proposition_text": "The doctor advises the patient to avoid taking ibuprofen."
+      },
+      {
+        "prop_id": "CAP28",
+        "cap_type": "Counseling",
+        "canonical_concept": "alcohol intake",
+        "category": "Counseling",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "planned",
+        "temporality": "current",
+        "proposition_text": "The doctor advises the patient to reduce alcohol intake."
+      }
+    ]
+  },
+  "reference_gpt_f1_items": {
+    "active_problems_symptoms": [
+      "lightheadedness",
+      "right lower quadrant tender to palpation",
+      "low hemoglobin"
+    ],
+    "negated_findings": [],
+    "uncertain_findings": [],
+    "medication_treatment": [],
+    "plan_followup": [],
+    "_chunk_count": [
+      "3"
+    ]
+  },
+  "summary_gpt_f1_items": {
+    "active_problems_symptoms": [
+      "lightheadedness",
+      "nausea",
+      "nick from chopping onions",
+      "decreased appetite",
+      "tenderness to the right lower quadrant"
+    ],
+    "negated_findings": [
+      "significant weight loss",
+      "night sweats"
+    ],
+    "uncertain_findings": [
+      "gastritis",
+      "possible bleeding"
+    ],
+    "medication_treatment": [
+      "protonix 40 milligrams once daily"
+    ],
+    "plan_followup": [
+      "complete blood count",
+      "follow up in 2 weeks"
+    ],
+    "_chunk_count": [
+      "1"
+    ]
+  },
+  "gpt_f1_alignment": {
+    "by_category": {
+      "active_problems_symptoms": {
+        "precision": 0.4,
+        "recall": 0.6666666666666666,
+        "f1": 0.5,
+        "matched_count": 2,
+        "pred_count": 5,
+        "ref_count": 3,
+        "matches": [
+          {
+            "score": 1.0,
+            "pred_text": "lightheadedness",
+            "ref_text": "lightheadedness"
+          },
+          {
+            "score": 0.7273,
+            "pred_text": "tenderness to the right lower quadrant",
+            "ref_text": "right lower quadrant tender to palpation"
+          }
+        ],
+        "unsupported_pred_items": [
+          "nausea",
+          "nick from chopping onions",
+          "decreased appetite"
+        ],
+        "missing_ref_items": [
+          "low hemoglobin"
+        ]
+      },
+      "negated_findings": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "matched_count": 0,
+        "pred_count": 2,
+        "ref_count": 0,
+        "matches": [],
+        "unsupported_pred_items": [
+          "significant weight loss",
+          "night sweats"
+        ],
+        "missing_ref_items": []
+      },
+      "uncertain_findings": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "matched_count": 0,
+        "pred_count": 2,
+        "ref_count": 0,
+        "matches": [],
+        "unsupported_pred_items": [
+          "gastritis",
+          "possible bleeding"
+        ],
+        "missing_ref_items": []
+      },
+      "medication_treatment": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "matched_count": 0,
+        "pred_count": 1,
+        "ref_count": 0,
+        "matches": [],
+        "unsupported_pred_items": [
+          "protonix 40 milligrams once daily"
+        ],
+        "missing_ref_items": []
+      },
+      "plan_followup": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "matched_count": 0,
+        "pred_count": 2,
+        "ref_count": 0,
+        "matches": [],
+        "unsupported_pred_items": [
+          "complete blood count",
+          "follow up in 2 weeks"
+        ],
+        "missing_ref_items": []
+      }
+    }
+  },
+  "reference_nair_concepts": {
+    "sections": [
+      {
+        "heading": "Clinical Note",
+        "section_value": "CHIEF COMPLAINT\nAbnormal labs.\nHISTORY OF PRESENT ILLNESS\nMr. Vincent Young is a 56-year-old male who presents to the clinic today for evaluation of abnormal labs.\nThe patient was seen in the emergency room where he was found to have low hemoglobin. He notes that he has been very lightheaded. He denies any hematochezia. The patient does note some decrease in appetite. The patient reports some nausea when he is sitting in the back of the car. He denies any abdominal pain, fever, chills, vomiting, or recent weight loss. The patient also denies night sweats, or a cough.\nThe patient notes that he is doing well status post knee arthroplasty. He is walking around without any problems.\nThe patient had a biopsy a few years ago for potential lung cancer, however the nodule was benign. He is doing well.\nREVIEW OF SYSTEMS\n• Constitutional: No fevers, chills, or weight loss.\n• Gastrointestinal: Endorses decreased appetite and mild nausea. Denies hematochezia.",
+        "medical_concepts": [
+          "abnormal labs",
+          "low hemoglobin",
+          "lightheadedness",
+          "hematochezia",
+          "decreased appetite",
+          "nausea",
+          "abdominal pain",
+          "fever",
+          "chills",
+          "weight loss",
+          "night sweats",
+          "cough",
+          "knee arthroplasty",
+          "biopsy",
+          "lung cancer",
+          "lung nodule"
+        ]
+      },
+      {
+        "heading": "Clinical Note",
+        "section_value": "• Neurological: Endorse lightheadedness.\nPHYSICAL EXAMINATION\n• Constitutional: in no apparent distress.\n• Neck: Supple without thyromegaly or lymphadenopathy.\n• Respiratory: Lungs are clear to auscultation bilaterally. No wheezes, rales, or rhonchi.\n• Cardiovascular: Regular rate and rhythm. No murmurs, gallops, or rubs. No extra heart sounds.\n• Gastrointestinal: Right lower quadrant tender to palpation.\n• Musculoskeletal: No lower extremity edema\nRESULTS\nHemoglobin- 8.2, which is low for his height and weight.",
+        "medical_concepts": [
+          "lightheadedness",
+          "thyromegaly",
+          "lymphadenopathy",
+          "wheezes",
+          "rales",
+          "rhonchi",
+          "murmurs",
+          "gallops",
+          "rubs",
+          "extra heart sounds",
+          "right lower quadrant tenderness",
+          "lower extremity edema",
+          "hemoglobin"
+        ]
+      },
+      {
+        "heading": "Clinical Note",
+        "section_value": "Endoscopy from the emergency room showed gastritis and a slight polyp. The biopsy results are still pending.\nASSESSMENT AND PLAN\nVincent Young is a 56-year-old male who presents today for lab review.\nNew found anemia.\n• Medical Reasoning: His hemoglobin was 8.2, which is low for his height and weight. Endoscopy from the hospital showed gastritis which could be the source of bleeding. The endoscopy also showed a polyp and a polypectomy was performed. The pathology is still pending.\n• Patient Education and Counseling: I encouraged the patient to reduce his caffeine consumption avoid NSAIDs and alcohol.\n• Additional Testing: Repeat CBC was ordered.\n• Medical Treatment: I prescribed Protonix 40 mg once a day for gastritis.\nPatient Agreements: The patient understands and agrees with the recommended medical treatment plan.",
+        "medical_concepts": [
+          "endoscopy",
+          "gastritis",
+          "polyp",
+          "polypectomy",
+          "biopsy",
+          "anemia",
+          "hemoglobin",
+          "caffeine consumption",
+          "NSAIDs",
+          "alcohol",
+          "CBC",
+          "Protonix"
+        ]
+      }
+    ],
+    "medical_concepts": [
+      "abnormal labs",
+      "low hemoglobin",
+      "lightheadedness",
+      "hematochezia",
+      "decreased appetite",
+      "nausea",
+      "abdominal pain",
+      "fever",
+      "chills",
+      "weight loss",
+      "night sweats",
+      "cough",
+      "knee arthroplasty",
+      "biopsy",
+      "lung cancer",
+      "lung nodule",
+      "thyromegaly",
+      "lymphadenopathy",
+      "wheezes",
+      "rales",
+      "rhonchi",
+      "murmurs",
+      "gallops",
+      "rubs",
+      "extra heart sounds",
+      "right lower quadrant tenderness",
+      "lower extremity edema",
+      "hemoglobin",
+      "endoscopy",
+      "gastritis",
+      "polyp",
+      "polypectomy",
+      "anemia",
+      "caffeine consumption",
+      "NSAIDs",
+      "alcohol",
+      "CBC",
+      "Protonix"
+    ],
+    "section_count": 3
+  },
+  "summary_nair_concepts": {
+    "sections": [
+      {
+        "heading": "S",
+        "section_value": "The patient reports experiencing lightheadedness and nausea, particularly when sitting in a car. He reports a slight nick from chopping onions and a slightly decreased appetite. He denies significant weight loss or night sweats.",
+        "medical_concepts": [
+          "lightheadedness",
+          "nausea",
+          "motion-related symptoms",
+          "decreased appetite",
+          "weight loss",
+          "night sweats"
+        ]
+      },
+      {
+        "heading": "O",
+        "section_value": "The patient's hemoglobin is 8.2 g/dL. A slight polyp was identified during endoscopy and biopsied. The patient has tenderness to the right lower quadrant upon palpation of the abdomen.",
+        "medical_concepts": [
+          "hemoglobin",
+          "polyp",
+          "endoscopy",
+          "biopsy",
+          "tenderness",
+          "right lower quadrant tenderness",
+          "abdominal tenderness"
+        ]
+      },
+      {
+        "heading": "A",
+        "section_value": "The patient has anemia and gastritis with a mild polyp. The patient's symptoms are consistent with gastritis and possible bleeding.",
+        "medical_concepts": [
+          "anemia",
+          "gastritis",
+          "polyp",
+          "bleeding"
+        ]
+      },
+      {
+        "heading": "P",
+        "section_value": "Order protonix 40 milligrams once daily. Order a complete blood count. Follow up in 2 weeks to assess response to protonix and hemoglobin level.",
+        "medical_concepts": [
+          "protonix",
+          "complete blood count",
+          "hemoglobin level"
+        ]
+      }
+    ],
+    "medical_concepts": [
+      "lightheadedness",
+      "nausea",
+      "motion-related symptoms",
+      "decreased appetite",
+      "weight loss",
+      "night sweats",
+      "hemoglobin",
+      "polyp",
+      "endoscopy",
+      "biopsy",
+      "tenderness",
+      "right lower quadrant tenderness",
+      "abdominal tenderness",
+      "anemia",
+      "gastritis",
+      "bleeding",
+      "protonix",
+      "complete blood count",
+      "hemoglobin level"
+    ],
+    "section_count": 4
+  },
+  "nair_alignment": {
+    "pred_concepts": [
+      "lightheadedness",
+      "nausea",
+      "motion-related symptoms",
+      "decreased appetite",
+      "weight loss",
+      "night sweats",
+      "hemoglobin",
+      "polyp",
+      "endoscopy",
+      "biopsy",
+      "tenderness",
+      "right lower quadrant tenderness",
+      "abdominal tenderness",
+      "anemia",
+      "gastritis",
+      "bleeding",
+      "protonix",
+      "complete blood count",
+      "hemoglobin level"
+    ],
+    "ref_concepts": [
+      "abnormal labs",
+      "low hemoglobin",
+      "lightheadedness",
+      "hematochezia",
+      "decreased appetite",
+      "nausea",
+      "abdominal pain",
+      "fever",
+      "chills",
+      "weight loss",
+      "night sweats",
+      "cough",
+      "knee arthroplasty",
+      "biopsy",
+      "lung cancer",
+      "lung nodule",
+      "thyromegaly",
+      "lymphadenopathy",
+      "wheezes",
+      "rales",
+      "rhonchi",
+      "murmurs",
+      "gallops",
+      "rubs",
+      "extra heart sounds",
+      "right lower quadrant tenderness",
+      "lower extremity edema",
+      "hemoglobin",
+      "endoscopy",
+      "gastritis",
+      "polyp",
+      "polypectomy",
+      "anemia",
+      "caffeine consumption",
+      "NSAIDs",
+      "alcohol",
+      "CBC",
+      "Protonix"
+    ],
+    "precision_alignment": {
+      "found_b": [
+        "lightheadedness",
+        "nausea",
+        "decreased appetite",
+        "weight loss",
+        "night sweats",
+        "hemoglobin",
+        "polyp",
+        "endoscopy",
+        "biopsy",
+        "tenderness",
+        "right lower quadrant tenderness",
+        "abdominal tenderness",
+        "anemia",
+        "gastritis",
+        "bleeding",
+        "protonix",
+        "complete blood count",
+        "hemoglobin level"
+      ],
+      "not_found_b": [
+        "motion-related symptoms"
+      ],
+      "chunk_count": 1,
+      "chunk_results": [
+        {
+          "found_b": [
+            "lightheadedness",
+            "nausea",
+            "decreased appetite",
+            "weight loss",
+            "night sweats",
+            "hemoglobin",
+            "polyp",
+            "endoscopy",
+            "biopsy",
+            "tenderness",
+            "right lower quadrant tenderness",
+            "abdominal tenderness",
+            "anemia",
+            "gastritis",
+            "bleeding",
+            "protonix",
+            "complete blood count",
+            "hemoglobin level"
+          ],
+          "not_found_b": [
+            "motion-related symptoms"
+          ]
+        }
+      ]
+    },
+    "recall_alignment": {
+      "found_b": [
+        "abnormal labs",
+        "low hemoglobin",
+        "lightheadedness",
+        "decreased appetite",
+        "nausea",
+        "abdominal pain",
+        "weight loss",
+        "night sweats",
+        "biopsy",
+        "right lower quadrant tenderness",
+        "hemoglobin",
+        "endoscopy",
+        "gastritis",
+        "polyp",
+        "anemia",
+        "CBC",
+        "Protonix"
+      ],
+      "not_found_b": [
+        "hematochezia",
+        "fever",
+        "chills",
+        "cough",
+        "knee arthroplasty",
+        "lung cancer",
+        "lung nodule",
+        "thyromegaly",
+        "lymphadenopathy",
+        "wheezes",
+        "rales",
+        "rhonchi",
+        "murmurs",
+        "gallops",
+        "rubs",
+        "extra heart sounds",
+        "lower extremity edema",
+        "polypectomy",
+        "caffeine consumption",
+        "NSAIDs",
+        "alcohol"
+      ],
+      "chunk_count": 2,
+      "chunk_results": [
+        {
+          "found_b": [
+            "abnormal labs",
+            "low hemoglobin",
+            "lightheadedness",
+            "decreased appetite",
+            "nausea",
+            "abdominal pain",
+            "weight loss",
+            "night sweats",
+            "biopsy"
+          ],
+          "not_found_b": [
+            "hematochezia",
+            "fever",
+            "chills",
+            "cough",
+            "knee arthroplasty",
+            "lung cancer",
+            "lung nodule",
+            "thyromegaly",
+            "lymphadenopathy",
+            "wheezes",
+            "rales",
+            "rhonchi",
+            "murmurs",
+            "gallops",
+            "rubs"
+          ]
+        },
+        {
+          "found_b": [
+            "right lower quadrant tenderness",
+            "hemoglobin",
+            "endoscopy",
+            "gastritis",
+            "polyp",
+            "anemia",
+            "CBC",
+            "Protonix"
+          ],
+          "not_found_b": [
+            "extra heart sounds",
+            "lower extremity edema",
+            "polypectomy",
+            "caffeine consumption",
+            "NSAIDs",
+            "alcohol"
+          ]
+        }
+      ]
+    }
+  },
+  "semantic_cap_audit": {
+    "source_cap_recall": [
+      {
+        "cap_id": "P1",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P2",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P3",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P4",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P5",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P6",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P7",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P8",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P9",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P10",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P11",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P12",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P13",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P14",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P15",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P16",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P1",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P2",
+        "judgment": "contradicted",
+        "reason": null
+      },
+      {
+        "cap_id": "P3",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P4",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P5",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P6",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P7",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P8",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P9",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P10",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P11",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P12",
+        "judgment": "missing",
+        "reason": null
+      }
+    ],
+    "summary_cap_precision": [
+      {
+        "cap_id": "P1",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P2",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P3",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P4",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P5",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P6",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P7",
+        "judgment": "unsupported",
+        "reason": null
+      },
+      {
+        "cap_id": "P8",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P9",
+        "judgment": "unsupported",
+        "reason": null
+      },
+      {
+        "cap_id": "P10",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P11",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P12",
+        "judgment": "unsupported",
+        "reason": null
+      },
+      {
+        "cap_id": "P13",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P14",
+        "judgment": "supported",
+        "reason": null
+      }
+    ],
+    "metrics": {
+      "semantic_cap_precision": 0.6071,
+      "semantic_cap_recall": 0.3571,
+      "semantic_cap_f1": 0.4497,
+      "semantic_cap_precision_supported_count": 6,
+      "semantic_cap_precision_partial_count": 5,
+      "semantic_cap_precision_denominator": 14,
+      "semantic_cap_recall_supported_count": 7,
+      "semantic_cap_recall_partial_count": 6,
+      "semantic_cap_recall_denominator": 28,
+      "semantic_cap_low_value_source_count": 0,
+      "semantic_cap_low_value_summary_count": 0,
+      "semantic_cap_missing_count": 14,
+      "semantic_cap_unsupported_count": 3,
+      "semantic_cap_contradicted_source_count": 1,
+      "semantic_cap_contradicted_summary_count": 0
+    }
+  },
+  "safety_judgment": null,
+  "section_judgment": {
+    "section_miscategorizations": [],
+    "summary_statistics": {
+      "section_appropriateness_score": 1.0,
+      "section_miscategorization_count": 0,
+      "major_section_miscategorization_count": 0
+    }
+  },
+  "pdsqi_judgment": {
+    "citation_applicable": 0,
+    "citation": 0,
+    "accurate": 4,
+    "thorough": 3,
+    "useful": 4,
+    "organized": 5,
+    "comprehensible": 5,
+    "succinct": 5,
+    "abstraction": 1,
+    "synthesized": 4,
+    "voice_summ": 0,
+    "voice_note": 0,
+    "pdsqi_core_mean": 4.2857
+  },
+  "llm_checklist_judgment": {
+    "content_preservation_core": 4,
+    "noise_suppression": 5,
+    "lay_expression_preservation": 4,
+    "state_update_fidelity": 4,
+    "temporality_preservation": 4,
+    "problem_evidence_linkage": 4,
+    "state_plan_separation": 4,
+    "section_organization_appropriateness": 4,
+    "overall_clinical_usability": 4,
+    "clinically_meaningful_omission": "Yes",
+    "clinically_concerning_hallucination": "No",
+    "checklist_a_mean": 4.3333,
+    "checklist_b_mean": 4.0,
+    "checklist_c_mean": 4.0,
+    "llm_checklist_abc_mean": 4.125,
+    "llm_checklist_mean_no_usability": 4.125,
+    "llm_checklist_total_score": 37,
+    "llm_checklist_mean": 4.1111,
+    "llm_checklist_meaningful_omission_yes": 1,
+    "llm_checklist_concerning_hallucination_yes": 0
+  },
+  "metrics": {
+    "case_id": "D2N020",
+    "method": "cluster2sent",
+    "template": "soap",
+    "source_cap_count": 28,
+    "event_plan_count": null,
+    "summary_cap_count": 14,
+    "cap_matched_count": 10,
+    "cap_precision": 0.7143,
+    "cap_recall": 0.3571,
+    "cap_f1": 0.4762,
+    "unsupported_summary_cap_count": 4,
+    "missing_source_cap_count": 18,
+    "summary_runtime_seconds": null,
+    "summary_cap_runtime_seconds": 34.443,
+    "event_plan_runtime_seconds": null,
+    "rouge_l_f1_vs_reference": 0.1745,
+    "token_f1_vs_reference": 0.3149,
+    "gptf1_macro_f1": 0.1,
+    "nair_gpt_precision": 0.9474,
+    "nair_gpt_recall": 0.4474,
+    "nair_gpt_f1": 0.6077,
+    "semantic_cap_precision": 0.6071,
+    "semantic_cap_recall": 0.3571,
+    "semantic_cap_f1": 0.4497,
+    "hallucination_count": null,
+    "major_hallucination_count": null,
+    "omission_count": null,
+    "major_omission_count": null,
+    "section_appropriateness_score": 1.0,
+    "section_miscategorization_count": 0,
+    "major_section_miscategorization_count": 0,
+    "pdsqi_core_mean": 4.2857,
+    "pdsqi_accurate": 4,
+    "pdsqi_thorough": 3,
+    "llm_checklist_total_score": 37,
+    "llm_checklist_mean": 4.1111,
+    "llm_checklist_mean_no_usability": 4.125,
+    "checklist_a_mean": 4.3333,
+    "checklist_b_mean": 4.0,
+    "checklist_c_mean": 4.0,
+    "llm_checklist_abc_mean": 4.125,
+    "content_preservation_core": 4,
+    "noise_suppression": 5,
+    "lay_expression_preservation": 4,
+    "state_update_fidelity": 4,
+    "temporality_preservation": 4,
+    "problem_evidence_linkage": 4,
+    "state_plan_separation": 4,
+    "section_organization_appropriateness": 4,
+    "overall_clinical_usability": 4,
+    "llm_checklist_meaningful_omission_yes": 1,
+    "llm_checklist_concerning_hallucination_yes": 0,
+    "gptf1_active_problems_symptoms_precision": 0.4,
+    "gptf1_active_problems_symptoms_recall": 0.6667,
+    "gptf1_active_problems_symptoms_f1": 0.5,
+    "gptf1_active_problems_symptoms_pred_count": 5,
+    "gptf1_active_problems_symptoms_ref_count": 3,
+    "gptf1_negated_findings_precision": 0.0,
+    "gptf1_negated_findings_recall": 0.0,
+    "gptf1_negated_findings_f1": 0.0,
+    "gptf1_negated_findings_pred_count": 2,
+    "gptf1_negated_findings_ref_count": 0,
+    "gptf1_uncertain_findings_precision": 0.0,
+    "gptf1_uncertain_findings_recall": 0.0,
+    "gptf1_uncertain_findings_f1": 0.0,
+    "gptf1_uncertain_findings_pred_count": 2,
+    "gptf1_uncertain_findings_ref_count": 0,
+    "gptf1_medication_treatment_precision": 0.0,
+    "gptf1_medication_treatment_recall": 0.0,
+    "gptf1_medication_treatment_f1": 0.0,
+    "gptf1_medication_treatment_pred_count": 1,
+    "gptf1_medication_treatment_ref_count": 0,
+    "gptf1_plan_followup_precision": 0.0,
+    "gptf1_plan_followup_recall": 0.0,
+    "gptf1_plan_followup_f1": 0.0,
+    "gptf1_plan_followup_pred_count": 2,
+    "gptf1_plan_followup_ref_count": 0,
+    "nair_pred_concept_count": 19,
+    "nair_ref_concept_count": 38,
+    "nair_precision_match_count": 18,
+    "nair_recall_match_count": 17,
+    "semantic_cap_precision_supported_count": 6,
+    "semantic_cap_precision_partial_count": 5,
+    "semantic_cap_precision_denominator": 14,
+    "semantic_cap_recall_supported_count": 7,
+    "semantic_cap_recall_partial_count": 6,
+    "semantic_cap_recall_denominator": 28,
+    "semantic_cap_low_value_source_count": 0,
+    "semantic_cap_low_value_summary_count": 0,
+    "semantic_cap_missing_count": 14,
+    "semantic_cap_unsupported_count": 3,
+    "semantic_cap_contradicted_source_count": 1,
+    "semantic_cap_contradicted_summary_count": 0,
+    "pdsqi_useful": 4,
+    "pdsqi_organized": 5,
+    "pdsqi_comprehensible": 5,
+    "pdsqi_succinct": 5,
+    "pdsqi_synthesized": 4
+  }
+}

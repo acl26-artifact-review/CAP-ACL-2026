@@ -1,0 +1,593 @@
+{
+  "case_id": "D2N181",
+  "annotator": "B",
+  "seed_gold_caps": [
+    {
+      "gold_id": "G1",
+      "fact_text": "The patient is a new patient being seen for acid reflux",
+      "category": "Chief Complaint",
+      "speaker": "clinician",
+      "temporality": "current",
+      "certainty": "high",
+      "provenance_sentence": "0"
+    },
+    {
+      "gold_id": "G2",
+      "fact_text": "The patient has a past medical history of anxiety",
+      "category": "Past Medical History",
+      "speaker": "clinician",
+      "temporality": "unknown",
+      "certainty": "high",
+      "provenance_sentence": "0"
+    },
+    {
+      "gold_id": "G3",
+      "fact_text": "The patient has a past medical history of seasonal allergies",
+      "category": "Past Medical History",
+      "speaker": "clinician",
+      "temporality": "unknown",
+      "certainty": "high",
+      "provenance_sentence": "0"
+    },
+    {
+      "gold_id": "G4",
+      "fact_text": "The patient reports really bad acid reflux",
+      "category": "Symptom",
+      "speaker": "patient",
+      "temporality": "current",
+      "certainty": "high",
+      "provenance_sentence": "8"
+    },
+    {
+      "gold_id": "G5",
+      "fact_text": "The patient currently takes omeprazole 40 mg twice daily",
+      "category": "Medication",
+      "speaker": "patient",
+      "temporality": "current",
+      "certainty": "high",
+      "provenance_sentence": "10"
+    },
+    {
+      "gold_id": "G6",
+      "fact_text": "Some days the patient's acid reflux symptoms are controlled on omeprazole",
+      "category": "Symptom",
+      "speaker": "patient",
+      "temporality": "current",
+      "certainty": "high",
+      "provenance_sentence": "10"
+    },
+    {
+      "gold_id": "G7",
+      "fact_text": "On some days the patient's acid reflux symptoms are really bad despite omeprazole",
+      "category": "Symptom",
+      "speaker": "patient",
+      "temporality": "current",
+      "certainty": "high",
+      "provenance_sentence": "10"
+    },
+    {
+      "gold_id": "G8",
+      "fact_text": "The patient describes the reflux sensation as burning",
+      "category": "Symptom",
+      "speaker": "patient",
+      "temporality": "current",
+      "certainty": "high",
+      "provenance_sentence": "12"
+    },
+    {
+      "gold_id": "G9",
+      "fact_text": "The patient feels burning in the chest",
+      "category": "Symptom",
+      "speaker": "patient",
+      "temporality": "current",
+      "certainty": "high",
+      "provenance_sentence": "12-14"
+    },
+    {
+      "gold_id": "G10",
+      "fact_text": "The patient feels burning in the throat",
+      "category": "Symptom",
+      "speaker": "patient",
+      "temporality": "current",
+      "certainty": "high",
+      "provenance_sentence": "12-14"
+    },
+    {
+      "gold_id": "G11",
+      "fact_text": "The patient denies difficulty swallowing",
+      "category": "Review of Systems",
+      "speaker": "patient",
+      "temporality": "current",
+      "certainty": "high",
+      "provenance_sentence": "15-16"
+    },
+    {
+      "gold_id": "G12",
+      "fact_text": "The patient denies sensation of food or liquids getting stuck",
+      "category": "Review of Systems",
+      "speaker": "patient",
+      "temporality": "current",
+      "certainty": "high",
+      "provenance_sentence": "15-16"
+    },
+    {
+      "gold_id": "G13",
+      "fact_text": "The patient denies abdominal pain",
+      "category": "Review of Systems",
+      "speaker": "patient",
+      "temporality": "current",
+      "certainty": "high",
+      "provenance_sentence": "17-18"
+    },
+    {
+      "gold_id": "G14",
+      "fact_text": "The patient denies nausea",
+      "category": "Review of Systems",
+      "speaker": "patient",
+      "temporality": "current",
+      "certainty": "high",
+      "provenance_sentence": "19-20"
+    },
+    {
+      "gold_id": "G15",
+      "fact_text": "The patient denies vomiting",
+      "category": "Review of Systems",
+      "speaker": "patient",
+      "temporality": "current",
+      "certainty": "high",
+      "provenance_sentence": "19-20"
+    },
+    {
+      "gold_id": "G16",
+      "fact_text": "The patient denies changes in bowel movements",
+      "category": "Review of Systems",
+      "speaker": "patient",
+      "temporality": "current",
+      "certainty": "high",
+      "provenance_sentence": "19-20"
+    },
+    {
+      "gold_id": "G17",
+      "fact_text": "The patient denies constipation",
+      "category": "Review of Systems",
+      "speaker": "patient",
+      "temporality": "current",
+      "certainty": "high",
+      "provenance_sentence": "21-22"
+    },
+    {
+      "gold_id": "G18",
+      "fact_text": "The patient denies diarrhea",
+      "category": "Review of Systems",
+      "speaker": "patient",
+      "temporality": "current",
+      "certainty": "high",
+      "provenance_sentence": "21-22"
+    },
+    {
+      "gold_id": "G19",
+      "fact_text": "The patient denies rectal bleeding",
+      "category": "Review of Systems",
+      "speaker": "patient",
+      "temporality": "current",
+      "certainty": "high",
+      "provenance_sentence": "21-22"
+    },
+    {
+      "gold_id": "G20",
+      "fact_text": "The patient has had acid reflux since around age 12",
+      "category": "Symptom",
+      "speaker": "patient",
+      "temporality": "unknown",
+      "certainty": "high",
+      "provenance_sentence": "24"
+    },
+    {
+      "gold_id": "G21",
+      "fact_text": "The patient's acid reflux has worsened over the past few years",
+      "category": "Symptom",
+      "speaker": "patient",
+      "temporality": "unknown",
+      "certainty": "high",
+      "provenance_sentence": "24"
+    },
+    {
+      "gold_id": "G22",
+      "fact_text": "The patient has been taking omeprazole in the current regimen for about a year",
+      "category": "Medication",
+      "speaker": "patient",
+      "temporality": "unknown",
+      "certainty": "medium",
+      "provenance_sentence": "25-26"
+    },
+    {
+      "gold_id": "G23",
+      "fact_text": "The patient feels omeprazole has helped her symptoms to some extent",
+      "category": "Medication",
+      "speaker": "patient",
+      "temporality": "unknown",
+      "certainty": "high",
+      "provenance_sentence": "27-28"
+    },
+    {
+      "gold_id": "G24",
+      "fact_text": "The patient reports that eating certain foods can make her reflux feel terrible",
+      "category": "Symptom",
+      "speaker": "patient",
+      "temporality": "current",
+      "certainty": "high",
+      "provenance_sentence": "28"
+    },
+    {
+      "gold_id": "G25",
+      "fact_text": "The patient identifies stress as a trigger that worsens her reflux symptoms",
+      "category": "Symptom",
+      "speaker": "patient",
+      "temporality": "unknown",
+      "certainty": "high",
+      "provenance_sentence": "29-30"
+    },
+    {
+      "gold_id": "G26",
+      "fact_text": "The patient identifies food choices as a trigger that worsens her reflux symptoms",
+      "category": "Symptom",
+      "speaker": "patient",
+      "temporality": "unknown",
+      "certainty": "high",
+      "provenance_sentence": "29-30"
+    },
+    {
+      "gold_id": "G27",
+      "fact_text": "Spicy foods worsen the patient's reflux symptoms",
+      "category": "Symptom",
+      "speaker": "patient",
+      "temporality": "unknown",
+      "certainty": "high",
+      "provenance_sentence": "31-32"
+    },
+    {
+      "gold_id": "G28",
+      "fact_text": "The patient tries not to eat spicy foods too often",
+      "category": "Lifestyle",
+      "speaker": "patient",
+      "temporality": "unknown",
+      "certainty": "high",
+      "provenance_sentence": "32"
+    },
+    {
+      "gold_id": "G29",
+      "fact_text": "Drinking soda can cause the patient's reflux symptoms",
+      "category": "Symptom",
+      "speaker": "patient",
+      "temporality": "unknown",
+      "certainty": "high",
+      "provenance_sentence": "32"
+    },
+    {
+      "gold_id": "G30",
+      "fact_text": "Tomato-based products sometimes worsen the patient's symptoms",
+      "category": "Symptom",
+      "speaker": "patient",
+      "temporality": "unknown",
+      "certainty": "high",
+      "provenance_sentence": "33-34"
+    },
+    {
+      "gold_id": "G31",
+      "fact_text": "Citrus products sometimes worsen the patient's symptoms",
+      "category": "Symptom",
+      "speaker": "patient",
+      "temporality": "unknown",
+      "certainty": "high",
+      "provenance_sentence": "33-34"
+    },
+    {
+      "gold_id": "G32",
+      "fact_text": "The patient continues to eat tomato-based and citrus products despite them sometimes worsening symptoms",
+      "category": "Lifestyle",
+      "speaker": "patient",
+      "temporality": "unknown",
+      "certainty": "high",
+      "provenance_sentence": "34"
+    },
+    {
+      "gold_id": "G33",
+      "fact_text": "The clinician finds it reassuring that the patient has no difficulty swallowing",
+      "category": "Assessment",
+      "speaker": "clinician",
+      "temporality": "current",
+      "certainty": "high",
+      "provenance_sentence": "35"
+    },
+    {
+      "gold_id": "G34",
+      "fact_text": "The patient's weight has been pretty stable",
+      "category": "Finding",
+      "speaker": "patient",
+      "temporality": "unknown",
+      "certainty": "high",
+      "provenance_sentence": "35-36"
+    },
+    {
+      "gold_id": "G35",
+      "fact_text": "The patient has had decreased appetite for the past two months",
+      "category": "Symptom",
+      "speaker": "patient",
+      "temporality": "unknown",
+      "certainty": "high",
+      "provenance_sentence": "36"
+    },
+    {
+      "gold_id": "G36",
+      "fact_text": "The patient reports being under a lot of work stress",
+      "category": "Social History",
+      "speaker": "patient",
+      "temporality": "unknown",
+      "certainty": "high",
+      "provenance_sentence": "36"
+    },
+    {
+      "gold_id": "G37",
+      "fact_text": "The patient works as a paralegal",
+      "category": "Social History",
+      "speaker": "patient",
+      "temporality": "current",
+      "certainty": "high",
+      "provenance_sentence": "37-38"
+    },
+    {
+      "gold_id": "G38",
+      "fact_text": "The patient's grandmother had esophageal cancer",
+      "category": "Past Medical History",
+      "speaker": "patient",
+      "temporality": "past",
+      "certainty": "high",
+      "provenance_sentence": "39-40"
+    },
+    {
+      "gold_id": "G39",
+      "fact_text": "The grandmother with esophageal cancer is on the patient's maternal side",
+      "category": "Past Medical History",
+      "speaker": "patient",
+      "temporality": "past",
+      "certainty": "high",
+      "provenance_sentence": "40-42"
+    },
+    {
+      "gold_id": "G40",
+      "fact_text": "The patient's mother has had issues like acid reflux",
+      "category": "Past Medical History",
+      "speaker": "patient",
+      "temporality": "unknown",
+      "certainty": "high",
+      "provenance_sentence": "42"
+    },
+    {
+      "gold_id": "G41",
+      "fact_text": "The patient's mother took a medication that coats the lining of the stomach for reflux-like issues",
+      "category": "Past Medical History",
+      "speaker": "patient",
+      "temporality": "past",
+      "certainty": "high",
+      "provenance_sentence": "42"
+    },
+    {
+      "gold_id": "G42",
+      "fact_text": "The patient may have had an upper endoscopy when she was younger",
+      "category": "Procedure",
+      "speaker": "patient",
+      "temporality": "past",
+      "certainty": "medium",
+      "provenance_sentence": "43-45"
+    },
+    {
+      "gold_id": "G43",
+      "fact_text": "The patient has not had an upper endoscopy in the last 10 years",
+      "category": "Procedure",
+      "speaker": "patient",
+      "temporality": "past",
+      "certainty": "high",
+      "provenance_sentence": "45-46"
+    },
+    {
+      "gold_id": "G44",
+      "fact_text": "The patient previously took omeprazole and ranitidine together",
+      "category": "Medication",
+      "speaker": "patient",
+      "temporality": "past",
+      "certainty": "high",
+      "provenance_sentence": "47-48"
+    },
+    {
+      "gold_id": "G45",
+      "fact_text": "The combination of omeprazole and ranitidine helped the patient's symptoms",
+      "category": "Medication",
+      "speaker": "patient",
+      "temporality": "past",
+      "certainty": "high",
+      "provenance_sentence": "48"
+    },
+    {
+      "gold_id": "G46",
+      "fact_text": "Other than omeprazole and ranitidine, the patient has not taken other reflux medications",
+      "category": "Medication",
+      "speaker": "patient",
+      "temporality": "unknown",
+      "certainty": "high",
+      "provenance_sentence": "48"
+    },
+    {
+      "gold_id": "G47",
+      "fact_text": "Physical exam is normal except for well-healed abdominal surgical scars",
+      "category": "Physical Exam",
+      "speaker": "clinician",
+      "temporality": "current",
+      "certainty": "high",
+      "provenance_sentence": "51"
+    },
+    {
+      "gold_id": "G48",
+      "fact_text": "The patient has well-healed abdominal surgical scars",
+      "category": "Physical Exam",
+      "speaker": "clinician",
+      "temporality": "current",
+      "certainty": "high",
+      "provenance_sentence": "51"
+    },
+    {
+      "gold_id": "G49",
+      "fact_text": "The patient had abdominal surgery as a baby for twisted intestines",
+      "category": "Past Medical History",
+      "speaker": "patient",
+      "temporality": "past",
+      "certainty": "high",
+      "provenance_sentence": "51-52"
+    },
+    {
+      "gold_id": "G50",
+      "fact_text": "The patient's intestinal surgery occurred around one month of age",
+      "category": "Past Medical History",
+      "speaker": "patient",
+      "temporality": "past",
+      "certainty": "high",
+      "provenance_sentence": "52"
+    },
+    {
+      "gold_id": "G51",
+      "fact_text": "The clinician assesses that the patient has a several-year history of GERD",
+      "category": "Assessment",
+      "speaker": "clinician",
+      "temporality": "unknown",
+      "certainty": "high",
+      "provenance_sentence": "53"
+    },
+    {
+      "gold_id": "G52",
+      "fact_text": "The clinician notes that the patient's GERD symptoms are poorly controlled on omeprazole 40 mg twice daily",
+      "category": "Assessment",
+      "speaker": "clinician",
+      "temporality": "current",
+      "certainty": "high",
+      "provenance_sentence": "53"
+    },
+    {
+      "gold_id": "G53",
+      "fact_text": "The patient has heartburn despite taking omeprazole",
+      "category": "Symptom",
+      "speaker": "clinician",
+      "temporality": "current",
+      "certainty": "high",
+      "provenance_sentence": "53-54"
+    },
+    {
+      "gold_id": "G54",
+      "fact_text": "The clinician notes that the patient has identified trigger foods including spicy foods, carbonated beverages, citrus, and tomato-based foods",
+      "category": "Assessment",
+      "speaker": "clinician",
+      "temporality": "unknown",
+      "certainty": "high",
+      "provenance_sentence": "55"
+    },
+    {
+      "gold_id": "G55",
+      "fact_text": "The clinician notes the patient has not completely eliminated trigger foods from her diet",
+      "category": "Assessment",
+      "speaker": "clinician",
+      "temporality": "current",
+      "certainty": "high",
+      "provenance_sentence": "55"
+    },
+    {
+      "gold_id": "G56",
+      "fact_text": "The clinician recommends dietary changes to avoid trigger foods that exacerbate GERD",
+      "category": "Plan",
+      "speaker": "clinician",
+      "temporality": "future",
+      "certainty": "high",
+      "provenance_sentence": "55"
+    },
+    {
+      "gold_id": "G57",
+      "fact_text": "The patient agrees she could do a better job avoiding trigger foods",
+      "category": "Counseling",
+      "speaker": "patient",
+      "temporality": "current",
+      "certainty": "high",
+      "provenance_sentence": "56"
+    },
+    {
+      "gold_id": "G58",
+      "fact_text": "The clinician identifies stress as another trigger that worsens the patient's GERD symptoms",
+      "category": "Assessment",
+      "speaker": "clinician",
+      "temporality": "unknown",
+      "certainty": "high",
+      "provenance_sentence": "57"
+    },
+    {
+      "gold_id": "G59",
+      "fact_text": "The patient reports that stress and anxiety are big problems for her",
+      "category": "Past Medical History",
+      "speaker": "patient",
+      "temporality": "unknown",
+      "certainty": "high",
+      "provenance_sentence": "58"
+    },
+    {
+      "gold_id": "G60",
+      "fact_text": "The clinician recommends working on stress to help with GERD",
+      "category": "Plan",
+      "speaker": "clinician",
+      "temporality": "future",
+      "certainty": "high",
+      "provenance_sentence": "57-59"
+    },
+    {
+      "gold_id": "G61",
+      "fact_text": "The clinician proposes switching the patient from omeprazole to Nexium (esomeprazole)",
+      "category": "MedicationPlan",
+      "speaker": "clinician",
+      "temporality": "future",
+      "certainty": "high",
+      "provenance_sentence": "59"
+    },
+    {
+      "gold_id": "G62",
+      "fact_text": "The patient agrees to try Nexium instead of omeprazole",
+      "category": "MedicationPlan",
+      "speaker": "patient",
+      "temporality": "future",
+      "certainty": "high",
+      "provenance_sentence": "60"
+    },
+    {
+      "gold_id": "G63",
+      "fact_text": "The clinician will send a prescription for Nexium 40 mg twice daily to the patient's pharmacy",
+      "category": "MedicationPlan",
+      "speaker": "clinician",
+      "temporality": "future",
+      "certainty": "high",
+      "provenance_sentence": "61"
+    },
+    {
+      "gold_id": "G64",
+      "fact_text": "The clinician recommends an EGD (upper endoscopy) to evaluate causes of GERD",
+      "category": "Plan",
+      "speaker": "clinician",
+      "temporality": "future",
+      "certainty": "high",
+      "provenance_sentence": "61"
+    },
+    {
+      "gold_id": "G65",
+      "fact_text": "The clinician explains that EGD involves sedation and passing a small camera from mouth to small intestine",
+      "category": "Education",
+      "speaker": "clinician",
+      "temporality": "future",
+      "certainty": "high",
+      "provenance_sentence": "61"
+    }
+  ],
+  "generator_model": "gpt-5.1",
+  "generated_at": "2026-04-11T09:01:12.141204+00:00"
+}

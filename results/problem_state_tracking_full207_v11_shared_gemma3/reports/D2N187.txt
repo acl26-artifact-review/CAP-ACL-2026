@@ -1,0 +1,67 @@
+Case: D2N187
+
+Problem List and Visit State Tracking
+
+Problem List
+- visual distortion | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T10,T4
+  Summary: The patient reports visual distortion.
+  ClusterId: CL1
+  TemporalProfile: current
+  Updates:
+  - CAP1: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T4,T10 :: The patient reports visual distortion.
+  - CAP8: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T10 :: The patient reports visual distortion.
+- blurring vision | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T4
+  Summary: The patient reports blurring vision.
+  ClusterId: CL2
+  TemporalProfile: current
+  Updates:
+  - CAP6: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T4 :: The patient reports blurring vision.
+- blurred vision | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T9
+  Summary: The patient reports blurred vision.
+  ClusterId: CL3
+  TemporalProfile: current
+  Updates:
+  - CAP7: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T9 :: The patient reports blurred vision.
+- macular degeneration | verification_status=unconfirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T10
+  Summary: The patient has a history of macular degeneration.
+  ClusterId: CL4
+  TemporalProfile: historical
+  Updates:
+  - CAP10: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=historical turns=T10 :: The patient has a history of macular degeneration.
+- difficulty adjusting to dim lights | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T13
+  Summary: The patient reports difficulty adjusting to dim lights.
+  ClusterId: CL5
+  TemporalProfile: current
+  Updates:
+  - CAP3: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T13 :: The patient reports difficulty adjusting to dim lights.
+- neovascular age-related macular degeneration | verification_status=confirmed | clinical_status=active | modalities=exam | speakers=doctor | evidence=T19
+  Summary: The patient has neovascular age-related macular degeneration.
+  ClusterId: CL6
+  TemporalProfile: current
+  Updates:
+  - CAP5: content_source=doctor modality=exam verification_status=confirmed clinical_status=active temporality=current turns=T19 :: The patient has neovascular age-related macular degeneration.
+- smoking | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T23
+  Summary: The patient reports smoking a pack of cigarettes a day.
+  ClusterId: CL7
+  TemporalProfile: current
+  Updates:
+  - CAP2: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T23 :: The patient reports smoking a pack of cigarettes a day.
+- blood pressure | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T25
+  Summary: The patient reports remembering to check blood pressure.
+  ClusterId: CL8
+  TemporalProfile: current
+  Updates:
+  - CAP4: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T25 :: The patient reports remembering to check blood pressure.
+
+Medication Tracking
+- [MedicationChange] lucentis | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T26
+  Summary: The patient will receive an injection of lucentes once a month.
+  ClusterId: CL9
+  TemporalProfile: future
+  PlannedChanges:
+  - The patient will receive an injection of lucentes once a month. (T26)
+  Updates:
+  - CAP9: content_source=doctor modality=plan verification_status=unconfirmed clinical_status=planned temporality=future turns=T26 :: The patient will receive an injection of lucentes once a month.
+
+Other Structured States
+- None

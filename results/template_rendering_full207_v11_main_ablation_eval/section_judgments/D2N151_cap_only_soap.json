@@ -1,0 +1,37 @@
+{
+  "section_miscategorizations": [
+    {
+      "text": "The patient has a history of hypertension and diabetes.",
+      "current_section": "A",
+      "expected_section": "S",
+      "severity": "major",
+      "reason": "Past medical history is patient history/subjective context, not an assessment or diagnostic synthesis."
+    },
+    {
+      "text": "The patient is taking 500 milligrams of metformin twice a day.",
+      "current_section": "P",
+      "expected_section": "S",
+      "severity": "major",
+      "reason": "This describes an existing medication regimen rather than a new order or change in treatment, so it belongs in the subjective history/medication section."
+    },
+    {
+      "text": "The patient is taking 10 milligrams of lisinopril.",
+      "current_section": "P",
+      "expected_section": "S",
+      "severity": "major",
+      "reason": "This is a current medication the patient is already taking, not a new prescription or change, so it should be documented in the subjective section."
+    },
+    {
+      "text": "The patient is taking ibuprofen.",
+      "current_section": "P",
+      "expected_section": "S",
+      "severity": "major",
+      "reason": "This statement reflects current medication use rather than a new plan or order and therefore belongs in the subjective medication history."
+    }
+  ],
+  "summary_statistics": {
+    "section_appropriateness_score": 0.7,
+    "section_miscategorization_count": 4,
+    "major_section_miscategorization_count": 4
+  }
+}

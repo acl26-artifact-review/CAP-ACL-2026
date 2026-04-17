@@ -1,0 +1,1376 @@
+{
+  "case_id": "D2N092",
+  "method": "cluster2sent",
+  "template": "soap",
+  "summary_text": "S:\nThe patient reports pain in his distal radius following hitting his arm on the net, with pain when stressing his thumb and flexing it. He also reports some swelling and denies numbness in his hand. He has a history of allergies and takes flonase. He reports no prior surgeries.\n\nO:\nThe x-ray of the patient's arm shows no fractures or abnormalities. Physical exam reveals tenderness over the distal radius.\n\nA:\nThe patient has a distal radius strain and contusion.\n\nP:\nWe will recommend ice and anti-inflammatory medication, and prescribe motrin 800 mg three times daily with food. Follow up as needed.",
+  "reference_summary": "CC:\n\nRight arm pain.\n\nHPI:\n\nMs. Martinez is a 43-year-old female who presents today for an evaluation of right arm pain after she hitting her arm on a pole while playing tennis. She had mild swelling at the time. There is pain with motion. She denies any numbness or tingling in her hand. She has a past medical history of allergies and takes Flonase.\n\nEXAM\n\nExamination of the left wrist shows tenderness over the distal radius and pain with flexion of the wrist and thumb.\n\nRESULTS\n\nX-rays of the left wrist show no obvious signs of acute fracture or other abnormality.\n\nIMPRESSION\n\nRight wrist sprain.\n\nPLAN\n\nAt this point, I discussed the diagnosis and treatment options with the patient. I have recommended ice and anti-inflammatory medications. I am prescribing Motrin, 800 mg to take 3 times a day with food. She will follow up with me in 1 week or as needed.",
+  "source_cap": {
+    "atomic_propositions": [
+      {
+        "prop_id": "CAP1",
+        "cap_type": "Symptom",
+        "canonical_concept": "numbness",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports some numbness in their hand."
+      },
+      {
+        "prop_id": "CAP2",
+        "cap_type": "Symptom",
+        "canonical_concept": "pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports pain in the left hand."
+      },
+      {
+        "prop_id": "CAP3",
+        "cap_type": "Symptom",
+        "canonical_concept": "pain",
+        "category": "Symptom",
+        "speaker": "doctor",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports pain when flexing their thumb."
+      },
+      {
+        "prop_id": "CAP4",
+        "cap_type": "Problem",
+        "canonical_concept": "strain",
+        "category": "Problem",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The doctor believes the patient has a strain."
+      },
+      {
+        "prop_id": "CAP5",
+        "cap_type": "Problem",
+        "canonical_concept": "contusion",
+        "category": "Problem",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The doctor believes the patient has a contusion."
+      },
+      {
+        "prop_id": "CAP6",
+        "cap_type": "Symptom",
+        "canonical_concept": "arm pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports pain in their arm."
+      },
+      {
+        "prop_id": "CAP7",
+        "cap_type": "Symptom",
+        "canonical_concept": "numbness",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports numbness in their hand."
+      },
+      {
+        "prop_id": "CAP8",
+        "cap_type": "MedicationRequest",
+        "canonical_concept": "motrin",
+        "category": "MedicationRequest",
+        "speaker": "doctor",
+        "predicate": "orders",
+        "status": "affirmed",
+        "visit_state": "planned",
+        "temporality": "current",
+        "claim_type_tags": [
+          "plan"
+        ],
+        "proposition_text": "The doctor orders motrin."
+      },
+      {
+        "prop_id": "CAP9",
+        "cap_type": "ProblemHistory",
+        "canonical_concept": "tennis injury",
+        "category": "ProblemHistory",
+        "speaker": "patient",
+        "status": "uncertain",
+        "visit_state": "historical",
+        "temporality": "recent",
+        "proposition_text": "The patient sustained an injury to their arm while playing tennis."
+      },
+      {
+        "prop_id": "CAP10",
+        "cap_type": "ProblemHistory",
+        "canonical_concept": "rake",
+        "category": "ProblemHistory",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "past",
+        "proposition_text": "The patient reports being injured while using a rake."
+      },
+      {
+        "prop_id": "CAP11",
+        "cap_type": "ProblemHistory",
+        "canonical_concept": "fall",
+        "category": "ProblemHistory",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "past",
+        "proposition_text": "The patient reports a trauma from a fall."
+      },
+      {
+        "prop_id": "CAP12",
+        "cap_type": "Allergy",
+        "canonical_concept": "flonase",
+        "category": "Allergy",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "past",
+        "proposition_text": "The patient takes flonase."
+      }
+    ],
+    "filtered_nonverifiable_units": []
+  },
+  "event_plan": null,
+  "summary_cap": {
+    "atomic_propositions": [
+      {
+        "prop_id": "P1",
+        "cap_type": "Symptom",
+        "canonical_concept": "pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports pain in his distal radius following hitting his arm on the net."
+      },
+      {
+        "prop_id": "P2",
+        "cap_type": "Symptom",
+        "canonical_concept": "pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports pain when stressing his thumb."
+      },
+      {
+        "prop_id": "P3",
+        "cap_type": "Symptom",
+        "canonical_concept": "pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports pain when flexing his thumb."
+      },
+      {
+        "prop_id": "P4",
+        "cap_type": "Finding",
+        "canonical_concept": "swelling",
+        "category": "Finding",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports swelling."
+      },
+      {
+        "prop_id": "P5",
+        "cap_type": "Denial",
+        "canonical_concept": "sensory change",
+        "category": "Denial",
+        "speaker": "patient",
+        "predicate": "denies",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "safety_relevant"
+        ],
+        "proposition_text": "The patient denies numbness in his hand."
+      },
+      {
+        "prop_id": "P6",
+        "cap_type": "History",
+        "canonical_concept": "history allergies",
+        "category": "History",
+        "speaker": "patient",
+        "predicate": "has",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "past",
+        "claim_type_tags": [
+          "allergy"
+        ],
+        "proposition_text": "The patient has a history of allergies."
+      },
+      {
+        "prop_id": "P7",
+        "cap_type": "Medication",
+        "canonical_concept": "takes flonase",
+        "category": "Medication",
+        "speaker": "patient",
+        "predicate": "takes",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "medication"
+        ],
+        "proposition_text": "The patient takes flonase."
+      },
+      {
+        "prop_id": "P8",
+        "cap_type": "History",
+        "canonical_concept": "prior surgeries",
+        "category": "History",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "past",
+        "claim_type_tags": [
+          "history"
+        ],
+        "proposition_text": "The patient reports no prior surgeries."
+      },
+      {
+        "prop_id": "P9",
+        "cap_type": "Finding",
+        "canonical_concept": "x-ray arm shows fractures",
+        "category": "Finding",
+        "speaker": "clinician",
+        "predicate": "shows",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "exam"
+        ],
+        "proposition_text": "The x-ray of the patient's arm shows no fractures or abnormalities."
+      },
+      {
+        "prop_id": "P10",
+        "cap_type": "Finding",
+        "canonical_concept": "physical exam reveals tenderness",
+        "category": "Finding",
+        "speaker": "clinician",
+        "predicate": "reveals",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "exam"
+        ],
+        "proposition_text": "Physical exam reveals tenderness over the distal radius."
+      },
+      {
+        "prop_id": "P11",
+        "cap_type": "Diagnosis",
+        "canonical_concept": "distal radius strain and",
+        "category": "Diagnosis",
+        "speaker": "clinician",
+        "predicate": "diagnoses",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "diagnostic"
+        ],
+        "proposition_text": "The patient has a distal radius strain and contusion."
+      },
+      {
+        "prop_id": "P12",
+        "cap_type": "Plan",
+        "canonical_concept": "recommend ice and anti-inflammatory",
+        "category": "Plan",
+        "speaker": "clinician",
+        "predicate": "recommends",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "plan"
+        ],
+        "proposition_text": "We will recommend ice and anti-inflammatory medication."
+      },
+      {
+        "prop_id": "P13",
+        "cap_type": "MedicationPlan",
+        "canonical_concept": "prescribe motrin three times",
+        "category": "MedicationPlan",
+        "speaker": "clinician",
+        "predicate": "prescribes",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "medication"
+        ],
+        "proposition_text": "We prescribe motrin 800 mg three times daily with food."
+      },
+      {
+        "prop_id": "P14",
+        "cap_type": "Plan",
+        "canonical_concept": "follow needed",
+        "category": "Plan",
+        "speaker": "clinician",
+        "predicate": "plans",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "future",
+        "claim_type_tags": [
+          "plan"
+        ],
+        "proposition_text": "Follow up as needed."
+      }
+    ],
+    "filtered_nonverifiable_units": [],
+    "runtime_seconds": 20.272
+  },
+  "cap_alignment": {
+    "cap_precision": 0.35714285714285715,
+    "cap_recall": 0.4166666666666667,
+    "cap_f1": 0.3846153846153846,
+    "matched_count": 5,
+    "summary_prop_count": 14,
+    "source_prop_count": 12,
+    "matched_pairs": [
+      {
+        "score": 1.0,
+        "summary_prop_id": "P7",
+        "source_prop_id": "CAP12",
+        "summary_text": "The patient takes flonase.",
+        "source_text": "The patient takes flonase."
+      },
+      {
+        "score": 1.0,
+        "summary_prop_id": "P3",
+        "source_prop_id": "CAP3",
+        "summary_text": "The patient reports pain when flexing his thumb.",
+        "source_text": "The patient reports pain when flexing their thumb."
+      },
+      {
+        "score": 1.0,
+        "summary_prop_id": "P2",
+        "source_prop_id": "CAP2",
+        "summary_text": "The patient reports pain when stressing his thumb.",
+        "source_text": "The patient reports pain in the left hand."
+      },
+      {
+        "score": 0.8588,
+        "summary_prop_id": "P1",
+        "source_prop_id": "CAP6",
+        "summary_text": "The patient reports pain in his distal radius following hitting his arm on the net.",
+        "source_text": "The patient reports pain in their arm."
+      },
+      {
+        "score": 0.6747,
+        "summary_prop_id": "P11",
+        "source_prop_id": "CAP4",
+        "summary_text": "The patient has a distal radius strain and contusion.",
+        "source_text": "The doctor believes the patient has a strain."
+      }
+    ],
+    "unsupported_summary_props": [
+      {
+        "prop_id": "P4",
+        "cap_type": "Finding",
+        "canonical_concept": "swelling",
+        "category": "Finding",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports swelling."
+      },
+      {
+        "prop_id": "P5",
+        "cap_type": "Denial",
+        "canonical_concept": "sensory change",
+        "category": "Denial",
+        "speaker": "patient",
+        "predicate": "denies",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "safety_relevant"
+        ],
+        "proposition_text": "The patient denies numbness in his hand."
+      },
+      {
+        "prop_id": "P6",
+        "cap_type": "History",
+        "canonical_concept": "history allergies",
+        "category": "History",
+        "speaker": "patient",
+        "predicate": "has",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "past",
+        "claim_type_tags": [
+          "allergy"
+        ],
+        "proposition_text": "The patient has a history of allergies."
+      },
+      {
+        "prop_id": "P8",
+        "cap_type": "History",
+        "canonical_concept": "prior surgeries",
+        "category": "History",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "past",
+        "claim_type_tags": [
+          "history"
+        ],
+        "proposition_text": "The patient reports no prior surgeries."
+      },
+      {
+        "prop_id": "P9",
+        "cap_type": "Finding",
+        "canonical_concept": "x-ray arm shows fractures",
+        "category": "Finding",
+        "speaker": "clinician",
+        "predicate": "shows",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "exam"
+        ],
+        "proposition_text": "The x-ray of the patient's arm shows no fractures or abnormalities."
+      },
+      {
+        "prop_id": "P10",
+        "cap_type": "Finding",
+        "canonical_concept": "physical exam reveals tenderness",
+        "category": "Finding",
+        "speaker": "clinician",
+        "predicate": "reveals",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "exam"
+        ],
+        "proposition_text": "Physical exam reveals tenderness over the distal radius."
+      },
+      {
+        "prop_id": "P12",
+        "cap_type": "Plan",
+        "canonical_concept": "recommend ice and anti-inflammatory",
+        "category": "Plan",
+        "speaker": "clinician",
+        "predicate": "recommends",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "plan"
+        ],
+        "proposition_text": "We will recommend ice and anti-inflammatory medication."
+      },
+      {
+        "prop_id": "P13",
+        "cap_type": "MedicationPlan",
+        "canonical_concept": "prescribe motrin three times",
+        "category": "MedicationPlan",
+        "speaker": "clinician",
+        "predicate": "prescribes",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "medication"
+        ],
+        "proposition_text": "We prescribe motrin 800 mg three times daily with food."
+      },
+      {
+        "prop_id": "P14",
+        "cap_type": "Plan",
+        "canonical_concept": "follow needed",
+        "category": "Plan",
+        "speaker": "clinician",
+        "predicate": "plans",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "future",
+        "claim_type_tags": [
+          "plan"
+        ],
+        "proposition_text": "Follow up as needed."
+      }
+    ],
+    "missing_source_props": [
+      {
+        "prop_id": "CAP1",
+        "cap_type": "Symptom",
+        "canonical_concept": "numbness",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports some numbness in their hand."
+      },
+      {
+        "prop_id": "CAP5",
+        "cap_type": "Problem",
+        "canonical_concept": "contusion",
+        "category": "Problem",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The doctor believes the patient has a contusion."
+      },
+      {
+        "prop_id": "CAP7",
+        "cap_type": "Symptom",
+        "canonical_concept": "numbness",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports numbness in their hand."
+      },
+      {
+        "prop_id": "CAP8",
+        "cap_type": "MedicationRequest",
+        "canonical_concept": "motrin",
+        "category": "MedicationRequest",
+        "speaker": "doctor",
+        "predicate": "orders",
+        "status": "affirmed",
+        "visit_state": "planned",
+        "temporality": "current",
+        "claim_type_tags": [
+          "plan"
+        ],
+        "proposition_text": "The doctor orders motrin."
+      },
+      {
+        "prop_id": "CAP9",
+        "cap_type": "ProblemHistory",
+        "canonical_concept": "tennis injury",
+        "category": "ProblemHistory",
+        "speaker": "patient",
+        "status": "uncertain",
+        "visit_state": "historical",
+        "temporality": "recent",
+        "proposition_text": "The patient sustained an injury to their arm while playing tennis."
+      },
+      {
+        "prop_id": "CAP10",
+        "cap_type": "ProblemHistory",
+        "canonical_concept": "rake",
+        "category": "ProblemHistory",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "past",
+        "proposition_text": "The patient reports being injured while using a rake."
+      },
+      {
+        "prop_id": "CAP11",
+        "cap_type": "ProblemHistory",
+        "canonical_concept": "fall",
+        "category": "ProblemHistory",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "past",
+        "proposition_text": "The patient reports a trauma from a fall."
+      }
+    ]
+  },
+  "reference_gpt_f1_items": {
+    "active_problems_symptoms": [
+      "Right arm pain",
+      "Swelling",
+      "Pain with motion",
+      "Tenderness over the distal radius",
+      "Pain with flexion of the wrist and thumb",
+      "pain"
+    ],
+    "negated_findings": [
+      "Denies any numbness or tingling in her hand"
+    ],
+    "uncertain_findings": [],
+    "medication_treatment": [
+      "Takes Flonase",
+      "Motrin, 800 mg",
+      "ice",
+      "anti-inflammatory medications"
+    ],
+    "plan_followup": [
+      "follow-up in 1 week",
+      "as needed"
+    ],
+    "_chunk_count": [
+      "2"
+    ]
+  },
+  "summary_gpt_f1_items": {
+    "active_problems_symptoms": [
+      "pain in distal radius",
+      "swelling",
+      "pain when stressing thumb",
+      "pain when flexing",
+      "tenderness over distal radius"
+    ],
+    "negated_findings": [
+      "denies numbness"
+    ],
+    "uncertain_findings": [],
+    "medication_treatment": [
+      "takes flonase",
+      "prescribe motrin 800 mg three times daily with food"
+    ],
+    "plan_followup": [
+      "recommend ice",
+      "anti-inflammatory medication",
+      "follow up as needed"
+    ],
+    "_chunk_count": [
+      "1"
+    ]
+  },
+  "gpt_f1_alignment": {
+    "by_category": {
+      "active_problems_symptoms": {
+        "precision": 0.4,
+        "recall": 0.3333333333333333,
+        "f1": 0.3636363636363636,
+        "matched_count": 2,
+        "pred_count": 5,
+        "ref_count": 6,
+        "matches": [
+          {
+            "score": 1.0,
+            "pred_text": "tenderness over distal radius",
+            "ref_text": "Tenderness over the distal radius"
+          },
+          {
+            "score": 1.0,
+            "pred_text": "swelling",
+            "ref_text": "Swelling"
+          }
+        ],
+        "unsupported_pred_items": [
+          "pain in distal radius",
+          "pain when stressing thumb",
+          "pain when flexing"
+        ],
+        "missing_ref_items": [
+          "Right arm pain",
+          "Pain with motion",
+          "Pain with flexion of the wrist and thumb",
+          "pain"
+        ]
+      },
+      "negated_findings": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "matched_count": 0,
+        "pred_count": 1,
+        "ref_count": 1,
+        "matches": [],
+        "unsupported_pred_items": [
+          "denies numbness"
+        ],
+        "missing_ref_items": [
+          "Denies any numbness or tingling in her hand"
+        ]
+      },
+      "uncertain_findings": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "matched_count": 0,
+        "pred_count": 0,
+        "ref_count": 0,
+        "matches": [],
+        "unsupported_pred_items": [],
+        "missing_ref_items": []
+      },
+      "medication_treatment": {
+        "precision": 0.5,
+        "recall": 0.25,
+        "f1": 0.3333333333333333,
+        "matched_count": 1,
+        "pred_count": 2,
+        "ref_count": 4,
+        "matches": [
+          {
+            "score": 1.0,
+            "pred_text": "takes flonase",
+            "ref_text": "Takes Flonase"
+          }
+        ],
+        "unsupported_pred_items": [
+          "prescribe motrin 800 mg three times daily with food"
+        ],
+        "missing_ref_items": [
+          "Motrin, 800 mg",
+          "ice",
+          "anti-inflammatory medications"
+        ]
+      },
+      "plan_followup": {
+        "precision": 0.3333333333333333,
+        "recall": 0.5,
+        "f1": 0.4,
+        "matched_count": 1,
+        "pred_count": 3,
+        "ref_count": 2,
+        "matches": [
+          {
+            "score": 0.6667,
+            "pred_text": "follow up as needed",
+            "ref_text": "as needed"
+          }
+        ],
+        "unsupported_pred_items": [
+          "recommend ice",
+          "anti-inflammatory medication"
+        ],
+        "missing_ref_items": [
+          "follow-up in 1 week"
+        ]
+      }
+    }
+  },
+  "reference_nair_concepts": {
+    "sections": [
+      {
+        "heading": "CC",
+        "section_value": "Right arm pain.",
+        "medical_concepts": [
+          "right arm pain"
+        ]
+      },
+      {
+        "heading": "HPI",
+        "section_value": "Ms. Martinez is a 43-year-old female who presents today for an evaluation of right arm pain after she hitting her arm on a pole while playing tennis. She had mild swelling at the time. There is pain with motion. She denies any numbness or tingling in her hand. She has a past medical history of allergies and takes Flonase.\nEXAM\nExamination of the left wrist shows tenderness over the distal radius and pain with flexion of the wrist and thumb.\nRESULTS\nX-rays of the left wrist show no obvious signs of acute fracture or other abnormality.\nIMPRESSION\nRight wrist sprain.\nPLAN\nAt this point, I discussed the diagnosis and treatment options with the patient. I have recommended ice and anti-inflammatory medications. I am prescribing Motrin, 800 mg to take 3 times a day with food. She will follow up with me in 1 week or as needed.",
+        "medical_concepts": [
+          "right arm pain",
+          "mild swelling",
+          "pain with motion",
+          "numbness",
+          "tingling",
+          "allergies",
+          "Flonase",
+          "left wrist tenderness",
+          "distal radius tenderness",
+          "wrist pain with flexion",
+          "thumb pain with flexion",
+          "X-ray",
+          "acute fracture",
+          "right wrist sprain",
+          "ice",
+          "anti-inflammatory medications",
+          "Motrin"
+        ]
+      }
+    ],
+    "medical_concepts": [
+      "right arm pain",
+      "mild swelling",
+      "pain with motion",
+      "numbness",
+      "tingling",
+      "allergies",
+      "Flonase",
+      "left wrist tenderness",
+      "distal radius tenderness",
+      "wrist pain with flexion",
+      "thumb pain with flexion",
+      "X-ray",
+      "acute fracture",
+      "right wrist sprain",
+      "ice",
+      "anti-inflammatory medications",
+      "Motrin"
+    ],
+    "section_count": 2
+  },
+  "summary_nair_concepts": {
+    "sections": [
+      {
+        "heading": "S",
+        "section_value": "The patient reports pain in his distal radius following hitting his arm on the net, with pain when stressing his thumb and flexing it. He also reports some swelling and denies numbness in his hand. He has a history of allergies and takes flonase. He reports no prior surgeries.",
+        "medical_concepts": [
+          "distal radius pain",
+          "thumb pain",
+          "thumb flexion pain",
+          "swelling",
+          "numbness",
+          "allergies",
+          "Flonase",
+          "prior surgeries"
+        ]
+      },
+      {
+        "heading": "O",
+        "section_value": "The x-ray of the patient's arm shows no fractures or abnormalities. Physical exam reveals tenderness over the distal radius.",
+        "medical_concepts": [
+          "x-ray",
+          "fracture",
+          "tenderness",
+          "distal radius"
+        ]
+      },
+      {
+        "heading": "A",
+        "section_value": "The patient has a distal radius strain and contusion.",
+        "medical_concepts": [
+          "distal radius strain",
+          "contusion"
+        ]
+      },
+      {
+        "heading": "P",
+        "section_value": "We will recommend ice and anti-inflammatory medication, and prescribe motrin 800 mg three times daily with food. Follow up as needed.",
+        "medical_concepts": [
+          "ice",
+          "anti-inflammatory medication",
+          "motrin 800 mg three times daily with food"
+        ]
+      }
+    ],
+    "medical_concepts": [
+      "distal radius pain",
+      "thumb pain",
+      "thumb flexion pain",
+      "swelling",
+      "numbness",
+      "allergies",
+      "Flonase",
+      "prior surgeries",
+      "x-ray",
+      "fracture",
+      "tenderness",
+      "distal radius",
+      "distal radius strain",
+      "contusion",
+      "ice",
+      "anti-inflammatory medication",
+      "motrin 800 mg three times daily with food"
+    ],
+    "section_count": 4
+  },
+  "nair_alignment": {
+    "pred_concepts": [
+      "distal radius pain",
+      "thumb pain",
+      "thumb flexion pain",
+      "swelling",
+      "numbness",
+      "allergies",
+      "Flonase",
+      "prior surgeries",
+      "x-ray",
+      "fracture",
+      "tenderness",
+      "distal radius",
+      "distal radius strain",
+      "contusion",
+      "ice",
+      "anti-inflammatory medication",
+      "motrin 800 mg three times daily with food"
+    ],
+    "ref_concepts": [
+      "right arm pain",
+      "mild swelling",
+      "pain with motion",
+      "numbness",
+      "tingling",
+      "allergies",
+      "Flonase",
+      "left wrist tenderness",
+      "distal radius tenderness",
+      "wrist pain with flexion",
+      "thumb pain with flexion",
+      "X-ray",
+      "acute fracture",
+      "right wrist sprain",
+      "ice",
+      "anti-inflammatory medications",
+      "Motrin"
+    ],
+    "precision_alignment": {
+      "found_b": [
+        "distal radius pain",
+        "thumb pain",
+        "thumb flexion pain",
+        "swelling",
+        "numbness",
+        "allergies",
+        "Flonase",
+        "x-ray",
+        "fracture",
+        "tenderness",
+        "distal radius",
+        "contusion",
+        "ice",
+        "anti-inflammatory medication",
+        "motrin 800 mg three times daily with food"
+      ],
+      "not_found_b": [
+        "prior surgeries",
+        "distal radius strain"
+      ],
+      "chunk_count": 1,
+      "chunk_results": [
+        {
+          "found_b": [
+            "distal radius pain",
+            "thumb pain",
+            "thumb flexion pain",
+            "swelling",
+            "numbness",
+            "allergies",
+            "Flonase",
+            "x-ray",
+            "fracture",
+            "tenderness",
+            "distal radius",
+            "contusion",
+            "ice",
+            "anti-inflammatory medication",
+            "motrin 800 mg three times daily with food"
+          ],
+          "not_found_b": [
+            "prior surgeries",
+            "distal radius strain"
+          ]
+        }
+      ]
+    },
+    "recall_alignment": {
+      "found_b": [
+        "numbness",
+        "allergies",
+        "Flonase",
+        "distal radius tenderness",
+        "thumb pain with flexion",
+        "X-ray",
+        "ice",
+        "anti-inflammatory medications",
+        "Motrin"
+      ],
+      "not_found_b": [
+        "right arm pain",
+        "mild swelling",
+        "pain with motion",
+        "tingling",
+        "left wrist tenderness",
+        "wrist pain with flexion",
+        "acute fracture",
+        "right wrist sprain"
+      ],
+      "chunk_count": 1,
+      "chunk_results": [
+        {
+          "found_b": [
+            "numbness",
+            "allergies",
+            "Flonase",
+            "distal radius tenderness",
+            "thumb pain with flexion",
+            "X-ray",
+            "ice",
+            "anti-inflammatory medications",
+            "Motrin"
+          ],
+          "not_found_b": [
+            "right arm pain",
+            "mild swelling",
+            "pain with motion",
+            "tingling",
+            "left wrist tenderness",
+            "wrist pain with flexion",
+            "acute fracture",
+            "right wrist sprain"
+          ]
+        }
+      ]
+    }
+  },
+  "semantic_cap_audit": {
+    "source_cap_recall": [
+      {
+        "cap_id": "P1",
+        "judgment": "contradicted",
+        "reason": null
+      },
+      {
+        "cap_id": "P2",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P3",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P4",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P5",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P6",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P7",
+        "judgment": "contradicted",
+        "reason": null
+      },
+      {
+        "cap_id": "P8",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P9",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P10",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P11",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P12",
+        "judgment": "supported",
+        "reason": null
+      }
+    ],
+    "summary_cap_precision": [
+      {
+        "cap_id": "P1",
+        "judgment": "unsupported",
+        "reason": null
+      },
+      {
+        "cap_id": "P2",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P3",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P4",
+        "judgment": "unsupported",
+        "reason": null
+      },
+      {
+        "cap_id": "P5",
+        "judgment": "contradicted",
+        "reason": null
+      },
+      {
+        "cap_id": "P6",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P7",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P8",
+        "judgment": "unsupported",
+        "reason": null
+      },
+      {
+        "cap_id": "P9",
+        "judgment": "unsupported",
+        "reason": null
+      },
+      {
+        "cap_id": "P10",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P11",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P12",
+        "judgment": "unsupported",
+        "reason": null
+      },
+      {
+        "cap_id": "P13",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P14",
+        "judgment": "unsupported",
+        "reason": null
+      }
+    ],
+    "metrics": {
+      "semantic_cap_precision": 0.3214,
+      "semantic_cap_recall": 0.4583,
+      "semantic_cap_f1": 0.3779,
+      "semantic_cap_precision_supported_count": 2,
+      "semantic_cap_precision_partial_count": 5,
+      "semantic_cap_precision_denominator": 14,
+      "semantic_cap_recall_supported_count": 4,
+      "semantic_cap_recall_partial_count": 3,
+      "semantic_cap_recall_denominator": 12,
+      "semantic_cap_low_value_source_count": 0,
+      "semantic_cap_low_value_summary_count": 0,
+      "semantic_cap_missing_count": 3,
+      "semantic_cap_unsupported_count": 6,
+      "semantic_cap_contradicted_source_count": 2,
+      "semantic_cap_contradicted_summary_count": 1
+    }
+  },
+  "safety_judgment": null,
+  "section_judgment": {
+    "section_miscategorizations": [],
+    "summary_statistics": {
+      "section_appropriateness_score": 1.0,
+      "section_miscategorization_count": 0,
+      "major_section_miscategorization_count": 0
+    }
+  },
+  "pdsqi_judgment": {
+    "citation_applicable": 0,
+    "citation": 0,
+    "accurate": 3,
+    "thorough": 3,
+    "useful": 3,
+    "organized": 4,
+    "comprehensible": 5,
+    "succinct": 5,
+    "abstraction": 1,
+    "synthesized": 4,
+    "voice_summ": 0,
+    "voice_note": 0,
+    "pdsqi_core_mean": 3.8571
+  },
+  "llm_checklist_judgment": {
+    "content_preservation_core": 4,
+    "noise_suppression": 5,
+    "lay_expression_preservation": 3,
+    "state_update_fidelity": 4,
+    "temporality_preservation": 4,
+    "problem_evidence_linkage": 4,
+    "state_plan_separation": 4,
+    "section_organization_appropriateness": 4,
+    "overall_clinical_usability": 4,
+    "clinically_meaningful_omission": "Yes",
+    "clinically_concerning_hallucination": "Yes",
+    "checklist_a_mean": 4.0,
+    "checklist_b_mean": 4.0,
+    "checklist_c_mean": 4.0,
+    "llm_checklist_abc_mean": 4.0,
+    "llm_checklist_mean_no_usability": 4.0,
+    "llm_checklist_total_score": 36,
+    "llm_checklist_mean": 4.0,
+    "llm_checklist_meaningful_omission_yes": 1,
+    "llm_checklist_concerning_hallucination_yes": 1
+  },
+  "metrics": {
+    "case_id": "D2N092",
+    "method": "cluster2sent",
+    "template": "soap",
+    "source_cap_count": 12,
+    "event_plan_count": null,
+    "summary_cap_count": 14,
+    "cap_matched_count": 5,
+    "cap_precision": 0.3571,
+    "cap_recall": 0.4167,
+    "cap_f1": 0.3846,
+    "unsupported_summary_cap_count": 9,
+    "missing_source_cap_count": 7,
+    "summary_runtime_seconds": null,
+    "summary_cap_runtime_seconds": 20.272,
+    "event_plan_runtime_seconds": null,
+    "rouge_l_f1_vs_reference": 0.3218,
+    "token_f1_vs_reference": 0.4521,
+    "gptf1_macro_f1": 0.2742,
+    "nair_gpt_precision": 0.8824,
+    "nair_gpt_recall": 0.5294,
+    "nair_gpt_f1": 0.6618,
+    "semantic_cap_precision": 0.3214,
+    "semantic_cap_recall": 0.4583,
+    "semantic_cap_f1": 0.3779,
+    "hallucination_count": null,
+    "major_hallucination_count": null,
+    "omission_count": null,
+    "major_omission_count": null,
+    "section_appropriateness_score": 1.0,
+    "section_miscategorization_count": 0,
+    "major_section_miscategorization_count": 0,
+    "pdsqi_core_mean": 3.8571,
+    "pdsqi_accurate": 3,
+    "pdsqi_thorough": 3,
+    "llm_checklist_total_score": 36,
+    "llm_checklist_mean": 4.0,
+    "llm_checklist_mean_no_usability": 4.0,
+    "checklist_a_mean": 4.0,
+    "checklist_b_mean": 4.0,
+    "checklist_c_mean": 4.0,
+    "llm_checklist_abc_mean": 4.0,
+    "content_preservation_core": 4,
+    "noise_suppression": 5,
+    "lay_expression_preservation": 3,
+    "state_update_fidelity": 4,
+    "temporality_preservation": 4,
+    "problem_evidence_linkage": 4,
+    "state_plan_separation": 4,
+    "section_organization_appropriateness": 4,
+    "overall_clinical_usability": 4,
+    "llm_checklist_meaningful_omission_yes": 1,
+    "llm_checklist_concerning_hallucination_yes": 1,
+    "gptf1_active_problems_symptoms_precision": 0.4,
+    "gptf1_active_problems_symptoms_recall": 0.3333,
+    "gptf1_active_problems_symptoms_f1": 0.3636,
+    "gptf1_active_problems_symptoms_pred_count": 5,
+    "gptf1_active_problems_symptoms_ref_count": 6,
+    "gptf1_negated_findings_precision": 0.0,
+    "gptf1_negated_findings_recall": 0.0,
+    "gptf1_negated_findings_f1": 0.0,
+    "gptf1_negated_findings_pred_count": 1,
+    "gptf1_negated_findings_ref_count": 1,
+    "gptf1_uncertain_findings_precision": 0.0,
+    "gptf1_uncertain_findings_recall": 0.0,
+    "gptf1_uncertain_findings_f1": 0.0,
+    "gptf1_uncertain_findings_pred_count": 0,
+    "gptf1_uncertain_findings_ref_count": 0,
+    "gptf1_medication_treatment_precision": 0.5,
+    "gptf1_medication_treatment_recall": 0.25,
+    "gptf1_medication_treatment_f1": 0.3333,
+    "gptf1_medication_treatment_pred_count": 2,
+    "gptf1_medication_treatment_ref_count": 4,
+    "gptf1_plan_followup_precision": 0.3333,
+    "gptf1_plan_followup_recall": 0.5,
+    "gptf1_plan_followup_f1": 0.4,
+    "gptf1_plan_followup_pred_count": 3,
+    "gptf1_plan_followup_ref_count": 2,
+    "nair_pred_concept_count": 17,
+    "nair_ref_concept_count": 17,
+    "nair_precision_match_count": 15,
+    "nair_recall_match_count": 9,
+    "semantic_cap_precision_supported_count": 2,
+    "semantic_cap_precision_partial_count": 5,
+    "semantic_cap_precision_denominator": 14,
+    "semantic_cap_recall_supported_count": 4,
+    "semantic_cap_recall_partial_count": 3,
+    "semantic_cap_recall_denominator": 12,
+    "semantic_cap_low_value_source_count": 0,
+    "semantic_cap_low_value_summary_count": 0,
+    "semantic_cap_missing_count": 3,
+    "semantic_cap_unsupported_count": 6,
+    "semantic_cap_contradicted_source_count": 2,
+    "semantic_cap_contradicted_summary_count": 1,
+    "pdsqi_useful": 3,
+    "pdsqi_organized": 4,
+    "pdsqi_comprehensible": 5,
+    "pdsqi_succinct": 5,
+    "pdsqi_synthesized": 4
+  }
+}

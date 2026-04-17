@@ -1,0 +1,155 @@
+Case: D2N063
+
+Problem List and Visit State Tracking
+
+Problem List
+- difficulty breathing | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T5
+  Summary: The patient reports difficulty breathing.
+  ClusterId: CL1
+  TemporalProfile: current
+  Updates:
+  - CAP8: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T5 :: The patient reports difficulty breathing.
+- shortness of breath | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T8
+  Summary: The patient reports shortness of breath.
+  ClusterId: CL2
+  TemporalProfile: current
+  Updates:
+  - CAP6: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T8 :: The patient reports shortness of breath.
+- swelling | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T10
+  Summary: The patient reports swelling in their ankles.
+  ClusterId: CL3
+  TemporalProfile: current
+  Updates:
+  - CAP5: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T10 :: The patient reports swelling in their ankles.
+- weight gain | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T10
+  Summary: The patient reports weight gain.
+  ClusterId: CL4
+  TemporalProfile: current
+  Updates:
+  - CAP9: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T10 :: The patient reports weight gain.
+  - CAP10: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T10 :: The patient reports weight gain.
+- chest pain | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T16
+  Summary: The patient denies chest pain.
+  ClusterId: CL7
+  TemporalProfile: current
+  Updates:
+  - CAP11: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T16 :: The patient denies chest pain.
+- high blood sugars | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T33,T47
+  Summary: Blood sugars have been running a little bit high.
+  ClusterId: CL9
+  TemporalProfile: current, recent
+  Updates:
+  - CAP2: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T33 :: Blood sugars have been running a little bit high.
+  - CAP4: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=recent turns=T47 :: The patient's blood sugars have been running high.
+- difficulty controlling diet | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T33
+  Summary: It's been a challenge to control the diet.
+  ClusterId: CL10
+  TemporalProfile: current
+  Updates:
+  - CAP3: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T33 :: It's been a challenge to control the diet.
+- nausea | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T35
+  Summary: The patient is feeling crazy.
+  ClusterId: CL11
+  TemporalProfile: current
+  Updates:
+  - CAP12: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T35 :: The patient is feeling crazy.
+- congestive heart failure | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=doctor | evidence=T46
+  Summary: The doctor believes the patient has an exacerbation of congestive heart failure.
+  ClusterId: CL12
+  TemporalProfile: current
+  Updates:
+  - CAP1: content_source=doctor modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T46 :: The doctor believes the patient has an exacerbation of congestive heart failure.
+- diabetes | verification_status=confirmed | clinical_status=active | modalities=assessment,interview | speakers=doctor | evidence=T48
+  Summary: The patient has diabetes.
+  ClusterId: CL16
+  TemporalProfile: current
+  Updates:
+  - CAP7: content_source=doctor modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T48 :: The doctor has a diabetes problem.
+  - CAP14: content_source=doctor modality=assessment verification_status=confirmed clinical_status=active temporality=current turns=T48 :: The patient has diabetes.
+- pain | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T50,T59
+  Summary: The patient reports pain.
+  ClusterId: CL19
+  TemporalProfile: current
+  Updates:
+  - CAP13: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T50 :: The patient reports pain.
+  - CAP15: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T59 :: The patient reports pain.
+
+Medication Tracking
+- [MedicationState] diet control | verification_status=unconfirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T12
+  Summary: The patient was on diet control.
+  ClusterId: CL5
+  TemporalProfile: past
+  CurrentRegimens:
+  - The patient was on diet control. (T12)
+  Updates:
+  - CAP23: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=past turns=T12 :: The patient was on diet control.
+- [MedicationState] lasix | verification_status=unconfirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T12
+  Summary: The patient was taking lasix.
+  ClusterId: CL6
+  TemporalProfile: past
+  CurrentRegimens:
+  - The patient was taking lasix. (T12)
+  Updates:
+  - CAP24: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=past turns=T12 :: The patient was taking lasix.
+- [MedicationChange] insulin | verification_status=unconfirmed | clinical_status=planned | modalities=interview | speakers=doctor | evidence=T30
+  Summary: We had talked about avoiding going to insulin.
+  ClusterId: CL8
+  TemporalProfile: future
+  PlannedChanges:
+  - We had talked about avoiding going to insulin. (T30)
+  Updates:
+  - CAP22: content_source=doctor modality=interview verification_status=unconfirmed clinical_status=planned temporality=future turns=T30 :: We had talked about avoiding going to insulin.
+- [MedicationChange] lasix | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T46
+  Summary: The doctor orders an increase in lasix dose to 60 milligrams for the next four days.
+  ClusterId: CL13
+  TemporalProfile: next 4 days
+  PlannedChanges:
+  - The doctor orders an increase in lasix dose to 60 milligrams for the next four days. (T46)
+  Updates:
+  - CAP16: content_source=doctor modality=plan verification_status=unconfirmed clinical_status=planned temporality=next 4 days turns=T46 :: The doctor orders an increase in lasix dose to 60 milligrams for the next four days.
+- [MedicationChange] albuterol | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T46
+  Summary: The doctor orders albuterol as needed.
+  ClusterId: CL14
+  TemporalProfile: as needed
+  PlannedChanges:
+  - The doctor orders albuterol as needed. (T46)
+  Updates:
+  - CAP19: content_source=doctor modality=plan verification_status=unconfirmed clinical_status=planned temporality=as needed turns=T46 :: The doctor orders albuterol as needed.
+- [MedicationChange] atrovent | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T46
+  Summary: The doctor orders atrovent as needed.
+  ClusterId: CL15
+  TemporalProfile: as needed
+  PlannedChanges:
+  - The doctor orders atrovent as needed. (T46)
+  Updates:
+  - CAP20: content_source=doctor modality=plan verification_status=unconfirmed clinical_status=planned temporality=as needed turns=T46 :: The doctor orders atrovent as needed.
+- [MedicationChange] naproxen | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T48
+  Summary: The doctor orders naproxen.
+  ClusterId: CL18
+  TemporalProfile: future
+  PlannedChanges:
+  - The doctor orders naproxen. (T48)
+  Updates:
+  - CAP25: content_source=doctor modality=plan verification_status=unconfirmed clinical_status=planned temporality=future turns=T48 :: The doctor orders naproxen.
+- [MedicationChange] flexeril | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T50
+  Summary: The doctor orders flexeril.
+  ClusterId: CL22
+  TemporalProfile: future
+  PlannedChanges:
+  - The doctor orders flexeril. (T50)
+  Updates:
+  - CAP26: content_source=doctor modality=plan verification_status=unconfirmed clinical_status=planned temporality=future turns=T50 :: The doctor orders flexeril.
+
+Other Structured States
+- [TestResult] hemoglobin a1c | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T48
+  Summary: The doctor orders a hemoglobin a1c test.
+  ClusterId: CL17
+  TemporalProfile: within 2 days
+- [ExamFinding] tenderness | verification_status=confirmed | clinical_status=active | modalities=exam | speakers=doctor | evidence=T50
+  Summary: The doctor finds tenderness in the paraspinal areas of the patient's back.
+  ClusterId: CL20
+  TemporalProfile: current
+- [Plan] physical therapy | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T50
+  Summary: The doctor orders physical therapy.
+  ClusterId: CL21
+  TemporalProfile: future

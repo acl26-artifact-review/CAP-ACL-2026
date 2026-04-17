@@ -1,0 +1,1226 @@
+{
+  "case_id": "D2N175",
+  "method": "cap_only",
+  "template": "soap",
+  "summary_text": "S:\nThe patient reports pain in the left hand. The patient reports knee pain from prior surgery. The patient reports an elevated A1c level. The patient reports elevated blood sugars. The patient reports stable high blood pressure. The patient reports pain. The patient denies chest pain.\n\nO:\nThe patient has an abnormal lab result. The patient's metformin dose is 100 mg daily. The patient is currently taking metformin. The patient is taking lisinopril.\n\nA:\nThe patient has a history of diabetes. The patient has an abnormal lab result. The patient reports pain.\n\nP:\nThe doctor plans to adjust the patient's medication. Start metformin 100 mg daily. Order repeat A1c testing in 3 months. Follow up in 4 weeks to assess response to medication adjustments.",
+  "reference_summary": "CHIEF COMPLAINT\n\nCheck up for abnormal labs.\n\nHISTORY OF PRESENT ILLNESS\n\nNatalie Price is a 39-year-old female here today for a check up for an abnormal labs. She has a history of high blood pressure, diabetes type 2, and right ACL repair.\n\nThe patient states she had routine blood work done last week and they said her blood sugars were high. She was instructed to follow up to get some more work done. She denies having any symptoms.\n\nRegarding her diabetes, her diet has been really great lately. She has been avoiding sugars and watching her weight. The patient is power walking 30 minutes every day. She is checking her blood sugars every morning. The patient has continued to utilize metformin 1000 mg a day, which was increased at her last visit.\n\nShe states her high blood pressure has been stable with lisinopril. The patient has a cuff at home to measure her blood pressure herself.\n\nRegarding her knee, she had an ACL repair on her right knee about 5 years ago and everything has been going well. She has not had any issues with mobility.\n\nShe denies chest pain, shortness of breath, vomiting, diarrhea, headaches, and abdominal pain. She denies any difficulty urinating or burning when she urinates.\n\nREVIEW OF SYSTEMS\n\n• Cardiovascular: Denies chest pain or dyspnea on exertion.\n• Respiratory: Denies shortness of breath.\n• Genitourinary: Denies urinary pain.\n• Neurological: Denies headaches.\n\nPHYSICAL EXAMINATION\n\n• Head and Face: Normocephalic and atraumatic.\n• Neck: Supple without thyromegaly or lymphadenopathy. No carotid bruits appreciable.\n• Respiratory: Lungs are clear to auscultation bilaterally. No wheezes, rales, or rhonchi.\n• Cardiovascular: 3/6 systolic ejection murmur.\n• Gastrointestinal: Abdomen is soft and nondistended.\n• Musculoskeletal: No lower extremity edema.\n\nRESULTS\n\nHemoglobin A1c is elevated at 8.1.\n\nASSESSMENT AND PLAN\n\nNatalie Price is a 39-year-old female with a history of high blood pressure, diabetes type 2, and right ACL repair. She presents today for evaluation following abnormal labs.\n\nDiabetes type 2.\n• Medical Reasoning: She is asymptomatic but her recent lab work demonstrated an elevated hemoglobin A1c of 8.1. She has been compliant with metformin 1000 mg daily, dietary modifications, and monitoring her blood glucose levels at home.\n• Additional Testing: We will check her CBC, CMP, and lipid panel.\n• Medical Treatment: Continue metformin 1000 mg daily. Initiate Jardiance 10 mg daily.\n• Patient Education and Counseling: I encouraged her to follow her dietary modifications closely.\n\nHypertension.\n• Medical Reasoning: This is stable and well-controlled on her current dose of lisinopril. She does monitor her blood pressures at home.\n• Medical Treatment: Continue lisinopril at current dose.\n\nStatus post right ACL repair.\n• Medical Reasoning: She is doing well postoperatively.\n• Patient Education and Counseling: I encouraged the patient to continue with her physical activity and exercise regimen.\n\nPatient Agreements: The patient understands and agrees with the recommended medical treatment plan.",
+  "source_cap": {
+    "atomic_propositions": [
+      {
+        "prop_id": "CAP1",
+        "cap_type": "Symptom",
+        "canonical_concept": "pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports pain in the left hand."
+      },
+      {
+        "prop_id": "CAP2",
+        "cap_type": "Problem",
+        "canonical_concept": "knee pain",
+        "category": "Problem",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "resolved",
+        "temporality": "past",
+        "proposition_text": "The patient reports knee pain from prior surgery."
+      },
+      {
+        "prop_id": "CAP3",
+        "cap_type": "Problem",
+        "canonical_concept": "diabetes",
+        "category": "Problem",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "history",
+        "proposition_text": "The patient has a history of diabetes."
+      },
+      {
+        "prop_id": "CAP4",
+        "cap_type": "Problem",
+        "canonical_concept": "abnormal lab",
+        "category": "Problem",
+        "speaker": "doctor",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "recent",
+        "proposition_text": "The patient has an abnormal lab result."
+      },
+      {
+        "prop_id": "CAP5",
+        "cap_type": "Problem",
+        "canonical_concept": "hyperglycemia",
+        "category": "Problem",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "quantitative"
+        ],
+        "proposition_text": "The patient reports an elevated A1c level."
+      },
+      {
+        "prop_id": "CAP6",
+        "cap_type": "Problem",
+        "canonical_concept": "high blood pressure",
+        "category": "Problem",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "stable",
+        "temporality": "current",
+        "claim_type_tags": [
+          "temporal"
+        ],
+        "proposition_text": "The patient reports stable high blood pressure."
+      },
+      {
+        "prop_id": "CAP7",
+        "cap_type": "Symptom",
+        "canonical_concept": "high blood sugar",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "recent",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports elevated blood sugars."
+      },
+      {
+        "prop_id": "CAP8",
+        "cap_type": "Symptom",
+        "canonical_concept": "elevated blood sugar",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "recent",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports elevated blood sugar."
+      },
+      {
+        "prop_id": "CAP9",
+        "cap_type": "Symptom",
+        "canonical_concept": "chest pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "denies",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient denies chest pain."
+      },
+      {
+        "prop_id": "CAP10",
+        "cap_type": "Symptom",
+        "canonical_concept": "pain",
+        "category": "Symptom",
+        "speaker": "doctor",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports pain."
+      },
+      {
+        "prop_id": "CAP11",
+        "cap_type": "Problem",
+        "canonical_concept": "pain",
+        "category": "Problem",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient reports pain."
+      },
+      {
+        "prop_id": "CAP12",
+        "cap_type": "Order",
+        "canonical_concept": "adjust medication",
+        "category": "Order",
+        "speaker": "doctor",
+        "predicate": "plans",
+        "status": "uncertain",
+        "visit_state": "planned",
+        "temporality": "future",
+        "claim_type_tags": [
+          "medication",
+          "plan"
+        ],
+        "proposition_text": "The doctor plans to adjust the patient's medication."
+      },
+      {
+        "prop_id": "CAP13",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "metformin",
+        "category": "MedicationStatement",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "medication",
+          "quantitative"
+        ],
+        "proposition_text": "The patient's metformin dose is 100 mg daily."
+      },
+      {
+        "prop_id": "CAP14",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "metformin",
+        "category": "MedicationStatement",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "medication",
+          "temporal"
+        ],
+        "proposition_text": "The patient is currently taking metformin."
+      },
+      {
+        "prop_id": "CAP15",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "lisinopril",
+        "category": "MedicationStatement",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient is taking lisinopril."
+      }
+    ],
+    "filtered_nonverifiable_units": []
+  },
+  "event_plan": null,
+  "summary_cap": {
+    "atomic_propositions": [],
+    "filtered_nonverifiable_units": [],
+    "runtime_seconds": 0.554
+  },
+  "cap_alignment": {
+    "cap_precision": 0.0,
+    "cap_recall": 0.0,
+    "cap_f1": 0.0,
+    "matched_count": 0,
+    "summary_prop_count": 0,
+    "source_prop_count": 15,
+    "matched_pairs": [],
+    "unsupported_summary_props": [],
+    "missing_source_props": [
+      {
+        "prop_id": "CAP1",
+        "cap_type": "Symptom",
+        "canonical_concept": "pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports pain in the left hand."
+      },
+      {
+        "prop_id": "CAP2",
+        "cap_type": "Problem",
+        "canonical_concept": "knee pain",
+        "category": "Problem",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "resolved",
+        "temporality": "past",
+        "proposition_text": "The patient reports knee pain from prior surgery."
+      },
+      {
+        "prop_id": "CAP3",
+        "cap_type": "Problem",
+        "canonical_concept": "diabetes",
+        "category": "Problem",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "history",
+        "proposition_text": "The patient has a history of diabetes."
+      },
+      {
+        "prop_id": "CAP4",
+        "cap_type": "Problem",
+        "canonical_concept": "abnormal lab",
+        "category": "Problem",
+        "speaker": "doctor",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "recent",
+        "proposition_text": "The patient has an abnormal lab result."
+      },
+      {
+        "prop_id": "CAP5",
+        "cap_type": "Problem",
+        "canonical_concept": "hyperglycemia",
+        "category": "Problem",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "quantitative"
+        ],
+        "proposition_text": "The patient reports an elevated A1c level."
+      },
+      {
+        "prop_id": "CAP6",
+        "cap_type": "Problem",
+        "canonical_concept": "high blood pressure",
+        "category": "Problem",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "stable",
+        "temporality": "current",
+        "claim_type_tags": [
+          "temporal"
+        ],
+        "proposition_text": "The patient reports stable high blood pressure."
+      },
+      {
+        "prop_id": "CAP7",
+        "cap_type": "Symptom",
+        "canonical_concept": "high blood sugar",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "recent",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports elevated blood sugars."
+      },
+      {
+        "prop_id": "CAP8",
+        "cap_type": "Symptom",
+        "canonical_concept": "elevated blood sugar",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "recent",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports elevated blood sugar."
+      },
+      {
+        "prop_id": "CAP9",
+        "cap_type": "Symptom",
+        "canonical_concept": "chest pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "denies",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient denies chest pain."
+      },
+      {
+        "prop_id": "CAP10",
+        "cap_type": "Symptom",
+        "canonical_concept": "pain",
+        "category": "Symptom",
+        "speaker": "doctor",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports pain."
+      },
+      {
+        "prop_id": "CAP11",
+        "cap_type": "Problem",
+        "canonical_concept": "pain",
+        "category": "Problem",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient reports pain."
+      },
+      {
+        "prop_id": "CAP12",
+        "cap_type": "Order",
+        "canonical_concept": "adjust medication",
+        "category": "Order",
+        "speaker": "doctor",
+        "predicate": "plans",
+        "status": "uncertain",
+        "visit_state": "planned",
+        "temporality": "future",
+        "claim_type_tags": [
+          "medication",
+          "plan"
+        ],
+        "proposition_text": "The doctor plans to adjust the patient's medication."
+      },
+      {
+        "prop_id": "CAP13",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "metformin",
+        "category": "MedicationStatement",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "medication",
+          "quantitative"
+        ],
+        "proposition_text": "The patient's metformin dose is 100 mg daily."
+      },
+      {
+        "prop_id": "CAP14",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "metformin",
+        "category": "MedicationStatement",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "medication",
+          "temporal"
+        ],
+        "proposition_text": "The patient is currently taking metformin."
+      },
+      {
+        "prop_id": "CAP15",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "lisinopril",
+        "category": "MedicationStatement",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient is taking lisinopril."
+      }
+    ]
+  },
+  "reference_gpt_f1_items": {
+    "active_problems_symptoms": [],
+    "negated_findings": [],
+    "uncertain_findings": [],
+    "medication_treatment": [],
+    "plan_followup": [],
+    "_chunk_count": [
+      "4"
+    ],
+    "_parse_failures": [
+      "{\"chunk_index\": 1, \"stage\": \"call_llm\", \"error\": \"LLM call failed after retries: Error code: 404\"}",
+      "{\"chunk_index\": 2, \"stage\": \"call_llm\", \"error\": \"LLM call failed after retries: Error code: 404\"}",
+      "{\"chunk_index\": 3, \"stage\": \"call_llm\", \"error\": \"LLM call failed after retries: Error code: 404\"}",
+      "{\"chunk_index\": 4, \"stage\": \"call_llm\", \"error\": \"LLM call failed after retries: Error code: 404\"}"
+    ]
+  },
+  "summary_gpt_f1_items": {
+    "active_problems_symptoms": [],
+    "negated_findings": [],
+    "uncertain_findings": [],
+    "medication_treatment": [],
+    "plan_followup": [],
+    "_chunk_count": [
+      "1"
+    ],
+    "_parse_failures": [
+      "{\"chunk_index\": 1, \"stage\": \"call_llm\", \"error\": \"LLM call failed after retries: Error code: 404\"}"
+    ]
+  },
+  "gpt_f1_alignment": {
+    "by_category": {
+      "active_problems_symptoms": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "matched_count": 0,
+        "pred_count": 0,
+        "ref_count": 0,
+        "matches": [],
+        "unsupported_pred_items": [],
+        "missing_ref_items": []
+      },
+      "negated_findings": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "matched_count": 0,
+        "pred_count": 0,
+        "ref_count": 0,
+        "matches": [],
+        "unsupported_pred_items": [],
+        "missing_ref_items": []
+      },
+      "uncertain_findings": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "matched_count": 0,
+        "pred_count": 0,
+        "ref_count": 0,
+        "matches": [],
+        "unsupported_pred_items": [],
+        "missing_ref_items": []
+      },
+      "medication_treatment": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "matched_count": 0,
+        "pred_count": 0,
+        "ref_count": 0,
+        "matches": [],
+        "unsupported_pred_items": [],
+        "missing_ref_items": []
+      },
+      "plan_followup": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "matched_count": 0,
+        "pred_count": 0,
+        "ref_count": 0,
+        "matches": [],
+        "unsupported_pred_items": [],
+        "missing_ref_items": []
+      }
+    }
+  },
+  "reference_nair_concepts": {
+    "sections": [
+      {
+        "heading": "Clinical Note",
+        "section_value": "CHIEF COMPLAINT\nCheck up for abnormal labs.\nHISTORY OF PRESENT ILLNESS\nNatalie Price is a 39-year-old female here today for a check up for an abnormal labs. She has a history of high blood pressure, diabetes type 2, and right ACL repair.\nThe patient states she had routine blood work done last week and they said her blood sugars were high. She was instructed to follow up to get some more work done. She denies having any symptoms.\nRegarding her diabetes, her diet has been really great lately. She has been avoiding sugars and watching her weight. The patient is power walking 30 minutes every day. She is checking her blood sugars every morning. The patient has continued to utilize metformin 1000 mg a day, which was increased at her last visit.\nShe states her high blood pressure has been stable with lisinopril. The patient has a cuff at home to measure her blood pressure herself.\nRegarding her knee, she had an ACL repair on her right knee about 5 years ago and everything has been going well. She has not had any issues with mobility.\nShe denies chest pain, shortness of breath, vomiting, diarrhea, headaches, and abdominal pain. She denies any difficulty urinating or burning when she urinates.\nREVIEW OF SYSTEMS",
+        "medical_concepts": [
+          "abnormal labs",
+          "high blood pressure",
+          "hypertension",
+          "diabetes type 2",
+          "type 2 diabetes",
+          "right ACL repair",
+          "ACL repair",
+          "elevated blood sugars",
+          "metformin",
+          "lisinopril",
+          "chest pain",
+          "shortness of breath",
+          "vomiting",
+          "diarrhea",
+          "headaches",
+          "abdominal pain",
+          "difficulty urinating",
+          "dysuria",
+          "burning with urination"
+        ]
+      },
+      {
+        "heading": "Clinical Note",
+        "section_value": "• Cardiovascular: Denies chest pain or dyspnea on exertion.\n• Respiratory: Denies shortness of breath.\n• Genitourinary: Denies urinary pain.\n• Neurological: Denies headaches.\nPHYSICAL EXAMINATION\n• Head and Face: Normocephalic and atraumatic.\n• Neck: Supple without thyromegaly or lymphadenopathy. No carotid bruits appreciable.\n• Respiratory: Lungs are clear to auscultation bilaterally. No wheezes, rales, or rhonchi.\n• Cardiovascular: 3/6 systolic ejection murmur.\n• Gastrointestinal: Abdomen is soft and nondistended.",
+        "medical_concepts": [
+          "chest pain",
+          "dyspnea on exertion",
+          "shortness of breath",
+          "urinary pain",
+          "headaches",
+          "normocephalic",
+          "atraumatic",
+          "thyromegaly",
+          "lymphadenopathy",
+          "carotid bruits",
+          "wheezes",
+          "rales",
+          "rhonchi",
+          "systolic ejection murmur",
+          "abdominal distension"
+        ]
+      },
+      {
+        "heading": "Clinical Note",
+        "section_value": "• Musculoskeletal: No lower extremity edema.\nRESULTS\nHemoglobin A1c is elevated at 8.1.\nASSESSMENT AND PLAN\nNatalie Price is a 39-year-old female with a history of high blood pressure, diabetes type 2, and right ACL repair. She presents today for evaluation following abnormal labs.\nDiabetes type 2.\n• Medical Reasoning: She is asymptomatic but her recent lab work demonstrated an elevated hemoglobin A1c of 8.1. She has been compliant with metformin 1000 mg daily, dietary modifications, and monitoring her blood glucose levels at home.\n• Additional Testing: We will check her CBC, CMP, and lipid panel.\n• Medical Treatment: Continue metformin 1000 mg daily. Initiate Jardiance 10 mg daily.\n• Patient Education and Counseling: I encouraged her to follow her dietary modifications closely.",
+        "medical_concepts": [
+          "lower extremity edema",
+          "hemoglobin A1c",
+          "elevated hemoglobin A1c",
+          "high blood pressure",
+          "diabetes type 2",
+          "right ACL repair",
+          "metformin",
+          "CBC",
+          "CMP",
+          "lipid panel",
+          "Jardiance",
+          "blood glucose levels"
+        ]
+      },
+      {
+        "heading": "Clinical Note",
+        "section_value": "Hypertension.\n• Medical Reasoning: This is stable and well-controlled on her current dose of lisinopril. She does monitor her blood pressures at home.\n• Medical Treatment: Continue lisinopril at current dose.\nStatus post right ACL repair.\n• Medical Reasoning: She is doing well postoperatively.\n• Patient Education and Counseling: I encouraged the patient to continue with her physical activity and exercise regimen.\nPatient Agreements: The patient understands and agrees with the recommended medical treatment plan.",
+        "medical_concepts": [
+          "hypertension",
+          "lisinopril",
+          "blood pressure monitoring",
+          "status post right ACL repair",
+          "postoperative state",
+          "physical activity",
+          "exercise regimen"
+        ]
+      }
+    ],
+    "medical_concepts": [
+      "abnormal labs",
+      "high blood pressure",
+      "hypertension",
+      "diabetes type 2",
+      "type 2 diabetes",
+      "right ACL repair",
+      "ACL repair",
+      "elevated blood sugars",
+      "metformin",
+      "lisinopril",
+      "chest pain",
+      "shortness of breath",
+      "vomiting",
+      "diarrhea",
+      "headaches",
+      "abdominal pain",
+      "difficulty urinating",
+      "dysuria",
+      "burning with urination",
+      "dyspnea on exertion",
+      "urinary pain",
+      "normocephalic",
+      "atraumatic",
+      "thyromegaly",
+      "lymphadenopathy",
+      "carotid bruits",
+      "wheezes",
+      "rales",
+      "rhonchi",
+      "systolic ejection murmur",
+      "abdominal distension",
+      "lower extremity edema",
+      "hemoglobin A1c",
+      "elevated hemoglobin A1c",
+      "CBC",
+      "CMP",
+      "lipid panel",
+      "Jardiance",
+      "blood glucose levels",
+      "blood pressure monitoring",
+      "status post right ACL repair",
+      "postoperative state",
+      "physical activity",
+      "exercise regimen"
+    ],
+    "section_count": 4
+  },
+  "summary_nair_concepts": {
+    "sections": [
+      {
+        "heading": "S",
+        "section_value": "The patient reports pain in the left hand. The patient reports knee pain from prior surgery. The patient reports an elevated A1c level. The patient reports elevated blood sugars. The patient reports stable high blood pressure. The patient reports pain. The patient denies chest pain.",
+        "medical_concepts": [
+          "left hand pain",
+          "knee pain",
+          "prior surgery",
+          "elevated A1c level",
+          "elevated blood sugars",
+          "high blood pressure",
+          "pain",
+          "chest pain"
+        ]
+      },
+      {
+        "heading": "O",
+        "section_value": "The patient has an abnormal lab result. The patient's metformin dose is 100 mg daily. The patient is currently taking metformin. The patient is taking lisinopril.",
+        "medical_concepts": [
+          "abnormal lab result",
+          "metformin",
+          "metformin 100 mg daily",
+          "lisinopril"
+        ]
+      },
+      {
+        "heading": "A",
+        "section_value": "The patient has a history of diabetes. The patient has an abnormal lab result. The patient reports pain.",
+        "medical_concepts": [
+          "diabetes",
+          "abnormal lab result",
+          "pain"
+        ]
+      },
+      {
+        "heading": "P",
+        "section_value": "The doctor plans to adjust the patient's medication. Start metformin 100 mg daily. Order repeat A1c testing in 3 months. Follow up in 4 weeks to assess response to medication adjustments.",
+        "medical_concepts": [
+          "metformin",
+          "A1c testing"
+        ]
+      }
+    ],
+    "medical_concepts": [
+      "left hand pain",
+      "knee pain",
+      "prior surgery",
+      "elevated A1c level",
+      "elevated blood sugars",
+      "high blood pressure",
+      "pain",
+      "chest pain",
+      "abnormal lab result",
+      "metformin",
+      "metformin 100 mg daily",
+      "lisinopril",
+      "diabetes",
+      "A1c testing"
+    ],
+    "section_count": 4
+  },
+  "nair_alignment": {
+    "pred_concepts": [
+      "left hand pain",
+      "knee pain",
+      "prior surgery",
+      "elevated A1c level",
+      "elevated blood sugars",
+      "high blood pressure",
+      "pain",
+      "chest pain",
+      "abnormal lab result",
+      "metformin",
+      "metformin 100 mg daily",
+      "lisinopril",
+      "diabetes",
+      "A1c testing"
+    ],
+    "ref_concepts": [
+      "abnormal labs",
+      "high blood pressure",
+      "hypertension",
+      "diabetes type 2",
+      "type 2 diabetes",
+      "right ACL repair",
+      "ACL repair",
+      "elevated blood sugars",
+      "metformin",
+      "lisinopril",
+      "chest pain",
+      "shortness of breath",
+      "vomiting",
+      "diarrhea",
+      "headaches",
+      "abdominal pain",
+      "difficulty urinating",
+      "dysuria",
+      "burning with urination",
+      "dyspnea on exertion",
+      "urinary pain",
+      "normocephalic",
+      "atraumatic",
+      "thyromegaly",
+      "lymphadenopathy",
+      "carotid bruits",
+      "wheezes",
+      "rales",
+      "rhonchi",
+      "systolic ejection murmur",
+      "abdominal distension",
+      "lower extremity edema",
+      "hemoglobin A1c",
+      "elevated hemoglobin A1c",
+      "CBC",
+      "CMP",
+      "lipid panel",
+      "Jardiance",
+      "blood glucose levels",
+      "blood pressure monitoring",
+      "status post right ACL repair",
+      "postoperative state",
+      "physical activity",
+      "exercise regimen"
+    ],
+    "precision_alignment": {
+      "found_b": [
+        "knee pain",
+        "prior surgery",
+        "elevated A1c level",
+        "elevated blood sugars",
+        "high blood pressure",
+        "chest pain",
+        "abnormal lab result",
+        "metformin",
+        "lisinopril",
+        "diabetes",
+        "A1c testing"
+      ],
+      "not_found_b": [
+        "left hand pain",
+        "pain",
+        "metformin 100 mg daily"
+      ],
+      "chunk_count": 1,
+      "chunk_results": [
+        {
+          "found_b": [
+            "knee pain",
+            "prior surgery",
+            "elevated A1c level",
+            "elevated blood sugars",
+            "high blood pressure",
+            "chest pain",
+            "abnormal lab result",
+            "metformin",
+            "lisinopril",
+            "diabetes",
+            "A1c testing"
+          ],
+          "not_found_b": [
+            "left hand pain",
+            "pain",
+            "metformin 100 mg daily"
+          ]
+        }
+      ]
+    },
+    "recall_alignment": {
+      "found_b": [
+        "abnormal labs",
+        "high blood pressure",
+        "hypertension",
+        "elevated blood sugars",
+        "metformin",
+        "lisinopril",
+        "chest pain",
+        "hemoglobin A1c",
+        "elevated hemoglobin A1c",
+        "blood glucose levels",
+        "postoperative state"
+      ],
+      "not_found_b": [
+        "diabetes type 2",
+        "type 2 diabetes",
+        "right ACL repair",
+        "ACL repair",
+        "shortness of breath",
+        "vomiting",
+        "diarrhea",
+        "headaches",
+        "abdominal pain",
+        "difficulty urinating",
+        "dysuria",
+        "burning with urination",
+        "dyspnea on exertion",
+        "urinary pain",
+        "normocephalic",
+        "atraumatic",
+        "thyromegaly",
+        "lymphadenopathy",
+        "carotid bruits",
+        "wheezes",
+        "rales",
+        "rhonchi",
+        "systolic ejection murmur",
+        "abdominal distension",
+        "lower extremity edema",
+        "CBC",
+        "CMP",
+        "lipid panel",
+        "Jardiance",
+        "blood pressure monitoring",
+        "status post right ACL repair",
+        "physical activity",
+        "exercise regimen"
+      ],
+      "chunk_count": 2,
+      "chunk_results": [
+        {
+          "found_b": [
+            "abnormal labs",
+            "high blood pressure",
+            "hypertension",
+            "elevated blood sugars",
+            "metformin",
+            "lisinopril",
+            "chest pain"
+          ],
+          "not_found_b": [
+            "diabetes type 2",
+            "type 2 diabetes",
+            "right ACL repair",
+            "ACL repair",
+            "shortness of breath",
+            "vomiting",
+            "diarrhea",
+            "headaches",
+            "abdominal pain",
+            "difficulty urinating",
+            "dysuria",
+            "burning with urination",
+            "dyspnea on exertion",
+            "urinary pain",
+            "normocephalic",
+            "atraumatic",
+            "thyromegaly"
+          ]
+        },
+        {
+          "found_b": [
+            "hemoglobin A1c",
+            "elevated hemoglobin A1c",
+            "blood glucose levels",
+            "postoperative state"
+          ],
+          "not_found_b": [
+            "lymphadenopathy",
+            "carotid bruits",
+            "wheezes",
+            "rales",
+            "rhonchi",
+            "systolic ejection murmur",
+            "abdominal distension",
+            "lower extremity edema",
+            "CBC",
+            "CMP",
+            "lipid panel",
+            "Jardiance",
+            "blood pressure monitoring",
+            "status post right ACL repair",
+            "physical activity",
+            "exercise regimen"
+          ]
+        }
+      ]
+    }
+  },
+  "semantic_cap_audit": {
+    "source_cap_recall": [
+      {
+        "cap_id": "P1",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P2",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P3",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P4",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P5",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P6",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P7",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P8",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P9",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P10",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P11",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P12",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P13",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P14",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P15",
+        "judgment": "supported",
+        "reason": null
+      }
+    ],
+    "summary_cap_precision": [],
+    "metrics": {
+      "semantic_cap_precision": 0.0,
+      "semantic_cap_recall": 1.0,
+      "semantic_cap_f1": 0.0,
+      "semantic_cap_precision_supported_count": 0,
+      "semantic_cap_precision_partial_count": 0,
+      "semantic_cap_precision_denominator": 0,
+      "semantic_cap_recall_supported_count": 15,
+      "semantic_cap_recall_partial_count": 0,
+      "semantic_cap_recall_denominator": 15,
+      "semantic_cap_low_value_source_count": 0,
+      "semantic_cap_low_value_summary_count": 0,
+      "semantic_cap_missing_count": 0,
+      "semantic_cap_unsupported_count": 0,
+      "semantic_cap_contradicted_source_count": 0,
+      "semantic_cap_contradicted_summary_count": 0
+    }
+  },
+  "safety_judgment": null,
+  "section_judgment": {
+    "section_miscategorizations": [
+      {
+        "text": "The patient reports an elevated A1c level.",
+        "current_section": "S",
+        "expected_section": "O",
+        "severity": "major",
+        "reason": "A1c is an objective lab value; even if the patient mentions it, the elevated level itself is an objective lab finding and belongs in the Objective section."
+      },
+      {
+        "text": "The patient has an abnormal lab result.",
+        "current_section": "O",
+        "expected_section": "A",
+        "severity": "minor",
+        "reason": "In this context it is framed as a synthesized problem statement rather than a specific measured value; it fits better as part of the clinician's assessment of abnormal results."
+      },
+      {
+        "text": "The patient's metformin dose is 100 mg daily.",
+        "current_section": "O",
+        "expected_section": "S",
+        "severity": "major",
+        "reason": "This describes the patient's current medication regimen, which per instructions belongs in Subjective unless framed as a treatment change or order."
+      },
+      {
+        "text": "The patient is currently taking metformin.",
+        "current_section": "O",
+        "expected_section": "S",
+        "severity": "major",
+        "reason": "Current medications the patient is already taking should be documented in the Subjective section unless they are being changed or ordered."
+      },
+      {
+        "text": "The patient is taking lisinopril.",
+        "current_section": "O",
+        "expected_section": "S",
+        "severity": "major",
+        "reason": "This is an existing medication and should be listed in the Subjective section per the template rules."
+      },
+      {
+        "text": "The patient reports pain.",
+        "current_section": "A",
+        "expected_section": "S",
+        "severity": "major",
+        "reason": "Pain is a symptom reported by the patient and belongs in the Subjective section, not in the Assessment."
+      }
+    ],
+    "summary_statistics": {
+      "section_appropriateness_score": 0.6,
+      "section_miscategorization_count": 6,
+      "major_section_miscategorization_count": 5
+    }
+  },
+  "pdsqi_judgment": {
+    "citation_applicable": 0,
+    "citation": 0,
+    "accurate": 1,
+    "thorough": 1,
+    "useful": 1,
+    "organized": 2,
+    "comprehensible": 3,
+    "succinct": 3,
+    "abstraction": 1,
+    "synthesized": 2,
+    "voice_summ": 0,
+    "voice_note": 0,
+    "pdsqi_core_mean": 1.8571
+  },
+  "llm_checklist_judgment": {
+    "content_preservation_core": 1,
+    "noise_suppression": 4,
+    "lay_expression_preservation": 2,
+    "state_update_fidelity": 1,
+    "temporality_preservation": 2,
+    "problem_evidence_linkage": 2,
+    "state_plan_separation": 2,
+    "section_organization_appropriateness": 2,
+    "overall_clinical_usability": 1,
+    "clinically_meaningful_omission": "Yes",
+    "clinically_concerning_hallucination": "Yes",
+    "checklist_a_mean": 2.3333,
+    "checklist_b_mean": 1.5,
+    "checklist_c_mean": 2.0,
+    "llm_checklist_abc_mean": 2.0,
+    "llm_checklist_mean_no_usability": 2.0,
+    "llm_checklist_total_score": 17,
+    "llm_checklist_mean": 1.8889,
+    "llm_checklist_meaningful_omission_yes": 1,
+    "llm_checklist_concerning_hallucination_yes": 1
+  },
+  "metrics": {
+    "case_id": "D2N175",
+    "method": "cap_only",
+    "template": "soap",
+    "source_cap_count": 15,
+    "event_plan_count": null,
+    "summary_cap_count": 0,
+    "cap_matched_count": 0,
+    "cap_precision": 0.0,
+    "cap_recall": 0.0,
+    "cap_f1": 0.0,
+    "unsupported_summary_cap_count": 0,
+    "missing_source_cap_count": 15,
+    "summary_runtime_seconds": null,
+    "summary_cap_runtime_seconds": 0.554,
+    "event_plan_runtime_seconds": null,
+    "rouge_l_f1_vs_reference": 0.1107,
+    "token_f1_vs_reference": 0.2215,
+    "gptf1_macro_f1": 0.0,
+    "nair_gpt_precision": 0.7857,
+    "nair_gpt_recall": 0.25,
+    "nair_gpt_f1": 0.3793,
+    "semantic_cap_precision": 0.0,
+    "semantic_cap_recall": 1.0,
+    "semantic_cap_f1": 0.0,
+    "hallucination_count": null,
+    "major_hallucination_count": null,
+    "omission_count": null,
+    "major_omission_count": null,
+    "section_appropriateness_score": 0.6,
+    "section_miscategorization_count": 6,
+    "major_section_miscategorization_count": 5,
+    "pdsqi_core_mean": 1.8571,
+    "pdsqi_accurate": 1,
+    "pdsqi_thorough": 1,
+    "llm_checklist_total_score": 17,
+    "llm_checklist_mean": 1.8889,
+    "llm_checklist_mean_no_usability": 2.0,
+    "checklist_a_mean": 2.3333,
+    "checklist_b_mean": 1.5,
+    "checklist_c_mean": 2.0,
+    "llm_checklist_abc_mean": 2.0,
+    "content_preservation_core": 1,
+    "noise_suppression": 4,
+    "lay_expression_preservation": 2,
+    "state_update_fidelity": 1,
+    "temporality_preservation": 2,
+    "problem_evidence_linkage": 2,
+    "state_plan_separation": 2,
+    "section_organization_appropriateness": 2,
+    "overall_clinical_usability": 1,
+    "llm_checklist_meaningful_omission_yes": 1,
+    "llm_checklist_concerning_hallucination_yes": 1,
+    "gptf1_active_problems_symptoms_precision": 0.0,
+    "gptf1_active_problems_symptoms_recall": 0.0,
+    "gptf1_active_problems_symptoms_f1": 0.0,
+    "gptf1_active_problems_symptoms_pred_count": 0,
+    "gptf1_active_problems_symptoms_ref_count": 0,
+    "gptf1_negated_findings_precision": 0.0,
+    "gptf1_negated_findings_recall": 0.0,
+    "gptf1_negated_findings_f1": 0.0,
+    "gptf1_negated_findings_pred_count": 0,
+    "gptf1_negated_findings_ref_count": 0,
+    "gptf1_uncertain_findings_precision": 0.0,
+    "gptf1_uncertain_findings_recall": 0.0,
+    "gptf1_uncertain_findings_f1": 0.0,
+    "gptf1_uncertain_findings_pred_count": 0,
+    "gptf1_uncertain_findings_ref_count": 0,
+    "gptf1_medication_treatment_precision": 0.0,
+    "gptf1_medication_treatment_recall": 0.0,
+    "gptf1_medication_treatment_f1": 0.0,
+    "gptf1_medication_treatment_pred_count": 0,
+    "gptf1_medication_treatment_ref_count": 0,
+    "gptf1_plan_followup_precision": 0.0,
+    "gptf1_plan_followup_recall": 0.0,
+    "gptf1_plan_followup_f1": 0.0,
+    "gptf1_plan_followup_pred_count": 0,
+    "gptf1_plan_followup_ref_count": 0,
+    "nair_pred_concept_count": 14,
+    "nair_ref_concept_count": 44,
+    "nair_precision_match_count": 11,
+    "nair_recall_match_count": 11,
+    "semantic_cap_precision_supported_count": 0,
+    "semantic_cap_precision_partial_count": 0,
+    "semantic_cap_precision_denominator": 0,
+    "semantic_cap_recall_supported_count": 15,
+    "semantic_cap_recall_partial_count": 0,
+    "semantic_cap_recall_denominator": 15,
+    "semantic_cap_low_value_source_count": 0,
+    "semantic_cap_low_value_summary_count": 0,
+    "semantic_cap_missing_count": 0,
+    "semantic_cap_unsupported_count": 0,
+    "semantic_cap_contradicted_source_count": 0,
+    "semantic_cap_contradicted_summary_count": 0,
+    "pdsqi_useful": 1,
+    "pdsqi_organized": 2,
+    "pdsqi_comprehensible": 3,
+    "pdsqi_succinct": 3,
+    "pdsqi_synthesized": 2
+  }
+}

@@ -1,0 +1,29 @@
+Given a snippet (snippet) from a medical dialogue summary and a corresponding list
+(list_a) of medical concepts extracted from that snippet, evaluate what medical
+concepts from a separate list (list_b) can be found in either list_a or snippet.
+
+Note that on some occasions a medical concept from list_b may not be found in list_a,
+but can be appropriate to be present given the snippet. This could include
+rephrasings of medical concepts that are clinically equivalent (for example:
+COVID and COVID-19).
+
+--- Example ---
+snippet: Patient reports cough, fever, and no chest pain. COVID-19 test ordered.
+list_a: ["cough", "fever", "chest pain", "COVID-19 test"]
+list_b: ["cough", "fever", "COVID", "wheezing"]
+
+found_b: ["cough", "fever", "COVID"]
+not_found_b: ["wheezing"]
+--- Example ---
+
+Here is the snippet and list_a. Evaluate the medical concepts in list_b as above.
+
+snippet: {snippet}
+list_a: {list_a}
+list_b: {list_b}
+
+Return valid JSON only:
+{{
+  "found_b": [],
+  "not_found_b": []
+}}

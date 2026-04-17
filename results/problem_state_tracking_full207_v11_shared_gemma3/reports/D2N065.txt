@@ -1,0 +1,103 @@
+Case: D2N065
+
+Problem List and Visit State Tracking
+
+Problem List
+- warmth | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T7
+  Summary: The patient reports feeling warmth in the affected area.
+  ClusterId: CL1
+  TemporalProfile: current
+  Updates:
+  - CAP2: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T7 :: The patient reports feeling warmth in the affected area.
+- throbbing pain | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T39,T7,T9
+  Summary: The patient describes the pain as throbbing.
+  ClusterId: CL2
+  TemporalProfile: current
+  Updates:
+  - CAP4: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T7 :: The patient describes the pain as throbbing.
+  - CAP3: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T9 :: The patient reports pain in the left hand.
+  - CAP8: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T39 :: The patient reports pain.
+- right ankle pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T7
+  Summary: The patient reports right ankle pain.
+  ClusterId: CL3
+  TemporalProfile: current
+  Updates:
+  - CAP5: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T7 :: The patient reports right ankle pain.
+- ankle injury | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T13
+  Summary: The patient had previous ankle injuries.
+  ClusterId: CL5
+  TemporalProfile: past
+  Updates:
+  - CAP6: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=past turns=T13 :: The patient had previous ankle injuries.
+- numbness | verification_status=unconfirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T15
+  Summary: The patient denies numbness.
+  ClusterId: CL6
+  TemporalProfile: past
+  Updates:
+  - CAP7: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=past turns=T15 :: The patient denies numbness.
+- ankle sprain | verification_status=confirmed | clinical_status=active | modalities=assessment | speakers=doctor | evidence=T22
+  Summary: The doctor assesses the patient's right ankle pain as a right ankle sprain.
+  ClusterId: CL7
+  TemporalProfile: current
+  Updates:
+  - CAP1: content_source=doctor modality=assessment verification_status=confirmed clinical_status=active temporality=current turns=T22 :: The doctor assesses the patient's right ankle pain as a right ankle sprain.
+
+Medication Tracking
+- [MedicationState] ibuprofen | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T10,T9
+  Summary: The patient took ibuprofen last night.
+  ClusterId: CL4
+  TemporalProfile: current, this morning
+  CurrentRegimens:
+  - The patient took ibuprofen last night. (T9)
+  - The patient took ibuprofen. (T9)
+  - The patient took ibuprofen this morning. (T10)
+  Updates:
+  - CAP16: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T9 :: The patient took ibuprofen last night.
+  - CAP18: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T9 :: The patient took ibuprofen.
+  - CAP17: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=this morning turns=T10 :: The patient took ibuprofen this morning.
+- [MedicationChange] air cast | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T24
+  Summary: The doctor orders an air cast for the patient's right ankle.
+  ClusterId: CL8
+  TemporalProfile: current
+  PlannedChanges:
+  - The doctor orders an air cast for the patient's right ankle. (T24)
+  Updates:
+  - CAP9: content_source=doctor modality=plan verification_status=unconfirmed clinical_status=planned temporality=current turns=T24 :: The doctor orders an air cast for the patient's right ankle.
+- [MedicationChange] ice | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T24
+  Summary: The doctor recommends icing the patient's right ankle.
+  ClusterId: CL10
+  TemporalProfile: current
+  PlannedChanges:
+  - The doctor recommends icing the patient's right ankle. (T24)
+  Updates:
+  - CAP11: content_source=doctor modality=plan verification_status=unconfirmed clinical_status=planned temporality=current turns=T24 :: The doctor recommends icing the patient's right ankle.
+- [MedicationChange] note | verification_status=unconfirmed | clinical_status=planned | modalities=assessment | speakers=doctor | evidence=T29
+  Summary: The doctor will write a note.
+  ClusterId: CL13
+  TemporalProfile: future
+  PlannedChanges:
+  - The doctor will write a note. (T29)
+  Updates:
+  - CAP13: content_source=doctor modality=assessment verification_status=unconfirmed clinical_status=planned temporality=future turns=T29 :: The doctor will write a note.
+
+Other Structured States
+- [Plan] immobilization | verification_status=confirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T24
+  Summary: The doctor orders the patient to keep their leg elevated.
+  ClusterId: CL9
+  TemporalProfile: current
+- [Plan] crutches | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T24
+  Summary: The doctor orders the patient to use crutches.
+  ClusterId: CL11
+  TemporalProfile: current
+- [Plan] recovery timeline | verification_status=confirmed | clinical_status=active | modalities=plan | speakers=doctor | evidence=T28
+  Summary: The doctor estimates a recovery time of two to three weeks.
+  ClusterId: CL12
+  TemporalProfile: current
+- [Plan] mri | verification_status=unconfirmed | clinical_status=planned | modalities=assessment | speakers=doctor | evidence=T34
+  Summary: A cervical MRI is planned.
+  ClusterId: CL14
+  TemporalProfile: future
+- [FollowUp] contact office | verification_status=unconfirmed | clinical_status=planned | modalities=assessment | speakers=doctor | evidence=T34
+  Summary: The patient should contact the office if pain persists.
+  ClusterId: CL15
+  TemporalProfile: future

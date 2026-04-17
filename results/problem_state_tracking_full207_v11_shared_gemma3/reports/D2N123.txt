@@ -1,0 +1,68 @@
+Case: D2N123
+
+Problem List and Visit State Tracking
+
+Problem List
+- difficulty swallowing | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T0
+  Summary: The patient reports difficulty swallowing.
+  ClusterId: CL1
+  TemporalProfile: current
+  Updates:
+  - CAP3: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T0 :: The patient reports difficulty swallowing.
+- pain in the left hand | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T1
+  Summary: The patient reports pain in the left hand.
+  ClusterId: CL2
+  TemporalProfile: current
+  Updates:
+  - CAP1: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T1 :: The patient reports pain in the left hand.
+  - CAP5: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T1 :: The patient reports pain.
+- shortness of breath | verification_status=unconfirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T12
+  Summary: The patient denies shortness of breath.
+  ClusterId: CL3
+  TemporalProfile: current
+  Updates:
+  - CAP2: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=current turns=T12 :: The patient denies shortness of breath.
+- chest pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T12
+  Summary: The patient reports chest pain.
+  ClusterId: CL4
+  TemporalProfile: current
+  Updates:
+  - CAP4: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T12 :: The patient reports chest pain.
+
+Medication Tracking
+- [MedicationState] metformin | verification_status=confirmed | clinical_status=active | modalities=interview,plan | speakers=clinician,doctor | evidence=T14,T26
+  Summary: The clinician recommends continuing metformin.
+  ClusterId: CL6
+  TemporalProfile: current, monthly
+  CurrentRegimens:
+  - The patient is taking metformin 500 milligrams twice a day. (T14)
+  - The clinician recommends continuing metformin. (T26)
+  Updates:
+  - CAP11: content_source=doctor modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T14 :: The patient is taking metformin 500 milligrams twice a day.
+  - CAP13: content_source=clinician modality=plan verification_status=confirmed clinical_status=active temporality=monthly turns=T26 :: The clinician recommends continuing metformin.
+- [MedicationChange] prilosec | verification_status=confirmed | clinical_status=planned | modalities=plan | speakers=clinician | evidence=T24
+  Summary: The clinician recommends starting the patient on prilosec.
+  ClusterId: CL8
+  TemporalProfile: daily
+  PlannedChanges:
+  - The clinician recommends starting the patient on prilosec. (T24)
+  Updates:
+  - CAP12: content_source=clinician modality=plan verification_status=confirmed clinical_status=planned temporality=daily turns=T24 :: The clinician recommends starting the patient on prilosec.
+
+Other Structured States
+- [TestResult] hemoglobin a1c | verification_status=confirmed | clinical_status=historical | modalities=test_result | speakers=clinician,test_result | evidence=T14,T26
+  Summary: The clinician orders a hemoglobin a1c test.
+  ClusterId: CL5
+  TemporalProfile: last time, soon
+- [Plan] referral to gastroenterology | verification_status=confirmed | clinical_status=planned | modalities=plan | speakers=clinician | evidence=T24
+  Summary: The clinician orders a referral to gastroenterology.
+  ClusterId: CL7
+  TemporalProfile: soon
+- [TestResult] kidney function | verification_status=confirmed | clinical_status=historical | modalities=test_result | speakers=clinician | evidence=T26
+  Summary: The clinician orders blood work to assess kidney function.
+  ClusterId: CL9
+  TemporalProfile: soon
+- [Plan] eye referral to ophthalmology | verification_status=confirmed | clinical_status=planned | modalities=plan | speakers=clinician | evidence=T26
+  Summary: The clinician orders an eye referral to ophthalmology.
+  ClusterId: CL10
+  TemporalProfile: soon

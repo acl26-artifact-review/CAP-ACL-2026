@@ -1,0 +1,71 @@
+Case: D2N094
+
+Problem List and Visit State Tracking
+
+Problem List
+- no injury | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T13
+  Summary: The patient denies any other injuries.
+  ClusterId: CL1
+  TemporalProfile: past
+  Updates:
+  - CAP4: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=past turns=T13 :: The patient denies any other injuries.
+- pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T15
+  Summary: The patient reports pain, rated 7 out of 10.
+  ClusterId: CL2
+  TemporalProfile: current
+  Updates:
+  - CAP1: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T15 :: The patient reports pain, rated 7 out of 10.
+- hand injury | verification_status=unconfirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T17
+  Summary: The patient sustained an injury.
+  ClusterId: CL3
+  TemporalProfile: past
+  Updates:
+  - CAP5: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=past turns=T17 :: The patient sustained an injury.
+- constipation | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T21
+  Summary: The patient reports chronic constipation.
+  ClusterId: CL4
+  TemporalProfile: current
+  Updates:
+  - CAP6: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T21 :: The patient reports chronic constipation.
+- right finger pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T30
+  Summary: The patient reports pain in the right index finger.
+  ClusterId: CL6
+  TemporalProfile: current
+  Updates:
+  - CAP2: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T30 :: The patient reports pain in the right index finger.
+- hand pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T30
+  Summary: The patient reports pain in the hand.
+  ClusterId: CL7
+  TemporalProfile: current
+  Updates:
+  - CAP3: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T30 :: The patient reports pain in the hand.
+
+Medication Tracking
+- [MedicationState] miralax | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T23
+  Summary: The patient takes miralax.
+  ClusterId: CL5
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient takes miralax. (T23)
+  Updates:
+  - CAP13: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T23 :: The patient takes miralax.
+- [MedicationChange] mobic | verification_status=confirmed | clinical_status=planned | modalities=interview,plan | speakers=clinician,doctor | evidence=T37,T41
+  Summary: The patient will take 15 milligrams of mobic once a day.
+  ClusterId: CL9
+  TemporalProfile: daily, future
+  PlannedChanges:
+  - The doctor will prescribe mobic. (T37)
+  - The patient will take 15 milligrams of mobic once a day. (T41)
+  Updates:
+  - CAP12: content_source=doctor modality=plan verification_status=confirmed clinical_status=planned temporality=future turns=T37 :: The doctor will prescribe mobic.
+  - CAP9: content_source=clinician modality=interview verification_status=confirmed clinical_status=planned temporality=daily turns=T41 :: The patient will take 15 milligrams of mobic once a day.
+
+Other Structured States
+- [Plan] splint | verification_status=confirmed | clinical_status=planned | modalities=interview,plan | speakers=clinician,doctor | evidence=T37,T41
+  Summary: The doctor will put a splint on the right finger.
+  ClusterId: CL8
+  TemporalProfile: future, soon
+- [FollowUp] hand therapy | verification_status=confirmed | clinical_status=planned | modalities=interview,plan | speakers=clinician,doctor | evidence=T37,T41
+  Summary: The doctor wants the patient to return in two weeks.
+  ClusterId: CL10
+  TemporalProfile: in two weeks

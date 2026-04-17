@@ -1,0 +1,386 @@
+{
+  "case_id": "D2N031",
+  "annotator": "A",
+  "seed_gold_caps": [
+    {
+      "gold_id": "G1",
+      "fact_text": "The patient is an older adult female named Sophia Brown, born 3/17/1946",
+      "category": "Demographics",
+      "speaker": "clinician",
+      "temporality": "unknown",
+      "certainty": "high",
+      "provenance_sentence": "0"
+    },
+    {
+      "gold_id": "G2",
+      "fact_text": "This is a new patient visit to establish care for a history of DCIS of the right breast",
+      "category": "Chief Complaint",
+      "speaker": "clinician",
+      "temporality": "current",
+      "certainty": "high",
+      "provenance_sentence": "0,22"
+    },
+    {
+      "gold_id": "G3",
+      "fact_text": "In October 2019 a calcification was found in the patient's right breast on screening mammogram",
+      "category": "Test Result",
+      "speaker": "clinician",
+      "temporality": "past",
+      "certainty": "high",
+      "provenance_sentence": "11-12"
+    },
+    {
+      "gold_id": "G4",
+      "fact_text": "On November 3rd 2019 right breast ultrasound showed a mass at the 2 o'clock position, 11 cm from the nipple in the retroareolar region measuring approximately 0.4 x 2 x 3 cm",
+      "category": "Test Result",
+      "speaker": "clinician",
+      "temporality": "past",
+      "certainty": "high",
+      "provenance_sentence": "13-14"
+    },
+    {
+      "gold_id": "G5",
+      "fact_text": "On December 5th 2019 the patient had an ultrasound-guided core needle biopsy of the right breast mass",
+      "category": "Procedure",
+      "speaker": "clinician",
+      "temporality": "past",
+      "certainty": "high",
+      "provenance_sentence": "16"
+    },
+    {
+      "gold_id": "G6",
+      "fact_text": "Pathology from the December 5th 2019 biopsy showed grade 2 ER-positive PR-positive ductal carcinoma in situ of the right breast",
+      "category": "Test Result",
+      "speaker": "clinician",
+      "temporality": "past",
+      "certainty": "high",
+      "provenance_sentence": "16"
+    },
+    {
+      "gold_id": "G7",
+      "fact_text": "The patient underwent a right breast lumpectomy on January 20th 2020",
+      "category": "Procedure",
+      "speaker": "patient",
+      "temporality": "past",
+      "certainty": "high",
+      "provenance_sentence": "5-6,18"
+    },
+    {
+      "gold_id": "G8",
+      "fact_text": "The January 20th 2020 lumpectomy removed an 8 mm DCIS tumor from the right breast with negative margins",
+      "category": "Test Result",
+      "speaker": "clinician",
+      "temporality": "past",
+      "certainty": "high",
+      "provenance_sentence": "18"
+    },
+    {
+      "gold_id": "G9",
+      "fact_text": "Five lymph nodes were removed at the time of lumpectomy and were negative for malignancy",
+      "category": "Test Result",
+      "speaker": "clinician",
+      "temporality": "past",
+      "certainty": "high",
+      "provenance_sentence": "18,65"
+    },
+    {
+      "gold_id": "G10",
+      "fact_text": "The patient received radiation therapy after the lumpectomy",
+      "category": "Procedure",
+      "speaker": "patient",
+      "temporality": "past",
+      "certainty": "high",
+      "provenance_sentence": "61-62,65"
+    },
+    {
+      "gold_id": "G11",
+      "fact_text": "Endocrine therapy was discussed after lumpectomy but the patient declined it",
+      "category": "MedicationPlan",
+      "speaker": "patient",
+      "temporality": "past",
+      "certainty": "high",
+      "provenance_sentence": "61-62,65"
+    },
+    {
+      "gold_id": "G12",
+      "fact_text": "The patient's breast cancer is documented as stage 0 ER/PR-positive ductal carcinoma of the right breast status post lumpectomy and radiation",
+      "category": "Assessment",
+      "speaker": "clinician",
+      "temporality": "unknown",
+      "certainty": "high",
+      "provenance_sentence": "46,65"
+    },
+    {
+      "gold_id": "G13",
+      "fact_text": "The patient reports feeling good since the lumpectomy",
+      "category": "Symptom",
+      "speaker": "patient",
+      "temporality": "current",
+      "certainty": "high",
+      "provenance_sentence": "7-8"
+    },
+    {
+      "gold_id": "G14",
+      "fact_text": "The patient performs regular self-breast exams and has not felt any breast masses since surgery",
+      "category": "Symptom",
+      "speaker": "patient",
+      "temporality": "unknown",
+      "certainty": "high",
+      "provenance_sentence": "8"
+    },
+    {
+      "gold_id": "G15",
+      "fact_text": "The patient's last mammogram in January 2021 was normal with no evidence of recurrence or malignancy",
+      "category": "Test Result",
+      "speaker": "clinician",
+      "temporality": "past",
+      "certainty": "high",
+      "provenance_sentence": "20-21,65"
+    },
+    {
+      "gold_id": "G16",
+      "fact_text": "The patient had a colonoscopy in 2018 that found one sigmoid colon polyp which was a benign tubular adenoma and was removed",
+      "category": "Procedure",
+      "speaker": "clinician",
+      "temporality": "past",
+      "certainty": "high",
+      "provenance_sentence": "27-28"
+    },
+    {
+      "gold_id": "G17",
+      "fact_text": "The patient is postmenopausal with last menstrual period approximately 30 years ago",
+      "category": "Past Medical History",
+      "speaker": "patient",
+      "temporality": "past",
+      "certainty": "high",
+      "provenance_sentence": "29,38"
+    },
+    {
+      "gold_id": "G18",
+      "fact_text": "The patient has had five pregnancies and five live births (G5P5)",
+      "category": "Past Medical History",
+      "speaker": "clinician",
+      "temporality": "past",
+      "certainty": "high",
+      "provenance_sentence": "30-32,36-38"
+    },
+    {
+      "gold_id": "G19",
+      "fact_text": "The patient denies any history of miscarriages or terminations",
+      "category": "Past Medical History",
+      "speaker": "patient",
+      "temporality": "past",
+      "certainty": "high",
+      "provenance_sentence": "36-37"
+    },
+    {
+      "gold_id": "G20",
+      "fact_text": "The patient has never used hormone replacement therapy",
+      "category": "Past Medical History",
+      "speaker": "patient",
+      "temporality": "unknown",
+      "certainty": "high",
+      "provenance_sentence": "38-39"
+    },
+    {
+      "gold_id": "G21",
+      "fact_text": "The patient has a history of high cholesterol",
+      "category": "Past Medical History",
+      "speaker": "clinician",
+      "temporality": "unknown",
+      "certainty": "high",
+      "provenance_sentence": "40-41,46"
+    },
+    {
+      "gold_id": "G22",
+      "fact_text": "The patient's high cholesterol is a relatively new diagnosis and is being followed by her primary care doctor",
+      "category": "Assessment",
+      "speaker": "patient",
+      "temporality": "unknown",
+      "certainty": "high",
+      "provenance_sentence": "41-43"
+    },
+    {
+      "gold_id": "G23",
+      "fact_text": "The patient is attempting to manage her high cholesterol with exercise and reducing fatty foods without medication",
+      "category": "Lifestyle",
+      "speaker": "patient",
+      "temporality": "current",
+      "certainty": "high",
+      "provenance_sentence": "41"
+    },
+    {
+      "gold_id": "G24",
+      "fact_text": "The patient reports chronic back pain and knee or joint pain attributed by prior doctors to age-related changes",
+      "category": "Symptom",
+      "speaker": "patient",
+      "temporality": "unknown",
+      "certainty": "high",
+      "provenance_sentence": "40-41"
+    },
+    {
+      "gold_id": "G25",
+      "fact_text": "On review of systems the patient denies recent weight loss or gain, headaches, bone pain, urinary symptoms, or blood in the stool",
+      "category": "Review of Systems",
+      "speaker": "clinician",
+      "temporality": "current",
+      "certainty": "high",
+      "provenance_sentence": "40"
+    },
+    {
+      "gold_id": "G26",
+      "fact_text": "The patient takes CoQ10, vitamin D, vitamin C, fish oil, and elderberry fruit as current medications or supplements",
+      "category": "Medication",
+      "speaker": "clinician",
+      "temporality": "current",
+      "certainty": "high",
+      "provenance_sentence": "44-45"
+    },
+    {
+      "gold_id": "G27",
+      "fact_text": "The patient previously had a tubal ligation after her last baby",
+      "category": "Procedure",
+      "speaker": "patient",
+      "temporality": "past",
+      "certainty": "high",
+      "provenance_sentence": "47"
+    },
+    {
+      "gold_id": "G28",
+      "fact_text": "The patient's mother had non-Hodgkin's lymphoma",
+      "category": "Past Medical History",
+      "speaker": "patient",
+      "temporality": "past",
+      "certainty": "high",
+      "provenance_sentence": "49"
+    },
+    {
+      "gold_id": "G29",
+      "fact_text": "The patient's father had prostate cancer and heart disease",
+      "category": "Past Medical History",
+      "speaker": "patient",
+      "temporality": "past",
+      "certainty": "high",
+      "provenance_sentence": "49"
+    },
+    {
+      "gold_id": "G30",
+      "fact_text": "There is no family history of breast cancer",
+      "category": "Past Medical History",
+      "speaker": "patient",
+      "temporality": "unknown",
+      "certainty": "high",
+      "provenance_sentence": "50-51"
+    },
+    {
+      "gold_id": "G31",
+      "fact_text": "The patient has no siblings and her children are all healthy",
+      "category": "Social History",
+      "speaker": "patient",
+      "temporality": "unknown",
+      "certainty": "high",
+      "provenance_sentence": "52-53"
+    },
+    {
+      "gold_id": "G32",
+      "fact_text": "The patient has a history of cigarette smoking but quit approximately 30 years ago",
+      "category": "Social History",
+      "speaker": "patient",
+      "temporality": "past",
+      "certainty": "high",
+      "provenance_sentence": "55"
+    },
+    {
+      "gold_id": "G33",
+      "fact_text": "The patient denies illicit drug use",
+      "category": "Social History",
+      "speaker": "patient",
+      "temporality": "unknown",
+      "certainty": "high",
+      "provenance_sentence": "54-55"
+    },
+    {
+      "gold_id": "G34",
+      "fact_text": "The patient drinks alcohol socially but not heavily",
+      "category": "Social History",
+      "speaker": "patient",
+      "temporality": "unknown",
+      "certainty": "high",
+      "provenance_sentence": "54-55"
+    },
+    {
+      "gold_id": "G35",
+      "fact_text": "The patient has a documented allergy to penicillin",
+      "category": "Past Medical History",
+      "speaker": "clinician",
+      "temporality": "unknown",
+      "certainty": "high",
+      "provenance_sentence": "56-57"
+    },
+    {
+      "gold_id": "G36",
+      "fact_text": "On breast exam there are no palpable breast masses",
+      "category": "Physical Exam",
+      "speaker": "clinician",
+      "temporality": "current",
+      "certainty": "high",
+      "provenance_sentence": "59,63"
+    },
+    {
+      "gold_id": "G37",
+      "fact_text": "On breast exam there is skin thickening at the medial inferior aspect of the right breast thought to represent radiation skin changes",
+      "category": "Physical Exam",
+      "speaker": "clinician",
+      "temporality": "current",
+      "certainty": "medium",
+      "provenance_sentence": "59,63"
+    },
+    {
+      "gold_id": "G38",
+      "fact_text": "The patient's ECOG performance status today is 0",
+      "category": "Finding",
+      "speaker": "clinician",
+      "temporality": "current",
+      "certainty": "high",
+      "provenance_sentence": "60"
+    },
+    {
+      "gold_id": "G39",
+      "fact_text": "Today's clinical examination shows no evidence of recurrence of DCIS or other malignancy",
+      "category": "Assessment",
+      "speaker": "clinician",
+      "temporality": "current",
+      "certainty": "high",
+      "provenance_sentence": "63,65"
+    },
+    {
+      "gold_id": "G40",
+      "fact_text": "The plan is to continue observation for the patient's stage 0 ER/PR-positive right breast carcinoma",
+      "category": "Plan",
+      "speaker": "clinician",
+      "temporality": "future",
+      "certainty": "high",
+      "provenance_sentence": "65-66"
+    },
+    {
+      "gold_id": "G41",
+      "fact_text": "The patient is to return for follow-up in one year",
+      "category": "Plan",
+      "speaker": "clinician",
+      "temporality": "future",
+      "certainty": "high",
+      "provenance_sentence": "67-69"
+    },
+    {
+      "gold_id": "G42",
+      "fact_text": "The patient is advised to obtain a mammogram in April 2022 before the next follow-up visit",
+      "category": "Plan",
+      "speaker": "clinician",
+      "temporality": "future",
+      "certainty": "high",
+      "provenance_sentence": "68-69"
+    }
+  ],
+  "generator_model": "gpt-5.1",
+  "generated_at": "2026-04-11T09:00:29.093002+00:00"
+}

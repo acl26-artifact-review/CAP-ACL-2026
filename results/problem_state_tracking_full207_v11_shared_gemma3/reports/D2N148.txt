@@ -1,0 +1,156 @@
+Case: D2N148
+
+Problem List and Visit State Tracking
+
+Problem List
+- back injury | verification_status=unconfirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T1
+  Summary: The patient sustained a back injury four months ago.
+  ClusterId: CL1
+  TemporalProfile: four months ago
+  Updates:
+  - CAP2: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=four months ago turns=T1 :: The patient sustained a back injury four months ago.
+- tingling | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T6
+  Summary: The patient reports tingling in their feet.
+  ClusterId: CL2
+  TemporalProfile: current
+  Updates:
+  - CAP8: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T6 :: The patient reports tingling in their feet.
+- low back pain | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T10,T55,T7,T9
+  Summary: The patient reports pain in their lower back.
+  ClusterId: CL3
+  TemporalProfile: current
+  Updates:
+  - CAP3: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T7 :: The patient reports pain in their lower back.
+  - CAP11: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T9 :: The patient feels a sensation.
+  - CAP4: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T10 :: The patient reports sharp pain upon certain movements.
+  - CAP15: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T55 :: The patient reports pain.
+- fear of carrying heavy objects | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T9
+  Summary: The patient is nervous about carrying heavy objects.
+  ClusterId: CL4
+  TemporalProfile: current
+  Updates:
+  - CAP5: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T9 :: The patient is nervous about carrying heavy objects.
+- left hand pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T9
+  Summary: The patient reports pain in the left hand.
+  ClusterId: CL5
+  TemporalProfile: current
+  Updates:
+  - CAP6: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T9 :: The patient reports pain in the left hand.
+- nervousness | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T9
+  Summary: The patient is a little nervous.
+  ClusterId: CL6
+  TemporalProfile: current
+  Updates:
+  - CAP9: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T9 :: The patient is a little nervous.
+- numbness | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T9
+  Summary: The patient reports periodic numbness.
+  ClusterId: CL7
+  TemporalProfile: current
+  Updates:
+  - CAP10: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T9 :: The patient reports periodic numbness.
+- neck pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T36
+  Summary: The patient reports neck pain.
+  ClusterId: CL14
+  TemporalProfile: current
+  Updates:
+  - CAP12: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T36 :: The patient reports neck pain.
+- no pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T37
+  Summary: The patient denies pain.
+  ClusterId: CL15
+  TemporalProfile: current
+  Updates:
+  - CAP13: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T37 :: The patient denies pain.
+- positive straight leg raise | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T40
+  Summary: The patient reports a positive straight leg raise.
+  ClusterId: CL16
+  TemporalProfile: current
+  Updates:
+  - CAP7: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T40 :: The patient reports a positive straight leg raise.
+- spasm | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T40
+  Summary: The patient reports spasm.
+  ClusterId: CL17
+  TemporalProfile: current
+  Updates:
+  - CAP14: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T40 :: The patient reports spasm.
+- acute disk herniation | verification_status=confirmed | clinical_status=active | modalities=assessment | speakers=doctor | evidence=T42
+  Summary: The doctor believes the patient has an acute disk herniation.
+  ClusterId: CL18
+  TemporalProfile: current
+  Updates:
+  - CAP1: content_source=doctor modality=assessment verification_status=confirmed clinical_status=active temporality=current turns=T42 :: The doctor believes the patient has an acute disk herniation.
+
+Medication Tracking
+- [MedicationState] tylenol | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T11
+  Summary: The patient took some tylenol.
+  ClusterId: CL8
+  TemporalProfile: past
+  CurrentRegimens:
+  - The patient took some tylenol. (T11)
+  Updates:
+  - CAP21: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=past turns=T11 :: The patient took some tylenol.
+- [MedicationState] ibuprofen | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T11
+  Summary: The patient took some ibuprofen.
+  ClusterId: CL9
+  TemporalProfile: current, past
+  CurrentRegimens:
+  - The patient took some ibuprofen. (T11)
+  - The patient took ibuprofen. (T11)
+  Updates:
+  - CAP22: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=past turns=T11 :: The patient took some ibuprofen.
+  - CAP24: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T11 :: The patient took ibuprofen.
+- [MedicationState] acetaminophen | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T11
+  Summary: The patient took acetaminophen.
+  ClusterId: CL10
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient took acetaminophen. (T11)
+  Updates:
+  - CAP23: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T11 :: The patient took acetaminophen.
+- [MedicationState] heat | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T11
+  Summary: The patient applied heat.
+  ClusterId: CL11
+  TemporalProfile: current, past
+  CurrentRegimens:
+  - The patient applied heat. (T11)
+  - The patient tried heat. (T11)
+  Updates:
+  - CAP25: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T11 :: The patient applied heat.
+  - CAP27: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=past turns=T11 :: The patient tried heat.
+- [MedicationState] ice | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T11
+  Summary: The patient applied ice.
+  ClusterId: CL12
+  TemporalProfile: current, past
+  CurrentRegimens:
+  - The patient applied ice. (T11)
+  - The patient tried ice. (T11)
+  Updates:
+  - CAP26: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T11 :: The patient applied ice.
+  - CAP28: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=past turns=T11 :: The patient tried ice.
+- [MedicationChange] meloxicam | verification_status=unconfirmed | clinical_status=planned | modalities=interview,plan | speakers=doctor | evidence=T46
+  Summary: The doctor prescribes meloxicam.
+  ClusterId: CL21
+  TemporalProfile: daily, future
+  PlannedChanges:
+  - The doctor prescribes meloxicam fifteen milligrams once a day. (T46)
+  - The doctor prescribes meloxicam. (T46)
+  Updates:
+  - CAP20: content_source=doctor modality=interview verification_status=confirmed clinical_status=planned temporality=daily turns=T46 :: The doctor prescribes meloxicam fifteen milligrams once a day.
+  - CAP29: content_source=doctor modality=plan verification_status=unconfirmed clinical_status=planned temporality=future turns=T46 :: The doctor prescribes meloxicam.
+
+Other Structured States
+- [Plan] mri | verification_status=unconfirmed | clinical_status=planned | modalities=interview | speakers=patient | evidence=T17
+  Summary: The patient was concerned because he thinks we maxed out our insurance so he did not do it.
+  ClusterId: CL13
+  TemporalProfile: future
+- [Plan] lumbar spine mri | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T44
+  Summary: The doctor orders a lumbar spine MRI.
+  ClusterId: CL19
+  TemporalProfile: future
+- [Plan] physical therapy | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T44
+  Summary: The doctor recommends physical therapy.
+  ClusterId: CL20
+  TemporalProfile: future
+- [Plan] epidural steroid injection | verification_status=unconfirmed | clinical_status=planned | modalities=interview | speakers=doctor | evidence=T50
+  Summary: The doctor will consider an epidural steroid injection if the patient has a herniated disk.
+  ClusterId: CL22
+  TemporalProfile: when appropriate

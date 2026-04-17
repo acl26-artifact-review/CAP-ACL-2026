@@ -1,0 +1,30 @@
+{
+  "section_miscategorizations": [
+    {
+      "text": "The patient's blood pressure readings were sometimes in the one forties. The patient's blood pressure readings went to like one fifty.",
+      "current_section": "O",
+      "expected_section": "S",
+      "severity": "major",
+      "reason": "These are home/previous blood pressure readings, not clearly clinician-measured vitals from this encounter, so they function as patient-reported history rather than objective findings."
+    },
+    {
+      "text": "The patient is in so much pain.",
+      "current_section": "A",
+      "expected_section": "S",
+      "severity": "major",
+      "reason": "This is a restatement of the patient's reported symptom severity, not a diagnostic impression or problem synthesis."
+    },
+    {
+      "text": "The patient's blood pressure was previously elevated.",
+      "current_section": "A",
+      "expected_section": "S",
+      "severity": "minor",
+      "reason": "This is historical information about prior blood pressure rather than an interpretive assessment; it fits better as subjective history, though its placement in A is not highly misleading."
+    }
+  ],
+  "summary_statistics": {
+    "section_appropriateness_score": 0.9,
+    "section_miscategorization_count": 3,
+    "major_section_miscategorization_count": 2
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "section_miscategorizations": [
+    {
+      "text": "He denies chest pain, dyspnea, or syncope.",
+      "current_section": "S",
+      "expected_section": "S",
+      "severity": "major",
+      "reason": "This directly contradicts multiple earlier subjective statements in the same section that the patient reports chest pain. While it is correctly in S as ROS, the unqualified coexistence of both 'reports chest pain' and 'denies chest pain' without clarification is misleading for a reader. However, this is a content inconsistency rather than a section miscategorization, so it is not counted as a miscategorized statement per instructions."
+    },
+    {
+      "text": "The patient is positive for covid.",
+      "current_section": "A",
+      "expected_section": "O",
+      "severity": "major",
+      "reason": "A positive COVID result is an objective diagnostic test finding and belongs in the Objective section; in A it should be framed as an assessment (e.g., 'COVID-19 infection') rather than the raw test result."
+    },
+    {
+      "text": "The patient has cervical lymphadenopathy.",
+      "current_section": "A",
+      "expected_section": "O",
+      "severity": "minor",
+      "reason": "Cervical lymphadenopathy is already documented as a physical exam finding in O. Repeating it as a bare statement in A blurs the distinction between observed findings and synthesized assessment; it would be clearer either as part of O only or explicitly tied to a diagnostic impression in A."
+    },
+    {
+      "text": "The patient has received both stages of the covid vaccine.",
+      "current_section": "P",
+      "expected_section": "S",
+      "severity": "major",
+      "reason": "This is past vaccination history/current status, not a new order or plan. It should be documented as part of the patient's reported history in the Subjective section."
+    }
+  ],
+  "summary_statistics": {
+    "section_appropriateness_score": 0.7,
+    "section_miscategorization_count": 4,
+    "major_section_miscategorization_count": 3
+  }
+}

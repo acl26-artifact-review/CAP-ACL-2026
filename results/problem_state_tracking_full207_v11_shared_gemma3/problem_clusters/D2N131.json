@@ -1,0 +1,704 @@
+{
+  "clusters": [
+    {
+      "cluster_id": "CL1",
+      "cluster_type": "ProblemState",
+      "canonical_concept": "high blood pressure",
+      "primary_cap_type": "Symptom",
+      "source_cap_types": [
+        "Problem",
+        "Symptom"
+      ],
+      "final_verification_status": "confirmed",
+      "clinical_status": "active",
+      "final_assertion": "present",
+      "visit_state": "active",
+      "source_speakers": [
+        "patient"
+      ],
+      "source_modalities": [
+        "interview"
+      ],
+      "temporal_profile": [
+        "current",
+        "lately"
+      ],
+      "evidence_turn_ids": [
+        "T23",
+        "T5",
+        "T9"
+      ],
+      "supporting_cap_ids": [
+        "CAP2",
+        "CAP3",
+        "CAP4",
+        "CAP5"
+      ],
+      "cluster_summary": "The patient reports struggling with high blood pressure.",
+      "salience_score": 10,
+      "is_low_value": false,
+      "updates": [
+        {
+          "cap_id": "CAP2",
+          "content_source": "patient",
+          "modality": "interview",
+          "verification_status": "confirmed",
+          "clinical_status": "active",
+          "assertion": "present",
+          "visit_state": "active",
+          "temporality": "lately",
+          "turn_ids": [
+            "T5"
+          ],
+          "proposition_text": "The patient reports struggling with high blood pressure."
+        },
+        {
+          "cap_id": "CAP3",
+          "content_source": "patient",
+          "modality": "interview",
+          "verification_status": "confirmed",
+          "clinical_status": "active",
+          "assertion": "present",
+          "visit_state": "active",
+          "temporality": "current",
+          "turn_ids": [
+            "T9"
+          ],
+          "proposition_text": "The patient has high blood pressure."
+        },
+        {
+          "cap_id": "CAP4",
+          "content_source": "patient",
+          "modality": "interview",
+          "verification_status": "confirmed",
+          "clinical_status": "active",
+          "assertion": "present",
+          "visit_state": "active",
+          "temporality": "current",
+          "turn_ids": [
+            "T9"
+          ],
+          "proposition_text": "The patient reports high blood pressure."
+        },
+        {
+          "cap_id": "CAP5",
+          "content_source": "patient",
+          "modality": "interview",
+          "verification_status": "confirmed",
+          "clinical_status": "active",
+          "assertion": "present",
+          "visit_state": "active",
+          "temporality": "current",
+          "turn_ids": [
+            "T23"
+          ],
+          "proposition_text": "The patient's blood pressure is high."
+        }
+      ]
+    },
+    {
+      "cluster_id": "CL2",
+      "cluster_type": "ProblemState",
+      "canonical_concept": "headache",
+      "primary_cap_type": "Symptom",
+      "source_cap_types": [
+        "Symptom"
+      ],
+      "final_verification_status": "confirmed",
+      "clinical_status": "active",
+      "final_assertion": "present",
+      "visit_state": "active",
+      "source_speakers": [
+        "patient"
+      ],
+      "source_modalities": [
+        "interview"
+      ],
+      "temporal_profile": [
+        "current"
+      ],
+      "evidence_turn_ids": [
+        "T9"
+      ],
+      "supporting_cap_ids": [
+        "CAP6",
+        "CAP7"
+      ],
+      "cluster_summary": "The patient reports having headaches.",
+      "salience_score": 10,
+      "is_low_value": false,
+      "updates": [
+        {
+          "cap_id": "CAP6",
+          "content_source": "patient",
+          "modality": "interview",
+          "verification_status": "unconfirmed",
+          "clinical_status": "active",
+          "assertion": "uncertain",
+          "visit_state": "active",
+          "temporality": "current",
+          "turn_ids": [
+            "T9"
+          ],
+          "proposition_text": "The patient reports having headaches."
+        },
+        {
+          "cap_id": "CAP7",
+          "content_source": "patient",
+          "modality": "interview",
+          "verification_status": "confirmed",
+          "clinical_status": "active",
+          "assertion": "present",
+          "visit_state": "active",
+          "temporality": "current",
+          "turn_ids": [
+            "T9"
+          ],
+          "proposition_text": "The patient reports headaches."
+        }
+      ]
+    },
+    {
+      "cluster_id": "CL3",
+      "cluster_type": "MedicationState",
+      "canonical_concept": "norvasc",
+      "primary_cap_type": "MedicationStatement",
+      "source_cap_types": [
+        "MedicationStatement"
+      ],
+      "final_verification_status": "confirmed",
+      "clinical_status": "active",
+      "final_assertion": "present",
+      "visit_state": "active",
+      "source_speakers": [
+        "doctor"
+      ],
+      "source_modalities": [
+        "interview"
+      ],
+      "temporal_profile": [
+        "current"
+      ],
+      "evidence_turn_ids": [
+        "T9"
+      ],
+      "supporting_cap_ids": [
+        "CAP16"
+      ],
+      "cluster_summary": "The patient is taking norvasc.",
+      "salience_score": 8,
+      "is_low_value": false,
+      "updates": [
+        {
+          "cap_id": "CAP16",
+          "content_source": "doctor",
+          "modality": "interview",
+          "verification_status": "confirmed",
+          "clinical_status": "active",
+          "assertion": "present",
+          "visit_state": "active",
+          "temporality": "current",
+          "turn_ids": [
+            "T9"
+          ],
+          "proposition_text": "The patient is taking norvasc."
+        }
+      ],
+      "current_regimens": [
+        {
+          "proposition_text": "The patient is taking norvasc.",
+          "turn_ids": [
+            "T9"
+          ],
+          "attributes": {
+            "dose": "10 milligrams a day"
+          }
+        }
+      ]
+    },
+    {
+      "cluster_id": "CL4",
+      "cluster_type": "ProblemState",
+      "canonical_concept": "kidney transplant",
+      "primary_cap_type": "ProblemHistory",
+      "source_cap_types": [
+        "ProblemHistory"
+      ],
+      "final_verification_status": "confirmed",
+      "clinical_status": "historical",
+      "final_assertion": "historical",
+      "visit_state": "historical",
+      "source_speakers": [
+        "patient"
+      ],
+      "source_modalities": [
+        "interview"
+      ],
+      "temporal_profile": [
+        "few years ago"
+      ],
+      "evidence_turn_ids": [
+        "T12"
+      ],
+      "supporting_cap_ids": [
+        "CAP17"
+      ],
+      "cluster_summary": "The patient has had a kidney transplant a few years ago.",
+      "salience_score": 7,
+      "is_low_value": false,
+      "updates": [
+        {
+          "cap_id": "CAP17",
+          "content_source": "patient",
+          "modality": "interview",
+          "verification_status": "confirmed",
+          "clinical_status": "historical",
+          "assertion": "historical",
+          "visit_state": "historical",
+          "temporality": "few years ago",
+          "turn_ids": [
+            "T12"
+          ],
+          "proposition_text": "The patient has had a kidney transplant a few years ago."
+        }
+      ]
+    },
+    {
+      "cluster_id": "CL5",
+      "cluster_type": "MedicationState",
+      "canonical_concept": "immunosuppression medications",
+      "primary_cap_type": "MedicationStatement",
+      "source_cap_types": [
+        "MedicationStatement"
+      ],
+      "final_verification_status": "confirmed",
+      "clinical_status": "active",
+      "final_assertion": "present",
+      "visit_state": "active",
+      "source_speakers": [
+        "patient"
+      ],
+      "source_modalities": [
+        "interview"
+      ],
+      "temporal_profile": [
+        "current"
+      ],
+      "evidence_turn_ids": [
+        "T16"
+      ],
+      "supporting_cap_ids": [
+        "CAP15"
+      ],
+      "cluster_summary": "The patient is taking immunosuppression medications.",
+      "salience_score": 4,
+      "is_low_value": false,
+      "updates": [
+        {
+          "cap_id": "CAP15",
+          "content_source": "patient",
+          "modality": "interview",
+          "verification_status": "confirmed",
+          "clinical_status": "active",
+          "assertion": "present",
+          "visit_state": "active",
+          "temporality": "current",
+          "turn_ids": [
+            "T16"
+          ],
+          "proposition_text": "The patient is taking immunosuppression medications."
+        }
+      ],
+      "current_regimens": [
+        {
+          "proposition_text": "The patient is taking immunosuppression medications.",
+          "turn_ids": [
+            "T16"
+          ],
+          "attributes": {}
+        }
+      ]
+    },
+    {
+      "cluster_id": "CL6",
+      "cluster_type": "MedicationChange",
+      "canonical_concept": "carvedilol",
+      "primary_cap_type": "MedicationRequest",
+      "source_cap_types": [
+        "MedicationRequest",
+        "MedicationStatement"
+      ],
+      "final_verification_status": "unconfirmed",
+      "clinical_status": "planned",
+      "final_assertion": "hypothetical",
+      "visit_state": "planned",
+      "source_speakers": [
+        "doctor"
+      ],
+      "source_modalities": [
+        "interview",
+        "plan"
+      ],
+      "temporal_profile": [
+        "current",
+        "future"
+      ],
+      "evidence_turn_ids": [
+        "T27"
+      ],
+      "supporting_cap_ids": [
+        "CAP8",
+        "CAP14"
+      ],
+      "cluster_summary": "The doctor ordered carvedilol 25 milligrams twice a day.",
+      "salience_score": 9,
+      "is_low_value": false,
+      "updates": [
+        {
+          "cap_id": "CAP8",
+          "content_source": "doctor",
+          "modality": "interview",
+          "verification_status": "confirmed",
+          "clinical_status": "planned",
+          "assertion": "hypothetical",
+          "visit_state": "planned",
+          "temporality": "current",
+          "turn_ids": [
+            "T27"
+          ],
+          "proposition_text": "The doctor ordered carvedilol 25 milligrams twice a day."
+        },
+        {
+          "cap_id": "CAP14",
+          "content_source": "doctor",
+          "modality": "plan",
+          "verification_status": "unconfirmed",
+          "clinical_status": "planned",
+          "assertion": "hypothetical",
+          "visit_state": "planned",
+          "temporality": "future",
+          "turn_ids": [
+            "T27"
+          ],
+          "proposition_text": "The doctor orders Carvedilol 25 milligrams twice a day."
+        }
+      ],
+      "planned_changes": [
+        {
+          "proposition_text": "The doctor ordered carvedilol 25 milligrams twice a day.",
+          "turn_ids": [
+            "T27"
+          ],
+          "attributes": {
+            "dose": "25 milligrams",
+            "frequency": "twice a day"
+          }
+        },
+        {
+          "proposition_text": "The doctor orders Carvedilol 25 milligrams twice a day.",
+          "turn_ids": [
+            "T27"
+          ],
+          "attributes": {
+            "dose": "25 milligrams",
+            "frequency": "twice a day"
+          }
+        }
+      ]
+    },
+    {
+      "cluster_id": "CL7",
+      "cluster_type": "TestResult",
+      "canonical_concept": "complete metabolic panel",
+      "primary_cap_type": "TestResult",
+      "source_cap_types": [
+        "TestResult"
+      ],
+      "final_verification_status": "confirmed",
+      "clinical_status": "planned",
+      "final_assertion": "hypothetical",
+      "visit_state": "planned",
+      "source_speakers": [
+        "doctor"
+      ],
+      "source_modalities": [
+        "plan"
+      ],
+      "temporal_profile": [
+        "current"
+      ],
+      "evidence_turn_ids": [
+        "T27"
+      ],
+      "supporting_cap_ids": [
+        "CAP10"
+      ],
+      "cluster_summary": "The doctor ordered a complete metabolic panel.",
+      "salience_score": 9,
+      "is_low_value": false,
+      "updates": [
+        {
+          "cap_id": "CAP10",
+          "content_source": "doctor",
+          "modality": "plan",
+          "verification_status": "confirmed",
+          "clinical_status": "planned",
+          "assertion": "hypothetical",
+          "visit_state": "planned",
+          "temporality": "current",
+          "turn_ids": [
+            "T27"
+          ],
+          "proposition_text": "The doctor ordered a complete metabolic panel."
+        }
+      ]
+    },
+    {
+      "cluster_id": "CL8",
+      "cluster_type": "Plan",
+      "canonical_concept": "lipid panel",
+      "primary_cap_type": "Order",
+      "source_cap_types": [
+        "Order"
+      ],
+      "final_verification_status": "unconfirmed",
+      "clinical_status": "planned",
+      "final_assertion": "hypothetical",
+      "visit_state": "planned",
+      "source_speakers": [
+        "doctor"
+      ],
+      "source_modalities": [
+        "plan"
+      ],
+      "temporal_profile": [
+        "future"
+      ],
+      "evidence_turn_ids": [
+        "T27"
+      ],
+      "supporting_cap_ids": [
+        "CAP11"
+      ],
+      "cluster_summary": "The doctor orders a lipid panel.",
+      "salience_score": 9,
+      "is_low_value": false,
+      "updates": [
+        {
+          "cap_id": "CAP11",
+          "content_source": "doctor",
+          "modality": "plan",
+          "verification_status": "unconfirmed",
+          "clinical_status": "planned",
+          "assertion": "hypothetical",
+          "visit_state": "planned",
+          "temporality": "future",
+          "turn_ids": [
+            "T27"
+          ],
+          "proposition_text": "The doctor orders a lipid panel."
+        }
+      ]
+    },
+    {
+      "cluster_id": "CL9",
+      "cluster_type": "TestResult",
+      "canonical_concept": "lipid panel",
+      "primary_cap_type": "TestResult",
+      "source_cap_types": [
+        "TestResult"
+      ],
+      "final_verification_status": "confirmed",
+      "clinical_status": "planned",
+      "final_assertion": "hypothetical",
+      "visit_state": "planned",
+      "source_speakers": [
+        "doctor"
+      ],
+      "source_modalities": [
+        "plan"
+      ],
+      "temporal_profile": [
+        "current"
+      ],
+      "evidence_turn_ids": [
+        "T27"
+      ],
+      "supporting_cap_ids": [
+        "CAP12"
+      ],
+      "cluster_summary": "The doctor ordered a lipid panel.",
+      "salience_score": 9,
+      "is_low_value": false,
+      "updates": [
+        {
+          "cap_id": "CAP12",
+          "content_source": "doctor",
+          "modality": "plan",
+          "verification_status": "confirmed",
+          "clinical_status": "planned",
+          "assertion": "hypothetical",
+          "visit_state": "planned",
+          "temporality": "current",
+          "turn_ids": [
+            "T27"
+          ],
+          "proposition_text": "The doctor ordered a lipid panel."
+        }
+      ]
+    },
+    {
+      "cluster_id": "CL10",
+      "cluster_type": "MedicationChange",
+      "canonical_concept": "coreg",
+      "primary_cap_type": "MedicationStatement",
+      "source_cap_types": [
+        "MedicationStatement"
+      ],
+      "final_verification_status": "unconfirmed",
+      "clinical_status": "planned",
+      "final_assertion": "hypothetical",
+      "visit_state": "planned",
+      "source_speakers": [
+        "doctor"
+      ],
+      "source_modalities": [
+        "plan"
+      ],
+      "temporal_profile": [
+        "future"
+      ],
+      "evidence_turn_ids": [
+        "T27"
+      ],
+      "supporting_cap_ids": [
+        "CAP13"
+      ],
+      "cluster_summary": "The doctor prescribes Coreg 25 milligrams twice a day.",
+      "salience_score": 8,
+      "is_low_value": false,
+      "updates": [
+        {
+          "cap_id": "CAP13",
+          "content_source": "doctor",
+          "modality": "plan",
+          "verification_status": "unconfirmed",
+          "clinical_status": "planned",
+          "assertion": "hypothetical",
+          "visit_state": "planned",
+          "temporality": "future",
+          "turn_ids": [
+            "T27"
+          ],
+          "proposition_text": "The doctor prescribes Coreg 25 milligrams twice a day."
+        }
+      ],
+      "planned_changes": [
+        {
+          "proposition_text": "The doctor prescribes Coreg 25 milligrams twice a day.",
+          "turn_ids": [
+            "T27"
+          ],
+          "attributes": {
+            "dose": "25 milligrams",
+            "frequency": "twice a day"
+          }
+        }
+      ]
+    },
+    {
+      "cluster_id": "CL11",
+      "cluster_type": "ProblemState",
+      "canonical_concept": "kidney function",
+      "primary_cap_type": "Problem",
+      "source_cap_types": [
+        "Problem"
+      ],
+      "final_verification_status": "confirmed",
+      "clinical_status": "stable",
+      "final_assertion": "present",
+      "visit_state": "stable",
+      "source_speakers": [
+        "doctor"
+      ],
+      "source_modalities": [
+        "interview"
+      ],
+      "temporal_profile": [
+        "current"
+      ],
+      "evidence_turn_ids": [
+        "T29"
+      ],
+      "supporting_cap_ids": [
+        "CAP1"
+      ],
+      "cluster_summary": "The doctor stated that the patient's kidney function looks great.",
+      "salience_score": 10,
+      "is_low_value": false,
+      "updates": [
+        {
+          "cap_id": "CAP1",
+          "content_source": "doctor",
+          "modality": "interview",
+          "verification_status": "confirmed",
+          "clinical_status": "stable",
+          "assertion": "present",
+          "visit_state": "stable",
+          "temporality": "current",
+          "turn_ids": [
+            "T29"
+          ],
+          "proposition_text": "The doctor stated that the patient's kidney function looks great."
+        }
+      ]
+    },
+    {
+      "cluster_id": "CL12",
+      "cluster_type": "Plan",
+      "canonical_concept": "complete metabolic panel",
+      "primary_cap_type": "Order",
+      "source_cap_types": [
+        "Order"
+      ],
+      "final_verification_status": "unconfirmed",
+      "clinical_status": "planned",
+      "final_assertion": "hypothetical",
+      "visit_state": "planned",
+      "source_speakers": [
+        "doctor"
+      ],
+      "source_modalities": [
+        "plan"
+      ],
+      "temporal_profile": [
+        "future"
+      ],
+      "evidence_turn_ids": [
+        "T29"
+      ],
+      "supporting_cap_ids": [
+        "CAP9"
+      ],
+      "cluster_summary": "The doctor orders a complete metabolic panel.",
+      "salience_score": 9,
+      "is_low_value": false,
+      "updates": [
+        {
+          "cap_id": "CAP9",
+          "content_source": "doctor",
+          "modality": "plan",
+          "verification_status": "unconfirmed",
+          "clinical_status": "planned",
+          "assertion": "hypothetical",
+          "visit_state": "planned",
+          "temporality": "future",
+          "turn_ids": [
+            "T29"
+          ],
+          "proposition_text": "The doctor orders a complete metabolic panel."
+        }
+      ]
+    }
+  ]
+}

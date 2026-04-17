@@ -1,0 +1,110 @@
+Case: D2N046
+
+Problem List and Visit State Tracking
+
+Problem List
+- ovarian cancer | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=doctor,patient | evidence=T0,T30
+  Summary: The doctor believes the patient likely has ovarian cancer.
+  ClusterId: CL1
+  TemporalProfile: current
+  Updates:
+  - CAP6: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T0 :: The patient has ovarian cancer.
+  - CAP1: content_source=doctor modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T30 :: The doctor believes the patient likely has ovarian cancer.
+- pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T9
+  Summary: The patient reports severe pain.
+  ClusterId: CL2
+  TemporalProfile: current
+  Updates:
+  - CAP4: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T9 :: The patient reports severe pain.
+- weight loss | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T10
+  Summary: The patient reports weight loss.
+  ClusterId: CL3
+  TemporalProfile: current
+  Updates:
+  - CAP5: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T10 :: The patient reports weight loss.
+- constipation | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T10
+  Summary: The patient reports constipation.
+  ClusterId: CL4
+  TemporalProfile: current
+  Updates:
+  - CAP7: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T10 :: The patient reports constipation.
+- endometriosis | verification_status=unconfirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T20
+  Summary: The patient has a history of endometriosis.
+  ClusterId: CL5
+  TemporalProfile: historical
+  Updates:
+  - CAP3: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=historical turns=T20 :: The patient has a history of endometriosis.
+- stage three a disease | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=doctor | evidence=T29
+  Summary: The patient's ovarian cancer is stage three A.
+  ClusterId: CL7
+  TemporalProfile: current
+  Updates:
+  - CAP2: content_source=doctor modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T29 :: The patient's ovarian cancer is stage three A.
+
+Medication Tracking
+- [MedicationChange] ca-125 | verification_status=unconfirmed | clinical_status=planned | modalities=interview | speakers=doctor | evidence=T30
+  Summary: The doctor wants to order a ca-125 test.
+  ClusterId: CL9
+  TemporalProfile: current
+  PlannedChanges:
+  - The doctor wants to order a ca-125 test. (T30)
+  Updates:
+  - CAP9: content_source=doctor modality=interview verification_status=unconfirmed clinical_status=planned temporality=current turns=T30 :: The doctor wants to order a ca-125 test.
+- [MedicationChange] hcg | verification_status=unconfirmed | clinical_status=planned | modalities=interview | speakers=doctor | evidence=T30
+  Summary: The doctor wants to order an hcg test.
+  ClusterId: CL10
+  TemporalProfile: current
+  PlannedChanges:
+  - The doctor wants to order an hcg test. (T30)
+  Updates:
+  - CAP10: content_source=doctor modality=interview verification_status=unconfirmed clinical_status=planned temporality=current turns=T30 :: The doctor wants to order an hcg test.
+- [MedicationChange] afp | verification_status=unconfirmed | clinical_status=planned | modalities=interview | speakers=doctor | evidence=T30
+  Summary: The doctor wants to order an afp test.
+  ClusterId: CL11
+  TemporalProfile: current
+  PlannedChanges:
+  - The doctor wants to order an afp test. (T30)
+  Updates:
+  - CAP11: content_source=doctor modality=interview verification_status=unconfirmed clinical_status=planned temporality=current turns=T30 :: The doctor wants to order an afp test.
+- [MedicationChange] ldh | verification_status=unconfirmed | clinical_status=planned | modalities=interview | speakers=doctor | evidence=T30
+  Summary: The doctor wants to order an ldh test.
+  ClusterId: CL12
+  TemporalProfile: current
+  PlannedChanges:
+  - The doctor wants to order an ldh test. (T30)
+  Updates:
+  - CAP12: content_source=doctor modality=interview verification_status=unconfirmed clinical_status=planned temporality=current turns=T30 :: The doctor wants to order an ldh test.
+- [MedicationChange] cisplatin | verification_status=unconfirmed | clinical_status=planned | modalities=interview | speakers=doctor | evidence=T30
+  Summary: The doctor wants to administer cisplatin.
+  ClusterId: CL14
+  TemporalProfile: current
+  PlannedChanges:
+  - The doctor wants to administer cisplatin. (T30)
+  Updates:
+  - CAP16: content_source=doctor modality=interview verification_status=unconfirmed clinical_status=planned temporality=current turns=T30 :: The doctor wants to administer cisplatin.
+- [MedicationChange] taxol | verification_status=unconfirmed | clinical_status=planned | modalities=interview | speakers=doctor | evidence=T30
+  Summary: The doctor wants to administer taxol.
+  ClusterId: CL15
+  TemporalProfile: current
+  PlannedChanges:
+  - The doctor wants to administer taxol. (T30)
+  Updates:
+  - CAP17: content_source=doctor modality=interview verification_status=unconfirmed clinical_status=planned temporality=current turns=T30 :: The doctor wants to administer taxol.
+
+Other Structured States
+- [Plan] intraperitoneal chemotherapy | verification_status=unconfirmed | clinical_status=planned | modalities=interview | speakers=doctor | evidence=T28,T30
+  Summary: The doctor wants to administer intraperitoneal chemotherapy.
+  ClusterId: CL6
+  TemporalProfile: current
+- [Plan] lymph node dissection | verification_status=unconfirmed | clinical_status=planned | modalities=interview | speakers=doctor | evidence=T30
+  Summary: The doctor wants to perform a lymph node dissection.
+  ClusterId: CL8
+  TemporalProfile: current
+- [Plan] hysterectomy | verification_status=unconfirmed | clinical_status=planned | modalities=interview | speakers=doctor | evidence=T30
+  Summary: The doctor wants to perform a hysterectomy.
+  ClusterId: CL13
+  TemporalProfile: current
+- [Plan] genetic counseling | verification_status=unconfirmed | clinical_status=planned | modalities=interview | speakers=doctor | evidence=T30
+  Summary: The doctor recommends genetic counseling.
+  ClusterId: CL16
+  TemporalProfile: current

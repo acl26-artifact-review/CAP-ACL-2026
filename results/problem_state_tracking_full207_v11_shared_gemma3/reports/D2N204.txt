@@ -1,0 +1,85 @@
+Case: D2N204
+
+Problem List and Visit State Tracking
+
+Problem List
+- knee pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T11
+  Summary: The patient reports pain in the right knee.
+  ClusterId: CL3
+  TemporalProfile: current
+  Updates:
+  - CAP1: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T11,T11 :: The patient reports pain in the right knee.
+  - CAP7: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T11 :: The patient reports knee pain.
+- knee injury | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T11
+  Summary: The patient sustained a knee injury.
+  ClusterId: CL4
+  TemporalProfile: weekend
+  Updates:
+  - CAP5: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=weekend turns=T11 :: The patient sustained a knee injury.
+- pain with flexion | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T15
+  Summary: The patient experiences pain with knee flexion.
+  ClusterId: CL5
+  TemporalProfile: current
+  Updates:
+  - CAP2: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T15 :: The patient experiences pain with knee flexion.
+- pain with extension | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T15
+  Summary: The patient experiences pain with knee extension.
+  ClusterId: CL6
+  TemporalProfile: current
+  Updates:
+  - CAP3: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T15 :: The patient experiences pain with knee extension.
+- knee contusion | verification_status=confirmed | clinical_status=active | modalities=assessment | speakers=doctor | evidence=T18
+  Summary: The patient has a knee contusion.
+  ClusterId: CL7
+  TemporalProfile: current
+  Updates:
+  - CAP6: content_source=doctor modality=assessment verification_status=confirmed clinical_status=active temporality=current turns=T18 :: The patient has a knee contusion.
+- tenderness | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T25
+  Summary: The patient reports tenderness in the shoulder.
+  ClusterId: CL11
+  TemporalProfile: current
+  Updates:
+  - CAP4: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T25 :: The patient reports tenderness in the shoulder.
+- bruising | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T25,T28
+  Summary: The patient reports shoulder bruising.
+  ClusterId: CL12
+  TemporalProfile: current
+  Updates:
+  - CAP8: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T25 :: The patient reports shoulder bruising.
+  - CAP9: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T28 :: The patient reports bruising.
+
+Medication Tracking
+- [MedicationState] ibuprofen | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T5
+  Summary: The patient is taking ibuprofen.
+  ClusterId: CL1
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient is taking ibuprofen. (T5)
+  Updates:
+  - CAP15: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T5 :: The patient is taking ibuprofen.
+- [MedicationChange] ibuprofen | verification_status=confirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T18
+  Summary: The patient should take ibuprofen as needed.
+  ClusterId: CL10
+  TemporalProfile: as needed
+  PlannedChanges:
+  - The patient should take ibuprofen as needed. (T18)
+  Updates:
+  - CAP14: content_source=doctor modality=plan verification_status=confirmed clinical_status=planned temporality=as needed turns=T18 :: The patient should take ibuprofen as needed.
+
+Other Structured States
+- [Plan] icing | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T9
+  Summary: The patient is icing the knee.
+  ClusterId: CL2
+  TemporalProfile: current
+- [Plan] ice | verification_status=confirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T18
+  Summary: The patient should apply ice.
+  ClusterId: CL8
+  TemporalProfile: current
+- [Plan] rest | verification_status=confirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T18
+  Summary: The patient should rest.
+  ClusterId: CL9
+  TemporalProfile: current
+- [Plan] x-ray | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T30
+  Summary: A cervical x-ray is planned.
+  ClusterId: CL13
+  TemporalProfile: soon

@@ -1,0 +1,506 @@
+{
+  "caps": [
+    {
+      "cap_id": "CAP1",
+      "cap_type": "Problem",
+      "content_source": "patient",
+      "modality": "interview",
+      "canonical_concept": "shoulder injury",
+      "verification_status": "unconfirmed",
+      "clinical_status": "historical",
+      "temporality": "past 3 weeks",
+      "proposition_text": "The patient has a history of shoulder pain.",
+      "evidence": [
+        {
+          "turn_id": "T1",
+          "turn_speaker": "patient",
+          "span_text": "hey alan i good to see you today so i looked here my appointment notes and i see that you're coming in you had some shoulder pain left shoulder pain for the last three weeks so",
+          "char_start": 44,
+          "char_end": 220
+        },
+        {
+          "turn_id": "T3",
+          "turn_speaker": "patient",
+          "span_text": "yeah yeah i've been having a lot of pain of my shoulder for the last three weeks now and it's not getting better okay do you remember what you were doing when the pain first started",
+          "char_start": 284,
+          "char_end": 465
+        }
+      ],
+      "assertion": "historical",
+      "visit_state": "historical",
+      "linked_problem": null,
+      "event_cluster_id": "CL1"
+    },
+    {
+      "cap_id": "CAP2",
+      "cap_type": "Symptom",
+      "content_source": "patient",
+      "modality": "interview",
+      "canonical_concept": "shoulder pain",
+      "verification_status": "confirmed",
+      "clinical_status": "active",
+      "temporality": "current",
+      "attributes": {
+        "laterality": "left",
+        "duration": "3 weeks"
+      },
+      "proposition_text": "The patient reports left shoulder pain.",
+      "evidence": [
+        {
+          "turn_id": "T1",
+          "turn_speaker": "patient",
+          "span_text": "hey alan i good to see you today so i looked here my appointment notes and i see that you're coming in you had some shoulder pain left shoulder pain for the last three weeks so",
+          "char_start": 44,
+          "char_end": 220
+        },
+        {
+          "turn_id": "T1",
+          "turn_speaker": "patient",
+          "span_text": "hey alan i good to see you today so i looked here my appointment notes and i see that you're coming in you had some shoulder pain left shoulder pain for the last three weeks so",
+          "char_start": 44,
+          "char_end": 220
+        }
+      ],
+      "assertion": "present",
+      "visit_state": "active",
+      "linked_problem": null,
+      "event_cluster_id": "CL2"
+    },
+    {
+      "cap_id": "CAP3",
+      "cap_type": "Problem",
+      "content_source": "doctor",
+      "modality": "assessment",
+      "canonical_concept": "rotator cuff tendinopathy",
+      "verification_status": "confirmed",
+      "clinical_status": "active",
+      "temporality": "current",
+      "proposition_text": "The doctor assesses the patient's symptoms as likely due to a rotator cuff tendinopathy.",
+      "evidence": [
+        {
+          "turn_id": "T34",
+          "turn_speaker": "doctor",
+          "span_text": "most likely due to a rotator cuff tendinopathy so this means that you injured tendon you have injured tendons and muscles that make up your shoulder and make up your shoulder muscles so what i'm gon na do is i'm gon na order an mri of your left shoulder",
+          "char_start": 3403,
+          "char_end": 3656
+        }
+      ],
+      "assertion": "present",
+      "visit_state": "active",
+      "linked_problem": null,
+      "event_cluster_id": "CL8"
+    },
+    {
+      "cap_id": "CAP4",
+      "cap_type": "Problem",
+      "content_source": "patient",
+      "modality": "interview",
+      "canonical_concept": "basement work",
+      "verification_status": "unconfirmed",
+      "clinical_status": "historical",
+      "temporality": "recent",
+      "proposition_text": "The patient has been doing work in the basement.",
+      "evidence": [
+        {
+          "turn_id": "T3",
+          "turn_speaker": "patient",
+          "span_text": "yeah yeah i've been having a lot of pain of my shoulder for the last three weeks now and it's not getting better okay do you remember what you were doing when the pain first started",
+          "char_start": 284,
+          "char_end": 465
+        }
+      ],
+      "assertion": "historical",
+      "visit_state": "historical",
+      "linked_problem": null,
+      "event_cluster_id": "CL3"
+    },
+    {
+      "cap_id": "CAP5",
+      "cap_type": "Symptom",
+      "content_source": "patient",
+      "modality": "interview",
+      "canonical_concept": "left hand pain",
+      "verification_status": "confirmed",
+      "clinical_status": "active",
+      "temporality": "current",
+      "attributes": {
+        "laterality": "left"
+      },
+      "proposition_text": "The patient reports pain in the left hand.",
+      "evidence": [
+        {
+          "turn_id": "T27",
+          "turn_speaker": "patient",
+          "span_text": "tuberosity of the humerus let's see there is no tenderness at the sternoclavicular or acro",
+          "char_start": 2698,
+          "char_end": 2788
+        }
+      ],
+      "assertion": "present",
+      "visit_state": "active",
+      "linked_problem": null,
+      "event_cluster_id": "CL6"
+    },
+    {
+      "cap_id": "CAP6",
+      "cap_type": "Symptom",
+      "content_source": "patient",
+      "modality": "interview",
+      "canonical_concept": "shoulder pain",
+      "verification_status": "confirmed",
+      "clinical_status": "active",
+      "temporality": "current",
+      "attributes": {
+        "location": "shoulder",
+        "severity": "moderate"
+      },
+      "proposition_text": "The patient reports pain in their shoulder.",
+      "evidence": [
+        {
+          "turn_id": "T15",
+          "turn_speaker": "patient",
+          "span_text": "alright so does that pain radiate anywhere or like where would you say it is in your shoulder",
+          "char_start": 1444,
+          "char_end": 1537
+        }
+      ],
+      "assertion": "present",
+      "visit_state": "active",
+      "linked_problem": null,
+      "event_cluster_id": "CL2"
+    },
+    {
+      "cap_id": "CAP7",
+      "cap_type": "Symptom",
+      "content_source": "patient",
+      "modality": "interview",
+      "canonical_concept": "pain",
+      "verification_status": "confirmed",
+      "clinical_status": "active",
+      "temporality": "current",
+      "attributes": {
+        "severity": "moderate"
+      },
+      "proposition_text": "The patient describes the pain as constant.",
+      "evidence": [
+        {
+          "turn_id": "T17",
+          "turn_speaker": "patient",
+          "span_text": "okay and the pain is it is it all the time or does it come and go",
+          "char_start": 1646,
+          "char_end": 1711
+        }
+      ],
+      "assertion": "present",
+      "visit_state": "active",
+      "linked_problem": null,
+      "event_cluster_id": "CL2"
+    },
+    {
+      "cap_id": "CAP8",
+      "cap_type": "Problem",
+      "content_source": "patient",
+      "modality": "interview",
+      "canonical_concept": "shoulder pain",
+      "verification_status": "confirmed",
+      "clinical_status": "active",
+      "temporality": "current",
+      "proposition_text": "The patient reports shoulder pain.",
+      "evidence": [
+        {
+          "turn_id": "T39",
+          "turn_speaker": "patient",
+          "span_text": "yeah so many patients are very successful with rehab and so we'll start with that and see how you do most most of the time once we build up those muscles around that shoulder you know things things the pain alleviates itself and and and you will be good to go back to working on your basement and running and jogging and lifting weights all all the active things people do these days",
+          "char_start": 4566,
+          "char_end": 4949
+        }
+      ],
+      "assertion": "present",
+      "visit_state": "active",
+      "linked_problem": null,
+      "event_cluster_id": "CL2"
+    },
+    {
+      "cap_id": "CAP9",
+      "cap_type": "Order",
+      "content_source": "doctor",
+      "modality": "interview",
+      "canonical_concept": "steroid injection",
+      "verification_status": "unconfirmed",
+      "clinical_status": "planned",
+      "temporality": "if symptoms do not improve",
+      "proposition_text": "The doctor may consider a steroid injection of the shoulder if the patient's symptoms do not improve.",
+      "evidence": [
+        {
+          "turn_id": "T37",
+          "turn_speaker": "patient",
+          "span_text": "okay so what i'm gon na do i'm going to refer you to physical therapy for approximately six to eight weeks and so they can help you strengthen those muscles around your shoulder and that should definitely help with the pain during that time you can also continue to take tylenol i do n't think i need to prescribe anything else for the pain you said as it's working pretty good for you so if your symptoms do n't improve we can consider a steroid injection of your shoulder which should provide some relief but i think right now we can just go with the the pt and hopefully that works to alleviate your injury so do you have any questions about the plan",
+          "char_start": 3814,
+          "char_end": 4467
+        }
+      ],
+      "assertion": "hypothetical",
+      "visit_state": "planned",
+      "linked_problem": null,
+      "event_cluster_id": "CL11"
+    },
+    {
+      "cap_id": "CAP10",
+      "cap_type": "Order",
+      "content_source": "doctor",
+      "modality": "interview",
+      "canonical_concept": "physical therapy",
+      "verification_status": "confirmed",
+      "clinical_status": "planned",
+      "temporality": "6 to 8 weeks",
+      "proposition_text": "The doctor is referring the patient to physical therapy for approximately six to eight weeks.",
+      "evidence": [
+        {
+          "turn_id": "T37",
+          "turn_speaker": "patient",
+          "span_text": "okay so what i'm gon na do i'm going to refer you to physical therapy for approximately six to eight weeks and so they can help you strengthen those muscles around your shoulder and that should definitely help with the pain during that time you can also continue to take tylenol i do n't think i need to prescribe anything else for the pain you said as it's working pretty good for you so if your symptoms do n't improve we can consider a steroid injection of your shoulder which should provide some relief but i think right now we can just go with the the pt and hopefully that works to alleviate your injury so do you have any questions about the plan",
+          "char_start": 3814,
+          "char_end": 4467
+        }
+      ],
+      "assertion": "hypothetical",
+      "visit_state": "planned",
+      "linked_problem": null,
+      "event_cluster_id": "CL10"
+    },
+    {
+      "cap_id": "CAP11",
+      "cap_type": "ExamFinding",
+      "content_source": "doctor",
+      "modality": "exam",
+      "canonical_concept": "tenderness",
+      "verification_status": "confirmed",
+      "clinical_status": "active",
+      "temporality": "current",
+      "proposition_text": "The patient has tenderness of the greater tuberosity of the humerus.",
+      "evidence": [
+        {
+          "turn_id": "T27",
+          "turn_speaker": "patient",
+          "span_text": "tuberosity of the humerus let's see there is no tenderness at the sternoclavicular or acro",
+          "char_start": 2698,
+          "char_end": 2788
+        }
+      ],
+      "assertion": "present",
+      "visit_state": "active",
+      "linked_problem": null,
+      "event_cluster_id": "CL7"
+    },
+    {
+      "cap_id": "CAP12",
+      "cap_type": "ExamFinding",
+      "content_source": "doctor",
+      "modality": "exam",
+      "canonical_concept": "no tenderness",
+      "verification_status": "confirmed",
+      "clinical_status": "active",
+      "temporality": "current",
+      "proposition_text": "The patient has no tenderness at the sternoclavicular or acromioclavicular joints.",
+      "evidence": [
+        {
+          "turn_id": "T27",
+          "turn_speaker": "patient",
+          "span_text": "tuberosity of the humerus let's see there is no tenderness at the sternoclavicular or acro",
+          "char_start": 2698,
+          "char_end": 2788
+        }
+      ],
+      "assertion": "present",
+      "visit_state": "active",
+      "linked_problem": null,
+      "event_cluster_id": "CL7"
+    },
+    {
+      "cap_id": "CAP13",
+      "cap_type": "ExamFinding",
+      "content_source": "doctor",
+      "modality": "exam",
+      "canonical_concept": "limited active and passive range of motion",
+      "verification_status": "confirmed",
+      "clinical_status": "active",
+      "temporality": "current",
+      "proposition_text": "The patient has limited active and passive range of motion.",
+      "evidence": [
+        {
+          "turn_id": "T25",
+          "turn_speaker": "patient",
+          "span_text": "okay good so i'm gon na go ahead and do a quick physical exam and take a look at your your shoulder so i reviewed your your vitals everything looks good with that so touch here in your shoulder so your left shoulder exam you have limited active and passive range of motion so pressure here so that there is tenderness of the greater",
+          "char_start": 2341,
+          "char_end": 2673
+        }
+      ],
+      "assertion": "present",
+      "visit_state": "active",
+      "linked_problem": null,
+      "event_cluster_id": "CL5"
+    },
+    {
+      "cap_id": "CAP14",
+      "cap_type": "Order",
+      "content_source": "doctor",
+      "modality": "plan",
+      "canonical_concept": "MRI",
+      "verification_status": "unconfirmed",
+      "clinical_status": "planned",
+      "temporality": "future",
+      "proposition_text": "The doctor orders an MRI of the left shoulder.",
+      "evidence": [
+        {
+          "turn_id": "T34",
+          "turn_speaker": "doctor",
+          "span_text": "most likely due to a rotator cuff tendinopathy so this means that you injured tendon you have injured tendons and muscles that make up your shoulder and make up your shoulder muscles so what i'm gon na do is i'm gon na order an mri of your left shoulder",
+          "char_start": 3403,
+          "char_end": 3656
+        }
+      ],
+      "assertion": "hypothetical",
+      "visit_state": "planned",
+      "linked_problem": null,
+      "event_cluster_id": "CL9"
+    },
+    {
+      "cap_id": "CAP15",
+      "cap_type": "MedicationStatement",
+      "content_source": "doctor",
+      "modality": "plan",
+      "canonical_concept": "tylenol",
+      "verification_status": "unconfirmed",
+      "clinical_status": "planned",
+      "temporality": "future",
+      "proposition_text": "The doctor does not prescribe anything else for the pain, as it's working pretty good.",
+      "evidence": [
+        {
+          "turn_id": "T37",
+          "turn_speaker": "patient",
+          "span_text": "okay so what i'm gon na do i'm going to refer you to physical therapy for approximately six to eight weeks and so they can help you strengthen those muscles around your shoulder and that should definitely help with the pain during that time you can also continue to take tylenol i do n't think i need to prescribe anything else for the pain you said as it's working pretty good for you so if your symptoms do n't improve we can consider a steroid injection of your shoulder which should provide some relief but i think right now we can just go with the the pt and hopefully that works to alleviate your injury so do you have any questions about the plan",
+          "char_start": 3814,
+          "char_end": 4467
+        }
+      ],
+      "assertion": "hypothetical",
+      "visit_state": "planned",
+      "linked_problem": null,
+      "event_cluster_id": "CL12"
+    },
+    {
+      "cap_id": "CAP16",
+      "cap_type": "MedicationStatement",
+      "content_source": "doctor",
+      "modality": "interview",
+      "canonical_concept": "tylenol",
+      "verification_status": "confirmed",
+      "clinical_status": "active",
+      "temporality": "current",
+      "proposition_text": "The doctor does not need to prescribe anything else for the pain.",
+      "evidence": [
+        {
+          "turn_id": "T37",
+          "turn_speaker": "patient",
+          "span_text": "okay so what i'm gon na do i'm going to refer you to physical therapy for approximately six to eight weeks and so they can help you strengthen those muscles around your shoulder and that should definitely help with the pain during that time you can also continue to take tylenol i do n't think i need to prescribe anything else for the pain you said as it's working pretty good for you so if your symptoms do n't improve we can consider a steroid injection of your shoulder which should provide some relief but i think right now we can just go with the the pt and hopefully that works to alleviate your injury so do you have any questions about the plan",
+          "char_start": 3814,
+          "char_end": 4467
+        }
+      ],
+      "assertion": "present",
+      "visit_state": "active",
+      "linked_problem": null,
+      "event_cluster_id": "CL4"
+    },
+    {
+      "cap_id": "CAP17",
+      "cap_type": "MedicationStatement",
+      "content_source": "patient",
+      "modality": "interview",
+      "canonical_concept": "tylenol",
+      "verification_status": "confirmed",
+      "clinical_status": "active",
+      "temporality": "current",
+      "proposition_text": "The patient has not taken anything for the pain recently.",
+      "evidence": [
+        {
+          "turn_id": "T19",
+          "turn_speaker": "patient",
+          "span_text": "okay so i know you mentioned tylenol so this time i have n't taken anything for it",
+          "char_start": 1883,
+          "char_end": 1965
+        }
+      ],
+      "assertion": "present",
+      "visit_state": "active",
+      "linked_problem": null,
+      "event_cluster_id": "CL4"
+    },
+    {
+      "cap_id": "CAP18",
+      "cap_type": "MedicationStatement",
+      "content_source": "patient",
+      "modality": "interview",
+      "canonical_concept": "tylenol",
+      "verification_status": "confirmed",
+      "clinical_status": "active",
+      "temporality": "current",
+      "proposition_text": "The patient has not taken anything for the pain.",
+      "evidence": [
+        {
+          "turn_id": "T19",
+          "turn_speaker": "patient",
+          "span_text": "okay so i know you mentioned tylenol so this time i have n't taken anything for it",
+          "char_start": 1883,
+          "char_end": 1965
+        }
+      ],
+      "assertion": "present",
+      "visit_state": "active",
+      "linked_problem": null,
+      "event_cluster_id": "CL4"
+    },
+    {
+      "cap_id": "CAP19",
+      "cap_type": "Counseling",
+      "content_source": "doctor",
+      "modality": "plan",
+      "canonical_concept": "physical therapy",
+      "verification_status": "unconfirmed",
+      "clinical_status": "planned",
+      "temporality": "future",
+      "proposition_text": "The doctor recommends physical therapy for approximately six to eight weeks.",
+      "evidence": [
+        {
+          "turn_id": "T35",
+          "turn_speaker": "patient",
+          "span_text": "and so we're gon na begin with that just to make sure nothing else is going on have you done physical therapy before",
+          "char_start": 3667,
+          "char_end": 3783
+        }
+      ],
+      "assertion": "hypothetical",
+      "visit_state": "planned",
+      "linked_problem": null,
+      "event_cluster_id": "CL10"
+    }
+  ],
+  "filtered_nonverifiable_units": [
+    "Is the pain worse at night?",
+    "Do you remember hitting it?",
+    "Okay alright did you fall do you remember doing that",
+    "do you think that this pain will ever go away",
+    "so like i'm really active",
+    "yeah so many patients are very successful with rehab",
+    "things things the pain alleviates itself",
+    "and and and you will be good to go back to working on your basement and running and jogging and lifting weights all all the active things people do these days",
+    "okay alright thank you",
+    "bye"
+  ],
+  "chunk_count": 5,
+  "rescue_used": false,
+  "rescue_attempted": false,
+  "legacy_fallback_chunk_count": 0,
+  "extraction_mode": "single_call",
+  "runtime_seconds": 57.905
+}

@@ -1,0 +1,51 @@
+{
+  "section_miscategorizations": [
+    {
+      "text": "The patient reports left shoulder pain.",
+      "current_section": "O",
+      "expected_section": "S",
+      "severity": "major",
+      "reason": "This is a patient-reported symptom and belongs in the Subjective section, not in Objective findings."
+    },
+    {
+      "text": "The doctor does not prescribe anything else for the pain, as it's working pretty good.",
+      "current_section": "P",
+      "expected_section": "A",
+      "severity": "major",
+      "reason": "This is documenting the clinician's assessment that current pain management is adequate (no change needed), rather than an active plan or new order; it reflects judgment rather than an action."
+    },
+    {
+      "text": "The doctor does not need to prescribe anything else for the pain.",
+      "current_section": "P",
+      "expected_section": "A",
+      "severity": "major",
+      "reason": "This is an assessment that additional medication is not indicated, not a new prescription, order, or explicit management action."
+    },
+    {
+      "text": "The doctor does not prescribe anything else for the pain, as it's working pretty good.",
+      "current_section": "P",
+      "expected_section": "A",
+      "severity": "major",
+      "reason": "Duplicate statement again reflects clinical judgment about adequacy of current therapy rather than a new plan element."
+    },
+    {
+      "text": "The patient has not taken anything for the pain recently.",
+      "current_section": "P",
+      "expected_section": "S",
+      "severity": "major",
+      "reason": "This is a patient-reported current medication/non‑use history and belongs in Subjective, not in the Plan."
+    },
+    {
+      "text": "The patient has not taken anything for the pain.",
+      "current_section": "P",
+      "expected_section": "S",
+      "severity": "major",
+      "reason": "This is current medication/non‑use history reported by the patient, which should be in the Subjective section."
+    }
+  ],
+  "summary_statistics": {
+    "section_appropriateness_score": 0.6,
+    "section_miscategorization_count": 6,
+    "major_section_miscategorization_count": 6
+  }
+}

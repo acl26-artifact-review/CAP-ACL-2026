@@ -1,0 +1,108 @@
+Case: D2N084
+
+Problem List and Visit State Tracking
+
+Problem List
+- chest pain | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T1,T24
+  Summary: The patient reports slight chest pain.
+  ClusterId: CL1
+  TemporalProfile: current
+  Updates:
+  - CAP7: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T1 :: The patient reports chest pain.
+  - CAP6: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T24 :: The patient reports slight chest pain.
+- shortness of breath | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T17,T2
+  Summary: The patient reports feeling out of breath.
+  ClusterId: CL2
+  TemporalProfile: current
+  Updates:
+  - CAP4: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T2 :: The patient reports shortness of breath.
+  - CAP2: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T17 :: The patient reports feeling out of breath.
+  - CAP3: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T17 :: The patient is experiencing shortness of breath.
+- swelling | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T2
+  Summary: The patient reports ankle swelling.
+  ClusterId: CL3
+  TemporalProfile: current
+  Updates:
+  - CAP8: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T2 :: The patient reports ankle swelling.
+- hypertension | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=doctor | evidence=T4
+  Summary: The patient has hypertension.
+  ClusterId: CL4
+  TemporalProfile: current
+  Updates:
+  - CAP11: content_source=doctor modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T4 :: The patient has hypertension.
+- eating anything | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T9
+  Summary: The patient reports eating anything.
+  ClusterId: CL8
+  TemporalProfile: current
+  Updates:
+  - CAP9: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T9 :: The patient reports eating anything.
+- salty foods | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T10
+  Summary: The patient is eating salty foods.
+  ClusterId: CL9
+  TemporalProfile: current
+  Updates:
+  - CAP5: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T10 :: The patient is eating salty foods.
+- chips | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T11
+  Summary: The patient is eating chips.
+  ClusterId: CL10
+  TemporalProfile: current
+  Updates:
+  - CAP10: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T11 :: The patient is eating chips.
+- heart failure | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T23
+  Summary: The patient has a history of heart failure.
+  ClusterId: CL11
+  TemporalProfile: current
+  Updates:
+  - CAP1: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T23 :: The patient has a history of heart failure.
+- pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T27
+  Summary: The patient reports pain.
+  ClusterId: CL13
+  TemporalProfile: current
+  Updates:
+  - CAP12: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T27 :: The patient reports pain.
+
+Medication Tracking
+- [MedicationState] bumex | verification_status=confirmed | clinical_status=active | modalities=interview,plan | speakers=doctor | evidence=T28,T6
+  Summary: The doctor prescribed Bumex 2 milligrams once daily.
+  ClusterId: CL5
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient is taking bumex. (T6)
+  - The doctor prescribed Bumex 2 milligrams once daily. (T28)
+  Updates:
+  - CAP15: content_source=doctor modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T6 :: The patient is taking bumex.
+  - CAP14: content_source=doctor modality=plan verification_status=confirmed clinical_status=active temporality=current turns=T28 :: The doctor prescribed Bumex 2 milligrams once daily.
+- [MedicationState] cozaar | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=doctor | evidence=T6
+  Summary: The patient is taking cozaar.
+  ClusterId: CL6
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient is taking cozaar. (T6)
+  Updates:
+  - CAP16: content_source=doctor modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T6 :: The patient is taking cozaar.
+- [MedicationState] norvasc | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=doctor | evidence=T6
+  Summary: The patient is taking norvasc.
+  ClusterId: CL7
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient is taking norvasc. (T6)
+  Updates:
+  - CAP17: content_source=doctor modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T6 :: The patient is taking norvasc.
+- [MedicationChange] multivitamin | verification_status=confirmed | clinical_status=planned | modalities=interview | speakers=doctor | evidence=T23
+  Summary: The doctor recommends taking a multivitamin.
+  ClusterId: CL12
+  TemporalProfile: future
+  PlannedChanges:
+  - The doctor recommends taking a multivitamin. (T23)
+  Updates:
+  - CAP18: content_source=doctor modality=interview verification_status=confirmed clinical_status=planned temporality=future turns=T23 :: The doctor recommends taking a multivitamin.
+
+Other Structured States
+- [Plan] nutrition consult | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T28
+  Summary: The doctor ordered a nutrition consult.
+  ClusterId: CL14
+  TemporalProfile: future
+- [Plan] nutritionist | verification_status=confirmed | clinical_status=planned | modalities=interview | speakers=doctor | evidence=T36
+  Summary: The doctor recommends seeing a nutritionist.
+  ClusterId: CL15
+  TemporalProfile: future

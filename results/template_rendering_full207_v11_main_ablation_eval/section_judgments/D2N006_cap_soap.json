@@ -1,0 +1,37 @@
+{
+  "section_miscategorizations": [
+    {
+      "text": "A right upper quadrant ultrasound is ordered.",
+      "current_section": "O",
+      "expected_section": "P",
+      "severity": "major",
+      "reason": "This is an order/plan for imaging, not an already-performed procedure or observed result, so it belongs in the Plan."
+    },
+    {
+      "text": "An autoimmune panel was sent.",
+      "current_section": "O",
+      "expected_section": "P",
+      "severity": "major",
+      "reason": "This is an order/action (sending labs), not a reported result; it should be documented as part of the management plan."
+    },
+    {
+      "text": "A right upper quadrant ultrasound is planned.",
+      "current_section": "P",
+      "expected_section": "P",
+      "severity": "minor",
+      "reason": "Content is appropriate for the Plan, but it duplicates the imaging order that is incorrectly placed in Objective; organizationally it would be clearer to consolidate imaging plans in one Plan statement."
+    },
+    {
+      "text": "Further imaging or intervention may be considered.",
+      "current_section": "P",
+      "expected_section": "A",
+      "severity": "minor",
+      "reason": "This is more of a high-level clinical consideration/assessment of future needs rather than a specific actionable plan; however, keeping it in the Plan is not seriously misleading."
+    }
+  ],
+  "summary_statistics": {
+    "section_appropriateness_score": 0.6,
+    "section_miscategorization_count": 4,
+    "major_section_miscategorization_count": 2
+  }
+}

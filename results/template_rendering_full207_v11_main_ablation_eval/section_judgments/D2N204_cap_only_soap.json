@@ -1,0 +1,30 @@
+{
+  "section_miscategorizations": [
+    {
+      "text": "Palpation of the right knee reveals tenderness to palpation.",
+      "current_section": "O",
+      "expected_section": "S",
+      "severity": "major",
+      "reason": "This exact finding (tenderness to palpation in the right knee) is already reported by the patient in the Subjective section and is not clearly distinguished as a separate clinician exam maneuver here; as written, it reads redundantly as the same patient-reported symptom rather than a distinct observed finding."
+    },
+    {
+      "text": "The patient is icing the knee.",
+      "current_section": "P",
+      "expected_section": "S",
+      "severity": "major",
+      "reason": "This describes what the patient is currently doing at home (existing self-care), which is part of the subjective history, not a new management action or order."
+    },
+    {
+      "text": "A cervical x-ray is planned.",
+      "current_section": "P",
+      "expected_section": "O",
+      "severity": "minor",
+      "reason": "The template defines O as including procedures already performed; a study that is only planned and not yet ordered or performed is ambiguously placed. It more properly belongs either as an explicit order in P or as a documented order/result in O once done; as written, it is not clearly an active order."
+    }
+  ],
+  "summary_statistics": {
+    "section_appropriateness_score": 0.7,
+    "section_miscategorization_count": 3,
+    "major_section_miscategorization_count": 2
+  }
+}

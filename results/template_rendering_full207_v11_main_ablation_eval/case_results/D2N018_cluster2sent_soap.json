@@ -1,0 +1,1812 @@
+{
+  "case_id": "D2N018",
+  "method": "cluster2sent",
+  "template": "soap",
+  "summary_text": "S:\nThe patient presents with a right lower extremity injury.\n\nO:\nThe patient reports significant pain and swelling.\n\nA:\nThe patient requires immediate orthopedic immobilization.\n\nP:\nI am ordering a long arm cast and pain medication. Please schedule a follow-up in one week to assess healing.",
+  "reference_summary": "CC:\n\nRight upper arm pain.\n\nHPI:\n\nMs. Russell is a 39-year-old female who presents today for an evaluation of severe right upper arm pain. She states she was playing volleyball yesterday and fell and landed on her arm. She has been taking ibuprofen every 6 hours but it does not help. She rates her pain 9/10. She denies any numbness or tingling in her arm. She has a history of gallstones and takes Pepcid. She has a past surgical history of a lumbar fusion 6 years ago. She denies any allergies.\n\nEXAM\n\nExamination of the right upper extremity shows swelling and erythema of the right shoulder. Tenderness over the right shoulder. Normal pulses.\n\nRESULTS\n\nX-rays of the right humerus, 2 views, obtained on today's visit show a proximal humerus fracture.\n\nIMPRESSION\n\nRight proximal humerus fracture.\n\nPLAN\n\nAt this point, I discussed the diagnosis and treatment options with the patient. I have recommended we place her into a long arm cast and sling. She will follow up in 2 weeks for repeat imaging. At that point, we may need to discuss surigical options. I will prescribe Lortab, 5 mg, #20 (twenty) to take every 6 hours as needed for pain.\n\nAll questions were answered.",
+  "source_cap": {
+    "atomic_propositions": [
+      {
+        "prop_id": "CAP1",
+        "cap_type": "Symptom",
+        "canonical_concept": "pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient rates their pain as nine out of ten."
+      },
+      {
+        "prop_id": "CAP2",
+        "cap_type": "Problem",
+        "canonical_concept": "lumbar fusion",
+        "category": "Problem",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "6 years ago",
+        "proposition_text": "The patient had a lumbar fusion approximately six years ago."
+      },
+      {
+        "prop_id": "CAP3",
+        "cap_type": "Symptom",
+        "canonical_concept": "ibuprofen",
+        "category": "Symptom",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "every 6 hours",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient has been taking ibuprofen every six hours."
+      },
+      {
+        "prop_id": "CAP4",
+        "cap_type": "Symptom",
+        "canonical_concept": "not helping",
+        "category": "Symptom",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient states that the ibuprofen is not helping."
+      },
+      {
+        "prop_id": "CAP5",
+        "cap_type": "Symptom",
+        "canonical_concept": "right upper arm pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "safety_relevant",
+          "symptom"
+        ],
+        "proposition_text": "The patient reports severe right upper arm pain."
+      },
+      {
+        "prop_id": "CAP6",
+        "cap_type": "Symptom",
+        "canonical_concept": "pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports pain in the left hand."
+      },
+      {
+        "prop_id": "CAP7",
+        "cap_type": "Symptom",
+        "canonical_concept": "pain relief",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports that ibuprofen is not helping."
+      },
+      {
+        "prop_id": "CAP8",
+        "cap_type": "Symptom",
+        "canonical_concept": "shoulder pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports tenderness over the right shoulder."
+      },
+      {
+        "prop_id": "CAP9",
+        "cap_type": "Symptom",
+        "canonical_concept": "ibuprofen",
+        "category": "Symptom",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient has been taking ibuprofen."
+      },
+      {
+        "prop_id": "CAP10",
+        "cap_type": "Problem",
+        "canonical_concept": "gallstones",
+        "category": "Problem",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "past",
+        "proposition_text": "The patient reports having gallstones."
+      },
+      {
+        "prop_id": "CAP11",
+        "cap_type": "Symptom",
+        "canonical_concept": "pain",
+        "category": "Symptom",
+        "speaker": "doctor",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports pain."
+      },
+      {
+        "prop_id": "CAP12",
+        "cap_type": "Problem",
+        "canonical_concept": "gallstones",
+        "category": "Problem",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "past",
+        "proposition_text": "The patient has gallstones."
+      },
+      {
+        "prop_id": "CAP13",
+        "cap_type": "Symptom",
+        "canonical_concept": "numbness",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "denies",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient denies numbness."
+      },
+      {
+        "prop_id": "CAP14",
+        "cap_type": "ExamFinding",
+        "canonical_concept": "elbow as long as I do not move up here",
+        "category": "ExamFinding",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient can straighten their elbow as long as they do not move their shoulder."
+      },
+      {
+        "prop_id": "CAP15",
+        "cap_type": "Order",
+        "canonical_concept": "long arm cast",
+        "category": "Order",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "planned",
+        "temporality": "future",
+        "proposition_text": "The doctor will put the patient in a long arm cast."
+      },
+      {
+        "prop_id": "CAP16",
+        "cap_type": "Order",
+        "canonical_concept": "sling",
+        "category": "Order",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "planned",
+        "temporality": "future",
+        "proposition_text": "The doctor will put the patient in a sling."
+      },
+      {
+        "prop_id": "CAP17",
+        "cap_type": "Order",
+        "canonical_concept": "check in two weeks",
+        "category": "Order",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "planned",
+        "temporality": "future",
+        "proposition_text": "The doctor will check the patient in two weeks."
+      },
+      {
+        "prop_id": "CAP18",
+        "cap_type": "ExamFinding",
+        "canonical_concept": "normal exam",
+        "category": "ExamFinding",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The rest of the patient's body is normal."
+      },
+      {
+        "prop_id": "CAP19",
+        "cap_type": "ExamFinding",
+        "canonical_concept": "proximal humerus fracture",
+        "category": "ExamFinding",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "present",
+        "proposition_text": "The doctor observes a proximal humerus fracture."
+      },
+      {
+        "prop_id": "CAP20",
+        "cap_type": "ExamFinding",
+        "canonical_concept": "proximal humerus fracture",
+        "category": "ExamFinding",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The doctor identified a proximal humerus fracture."
+      },
+      {
+        "prop_id": "CAP21",
+        "cap_type": "ExamFinding",
+        "canonical_concept": "straighten arm",
+        "category": "ExamFinding",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient can straighten their arm."
+      },
+      {
+        "prop_id": "CAP22",
+        "cap_type": "MedicationRequest",
+        "canonical_concept": "cast",
+        "category": "MedicationRequest",
+        "speaker": "doctor",
+        "status": "uncertain",
+        "visit_state": "planned",
+        "temporality": "current",
+        "proposition_text": "The doctor ordered a cast."
+      },
+      {
+        "prop_id": "CAP23",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "lortab",
+        "category": "MedicationStatement",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "future",
+        "claim_type_tags": [
+          "medication",
+          "quantitative"
+        ],
+        "proposition_text": "The doctor prescribed lortab 500 mg."
+      },
+      {
+        "prop_id": "CAP24",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "lortab",
+        "category": "MedicationStatement",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "future",
+        "claim_type_tags": [
+          "medication",
+          "quantitative"
+        ],
+        "proposition_text": "The doctor prescribed 20 tablets of lortab 5 mg."
+      },
+      {
+        "prop_id": "CAP25",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "lortab",
+        "category": "MedicationStatement",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "medication",
+          "quantitative"
+        ],
+        "proposition_text": "The doctor prescribed lortab 500-5 mg tablets."
+      },
+      {
+        "prop_id": "CAP26",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "20",
+        "category": "MedicationStatement",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "medication",
+          "quantitative"
+        ],
+        "proposition_text": "The doctor prescribed 20 lortab tablets."
+      },
+      {
+        "prop_id": "CAP27",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "Pepcid",
+        "category": "MedicationStatement",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient takes Pepcid."
+      },
+      {
+        "prop_id": "CAP28",
+        "cap_type": "ProblemHistory",
+        "canonical_concept": "dirty ball",
+        "category": "ProblemHistory",
+        "speaker": "patient",
+        "status": "uncertain",
+        "visit_state": "historical",
+        "temporality": "yesterday",
+        "proposition_text": "The patient states the ball was dirty."
+      },
+      {
+        "prop_id": "CAP29",
+        "cap_type": "ProblemHistory",
+        "canonical_concept": "dirty ball",
+        "category": "ProblemHistory",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "last night",
+        "proposition_text": "The patient states the ball was dirty."
+      },
+      {
+        "prop_id": "CAP30",
+        "cap_type": "ProblemHistory",
+        "canonical_concept": "fall",
+        "category": "ProblemHistory",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "yesterday",
+        "proposition_text": "The patient fell while playing volleyball."
+      },
+      {
+        "prop_id": "CAP31",
+        "cap_type": "ProblemHistory",
+        "canonical_concept": "fall",
+        "category": "ProblemHistory",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "last night",
+        "proposition_text": "The patient fell while playing volleyball."
+      },
+      {
+        "prop_id": "CAP32",
+        "cap_type": "ProblemHistory",
+        "canonical_concept": "arm",
+        "category": "ProblemHistory",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "last night",
+        "proposition_text": "The patient landed on their arm."
+      },
+      {
+        "prop_id": "CAP33",
+        "cap_type": "ProblemHistory",
+        "canonical_concept": "volleyball",
+        "category": "ProblemHistory",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "yesterday",
+        "proposition_text": "The patient was playing volleyball."
+      },
+      {
+        "prop_id": "CAP34",
+        "cap_type": "ProblemHistory",
+        "canonical_concept": "kicked legs",
+        "category": "ProblemHistory",
+        "speaker": "patient",
+        "status": "uncertain",
+        "visit_state": "historical",
+        "temporality": "yesterday",
+        "proposition_text": "Someone kicked the patient's legs."
+      },
+      {
+        "prop_id": "CAP35",
+        "cap_type": "ProblemHistory",
+        "canonical_concept": "volleyball",
+        "category": "ProblemHistory",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "last night",
+        "proposition_text": "The patient was playing volleyball."
+      },
+      {
+        "prop_id": "CAP36",
+        "cap_type": "ProblemHistory",
+        "canonical_concept": "kicked legs",
+        "category": "ProblemHistory",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "last night",
+        "proposition_text": "Someone kicked the patient's legs."
+      }
+    ],
+    "filtered_nonverifiable_units": []
+  },
+  "event_plan": null,
+  "summary_cap": {
+    "atomic_propositions": [
+      {
+        "prop_id": "P1",
+        "cap_type": "ChiefComplaint",
+        "canonical_concept": "right lower extremity injury",
+        "category": "ChiefComplaint",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports a right lower extremity injury."
+      },
+      {
+        "prop_id": "P2",
+        "cap_type": "Symptom",
+        "canonical_concept": "pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports significant pain."
+      },
+      {
+        "prop_id": "P3",
+        "cap_type": "Symptom",
+        "canonical_concept": "swelling",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports swelling."
+      },
+      {
+        "prop_id": "P4",
+        "cap_type": "Plan",
+        "canonical_concept": "orders long arm cast",
+        "category": "Plan",
+        "speaker": "clinician",
+        "predicate": "orders",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "future",
+        "claim_type_tags": [
+          "medication",
+          "plan"
+        ],
+        "proposition_text": "The clinician orders a long arm cast."
+      },
+      {
+        "prop_id": "P5",
+        "cap_type": "MedicationPlan",
+        "canonical_concept": "pain",
+        "category": "MedicationPlan",
+        "speaker": "clinician",
+        "predicate": "prescribes",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "medication"
+        ],
+        "proposition_text": "The clinician prescribes pain medication."
+      },
+      {
+        "prop_id": "P6",
+        "cap_type": "FollowUpPlan",
+        "canonical_concept": "plans follow-up one week",
+        "category": "FollowUpPlan",
+        "speaker": "clinician",
+        "predicate": "plans",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "future",
+        "claim_type_tags": [
+          "plan"
+        ],
+        "proposition_text": "The clinician plans a follow-up in one week."
+      }
+    ],
+    "filtered_nonverifiable_units": [],
+    "runtime_seconds": 20.244
+  },
+  "cap_alignment": {
+    "cap_precision": 0.5,
+    "cap_recall": 0.08333333333333333,
+    "cap_f1": 0.14285714285714285,
+    "matched_count": 3,
+    "summary_prop_count": 6,
+    "source_prop_count": 36,
+    "matched_pairs": [
+      {
+        "score": 1.0,
+        "summary_prop_id": "P5",
+        "source_prop_id": "CAP11",
+        "summary_text": "The clinician prescribes pain medication.",
+        "source_text": "The patient reports pain."
+      },
+      {
+        "score": 1.0,
+        "summary_prop_id": "P2",
+        "source_prop_id": "CAP6",
+        "summary_text": "The patient reports significant pain.",
+        "source_text": "The patient reports pain in the left hand."
+      },
+      {
+        "score": 0.8571,
+        "summary_prop_id": "P4",
+        "source_prop_id": "CAP15",
+        "summary_text": "The clinician orders a long arm cast.",
+        "source_text": "The doctor will put the patient in a long arm cast."
+      }
+    ],
+    "unsupported_summary_props": [
+      {
+        "prop_id": "P1",
+        "cap_type": "ChiefComplaint",
+        "canonical_concept": "right lower extremity injury",
+        "category": "ChiefComplaint",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports a right lower extremity injury."
+      },
+      {
+        "prop_id": "P3",
+        "cap_type": "Symptom",
+        "canonical_concept": "swelling",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports swelling."
+      },
+      {
+        "prop_id": "P6",
+        "cap_type": "FollowUpPlan",
+        "canonical_concept": "plans follow-up one week",
+        "category": "FollowUpPlan",
+        "speaker": "clinician",
+        "predicate": "plans",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "future",
+        "claim_type_tags": [
+          "plan"
+        ],
+        "proposition_text": "The clinician plans a follow-up in one week."
+      }
+    ],
+    "missing_source_props": [
+      {
+        "prop_id": "CAP1",
+        "cap_type": "Symptom",
+        "canonical_concept": "pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient rates their pain as nine out of ten."
+      },
+      {
+        "prop_id": "CAP2",
+        "cap_type": "Problem",
+        "canonical_concept": "lumbar fusion",
+        "category": "Problem",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "6 years ago",
+        "proposition_text": "The patient had a lumbar fusion approximately six years ago."
+      },
+      {
+        "prop_id": "CAP3",
+        "cap_type": "Symptom",
+        "canonical_concept": "ibuprofen",
+        "category": "Symptom",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "every 6 hours",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient has been taking ibuprofen every six hours."
+      },
+      {
+        "prop_id": "CAP4",
+        "cap_type": "Symptom",
+        "canonical_concept": "not helping",
+        "category": "Symptom",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient states that the ibuprofen is not helping."
+      },
+      {
+        "prop_id": "CAP5",
+        "cap_type": "Symptom",
+        "canonical_concept": "right upper arm pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "safety_relevant",
+          "symptom"
+        ],
+        "proposition_text": "The patient reports severe right upper arm pain."
+      },
+      {
+        "prop_id": "CAP7",
+        "cap_type": "Symptom",
+        "canonical_concept": "pain relief",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports that ibuprofen is not helping."
+      },
+      {
+        "prop_id": "CAP8",
+        "cap_type": "Symptom",
+        "canonical_concept": "shoulder pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports tenderness over the right shoulder."
+      },
+      {
+        "prop_id": "CAP9",
+        "cap_type": "Symptom",
+        "canonical_concept": "ibuprofen",
+        "category": "Symptom",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient has been taking ibuprofen."
+      },
+      {
+        "prop_id": "CAP10",
+        "cap_type": "Problem",
+        "canonical_concept": "gallstones",
+        "category": "Problem",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "past",
+        "proposition_text": "The patient reports having gallstones."
+      },
+      {
+        "prop_id": "CAP12",
+        "cap_type": "Problem",
+        "canonical_concept": "gallstones",
+        "category": "Problem",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "past",
+        "proposition_text": "The patient has gallstones."
+      },
+      {
+        "prop_id": "CAP13",
+        "cap_type": "Symptom",
+        "canonical_concept": "numbness",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "denies",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient denies numbness."
+      },
+      {
+        "prop_id": "CAP14",
+        "cap_type": "ExamFinding",
+        "canonical_concept": "elbow as long as I do not move up here",
+        "category": "ExamFinding",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient can straighten their elbow as long as they do not move their shoulder."
+      },
+      {
+        "prop_id": "CAP16",
+        "cap_type": "Order",
+        "canonical_concept": "sling",
+        "category": "Order",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "planned",
+        "temporality": "future",
+        "proposition_text": "The doctor will put the patient in a sling."
+      },
+      {
+        "prop_id": "CAP17",
+        "cap_type": "Order",
+        "canonical_concept": "check in two weeks",
+        "category": "Order",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "planned",
+        "temporality": "future",
+        "proposition_text": "The doctor will check the patient in two weeks."
+      },
+      {
+        "prop_id": "CAP18",
+        "cap_type": "ExamFinding",
+        "canonical_concept": "normal exam",
+        "category": "ExamFinding",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The rest of the patient's body is normal."
+      },
+      {
+        "prop_id": "CAP19",
+        "cap_type": "ExamFinding",
+        "canonical_concept": "proximal humerus fracture",
+        "category": "ExamFinding",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "present",
+        "proposition_text": "The doctor observes a proximal humerus fracture."
+      },
+      {
+        "prop_id": "CAP20",
+        "cap_type": "ExamFinding",
+        "canonical_concept": "proximal humerus fracture",
+        "category": "ExamFinding",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The doctor identified a proximal humerus fracture."
+      },
+      {
+        "prop_id": "CAP21",
+        "cap_type": "ExamFinding",
+        "canonical_concept": "straighten arm",
+        "category": "ExamFinding",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient can straighten their arm."
+      },
+      {
+        "prop_id": "CAP22",
+        "cap_type": "MedicationRequest",
+        "canonical_concept": "cast",
+        "category": "MedicationRequest",
+        "speaker": "doctor",
+        "status": "uncertain",
+        "visit_state": "planned",
+        "temporality": "current",
+        "proposition_text": "The doctor ordered a cast."
+      },
+      {
+        "prop_id": "CAP23",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "lortab",
+        "category": "MedicationStatement",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "future",
+        "claim_type_tags": [
+          "medication",
+          "quantitative"
+        ],
+        "proposition_text": "The doctor prescribed lortab 500 mg."
+      },
+      {
+        "prop_id": "CAP24",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "lortab",
+        "category": "MedicationStatement",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "future",
+        "claim_type_tags": [
+          "medication",
+          "quantitative"
+        ],
+        "proposition_text": "The doctor prescribed 20 tablets of lortab 5 mg."
+      },
+      {
+        "prop_id": "CAP25",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "lortab",
+        "category": "MedicationStatement",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "medication",
+          "quantitative"
+        ],
+        "proposition_text": "The doctor prescribed lortab 500-5 mg tablets."
+      },
+      {
+        "prop_id": "CAP26",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "20",
+        "category": "MedicationStatement",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "medication",
+          "quantitative"
+        ],
+        "proposition_text": "The doctor prescribed 20 lortab tablets."
+      },
+      {
+        "prop_id": "CAP27",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "Pepcid",
+        "category": "MedicationStatement",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient takes Pepcid."
+      },
+      {
+        "prop_id": "CAP28",
+        "cap_type": "ProblemHistory",
+        "canonical_concept": "dirty ball",
+        "category": "ProblemHistory",
+        "speaker": "patient",
+        "status": "uncertain",
+        "visit_state": "historical",
+        "temporality": "yesterday",
+        "proposition_text": "The patient states the ball was dirty."
+      },
+      {
+        "prop_id": "CAP29",
+        "cap_type": "ProblemHistory",
+        "canonical_concept": "dirty ball",
+        "category": "ProblemHistory",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "last night",
+        "proposition_text": "The patient states the ball was dirty."
+      },
+      {
+        "prop_id": "CAP30",
+        "cap_type": "ProblemHistory",
+        "canonical_concept": "fall",
+        "category": "ProblemHistory",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "yesterday",
+        "proposition_text": "The patient fell while playing volleyball."
+      },
+      {
+        "prop_id": "CAP31",
+        "cap_type": "ProblemHistory",
+        "canonical_concept": "fall",
+        "category": "ProblemHistory",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "last night",
+        "proposition_text": "The patient fell while playing volleyball."
+      },
+      {
+        "prop_id": "CAP32",
+        "cap_type": "ProblemHistory",
+        "canonical_concept": "arm",
+        "category": "ProblemHistory",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "last night",
+        "proposition_text": "The patient landed on their arm."
+      },
+      {
+        "prop_id": "CAP33",
+        "cap_type": "ProblemHistory",
+        "canonical_concept": "volleyball",
+        "category": "ProblemHistory",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "yesterday",
+        "proposition_text": "The patient was playing volleyball."
+      },
+      {
+        "prop_id": "CAP34",
+        "cap_type": "ProblemHistory",
+        "canonical_concept": "kicked legs",
+        "category": "ProblemHistory",
+        "speaker": "patient",
+        "status": "uncertain",
+        "visit_state": "historical",
+        "temporality": "yesterday",
+        "proposition_text": "Someone kicked the patient's legs."
+      },
+      {
+        "prop_id": "CAP35",
+        "cap_type": "ProblemHistory",
+        "canonical_concept": "volleyball",
+        "category": "ProblemHistory",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "last night",
+        "proposition_text": "The patient was playing volleyball."
+      },
+      {
+        "prop_id": "CAP36",
+        "cap_type": "ProblemHistory",
+        "canonical_concept": "kicked legs",
+        "category": "ProblemHistory",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "last night",
+        "proposition_text": "Someone kicked the patient's legs."
+      }
+    ]
+  },
+  "reference_gpt_f1_items": {
+    "active_problems_symptoms": [
+      "right upper arm pain",
+      "swelling",
+      "erythema",
+      "tenderness over the right shoulder",
+      "pain"
+    ],
+    "negated_findings": [
+      "denies numbness",
+      "denies tingling"
+    ],
+    "uncertain_findings": [
+      "proximal humerus fracture",
+      "surgical options"
+    ],
+    "medication_treatment": [
+      "taking ibuprofen",
+      "takes Pepcid",
+      "Lortab, 5 mg, #20"
+    ],
+    "plan_followup": [
+      "long arm cast and sling",
+      "follow-up in 2 weeks for repeat imaging"
+    ],
+    "_chunk_count": [
+      "2"
+    ]
+  },
+  "summary_gpt_f1_items": {
+    "active_problems_symptoms": [
+      "right lower extremity injury",
+      "significant pain",
+      "swelling"
+    ],
+    "negated_findings": [],
+    "uncertain_findings": [],
+    "medication_treatment": [
+      "pain medication"
+    ],
+    "plan_followup": [
+      "long arm cast",
+      "follow-up in one week"
+    ],
+    "_chunk_count": [
+      "1"
+    ]
+  },
+  "gpt_f1_alignment": {
+    "by_category": {
+      "active_problems_symptoms": {
+        "precision": 0.6666666666666666,
+        "recall": 0.4,
+        "f1": 0.5,
+        "matched_count": 2,
+        "pred_count": 3,
+        "ref_count": 5,
+        "matches": [
+          {
+            "score": 1.0,
+            "pred_text": "swelling",
+            "ref_text": "swelling"
+          },
+          {
+            "score": 0.6667,
+            "pred_text": "significant pain",
+            "ref_text": "pain"
+          }
+        ],
+        "unsupported_pred_items": [
+          "right lower extremity injury"
+        ],
+        "missing_ref_items": [
+          "right upper arm pain",
+          "erythema",
+          "tenderness over the right shoulder"
+        ]
+      },
+      "negated_findings": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "matched_count": 0,
+        "pred_count": 0,
+        "ref_count": 2,
+        "matches": [],
+        "unsupported_pred_items": [],
+        "missing_ref_items": [
+          "denies numbness",
+          "denies tingling"
+        ]
+      },
+      "uncertain_findings": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "matched_count": 0,
+        "pred_count": 0,
+        "ref_count": 2,
+        "matches": [],
+        "unsupported_pred_items": [],
+        "missing_ref_items": [
+          "proximal humerus fracture",
+          "surgical options"
+        ]
+      },
+      "medication_treatment": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "matched_count": 0,
+        "pred_count": 1,
+        "ref_count": 3,
+        "matches": [],
+        "unsupported_pred_items": [
+          "pain medication"
+        ],
+        "missing_ref_items": [
+          "taking ibuprofen",
+          "takes Pepcid",
+          "Lortab, 5 mg, #20"
+        ]
+      },
+      "plan_followup": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "matched_count": 2,
+        "pred_count": 2,
+        "ref_count": 2,
+        "matches": [
+          {
+            "score": 0.75,
+            "pred_text": "long arm cast",
+            "ref_text": "long arm cast and sling"
+          },
+          {
+            "score": 0.6667,
+            "pred_text": "follow-up in one week",
+            "ref_text": "follow-up in 2 weeks for repeat imaging"
+          }
+        ],
+        "unsupported_pred_items": [],
+        "missing_ref_items": []
+      }
+    }
+  },
+  "reference_nair_concepts": {
+    "sections": [
+      {
+        "heading": "CC",
+        "section_value": "Right upper arm pain.",
+        "medical_concepts": [
+          "right upper arm pain"
+        ]
+      },
+      {
+        "heading": "HPI",
+        "section_value": "Ms. Russell is a 39-year-old female who presents today for an evaluation of severe right upper arm pain. She states she was playing volleyball yesterday and fell and landed on her arm. She has been taking ibuprofen every 6 hours but it does not help. She rates her pain 9/10. She denies any numbness or tingling in her arm. She has a history of gallstones and takes Pepcid. She has a past surgical history of a lumbar fusion 6 years ago. She denies any allergies.\nEXAM\nExamination of the right upper extremity shows swelling and erythema of the right shoulder. Tenderness over the right shoulder. Normal pulses.\nRESULTS\nX-rays of the right humerus, 2 views, obtained on today's visit show a proximal humerus fracture.\nIMPRESSION\nRight proximal humerus fracture.\nPLAN\nAt this point, I discussed the diagnosis and treatment options with the patient. I have recommended we place her into a long arm cast and sling. She will follow up in 2 weeks for repeat imaging. At that point, we may need to discuss surigical options. I will prescribe Lortab, 5 mg, #20 (twenty) to take every 6 hours as needed for pain.\nAll questions were answered.",
+        "medical_concepts": [
+          "right upper arm pain",
+          "arm injury",
+          "ibuprofen",
+          "pain severity 9/10",
+          "numbness",
+          "tingling",
+          "gallstones",
+          "Pepcid",
+          "lumbar fusion",
+          "allergies",
+          "swelling of right shoulder",
+          "erythema of right shoulder",
+          "tenderness of right shoulder",
+          "normal pulses",
+          "X-ray",
+          "proximal humerus fracture",
+          "right proximal humerus fracture",
+          "long arm cast",
+          "sling",
+          "repeat imaging"
+        ]
+      }
+    ],
+    "medical_concepts": [
+      "right upper arm pain",
+      "arm injury",
+      "ibuprofen",
+      "pain severity 9/10",
+      "numbness",
+      "tingling",
+      "gallstones",
+      "Pepcid",
+      "lumbar fusion",
+      "allergies",
+      "swelling of right shoulder",
+      "erythema of right shoulder",
+      "tenderness of right shoulder",
+      "normal pulses",
+      "X-ray",
+      "proximal humerus fracture",
+      "right proximal humerus fracture",
+      "long arm cast",
+      "sling",
+      "repeat imaging"
+    ],
+    "section_count": 2
+  },
+  "summary_nair_concepts": {
+    "sections": [
+      {
+        "heading": "S",
+        "section_value": "The patient presents with a right lower extremity injury.",
+        "medical_concepts": [
+          "right lower extremity injury"
+        ]
+      },
+      {
+        "heading": "O",
+        "section_value": "The patient reports significant pain and swelling.",
+        "medical_concepts": [
+          "pain",
+          "swelling"
+        ]
+      },
+      {
+        "heading": "A",
+        "section_value": "The patient requires immediate orthopedic immobilization.",
+        "medical_concepts": [
+          "orthopedic immobilization"
+        ]
+      },
+      {
+        "heading": "P",
+        "section_value": "I am ordering a long arm cast and pain medication. Please schedule a follow-up in one week to assess healing.",
+        "medical_concepts": [
+          "long arm cast",
+          "pain medication",
+          "follow-up"
+        ]
+      }
+    ],
+    "medical_concepts": [
+      "right lower extremity injury",
+      "pain",
+      "swelling",
+      "orthopedic immobilization",
+      "long arm cast",
+      "pain medication",
+      "follow-up"
+    ],
+    "section_count": 4
+  },
+  "nair_alignment": {
+    "pred_concepts": [
+      "right lower extremity injury",
+      "pain",
+      "swelling",
+      "orthopedic immobilization",
+      "long arm cast",
+      "pain medication",
+      "follow-up"
+    ],
+    "ref_concepts": [
+      "right upper arm pain",
+      "arm injury",
+      "ibuprofen",
+      "pain severity 9/10",
+      "numbness",
+      "tingling",
+      "gallstones",
+      "Pepcid",
+      "lumbar fusion",
+      "allergies",
+      "swelling of right shoulder",
+      "erythema of right shoulder",
+      "tenderness of right shoulder",
+      "normal pulses",
+      "X-ray",
+      "proximal humerus fracture",
+      "right proximal humerus fracture",
+      "long arm cast",
+      "sling",
+      "repeat imaging"
+    ],
+    "precision_alignment": {
+      "found_b": [
+        "pain",
+        "swelling",
+        "orthopedic immobilization",
+        "long arm cast",
+        "pain medication",
+        "follow-up"
+      ],
+      "not_found_b": [
+        "right lower extremity injury"
+      ],
+      "chunk_count": 1,
+      "chunk_results": [
+        {
+          "found_b": [
+            "pain",
+            "swelling",
+            "orthopedic immobilization",
+            "long arm cast",
+            "pain medication",
+            "follow-up"
+          ],
+          "not_found_b": [
+            "right lower extremity injury"
+          ]
+        }
+      ]
+    },
+    "recall_alignment": {
+      "found_b": [
+        "long arm cast"
+      ],
+      "not_found_b": [
+        "right upper arm pain",
+        "arm injury",
+        "ibuprofen",
+        "pain severity 9/10",
+        "numbness",
+        "tingling",
+        "gallstones",
+        "Pepcid",
+        "lumbar fusion",
+        "allergies",
+        "swelling of right shoulder",
+        "erythema of right shoulder",
+        "tenderness of right shoulder",
+        "normal pulses",
+        "X-ray",
+        "proximal humerus fracture",
+        "right proximal humerus fracture",
+        "sling",
+        "repeat imaging"
+      ],
+      "chunk_count": 1,
+      "chunk_results": [
+        {
+          "found_b": [
+            "long arm cast"
+          ],
+          "not_found_b": [
+            "right upper arm pain",
+            "arm injury",
+            "ibuprofen",
+            "pain severity 9/10",
+            "numbness",
+            "tingling",
+            "gallstones",
+            "Pepcid",
+            "lumbar fusion",
+            "allergies",
+            "swelling of right shoulder",
+            "erythema of right shoulder",
+            "tenderness of right shoulder",
+            "normal pulses",
+            "X-ray",
+            "proximal humerus fracture",
+            "right proximal humerus fracture",
+            "sling",
+            "repeat imaging"
+          ]
+        }
+      ]
+    }
+  },
+  "semantic_cap_audit": {
+    "source_cap_recall": [
+      {
+        "cap_id": "P1",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P2",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P3",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P4",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P5",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P6",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P7",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P8",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P9",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P10",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P11",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P12",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P13",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P14",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P15",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P16",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P1",
+        "judgment": "contradicted",
+        "reason": null
+      },
+      {
+        "cap_id": "P2",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P3",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P4",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P5",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P6",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P7",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P8",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P9",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P10",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P11",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P12",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P13",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P14",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P15",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P16",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P1",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P2",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P3",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P4",
+        "judgment": "missing",
+        "reason": null
+      }
+    ],
+    "summary_cap_precision": [
+      {
+        "cap_id": "P1",
+        "judgment": "unsupported",
+        "reason": null
+      },
+      {
+        "cap_id": "P2",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P3",
+        "judgment": "unsupported",
+        "reason": null
+      },
+      {
+        "cap_id": "P4",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P5",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P6",
+        "judgment": "unsupported",
+        "reason": null
+      }
+    ],
+    "metrics": {
+      "semantic_cap_precision": 0.25,
+      "semantic_cap_recall": 0.0556,
+      "semantic_cap_f1": 0.0909,
+      "semantic_cap_precision_supported_count": 0,
+      "semantic_cap_precision_partial_count": 3,
+      "semantic_cap_precision_denominator": 6,
+      "semantic_cap_recall_supported_count": 1,
+      "semantic_cap_recall_partial_count": 2,
+      "semantic_cap_recall_denominator": 36,
+      "semantic_cap_low_value_source_count": 0,
+      "semantic_cap_low_value_summary_count": 0,
+      "semantic_cap_missing_count": 32,
+      "semantic_cap_unsupported_count": 3,
+      "semantic_cap_contradicted_source_count": 1,
+      "semantic_cap_contradicted_summary_count": 0
+    }
+  },
+  "safety_judgment": null,
+  "section_judgment": {
+    "section_miscategorizations": [
+      {
+        "text": "The patient reports significant pain and swelling.",
+        "current_section": "O",
+        "expected_section": "S",
+        "severity": "major",
+        "reason": "This is a patient-reported symptom description and belongs in the Subjective section, not Objective findings."
+      },
+      {
+        "text": "The patient requires immediate orthopedic immobilization.",
+        "current_section": "A",
+        "expected_section": "P",
+        "severity": "major",
+        "reason": "This is an explicit management need/plan (treatment action) rather than a diagnostic impression or problem synthesis, so it belongs in the Plan section."
+      }
+    ],
+    "summary_statistics": {
+      "section_appropriateness_score": 0.5,
+      "section_miscategorization_count": 2,
+      "major_section_miscategorization_count": 2
+    }
+  },
+  "pdsqi_judgment": {
+    "citation_applicable": 0,
+    "citation": 0,
+    "accurate": 1,
+    "thorough": 1,
+    "useful": 1,
+    "organized": 2,
+    "comprehensible": 2,
+    "succinct": 3,
+    "abstraction": 1,
+    "synthesized": 1,
+    "voice_summ": 0,
+    "voice_note": 0,
+    "pdsqi_core_mean": 1.5714
+  },
+  "llm_checklist_judgment": {
+    "content_preservation_core": 1,
+    "noise_suppression": 4,
+    "lay_expression_preservation": 1,
+    "state_update_fidelity": 1,
+    "temporality_preservation": 2,
+    "problem_evidence_linkage": 1,
+    "state_plan_separation": 2,
+    "section_organization_appropriateness": 2,
+    "overall_clinical_usability": 1,
+    "clinically_meaningful_omission": "Yes",
+    "clinically_concerning_hallucination": "Yes",
+    "checklist_a_mean": 2.0,
+    "checklist_b_mean": 1.5,
+    "checklist_c_mean": 1.6667,
+    "llm_checklist_abc_mean": 1.75,
+    "llm_checklist_mean_no_usability": 1.75,
+    "llm_checklist_total_score": 15,
+    "llm_checklist_mean": 1.6667,
+    "llm_checklist_meaningful_omission_yes": 1,
+    "llm_checklist_concerning_hallucination_yes": 1
+  },
+  "metrics": {
+    "case_id": "D2N018",
+    "method": "cluster2sent",
+    "template": "soap",
+    "source_cap_count": 36,
+    "event_plan_count": null,
+    "summary_cap_count": 6,
+    "cap_matched_count": 3,
+    "cap_precision": 0.5,
+    "cap_recall": 0.0833,
+    "cap_f1": 0.1429,
+    "unsupported_summary_cap_count": 3,
+    "missing_source_cap_count": 33,
+    "summary_runtime_seconds": null,
+    "summary_cap_runtime_seconds": 20.244,
+    "event_plan_runtime_seconds": null,
+    "rouge_l_f1_vs_reference": 0.1412,
+    "token_f1_vs_reference": 0.2039,
+    "gptf1_macro_f1": 0.3,
+    "nair_gpt_precision": 0.8571,
+    "nair_gpt_recall": 0.05,
+    "nair_gpt_f1": 0.0945,
+    "semantic_cap_precision": 0.25,
+    "semantic_cap_recall": 0.0556,
+    "semantic_cap_f1": 0.0909,
+    "hallucination_count": null,
+    "major_hallucination_count": null,
+    "omission_count": null,
+    "major_omission_count": null,
+    "section_appropriateness_score": 0.5,
+    "section_miscategorization_count": 2,
+    "major_section_miscategorization_count": 2,
+    "pdsqi_core_mean": 1.5714,
+    "pdsqi_accurate": 1,
+    "pdsqi_thorough": 1,
+    "llm_checklist_total_score": 15,
+    "llm_checklist_mean": 1.6667,
+    "llm_checklist_mean_no_usability": 1.75,
+    "checklist_a_mean": 2.0,
+    "checklist_b_mean": 1.5,
+    "checklist_c_mean": 1.6667,
+    "llm_checklist_abc_mean": 1.75,
+    "content_preservation_core": 1,
+    "noise_suppression": 4,
+    "lay_expression_preservation": 1,
+    "state_update_fidelity": 1,
+    "temporality_preservation": 2,
+    "problem_evidence_linkage": 1,
+    "state_plan_separation": 2,
+    "section_organization_appropriateness": 2,
+    "overall_clinical_usability": 1,
+    "llm_checklist_meaningful_omission_yes": 1,
+    "llm_checklist_concerning_hallucination_yes": 1,
+    "gptf1_active_problems_symptoms_precision": 0.6667,
+    "gptf1_active_problems_symptoms_recall": 0.4,
+    "gptf1_active_problems_symptoms_f1": 0.5,
+    "gptf1_active_problems_symptoms_pred_count": 3,
+    "gptf1_active_problems_symptoms_ref_count": 5,
+    "gptf1_negated_findings_precision": 0.0,
+    "gptf1_negated_findings_recall": 0.0,
+    "gptf1_negated_findings_f1": 0.0,
+    "gptf1_negated_findings_pred_count": 0,
+    "gptf1_negated_findings_ref_count": 2,
+    "gptf1_uncertain_findings_precision": 0.0,
+    "gptf1_uncertain_findings_recall": 0.0,
+    "gptf1_uncertain_findings_f1": 0.0,
+    "gptf1_uncertain_findings_pred_count": 0,
+    "gptf1_uncertain_findings_ref_count": 2,
+    "gptf1_medication_treatment_precision": 0.0,
+    "gptf1_medication_treatment_recall": 0.0,
+    "gptf1_medication_treatment_f1": 0.0,
+    "gptf1_medication_treatment_pred_count": 1,
+    "gptf1_medication_treatment_ref_count": 3,
+    "gptf1_plan_followup_precision": 1.0,
+    "gptf1_plan_followup_recall": 1.0,
+    "gptf1_plan_followup_f1": 1.0,
+    "gptf1_plan_followup_pred_count": 2,
+    "gptf1_plan_followup_ref_count": 2,
+    "nair_pred_concept_count": 7,
+    "nair_ref_concept_count": 20,
+    "nair_precision_match_count": 6,
+    "nair_recall_match_count": 1,
+    "semantic_cap_precision_supported_count": 0,
+    "semantic_cap_precision_partial_count": 3,
+    "semantic_cap_precision_denominator": 6,
+    "semantic_cap_recall_supported_count": 1,
+    "semantic_cap_recall_partial_count": 2,
+    "semantic_cap_recall_denominator": 36,
+    "semantic_cap_low_value_source_count": 0,
+    "semantic_cap_low_value_summary_count": 0,
+    "semantic_cap_missing_count": 32,
+    "semantic_cap_unsupported_count": 3,
+    "semantic_cap_contradicted_source_count": 1,
+    "semantic_cap_contradicted_summary_count": 0,
+    "pdsqi_useful": 1,
+    "pdsqi_organized": 2,
+    "pdsqi_comprehensible": 2,
+    "pdsqi_succinct": 3,
+    "pdsqi_synthesized": 1
+  }
+}

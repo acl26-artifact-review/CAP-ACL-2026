@@ -1,0 +1,150 @@
+Case: D2N003
+
+Problem List and Visit State Tracking
+
+Problem List
+- back pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T27,T3,T5,T7,T9
+  Summary: The patient reports back pain.
+  ClusterId: CL1
+  TemporalProfile: current
+  Updates:
+  - CAP15: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T3 :: The patient reports back pain.
+  - CAP6: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T5 :: The patient describes the pain as shifting.
+  - CAP1: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T9,T7 :: The patient reports back pain.
+  - CAP3: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T9 :: The patient reports pain in the left hand.
+  - CAP13: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T27 :: The patient reports back pain.
+- kidney stones | verification_status=confirmed | clinical_status=active | modalities=assessment,interview,unknown | speakers=doctor,patient | evidence=T31,T45,T5
+  Summary: The doctor suspects a recurrence of kidney stones.
+  ClusterId: CL2
+  TemporalProfile: 2 years ago, current
+  Updates:
+  - CAP30: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=2 years ago turns=T5 :: The patient has a past medical history of kidney stones.
+  - CAP4: content_source=doctor modality=unknown verification_status=unconfirmed clinical_status=historical temporality=current turns=T31 :: The doctor suspects a recurrence of kidney stones.
+  - CAP5: content_source=doctor modality=assessment verification_status=confirmed clinical_status=active temporality=current turns=T45 :: The doctor suspects a recurrence of kidney stones.
+- lightheadedness | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T9
+  Summary: The patient reports feeling lightheaded.
+  ClusterId: CL3
+  TemporalProfile: current
+  Updates:
+  - CAP9: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T9 :: The patient reports feeling lightheaded.
+- hematuria | verification_status=unconfirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T15
+  Summary: The patient thinks they may have blood in their urine.
+  ClusterId: CL6
+  TemporalProfile: past
+  Updates:
+  - CAP2: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=past turns=T15 :: The patient thinks they may have blood in their urine.
+- dizziness | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T17,T19
+  Summary: The patient reports feeling dizzy.
+  ClusterId: CL7
+  TemporalProfile: current
+  Updates:
+  - CAP8: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T17 :: The patient reports feeling dizzy.
+  - CAP16: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T19 :: The patient reports dizziness.
+- abdominal pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T17
+  Summary: The patient reports abdominal pain.
+  ClusterId: CL8
+  TemporalProfile: current
+  Updates:
+  - CAP10: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T17 :: The patient reports abdominal pain.
+- blood in urine | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T27
+  Summary: The patient reports blood in their urine.
+  ClusterId: CL9
+  TemporalProfile: current
+  Updates:
+  - CAP7: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T27 :: The patient reports blood in their urine.
+- body aches | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T27
+  Summary: The patient reports body aches.
+  ClusterId: CL10
+  TemporalProfile: current
+  Updates:
+  - CAP11: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T27 :: The patient reports body aches.
+- chest pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T27
+  Summary: The patient reports chest pain.
+  ClusterId: CL11
+  TemporalProfile: current
+  Updates:
+  - CAP12: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T27 :: The patient reports chest pain.
+- muscle pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T27
+  Summary: The patient reports muscle aches.
+  ClusterId: CL12
+  TemporalProfile: current
+  Updates:
+  - CAP14: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T27 :: The patient reports muscle aches.
+- worsened symptoms | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T45
+  Summary: if your symptoms worsen
+  ClusterId: CL20
+  TemporalProfile: current
+  Updates:
+  - CAP17: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T45 :: if your symptoms worsen
+
+Medication Tracking
+- [MedicationState] imitrex | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T9
+  Summary: The patient takes imitrex.
+  ClusterId: CL4
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient takes imitrex. (T9)
+  Updates:
+  - CAP28: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T9 :: The patient takes imitrex.
+- [MedicationState] tylenol | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T13
+  Summary: The patient takes tylenol.
+  ClusterId: CL5
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient takes tylenol. (T13)
+  Updates:
+  - CAP29: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T13 :: The patient takes tylenol.
+- [MedicationChange] ct scan | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T38
+  Summary: The doctor orders a CT scan without contrast.
+  ClusterId: CL16
+  TemporalProfile: future
+  PlannedChanges:
+  - The doctor orders a CT scan without contrast. (T38)
+  Updates:
+  - CAP19: content_source=doctor modality=plan verification_status=unconfirmed clinical_status=planned temporality=future turns=T38 :: The doctor orders a CT scan without contrast.
+- [MedicationChange] ultram | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T40
+  Summary: The doctor orders Ultram 50 milligrams as needed every six hours.
+  ClusterId: CL18
+  TemporalProfile: future
+  PlannedChanges:
+  - The doctor orders Ultram 50 milligrams as needed every six hours. (T40)
+  Updates:
+  - CAP27: content_source=doctor modality=plan verification_status=unconfirmed clinical_status=planned temporality=future turns=T40 :: The doctor orders Ultram 50 milligrams as needed every six hours.
+- [MedicationChange] protonix refill | verification_status=confirmed | clinical_status=planned | modalities=interview,plan | speakers=doctor | evidence=T44,T45,T50
+  Summary: The doctor requests a refill of Protonix.
+  ClusterId: CL19
+  TemporalProfile: daily, future
+  PlannedChanges:
+  - The doctor orders Protonix 40 milligrams daily. (T44)
+  - The doctor requests a refill of Protonix. (T45)
+  - Order a refill of protonix 40 milligrams daily. (T50)
+  Updates:
+  - CAP21: content_source=doctor modality=plan verification_status=unconfirmed clinical_status=planned temporality=future turns=T44 :: The doctor orders Protonix 40 milligrams daily.
+  - CAP22: content_source=doctor modality=plan verification_status=unconfirmed clinical_status=planned temporality=future turns=T45 :: The doctor requests a refill of Protonix.
+  - CAP20: content_source=doctor modality=interview verification_status=confirmed clinical_status=planned temporality=daily turns=T50 :: Order a refill of protonix 40 milligrams daily.
+
+Other Structured States
+- [TestResult] creatinine | verification_status=confirmed | clinical_status=active | modalities=test_result | speakers=dragon | evidence=T30
+  Summary: The creatinine level is slightly elevated.
+  ClusterId: CL13
+  TemporalProfile: current
+- [ExamFinding] right-hand tenderness | verification_status=confirmed | clinical_status=active | modalities=exam | speakers=doctor | evidence=T30
+  Summary: The doctor finds right-hand tenderness.
+  ClusterId: CL14
+  TemporalProfile: current
+- [ExamFinding] abdomen tenderness | verification_status=confirmed | clinical_status=active | modalities=exam | speakers=doctor | evidence=T30
+  Summary: The doctor finds abdominal tenderness.
+  ClusterId: CL15
+  TemporalProfile: current
+- [Plan] ct scan | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T38
+  Summary: The doctor orders a CT scan.
+  ClusterId: CL17
+  TemporalProfile: future
+- [Plan] follow-up | verification_status=unconfirmed | clinical_status=planned | modalities=interview | speakers=doctor | evidence=T45
+  Summary: I'll be in touch with you in ... in a day or so.
+  ClusterId: CL21
+  TemporalProfile: in a day or so
+- [Plan] cat scan | verification_status=unconfirmed | clinical_status=planned | modalities=interview | speakers=doctor | evidence=T46
+  Summary: The nurse will be in soon, and she'll help you get the cat scan scheduled.
+  ClusterId: CL22
+  TemporalProfile: soon

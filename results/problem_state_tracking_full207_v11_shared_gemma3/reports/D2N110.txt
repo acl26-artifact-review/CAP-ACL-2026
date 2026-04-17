@@ -1,0 +1,68 @@
+Case: D2N110
+
+Problem List and Visit State Tracking
+
+Problem List
+- foot pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T1
+  Summary: The patient reports foot pain.
+  ClusterId: CL1
+  TemporalProfile: current
+  Updates:
+  - CAP6: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T1 :: The patient reports foot pain.
+- foot wound | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T3
+  Summary: The patient reports a wound on their right foot.
+  ClusterId: CL2
+  TemporalProfile: current
+  Updates:
+  - CAP2: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T3 :: The patient reports a wound on their right foot.
+- neuropathy | verification_status=unconfirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T7
+  Summary: The patient experienced a blister that worsened and developed into a wound.
+  ClusterId: CL3
+  TemporalProfile: past few weeks
+  Updates:
+  - CAP9: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=past few weeks turns=T7 :: The patient experienced a blister that worsened and developed into a wound.
+- pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T9
+  Summary: The patient reports pain in the left hand.
+  ClusterId: CL5
+  TemporalProfile: current
+  Updates:
+  - CAP3: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T9 :: The patient reports pain in the left hand.
+- sticking | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T13
+  Summary: The patient reports that the sock sticks to the wound.
+  ClusterId: CL7
+  TemporalProfile: current
+  Updates:
+  - CAP1: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T13 :: The patient reports that the sock sticks to the wound.
+- wound | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T13
+  Summary: The patient reports a wound.
+  ClusterId: CL8
+  TemporalProfile: current
+  Updates:
+  - CAP4: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T13 :: The patient reports a wound.
+- problem | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T14
+  Summary: The patient has a problem.
+  ClusterId: CL9
+  TemporalProfile: current
+  Updates:
+  - CAP5: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T14 :: The patient has a problem.
+
+Medication Tracking
+- [MedicationState] antibiotics | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T8
+  Summary: The patient completed a course of antibiotics.
+  ClusterId: CL4
+  TemporalProfile: yesterday
+  CurrentRegimens:
+  - The patient completed a course of antibiotics. (T8)
+  Updates:
+  - CAP8: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=yesterday turns=T8 :: The patient completed a course of antibiotics.
+- [MedicationState] course | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T9
+  Summary: The patient finished a course of medication yesterday.
+  ClusterId: CL6
+  TemporalProfile: yesterday
+  CurrentRegimens:
+  - The patient finished a course of medication yesterday. (T9)
+  Updates:
+  - CAP7: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=yesterday turns=T9 :: The patient finished a course of medication yesterday.
+
+Other Structured States
+- None

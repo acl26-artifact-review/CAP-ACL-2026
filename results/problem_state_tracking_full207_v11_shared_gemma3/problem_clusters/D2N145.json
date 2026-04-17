@@ -1,0 +1,2520 @@
+{
+  "clusters": [
+    {
+      "cluster_id": "CL1",
+      "cluster_type": "ProblemState",
+      "canonical_concept": "rash",
+      "primary_cap_type": "Symptom",
+      "source_cap_types": [
+        "Problem",
+        "Symptom"
+      ],
+      "final_verification_status": "confirmed",
+      "clinical_status": "active",
+      "final_assertion": "present",
+      "visit_state": "active",
+      "source_speakers": [
+        "doctor",
+        "patient"
+      ],
+      "source_modalities": [
+        "interview"
+      ],
+      "temporal_profile": [
+        "current"
+      ],
+      "evidence_turn_ids": [
+        "T109",
+        "T6",
+        "T81",
+        "T87"
+      ],
+      "supporting_cap_ids": [
+        "CAP10",
+        "CAP18",
+        "CAP19",
+        "CAP21"
+      ],
+      "cluster_summary": "The patient reports a small rash.",
+      "salience_score": 10,
+      "is_low_value": false,
+      "updates": [
+        {
+          "cap_id": "CAP10",
+          "content_source": "patient",
+          "modality": "interview",
+          "verification_status": "unconfirmed",
+          "clinical_status": "active",
+          "assertion": "uncertain",
+          "visit_state": "active",
+          "temporality": "current",
+          "turn_ids": [
+            "T6"
+          ],
+          "proposition_text": "The patient reports a small rash."
+        },
+        {
+          "cap_id": "CAP18",
+          "content_source": "doctor",
+          "modality": "interview",
+          "verification_status": "confirmed",
+          "clinical_status": "active",
+          "assertion": "present",
+          "visit_state": "active",
+          "temporality": "current",
+          "turn_ids": [
+            "T81"
+          ],
+          "proposition_text": "The doctor mentioned a rash."
+        },
+        {
+          "cap_id": "CAP19",
+          "content_source": "patient",
+          "modality": "interview",
+          "verification_status": "unconfirmed",
+          "clinical_status": "active",
+          "assertion": "uncertain",
+          "visit_state": "active",
+          "temporality": "current",
+          "turn_ids": [
+            "T87"
+          ],
+          "proposition_text": "The patient has a rash."
+        },
+        {
+          "cap_id": "CAP21",
+          "content_source": "patient",
+          "modality": "interview",
+          "verification_status": "confirmed",
+          "clinical_status": "active",
+          "assertion": "present",
+          "visit_state": "active",
+          "temporality": "current",
+          "turn_ids": [
+            "T109"
+          ],
+          "proposition_text": "The patient reports a rash."
+        }
+      ]
+    },
+    {
+      "cluster_id": "CL2",
+      "cluster_type": "MedicationState",
+      "canonical_concept": "doxycycline",
+      "primary_cap_type": "MedicationStatement",
+      "source_cap_types": [
+        "MedicationStatement"
+      ],
+      "final_verification_status": "confirmed",
+      "clinical_status": "active",
+      "final_assertion": "present",
+      "visit_state": "active",
+      "source_speakers": [
+        "doctor",
+        "patient"
+      ],
+      "source_modalities": [
+        "interview",
+        "unknown"
+      ],
+      "temporal_profile": [
+        "current",
+        "future",
+        "past"
+      ],
+      "evidence_turn_ids": [
+        "T109",
+        "T15",
+        "T40",
+        "T45",
+        "T6"
+      ],
+      "supporting_cap_ids": [
+        "CAP54",
+        "CAP58",
+        "CAP59",
+        "CAP56",
+        "CAP60"
+      ],
+      "cluster_summary": "The patient is now taking doxycycline at once a day.",
+      "salience_score": 8,
+      "is_low_value": false,
+      "updates": [
+        {
+          "cap_id": "CAP54",
+          "content_source": "patient",
+          "modality": "interview",
+          "verification_status": "confirmed",
+          "clinical_status": "active",
+          "assertion": "present",
+          "visit_state": "active",
+          "temporality": "current",
+          "turn_ids": [
+            "T6"
+          ],
+          "proposition_text": "The patient is now taking doxycycline at once a day."
+        },
+        {
+          "cap_id": "CAP58",
+          "content_source": "doctor",
+          "modality": "interview",
+          "verification_status": "confirmed",
+          "clinical_status": "active",
+          "assertion": "present",
+          "visit_state": "active",
+          "temporality": "current",
+          "turn_ids": [
+            "T15"
+          ],
+          "proposition_text": "The doctor suggests resuming doxycycline twice a day."
+        },
+        {
+          "cap_id": "CAP59",
+          "content_source": "doctor",
+          "modality": "unknown",
+          "verification_status": "confirmed",
+          "clinical_status": "active",
+          "assertion": "present",
+          "visit_state": "active",
+          "temporality": "past",
+          "turn_ids": [
+            "T40"
+          ],
+          "proposition_text": "The patient was taking doxycycline twice a day."
+        },
+        {
+          "cap_id": "CAP56",
+          "content_source": "doctor",
+          "modality": "unknown",
+          "verification_status": "confirmed",
+          "clinical_status": "active",
+          "assertion": "present",
+          "visit_state": "active",
+          "temporality": "future",
+          "turn_ids": [
+            "T45"
+          ],
+          "proposition_text": "The doctor recommends increasing doxycycline to twice a day."
+        },
+        {
+          "cap_id": "CAP60",
+          "content_source": "doctor",
+          "modality": "interview",
+          "verification_status": "confirmed",
+          "clinical_status": "active",
+          "assertion": "present",
+          "visit_state": "active",
+          "temporality": "current",
+          "turn_ids": [
+            "T109"
+          ],
+          "proposition_text": "The doctor recommends continuing doxycycline for another week."
+        }
+      ],
+      "current_regimens": [
+        {
+          "proposition_text": "The patient is now taking doxycycline at once a day.",
+          "turn_ids": [
+            "T6"
+          ],
+          "attributes": {
+            "dosage": "once a day"
+          }
+        },
+        {
+          "proposition_text": "The doctor suggests resuming doxycycline twice a day.",
+          "turn_ids": [
+            "T15"
+          ],
+          "attributes": {}
+        },
+        {
+          "proposition_text": "The patient was taking doxycycline twice a day.",
+          "turn_ids": [
+            "T40"
+          ],
+          "attributes": {}
+        },
+        {
+          "proposition_text": "The doctor recommends increasing doxycycline to twice a day.",
+          "turn_ids": [
+            "T45"
+          ],
+          "attributes": {}
+        },
+        {
+          "proposition_text": "The doctor recommends continuing doxycycline for another week.",
+          "turn_ids": [
+            "T109"
+          ],
+          "attributes": {}
+        }
+      ]
+    },
+    {
+      "cluster_id": "CL3",
+      "cluster_type": "ProblemState",
+      "canonical_concept": "plateaued",
+      "primary_cap_type": "Symptom",
+      "source_cap_types": [
+        "Symptom"
+      ],
+      "final_verification_status": "unconfirmed",
+      "clinical_status": "active",
+      "final_assertion": "uncertain",
+      "visit_state": "active",
+      "source_speakers": [
+        "patient"
+      ],
+      "source_modalities": [
+        "interview"
+      ],
+      "temporal_profile": [
+        "current"
+      ],
+      "evidence_turn_ids": [
+        "T10"
+      ],
+      "supporting_cap_ids": [
+        "CAP8"
+      ],
+      "cluster_summary": "The patient reports the rash has plateaued.",
+      "salience_score": 10,
+      "is_low_value": false,
+      "updates": [
+        {
+          "cap_id": "CAP8",
+          "content_source": "patient",
+          "modality": "interview",
+          "verification_status": "unconfirmed",
+          "clinical_status": "active",
+          "assertion": "uncertain",
+          "visit_state": "active",
+          "temporality": "current",
+          "turn_ids": [
+            "T10"
+          ],
+          "proposition_text": "The patient reports the rash has plateaued."
+        }
+      ]
+    },
+    {
+      "cluster_id": "CL4",
+      "cluster_type": "ProblemState",
+      "canonical_concept": "hand pain",
+      "primary_cap_type": "Symptom",
+      "source_cap_types": [
+        "Problem",
+        "Symptom"
+      ],
+      "final_verification_status": "unconfirmed",
+      "clinical_status": "active",
+      "final_assertion": "uncertain",
+      "visit_state": "active",
+      "source_speakers": [
+        "patient"
+      ],
+      "source_modalities": [
+        "interview"
+      ],
+      "temporal_profile": [
+        "current"
+      ],
+      "evidence_turn_ids": [
+        "T16",
+        "T28",
+        "T38",
+        "T56"
+      ],
+      "supporting_cap_ids": [
+        "CAP7",
+        "CAP14",
+        "CAP17",
+        "CAP16"
+      ],
+      "cluster_summary": "The patient reports pain in the left hand.",
+      "salience_score": 10,
+      "is_low_value": false,
+      "updates": [
+        {
+          "cap_id": "CAP7",
+          "content_source": "patient",
+          "modality": "interview",
+          "verification_status": "confirmed",
+          "clinical_status": "active",
+          "assertion": "present",
+          "visit_state": "active",
+          "temporality": "current",
+          "turn_ids": [
+            "T16"
+          ],
+          "proposition_text": "The patient reports pain in the left hand."
+        },
+        {
+          "cap_id": "CAP14",
+          "content_source": "patient",
+          "modality": "interview",
+          "verification_status": "confirmed",
+          "clinical_status": "active",
+          "assertion": "present",
+          "visit_state": "active",
+          "temporality": "current",
+          "turn_ids": [
+            "T28"
+          ],
+          "proposition_text": "The patient reports hand pain."
+        },
+        {
+          "cap_id": "CAP17",
+          "content_source": "patient",
+          "modality": "interview",
+          "verification_status": "confirmed",
+          "clinical_status": "active",
+          "assertion": "present",
+          "visit_state": "active",
+          "temporality": "current",
+          "turn_ids": [
+            "T38"
+          ],
+          "proposition_text": "The patient reports hand pain."
+        },
+        {
+          "cap_id": "CAP16",
+          "content_source": "patient",
+          "modality": "interview",
+          "verification_status": "unconfirmed",
+          "clinical_status": "active",
+          "assertion": "uncertain",
+          "visit_state": "active",
+          "temporality": "current",
+          "turn_ids": [
+            "T56"
+          ],
+          "proposition_text": "The patient reports hand pain."
+        }
+      ]
+    },
+    {
+      "cluster_id": "CL5",
+      "cluster_type": "ProblemState",
+      "canonical_concept": "worried",
+      "primary_cap_type": "Problem",
+      "source_cap_types": [
+        "Problem"
+      ],
+      "final_verification_status": "confirmed",
+      "clinical_status": "active",
+      "final_assertion": "present",
+      "visit_state": "active",
+      "source_speakers": [
+        "patient"
+      ],
+      "source_modalities": [
+        "interview"
+      ],
+      "temporal_profile": [
+        "current"
+      ],
+      "evidence_turn_ids": [
+        "T16"
+      ],
+      "supporting_cap_ids": [
+        "CAP11"
+      ],
+      "cluster_summary": "The patient expressed worry about elidel.",
+      "salience_score": 10,
+      "is_low_value": false,
+      "updates": [
+        {
+          "cap_id": "CAP11",
+          "content_source": "patient",
+          "modality": "interview",
+          "verification_status": "confirmed",
+          "clinical_status": "active",
+          "assertion": "present",
+          "visit_state": "active",
+          "temporality": "current",
+          "turn_ids": [
+            "T16"
+          ],
+          "proposition_text": "The patient expressed worry about elidel."
+        }
+      ]
+    },
+    {
+      "cluster_id": "CL6",
+      "cluster_type": "Plan",
+      "canonical_concept": "elidel",
+      "primary_cap_type": "Order",
+      "source_cap_types": [
+        "Order"
+      ],
+      "final_verification_status": "unconfirmed",
+      "clinical_status": "planned",
+      "final_assertion": "hypothetical",
+      "visit_state": "planned",
+      "source_speakers": [
+        "doctor"
+      ],
+      "source_modalities": [
+        "assessment",
+        "interview"
+      ],
+      "temporal_profile": [
+        "future"
+      ],
+      "evidence_turn_ids": [
+        "T17",
+        "T47"
+      ],
+      "supporting_cap_ids": [
+        "CAP36",
+        "CAP42"
+      ],
+      "cluster_summary": "The doctor recommends starting elidel.",
+      "salience_score": 9,
+      "is_low_value": false,
+      "updates": [
+        {
+          "cap_id": "CAP36",
+          "content_source": "doctor",
+          "modality": "interview",
+          "verification_status": "confirmed",
+          "clinical_status": "planned",
+          "assertion": "hypothetical",
+          "visit_state": "planned",
+          "temporality": "future",
+          "turn_ids": [
+            "T17"
+          ],
+          "proposition_text": "The doctor offers to discuss elidel."
+        },
+        {
+          "cap_id": "CAP42",
+          "content_source": "doctor",
+          "modality": "assessment",
+          "verification_status": "unconfirmed",
+          "clinical_status": "planned",
+          "assertion": "hypothetical",
+          "visit_state": "planned",
+          "temporality": "future",
+          "turn_ids": [
+            "T47"
+          ],
+          "proposition_text": "The doctor recommends starting elidel."
+        }
+      ]
+    },
+    {
+      "cluster_id": "CL7",
+      "cluster_type": "ProblemState",
+      "canonical_concept": "dry skin",
+      "primary_cap_type": "Symptom",
+      "source_cap_types": [
+        "Symptom"
+      ],
+      "final_verification_status": "confirmed",
+      "clinical_status": "active",
+      "final_assertion": "present",
+      "visit_state": "active",
+      "source_speakers": [
+        "patient"
+      ],
+      "source_modalities": [
+        "interview"
+      ],
+      "temporal_profile": [
+        "current"
+      ],
+      "evidence_turn_ids": [
+        "T36",
+        "T92"
+      ],
+      "supporting_cap_ids": [
+        "CAP9",
+        "CAP20"
+      ],
+      "cluster_summary": "The patient reports not using any lotion.",
+      "salience_score": 10,
+      "is_low_value": false,
+      "updates": [
+        {
+          "cap_id": "CAP9",
+          "content_source": "patient",
+          "modality": "interview",
+          "verification_status": "confirmed",
+          "clinical_status": "active",
+          "assertion": "present",
+          "visit_state": "active",
+          "temporality": "current",
+          "turn_ids": [
+            "T36"
+          ],
+          "proposition_text": "The patient reports not using any lotion."
+        },
+        {
+          "cap_id": "CAP20",
+          "content_source": "patient",
+          "modality": "interview",
+          "verification_status": "confirmed",
+          "clinical_status": "active",
+          "assertion": "present",
+          "visit_state": "active",
+          "temporality": "current",
+          "turn_ids": [
+            "T92"
+          ],
+          "proposition_text": "The patient reports feeling dry."
+        }
+      ]
+    },
+    {
+      "cluster_id": "CL8",
+      "cluster_type": "MedicationChange",
+      "canonical_concept": "doxycycline",
+      "primary_cap_type": "MedicationRequest",
+      "source_cap_types": [
+        "MedicationRequest",
+        "MedicationStatement"
+      ],
+      "final_verification_status": "confirmed",
+      "clinical_status": "planned",
+      "final_assertion": "hypothetical",
+      "visit_state": "planned",
+      "source_speakers": [
+        "doctor"
+      ],
+      "source_modalities": [
+        "interview",
+        "plan"
+      ],
+      "temporal_profile": [
+        "another week",
+        "current",
+        "daily",
+        "future",
+        "twice daily until rash is gone"
+      ],
+      "evidence_turn_ids": [
+        "T105",
+        "T109",
+        "T117",
+        "T45",
+        "T97"
+      ],
+      "supporting_cap_ids": [
+        "CAP37",
+        "CAP49",
+        "CAP26",
+        "CAP41",
+        "CAP61"
+      ],
+      "cluster_summary": "Take doxycycline twice a day until the rash is gone.",
+      "salience_score": 9,
+      "is_low_value": false,
+      "updates": [
+        {
+          "cap_id": "CAP37",
+          "content_source": "doctor",
+          "modality": "interview",
+          "verification_status": "confirmed",
+          "clinical_status": "planned",
+          "assertion": "hypothetical",
+          "visit_state": "planned",
+          "temporality": "daily",
+          "turn_ids": [
+            "T45"
+          ],
+          "proposition_text": "The doctor recommends doxycycline twice daily."
+        },
+        {
+          "cap_id": "CAP49",
+          "content_source": "doctor",
+          "modality": "plan",
+          "verification_status": "confirmed",
+          "clinical_status": "planned",
+          "assertion": "hypothetical",
+          "visit_state": "planned",
+          "temporality": "future",
+          "turn_ids": [
+            "T97"
+          ],
+          "proposition_text": "The doctor orders doxycycline to be increased to twice a day."
+        },
+        {
+          "cap_id": "CAP26",
+          "content_source": "doctor",
+          "modality": "interview",
+          "verification_status": "confirmed",
+          "clinical_status": "planned",
+          "assertion": "hypothetical",
+          "visit_state": "planned",
+          "temporality": "twice daily until rash is gone",
+          "turn_ids": [
+            "T105"
+          ],
+          "proposition_text": "Take doxycycline twice a day until the rash is gone."
+        },
+        {
+          "cap_id": "CAP41",
+          "content_source": "doctor",
+          "modality": "interview",
+          "verification_status": "confirmed",
+          "clinical_status": "planned",
+          "assertion": "hypothetical",
+          "visit_state": "planned",
+          "temporality": "another week",
+          "turn_ids": [
+            "T109"
+          ],
+          "proposition_text": "Continue taking doxycycline for another week."
+        },
+        {
+          "cap_id": "CAP61",
+          "content_source": "doctor",
+          "modality": "interview",
+          "verification_status": "confirmed",
+          "clinical_status": "active",
+          "assertion": "present",
+          "visit_state": "active",
+          "temporality": "current",
+          "turn_ids": [
+            "T117"
+          ],
+          "proposition_text": "The patient has another refill of the doxycycline."
+        }
+      ],
+      "planned_changes": [
+        {
+          "proposition_text": "The doctor recommends doxycycline twice daily.",
+          "turn_ids": [
+            "T45"
+          ],
+          "attributes": {
+            "frequency": "twice daily"
+          }
+        },
+        {
+          "proposition_text": "The doctor orders doxycycline to be increased to twice a day.",
+          "turn_ids": [
+            "T97"
+          ],
+          "attributes": {}
+        },
+        {
+          "proposition_text": "Take doxycycline twice a day until the rash is gone.",
+          "turn_ids": [
+            "T105"
+          ],
+          "attributes": {}
+        },
+        {
+          "proposition_text": "Continue taking doxycycline for another week.",
+          "turn_ids": [
+            "T109"
+          ],
+          "attributes": {}
+        },
+        {
+          "proposition_text": "The patient has another refill of the doxycycline.",
+          "turn_ids": [
+            "T117"
+          ],
+          "attributes": {}
+        }
+      ]
+    },
+    {
+      "cluster_id": "CL9",
+      "cluster_type": "MedicationChange",
+      "canonical_concept": "elidel",
+      "primary_cap_type": "MedicationRequest",
+      "source_cap_types": [
+        "MedicationRequest"
+      ],
+      "final_verification_status": "unconfirmed",
+      "clinical_status": "planned",
+      "final_assertion": "hypothetical",
+      "visit_state": "planned",
+      "source_speakers": [
+        "doctor"
+      ],
+      "source_modalities": [
+        "interview",
+        "plan"
+      ],
+      "temporal_profile": [
+        "future",
+        "sooner rather than later"
+      ],
+      "evidence_turn_ids": [
+        "T47",
+        "T55"
+      ],
+      "supporting_cap_ids": [
+        "CAP43",
+        "CAP44"
+      ],
+      "cluster_summary": "The doctor recommends using elidel.",
+      "salience_score": 9,
+      "is_low_value": false,
+      "updates": [
+        {
+          "cap_id": "CAP43",
+          "content_source": "doctor",
+          "modality": "interview",
+          "verification_status": "confirmed",
+          "clinical_status": "planned",
+          "assertion": "hypothetical",
+          "visit_state": "planned",
+          "temporality": "future",
+          "turn_ids": [
+            "T47"
+          ],
+          "proposition_text": "The doctor recommends starting elidel."
+        },
+        {
+          "cap_id": "CAP44",
+          "content_source": "doctor",
+          "modality": "plan",
+          "verification_status": "unconfirmed",
+          "clinical_status": "planned",
+          "assertion": "hypothetical",
+          "visit_state": "planned",
+          "temporality": "sooner rather than later",
+          "turn_ids": [
+            "T55"
+          ],
+          "proposition_text": "The doctor recommends using elidel."
+        }
+      ],
+      "planned_changes": [
+        {
+          "proposition_text": "The doctor recommends starting elidel.",
+          "turn_ids": [
+            "T47"
+          ],
+          "attributes": {}
+        },
+        {
+          "proposition_text": "The doctor recommends using elidel.",
+          "turn_ids": [
+            "T55"
+          ],
+          "attributes": {}
+        }
+      ]
+    },
+    {
+      "cluster_id": "CL10",
+      "cluster_type": "ProblemState",
+      "canonical_concept": "sun sensitivity",
+      "primary_cap_type": "Symptom",
+      "source_cap_types": [
+        "Symptom"
+      ],
+      "final_verification_status": "confirmed",
+      "clinical_status": "active",
+      "final_assertion": "present",
+      "visit_state": "active",
+      "source_speakers": [
+        "patient"
+      ],
+      "source_modalities": [
+        "interview"
+      ],
+      "temporal_profile": [
+        "current"
+      ],
+      "evidence_turn_ids": [
+        "T52"
+      ],
+      "supporting_cap_ids": [
+        "CAP15"
+      ],
+      "cluster_summary": "The patient feels sun sensitive.",
+      "salience_score": 10,
+      "is_low_value": false,
+      "updates": [
+        {
+          "cap_id": "CAP15",
+          "content_source": "patient",
+          "modality": "interview",
+          "verification_status": "confirmed",
+          "clinical_status": "active",
+          "assertion": "present",
+          "visit_state": "active",
+          "temporality": "current",
+          "turn_ids": [
+            "T52"
+          ],
+          "proposition_text": "The patient feels sun sensitive."
+        }
+      ]
+    },
+    {
+      "cluster_id": "CL11",
+      "cluster_type": "ProblemState",
+      "canonical_concept": "cost of medication",
+      "primary_cap_type": "Problem",
+      "source_cap_types": [
+        "Problem"
+      ],
+      "final_verification_status": "unconfirmed",
+      "clinical_status": "historical",
+      "final_assertion": "historical",
+      "visit_state": "historical",
+      "source_speakers": [
+        "patient"
+      ],
+      "source_modalities": [
+        "interview"
+      ],
+      "temporal_profile": [
+        "recently"
+      ],
+      "evidence_turn_ids": [
+        "T56"
+      ],
+      "supporting_cap_ids": [
+        "CAP2"
+      ],
+      "cluster_summary": "The patient reports the cost of medication is too high.",
+      "salience_score": 10,
+      "is_low_value": false,
+      "updates": [
+        {
+          "cap_id": "CAP2",
+          "content_source": "patient",
+          "modality": "interview",
+          "verification_status": "unconfirmed",
+          "clinical_status": "historical",
+          "assertion": "historical",
+          "visit_state": "historical",
+          "temporality": "recently",
+          "turn_ids": [
+            "T56"
+          ],
+          "proposition_text": "The patient reports the cost of medication is too high."
+        }
+      ]
+    },
+    {
+      "cluster_id": "CL12",
+      "cluster_type": "MedicationChange",
+      "canonical_concept": "eucrisa",
+      "primary_cap_type": "MedicationRequest",
+      "source_cap_types": [
+        "MedicationRequest"
+      ],
+      "final_verification_status": "unconfirmed",
+      "clinical_status": "planned",
+      "final_assertion": "hypothetical",
+      "visit_state": "planned",
+      "source_speakers": [
+        "patient"
+      ],
+      "source_modalities": [
+        "interview"
+      ],
+      "temporal_profile": [
+        "instead"
+      ],
+      "evidence_turn_ids": [
+        "T62"
+      ],
+      "supporting_cap_ids": [
+        "CAP38"
+      ],
+      "cluster_summary": "The patient suggests using eucrisa instead.",
+      "salience_score": 9,
+      "is_low_value": false,
+      "updates": [
+        {
+          "cap_id": "CAP38",
+          "content_source": "patient",
+          "modality": "interview",
+          "verification_status": "unconfirmed",
+          "clinical_status": "planned",
+          "assertion": "hypothetical",
+          "visit_state": "planned",
+          "temporality": "instead",
+          "turn_ids": [
+            "T62"
+          ],
+          "proposition_text": "The patient suggests using eucrisa instead."
+        }
+      ],
+      "planned_changes": [
+        {
+          "proposition_text": "The patient suggests using eucrisa instead.",
+          "turn_ids": [
+            "T62"
+          ],
+          "attributes": {}
+        }
+      ]
+    },
+    {
+      "cluster_id": "CL13",
+      "cluster_type": "ProblemState",
+      "canonical_concept": "cost",
+      "primary_cap_type": "Problem",
+      "source_cap_types": [
+        "Problem"
+      ],
+      "final_verification_status": "confirmed",
+      "clinical_status": "historical",
+      "final_assertion": "historical",
+      "visit_state": "historical",
+      "source_speakers": [
+        "patient"
+      ],
+      "source_modalities": [
+        "interview"
+      ],
+      "temporal_profile": [
+        "past"
+      ],
+      "evidence_turn_ids": [
+        "T65",
+        "T66"
+      ],
+      "supporting_cap_ids": [
+        "CAP3",
+        "CAP4"
+      ],
+      "cluster_summary": "The patient states the cost was previously $30 to $40.",
+      "salience_score": 10,
+      "is_low_value": false,
+      "updates": [
+        {
+          "cap_id": "CAP3",
+          "content_source": "patient",
+          "modality": "interview",
+          "verification_status": "confirmed",
+          "clinical_status": "historical",
+          "assertion": "historical",
+          "visit_state": "historical",
+          "temporality": "past",
+          "turn_ids": [
+            "T65"
+          ],
+          "proposition_text": "The patient states the cost was previously $30 to $40."
+        },
+        {
+          "cap_id": "CAP4",
+          "content_source": "patient",
+          "modality": "interview",
+          "verification_status": "confirmed",
+          "clinical_status": "historical",
+          "assertion": "historical",
+          "visit_state": "historical",
+          "temporality": "past",
+          "turn_ids": [
+            "T66"
+          ],
+          "proposition_text": "The patient states the cost was around $850 after insurance."
+        }
+      ]
+    },
+    {
+      "cluster_id": "CL14",
+      "cluster_type": "TestResult",
+      "canonical_concept": "elidel price",
+      "primary_cap_type": "TestResult",
+      "source_cap_types": [
+        "TestResult"
+      ],
+      "final_verification_status": "unconfirmed",
+      "clinical_status": "active",
+      "final_assertion": "uncertain",
+      "visit_state": "active",
+      "source_speakers": [
+        "doctor"
+      ],
+      "source_modalities": [
+        "assessment"
+      ],
+      "temporal_profile": [
+        "currently"
+      ],
+      "evidence_turn_ids": [
+        "T65"
+      ],
+      "supporting_cap_ids": [
+        "CAP33"
+      ],
+      "cluster_summary": "The elidel price is around $ 70.",
+      "salience_score": 9,
+      "is_low_value": false,
+      "updates": [
+        {
+          "cap_id": "CAP33",
+          "content_source": "doctor",
+          "modality": "assessment",
+          "verification_status": "unconfirmed",
+          "clinical_status": "active",
+          "assertion": "uncertain",
+          "visit_state": "active",
+          "temporality": "currently",
+          "turn_ids": [
+            "T65"
+          ],
+          "proposition_text": "The elidel price is around $ 70."
+        }
+      ]
+    },
+    {
+      "cluster_id": "CL15",
+      "cluster_type": "MedicationChange",
+      "canonical_concept": "tacrolimus ointment",
+      "primary_cap_type": "MedicationRequest",
+      "source_cap_types": [
+        "MedicationRequest",
+        "MedicationStatement"
+      ],
+      "final_verification_status": "confirmed",
+      "clinical_status": "planned",
+      "final_assertion": "hypothetical",
+      "visit_state": "planned",
+      "source_speakers": [
+        "doctor"
+      ],
+      "source_modalities": [
+        "interview",
+        "plan"
+      ],
+      "temporal_profile": [
+        "current",
+        "future",
+        "once a day for a week before stopping"
+      ],
+      "evidence_turn_ids": [
+        "T109",
+        "T67"
+      ],
+      "supporting_cap_ids": [
+        "CAP39",
+        "CAP52",
+        "CAP27"
+      ],
+      "cluster_summary": "The doctor suggests trying tacrolimus ointment.",
+      "salience_score": 9,
+      "is_low_value": false,
+      "updates": [
+        {
+          "cap_id": "CAP39",
+          "content_source": "doctor",
+          "modality": "plan",
+          "verification_status": "unconfirmed",
+          "clinical_status": "planned",
+          "assertion": "hypothetical",
+          "visit_state": "planned",
+          "temporality": "future",
+          "turn_ids": [
+            "T67"
+          ],
+          "proposition_text": "The doctor suggests trying tacrolimus ointment."
+        },
+        {
+          "cap_id": "CAP52",
+          "content_source": "doctor",
+          "modality": "interview",
+          "verification_status": "confirmed",
+          "clinical_status": "active",
+          "assertion": "present",
+          "visit_state": "active",
+          "temporality": "current",
+          "turn_ids": [
+            "T109"
+          ],
+          "proposition_text": "The doctor recommends stopping the tacrolimus ointment once the rash stops."
+        },
+        {
+          "cap_id": "CAP27",
+          "content_source": "doctor",
+          "modality": "interview",
+          "verification_status": "confirmed",
+          "clinical_status": "planned",
+          "assertion": "hypothetical",
+          "visit_state": "planned",
+          "temporality": "once a day for a week before stopping",
+          "turn_ids": [
+            "T109"
+          ],
+          "proposition_text": "Take tacrolimus once a day for a week before stopping."
+        }
+      ],
+      "planned_changes": [
+        {
+          "proposition_text": "The doctor suggests trying tacrolimus ointment.",
+          "turn_ids": [
+            "T67"
+          ],
+          "attributes": {}
+        },
+        {
+          "proposition_text": "The doctor recommends stopping the tacrolimus ointment once the rash stops.",
+          "turn_ids": [
+            "T109"
+          ],
+          "attributes": {}
+        },
+        {
+          "proposition_text": "Take tacrolimus once a day for a week before stopping.",
+          "turn_ids": [
+            "T109"
+          ],
+          "attributes": {}
+        }
+      ]
+    },
+    {
+      "cluster_id": "CL16",
+      "cluster_type": "Plan",
+      "canonical_concept": "prescription",
+      "primary_cap_type": "Order",
+      "source_cap_types": [
+        "Order"
+      ],
+      "final_verification_status": "unconfirmed",
+      "clinical_status": "planned",
+      "final_assertion": "hypothetical",
+      "visit_state": "planned",
+      "source_speakers": [
+        "doctor"
+      ],
+      "source_modalities": [
+        "plan"
+      ],
+      "temporal_profile": [
+        "future"
+      ],
+      "evidence_turn_ids": [
+        "T71",
+        "T73"
+      ],
+      "supporting_cap_ids": [
+        "CAP24",
+        "CAP40"
+      ],
+      "cluster_summary": "The doctor will send a prescription to pick'n save or metro market.",
+      "salience_score": 9,
+      "is_low_value": false,
+      "updates": [
+        {
+          "cap_id": "CAP24",
+          "content_source": "doctor",
+          "modality": "plan",
+          "verification_status": "unconfirmed",
+          "clinical_status": "planned",
+          "assertion": "hypothetical",
+          "visit_state": "planned",
+          "temporality": "future",
+          "turn_ids": [
+            "T71"
+          ],
+          "proposition_text": "The doctor will send a prescription to pick'n save or metro market."
+        },
+        {
+          "cap_id": "CAP40",
+          "content_source": "doctor",
+          "modality": "plan",
+          "verification_status": "unconfirmed",
+          "clinical_status": "planned",
+          "assertion": "hypothetical",
+          "visit_state": "planned",
+          "temporality": "future",
+          "turn_ids": [
+            "T73"
+          ],
+          "proposition_text": "The doctor will fill the prescription."
+        }
+      ]
+    },
+    {
+      "cluster_id": "CL17",
+      "cluster_type": "MedicationState",
+      "canonical_concept": "calcineurin inhibitor",
+      "primary_cap_type": "MedicationStatement",
+      "source_cap_types": [
+        "MedicationStatement"
+      ],
+      "final_verification_status": "confirmed",
+      "clinical_status": "active",
+      "final_assertion": "present",
+      "visit_state": "active",
+      "source_speakers": [
+        "doctor"
+      ],
+      "source_modalities": [
+        "interview"
+      ],
+      "temporal_profile": [
+        "current"
+      ],
+      "evidence_turn_ids": [
+        "T79"
+      ],
+      "supporting_cap_ids": [
+        "CAP63"
+      ],
+      "cluster_summary": "The doctor prescribed a calcineurin inhibitor.",
+      "salience_score": 8,
+      "is_low_value": false,
+      "updates": [
+        {
+          "cap_id": "CAP63",
+          "content_source": "doctor",
+          "modality": "interview",
+          "verification_status": "confirmed",
+          "clinical_status": "active",
+          "assertion": "present",
+          "visit_state": "active",
+          "temporality": "current",
+          "turn_ids": [
+            "T79"
+          ],
+          "proposition_text": "The doctor prescribed a calcineurin inhibitor."
+        }
+      ],
+      "current_regimens": [
+        {
+          "proposition_text": "The doctor prescribed a calcineurin inhibitor.",
+          "turn_ids": [
+            "T79"
+          ],
+          "attributes": {}
+        }
+      ]
+    },
+    {
+      "cluster_id": "CL18",
+      "cluster_type": "MedicationState",
+      "canonical_concept": "steroids",
+      "primary_cap_type": "MedicationStatement",
+      "source_cap_types": [
+        "MedicationStatement"
+      ],
+      "final_verification_status": "confirmed",
+      "clinical_status": "historical",
+      "final_assertion": "historical",
+      "visit_state": "historical",
+      "source_speakers": [
+        "doctor"
+      ],
+      "source_modalities": [
+        "interview"
+      ],
+      "temporal_profile": [
+        "past"
+      ],
+      "evidence_turn_ids": [
+        "T81"
+      ],
+      "supporting_cap_ids": [
+        "CAP48"
+      ],
+      "cluster_summary": "The doctor stated that steroids should not be used on the face.",
+      "salience_score": 8,
+      "is_low_value": false,
+      "updates": [
+        {
+          "cap_id": "CAP48",
+          "content_source": "doctor",
+          "modality": "interview",
+          "verification_status": "confirmed",
+          "clinical_status": "historical",
+          "assertion": "historical",
+          "visit_state": "historical",
+          "temporality": "past",
+          "turn_ids": [
+            "T81"
+          ],
+          "proposition_text": "The doctor stated that steroids should not be used on the face."
+        }
+      ],
+      "current_regimens": [
+        {
+          "proposition_text": "The doctor stated that steroids should not be used on the face.",
+          "turn_ids": [
+            "T81"
+          ],
+          "attributes": {}
+        }
+      ]
+    },
+    {
+      "cluster_id": "CL19",
+      "cluster_type": "ProblemState",
+      "canonical_concept": "tingly sensation",
+      "primary_cap_type": "Symptom",
+      "source_cap_types": [
+        "Symptom"
+      ],
+      "final_verification_status": "unconfirmed",
+      "clinical_status": "active",
+      "final_assertion": "uncertain",
+      "visit_state": "active",
+      "source_speakers": [
+        "patient"
+      ],
+      "source_modalities": [
+        "interview"
+      ],
+      "temporal_profile": [
+        "current"
+      ],
+      "evidence_turn_ids": [
+        "T82"
+      ],
+      "supporting_cap_ids": [
+        "CAP12"
+      ],
+      "cluster_summary": "The patient reports a tingly sensation.",
+      "salience_score": 10,
+      "is_low_value": false,
+      "updates": [
+        {
+          "cap_id": "CAP12",
+          "content_source": "patient",
+          "modality": "interview",
+          "verification_status": "unconfirmed",
+          "clinical_status": "active",
+          "assertion": "uncertain",
+          "visit_state": "active",
+          "temporality": "current",
+          "turn_ids": [
+            "T82"
+          ],
+          "proposition_text": "The patient reports a tingly sensation."
+        }
+      ]
+    },
+    {
+      "cluster_id": "CL20",
+      "cluster_type": "ProblemState",
+      "canonical_concept": "redness",
+      "primary_cap_type": "Symptom",
+      "source_cap_types": [
+        "Symptom"
+      ],
+      "final_verification_status": "unconfirmed",
+      "clinical_status": "active",
+      "final_assertion": "uncertain",
+      "visit_state": "active",
+      "source_speakers": [
+        "patient"
+      ],
+      "source_modalities": [
+        "interview"
+      ],
+      "temporal_profile": [
+        "current"
+      ],
+      "evidence_turn_ids": [
+        "T82"
+      ],
+      "supporting_cap_ids": [
+        "CAP22"
+      ],
+      "cluster_summary": "The patient reports redness.",
+      "salience_score": 10,
+      "is_low_value": false,
+      "updates": [
+        {
+          "cap_id": "CAP22",
+          "content_source": "patient",
+          "modality": "interview",
+          "verification_status": "unconfirmed",
+          "clinical_status": "active",
+          "assertion": "uncertain",
+          "visit_state": "active",
+          "temporality": "current",
+          "turn_ids": [
+            "T82"
+          ],
+          "proposition_text": "The patient reports redness."
+        }
+      ]
+    },
+    {
+      "cluster_id": "CL21",
+      "cluster_type": "ProblemState",
+      "canonical_concept": "flushing",
+      "primary_cap_type": "Symptom",
+      "source_cap_types": [
+        "Symptom"
+      ],
+      "final_verification_status": "unconfirmed",
+      "clinical_status": "active",
+      "final_assertion": "uncertain",
+      "visit_state": "active",
+      "source_speakers": [
+        "patient"
+      ],
+      "source_modalities": [
+        "interview"
+      ],
+      "temporal_profile": [
+        "current"
+      ],
+      "evidence_turn_ids": [
+        "T82"
+      ],
+      "supporting_cap_ids": [
+        "CAP23"
+      ],
+      "cluster_summary": "The patient reports flushing.",
+      "salience_score": 10,
+      "is_low_value": false,
+      "updates": [
+        {
+          "cap_id": "CAP23",
+          "content_source": "patient",
+          "modality": "interview",
+          "verification_status": "unconfirmed",
+          "clinical_status": "active",
+          "assertion": "uncertain",
+          "visit_state": "active",
+          "temporality": "current",
+          "turn_ids": [
+            "T82"
+          ],
+          "proposition_text": "The patient reports flushing."
+        }
+      ]
+    },
+    {
+      "cluster_id": "CL22",
+      "cluster_type": "ProblemState",
+      "canonical_concept": "needle-like sensation",
+      "primary_cap_type": "Symptom",
+      "source_cap_types": [
+        "Symptom"
+      ],
+      "final_verification_status": "unconfirmed",
+      "clinical_status": "active",
+      "final_assertion": "uncertain",
+      "visit_state": "active",
+      "source_speakers": [
+        "patient"
+      ],
+      "source_modalities": [
+        "interview"
+      ],
+      "temporal_profile": [
+        "current"
+      ],
+      "evidence_turn_ids": [
+        "T83"
+      ],
+      "supporting_cap_ids": [
+        "CAP13"
+      ],
+      "cluster_summary": "The patient reports a needle-like sensation.",
+      "salience_score": 10,
+      "is_low_value": false,
+      "updates": [
+        {
+          "cap_id": "CAP13",
+          "content_source": "patient",
+          "modality": "interview",
+          "verification_status": "unconfirmed",
+          "clinical_status": "active",
+          "assertion": "uncertain",
+          "visit_state": "active",
+          "temporality": "current",
+          "turn_ids": [
+            "T83"
+          ],
+          "proposition_text": "The patient reports a needle-like sensation."
+        }
+      ]
+    },
+    {
+      "cluster_id": "CL23",
+      "cluster_type": "MedicationChange",
+      "canonical_concept": "face wash",
+      "primary_cap_type": "MedicationRequest",
+      "source_cap_types": [
+        "MedicationRequest"
+      ],
+      "final_verification_status": "unconfirmed",
+      "clinical_status": "planned",
+      "final_assertion": "hypothetical",
+      "visit_state": "planned",
+      "source_speakers": [
+        "doctor"
+      ],
+      "source_modalities": [
+        "plan"
+      ],
+      "temporal_profile": [
+        "current"
+      ],
+      "evidence_turn_ids": [
+        "T89"
+      ],
+      "supporting_cap_ids": [
+        "CAP29",
+        "CAP45"
+      ],
+      "cluster_summary": "Apply to rash on face twice daily, until resolved.",
+      "salience_score": 9,
+      "is_low_value": false,
+      "updates": [
+        {
+          "cap_id": "CAP29",
+          "content_source": "doctor",
+          "modality": "plan",
+          "verification_status": "unconfirmed",
+          "clinical_status": "planned",
+          "assertion": "hypothetical",
+          "visit_state": "planned",
+          "temporality": "current",
+          "turn_ids": [
+            "T89"
+          ],
+          "proposition_text": "Apply to rash on face twice daily, until resolved."
+        },
+        {
+          "cap_id": "CAP45",
+          "content_source": "doctor",
+          "modality": "plan",
+          "verification_status": "unconfirmed",
+          "clinical_status": "planned",
+          "assertion": "hypothetical",
+          "visit_state": "planned",
+          "temporality": "current",
+          "turn_ids": [
+            "T89"
+          ],
+          "proposition_text": "Keep using the face wash."
+        }
+      ],
+      "planned_changes": [
+        {
+          "proposition_text": "Apply to rash on face twice daily, until resolved.",
+          "turn_ids": [
+            "T89"
+          ],
+          "attributes": {}
+        },
+        {
+          "proposition_text": "Keep using the face wash.",
+          "turn_ids": [
+            "T89"
+          ],
+          "attributes": {}
+        }
+      ]
+    },
+    {
+      "cluster_id": "CL24",
+      "cluster_type": "ProblemState",
+      "canonical_concept": "moisture",
+      "primary_cap_type": "Symptom",
+      "source_cap_types": [
+        "Symptom"
+      ],
+      "final_verification_status": "confirmed",
+      "clinical_status": "active",
+      "final_assertion": "present",
+      "visit_state": "active",
+      "source_speakers": [
+        "patient"
+      ],
+      "source_modalities": [
+        "interview"
+      ],
+      "temporal_profile": [
+        "current"
+      ],
+      "evidence_turn_ids": [
+        "T94"
+      ],
+      "supporting_cap_ids": [
+        "CAP5"
+      ],
+      "cluster_summary": "The patient reports feeling like there's moisture getting back in.",
+      "salience_score": 10,
+      "is_low_value": false,
+      "updates": [
+        {
+          "cap_id": "CAP5",
+          "content_source": "patient",
+          "modality": "interview",
+          "verification_status": "confirmed",
+          "clinical_status": "active",
+          "assertion": "present",
+          "visit_state": "active",
+          "temporality": "current",
+          "turn_ids": [
+            "T94"
+          ],
+          "proposition_text": "The patient reports feeling like there's moisture getting back in."
+        }
+      ]
+    },
+    {
+      "cluster_id": "CL25",
+      "cluster_type": "Plan",
+      "canonical_concept": "wash",
+      "primary_cap_type": "Order",
+      "source_cap_types": [
+        "Order"
+      ],
+      "final_verification_status": "confirmed",
+      "clinical_status": "planned",
+      "final_assertion": "hypothetical",
+      "visit_state": "planned",
+      "source_speakers": [
+        "doctor"
+      ],
+      "source_modalities": [
+        "plan"
+      ],
+      "temporal_profile": [
+        "future"
+      ],
+      "evidence_turn_ids": [
+        "T97"
+      ],
+      "supporting_cap_ids": [
+        "CAP25"
+      ],
+      "cluster_summary": "The patient should wash once a day with the face wash.",
+      "salience_score": 9,
+      "is_low_value": false,
+      "updates": [
+        {
+          "cap_id": "CAP25",
+          "content_source": "doctor",
+          "modality": "plan",
+          "verification_status": "confirmed",
+          "clinical_status": "planned",
+          "assertion": "hypothetical",
+          "visit_state": "planned",
+          "temporality": "future",
+          "turn_ids": [
+            "T97"
+          ],
+          "proposition_text": "The patient should wash once a day with the face wash."
+        }
+      ]
+    },
+    {
+      "cluster_id": "CL26",
+      "cluster_type": "Plan",
+      "canonical_concept": "metro cream",
+      "primary_cap_type": "Order",
+      "source_cap_types": [
+        "Order"
+      ],
+      "final_verification_status": "confirmed",
+      "clinical_status": "active",
+      "final_assertion": "present",
+      "visit_state": "active",
+      "source_speakers": [
+        "doctor"
+      ],
+      "source_modalities": [
+        "plan"
+      ],
+      "temporal_profile": [
+        "current"
+      ],
+      "evidence_turn_ids": [
+        "T97"
+      ],
+      "supporting_cap_ids": [
+        "CAP34"
+      ],
+      "cluster_summary": "The patient should continue using metro cream.",
+      "salience_score": 9,
+      "is_low_value": false,
+      "updates": [
+        {
+          "cap_id": "CAP34",
+          "content_source": "doctor",
+          "modality": "plan",
+          "verification_status": "confirmed",
+          "clinical_status": "active",
+          "assertion": "present",
+          "visit_state": "active",
+          "temporality": "current",
+          "turn_ids": [
+            "T97"
+          ],
+          "proposition_text": "The patient should continue using metro cream."
+        }
+      ]
+    },
+    {
+      "cluster_id": "CL27",
+      "cluster_type": "FollowUp",
+      "canonical_concept": "reduce",
+      "primary_cap_type": "FollowUp",
+      "source_cap_types": [
+        "FollowUp"
+      ],
+      "final_verification_status": "confirmed",
+      "clinical_status": "planned",
+      "final_assertion": "hypothetical",
+      "visit_state": "planned",
+      "source_speakers": [
+        "doctor"
+      ],
+      "source_modalities": [
+        "plan"
+      ],
+      "temporal_profile": [
+        "future"
+      ],
+      "evidence_turn_ids": [
+        "T97"
+      ],
+      "supporting_cap_ids": [
+        "CAP47"
+      ],
+      "cluster_summary": "The patient should reduce to once per day if starting to get dry.",
+      "salience_score": 8,
+      "is_low_value": false,
+      "updates": [
+        {
+          "cap_id": "CAP47",
+          "content_source": "doctor",
+          "modality": "plan",
+          "verification_status": "confirmed",
+          "clinical_status": "planned",
+          "assertion": "hypothetical",
+          "visit_state": "planned",
+          "temporality": "future",
+          "turn_ids": [
+            "T97"
+          ],
+          "proposition_text": "The patient should reduce to once per day if starting to get dry."
+        }
+      ]
+    },
+    {
+      "cluster_id": "CL28",
+      "cluster_type": "FollowUp",
+      "canonical_concept": "continue",
+      "primary_cap_type": "FollowUp",
+      "source_cap_types": [
+        "FollowUp"
+      ],
+      "final_verification_status": "confirmed",
+      "clinical_status": "planned",
+      "final_assertion": "hypothetical",
+      "visit_state": "planned",
+      "source_speakers": [
+        "doctor"
+      ],
+      "source_modalities": [
+        "plan"
+      ],
+      "temporal_profile": [
+        "future"
+      ],
+      "evidence_turn_ids": [
+        "T97"
+      ],
+      "supporting_cap_ids": [
+        "CAP50"
+      ],
+      "cluster_summary": "The patient should continue using the face wash and metro cream.",
+      "salience_score": 8,
+      "is_low_value": false,
+      "updates": [
+        {
+          "cap_id": "CAP50",
+          "content_source": "doctor",
+          "modality": "plan",
+          "verification_status": "confirmed",
+          "clinical_status": "planned",
+          "assertion": "hypothetical",
+          "visit_state": "planned",
+          "temporality": "future",
+          "turn_ids": [
+            "T97"
+          ],
+          "proposition_text": "The patient should continue using the face wash and metro cream."
+        }
+      ]
+    },
+    {
+      "cluster_id": "CL29",
+      "cluster_type": "FollowUp",
+      "canonical_concept": "stop",
+      "primary_cap_type": "FollowUp",
+      "source_cap_types": [
+        "FollowUp"
+      ],
+      "final_verification_status": "confirmed",
+      "clinical_status": "planned",
+      "final_assertion": "hypothetical",
+      "visit_state": "planned",
+      "source_speakers": [
+        "doctor"
+      ],
+      "source_modalities": [
+        "plan"
+      ],
+      "temporal_profile": [
+        "future"
+      ],
+      "evidence_turn_ids": [
+        "T97"
+      ],
+      "supporting_cap_ids": [
+        "CAP51"
+      ],
+      "cluster_summary": "The patient should stop using once per day after one week.",
+      "salience_score": 8,
+      "is_low_value": false,
+      "updates": [
+        {
+          "cap_id": "CAP51",
+          "content_source": "doctor",
+          "modality": "plan",
+          "verification_status": "confirmed",
+          "clinical_status": "planned",
+          "assertion": "hypothetical",
+          "visit_state": "planned",
+          "temporality": "future",
+          "turn_ids": [
+            "T97"
+          ],
+          "proposition_text": "The patient should stop using once per day after one week."
+        }
+      ]
+    },
+    {
+      "cluster_id": "CL30",
+      "cluster_type": "Plan",
+      "canonical_concept": "tacrolimus ointment",
+      "primary_cap_type": "Order",
+      "source_cap_types": [
+        "Order"
+      ],
+      "final_verification_status": "unconfirmed",
+      "clinical_status": "planned",
+      "final_assertion": "hypothetical",
+      "visit_state": "planned",
+      "source_speakers": [
+        "doctor"
+      ],
+      "source_modalities": [
+        "interview"
+      ],
+      "temporal_profile": [
+        "future"
+      ],
+      "evidence_turn_ids": [
+        "T109"
+      ],
+      "supporting_cap_ids": [
+        "CAP28"
+      ],
+      "cluster_summary": "The doctor recommends restarting tacrolimus ointment if the rash flares.",
+      "salience_score": 9,
+      "is_low_value": false,
+      "updates": [
+        {
+          "cap_id": "CAP28",
+          "content_source": "doctor",
+          "modality": "interview",
+          "verification_status": "unconfirmed",
+          "clinical_status": "planned",
+          "assertion": "hypothetical",
+          "visit_state": "planned",
+          "temporality": "future",
+          "turn_ids": [
+            "T109"
+          ],
+          "proposition_text": "The doctor recommends restarting tacrolimus ointment if the rash flares."
+        }
+      ]
+    },
+    {
+      "cluster_id": "CL31",
+      "cluster_type": "Plan",
+      "canonical_concept": "doxycycline",
+      "primary_cap_type": "Order",
+      "source_cap_types": [
+        "Order"
+      ],
+      "final_verification_status": "unconfirmed",
+      "clinical_status": "planned",
+      "final_assertion": "hypothetical",
+      "visit_state": "planned",
+      "source_speakers": [
+        "doctor"
+      ],
+      "source_modalities": [
+        "interview"
+      ],
+      "temporal_profile": [
+        "future"
+      ],
+      "evidence_turn_ids": [
+        "T109"
+      ],
+      "supporting_cap_ids": [
+        "CAP31"
+      ],
+      "cluster_summary": "The doctor recommends restarting doxycycline if the rash flares.",
+      "salience_score": 9,
+      "is_low_value": false,
+      "updates": [
+        {
+          "cap_id": "CAP31",
+          "content_source": "doctor",
+          "modality": "interview",
+          "verification_status": "unconfirmed",
+          "clinical_status": "planned",
+          "assertion": "hypothetical",
+          "visit_state": "planned",
+          "temporality": "future",
+          "turn_ids": [
+            "T109"
+          ],
+          "proposition_text": "The doctor recommends restarting doxycycline if the rash flares."
+        }
+      ]
+    },
+    {
+      "cluster_id": "CL32",
+      "cluster_type": "MedicationChange",
+      "canonical_concept": "metro cream",
+      "primary_cap_type": "MedicationRequest",
+      "source_cap_types": [
+        "MedicationRequest"
+      ],
+      "final_verification_status": "confirmed",
+      "clinical_status": "planned",
+      "final_assertion": "hypothetical",
+      "visit_state": "planned",
+      "source_speakers": [
+        "doctor"
+      ],
+      "source_modalities": [
+        "interview"
+      ],
+      "temporal_profile": [
+        "continue using"
+      ],
+      "evidence_turn_ids": [
+        "T109"
+      ],
+      "supporting_cap_ids": [
+        "CAP46"
+      ],
+      "cluster_summary": "Continue using the metro cream.",
+      "salience_score": 9,
+      "is_low_value": false,
+      "updates": [
+        {
+          "cap_id": "CAP46",
+          "content_source": "doctor",
+          "modality": "interview",
+          "verification_status": "confirmed",
+          "clinical_status": "planned",
+          "assertion": "hypothetical",
+          "visit_state": "planned",
+          "temporality": "continue using",
+          "turn_ids": [
+            "T109"
+          ],
+          "proposition_text": "Continue using the metro cream."
+        }
+      ],
+      "planned_changes": [
+        {
+          "proposition_text": "Continue using the metro cream.",
+          "turn_ids": [
+            "T109"
+          ],
+          "attributes": {}
+        }
+      ]
+    },
+    {
+      "cluster_id": "CL33",
+      "cluster_type": "MedicationState",
+      "canonical_concept": "metro cream",
+      "primary_cap_type": "MedicationStatement",
+      "source_cap_types": [
+        "MedicationStatement"
+      ],
+      "final_verification_status": "confirmed",
+      "clinical_status": "active",
+      "final_assertion": "present",
+      "visit_state": "active",
+      "source_speakers": [
+        "doctor"
+      ],
+      "source_modalities": [
+        "interview"
+      ],
+      "temporal_profile": [
+        "current"
+      ],
+      "evidence_turn_ids": [
+        "T109",
+        "T117"
+      ],
+      "supporting_cap_ids": [
+        "CAP57",
+        "CAP55"
+      ],
+      "cluster_summary": "The patient probably still has enough of the metro cream.",
+      "salience_score": 8,
+      "is_low_value": false,
+      "updates": [
+        {
+          "cap_id": "CAP57",
+          "content_source": "doctor",
+          "modality": "interview",
+          "verification_status": "confirmed",
+          "clinical_status": "active",
+          "assertion": "present",
+          "visit_state": "active",
+          "temporality": "current",
+          "turn_ids": [
+            "T109"
+          ],
+          "proposition_text": "The doctor recommends continuing to use the metro cream."
+        },
+        {
+          "cap_id": "CAP55",
+          "content_source": "doctor",
+          "modality": "interview",
+          "verification_status": "confirmed",
+          "clinical_status": "active",
+          "assertion": "present",
+          "visit_state": "active",
+          "temporality": "current",
+          "turn_ids": [
+            "T117"
+          ],
+          "proposition_text": "The patient probably still has enough of the metro cream."
+        }
+      ],
+      "current_regimens": [
+        {
+          "proposition_text": "The doctor recommends continuing to use the metro cream.",
+          "turn_ids": [
+            "T109"
+          ],
+          "attributes": {}
+        },
+        {
+          "proposition_text": "The patient probably still has enough of the metro cream.",
+          "turn_ids": [
+            "T117"
+          ],
+          "attributes": {}
+        }
+      ]
+    },
+    {
+      "cluster_id": "CL34",
+      "cluster_type": "FollowUp",
+      "canonical_concept": "follow-up",
+      "primary_cap_type": "FollowUp",
+      "source_cap_types": [
+        "FollowUp"
+      ],
+      "final_verification_status": "confirmed",
+      "clinical_status": "planned",
+      "final_assertion": "hypothetical",
+      "visit_state": "planned",
+      "source_speakers": [
+        "doctor"
+      ],
+      "source_modalities": [
+        "interview"
+      ],
+      "temporal_profile": [
+        "future"
+      ],
+      "evidence_turn_ids": [
+        "T117"
+      ],
+      "supporting_cap_ids": [
+        "CAP64"
+      ],
+      "cluster_summary": "The doctor recommends a follow-up appointment.",
+      "salience_score": 8,
+      "is_low_value": false,
+      "updates": [
+        {
+          "cap_id": "CAP64",
+          "content_source": "doctor",
+          "modality": "interview",
+          "verification_status": "confirmed",
+          "clinical_status": "planned",
+          "assertion": "hypothetical",
+          "visit_state": "planned",
+          "temporality": "future",
+          "turn_ids": [
+            "T117"
+          ],
+          "proposition_text": "The doctor recommends a follow-up appointment."
+        }
+      ]
+    },
+    {
+      "cluster_id": "CL35",
+      "cluster_type": "Plan",
+      "canonical_concept": "face wash",
+      "primary_cap_type": "Order",
+      "source_cap_types": [
+        "Order"
+      ],
+      "final_verification_status": "unconfirmed",
+      "clinical_status": "planned",
+      "final_assertion": "hypothetical",
+      "visit_state": "planned",
+      "source_speakers": [
+        "doctor"
+      ],
+      "source_modalities": [
+        "interview"
+      ],
+      "temporal_profile": [
+        "future"
+      ],
+      "evidence_turn_ids": [
+        "T119"
+      ],
+      "supporting_cap_ids": [
+        "CAP30"
+      ],
+      "cluster_summary": "The doctor recommends continuing to use the face wash.",
+      "salience_score": 9,
+      "is_low_value": false,
+      "updates": [
+        {
+          "cap_id": "CAP30",
+          "content_source": "doctor",
+          "modality": "interview",
+          "verification_status": "unconfirmed",
+          "clinical_status": "planned",
+          "assertion": "hypothetical",
+          "visit_state": "planned",
+          "temporality": "future",
+          "turn_ids": [
+            "T119"
+          ],
+          "proposition_text": "The doctor recommends continuing to use the face wash."
+        }
+      ]
+    },
+    {
+      "cluster_id": "CL36",
+      "cluster_type": "Plan",
+      "canonical_concept": "elidel cream",
+      "primary_cap_type": "Order",
+      "source_cap_types": [
+        "Order"
+      ],
+      "final_verification_status": "unconfirmed",
+      "clinical_status": "planned",
+      "final_assertion": "hypothetical",
+      "visit_state": "planned",
+      "source_speakers": [
+        "doctor"
+      ],
+      "source_modalities": [
+        "interview"
+      ],
+      "temporal_profile": [
+        "future"
+      ],
+      "evidence_turn_ids": [
+        "T119"
+      ],
+      "supporting_cap_ids": [
+        "CAP35"
+      ],
+      "cluster_summary": "The doctor recommends canceling the elidel cream.",
+      "salience_score": 9,
+      "is_low_value": false,
+      "updates": [
+        {
+          "cap_id": "CAP35",
+          "content_source": "doctor",
+          "modality": "interview",
+          "verification_status": "unconfirmed",
+          "clinical_status": "planned",
+          "assertion": "hypothetical",
+          "visit_state": "planned",
+          "temporality": "future",
+          "turn_ids": [
+            "T119"
+          ],
+          "proposition_text": "The doctor recommends canceling the elidel cream."
+        }
+      ]
+    },
+    {
+      "cluster_id": "CL37",
+      "cluster_type": "MedicationChange",
+      "canonical_concept": "petroleum jelly",
+      "primary_cap_type": "MedicationStatement",
+      "source_cap_types": [
+        "MedicationStatement"
+      ],
+      "final_verification_status": "confirmed",
+      "clinical_status": "planned",
+      "final_assertion": "hypothetical",
+      "visit_state": "planned",
+      "source_speakers": [
+        "doctor"
+      ],
+      "source_modalities": [
+        "interview"
+      ],
+      "temporal_profile": [
+        "future"
+      ],
+      "evidence_turn_ids": [
+        "T121"
+      ],
+      "supporting_cap_ids": [
+        "CAP53"
+      ],
+      "cluster_summary": "The doctor suggests using petroleum jelly if skin is very dry.",
+      "salience_score": 8,
+      "is_low_value": false,
+      "updates": [
+        {
+          "cap_id": "CAP53",
+          "content_source": "doctor",
+          "modality": "interview",
+          "verification_status": "confirmed",
+          "clinical_status": "planned",
+          "assertion": "hypothetical",
+          "visit_state": "planned",
+          "temporality": "future",
+          "turn_ids": [
+            "T121"
+          ],
+          "proposition_text": "The doctor suggests using petroleum jelly if skin is very dry."
+        }
+      ],
+      "planned_changes": [
+        {
+          "proposition_text": "The doctor suggests using petroleum jelly if skin is very dry.",
+          "turn_ids": [
+            "T121"
+          ],
+          "attributes": {}
+        }
+      ]
+    },
+    {
+      "cluster_id": "CL38",
+      "cluster_type": "ProblemState",
+      "canonical_concept": "gentle cleanser",
+      "primary_cap_type": "Problem",
+      "source_cap_types": [
+        "Problem"
+      ],
+      "final_verification_status": "confirmed",
+      "clinical_status": "planned",
+      "final_assertion": "hypothetical",
+      "visit_state": "planned",
+      "source_speakers": [
+        "doctor"
+      ],
+      "source_modalities": [
+        "plan"
+      ],
+      "temporal_profile": [
+        "future"
+      ],
+      "evidence_turn_ids": [
+        "T127"
+      ],
+      "supporting_cap_ids": [
+        "CAP1"
+      ],
+      "cluster_summary": "The doctor recommends gently washing eyelids once a day with gentle cleanser.",
+      "salience_score": 10,
+      "is_low_value": false,
+      "updates": [
+        {
+          "cap_id": "CAP1",
+          "content_source": "doctor",
+          "modality": "plan",
+          "verification_status": "confirmed",
+          "clinical_status": "planned",
+          "assertion": "hypothetical",
+          "visit_state": "planned",
+          "temporality": "future",
+          "turn_ids": [
+            "T127"
+          ],
+          "proposition_text": "The doctor recommends gently washing eyelids once a day with gentle cleanser."
+        }
+      ]
+    },
+    {
+      "cluster_id": "CL39",
+      "cluster_type": "ProblemState",
+      "canonical_concept": "bruder mask",
+      "primary_cap_type": "Problem",
+      "source_cap_types": [
+        "Problem"
+      ],
+      "final_verification_status": "confirmed",
+      "clinical_status": "planned",
+      "final_assertion": "hypothetical",
+      "visit_state": "planned",
+      "source_speakers": [
+        "doctor"
+      ],
+      "source_modalities": [
+        "plan"
+      ],
+      "temporal_profile": [
+        "future"
+      ],
+      "evidence_turn_ids": [
+        "T127"
+      ],
+      "supporting_cap_ids": [
+        "CAP6"
+      ],
+      "cluster_summary": "The doctor recommends using a bruder mask as needed.",
+      "salience_score": 10,
+      "is_low_value": false,
+      "updates": [
+        {
+          "cap_id": "CAP6",
+          "content_source": "doctor",
+          "modality": "plan",
+          "verification_status": "confirmed",
+          "clinical_status": "planned",
+          "assertion": "hypothetical",
+          "visit_state": "planned",
+          "temporality": "future",
+          "turn_ids": [
+            "T127"
+          ],
+          "proposition_text": "The doctor recommends using a bruder mask as needed."
+        }
+      ]
+    },
+    {
+      "cluster_id": "CL40",
+      "cluster_type": "Plan",
+      "canonical_concept": "vanicream",
+      "primary_cap_type": "Order",
+      "source_cap_types": [
+        "Order"
+      ],
+      "final_verification_status": "confirmed",
+      "clinical_status": "planned",
+      "final_assertion": "hypothetical",
+      "visit_state": "planned",
+      "source_speakers": [
+        "doctor"
+      ],
+      "source_modalities": [
+        "plan"
+      ],
+      "temporal_profile": [
+        "future"
+      ],
+      "evidence_turn_ids": [
+        "T127"
+      ],
+      "supporting_cap_ids": [
+        "CAP32"
+      ],
+      "cluster_summary": "The doctor will give the patient samples of vanicream.",
+      "salience_score": 9,
+      "is_low_value": false,
+      "updates": [
+        {
+          "cap_id": "CAP32",
+          "content_source": "doctor",
+          "modality": "plan",
+          "verification_status": "confirmed",
+          "clinical_status": "planned",
+          "assertion": "hypothetical",
+          "visit_state": "planned",
+          "temporality": "future",
+          "turn_ids": [
+            "T127"
+          ],
+          "proposition_text": "The doctor will give the patient samples of vanicream."
+        }
+      ]
+    },
+    {
+      "cluster_id": "CL41",
+      "cluster_type": "MedicationChange",
+      "canonical_concept": "vanicream",
+      "primary_cap_type": "MedicationStatement",
+      "source_cap_types": [
+        "MedicationStatement"
+      ],
+      "final_verification_status": "confirmed",
+      "clinical_status": "planned",
+      "final_assertion": "hypothetical",
+      "visit_state": "planned",
+      "source_speakers": [
+        "doctor"
+      ],
+      "source_modalities": [
+        "interview"
+      ],
+      "temporal_profile": [
+        "future"
+      ],
+      "evidence_turn_ids": [
+        "T127"
+      ],
+      "supporting_cap_ids": [
+        "CAP62"
+      ],
+      "cluster_summary": "The doctor recommends vanicream as a moisturizer.",
+      "salience_score": 8,
+      "is_low_value": false,
+      "updates": [
+        {
+          "cap_id": "CAP62",
+          "content_source": "doctor",
+          "modality": "interview",
+          "verification_status": "confirmed",
+          "clinical_status": "planned",
+          "assertion": "hypothetical",
+          "visit_state": "planned",
+          "temporality": "future",
+          "turn_ids": [
+            "T127"
+          ],
+          "proposition_text": "The doctor recommends vanicream as a moisturizer."
+        }
+      ],
+      "planned_changes": [
+        {
+          "proposition_text": "The doctor recommends vanicream as a moisturizer.",
+          "turn_ids": [
+            "T127"
+          ],
+          "attributes": {}
+        }
+      ]
+    }
+  ]
+}

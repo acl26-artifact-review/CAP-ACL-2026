@@ -1,0 +1,211 @@
+Case: D2N182
+
+Problem List and Visit State Tracking
+
+Problem List
+- constipation | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T3,T36,T47,T98
+  Summary: The patient reports not having had a regular bowel movement in a while.
+  ClusterId: CL1
+  TemporalProfile: current
+  Updates:
+  - CAP26: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T3 :: The patient reports constipation.
+  - CAP15: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T36 :: The patient reports worsening constipation issues.
+  - CAP2: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T47 :: The patient reports not having had a regular bowel movement in a while.
+  - CAP6: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T98 :: The patient feels like she has a good bowel regimen.
+- headache | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T3
+  Summary: The patient reports a headache.
+  ClusterId: CL2
+  TemporalProfile: current
+  Updates:
+  - CAP20: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T3 :: The patient reports a headache.
+- diaphoresis | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T3
+  Summary: The patient reports diaphoresis.
+  ClusterId: CL3
+  TemporalProfile: current
+  Updates:
+  - CAP27: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T3 :: The patient reports diaphoresis.
+- vomiting | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T3
+  Summary: The patient reports vomiting.
+  ClusterId: CL4
+  TemporalProfile: current
+  Updates:
+  - CAP28: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T3 :: The patient reports vomiting.
+- high blood pressure | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T19,T7
+  Summary: The patient believes high blood pressure was caused by constipation.
+  ClusterId: CL5
+  TemporalProfile: current
+  Updates:
+  - CAP5: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T7 :: The patient believes high blood pressure was caused by constipation.
+  - CAP8: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T19 :: The patient's blood pressure was out of control.
+  - CAP4: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T19 :: The patient reported feeling that their blood pressure was out of control.
+- dysreflexia | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T9
+  Summary: The patient inquired about the possibility of dysreflexia affecting white blood cell count.
+  ClusterId: CL7
+  TemporalProfile: current
+  Updates:
+  - CAP1: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T9 :: The patient inquired about the possibility of dysreflexia affecting white blood cell count.
+- inflammation | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T16
+  Summary: The patient may be experiencing inflammation.
+  ClusterId: CL8
+  TemporalProfile: current
+  Updates:
+  - CAP14: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T16 :: The patient may be experiencing inflammation.
+- pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T31,T37
+  Summary: The patient reports pain in the left hand.
+  ClusterId: CL9
+  TemporalProfile: current
+  Updates:
+  - CAP29: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T31 :: The patient reports pain.
+  - CAP10: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T37 :: The patient reports pain in the left hand.
+- dehydration | verification_status=unconfirmed | clinical_status=active | modalities=assessment | speakers=doctor | evidence=T36
+  Summary: Dehydration can worsen constipation issues.
+  ClusterId: CL10
+  TemporalProfile: future
+  Updates:
+  - CAP21: content_source=doctor modality=assessment verification_status=unconfirmed clinical_status=active temporality=future turns=T36 :: Dehydration can worsen constipation issues.
+- elevated white blood cells | verification_status=unconfirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T44
+  Summary: The patient's white blood cell count is elevated.
+  ClusterId: CL13
+  TemporalProfile: historical
+  Updates:
+  - CAP9: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=historical turns=T44 :: The patient's white blood cell count is elevated.
+- abdominal pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T47
+  Summary: The patient reports doubling up with pain.
+  ClusterId: CL14
+  TemporalProfile: current
+  Updates:
+  - CAP11: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T47 :: The patient reports doubling up with pain.
+  - CAP23: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T47 :: The patient reports abdominal pain.
+- bowel disorder | verification_status=unconfirmed | clinical_status=planned | modalities=assessment | speakers=doctor | evidence=T47
+  Summary: The doctor suspects a bowel disorder.
+  ClusterId: CL15
+  TemporalProfile: future
+  Updates:
+  - CAP16: content_source=doctor modality=assessment verification_status=unconfirmed clinical_status=planned temporality=future turns=T47 :: The doctor suspects a bowel disorder.
+- bowel irregularity | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T47
+  Summary: The patient reports bowel irregularity.
+  ClusterId: CL16
+  TemporalProfile: current
+  Updates:
+  - CAP22: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T47 :: The patient reports bowel irregularity.
+- covid-19 | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T59
+  Summary: The patient is unvaccinated.
+  ClusterId: CL19
+  TemporalProfile: current
+  Updates:
+  - CAP30: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T59 :: The patient is unvaccinated.
+- vaccine injury | verification_status=unconfirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T63
+  Summary: The patient reports hearing about 'vaccine injury'.
+  ClusterId: CL20
+  TemporalProfile: current, reported
+  Updates:
+  - CAP12: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=reported turns=T63 :: The patient reports hearing about 'vaccine injury'.
+  - CAP13: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=current turns=T63 :: The patient is concerned about vaccine injury.
+- limited respiratory | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T63
+  Summary: The patient reports limited respiratory function.
+  ClusterId: CL21
+  TemporalProfile: current
+  Updates:
+  - CAP17: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T63 :: The patient reports limited respiratory function.
+- vitamin c | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T65
+  Summary: The patient takes vitamin C.
+  ClusterId: CL22
+  TemporalProfile: current
+  Updates:
+  - CAP24: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T65 :: The patient takes vitamin C.
+- respiratory limitation | verification_status=unconfirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T65
+  Summary: The patient reports respiratory limitation.
+  ClusterId: CL23
+  TemporalProfile: current
+  Updates:
+  - CAP25: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=current turns=T65 :: The patient reports respiratory limitation.
+- covid | verification_status=unconfirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T68
+  Summary: The patient is concerned about the risk of COVID.
+  ClusterId: CL26
+  TemporalProfile: current
+  Updates:
+  - CAP7: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=current turns=T68 :: The patient is concerned about the risk of COVID.
+- risk | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T68
+  Summary: The patient is considered high risk.
+  ClusterId: CL27
+  TemporalProfile: current
+  Updates:
+  - CAP18: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T68 :: The patient is considered high risk.
+- vaccine hesitancy | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T79
+  Summary: The patient is open-minded to this.
+  ClusterId: CL29
+  TemporalProfile: current
+  Updates:
+  - CAP19: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T79 :: The patient is open-minded to this.
+- urinary tract infection | verification_status=refuted | clinical_status=historical | modalities=interview | speakers=patient | evidence=T98
+  Summary: The patient feels like this was less likely a true urinary tract infection.
+  ClusterId: CL31
+  TemporalProfile: current
+  Updates:
+  - CAP3: content_source=patient modality=interview verification_status=refuted clinical_status=historical temporality=current turns=T98 :: The patient feels like this was less likely a true urinary tract infection.
+
+Medication Tracking
+- [MedicationState] miralax | verification_status=confirmed | clinical_status=active | modalities=interview,plan | speakers=doctor,patient | evidence=T47,T98
+  Summary: The patient drinks Miralax daily.
+  ClusterId: CL17
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient drinks Miralax daily. (T47)
+  - The patient feels like this was less likely a true urinary tract infection and was just related to her constipation. (T98)
+  Updates:
+  - CAP38: content_source=doctor modality=plan verification_status=confirmed clinical_status=active temporality=current turns=T47 :: The patient drinks Miralax daily.
+  - CAP34: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T98 :: The patient feels like this was less likely a true urinary tract infection and was just related to her constipation.
+- [MedicationChange] lactulose | verification_status=confirmed | clinical_status=planned | modalities=interview | speakers=doctor | evidence=T47
+  Summary: The doctor suggests lactulose as a rescue medication.
+  ClusterId: CL18
+  TemporalProfile: future
+  PlannedChanges:
+  - The doctor suggests lactulose as a rescue medication. (T47)
+  Updates:
+  - CAP36: content_source=doctor modality=interview verification_status=confirmed clinical_status=planned temporality=future turns=T47 :: The doctor suggests lactulose as a rescue medication.
+- [MedicationState] vitamin c | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T65
+  Summary: The patient takes vitamin c.
+  ClusterId: CL24
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient takes vitamin c. (T65)
+  Updates:
+  - CAP39: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T65 :: The patient takes vitamin c.
+- [MedicationState] multivitamins | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T67
+  Summary: The patient takes multivitamins.
+  ClusterId: CL25
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient takes multivitamins. (T67)
+  Updates:
+  - CAP40: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T67 :: The patient takes multivitamins.
+- [MedicationState] influenza vaccine | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=doctor | evidence=T74
+  Summary: The doctor believes the vaccine is completely safe.
+  ClusterId: CL28
+  TemporalProfile: past
+  CurrentRegimens:
+  - The doctor believes the vaccine is completely safe. (T74)
+  Updates:
+  - CAP37: content_source=doctor modality=interview verification_status=confirmed clinical_status=historical temporality=past turns=T74 :: The doctor believes the vaccine is completely safe.
+- [MedicationState] flu shot | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=doctor | evidence=T80
+  Summary: The doctor asked if the patient gets a flu shot every year.
+  ClusterId: CL30
+  TemporalProfile: past
+  CurrentRegimens:
+  - The doctor asked if the patient gets a flu shot every year. (T80)
+  Updates:
+  - CAP35: content_source=doctor modality=interview verification_status=confirmed clinical_status=historical temporality=past turns=T80 :: The doctor asked if the patient gets a flu shot every year.
+
+Other Structured States
+- [TestResult] elevated white blood cell count | verification_status=confirmed | clinical_status=active | modalities=test_result | speakers=test_result | evidence=T8
+  Summary: The patient's white blood cell count was elevated.
+  ClusterId: CL6
+  TemporalProfile: current
+- [Plan] blood work | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T38
+  Summary: The doctor orders complete blood work.
+  ClusterId: CL11
+  TemporalProfile: future
+- [Plan] cholesterol panel | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T38
+  Summary: The doctor orders a cholesterol panel.
+  ClusterId: CL12
+  TemporalProfile: future

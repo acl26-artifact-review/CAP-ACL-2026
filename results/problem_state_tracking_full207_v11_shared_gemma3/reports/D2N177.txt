@@ -1,0 +1,126 @@
+Case: D2N177
+
+Problem List and Visit State Tracking
+
+Problem List
+- depression | verification_status=unconfirmed | clinical_status=active | modalities=assessment,interview | speakers=doctor,patient | evidence=T11,T5,T7
+  Summary: The doctor plans to refer the patient to psychiatry for talk therapy.
+  ClusterId: CL1
+  TemporalProfile: current, past
+  Updates:
+  - CAP1: content_source=doctor modality=assessment verification_status=confirmed clinical_status=active temporality=current turns=T5 :: The doctor plans to refer the patient to psychiatry for talk therapy.
+  - CAP5: content_source=doctor modality=interview verification_status=unconfirmed clinical_status=historical temporality=past turns=T7 :: The patient has a past medical history of depression.
+  - CAP3: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T11 :: The patient reports anxiety and pressure related to Thanksgiving.
+  - CAP19: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=past turns=T11 :: The patient reports depression.
+- type 2 diabetes | verification_status=confirmed | clinical_status=active | modalities=assessment,interview | speakers=doctor,patient | evidence=T11,T37,T68,T7
+  Summary: The doctor plans to increase the patient's metformin dosage.
+  ClusterId: CL2
+  TemporalProfile: current, past
+  Updates:
+  - CAP2: content_source=doctor modality=interview verification_status=unconfirmed clinical_status=historical temporality=past turns=T7 :: The patient has a past medical history of type 2 diabetes.
+  - CAP4: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T11 :: The patient has a history of type 2 diabetes.
+  - CAP14: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T37 :: The patient is managing diabetes.
+  - CAP8: content_source=doctor modality=assessment verification_status=confirmed clinical_status=active temporality=current turns=T68 :: The doctor plans to increase the patient's metformin dosage.
+- hypertension | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=doctor,patient | evidence=T7
+  Summary: The patient has a past medical history of hypertension.
+  ClusterId: CL3
+  TemporalProfile: current, past
+  Updates:
+  - CAP6: content_source=doctor modality=interview verification_status=unconfirmed clinical_status=historical temporality=past turns=T7 :: The patient has a past medical history of hypertension.
+  - CAP10: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T7 :: The patient has a history of hypertension.
+- anxiety | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T11
+  Summary: The patient reports anxiety.
+  ClusterId: CL5
+  TemporalProfile: current
+  Updates:
+  - CAP16: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T11 :: The patient reports anxiety.
+- pressure | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T11
+  Summary: The patient reports pressure.
+  ClusterId: CL6
+  TemporalProfile: current
+  Updates:
+  - CAP17: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T11 :: The patient reports pressure.
+- stress | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T15
+  Summary: The patient reports stress.
+  ClusterId: CL7
+  TemporalProfile: current
+  Updates:
+  - CAP18: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T15 :: The patient reports stress.
+- chest pain | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T27,T42,T72
+  Summary: The patient denies chest pain.
+  ClusterId: CL9
+  TemporalProfile: current
+  Updates:
+  - CAP9: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T27 :: The patient reports pain in the left hand.
+  - CAP20: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T27 :: The patient reports pain.
+  - CAP15: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T42 :: The patient denies chest pain.
+  - CAP21: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T72 :: The patient reports pain.
+- blood pressure | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T37
+  Summary: The patient is monitoring blood pressure.
+  ClusterId: CL10
+  TemporalProfile: current
+  Updates:
+  - CAP12: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T37 :: The patient is monitoring blood pressure.
+- blood in stool | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T44
+  Summary: The patient denies blood in their stool.
+  ClusterId: CL13
+  TemporalProfile: current
+  Updates:
+  - CAP11: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T44 :: The patient denies blood in their stool.
+- elevated hemoglobin a1c | verification_status=confirmed | clinical_status=active | modalities=assessment | speakers=doctor | evidence=T64
+  Summary: The patient's hemoglobin a1c should be closer to six.
+  ClusterId: CL16
+  TemporalProfile: current, future
+  Updates:
+  - CAP7: content_source=doctor modality=assessment verification_status=unconfirmed clinical_status=active temporality=future turns=T64 :: The patient's hemoglobin a1c should be closer to six.
+  - CAP13: content_source=doctor modality=assessment verification_status=confirmed clinical_status=active temporality=current turns=T64 :: The patient's hemoglobin a1c is elevated.
+
+Medication Tracking
+- [MedicationState] lisinopril | verification_status=unconfirmed | clinical_status=active | modalities=interview,plan | speakers=doctor,patient | evidence=T37,T69
+  Summary: The doctor plans to continue the patient's lisinopril dosage.
+  ClusterId: CL11
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient is taking lisinopril. (T37)
+  - The doctor plans to continue the patient's lisinopril dosage. (T69)
+  Updates:
+  - CAP31: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T37 :: The patient is taking lisinopril.
+  - CAP29: content_source=doctor modality=plan verification_status=unconfirmed clinical_status=active temporality=current turns=T69 :: The doctor plans to continue the patient's lisinopril dosage.
+- [MedicationState] metformin | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T37
+  Summary: The patient is taking metformin.
+  ClusterId: CL12
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient is taking metformin. (T37)
+  Updates:
+  - CAP30: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T37 :: The patient is taking metformin.
+
+Other Structured States
+- [Demographics] age | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=doctor | evidence=T7
+  Summary: Bruce is a 60 year old male.
+  ClusterId: CL4
+  TemporalProfile: current
+- [Plan] vacation | verification_status=unconfirmed | clinical_status=planned | modalities=interview | speakers=patient | evidence=T17
+  Summary: The patient plans to take a vacation.
+  ClusterId: CL8
+  TemporalProfile: future
+- [ExamFinding] edema | verification_status=confirmed | clinical_status=active | modalities=exam | speakers=doctor | evidence=T50,T61
+  Summary: The patient has one plus non-pitting edema bilaterally in the lower extremities.
+  ClusterId: CL14
+  TemporalProfile: bilaterally, current
+- [ExamFinding] murmur | verification_status=confirmed | clinical_status=active | modalities=exam | speakers=doctor | evidence=T53
+  Summary: A slight two out of six systolic ejection murmur is appreciated.
+  ClusterId: CL15
+  TemporalProfile: current
+- [TestResult] hemoglobin a1c | verification_status=confirmed | clinical_status=active | modalities=test_result | speakers=doctor | evidence=T64
+  Summary: The patient's hemoglobin a1c is elevated at 8.
+  ClusterId: CL17
+  TemporalProfile: current
+- [TestResult] lipid panel | verification_status=unconfirmed | clinical_status=planned | modalities=test_result | speakers=doctor | evidence=T69
+  Summary: The doctor plans to order a lipid panel.
+  ClusterId: CL18
+  TemporalProfile: future
+- [Plan] echocardiogram | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T69
+  Summary: The doctor plans to order an echocardiogram.
+  ClusterId: CL19
+  TemporalProfile: future

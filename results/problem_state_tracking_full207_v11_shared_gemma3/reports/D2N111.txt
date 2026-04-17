@@ -1,0 +1,176 @@
+Case: D2N111
+
+Problem List and Visit State Tracking
+
+Problem List
+- right knee pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T11,T16,T24,T60
+  Summary: The patient reports pain in the right knee.
+  ClusterId: CL1
+  TemporalProfile: current
+  Updates:
+  - CAP7: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T11 :: The patient reports pain in his right knee.
+  - CAP8: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T11 :: The patient reports pain in the right knee.
+  - CAP21: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T16 :: The patient reports pain.
+  - CAP9: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T24 :: The patient reports pain in the left hand.
+  - CAP19: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T60 :: The patient reports knee pain.
+- pop sound | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T14
+  Summary: The patient heard a pop sound.
+  ClusterId: CL2
+  TemporalProfile: upon landing
+  Updates:
+  - CAP14: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=upon landing turns=T14 :: The patient heard a pop sound.
+- hypertension | verification_status=confirmed | clinical_status=active | modalities=assessment | speakers=doctor | evidence=T26
+  Summary: The patient has hypertension.
+  ClusterId: CL4
+  TemporalProfile: current
+  Updates:
+  - CAP22: content_source=doctor modality=assessment verification_status=confirmed clinical_status=active temporality=current turns=T26 :: The patient has hypertension.
+- high blood pressure | verification_status=confirmed | clinical_status=active | modalities=assessment | speakers=doctor | evidence=T33,T45
+  Summary: The doctor is concerned about the patient's blood pressure.
+  ClusterId: CL7
+  TemporalProfile: current
+  Updates:
+  - CAP4: content_source=doctor modality=assessment verification_status=unconfirmed clinical_status=active temporality=current turns=T33 :: The doctor is concerned about the patient's blood pressure.
+  - CAP5: content_source=doctor modality=assessment verification_status=confirmed clinical_status=active temporality=current turns=T45 :: The doctor noted the patient's blood pressure is elevated.
+- left hand pain | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T33
+  Summary: The patient reports pain in the left hand.
+  ClusterId: CL8
+  TemporalProfile: current
+  Updates:
+  - CAP10: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T33 :: The patient reports pain in the left hand.
+- blood sugars | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T34
+  Summary: The patient's blood sugars are better.
+  ClusterId: CL9
+  TemporalProfile: current
+  Updates:
+  - CAP15: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T34 :: The patient's blood sugars are better.
+- left knee pain | verification_status=confirmed | clinical_status=active | modalities=exam | speakers=doctor | evidence=T45
+  Summary: The patient reported some pain when the doctor pressed the left knee.
+  ClusterId: CL11
+  TemporalProfile: current
+  Updates:
+  - CAP3: content_source=doctor modality=exam verification_status=confirmed clinical_status=active temporality=current turns=T45 :: The patient reported some pain when the doctor pressed the left knee.
+- regular heart rate | verification_status=confirmed | clinical_status=stable | modalities=exam | speakers=doctor | evidence=T45
+  Summary: The doctor reported a regular heart rate.
+  ClusterId: CL12
+  TemporalProfile: current
+  Updates:
+  - CAP11: content_source=doctor modality=exam verification_status=confirmed clinical_status=stable temporality=current turns=T45 :: The doctor reported a regular heart rate.
+- clear lung sounds | verification_status=confirmed | clinical_status=stable | modalities=exam | speakers=doctor | evidence=T45
+  Summary: The doctor reported clear lung sounds bilaterally.
+  ClusterId: CL13
+  TemporalProfile: current
+  Updates:
+  - CAP13: content_source=doctor modality=exam verification_status=confirmed clinical_status=stable temporality=current turns=T45 :: The doctor reported clear lung sounds bilaterally.
+- diet | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T45
+  Summary: The patient's diet is decent.
+  ClusterId: CL14
+  TemporalProfile: current
+  Updates:
+  - CAP16: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T45 :: The patient's diet is decent.
+- exercise | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T45
+  Summary: The patient's exercise is decent.
+  ClusterId: CL15
+  TemporalProfile: current
+  Updates:
+  - CAP17: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T45 :: The patient's exercise is decent.
+- trying to watch what i eat | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T47
+  Summary: The patient is trying to watch what they eat.
+  ClusterId: CL16
+  TemporalProfile: current
+  Updates:
+  - CAP6: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T47 :: The patient is trying to watch what they eat.
+- watching carbs | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T49
+  Summary: The patient is watching carbs.
+  ClusterId: CL17
+  TemporalProfile: current
+  Updates:
+  - CAP18: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T49 :: The patient is watching carbs.
+- no pain on inside of knee | verification_status=confirmed | clinical_status=stable | modalities=exam | speakers=doctor | evidence=T51
+  Summary: The patient reported no pain when the doctor pressed the inside of the knee.
+  ClusterId: CL18
+  TemporalProfile: current
+  Updates:
+  - CAP2: content_source=doctor modality=exam verification_status=confirmed clinical_status=stable temporality=current turns=T51 :: The patient reported no pain when the doctor pressed the inside of the knee.
+- no murmur | verification_status=confirmed | clinical_status=stable | modalities=exam | speakers=doctor | evidence=T51
+  Summary: The doctor reported no murmur upon auscultation.
+  ClusterId: CL19
+  TemporalProfile: current
+  Updates:
+  - CAP12: content_source=doctor modality=exam verification_status=confirmed clinical_status=stable temporality=current turns=T51 :: The doctor reported no murmur upon auscultation.
+- limp | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T59
+  Summary: The patient reports a limp.
+  ClusterId: CL20
+  TemporalProfile: current
+  Updates:
+  - CAP20: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T59 :: The patient reports a limp.
+- lateral ligament strain | verification_status=confirmed | clinical_status=active | modalities=assessment | speakers=doctor | evidence=T60
+  Summary: The doctor diagnoses a lateral ligament strain.
+  ClusterId: CL21
+  TemporalProfile: current
+  Updates:
+  - CAP1: content_source=doctor modality=assessment verification_status=confirmed clinical_status=active temporality=current turns=T60 :: The doctor diagnoses a lateral ligament strain.
+
+Medication Tracking
+- [MedicationState] acetaminophen | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T16
+  Summary: The patient took acetaminophen.
+  ClusterId: CL3
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient took acetaminophen. (T16)
+  Updates:
+  - CAP31: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T16 :: The patient took acetaminophen.
+- [MedicationChange] blood pressure cuff | verification_status=unconfirmed | clinical_status=planned | modalities=interview | speakers=doctor | evidence=T26
+  Summary: The doctor wants the patient to get a blood pressure cuff.
+  ClusterId: CL5
+  TemporalProfile: future
+  PlannedChanges:
+  - The doctor wants the patient to get a blood pressure cuff. (T26)
+  Updates:
+  - CAP27: content_source=doctor modality=interview verification_status=unconfirmed clinical_status=planned temporality=future turns=T26 :: The doctor wants the patient to get a blood pressure cuff.
+- [MedicationState] lisinopril | verification_status=confirmed | clinical_status=active | modalities=plan,unknown | speakers=doctor | evidence=T30,T60
+  Summary: The doctor continues lisinopril.
+  ClusterId: CL6
+  TemporalProfile: ongoing, past
+  CurrentRegimens:
+  - The patient is on twenty milligrams of lisinopril. (T30)
+  - The doctor continues lisinopril. (T60)
+  Updates:
+  - CAP28: content_source=doctor modality=unknown verification_status=confirmed clinical_status=historical temporality=past turns=T30 :: The patient is on twenty milligrams of lisinopril.
+  - CAP33: content_source=doctor modality=plan verification_status=confirmed clinical_status=active temporality=ongoing turns=T60 :: The doctor continues lisinopril.
+- [MedicationState] metformin | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=doctor,patient | evidence=T40
+  Summary: The doctor is prescribing metformin.
+  ClusterId: CL10
+  TemporalProfile: current
+  CurrentRegimens:
+  - The doctor is prescribing metformin. (T40)
+  - The patient is taking metformin. (T40)
+  Updates:
+  - CAP29: content_source=doctor modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T40 :: The doctor is prescribing metformin.
+  - CAP30: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T40 :: The patient is taking metformin.
+- [MedicationChange] meloxicam | verification_status=confirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T60
+  Summary: The doctor prescribes meloxicam.
+  ClusterId: CL26
+  TemporalProfile: daily
+  PlannedChanges:
+  - The doctor prescribes meloxicam. (T60)
+  Updates:
+  - CAP32: content_source=doctor modality=plan verification_status=confirmed clinical_status=planned temporality=daily turns=T60 :: The doctor prescribes meloxicam.
+
+Other Structured States
+- [Plan] a1c test | verification_status=confirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T60
+  Summary: The doctor orders an a1c test.
+  ClusterId: CL22
+  TemporalProfile: soon
+- [Plan] lipid panel | verification_status=confirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T60
+  Summary: The doctor orders a lipid panel.
+  ClusterId: CL23
+  TemporalProfile: soon
+- [Plan] x-ray | verification_status=confirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T60
+  Summary: The doctor orders an x-ray.
+  ClusterId: CL24
+  TemporalProfile: soon
+- [Plan] physical therapy | verification_status=confirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T60
+  Summary: The doctor orders physical therapy.
+  ClusterId: CL25
+  TemporalProfile: soon

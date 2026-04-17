@@ -1,0 +1,30 @@
+{
+  "section_miscategorizations": [
+    {
+      "text": "The doctor recommends a laparoscopic cholecystectomy.",
+      "current_section": "A",
+      "expected_section": "P",
+      "severity": "major",
+      "reason": "A recommendation for a specific surgical procedure is a management plan/action, not an assessment statement."
+    },
+    {
+      "text": "The clinician suspects cervical radiculopathy.",
+      "current_section": "A",
+      "expected_section": "A",
+      "severity": "major",
+      "reason": "This assessment is clinically inconsistent with the rest of the note, which focuses on right upper quadrant abdominal pain and gallbladder disease; it appears to be an incorrect or mismatched problem assessment for this encounter."
+    },
+    {
+      "text": "The clinician plans a cervical MRI.",
+      "current_section": "P",
+      "expected_section": "P",
+      "severity": "major",
+      "reason": "This plan item is clinically inconsistent with the rest of the note (gallbladder-focused visit) and appears to be a mismatched plan for a different problem, which could mislead the reader about the intended workup."
+    }
+  ],
+  "summary_statistics": {
+    "section_appropriateness_score": 0.4,
+    "section_miscategorization_count": 3,
+    "major_section_miscategorization_count": 3
+  }
+}

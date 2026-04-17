@@ -1,0 +1,83 @@
+{
+  "events": [
+    {
+      "event_id": "CL16",
+      "event_type": "ProblemOrientedNoteBundle",
+      "canonical_concept": "diabetes",
+      "visit_state": "active",
+      "status": "affirmed",
+      "temporality": "future",
+      "speaker_source": "doctor",
+      "clinical_priority": "high",
+      "title": "diabetes",
+      "event_summary": "Problem-oriented bundle for diabetes.",
+      "supporting_cap_ids": [
+        "CAP7",
+        "CAP14",
+        "CAP16",
+        "CAP19",
+        "CAP20",
+        "CAP17",
+        "CAP21",
+        "CAP25",
+        "CAP26"
+      ],
+      "anchor_problem_cap_id": "CAP7",
+      "anchor_problem": "diabetes",
+      "S_cap_ids": [
+        "CAP7",
+        "CAP14"
+      ],
+      "O_cap_ids": [
+        "CAP17"
+      ],
+      "P_cap_ids": [
+        "CAP16",
+        "CAP19",
+        "CAP20",
+        "CAP21",
+        "CAP25",
+        "CAP26"
+      ],
+      "supporting_evidence": [
+        "The doctor has a diabetes problem.",
+        "The patient has diabetes.",
+        "The doctor finds tenderness in the paraspinal areas of the patient's back."
+      ],
+      "current_state": [
+        "The doctor has a diabetes problem.",
+        "The patient has diabetes."
+      ],
+      "planned_actions": [
+        "The doctor orders an increase in lasix dose to 60 milligrams for the next four days.",
+        "The doctor orders albuterol as needed.",
+        "The doctor orders atrovent as needed.",
+        "The doctor orders physical therapy.",
+        "The doctor orders naproxen."
+      ],
+      "key_slots": {
+        "source_modalities": "assessment, interview, plan, exam",
+        "temporal_profile": "current, next 4 days, as needed, future",
+        "anchor_cluster_type": "ProblemState",
+        "anchor_primary_cap_type": "Problem",
+        "bundle_concepts": "diabetes; lasix; albuterol; atrovent; tenderness; physical therapy; naproxen; flexeril",
+        "history_context": "",
+        "related_factors": "",
+        "visit_primary": "true",
+        "render_in_note": "true",
+        "assessment_fallback": "The patient has diabetes.",
+        "bundle_design": "problem_oriented_note_bundle"
+      },
+      "render_sections": [
+        "S",
+        "O",
+        "A",
+        "P",
+        "History of Present Illness",
+        "Findings",
+        "Assessment",
+        "Plan"
+      ]
+    }
+  ]
+}

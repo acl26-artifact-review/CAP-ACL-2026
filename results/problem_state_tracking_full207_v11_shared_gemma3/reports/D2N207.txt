@@ -1,0 +1,207 @@
+Case: D2N207
+
+Problem List and Visit State Tracking
+
+Problem List
+- dyspnea | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T13
+  Summary: The patient reports shortness of breath.
+  ClusterId: CL2
+  TemporalProfile: current
+  Updates:
+  - CAP14: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T13 :: The patient reports shortness of breath.
+- nocturia | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T15
+  Summary: The patient reports urinating at night.
+  ClusterId: CL3
+  TemporalProfile: current
+  Updates:
+  - CAP15: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T15 :: The patient reports urinating at night.
+- kidney dysfunction | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=doctor | evidence=T24,T35
+  Summary: The doctor recommends avoiding anti-inflammatories to prevent worsening kidney function.
+  ClusterId: CL4
+  TemporalProfile: current
+  Updates:
+  - CAP18: content_source=doctor modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T24 :: The patient has kidney dysfunction.
+  - CAP2: content_source=doctor modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T35 :: The doctor recommends avoiding anti-inflammatories to prevent worsening kidney function.
+- pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T25,T27
+  Summary: The patient reports pain in their feet.
+  ClusterId: CL5
+  TemporalProfile: current
+  Updates:
+  - CAP11: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T25 :: The patient reports pain in their feet.
+  - CAP20: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T27 :: The patient reports pain.
+- high potassium | verification_status=unconfirmed | clinical_status=planned | modalities=interview | speakers=doctor | evidence=T33
+  Summary: The doctor advises the patient to avoid high potassium foods.
+  ClusterId: CL8
+  TemporalProfile: future
+  Updates:
+  - CAP3: content_source=doctor modality=interview verification_status=unconfirmed clinical_status=planned temporality=future turns=T33 :: The doctor advises the patient to avoid high potassium foods.
+- bananas | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T34
+  Summary: The patient is unsure if bananas are a problem.
+  ClusterId: CL9
+  TemporalProfile: current
+  Updates:
+  - CAP4: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T34 :: The patient is unsure if bananas are a problem.
+- potatoes | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T34
+  Summary: The patient is unsure if potatoes are a problem.
+  ClusterId: CL10
+  TemporalProfile: current
+  Updates:
+  - CAP5: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T34 :: The patient is unsure if potatoes are a problem.
+- shortness of breath | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T46
+  Summary: The patient is experiencing an acute heart failure exacerbation.
+  ClusterId: CL12
+  TemporalProfile: acute, current
+  Updates:
+  - CAP6: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=acute turns=T46 :: The patient is experiencing an acute heart failure exacerbation.
+  - CAP16: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T46 :: The patient reports shortness of breath.
+- heart failure exacerbation | verification_status=confirmed | clinical_status=active | modalities=assessment | speakers=doctor | evidence=T46
+  Summary: The doctor assesses an acute heart failure exacerbation.
+  ClusterId: CL13
+  TemporalProfile: current
+  Updates:
+  - CAP7: content_source=doctor modality=assessment verification_status=confirmed clinical_status=active temporality=current turns=T46 :: The doctor assesses an acute heart failure exacerbation.
+- edema | verification_status=confirmed | clinical_status=active | modalities=assessment | speakers=doctor | evidence=T46
+  Summary: The doctor finds bilateral lower extremity edema.
+  ClusterId: CL14
+  TemporalProfile: current
+  Updates:
+  - CAP12: content_source=doctor modality=assessment verification_status=confirmed clinical_status=active temporality=current turns=T46 :: The doctor finds bilateral lower extremity edema.
+- chronic kidney disease | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=doctor | evidence=T50
+  Summary: The patient has stage three chronic kidney disease.
+  ClusterId: CL18
+  TemporalProfile: current
+  Updates:
+  - CAP8: content_source=doctor modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T50 :: The patient has stage three chronic kidney disease.
+- foot pain | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T51
+  Summary: The patient reports foot pain.
+  ClusterId: CL23
+  TemporalProfile: current
+  Updates:
+  - CAP19: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T51 :: The patient reports foot pain.
+- left hand pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T59
+  Summary: The patient reports pain in the left hand.
+  ClusterId: CL24
+  TemporalProfile: current
+  Updates:
+  - CAP9: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T59 :: The patient reports pain in the left hand.
+- possible gout flare | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=doctor | evidence=T60
+  Summary: The doctor suspects a possible gout flare.
+  ClusterId: CL25
+  TemporalProfile: current, possible
+  Updates:
+  - CAP1: content_source=doctor modality=interview verification_status=unconfirmed clinical_status=active temporality=possible turns=T60 :: The doctor suggests gout as a possible cause of the patient's pain.
+  - CAP13: content_source=doctor modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T60 :: The doctor suspects a possible gout flare.
+- alternative medication | verification_status=unconfirmed | clinical_status=planned | modalities=interview | speakers=doctor | evidence=T60
+  Summary: The doctor recommends an alternative medication.
+  ClusterId: CL26
+  TemporalProfile: future
+  Updates:
+  - CAP17: content_source=doctor modality=interview verification_status=unconfirmed clinical_status=planned temporality=future turns=T60 :: The doctor recommends an alternative medication.
+- dietitian referral | verification_status=unconfirmed | clinical_status=planned | modalities=interview | speakers=doctor | evidence=T64
+  Summary: The doctor orders a referral to a dietitian.
+  ClusterId: CL29
+  TemporalProfile: future
+  Updates:
+  - CAP10: content_source=doctor modality=interview verification_status=unconfirmed clinical_status=planned temporality=future turns=T64 :: The doctor orders a referral to a dietitian.
+
+Medication Tracking
+- [MedicationState] lasix | verification_status=confirmed | clinical_status=active | modalities=interview,plan | speakers=doctor | evidence=T10,T46
+  Summary: The patient will receive an additional lasix dose at 4:00 PM if needed.
+  ClusterId: CL1
+  TemporalProfile: additional dose, current
+  CurrentRegimens:
+  - The dose of lasix is 40 milligrams once a day. (T10)
+  - The patient is taking lasix. (T10)
+  - The patient will receive an additional lasix dose at 4:00 PM if needed. (T46)
+  Updates:
+  - CAP32: content_source=doctor modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T10 :: The dose of lasix is 40 milligrams once a day.
+  - CAP36: content_source=doctor modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T10 :: The patient is taking lasix.
+  - CAP30: content_source=doctor modality=plan verification_status=confirmed clinical_status=active temporality=additional dose turns=T46 :: The patient will receive an additional lasix dose at 4:00 PM if needed.
+- [MedicationState] motrin | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T25
+  Summary: The patient took motrin.
+  ClusterId: CL6
+  TemporalProfile: past
+  CurrentRegimens:
+  - The patient took motrin. (T25)
+  Updates:
+  - CAP37: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=past turns=T25 :: The patient took motrin.
+- [MedicationState] tylenol | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T26
+  Summary: The patient takes tylenol.
+  ClusterId: CL7
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient takes tylenol. (T26)
+  Updates:
+  - CAP38: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T26 :: The patient takes tylenol.
+- [MedicationChange] referral to a dietitian | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T38
+  Summary: The doctor orders a referral to a dietitian.
+  ClusterId: CL11
+  TemporalProfile: future
+  PlannedChanges:
+  - The doctor orders a referral to a dietitian. (T38)
+  Updates:
+  - CAP24: content_source=doctor modality=plan verification_status=unconfirmed clinical_status=planned temporality=future turns=T38 :: The doctor orders a referral to a dietitian.
+- [MedicationChange] lasix | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T46
+  Summary: The doctor plans to increase the lasix dosage to eighty milligrams a day.
+  ClusterId: CL16
+  TemporalProfile: future, increased dose
+  PlannedChanges:
+  - The doctor plans to increase the lasix dosage to eighty milligrams a day. (T46)
+  - The patient's lasix dose will be increased to 80 milligrams per day. (T46)
+  - The doctor plans to increase lasix dosage. (T46)
+  - The doctor plans to increase lasix. (T46)
+  Updates:
+  - CAP29: content_source=doctor modality=plan verification_status=unconfirmed clinical_status=planned temporality=future turns=T46 :: The doctor plans to increase the lasix dosage to eighty milligrams a day.
+  - CAP31: content_source=doctor modality=plan verification_status=confirmed clinical_status=active temporality=increased dose turns=T46 :: The patient's lasix dose will be increased to 80 milligrams per day.
+  - CAP34: content_source=doctor modality=plan verification_status=unconfirmed clinical_status=planned temporality=future turns=T46 :: The doctor plans to increase lasix dosage.
+  - CAP35: content_source=doctor modality=plan verification_status=unconfirmed clinical_status=planned temporality=future turns=T46 :: The doctor plans to increase lasix.
+- [MedicationChange] motrin | verification_status=refuted | clinical_status=historical | modalities=plan | speakers=doctor | evidence=T50
+  Summary: The doctor wants the patient to stop taking Motrin and Advil.
+  ClusterId: CL19
+  TemporalProfile: current
+  PlannedChanges:
+  - The doctor wants the patient to stop taking Motrin and Advil. (T50)
+  Updates:
+  - CAP21: content_source=doctor modality=plan verification_status=refuted clinical_status=historical temporality=current turns=T50 :: The doctor wants the patient to stop taking Motrin and Advil.
+- [MedicationChange] tylenol | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T50
+  Summary: The doctor wants the patient to take Tylenol.
+  ClusterId: CL20
+  TemporalProfile: current
+  PlannedChanges:
+  - The doctor wants the patient to take Tylenol. (T50)
+  Updates:
+  - CAP25: content_source=doctor modality=plan verification_status=unconfirmed clinical_status=planned temporality=current turns=T50 :: The doctor wants the patient to take Tylenol.
+- [MedicationChange] uric acid test | verification_status=unconfirmed | clinical_status=planned | modalities=interview | speakers=doctor | evidence=T60
+  Summary: The doctor orders a uric acid test.
+  ClusterId: CL28
+  TemporalProfile: soon
+  PlannedChanges:
+  - The doctor orders a uric acid test. (T60)
+  Updates:
+  - CAP26: content_source=doctor modality=interview verification_status=unconfirmed clinical_status=planned temporality=soon turns=T60 :: The doctor orders a uric acid test.
+
+Other Structured States
+- [Plan] lasix | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T46
+  Summary: The doctor orders lasix at eighty milligrams a day.
+  ClusterId: CL15
+  TemporalProfile: future
+- [FollowUp] lasix | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T46
+  Summary: The doctor orders a follow-up call in two days.
+  ClusterId: CL17
+  TemporalProfile: future
+- [Plan] chest x-ray | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T50
+  Summary: A chest x-ray will be ordered.
+  ClusterId: CL21
+  TemporalProfile: soon
+- [Plan] echocardiogram | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T50
+  Summary: An echocardiogram will be ordered.
+  ClusterId: CL22
+  TemporalProfile: soon
+- [TestResult] uric acid | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T60
+  Summary: The doctor wants to order a uric acid test.
+  ClusterId: CL27
+  TemporalProfile: current
+- [Plan] salt intake | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=doctor | evidence=T64
+  Summary: The doctor advises the patient to watch their salt intake.
+  ClusterId: CL30
+  TemporalProfile: current

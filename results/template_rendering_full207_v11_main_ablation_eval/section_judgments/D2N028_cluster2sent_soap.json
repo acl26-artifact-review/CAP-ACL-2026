@@ -1,0 +1,37 @@
+{
+  "section_miscategorizations": [
+    {
+      "text": "The patient's primary care physician reported slightly elevated liver enzymes (ALT, AST, ALP) four months prior.",
+      "current_section": "O",
+      "expected_section": "S",
+      "severity": "major",
+      "reason": "This is historical information from prior care, not a current objective finding from today's visit. In this context it functions as past history rather than a present lab result."
+    },
+    {
+      "text": "The clinician suspects cervical radiculopathy.",
+      "current_section": "A",
+      "expected_section": "P",
+      "severity": "minor",
+      "reason": "This is framed as a suspicion that directly drives an imaging order; it could reasonably be documented in Assessment, but in this note it is tightly coupled to the MRI plan and might be clearer if explicitly tied to the management plan. Still, it does represent diagnostic impression, so this is a minor organizational issue."
+    },
+    {
+      "text": "The clinician plans a cervical MRI.",
+      "current_section": "P",
+      "expected_section": "A",
+      "severity": "major",
+      "reason": "Stating that the clinician 'plans' an MRI is more an assessment-level decision statement; the actual actionable order belongs in the Plan. This blurs assessment versus explicit orders and is redundant with the subsequent 'Order a cervical MRI.'"
+    },
+    {
+      "text": "The patient is currently taking Crestor and olmesartan, and occasionally uses Tylenol.",
+      "current_section": "P",
+      "expected_section": "S",
+      "severity": "major",
+      "reason": "These are existing medications, not new prescriptions or changes. Current medication state belongs in the Subjective section unless framed as a treatment change."
+    }
+  ],
+  "summary_statistics": {
+    "section_appropriateness_score": 0.6,
+    "section_miscategorization_count": 4,
+    "major_section_miscategorization_count": 3
+  }
+}

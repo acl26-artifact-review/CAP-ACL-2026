@@ -1,0 +1,128 @@
+Case: D2N013
+
+Problem List and Visit State Tracking
+
+Problem List
+- anxiety | verification_status=unconfirmed | clinical_status=active | modalities=interview,unknown | speakers=doctor,patient | evidence=T14,T3,T36
+  Summary: The patient reports anxiety.
+  ClusterId: CL1
+  TemporalProfile: current, past
+  Updates:
+  - CAP1: content_source=doctor modality=unknown verification_status=confirmed clinical_status=historical temporality=past turns=T3 :: The patient has a past medical history significant for anxiety.
+  - CAP10: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T14 :: The patient reports anxiety.
+  - CAP12: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T14 :: The patient reports anxiety.
+  - CAP17: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T36 :: The patient reports anxiety.
+- epilepsy | verification_status=unconfirmed | clinical_status=resolved | modalities=interview,unknown | speakers=doctor,patient | evidence=T17,T3,T36
+  Summary: The patient has a history of epilepsy.
+  ClusterId: CL2
+  TemporalProfile: current, historical, past
+  Updates:
+  - CAP2: content_source=doctor modality=unknown verification_status=confirmed clinical_status=historical temporality=past turns=T3 :: The patient has a past medical history significant for epilepsy.
+  - CAP3: content_source=patient modality=interview verification_status=confirmed clinical_status=resolved temporality=historical turns=T17 :: The patient has a history of epilepsy.
+  - CAP18: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T36 :: The patient has epilepsy.
+- high blood sugar | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T5
+  Summary: The patient reports high blood sugar.
+  ClusterId: CL3
+  TemporalProfile: current
+  Updates:
+  - CAP4: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T5 :: The patient reports high blood sugar.
+- sugar intake | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T5
+  Summary: The patient reports excessive sugar intake.
+  ClusterId: CL4
+  TemporalProfile: current
+  Updates:
+  - CAP5: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T5 :: The patient reports excessive sugar intake.
+- stress | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T5
+  Summary: The patient reports stress.
+  ClusterId: CL5
+  TemporalProfile: current
+  Updates:
+  - CAP9: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T5 :: The patient reports stress.
+- pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T9
+  Summary: The patient reports pain.
+  ClusterId: CL6
+  TemporalProfile: current
+  Updates:
+  - CAP11: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T9 :: The patient reports pain.
+- chest pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T18
+  Summary: The patient denies chest pain.
+  ClusterId: CL8
+  TemporalProfile: current
+  Updates:
+  - CAP8: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T18 :: The patient denies chest pain.
+- nausea | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T18
+  Summary: The patient denies nausea.
+  ClusterId: CL9
+  TemporalProfile: current
+  Updates:
+  - CAP13: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T18 :: The patient denies nausea.
+- dizziness | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T18
+  Summary: The patient denies dizziness.
+  ClusterId: CL10
+  TemporalProfile: current
+  Updates:
+  - CAP14: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T18 :: The patient denies dizziness.
+- fever | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T18
+  Summary: The patient denies fever.
+  ClusterId: CL11
+  TemporalProfile: current
+  Updates:
+  - CAP15: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T18 :: The patient denies fever.
+- chills | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T18
+  Summary: The patient denies chills.
+  ClusterId: CL12
+  TemporalProfile: current
+  Updates:
+  - CAP16: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T18 :: The patient denies chills.
+- shortness of breath | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T23
+  Summary: The patient denies shortness of breath.
+  ClusterId: CL13
+  TemporalProfile: current
+  Updates:
+  - CAP6: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T23 :: The patient denies shortness of breath.
+- diabetes | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T37
+  Summary: The patient has newly diagnosed diabetes.
+  ClusterId: CL15
+  TemporalProfile: current
+  Updates:
+  - CAP7: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T37 :: The patient has newly diagnosed diabetes.
+
+Medication Tracking
+- [MedicationState] metformin | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=doctor | evidence=T17
+  Summary: The patient is taking metformin.
+  ClusterId: CL7
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient is taking metformin. (T17)
+  Updates:
+  - CAP23: content_source=doctor modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T17 :: The patient is taking metformin.
+- [MedicationChange] metformin | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=doctor | evidence=T37
+  Summary: The patient will continue taking metformin 500 mg twice a day.
+  ClusterId: CL18
+  TemporalProfile: current
+  PlannedChanges:
+  - The patient will continue taking metformin 500 mg twice a day. (T37)
+  Updates:
+  - CAP22: content_source=doctor modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T37 :: The patient will continue taking metformin 500 mg twice a day.
+- [MedicationState] keppra | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=clinician | evidence=T49
+  Summary: The patient continues on keppra.
+  ClusterId: CL19
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient continues on keppra. (T49)
+  Updates:
+  - CAP24: content_source=clinician modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T49 :: The patient continues on keppra.
+
+Other Structured States
+- [ExamFinding] edema | verification_status=confirmed | clinical_status=active | modalities=exam | speakers=doctor | evidence=T29
+  Summary: The patient has trace pitting edema to the lower extremities.
+  ClusterId: CL14
+  TemporalProfile: current
+- [Plan] hemoglobin a1c | verification_status=unconfirmed | clinical_status=planned | modalities=interview | speakers=doctor | evidence=T37
+  Summary: A hemoglobin a1c test will be ordered.
+  ClusterId: CL16
+  TemporalProfile: future
+- [Plan] keppra | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=doctor | evidence=T37
+  Summary: The patient will continue taking keppra.
+  ClusterId: CL17
+  TemporalProfile: current

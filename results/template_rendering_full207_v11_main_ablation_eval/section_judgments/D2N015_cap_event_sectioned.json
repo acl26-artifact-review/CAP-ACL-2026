@@ -1,0 +1,30 @@
+{
+  "section_miscategorizations": [
+    {
+      "text": "She reports mild wheezes on exam.",
+      "current_section": "History of Present Illness",
+      "expected_section": "Findings",
+      "severity": "major",
+      "reason": "This is an exam finding, not a patient-reported symptom; placing it in HPI blurs the distinction between subjective history and objective exam."
+    },
+    {
+      "text": "Examination also notes mild back pain.",
+      "current_section": "Findings",
+      "expected_section": "History of Present Illness",
+      "severity": "minor",
+      "reason": "Back pain is primarily a subjective symptom already described in the history; phrasing it as an exam note in Findings is organizationally awkward but not highly misleading."
+    },
+    {
+      "text": "The doctor diagnoses the patient with COPD. The patient may have COPD.",
+      "current_section": "Assessment",
+      "expected_section": "Assessment",
+      "severity": "minor",
+      "reason": "The two consecutive, conflicting statements (definitive diagnosis vs. possibility) are both assessment content but poorly organized; while not a section error, the internal inconsistency could confuse the diagnostic impression."
+    }
+  ],
+  "summary_statistics": {
+    "section_appropriateness_score": 0.7,
+    "section_miscategorization_count": 3,
+    "major_section_miscategorization_count": 1
+  }
+}

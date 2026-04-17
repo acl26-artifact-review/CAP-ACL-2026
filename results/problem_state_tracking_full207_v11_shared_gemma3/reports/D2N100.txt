@@ -1,0 +1,71 @@
+Case: D2N100
+
+Problem List and Visit State Tracking
+
+Problem List
+- facial wiping | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T9
+  Summary: The patient reports wiping his face in the morning.
+  ClusterId: CL1
+  TemporalProfile: morning
+  Updates:
+  - CAP2: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=morning turns=T9 :: The patient reports wiping his face in the morning.
+- acne | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T11,T9
+  Summary: The patient reports acne on the face.
+  ClusterId: CL2
+  TemporalProfile: current
+  Updates:
+  - CAP4: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T9 :: The patient reports acne on the face.
+  - CAP8: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T11 :: The patient has acne.
+- facial cleanser | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T9
+  Summary: The patient uses an elf facial cleanser.
+  ClusterId: CL3
+  TemporalProfile: morning/night
+  Updates:
+  - CAP5: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=morning/night turns=T9 :: The patient uses an elf facial cleanser.
+- greasy skin | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T9
+  Summary: The patient feels greasy skin.
+  ClusterId: CL4
+  TemporalProfile: morning
+  Updates:
+  - CAP6: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=morning turns=T9 :: The patient feels greasy skin.
+- pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T11
+  Summary: The patient reports pain in the left hand.
+  ClusterId: CL7
+  TemporalProfile: current
+  Updates:
+  - CAP3: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T11 :: The patient reports pain in the left hand.
+- elf cleanser | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T11
+  Summary: The patient uses elf cleanser.
+  ClusterId: CL8
+  TemporalProfile: morning
+  Updates:
+  - CAP7: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=morning turns=T11 :: The patient uses elf cleanser.
+- multiple benign moles | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T28
+  Summary: The patient has multiple benign moles on their arms, legs, back, and abdomen.
+  ClusterId: CL9
+  TemporalProfile: multiple
+  Updates:
+  - CAP1: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=multiple turns=T28 :: The patient has multiple benign moles on their arms, legs, back, and abdomen.
+
+Medication Tracking
+- [MedicationState] elf facial cleanser | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T9
+  Summary: The patient uses Elf facial cleanser.
+  ClusterId: CL5
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient uses Elf facial cleanser. (T9)
+  Updates:
+  - CAP9: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T9 :: The patient uses Elf facial cleanser.
+- [MedicationState] persa-gel | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T9
+  Summary: The patient uses Persa-gel.
+  ClusterId: CL6
+  TemporalProfile: current, morning
+  CurrentRegimens:
+  - The patient uses Persa-gel. (T9)
+  - The patient uses Persa-gel. (T9)
+  Updates:
+  - CAP10: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T9 :: The patient uses Persa-gel.
+  - CAP11: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=morning turns=T9 :: The patient uses Persa-gel.
+
+Other Structured States
+- None

@@ -1,0 +1,92 @@
+Case: D2N062
+
+Problem List and Visit State Tracking
+
+Problem List
+- difficulty swallowing | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T0
+  Summary: The patient reports difficulty swallowing.
+  ClusterId: CL1
+  TemporalProfile: current
+  Updates:
+  - CAP2: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T0 :: The patient reports difficulty swallowing.
+- chest pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T1
+  Summary: The patient reports chest pain.
+  ClusterId: CL2
+  TemporalProfile: current
+  Updates:
+  - CAP3: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T1 :: The patient reports chest pain.
+- stress | verification_status=unconfirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T5
+  Summary: The patient reports being stressed over the last couple of months.
+  ClusterId: CL3
+  TemporalProfile: recent
+  Updates:
+  - CAP11: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=recent turns=T5 :: The patient reports being stressed over the last couple of months.
+- travel | verification_status=unconfirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T9
+  Summary: The patient reports moving from the west coast to the east coast.
+  ClusterId: CL4
+  TemporalProfile: recent
+  Updates:
+  - CAP10: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=recent turns=T9 :: The patient reports moving from the west coast to the east coast.
+- car | verification_status=unconfirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T9
+  Summary: The patient is concerned about putting their dog in a car.
+  ClusterId: CL5
+  TemporalProfile: recent
+  Updates:
+  - CAP12: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=recent turns=T9 :: The patient is concerned about putting their dog in a car.
+- dog | verification_status=unconfirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T9
+  Summary: The patient is concerned about their dog's travel.
+  ClusterId: CL6
+  TemporalProfile: recent
+  Updates:
+  - CAP13: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=recent turns=T9 :: The patient is concerned about their dog's travel.
+- weight gain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T13
+  Summary: The patient reports weight gain.
+  ClusterId: CL7
+  TemporalProfile: current
+  Updates:
+  - CAP5: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T13 :: The patient reports weight gain.
+- abdominal pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T14
+  Summary: The patient reports abdominal pain.
+  ClusterId: CL8
+  TemporalProfile: current
+  Updates:
+  - CAP4: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T14 :: The patient reports abdominal pain.
+- negative blood in stool | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T16
+  Summary: The patient denies blood in the stool.
+  ClusterId: CL9
+  TemporalProfile: current
+  Updates:
+  - CAP1: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T16 :: The patient denies blood in the stool.
+- epigastric pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T16
+  Summary: The patient reports epigastric pain.
+  ClusterId: CL10
+  TemporalProfile: current
+  Updates:
+  - CAP6: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T16 :: The patient reports epigastric pain.
+- esophagitis | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=doctor | evidence=T21
+  Summary: The patient has acute esophagitis.
+  ClusterId: CL11
+  TemporalProfile: current
+  Updates:
+  - CAP7: content_source=doctor modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T21 :: The patient has acute esophagitis.
+
+Medication Tracking
+- [MedicationChange] protonix | verification_status=confirmed | clinical_status=planned | modalities=interview | speakers=doctor | evidence=T22
+  Summary: The patient will take protonix.
+  ClusterId: CL12
+  TemporalProfile: daily
+  PlannedChanges:
+  - The patient will take protonix. (T22)
+  Updates:
+  - CAP8: content_source=doctor modality=interview verification_status=confirmed clinical_status=planned temporality=daily turns=T22 :: The patient will take protonix.
+- [MedicationChange] carafate | verification_status=confirmed | clinical_status=planned | modalities=interview | speakers=doctor | evidence=T22
+  Summary: The patient will take carafate.
+  ClusterId: CL13
+  TemporalProfile: 1 month
+  PlannedChanges:
+  - The patient will take carafate. (T22)
+  Updates:
+  - CAP9: content_source=doctor modality=interview verification_status=confirmed clinical_status=planned temporality=1 month turns=T22 :: The patient will take carafate.
+
+Other Structured States
+- None

@@ -1,0 +1,190 @@
+Case: D2N170
+
+Problem List and Visit State Tracking
+
+Problem List
+- heart murmur | verification_status=confirmed | clinical_status=active | modalities=exam | speakers=doctor | evidence=T3
+  Summary: The doctor heard a slight two out of six systolic heart murmur.
+  ClusterId: CL1
+  TemporalProfile: past
+  Updates:
+  - CAP1: content_source=doctor modality=exam verification_status=confirmed clinical_status=active temporality=past turns=T3 :: The doctor heard a slight two out of six systolic heart murmur.
+- abdominal tenderness | verification_status=confirmed | clinical_status=active | modalities=exam | speakers=doctor | evidence=T3
+  Summary: The doctor noted tenderness to palpation in the right lower quadrant.
+  ClusterId: CL2
+  TemporalProfile: current
+  Updates:
+  - CAP2: content_source=doctor modality=exam verification_status=confirmed clinical_status=active temporality=current turns=T3 :: The doctor noted tenderness to palpation in the right lower quadrant.
+- chest pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T17
+  Summary: The patient reports chest pain.
+  ClusterId: CL4
+  TemporalProfile: current
+  Updates:
+  - CAP10: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T17 :: The patient reports chest pain.
+- fatigue | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T17
+  Summary: The patient reports fatigue.
+  ClusterId: CL5
+  TemporalProfile: current
+  Updates:
+  - CAP12: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T17 :: The patient reports fatigue.
+- dizziness | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T17
+  Summary: The patient reports dizziness.
+  ClusterId: CL6
+  TemporalProfile: current
+  Updates:
+  - CAP13: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T17 :: The patient reports dizziness.
+- swelling in legs | verification_status=unconfirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T24
+  Summary: The patient denies swelling in their legs.
+  ClusterId: CL11
+  TemporalProfile: past
+  Updates:
+  - CAP5: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=past turns=T24 :: The patient denies swelling in their legs.
+- no swelling | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T25
+  Summary: The patient reports no swelling.
+  ClusterId: CL17
+  TemporalProfile: current
+  Updates:
+  - CAP11: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T25 :: The patient reports no swelling.
+- left hand pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T27
+  Summary: The patient reports pain in the left hand.
+  ClusterId: CL18
+  TemporalProfile: current
+  Updates:
+  - CAP4: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T27 :: The patient reports pain in the left hand.
+- support system | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T27
+  Summary: The patient reports having a support system.
+  ClusterId: CL19
+  TemporalProfile: current
+  Updates:
+  - CAP6: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T27 :: The patient reports having a support system.
+- boyfriend | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T27
+  Summary: The patient reports having a boyfriend.
+  ClusterId: CL20
+  TemporalProfile: current
+  Updates:
+  - CAP7: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T27 :: The patient reports having a boyfriend.
+- brother | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T27
+  Summary: The patient reports having a brother.
+  ClusterId: CL21
+  TemporalProfile: current
+  Updates:
+  - CAP8: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T27 :: The patient reports having a brother.
+- anemia | verification_status=confirmed | clinical_status=active | modalities=interview,unknown | speakers=doctor,patient | evidence=T38
+  Summary: The patient is anemic.
+  ClusterId: CL22
+  TemporalProfile: current
+  Updates:
+  - CAP3: content_source=doctor modality=unknown verification_status=unconfirmed clinical_status=active temporality=current turns=T38 :: The doctor needs to investigate why the patient's hemoglobin is low.
+  - CAP14: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T38 :: The patient is anemic.
+- congestive heart failure | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=doctor | evidence=T42
+  Summary: The patient has congestive heart failure.
+  ClusterId: CL25
+  TemporalProfile: current
+  Updates:
+  - CAP9: content_source=doctor modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T42 :: The patient has congestive heart failure.
+- copd | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=doctor | evidence=T42
+  Summary: The patient has COPD.
+  ClusterId: CL26
+  TemporalProfile: current
+  Updates:
+  - CAP15: content_source=doctor modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T42 :: The patient has COPD.
+
+Medication Tracking
+- [MedicationState] salt intake | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T17
+  Summary: The patient is watching their salt intake.
+  ClusterId: CL7
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient is watching their salt intake. (T17)
+  Updates:
+  - CAP27: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T17 :: The patient is watching their salt intake.
+- [MedicationState] lisinopril | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=doctor,patient | evidence=T17,T42
+  Summary: The patient is taking lisinopril.
+  ClusterId: CL8
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient is taking lisinopril. (T17)
+  - The patient is taking lisinopril. (T42)
+  Updates:
+  - CAP28: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T17 :: The patient is taking lisinopril.
+  - CAP31: content_source=doctor modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T42 :: The patient is taking lisinopril.
+- [MedicationState] french fries | verification_status=confirmed | clinical_status=active | modalities=interview,plan | speakers=doctor,patient | evidence=T20
+  Summary: The doctor mentioned french fries as one of his favorite foods.
+  ClusterId: CL9
+  TemporalProfile: current, past
+  CurrentRegimens:
+  - The doctor mentioned french fries as one of his favorite foods. (T20)
+  - The patient avoids french fries. (T20)
+  Updates:
+  - CAP25: content_source=doctor modality=plan verification_status=confirmed clinical_status=historical temporality=past turns=T20 :: The doctor mentioned french fries as one of his favorite foods.
+  - CAP29: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T20 :: The patient avoids french fries.
+- [MedicationState] fried chicken | verification_status=confirmed | clinical_status=historical | modalities=plan | speakers=doctor | evidence=T20
+  Summary: The doctor mentioned fried chicken as one of his favorite foods.
+  ClusterId: CL10
+  TemporalProfile: past
+  CurrentRegimens:
+  - The doctor mentioned fried chicken as one of his favorite foods. (T20)
+  Updates:
+  - CAP26: content_source=doctor modality=plan verification_status=confirmed clinical_status=historical temporality=past turns=T20 :: The doctor mentioned fried chicken as one of his favorite foods.
+- [MedicationChange] endoscopy | verification_status=unconfirmed | clinical_status=planned | modalities=interview | speakers=doctor | evidence=T42
+  Summary: A cervical endoscopy is planned.
+  ClusterId: CL27
+  TemporalProfile: future
+  PlannedChanges:
+  - A cervical endoscopy is planned. (T42)
+  Updates:
+  - CAP23: content_source=doctor modality=interview verification_status=unconfirmed clinical_status=planned temporality=future turns=T42 :: A cervical endoscopy is planned.
+- [MedicationChange] colonoscopy | verification_status=unconfirmed | clinical_status=planned | modalities=interview | speakers=doctor | evidence=T42
+  Summary: A colonoscopy is planned.
+  ClusterId: CL28
+  TemporalProfile: future
+  PlannedChanges:
+  - A colonoscopy is planned. (T42)
+  Updates:
+  - CAP24: content_source=doctor modality=interview verification_status=unconfirmed clinical_status=planned temporality=future turns=T42 :: A colonoscopy is planned.
+- [MedicationState] toprol | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=doctor | evidence=T42
+  Summary: The patient is taking toprol.
+  ClusterId: CL29
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient is taking toprol. (T42)
+  Updates:
+  - CAP30: content_source=doctor modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T42 :: The patient is taking toprol.
+- [MedicationState] lasix | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=doctor | evidence=T42
+  Summary: The patient is taking lasix.
+  ClusterId: CL30
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient is taking lasix. (T42)
+  Updates:
+  - CAP32: content_source=doctor modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T42 :: The patient is taking lasix.
+
+Other Structured States
+- [ExamFinding] vital signs | verification_status=confirmed | clinical_status=active | modalities=exam | speakers=doctor | evidence=T24
+  Summary: The doctor assessed the patient's vital signs.
+  ClusterId: CL12
+  TemporalProfile: current
+- [ExamFinding] hemoglobin | verification_status=confirmed | clinical_status=historical | modalities=exam | speakers=doctor | evidence=T24
+  Summary: The doctor found an abnormal hemoglobin level.
+  ClusterId: CL13
+  TemporalProfile: past
+- [ExamFinding] heart | verification_status=confirmed | clinical_status=active | modalities=exam | speakers=doctor | evidence=T24
+  Summary: The doctor listened to the patient's heart.
+  ClusterId: CL14
+  TemporalProfile: current
+- [ExamFinding] lungs | verification_status=confirmed | clinical_status=active | modalities=exam | speakers=doctor | evidence=T24
+  Summary: The doctor listened to the patient's lungs.
+  ClusterId: CL15
+  TemporalProfile: current
+- [ExamFinding] belly | verification_status=confirmed | clinical_status=active | modalities=exam | speakers=doctor | evidence=T24
+  Summary: The doctor palpated the patient's belly.
+  ClusterId: CL16
+  TemporalProfile: current
+- [TestResult] hemoglobin | verification_status=confirmed | clinical_status=active | modalities=test_result | speakers=dragon | evidence=T38
+  Summary: The patient's hemoglobin level is 8.2.
+  ClusterId: CL23
+  TemporalProfile: current
+- [Plan] referral to gastroenterology | verification_status=unconfirmed | clinical_status=planned | modalities=interview | speakers=doctor | evidence=T38
+  Summary: A referral to gastroenterology is ordered.
+  ClusterId: CL24
+  TemporalProfile: future

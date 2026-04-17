@@ -1,0 +1,90 @@
+Case: D2N019
+
+Problem List and Visit State Tracking
+
+Problem List
+- elbow pain | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T13,T19,T3,T31,T42,T48
+  Summary: The patient reports pain in the right elbow.
+  ClusterId: CL1
+  TemporalProfile: current, yesterday
+  Updates:
+  - CAP5: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=yesterday turns=T3 :: The patient reports pain in the right elbow.
+  - CAP6: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T13 :: The patient reports pain in the left hand.
+  - CAP8: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T19 :: The patient reports tenderness in the elbow.
+  - CAP4: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T31 :: The patient reports pain when flexing or bending their hand.
+  - CAP2: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T42 :: The patient reports pain with flexion and extension of the elbow.
+  - CAP3: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T42 :: The patient reports pain on the dorsal aspect of the forearm.
+  - CAP12: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T42 :: The patient reports pain.
+  - CAP15: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T48 :: The patient reports pain.
+- elbow injury | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T3
+  Summary: The patient has an elbow injury.
+  ClusterId: CL2
+  TemporalProfile: yesterday
+  Updates:
+  - CAP9: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=yesterday turns=T3 :: The patient has an elbow injury.
+- strain | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T9
+  Summary: The patient experienced a strain during lifting.
+  ClusterId: CL3
+  TemporalProfile: during lifting
+  Updates:
+  - CAP7: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=during lifting turns=T9 :: The patient experienced a strain during lifting.
+- anaphylaxis | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T15
+  Summary: The patient has a history of anaphylaxis.
+  ClusterId: CL5
+  TemporalProfile: past
+  Updates:
+  - CAP19: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=past turns=T15 :: The patient has a history of anaphylaxis.
+- throbbing pain | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T17
+  Summary: The patient describes throbbing pain.
+  ClusterId: CL6
+  TemporalProfile: current
+  Updates:
+  - CAP10: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T17 :: The patient describes throbbing pain.
+- swelling | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T27
+  Summary: The patient reports swelling.
+  ClusterId: CL7
+  TemporalProfile: current
+  Updates:
+  - CAP11: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T27 :: The patient reports swelling.
+- tenderness | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T37
+  Summary: The patient reports tenderness.
+  ClusterId: CL8
+  TemporalProfile: current
+  Updates:
+  - CAP13: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T37 :: The patient reports tenderness.
+- redness | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T37
+  Summary: The patient reports redness.
+  ClusterId: CL9
+  TemporalProfile: current
+  Updates:
+  - CAP14: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T37 :: The patient reports redness.
+- lateral epicondylitis | verification_status=confirmed | clinical_status=active | modalities=assessment | speakers=doctor | evidence=T42
+  Summary: The doctor diagnoses lateral epicondylitis.
+  ClusterId: CL10
+  TemporalProfile: current
+  Updates:
+  - CAP1: content_source=doctor modality=assessment verification_status=confirmed clinical_status=active temporality=current turns=T42 :: The doctor diagnoses lateral epicondylitis.
+
+Medication Tracking
+- [MedicationState] ibuprofen | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T13
+  Summary: The patient is taking ibuprofen.
+  ClusterId: CL4
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient is taking ibuprofen. (T13)
+  Updates:
+  - CAP18: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T13 :: The patient is taking ibuprofen.
+- [MedicationChange] motrin | verification_status=confirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T42
+  Summary: The doctor orders motrin.
+  ClusterId: CL12
+  TemporalProfile: current
+  PlannedChanges:
+  - The doctor orders motrin. (T42)
+  Updates:
+  - CAP17: content_source=doctor modality=plan verification_status=confirmed clinical_status=planned temporality=current turns=T42 :: The doctor orders motrin.
+
+Other Structured States
+- [Plan] sling | verification_status=confirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T42
+  Summary: The doctor orders a sling.
+  ClusterId: CL11
+  TemporalProfile: current

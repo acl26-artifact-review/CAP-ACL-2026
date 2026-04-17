@@ -1,0 +1,30 @@
+{
+  "section_miscategorizations": [
+    {
+      "text": "The patient reports a palpable left radial pulse.",
+      "current_section": "History of Present Illness",
+      "expected_section": "Findings",
+      "severity": "major",
+      "reason": "A palpable radial pulse is an objective physical exam finding, not a typical patient-reported symptom; documenting it in HPI could mislead a reader about whether this is observed vs. reported."
+    },
+    {
+      "text": "Physical exam reveals a palpable left radial pulse.",
+      "current_section": "Findings",
+      "expected_section": "Findings",
+      "severity": "minor",
+      "reason": "This is correctly placed in Findings, but it duplicates essentially the same content that is (incorrectly) in HPI; the minor issue is redundancy rather than miscategorization of this specific statement."
+    },
+    {
+      "text": "endoscopy results showed gastritis consistent with a history of peptic ulcer disease.",
+      "current_section": "Assessment",
+      "expected_section": "Findings",
+      "severity": "minor",
+      "reason": "Endoscopy results are diagnostic test findings and typically belong in Findings; however, referencing them in Assessment as part of diagnostic synthesis is acceptable, so this is a softer organizational issue."
+    }
+  ],
+  "summary_statistics": {
+    "section_appropriateness_score": 0.7,
+    "section_miscategorization_count": 3,
+    "major_section_miscategorization_count": 1
+  }
+}

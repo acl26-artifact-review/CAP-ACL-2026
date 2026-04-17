@@ -1,0 +1,920 @@
+{
+  "caps": [
+    {
+      "cap_id": "CAP1",
+      "cap_type": "Symptom",
+      "content_source": "patient",
+      "modality": "interview",
+      "canonical_concept": "chest pain",
+      "verification_status": "confirmed",
+      "clinical_status": "active",
+      "temporality": "current",
+      "proposition_text": "The patient reports chest pain.",
+      "evidence": [
+        {
+          "turn_id": "T48",
+          "turn_speaker": "doctor",
+          "span_text": "comes and goes alright how often is that chest pain happening to you you said it's not constant",
+          "char_start": 4100,
+          "char_end": 4195
+        },
+        {
+          "turn_id": "T54",
+          "turn_speaker": "doctor",
+          "span_text": "no okay just the chest pain alright",
+          "char_start": 4556,
+          "char_end": 4591
+        },
+        {
+          "turn_id": "T54",
+          "turn_speaker": "doctor",
+          "span_text": "no okay just the chest pain alright",
+          "char_start": 4556,
+          "char_end": 4591
+        }
+      ],
+      "assertion": "present",
+      "visit_state": "active",
+      "linked_problem": null,
+      "event_cluster_id": "CL17"
+    },
+    {
+      "cap_id": "CAP2",
+      "cap_type": "Symptom",
+      "content_source": "patient",
+      "modality": "interview",
+      "canonical_concept": "pain",
+      "verification_status": "confirmed",
+      "clinical_status": "active",
+      "temporality": "current",
+      "attributes": {
+        "location": "up your neck",
+        "laterality": "right"
+      },
+      "proposition_text": "The patient reports pain radiating to their neck.",
+      "evidence": [
+        {
+          "turn_id": "T54",
+          "turn_speaker": "doctor",
+          "span_text": "no okay just the chest pain alright",
+          "char_start": 4556,
+          "char_end": 4591
+        },
+        {
+          "turn_id": "T54",
+          "turn_speaker": "doctor",
+          "span_text": "no okay just the chest pain alright",
+          "char_start": 4556,
+          "char_end": 4591
+        }
+      ],
+      "assertion": "present",
+      "visit_state": "active",
+      "linked_problem": null,
+      "event_cluster_id": "CL5"
+    },
+    {
+      "cap_id": "CAP3",
+      "cap_type": "Symptom",
+      "content_source": "patient",
+      "modality": "interview",
+      "canonical_concept": "diarrhea",
+      "verification_status": "confirmed",
+      "clinical_status": "active",
+      "temporality": "current",
+      "proposition_text": "The patient reports difficulty stopping pooping.",
+      "evidence": [
+        {
+          "turn_id": "T65",
+          "turn_speaker": "patient",
+          "span_text": "he could n't stop pooping",
+          "char_start": 6368,
+          "char_end": 6393
+        },
+        {
+          "turn_id": "T66",
+          "turn_speaker": "doctor",
+          "span_text": "no well yeah i did n't hear about joe biting and and his his not ability his ability did not stop pooping probably had a diarrhea i'm not sure i did n't hear about that but most of the time",
+          "char_start": 6403,
+          "char_end": 6592
+        }
+      ],
+      "assertion": "present",
+      "visit_state": "active",
+      "linked_problem": null,
+      "event_cluster_id": "CL25"
+    },
+    {
+      "cap_id": "CAP4",
+      "cap_type": "Problem",
+      "content_source": "patient",
+      "modality": "interview",
+      "canonical_concept": "history of hypertension",
+      "verification_status": "confirmed",
+      "clinical_status": "historical",
+      "temporality": "past",
+      "proposition_text": "The patient has a past medical history of hypertension.",
+      "evidence": [
+        {
+          "turn_id": "T0",
+          "turn_speaker": "doctor",
+          "span_text": "so hi zachary good to see you today so i'm looking at my notes i see you coming in with some right elbow pain and you also have a past medical history of hypertension diabetes we're gon na check on those so can you tell me what happened to your elbow",
+          "char_start": 9,
+          "char_end": 259
+        }
+      ],
+      "assertion": "historical",
+      "visit_state": "historical",
+      "linked_problem": null,
+      "event_cluster_id": "CL1"
+    },
+    {
+      "cap_id": "CAP5",
+      "cap_type": "Problem",
+      "content_source": "patient",
+      "modality": "interview",
+      "canonical_concept": "history of diabetes",
+      "verification_status": "confirmed",
+      "clinical_status": "historical",
+      "temporality": "past",
+      "proposition_text": "The patient has a past medical history of diabetes.",
+      "evidence": [
+        {
+          "turn_id": "T0",
+          "turn_speaker": "doctor",
+          "span_text": "so hi zachary good to see you today so i'm looking at my notes i see you coming in with some right elbow pain and you also have a past medical history of hypertension diabetes we're gon na check on those so can you tell me what happened to your elbow",
+          "char_start": 9,
+          "char_end": 259
+        }
+      ],
+      "assertion": "historical",
+      "visit_state": "historical",
+      "linked_problem": null,
+      "event_cluster_id": "CL2"
+    },
+    {
+      "cap_id": "CAP6",
+      "cap_type": "Problem",
+      "content_source": "doctor",
+      "modality": "assessment",
+      "canonical_concept": "heart attack",
+      "verification_status": "unconfirmed",
+      "clinical_status": "active",
+      "temporality": "current",
+      "proposition_text": "The doctor is concerned about a possible heart attack.",
+      "evidence": [
+        {
+          "turn_id": "T56",
+          "turn_speaker": "doctor",
+          "span_text": "so i'm gon na listen to your heart here and it it does seem like i do hear a slight murmur with your heart here and i i do n't think we've we've heard that before so i think i'm gon na get an ekg as well because i'm concerned you might be having like a mild heart attack so because you have the pain all the way up your elbow that go into your neck and your your chest pain as well i do n't think it's it's it's musculoskeletal pain because you said you had n't done anything with it so far so what i wan na do is and let's talk a little bit about my assessment and plan here so i i do think that you or you do have that chest pain i'm concerned that you know you might be having a mild heart attack i'm gon na get ekg for that we're also gon na get you some aspirin is a nitroglycerin just to see if that helps with that pain as far as your for your diabetes i want you we're gon na get that p oct glucose and we'll keep you on be five hundred of metformin for now and then for your hypertension we'll keep you on that two . five of of norvasc but i think our most immediate issue is the is the chest pain and so we'll do the ekg and depending upon those results we'll we'll call nine one one because we really need to get you to the hospital if that is the case so how does that sound",
+          "char_start": 4616,
+          "char_end": 5902
+        }
+      ],
+      "assertion": "uncertain",
+      "visit_state": "active",
+      "linked_problem": null,
+      "event_cluster_id": "CL19"
+    },
+    {
+      "cap_id": "CAP7",
+      "cap_type": "Symptom",
+      "content_source": "patient",
+      "modality": "interview",
+      "canonical_concept": "left elbow pain",
+      "verification_status": "confirmed",
+      "clinical_status": "active",
+      "temporality": "current",
+      "attributes": {
+        "location": "left elbow",
+        "laterality": "left"
+      },
+      "proposition_text": "The patient reports pain in their left elbow.",
+      "evidence": [
+        {
+          "turn_id": "T5",
+          "turn_speaker": "patient",
+          "span_text": "it's actually my it's actually my left elbow my left arm",
+          "char_start": 432,
+          "char_end": 488
+        }
+      ],
+      "assertion": "present",
+      "visit_state": "active",
+      "linked_problem": null,
+      "event_cluster_id": "CL3"
+    },
+    {
+      "cap_id": "CAP8",
+      "cap_type": "Symptom",
+      "content_source": "patient",
+      "modality": "interview",
+      "canonical_concept": "left arm pain",
+      "verification_status": "confirmed",
+      "clinical_status": "active",
+      "temporality": "current",
+      "attributes": {
+        "laterality": "left",
+        "severity": "aches"
+      },
+      "proposition_text": "The patient reports pain in their left arm.",
+      "evidence": [
+        {
+          "turn_id": "T21",
+          "turn_speaker": "patient",
+          "span_text": "just a just a usual day of working around the house",
+          "char_start": 1420,
+          "char_end": 1471
+        }
+      ],
+      "assertion": "present",
+      "visit_state": "active",
+      "linked_problem": null,
+      "event_cluster_id": "CL7"
+    },
+    {
+      "cap_id": "CAP9",
+      "cap_type": "Symptom",
+      "content_source": "patient",
+      "modality": "interview",
+      "canonical_concept": "left arm pain",
+      "verification_status": "confirmed",
+      "clinical_status": "active",
+      "temporality": "current",
+      "attributes": {
+        "laterality": "left",
+        "severity": "aches"
+      },
+      "proposition_text": "The patient reports pain in the left arm.",
+      "evidence": [
+        {
+          "turn_id": "T27",
+          "turn_speaker": "patient",
+          "span_text": "not really still kinda comes and goes and aches",
+          "char_start": 1826,
+          "char_end": 1873
+        }
+      ],
+      "assertion": "present",
+      "visit_state": "active",
+      "linked_problem": null,
+      "event_cluster_id": "CL7"
+    },
+    {
+      "cap_id": "CAP10",
+      "cap_type": "Symptom",
+      "content_source": "patient",
+      "modality": "interview",
+      "canonical_concept": "ache",
+      "verification_status": "unconfirmed",
+      "clinical_status": "active",
+      "temporality": "current",
+      "proposition_text": "The patient describes the pain as achiness.",
+      "evidence": [
+        {
+          "turn_id": "T17",
+          "turn_speaker": "patient",
+          "span_text": "or all the way down the arm to the elbow",
+          "char_start": 1113,
+          "char_end": 1153
+        }
+      ],
+      "assertion": "uncertain",
+      "visit_state": "active",
+      "linked_problem": null,
+      "event_cluster_id": "CL6"
+    },
+    {
+      "cap_id": "CAP11",
+      "cap_type": "Symptom",
+      "content_source": "patient",
+      "modality": "interview",
+      "canonical_concept": "heaviness",
+      "verification_status": "unconfirmed",
+      "clinical_status": "active",
+      "temporality": "current",
+      "proposition_text": "The patient reports a feeling of heaviness.",
+      "evidence": [
+        {
+          "turn_id": "T19",
+          "turn_speaker": "patient",
+          "span_text": "kind of a achiness achiness heaviness",
+          "char_start": 1277,
+          "char_end": 1314
+        }
+      ],
+      "assertion": "uncertain",
+      "visit_state": "active",
+      "linked_problem": null,
+      "event_cluster_id": "CL8"
+    },
+    {
+      "cap_id": "CAP12",
+      "cap_type": "Problem",
+      "content_source": "patient",
+      "modality": "interview",
+      "canonical_concept": "hypertension",
+      "verification_status": "unconfirmed",
+      "clinical_status": "active",
+      "temporality": "current",
+      "proposition_text": "The patient's blood pressure was elevated.",
+      "evidence": [
+        {
+          "turn_id": "T28",
+          "turn_speaker": "doctor",
+          "span_text": "okay alright so we'll we'll take a look at your your arm there because it's like your entire left arm up from your shoulder to your elbow does hurt in a second we'll do an exam of that so i see you're also coming in we're gon na check on your hypertension and you came in today your blood pressure is a little bit high it was one fifty over ninety i do n't think we talked last time about us getting you a blood pressure cuff so you could take those and keep track and and and and let us know so what have your blood pressures been running lately",
+          "char_start": 1883,
+          "char_end": 2429
+        }
+      ],
+      "assertion": "uncertain",
+      "visit_state": "active",
+      "linked_problem": null,
+      "event_cluster_id": "CL10"
+    },
+    {
+      "cap_id": "CAP13",
+      "cap_type": "Problem",
+      "content_source": "patient",
+      "modality": "interview",
+      "canonical_concept": "hypertension",
+      "verification_status": "confirmed",
+      "clinical_status": "active",
+      "temporality": "current",
+      "proposition_text": "The patient's blood pressure is elevated.",
+      "evidence": [
+        {
+          "turn_id": "T28",
+          "turn_speaker": "doctor",
+          "span_text": "okay alright so we'll we'll take a look at your your arm there because it's like your entire left arm up from your shoulder to your elbow does hurt in a second we'll do an exam of that so i see you're also coming in we're gon na check on your hypertension and you came in today your blood pressure is a little bit high it was one fifty over ninety i do n't think we talked last time about us getting you a blood pressure cuff so you could take those and keep track and and and and let us know so what have your blood pressures been running lately",
+          "char_start": 1883,
+          "char_end": 2429
+        }
+      ],
+      "assertion": "present",
+      "visit_state": "active",
+      "linked_problem": null,
+      "event_cluster_id": "CL10"
+    },
+    {
+      "cap_id": "CAP14",
+      "cap_type": "Symptom",
+      "content_source": "patient",
+      "modality": "interview",
+      "canonical_concept": "shortness of breath",
+      "verification_status": "unconfirmed",
+      "clinical_status": "historical",
+      "temporality": "past",
+      "proposition_text": "The patient denies shortness of breath.",
+      "evidence": [
+        {
+          "turn_id": "T52",
+          "turn_speaker": "doctor",
+          "span_text": "okay alright have you had any shortness of breath",
+          "char_start": 4484,
+          "char_end": 4533
+        }
+      ],
+      "assertion": "historical",
+      "visit_state": "historical",
+      "linked_problem": null,
+      "event_cluster_id": "CL18"
+    },
+    {
+      "cap_id": "CAP15",
+      "cap_type": "Symptom",
+      "content_source": "patient",
+      "modality": "interview",
+      "canonical_concept": "elbow pain",
+      "verification_status": "confirmed",
+      "clinical_status": "active",
+      "temporality": "current",
+      "proposition_text": "The patient reports elbow pain.",
+      "evidence": [
+        {
+          "turn_id": "T41",
+          "turn_speaker": "patient",
+          "span_text": "yeah yeah yeah on and off so it kinda comes with the elbow pain arm pain",
+          "char_start": 3788,
+          "char_end": 3860
+        }
+      ],
+      "assertion": "present",
+      "visit_state": "active",
+      "linked_problem": null,
+      "event_cluster_id": "CL5"
+    },
+    {
+      "cap_id": "CAP16",
+      "cap_type": "Symptom",
+      "content_source": "patient",
+      "modality": "interview",
+      "canonical_concept": "arm pain",
+      "verification_status": "confirmed",
+      "clinical_status": "active",
+      "temporality": "current",
+      "proposition_text": "The patient reports arm pain.",
+      "evidence": [
+        {
+          "turn_id": "T41",
+          "turn_speaker": "patient",
+          "span_text": "yeah yeah yeah on and off so it kinda comes with the elbow pain arm pain",
+          "char_start": 3788,
+          "char_end": 3860
+        }
+      ],
+      "assertion": "present",
+      "visit_state": "active",
+      "linked_problem": null,
+      "event_cluster_id": "CL7"
+    },
+    {
+      "cap_id": "CAP17",
+      "cap_type": "Symptom",
+      "content_source": "patient",
+      "modality": "interview",
+      "canonical_concept": "pain",
+      "verification_status": "unconfirmed",
+      "clinical_status": "active",
+      "temporality": "current",
+      "proposition_text": "The patient reports pain.",
+      "evidence": [
+        {
+          "turn_id": "T20",
+          "turn_speaker": "doctor",
+          "span_text": "achiness okay did you do anything yesterday that you think might have caused the pain",
+          "char_start": 1324,
+          "char_end": 1409
+        }
+      ],
+      "assertion": "uncertain",
+      "visit_state": "active",
+      "linked_problem": null,
+      "event_cluster_id": "CL5"
+    },
+    {
+      "cap_id": "CAP18",
+      "cap_type": "Problem",
+      "content_source": "patient",
+      "modality": "interview",
+      "canonical_concept": "diabetes",
+      "verification_status": "confirmed",
+      "clinical_status": "active",
+      "temporality": "current",
+      "proposition_text": "The patient has diabetes.",
+      "evidence": [
+        {
+          "turn_id": "T38",
+          "turn_speaker": "doctor",
+          "span_text": "alright so as far as your diabetes your last time you came in let's say look at your a1c result it was a seven . two you were on the five hundred of metformin so what have your blood sugars been running",
+          "char_start": 2958,
+          "char_end": 3160
+        }
+      ],
+      "assertion": "present",
+      "visit_state": "active",
+      "linked_problem": null,
+      "event_cluster_id": "CL13"
+    },
+    {
+      "cap_id": "CAP19",
+      "cap_type": "Symptom",
+      "content_source": "patient",
+      "modality": "interview",
+      "canonical_concept": "aches",
+      "verification_status": "confirmed",
+      "clinical_status": "active",
+      "temporality": "current",
+      "proposition_text": "The patient reports aches.",
+      "evidence": [
+        {
+          "turn_id": "T47",
+          "turn_speaker": "patient",
+          "span_text": "yeah it's that whole side it just aches comes and goes",
+          "char_start": 4036,
+          "char_end": 4090
+        }
+      ],
+      "assertion": "present",
+      "visit_state": "active",
+      "linked_problem": null,
+      "event_cluster_id": "CL16"
+    },
+    {
+      "cap_id": "CAP20",
+      "cap_type": "Symptom",
+      "content_source": "patient",
+      "modality": "interview",
+      "canonical_concept": "anxiety",
+      "verification_status": "unconfirmed",
+      "clinical_status": "active",
+      "temporality": "current",
+      "proposition_text": "The patient reports anxiety.",
+      "evidence": [
+        {
+          "turn_id": "T70",
+          "turn_speaker": "doctor",
+          "span_text": "it could n't stop pooping yeah i mean that that might cause like anxiety or something like that you know we ca n't stop pooten he's he's he's in charge of my united states but right now i'm i'm really you know me i'm concerned about your heart so i do wan na get the ekg just to make sure you know it'll be would n't be good if we did n't get that you know in the case that you you leave here something terrible happened and and i would n't want that to happen on my watch so",
+          "char_start": 6721,
+          "char_end": 7196
+        }
+      ],
+      "assertion": "uncertain",
+      "visit_state": "active",
+      "linked_problem": null,
+      "event_cluster_id": "CL26"
+    },
+    {
+      "cap_id": "CAP21",
+      "cap_type": "Order",
+      "content_source": "doctor",
+      "modality": "plan",
+      "canonical_concept": "blood pressure cuff",
+      "verification_status": "unconfirmed",
+      "clinical_status": "planned",
+      "temporality": "future",
+      "proposition_text": "The doctor ordered a blood pressure cuff for the patient.",
+      "evidence": [
+        {
+          "turn_id": "T28",
+          "turn_speaker": "doctor",
+          "span_text": "okay alright so we'll we'll take a look at your your arm there because it's like your entire left arm up from your shoulder to your elbow does hurt in a second we'll do an exam of that so i see you're also coming in we're gon na check on your hypertension and you came in today your blood pressure is a little bit high it was one fifty over ninety i do n't think we talked last time about us getting you a blood pressure cuff so you could take those and keep track and and and and let us know so what have your blood pressures been running lately",
+          "char_start": 1883,
+          "char_end": 2429
+        }
+      ],
+      "assertion": "hypothetical",
+      "visit_state": "planned",
+      "linked_problem": null,
+      "event_cluster_id": "CL11"
+    },
+    {
+      "cap_id": "CAP22",
+      "cap_type": "TestResult",
+      "content_source": "doctor",
+      "modality": "test_result",
+      "canonical_concept": "A1C",
+      "verification_status": "confirmed",
+      "clinical_status": "historical",
+      "temporality": "last visit",
+      "proposition_text": "The patient's last A1C result was 7.2.",
+      "evidence": [
+        {
+          "turn_id": "T38",
+          "turn_speaker": "doctor",
+          "span_text": "alright so as far as your diabetes your last time you came in let's say look at your a1c result it was a seven . two you were on the five hundred of metformin so what have your blood sugars been running",
+          "char_start": 2958,
+          "char_end": 3160
+        }
+      ],
+      "assertion": "historical",
+      "visit_state": "historical",
+      "linked_problem": null,
+      "event_cluster_id": "CL14"
+    },
+    {
+      "cap_id": "CAP23",
+      "cap_type": "Order",
+      "content_source": "doctor",
+      "modality": "plan",
+      "canonical_concept": "EKG",
+      "verification_status": "confirmed",
+      "clinical_status": "planned",
+      "temporality": "current",
+      "proposition_text": "An EKG will be ordered.",
+      "evidence": [
+        {
+          "turn_id": "T56",
+          "turn_speaker": "doctor",
+          "span_text": "so i'm gon na listen to your heart here and it it does seem like i do hear a slight murmur with your heart here and i i do n't think we've we've heard that before so i think i'm gon na get an ekg as well because i'm concerned you might be having like a mild heart attack so because you have the pain all the way up your elbow that go into your neck and your your chest pain as well i do n't think it's it's it's musculoskeletal pain because you said you had n't done anything with it so far so what i wan na do is and let's talk a little bit about my assessment and plan here so i i do think that you or you do have that chest pain i'm concerned that you know you might be having a mild heart attack i'm gon na get ekg for that we're also gon na get you some aspirin is a nitroglycerin just to see if that helps with that pain as far as your for your diabetes i want you we're gon na get that p oct glucose and we'll keep you on be five hundred of metformin for now and then for your hypertension we'll keep you on that two . five of of norvasc but i think our most immediate issue is the is the chest pain and so we'll do the ekg and depending upon those results we'll we'll call nine one one because we really need to get you to the hospital if that is the case so how does that sound",
+          "char_start": 4616,
+          "char_end": 5902
+        }
+      ],
+      "assertion": "hypothetical",
+      "visit_state": "planned",
+      "linked_problem": null,
+      "event_cluster_id": "CL20"
+    },
+    {
+      "cap_id": "CAP24",
+      "cap_type": "Order",
+      "content_source": "doctor",
+      "modality": "plan",
+      "canonical_concept": "EKG",
+      "verification_status": "confirmed",
+      "clinical_status": "planned",
+      "temporality": "soon",
+      "proposition_text": "The doctor orders an EKG.",
+      "evidence": [
+        {
+          "turn_id": "T70",
+          "turn_speaker": "doctor",
+          "span_text": "it could n't stop pooping yeah i mean that that might cause like anxiety or something like that you know we ca n't stop pooten he's he's he's in charge of my united states but right now i'm i'm really you know me i'm concerned about your heart so i do wan na get the ekg just to make sure you know it'll be would n't be good if we did n't get that you know in the case that you you leave here something terrible happened and and i would n't want that to happen on my watch so",
+          "char_start": 6721,
+          "char_end": 7196
+        }
+      ],
+      "assertion": "hypothetical",
+      "visit_state": "planned",
+      "linked_problem": null,
+      "event_cluster_id": "CL20"
+    },
+    {
+      "cap_id": "CAP25",
+      "cap_type": "Order",
+      "content_source": "doctor",
+      "modality": "interview",
+      "canonical_concept": "tests",
+      "verification_status": "unconfirmed",
+      "clinical_status": "planned",
+      "temporality": "current",
+      "proposition_text": "The doctor will get tests.",
+      "evidence": [
+        {
+          "turn_id": "T72",
+          "turn_speaker": "doctor",
+          "span_text": "we'll definitely get those tests",
+          "char_start": 7222,
+          "char_end": 7254
+        }
+      ],
+      "assertion": "hypothetical",
+      "visit_state": "planned",
+      "linked_problem": null,
+      "event_cluster_id": "CL27"
+    },
+    {
+      "cap_id": "CAP26",
+      "cap_type": "Order",
+      "content_source": "doctor",
+      "modality": "plan",
+      "canonical_concept": "aspirin",
+      "verification_status": "confirmed",
+      "clinical_status": "planned",
+      "temporality": "current",
+      "proposition_text": "Aspirin will be administered.",
+      "evidence": [
+        {
+          "turn_id": "T56",
+          "turn_speaker": "doctor",
+          "span_text": "so i'm gon na listen to your heart here and it it does seem like i do hear a slight murmur with your heart here and i i do n't think we've we've heard that before so i think i'm gon na get an ekg as well because i'm concerned you might be having like a mild heart attack so because you have the pain all the way up your elbow that go into your neck and your your chest pain as well i do n't think it's it's it's musculoskeletal pain because you said you had n't done anything with it so far so what i wan na do is and let's talk a little bit about my assessment and plan here so i i do think that you or you do have that chest pain i'm concerned that you know you might be having a mild heart attack i'm gon na get ekg for that we're also gon na get you some aspirin is a nitroglycerin just to see if that helps with that pain as far as your for your diabetes i want you we're gon na get that p oct glucose and we'll keep you on be five hundred of metformin for now and then for your hypertension we'll keep you on that two . five of of norvasc but i think our most immediate issue is the is the chest pain and so we'll do the ekg and depending upon those results we'll we'll call nine one one because we really need to get you to the hospital if that is the case so how does that sound",
+          "char_start": 4616,
+          "char_end": 5902
+        }
+      ],
+      "assertion": "hypothetical",
+      "visit_state": "planned",
+      "linked_problem": null,
+      "event_cluster_id": "CL21"
+    },
+    {
+      "cap_id": "CAP27",
+      "cap_type": "Order",
+      "content_source": "doctor",
+      "modality": "plan",
+      "canonical_concept": "nitroglycerin",
+      "verification_status": "confirmed",
+      "clinical_status": "planned",
+      "temporality": "current",
+      "proposition_text": "Nitroglycerin will be administered.",
+      "evidence": [
+        {
+          "turn_id": "T56",
+          "turn_speaker": "doctor",
+          "span_text": "so i'm gon na listen to your heart here and it it does seem like i do hear a slight murmur with your heart here and i i do n't think we've we've heard that before so i think i'm gon na get an ekg as well because i'm concerned you might be having like a mild heart attack so because you have the pain all the way up your elbow that go into your neck and your your chest pain as well i do n't think it's it's it's musculoskeletal pain because you said you had n't done anything with it so far so what i wan na do is and let's talk a little bit about my assessment and plan here so i i do think that you or you do have that chest pain i'm concerned that you know you might be having a mild heart attack i'm gon na get ekg for that we're also gon na get you some aspirin is a nitroglycerin just to see if that helps with that pain as far as your for your diabetes i want you we're gon na get that p oct glucose and we'll keep you on be five hundred of metformin for now and then for your hypertension we'll keep you on that two . five of of norvasc but i think our most immediate issue is the is the chest pain and so we'll do the ekg and depending upon those results we'll we'll call nine one one because we really need to get you to the hospital if that is the case so how does that sound",
+          "char_start": 4616,
+          "char_end": 5902
+        }
+      ],
+      "assertion": "hypothetical",
+      "visit_state": "planned",
+      "linked_problem": null,
+      "event_cluster_id": "CL22"
+    },
+    {
+      "cap_id": "CAP28",
+      "cap_type": "MedicationStatement",
+      "content_source": "doctor",
+      "modality": "plan",
+      "canonical_concept": "metformin",
+      "verification_status": "confirmed",
+      "clinical_status": "active",
+      "temporality": "current",
+      "attributes": {
+        "dose": "500 mg"
+      },
+      "proposition_text": "The patient will continue metformin at a dose of 500 mg.",
+      "evidence": [
+        {
+          "turn_id": "T56",
+          "turn_speaker": "doctor",
+          "span_text": "so i'm gon na listen to your heart here and it it does seem like i do hear a slight murmur with your heart here and i i do n't think we've we've heard that before so i think i'm gon na get an ekg as well because i'm concerned you might be having like a mild heart attack so because you have the pain all the way up your elbow that go into your neck and your your chest pain as well i do n't think it's it's it's musculoskeletal pain because you said you had n't done anything with it so far so what i wan na do is and let's talk a little bit about my assessment and plan here so i i do think that you or you do have that chest pain i'm concerned that you know you might be having a mild heart attack i'm gon na get ekg for that we're also gon na get you some aspirin is a nitroglycerin just to see if that helps with that pain as far as your for your diabetes i want you we're gon na get that p oct glucose and we'll keep you on be five hundred of metformin for now and then for your hypertension we'll keep you on that two . five of of norvasc but i think our most immediate issue is the is the chest pain and so we'll do the ekg and depending upon those results we'll we'll call nine one one because we really need to get you to the hospital if that is the case so how does that sound",
+          "char_start": 4616,
+          "char_end": 5902
+        }
+      ],
+      "assertion": "present",
+      "visit_state": "active",
+      "linked_problem": null,
+      "event_cluster_id": "CL23"
+    },
+    {
+      "cap_id": "CAP29",
+      "cap_type": "MedicationStatement",
+      "content_source": "doctor",
+      "modality": "plan",
+      "canonical_concept": "norvasc",
+      "verification_status": "confirmed",
+      "clinical_status": "active",
+      "temporality": "current",
+      "attributes": {
+        "dose": "2.5 mg"
+      },
+      "proposition_text": "The patient will continue norvasc at a dose of 2.5 mg.",
+      "evidence": [
+        {
+          "turn_id": "T56",
+          "turn_speaker": "doctor",
+          "span_text": "so i'm gon na listen to your heart here and it it does seem like i do hear a slight murmur with your heart here and i i do n't think we've we've heard that before so i think i'm gon na get an ekg as well because i'm concerned you might be having like a mild heart attack so because you have the pain all the way up your elbow that go into your neck and your your chest pain as well i do n't think it's it's it's musculoskeletal pain because you said you had n't done anything with it so far so what i wan na do is and let's talk a little bit about my assessment and plan here so i i do think that you or you do have that chest pain i'm concerned that you know you might be having a mild heart attack i'm gon na get ekg for that we're also gon na get you some aspirin is a nitroglycerin just to see if that helps with that pain as far as your for your diabetes i want you we're gon na get that p oct glucose and we'll keep you on be five hundred of metformin for now and then for your hypertension we'll keep you on that two . five of of norvasc but i think our most immediate issue is the is the chest pain and so we'll do the ekg and depending upon those results we'll we'll call nine one one because we really need to get you to the hospital if that is the case so how does that sound",
+          "char_start": 4616,
+          "char_end": 5902
+        }
+      ],
+      "assertion": "present",
+      "visit_state": "active",
+      "linked_problem": null,
+      "event_cluster_id": "CL24"
+    },
+    {
+      "cap_id": "CAP30",
+      "cap_type": "MedicationStatement",
+      "content_source": "patient",
+      "modality": "interview",
+      "canonical_concept": "motrin",
+      "verification_status": "confirmed",
+      "clinical_status": "active",
+      "temporality": "current",
+      "proposition_text": "The patient took motrin for the pain.",
+      "evidence": [
+        {
+          "turn_id": "T25",
+          "turn_speaker": "patient",
+          "span_text": "some motrin",
+          "char_start": 1752,
+          "char_end": 1763
+        }
+      ],
+      "assertion": "present",
+      "visit_state": "active",
+      "linked_problem": null,
+      "event_cluster_id": "CL9"
+    },
+    {
+      "cap_id": "CAP31",
+      "cap_type": "MedicationStatement",
+      "content_source": "doctor",
+      "modality": "interview",
+      "canonical_concept": "norvasc",
+      "verification_status": "confirmed",
+      "clinical_status": "active",
+      "temporality": "current",
+      "attributes": {
+        "dosage": "2.5"
+      },
+      "proposition_text": "The patient is taking norvasc.",
+      "evidence": [
+        {
+          "turn_id": "T32",
+          "turn_speaker": "doctor",
+          "span_text": "that's not too bad you might have a little white coat syndrome you seeing me today because it's a little bit high today so you're on that two . five of norvasc have you been taking that",
+          "char_start": 2525,
+          "char_end": 2710
+        }
+      ],
+      "assertion": "present",
+      "visit_state": "active",
+      "linked_problem": null,
+      "event_cluster_id": "CL12"
+    },
+    {
+      "cap_id": "CAP32",
+      "cap_type": "MedicationStatement",
+      "content_source": "doctor",
+      "modality": "interview",
+      "canonical_concept": "metformin",
+      "verification_status": "confirmed",
+      "clinical_status": "active",
+      "temporality": "current",
+      "proposition_text": "The patient is taking metformin.",
+      "evidence": [
+        {
+          "turn_id": "T38",
+          "turn_speaker": "doctor",
+          "span_text": "alright so as far as your diabetes your last time you came in let's say look at your a1c result it was a seven . two you were on the five hundred of metformin so what have your blood sugars been running",
+          "char_start": 2958,
+          "char_end": 3160
+        }
+      ],
+      "assertion": "present",
+      "visit_state": "active",
+      "linked_problem": null,
+      "event_cluster_id": "CL15"
+    },
+    {
+      "cap_id": "CAP33",
+      "cap_type": "ProblemHistory",
+      "content_source": "patient",
+      "modality": "interview",
+      "canonical_concept": "elbow pain",
+      "verification_status": "unconfirmed",
+      "clinical_status": "active",
+      "temporality": "current",
+      "proposition_text": "The patient reports pain from their elbow all the way up to the neck.",
+      "evidence": [
+        {
+          "turn_id": "T13",
+          "turn_speaker": "patient",
+          "span_text": "from my elbow all the way up to the to the neck",
+          "char_start": 828,
+          "char_end": 875
+        }
+      ],
+      "assertion": "uncertain",
+      "visit_state": "active",
+      "linked_problem": null,
+      "event_cluster_id": "CL5"
+    },
+    {
+      "cap_id": "CAP34",
+      "cap_type": "ProblemHistory",
+      "content_source": "patient",
+      "modality": "interview",
+      "canonical_concept": "arm pain",
+      "verification_status": "unconfirmed",
+      "clinical_status": "active",
+      "temporality": "current",
+      "proposition_text": "The patient reports pain along their arm.",
+      "evidence": [
+        {
+          "turn_id": "T17",
+          "turn_speaker": "patient",
+          "span_text": "or all the way down the arm to the elbow",
+          "char_start": 1113,
+          "char_end": 1153
+        }
+      ],
+      "assertion": "uncertain",
+      "visit_state": "active",
+      "linked_problem": null,
+      "event_cluster_id": "CL7"
+    },
+    {
+      "cap_id": "CAP35",
+      "cap_type": "Demographics",
+      "content_source": "patient",
+      "modality": "interview",
+      "canonical_concept": "right handed",
+      "verification_status": "confirmed",
+      "clinical_status": "active",
+      "temporality": "current",
+      "proposition_text": "The patient is right-handed.",
+      "evidence": [
+        {
+          "turn_id": "T6",
+          "turn_speaker": "doctor",
+          "span_text": "okay they must have written that down wrong so it is your your left arm are you right handed or left handed",
+          "char_start": 498,
+          "char_end": 605
+        }
+      ],
+      "assertion": "present",
+      "visit_state": "active",
+      "linked_problem": null,
+      "event_cluster_id": "CL4"
+    }
+  ],
+  "filtered_nonverifiable_units": [
+    "Is the pain worse at night?",
+    "okay",
+    "so what part of your elbow would you say hurts",
+    "all the way up the arm alright",
+    "kind of a achiness achiness heaviness",
+    "or all the way down the arm to the elbow",
+    "What have your blood pressures been running lately?",
+    "How is your diet going?",
+    "What have your blood sugars been running?",
+    "he thought maybe it was n't the heart",
+    "jobie had you know they took jobie to the hospital",
+    "could stop pooping",
+    "you know",
+    "something terrible happened",
+    "on my watch"
+  ],
+  "chunk_count": 9,
+  "rescue_used": false,
+  "rescue_attempted": false,
+  "legacy_fallback_chunk_count": 0,
+  "extraction_mode": "single_call",
+  "runtime_seconds": 142.715
+}

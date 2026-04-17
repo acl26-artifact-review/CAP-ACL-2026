@@ -1,0 +1,87 @@
+Case: D2N131
+
+Problem List and Visit State Tracking
+
+Problem List
+- high blood pressure | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T23,T5,T9
+  Summary: The patient reports struggling with high blood pressure.
+  ClusterId: CL1
+  TemporalProfile: current, lately
+  Updates:
+  - CAP2: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=lately turns=T5 :: The patient reports struggling with high blood pressure.
+  - CAP3: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T9 :: The patient has high blood pressure.
+  - CAP4: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T9 :: The patient reports high blood pressure.
+  - CAP5: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T23 :: The patient's blood pressure is high.
+- headache | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T9
+  Summary: The patient reports having headaches.
+  ClusterId: CL2
+  TemporalProfile: current
+  Updates:
+  - CAP6: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T9 :: The patient reports having headaches.
+  - CAP7: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T9 :: The patient reports headaches.
+- kidney transplant | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T12
+  Summary: The patient has had a kidney transplant a few years ago.
+  ClusterId: CL4
+  TemporalProfile: few years ago
+  Updates:
+  - CAP17: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=few years ago turns=T12 :: The patient has had a kidney transplant a few years ago.
+- kidney function | verification_status=confirmed | clinical_status=stable | modalities=interview | speakers=doctor | evidence=T29
+  Summary: The doctor stated that the patient's kidney function looks great.
+  ClusterId: CL11
+  TemporalProfile: current
+  Updates:
+  - CAP1: content_source=doctor modality=interview verification_status=confirmed clinical_status=stable temporality=current turns=T29 :: The doctor stated that the patient's kidney function looks great.
+
+Medication Tracking
+- [MedicationState] norvasc | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=doctor | evidence=T9
+  Summary: The patient is taking norvasc.
+  ClusterId: CL3
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient is taking norvasc. (T9)
+  Updates:
+  - CAP16: content_source=doctor modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T9 :: The patient is taking norvasc.
+- [MedicationState] immunosuppression medications | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T16
+  Summary: The patient is taking immunosuppression medications.
+  ClusterId: CL5
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient is taking immunosuppression medications. (T16)
+  Updates:
+  - CAP15: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T16 :: The patient is taking immunosuppression medications.
+- [MedicationChange] carvedilol | verification_status=unconfirmed | clinical_status=planned | modalities=interview,plan | speakers=doctor | evidence=T27
+  Summary: The doctor ordered carvedilol 25 milligrams twice a day.
+  ClusterId: CL6
+  TemporalProfile: current, future
+  PlannedChanges:
+  - The doctor ordered carvedilol 25 milligrams twice a day. (T27)
+  - The doctor orders Carvedilol 25 milligrams twice a day. (T27)
+  Updates:
+  - CAP8: content_source=doctor modality=interview verification_status=confirmed clinical_status=planned temporality=current turns=T27 :: The doctor ordered carvedilol 25 milligrams twice a day.
+  - CAP14: content_source=doctor modality=plan verification_status=unconfirmed clinical_status=planned temporality=future turns=T27 :: The doctor orders Carvedilol 25 milligrams twice a day.
+- [MedicationChange] coreg | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T27
+  Summary: The doctor prescribes Coreg 25 milligrams twice a day.
+  ClusterId: CL10
+  TemporalProfile: future
+  PlannedChanges:
+  - The doctor prescribes Coreg 25 milligrams twice a day. (T27)
+  Updates:
+  - CAP13: content_source=doctor modality=plan verification_status=unconfirmed clinical_status=planned temporality=future turns=T27 :: The doctor prescribes Coreg 25 milligrams twice a day.
+
+Other Structured States
+- [TestResult] complete metabolic panel | verification_status=confirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T27
+  Summary: The doctor ordered a complete metabolic panel.
+  ClusterId: CL7
+  TemporalProfile: current
+- [Plan] lipid panel | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T27
+  Summary: The doctor orders a lipid panel.
+  ClusterId: CL8
+  TemporalProfile: future
+- [TestResult] lipid panel | verification_status=confirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T27
+  Summary: The doctor ordered a lipid panel.
+  ClusterId: CL9
+  TemporalProfile: current
+- [Plan] complete metabolic panel | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T29
+  Summary: The doctor orders a complete metabolic panel.
+  ClusterId: CL12
+  TemporalProfile: future

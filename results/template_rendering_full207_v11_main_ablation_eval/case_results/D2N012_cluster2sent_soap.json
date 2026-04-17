@@ -1,0 +1,1712 @@
+{
+  "case_id": "D2N012",
+  "method": "cluster2sent",
+  "template": "soap",
+  "summary_text": "S:\nThe patient reports intermittent dizziness, lightheadedness, and fatigue, particularly when walking upstairs. He denies chest pain, shortness of breath, or abdominal pain. He reports feeling a little better with his depression and that his asthma has been acting up due to pollen. He uses his inhaler only on cool, dry days. He reports occasional battles with depression.\n\nO:\nPulmonary function tests show mild expiratory wheezing. Hemoglobin A1c is elevated over the past couple of months. Chest X-ray is normal.\n\nA:\nThe patient has chronic diabetes, depression, and asthma. He reports feeling better with his depression and that his asthma has been acting up due to pollen.\n\nP:\nIncrease metformin to 1000 mg twice daily. Start zoloft at 25 mg daily. Continue albuterol two puffs every four to six hours as needed and add symbicort two puffs twice daily during the summer. Schedule a repeat hemoglobin A1c in three months. Continue monitoring blood sugars at home.",
+  "reference_summary": "HISTORY OF PRESENT ILLNESS\n\nMr. Fisher is a 59-year-old male who presents for routine follow up of his chronic problems.\n\nMr. Fisher reports that he has been managing his depression. He is on Prozac 20 mg daily and was taking it regularly, but weaned himself off of it and felt a little better. He is currently taking less of a dose and does not feel the side effects as much, but he is willing to try something different. His asthma has been acting up because of the bad pollen season and has been using his inhaler when it seems to go over 85 degrees. He does not use it if it is cold outside. He is keeping his diabetes under control. The patient 's diet has been good for the most part, but has been traveling all over for his children's sports tournaments and did not stick to his diet and notes over the weekend eating pizza.\n\nThe patient endorses lightheadedness and dizziness when running up and down the stairs. He attributes this to heat and fatigue. He denies chest pain and abdominal pain. Endorses shortness of breath..\n\nMr. Fisher also endorses knee pain from running up and down stairs, but nothing out of the ordinary.\n\nThe patient exercises in the morning and rides a bike for 45 minutes.\n\nREVIEW OF SYSTEMS\n\n• Constitutional: No fevers, chills. Positive fatigue.\n• Cardiovascular: Denies chest pain. Endorses dyspnea on exertion.\n• Respiratory: Positive wheezing. Positive shortness of breath.\n• Musculoskeletal: Positive joint pain. Deniesswelling, or muscle pain.\n• Neurological: Positive lightheadedness. Positive dizziness.\n• Psychiatric: Denies anxiety.\n\nPHYSICAL EXAMINATION\n\n• Constitutional: in no apparent distress.\n• Neck: Supple without thyromegaly or lymphadenopathy.\n• Respiratory: Bilateral expiratory wheezing.\n• Cardiovascular: Regular rate and rhythm.\n• Musculoskeletal: No edema in the lower extremities.\n\nRESULTS\n\nPFT: Within normal limits.\n\nDiabetes panel: Glucose and hemoglobin A1c elevated.\n\nX-ray of the chest is unremarkable.\n\nASSESSMENT AND PLAN\n\nMr. Joseph Fisher is a 59-year-old male who presents for routine follow up of his chronic problems.\n\nAsthma.\n• Medical Reasoning: His symptoms are exacerbated during warmer weather, but his recent pulmonary function tests were normal.\n• Medical Treatment: Continue on albuterol, 2 puffs every 4-6 hours as needed. Add Symbicort 2 puffs twice a day during the summer to help prevent exacerbation.\n\nDepression.\n• Medical Reasoning: The patient self-weened from Prozac 20 mg daily due to side effects.\n• Medical Treatment: We will start him on a different medication, Zoloft 25 mg once a day, to see how he tolerates this.\n\nDiabetes Type II.\n• Medical Reasoning: Recent blood glucose levels and hemoglobin A1c were elevated.\n• Additional Testing: Repeat hemoglobin A1c in 3 months. Continue to monitor blood glucose levels at home.\n• Medical Treatment: We will increase metformin to 1000 mg twice a day.\n\nPatient Agreements: The patient understands and agrees with the recommended medical treatment plan.",
+  "source_cap": {
+    "atomic_propositions": [
+      {
+        "prop_id": "CAP1",
+        "cap_type": "Symptom",
+        "canonical_concept": "left hand pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports pain in the left hand."
+      },
+      {
+        "prop_id": "CAP2",
+        "cap_type": "Problem",
+        "canonical_concept": "diabetes",
+        "category": "Problem",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient reports keeping diabetes under control."
+      },
+      {
+        "prop_id": "CAP3",
+        "cap_type": "Symptom",
+        "canonical_concept": "shortness of breath",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports shortness of breath."
+      },
+      {
+        "prop_id": "CAP4",
+        "cap_type": "Problem",
+        "canonical_concept": "depression",
+        "category": "Problem",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient reports managing through depression."
+      },
+      {
+        "prop_id": "CAP5",
+        "cap_type": "Symptom",
+        "canonical_concept": "wheezing",
+        "category": "Symptom",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient has bilateral expiratory wheezing."
+      },
+      {
+        "prop_id": "CAP6",
+        "cap_type": "Problem",
+        "canonical_concept": "asthma",
+        "category": "Problem",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient reports experiencing asthma."
+      },
+      {
+        "prop_id": "CAP7",
+        "cap_type": "Symptom",
+        "canonical_concept": "belly pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "denies",
+        "status": "negated",
+        "visit_state": "historical",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient denies belly pain."
+      },
+      {
+        "prop_id": "CAP8",
+        "cap_type": "Symptom",
+        "canonical_concept": "knee pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports knee pain."
+      },
+      {
+        "prop_id": "CAP9",
+        "cap_type": "Symptom",
+        "canonical_concept": "lightheadedness",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports feeling lightheaded."
+      },
+      {
+        "prop_id": "CAP10",
+        "cap_type": "Symptom",
+        "canonical_concept": "dizziness",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports feeling dizzy."
+      },
+      {
+        "prop_id": "CAP11",
+        "cap_type": "Symptom",
+        "canonical_concept": "dizziness",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports dizziness."
+      },
+      {
+        "prop_id": "CAP12",
+        "cap_type": "TestResult",
+        "canonical_concept": "hemoglobin a1c",
+        "category": "TestResult",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "past couple months",
+        "claim_type_tags": [
+          "quantitative",
+          "temporal"
+        ],
+        "proposition_text": "The patient's hemoglobin a1c is over the past couple months."
+      },
+      {
+        "prop_id": "CAP13",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "albuterol",
+        "category": "MedicationStatement",
+        "speaker": "doctor",
+        "predicate": "has",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient will continue on albuterol, two puffs every four to six hours as needed."
+      },
+      {
+        "prop_id": "CAP14",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "symbicort",
+        "category": "MedicationStatement",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "planned",
+        "temporality": "future",
+        "proposition_text": "The patient will add symbicort, two puffs twice a day during the summer."
+      },
+      {
+        "prop_id": "CAP15",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "metformin",
+        "category": "MedicationStatement",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "planned",
+        "temporality": "future",
+        "claim_type_tags": [
+          "medication",
+          "quantitative"
+        ],
+        "proposition_text": "Metformin will be increased to 1000 mg twice a day."
+      },
+      {
+        "prop_id": "CAP16",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "zoloft",
+        "category": "MedicationStatement",
+        "speaker": "doctor",
+        "predicate": "plans",
+        "status": "affirmed",
+        "visit_state": "planned",
+        "temporality": "future",
+        "claim_type_tags": [
+          "medication",
+          "plan",
+          "quantitative"
+        ],
+        "proposition_text": "The patient will start zoloft, 25 mg once a day."
+      },
+      {
+        "prop_id": "CAP17",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "prozac",
+        "category": "MedicationStatement",
+        "speaker": "patient",
+        "status": "uncertain",
+        "visit_state": "planned",
+        "temporality": "current",
+        "proposition_text": "The patient weened themselves off of prozac."
+      },
+      {
+        "prop_id": "CAP18",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "metformin",
+        "category": "MedicationStatement",
+        "speaker": "patient",
+        "predicate": "plans",
+        "status": "affirmed",
+        "visit_state": "planned",
+        "temporality": "future",
+        "claim_type_tags": [
+          "medication",
+          "plan"
+        ],
+        "proposition_text": "The doctor will increase the metformin dose."
+      },
+      {
+        "prop_id": "CAP19",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "prozac",
+        "category": "MedicationStatement",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient was taking prozac."
+      },
+      {
+        "prop_id": "CAP20",
+        "cap_type": "ProblemHistory",
+        "canonical_concept": "travel",
+        "category": "ProblemHistory",
+        "speaker": "patient",
+        "status": "uncertain",
+        "visit_state": "historical",
+        "temporality": "recent",
+        "proposition_text": "The patient has been traveling to different sports tournaments."
+      },
+      {
+        "prop_id": "CAP21",
+        "cap_type": "ProblemHistory",
+        "canonical_concept": "eating on the go",
+        "category": "ProblemHistory",
+        "speaker": "patient",
+        "status": "uncertain",
+        "visit_state": "historical",
+        "temporality": "recent",
+        "proposition_text": "The patient has been eating on the go."
+      },
+      {
+        "prop_id": "CAP22",
+        "cap_type": "ProblemHistory",
+        "canonical_concept": "junk food",
+        "category": "ProblemHistory",
+        "speaker": "patient",
+        "status": "uncertain",
+        "visit_state": "historical",
+        "temporality": "recent",
+        "proposition_text": "The patient has been eating junk food."
+      }
+    ],
+    "filtered_nonverifiable_units": []
+  },
+  "event_plan": null,
+  "summary_cap": {
+    "atomic_propositions": [
+      {
+        "prop_id": "P1",
+        "cap_type": "Symptom",
+        "canonical_concept": "intermittent dizziness",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports intermittent dizziness."
+      },
+      {
+        "prop_id": "P2",
+        "cap_type": "Symptom",
+        "canonical_concept": "lightheadedness",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports lightheadedness."
+      },
+      {
+        "prop_id": "P3",
+        "cap_type": "Symptom",
+        "canonical_concept": "fatigue",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports fatigue."
+      },
+      {
+        "prop_id": "P4",
+        "cap_type": "Symptom",
+        "canonical_concept": "symptoms are particularly when",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports the symptoms are particularly when walking upstairs."
+      },
+      {
+        "prop_id": "P5",
+        "cap_type": "Denial",
+        "canonical_concept": "pain",
+        "category": "Denial",
+        "speaker": "patient",
+        "predicate": "denies",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "safety_relevant"
+        ],
+        "proposition_text": "The patient denies chest pain."
+      },
+      {
+        "prop_id": "P6",
+        "cap_type": "Denial",
+        "canonical_concept": "denies shortness breath",
+        "category": "Denial",
+        "speaker": "patient",
+        "predicate": "denies",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "safety_relevant"
+        ],
+        "proposition_text": "The patient denies shortness of breath."
+      },
+      {
+        "prop_id": "P7",
+        "cap_type": "Denial",
+        "canonical_concept": "pain",
+        "category": "Denial",
+        "speaker": "patient",
+        "predicate": "denies",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "safety_relevant"
+        ],
+        "proposition_text": "The patient denies abdominal pain."
+      },
+      {
+        "prop_id": "P8",
+        "cap_type": "Symptom",
+        "canonical_concept": "feeling little better his",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports feeling a little better with his depression."
+      },
+      {
+        "prop_id": "P9",
+        "cap_type": "Symptom",
+        "canonical_concept": "his asthma been acting",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports his asthma has been acting up due to pollen."
+      },
+      {
+        "prop_id": "P10",
+        "cap_type": "MedicationPlan",
+        "canonical_concept": "metformin",
+        "category": "MedicationPlan",
+        "speaker": "clinician",
+        "predicate": "prescribes",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "medication"
+        ],
+        "proposition_text": "Increase metformin to 1000 mg twice daily."
+      },
+      {
+        "prop_id": "P11",
+        "cap_type": "MedicationPlan",
+        "canonical_concept": "start zoloft daily",
+        "category": "MedicationPlan",
+        "speaker": "clinician",
+        "predicate": "prescribes",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "medication"
+        ],
+        "proposition_text": "Start zoloft at 25 mg daily."
+      },
+      {
+        "prop_id": "P12",
+        "cap_type": "MedicationPlan",
+        "canonical_concept": "continue albuterol two puffs",
+        "category": "MedicationPlan",
+        "speaker": "clinician",
+        "predicate": "prescribes",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "medication"
+        ],
+        "proposition_text": "Continue albuterol two puffs every four to six hours as needed."
+      },
+      {
+        "prop_id": "P13",
+        "cap_type": "MedicationPlan",
+        "canonical_concept": "add symbicort two puffs",
+        "category": "MedicationPlan",
+        "speaker": "clinician",
+        "predicate": "prescribes",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "medication"
+        ],
+        "proposition_text": "Add symbicort two puffs twice daily during the summer."
+      },
+      {
+        "prop_id": "P14",
+        "cap_type": "FollowUpPlan",
+        "canonical_concept": "schedule repeat hemoglobin a1c",
+        "category": "FollowUpPlan",
+        "speaker": "clinician",
+        "predicate": "orders",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "future",
+        "claim_type_tags": [
+          "plan"
+        ],
+        "proposition_text": "Schedule a repeat hemoglobin A1c in three months."
+      }
+    ],
+    "filtered_nonverifiable_units": [],
+    "runtime_seconds": 27.862
+  },
+  "cap_alignment": {
+    "cap_precision": 0.7142857142857143,
+    "cap_recall": 0.45454545454545453,
+    "cap_f1": 0.5555555555555556,
+    "matched_count": 10,
+    "summary_prop_count": 14,
+    "source_prop_count": 22,
+    "matched_pairs": [
+      {
+        "score": 1.0,
+        "summary_prop_id": "P10",
+        "source_prop_id": "CAP18",
+        "summary_text": "Increase metformin to 1000 mg twice daily.",
+        "source_text": "The doctor will increase the metformin dose."
+      },
+      {
+        "score": 1.0,
+        "summary_prop_id": "P2",
+        "source_prop_id": "CAP9",
+        "summary_text": "The patient reports lightheadedness.",
+        "source_text": "The patient reports feeling lightheaded."
+      },
+      {
+        "score": 0.9633,
+        "summary_prop_id": "P1",
+        "source_prop_id": "CAP11",
+        "summary_text": "The patient reports intermittent dizziness.",
+        "source_text": "The patient reports dizziness."
+      },
+      {
+        "score": 0.8462,
+        "summary_prop_id": "P12",
+        "source_prop_id": "CAP13",
+        "summary_text": "Continue albuterol two puffs every four to six hours as needed.",
+        "source_text": "The patient will continue on albuterol, two puffs every four to six hours as needed."
+      },
+      {
+        "score": 0.8333,
+        "summary_prop_id": "P6",
+        "source_prop_id": "CAP3",
+        "summary_text": "The patient denies shortness of breath.",
+        "source_text": "The patient reports shortness of breath."
+      },
+      {
+        "score": 0.8133,
+        "summary_prop_id": "P7",
+        "source_prop_id": "CAP7",
+        "summary_text": "The patient denies abdominal pain.",
+        "source_text": "The patient denies belly pain."
+      },
+      {
+        "score": 0.8033,
+        "summary_prop_id": "P5",
+        "source_prop_id": "CAP8",
+        "summary_text": "The patient denies chest pain.",
+        "source_text": "The patient reports knee pain."
+      },
+      {
+        "score": 0.7273,
+        "summary_prop_id": "P13",
+        "source_prop_id": "CAP14",
+        "summary_text": "Add symbicort two puffs twice daily during the summer.",
+        "source_text": "The patient will add symbicort, two puffs twice a day during the summer."
+      },
+      {
+        "score": 0.6718,
+        "summary_prop_id": "P9",
+        "source_prop_id": "CAP6",
+        "summary_text": "The patient reports his asthma has been acting up due to pollen.",
+        "source_text": "The patient reports experiencing asthma."
+      },
+      {
+        "score": 0.59,
+        "summary_prop_id": "P11",
+        "source_prop_id": "CAP16",
+        "summary_text": "Start zoloft at 25 mg daily.",
+        "source_text": "The patient will start zoloft, 25 mg once a day."
+      }
+    ],
+    "unsupported_summary_props": [
+      {
+        "prop_id": "P3",
+        "cap_type": "Symptom",
+        "canonical_concept": "fatigue",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports fatigue."
+      },
+      {
+        "prop_id": "P4",
+        "cap_type": "Symptom",
+        "canonical_concept": "symptoms are particularly when",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports the symptoms are particularly when walking upstairs."
+      },
+      {
+        "prop_id": "P8",
+        "cap_type": "Symptom",
+        "canonical_concept": "feeling little better his",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports feeling a little better with his depression."
+      },
+      {
+        "prop_id": "P14",
+        "cap_type": "FollowUpPlan",
+        "canonical_concept": "schedule repeat hemoglobin a1c",
+        "category": "FollowUpPlan",
+        "speaker": "clinician",
+        "predicate": "orders",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "future",
+        "claim_type_tags": [
+          "plan"
+        ],
+        "proposition_text": "Schedule a repeat hemoglobin A1c in three months."
+      }
+    ],
+    "missing_source_props": [
+      {
+        "prop_id": "CAP1",
+        "cap_type": "Symptom",
+        "canonical_concept": "left hand pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports pain in the left hand."
+      },
+      {
+        "prop_id": "CAP2",
+        "cap_type": "Problem",
+        "canonical_concept": "diabetes",
+        "category": "Problem",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient reports keeping diabetes under control."
+      },
+      {
+        "prop_id": "CAP4",
+        "cap_type": "Problem",
+        "canonical_concept": "depression",
+        "category": "Problem",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient reports managing through depression."
+      },
+      {
+        "prop_id": "CAP5",
+        "cap_type": "Symptom",
+        "canonical_concept": "wheezing",
+        "category": "Symptom",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient has bilateral expiratory wheezing."
+      },
+      {
+        "prop_id": "CAP10",
+        "cap_type": "Symptom",
+        "canonical_concept": "dizziness",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports feeling dizzy."
+      },
+      {
+        "prop_id": "CAP12",
+        "cap_type": "TestResult",
+        "canonical_concept": "hemoglobin a1c",
+        "category": "TestResult",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "past couple months",
+        "claim_type_tags": [
+          "quantitative",
+          "temporal"
+        ],
+        "proposition_text": "The patient's hemoglobin a1c is over the past couple months."
+      },
+      {
+        "prop_id": "CAP15",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "metformin",
+        "category": "MedicationStatement",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "planned",
+        "temporality": "future",
+        "claim_type_tags": [
+          "medication",
+          "quantitative"
+        ],
+        "proposition_text": "Metformin will be increased to 1000 mg twice a day."
+      },
+      {
+        "prop_id": "CAP17",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "prozac",
+        "category": "MedicationStatement",
+        "speaker": "patient",
+        "status": "uncertain",
+        "visit_state": "planned",
+        "temporality": "current",
+        "proposition_text": "The patient weened themselves off of prozac."
+      },
+      {
+        "prop_id": "CAP19",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "prozac",
+        "category": "MedicationStatement",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient was taking prozac."
+      },
+      {
+        "prop_id": "CAP20",
+        "cap_type": "ProblemHistory",
+        "canonical_concept": "travel",
+        "category": "ProblemHistory",
+        "speaker": "patient",
+        "status": "uncertain",
+        "visit_state": "historical",
+        "temporality": "recent",
+        "proposition_text": "The patient has been traveling to different sports tournaments."
+      },
+      {
+        "prop_id": "CAP21",
+        "cap_type": "ProblemHistory",
+        "canonical_concept": "eating on the go",
+        "category": "ProblemHistory",
+        "speaker": "patient",
+        "status": "uncertain",
+        "visit_state": "historical",
+        "temporality": "recent",
+        "proposition_text": "The patient has been eating on the go."
+      },
+      {
+        "prop_id": "CAP22",
+        "cap_type": "ProblemHistory",
+        "canonical_concept": "junk food",
+        "category": "ProblemHistory",
+        "speaker": "patient",
+        "status": "uncertain",
+        "visit_state": "historical",
+        "temporality": "recent",
+        "proposition_text": "The patient has been eating junk food."
+      }
+    ]
+  },
+  "reference_gpt_f1_items": {
+    "active_problems_symptoms": [
+      "joint pain",
+      "lightheadedness",
+      "dizziness",
+      "bilateral expiratory wheezing",
+      "Diabetes",
+      "Asthma",
+      "Depression",
+      "Diabetes Type II",
+      "elevated blood glucose levels",
+      "elevated hemoglobin A1c"
+    ],
+    "negated_findings": [
+      "swelling",
+      "muscle pain"
+    ],
+    "uncertain_findings": [],
+    "medication_treatment": [
+      "Albuterol",
+      "Symbicort",
+      "Zoloft 25 mg once a day",
+      "metformin 1000 mg twice a day"
+    ],
+    "plan_followup": [
+      "Repeat hemoglobin A1c in 3 months",
+      "Continue to monitor blood glucose levels at home"
+    ],
+    "_chunk_count": [
+      "4"
+    ]
+  },
+  "summary_gpt_f1_items": {
+    "active_problems_symptoms": [],
+    "negated_findings": [],
+    "uncertain_findings": [],
+    "medication_treatment": [],
+    "plan_followup": [],
+    "_chunk_count": [
+      "1"
+    ]
+  },
+  "gpt_f1_alignment": {
+    "by_category": {
+      "active_problems_symptoms": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "matched_count": 0,
+        "pred_count": 0,
+        "ref_count": 10,
+        "matches": [],
+        "unsupported_pred_items": [],
+        "missing_ref_items": [
+          "joint pain",
+          "lightheadedness",
+          "dizziness",
+          "bilateral expiratory wheezing",
+          "Diabetes",
+          "Asthma",
+          "Depression",
+          "Diabetes Type II",
+          "elevated blood glucose levels",
+          "elevated hemoglobin A1c"
+        ]
+      },
+      "negated_findings": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "matched_count": 0,
+        "pred_count": 0,
+        "ref_count": 2,
+        "matches": [],
+        "unsupported_pred_items": [],
+        "missing_ref_items": [
+          "swelling",
+          "muscle pain"
+        ]
+      },
+      "uncertain_findings": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "matched_count": 0,
+        "pred_count": 0,
+        "ref_count": 0,
+        "matches": [],
+        "unsupported_pred_items": [],
+        "missing_ref_items": []
+      },
+      "medication_treatment": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "matched_count": 0,
+        "pred_count": 0,
+        "ref_count": 4,
+        "matches": [],
+        "unsupported_pred_items": [],
+        "missing_ref_items": [
+          "Albuterol",
+          "Symbicort",
+          "Zoloft 25 mg once a day",
+          "metformin 1000 mg twice a day"
+        ]
+      },
+      "plan_followup": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "matched_count": 0,
+        "pred_count": 0,
+        "ref_count": 2,
+        "matches": [],
+        "unsupported_pred_items": [],
+        "missing_ref_items": [
+          "Repeat hemoglobin A1c in 3 months",
+          "Continue to monitor blood glucose levels at home"
+        ]
+      }
+    }
+  },
+  "reference_nair_concepts": {
+    "sections": [
+      {
+        "heading": "Clinical Note",
+        "section_value": "HISTORY OF PRESENT ILLNESS\nMr. Fisher is a 59-year-old male who presents for routine follow up of his chronic problems.\nMr. Fisher reports that he has been managing his depression. He is on Prozac 20 mg daily and was taking it regularly, but weaned himself off of it and felt a little better. He is currently taking less of a dose and does not feel the side effects as much, but he is willing to try something different. His asthma has been acting up because of the bad pollen season and has been using his inhaler when it seems to go over 85 degrees. He does not use it if it is cold outside. He is keeping his diabetes under control. The patient 's diet has been good for the most part, but has been traveling all over for his children's sports tournaments and did not stick to his diet and notes over the weekend eating pizza.\nThe patient endorses lightheadedness and dizziness when running up and down the stairs. He attributes this to heat and fatigue. He denies chest pain and abdominal pain. Endorses shortness of breath..\nMr. Fisher also endorses knee pain from running up and down stairs, but nothing out of the ordinary.\nThe patient exercises in the morning and rides a bike for 45 minutes.\nREVIEW OF SYSTEMS\n• Constitutional: No fevers, chills. Positive fatigue.\n• Cardiovascular: Denies chest pain. Endorses dyspnea on exertion.",
+        "medical_concepts": [
+          "depression",
+          "Prozac",
+          "asthma",
+          "pollen allergy",
+          "inhaler",
+          "diabetes",
+          "diet",
+          "lightheadedness",
+          "dizziness",
+          "heat intolerance",
+          "fatigue",
+          "chest pain",
+          "abdominal pain",
+          "shortness of breath",
+          "knee pain",
+          "fevers",
+          "chills",
+          "dyspnea on exertion"
+        ]
+      },
+      {
+        "heading": "Clinical Note",
+        "section_value": "• Respiratory: Positive wheezing. Positive shortness of breath.\n• Musculoskeletal: Positive joint pain. Deniesswelling, or muscle pain.\n• Neurological: Positive lightheadedness. Positive dizziness.\n• Psychiatric: Denies anxiety.\nPHYSICAL EXAMINATION\n• Constitutional: in no apparent distress.\n• Neck: Supple without thyromegaly or lymphadenopathy.\n• Respiratory: Bilateral expiratory wheezing.\n• Cardiovascular: Regular rate and rhythm.\n• Musculoskeletal: No edema in the lower extremities.",
+        "medical_concepts": [
+          "wheezing",
+          "shortness of breath",
+          "joint pain",
+          "swelling",
+          "muscle pain",
+          "lightheadedness",
+          "dizziness",
+          "anxiety",
+          "thyromegaly",
+          "lymphadenopathy",
+          "bilateral expiratory wheezing",
+          "edema in the lower extremities"
+        ]
+      },
+      {
+        "heading": "Clinical Note",
+        "section_value": "RESULTS\nPFT: Within normal limits.\nDiabetes panel: Glucose and hemoglobin A1c elevated.\nX-ray of the chest is unremarkable.\nASSESSMENT AND PLAN\nMr. Joseph Fisher is a 59-year-old male who presents for routine follow up of his chronic problems.\nAsthma.\n• Medical Reasoning: His symptoms are exacerbated during warmer weather, but his recent pulmonary function tests were normal.\n• Medical Treatment: Continue on albuterol, 2 puffs every 4-6 hours as needed. Add Symbicort 2 puffs twice a day during the summer to help prevent exacerbation.\nDepression.",
+        "medical_concepts": [
+          "pulmonary function test",
+          "PFT",
+          "diabetes panel",
+          "glucose",
+          "hemoglobin A1c",
+          "chest X-ray",
+          "asthma",
+          "albuterol",
+          "Symbicort",
+          "depression"
+        ]
+      },
+      {
+        "heading": "Clinical Note",
+        "section_value": "• Medical Reasoning: The patient self-weened from Prozac 20 mg daily due to side effects.\n• Medical Treatment: We will start him on a different medication, Zoloft 25 mg once a day, to see how he tolerates this.\nDiabetes Type II.\n• Medical Reasoning: Recent blood glucose levels and hemoglobin A1c were elevated.\n• Additional Testing: Repeat hemoglobin A1c in 3 months. Continue to monitor blood glucose levels at home.\n• Medical Treatment: We will increase metformin to 1000 mg twice a day.\nPatient Agreements: The patient understands and agrees with the recommended medical treatment plan.",
+        "medical_concepts": [
+          "Prozac",
+          "Zoloft",
+          "Diabetes Type II",
+          "blood glucose",
+          "hemoglobin A1c",
+          "metformin"
+        ]
+      }
+    ],
+    "medical_concepts": [
+      "depression",
+      "Prozac",
+      "asthma",
+      "pollen allergy",
+      "inhaler",
+      "diabetes",
+      "diet",
+      "lightheadedness",
+      "dizziness",
+      "heat intolerance",
+      "fatigue",
+      "chest pain",
+      "abdominal pain",
+      "shortness of breath",
+      "knee pain",
+      "fevers",
+      "chills",
+      "dyspnea on exertion",
+      "wheezing",
+      "joint pain",
+      "swelling",
+      "muscle pain",
+      "anxiety",
+      "thyromegaly",
+      "lymphadenopathy",
+      "bilateral expiratory wheezing",
+      "edema in the lower extremities",
+      "pulmonary function test",
+      "PFT",
+      "diabetes panel",
+      "glucose",
+      "hemoglobin A1c",
+      "chest X-ray",
+      "albuterol",
+      "Symbicort",
+      "Zoloft",
+      "Diabetes Type II",
+      "blood glucose",
+      "metformin"
+    ],
+    "section_count": 4
+  },
+  "summary_nair_concepts": {
+    "sections": [
+      {
+        "heading": "S",
+        "section_value": "The patient reports intermittent dizziness, lightheadedness, and fatigue, particularly when walking upstairs. He denies chest pain, shortness of breath, or abdominal pain. He reports feeling a little better with his depression and that his asthma has been acting up due to pollen. He uses his inhaler only on cool, dry days. He reports occasional battles with depression.",
+        "medical_concepts": [
+          "dizziness",
+          "lightheadedness",
+          "fatigue",
+          "chest pain",
+          "shortness of breath",
+          "abdominal pain",
+          "depression",
+          "asthma",
+          "pollen",
+          "inhaler"
+        ]
+      },
+      {
+        "heading": "O",
+        "section_value": "Pulmonary function tests show mild expiratory wheezing. Hemoglobin A1c is elevated over the past couple of months. Chest X-ray is normal.",
+        "medical_concepts": [
+          "pulmonary function tests",
+          "expiratory wheezing",
+          "hemoglobin A1c",
+          "chest X-ray"
+        ]
+      },
+      {
+        "heading": "A",
+        "section_value": "The patient has chronic diabetes, depression, and asthma. He reports feeling better with his depression and that his asthma has been acting up due to pollen.",
+        "medical_concepts": [
+          "chronic diabetes",
+          "depression",
+          "asthma",
+          "pollen"
+        ]
+      },
+      {
+        "heading": "P",
+        "section_value": "Increase metformin to 1000 mg twice daily. Start zoloft at 25 mg daily. Continue albuterol two puffs every four to six hours as needed and add symbicort two puffs twice daily during the summer. Schedule a repeat hemoglobin A1c in three months. Continue monitoring blood sugars at home.",
+        "medical_concepts": [
+          "metformin",
+          "zoloft",
+          "albuterol",
+          "symbicort",
+          "hemoglobin A1c",
+          "blood sugar monitoring"
+        ]
+      }
+    ],
+    "medical_concepts": [
+      "dizziness",
+      "lightheadedness",
+      "fatigue",
+      "chest pain",
+      "shortness of breath",
+      "abdominal pain",
+      "depression",
+      "asthma",
+      "pollen",
+      "inhaler",
+      "pulmonary function tests",
+      "expiratory wheezing",
+      "hemoglobin A1c",
+      "chest X-ray",
+      "chronic diabetes",
+      "metformin",
+      "zoloft",
+      "albuterol",
+      "symbicort",
+      "blood sugar monitoring"
+    ],
+    "section_count": 4
+  },
+  "nair_alignment": {
+    "pred_concepts": [
+      "dizziness",
+      "lightheadedness",
+      "fatigue",
+      "chest pain",
+      "shortness of breath",
+      "abdominal pain",
+      "depression",
+      "asthma",
+      "pollen",
+      "inhaler",
+      "pulmonary function tests",
+      "expiratory wheezing",
+      "hemoglobin A1c",
+      "chest X-ray",
+      "chronic diabetes",
+      "metformin",
+      "zoloft",
+      "albuterol",
+      "symbicort",
+      "blood sugar monitoring"
+    ],
+    "ref_concepts": [
+      "depression",
+      "Prozac",
+      "asthma",
+      "pollen allergy",
+      "inhaler",
+      "diabetes",
+      "diet",
+      "lightheadedness",
+      "dizziness",
+      "heat intolerance",
+      "fatigue",
+      "chest pain",
+      "abdominal pain",
+      "shortness of breath",
+      "knee pain",
+      "fevers",
+      "chills",
+      "dyspnea on exertion",
+      "wheezing",
+      "joint pain",
+      "swelling",
+      "muscle pain",
+      "anxiety",
+      "thyromegaly",
+      "lymphadenopathy",
+      "bilateral expiratory wheezing",
+      "edema in the lower extremities",
+      "pulmonary function test",
+      "PFT",
+      "diabetes panel",
+      "glucose",
+      "hemoglobin A1c",
+      "chest X-ray",
+      "albuterol",
+      "Symbicort",
+      "Zoloft",
+      "Diabetes Type II",
+      "blood glucose",
+      "metformin"
+    ],
+    "precision_alignment": {
+      "found_b": [
+        "dizziness",
+        "lightheadedness",
+        "fatigue",
+        "chest pain",
+        "shortness of breath",
+        "abdominal pain",
+        "depression",
+        "asthma",
+        "inhaler",
+        "pulmonary function tests",
+        "expiratory wheezing",
+        "hemoglobin A1c",
+        "chest X-ray",
+        "metformin",
+        "zoloft",
+        "albuterol",
+        "symbicort"
+      ],
+      "not_found_b": [
+        "pollen",
+        "chronic diabetes",
+        "blood sugar monitoring"
+      ],
+      "chunk_count": 1,
+      "chunk_results": [
+        {
+          "found_b": [
+            "dizziness",
+            "lightheadedness",
+            "fatigue",
+            "chest pain",
+            "shortness of breath",
+            "abdominal pain",
+            "depression",
+            "asthma",
+            "inhaler",
+            "pulmonary function tests",
+            "expiratory wheezing",
+            "hemoglobin A1c",
+            "chest X-ray",
+            "metformin",
+            "zoloft",
+            "albuterol",
+            "symbicort"
+          ],
+          "not_found_b": [
+            "pollen",
+            "chronic diabetes",
+            "blood sugar monitoring"
+          ]
+        }
+      ]
+    },
+    "recall_alignment": {
+      "found_b": [
+        "depression",
+        "asthma",
+        "inhaler",
+        "diabetes",
+        "lightheadedness",
+        "dizziness",
+        "fatigue",
+        "chest pain",
+        "abdominal pain",
+        "shortness of breath",
+        "wheezing",
+        "pulmonary function test",
+        "hemoglobin A1c",
+        "chest X-ray",
+        "albuterol",
+        "Symbicort",
+        "Zoloft",
+        "metformin"
+      ],
+      "not_found_b": [
+        "Prozac",
+        "pollen allergy",
+        "diet",
+        "heat intolerance",
+        "knee pain",
+        "fevers",
+        "chills",
+        "dyspnea on exertion",
+        "joint pain",
+        "swelling",
+        "muscle pain",
+        "anxiety",
+        "thyromegaly",
+        "lymphadenopathy",
+        "bilateral expiratory wheezing",
+        "edema in the lower extremities",
+        "PFT",
+        "diabetes panel",
+        "glucose",
+        "Diabetes Type II",
+        "blood glucose"
+      ],
+      "chunk_count": 2,
+      "chunk_results": [
+        {
+          "found_b": [
+            "depression",
+            "asthma",
+            "inhaler",
+            "diabetes",
+            "lightheadedness",
+            "dizziness",
+            "fatigue",
+            "chest pain",
+            "abdominal pain",
+            "shortness of breath",
+            "wheezing"
+          ],
+          "not_found_b": [
+            "Prozac",
+            "pollen allergy",
+            "diet",
+            "heat intolerance",
+            "knee pain",
+            "fevers",
+            "chills",
+            "dyspnea on exertion",
+            "joint pain",
+            "swelling",
+            "muscle pain",
+            "anxiety",
+            "thyromegaly"
+          ]
+        },
+        {
+          "found_b": [
+            "pulmonary function test",
+            "hemoglobin A1c",
+            "chest X-ray",
+            "albuterol",
+            "Symbicort",
+            "Zoloft",
+            "metformin"
+          ],
+          "not_found_b": [
+            "lymphadenopathy",
+            "bilateral expiratory wheezing",
+            "edema in the lower extremities",
+            "PFT",
+            "diabetes panel",
+            "glucose",
+            "Diabetes Type II",
+            "blood glucose"
+          ]
+        }
+      ]
+    }
+  },
+  "semantic_cap_audit": {
+    "source_cap_recall": [
+      {
+        "cap_id": "P1",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P2",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P3",
+        "judgment": "contradicted",
+        "reason": null
+      },
+      {
+        "cap_id": "P4",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P5",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P6",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P7",
+        "judgment": "contradicted",
+        "reason": null
+      },
+      {
+        "cap_id": "P8",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P9",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P10",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P11",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P12",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P13",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P14",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P15",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P16",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P1",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P2",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P3",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P4",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P5",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P6",
+        "judgment": "missing",
+        "reason": null
+      }
+    ],
+    "summary_cap_precision": [
+      {
+        "cap_id": "P1",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P2",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P3",
+        "judgment": "unsupported",
+        "reason": null
+      },
+      {
+        "cap_id": "P4",
+        "judgment": "unsupported",
+        "reason": null
+      },
+      {
+        "cap_id": "P5",
+        "judgment": "unsupported",
+        "reason": null
+      },
+      {
+        "cap_id": "P6",
+        "judgment": "contradicted",
+        "reason": null
+      },
+      {
+        "cap_id": "P7",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P8",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P9",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P10",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P11",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P12",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P13",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P14",
+        "judgment": "unsupported",
+        "reason": null
+      }
+    ],
+    "metrics": {
+      "semantic_cap_precision": 0.5357,
+      "semantic_cap_recall": 0.5,
+      "semantic_cap_f1": 0.5172,
+      "semantic_cap_precision_supported_count": 6,
+      "semantic_cap_precision_partial_count": 3,
+      "semantic_cap_precision_denominator": 14,
+      "semantic_cap_recall_supported_count": 9,
+      "semantic_cap_recall_partial_count": 4,
+      "semantic_cap_recall_denominator": 22,
+      "semantic_cap_low_value_source_count": 0,
+      "semantic_cap_low_value_summary_count": 0,
+      "semantic_cap_missing_count": 7,
+      "semantic_cap_unsupported_count": 4,
+      "semantic_cap_contradicted_source_count": 2,
+      "semantic_cap_contradicted_summary_count": 1
+    }
+  },
+  "safety_judgment": null,
+  "section_judgment": {
+    "section_miscategorizations": [
+      {
+        "text": "He reports feeling a little better with his depression and that his asthma has been acting up due to pollen.",
+        "current_section": "A",
+        "expected_section": "S",
+        "severity": "major",
+        "reason": "This is patient-reported symptom and status information, not clinician assessment or diagnostic synthesis."
+      }
+    ],
+    "summary_statistics": {
+      "section_appropriateness_score": 0.8,
+      "section_miscategorization_count": 1,
+      "major_section_miscategorization_count": 1
+    }
+  },
+  "pdsqi_judgment": {
+    "citation_applicable": 0,
+    "citation": 0,
+    "accurate": 2,
+    "thorough": 2,
+    "useful": 2,
+    "organized": 4,
+    "comprehensible": 4,
+    "succinct": 4,
+    "abstraction": 1,
+    "synthesized": 3,
+    "voice_summ": 0,
+    "voice_note": 0,
+    "pdsqi_core_mean": 3.0
+  },
+  "llm_checklist_judgment": {
+    "content_preservation_core": 3,
+    "noise_suppression": 4,
+    "lay_expression_preservation": 3,
+    "state_update_fidelity": 2,
+    "temporality_preservation": 3,
+    "problem_evidence_linkage": 3,
+    "state_plan_separation": 4,
+    "section_organization_appropriateness": 3,
+    "overall_clinical_usability": 3,
+    "clinically_meaningful_omission": "Yes",
+    "clinically_concerning_hallucination": "Yes",
+    "checklist_a_mean": 3.3333,
+    "checklist_b_mean": 2.5,
+    "checklist_c_mean": 3.3333,
+    "llm_checklist_abc_mean": 3.125,
+    "llm_checklist_mean_no_usability": 3.125,
+    "llm_checklist_total_score": 28,
+    "llm_checklist_mean": 3.1111,
+    "llm_checklist_meaningful_omission_yes": 1,
+    "llm_checklist_concerning_hallucination_yes": 1
+  },
+  "metrics": {
+    "case_id": "D2N012",
+    "method": "cluster2sent",
+    "template": "soap",
+    "source_cap_count": 22,
+    "event_plan_count": null,
+    "summary_cap_count": 14,
+    "cap_matched_count": 10,
+    "cap_precision": 0.7143,
+    "cap_recall": 0.4545,
+    "cap_f1": 0.5556,
+    "unsupported_summary_cap_count": 4,
+    "missing_source_cap_count": 12,
+    "summary_runtime_seconds": null,
+    "summary_cap_runtime_seconds": 27.862,
+    "event_plan_runtime_seconds": null,
+    "rouge_l_f1_vs_reference": 0.1722,
+    "token_f1_vs_reference": 0.3636,
+    "gptf1_macro_f1": 0.0,
+    "nair_gpt_precision": 0.85,
+    "nair_gpt_recall": 0.4615,
+    "nair_gpt_f1": 0.5982,
+    "semantic_cap_precision": 0.5357,
+    "semantic_cap_recall": 0.5,
+    "semantic_cap_f1": 0.5172,
+    "hallucination_count": null,
+    "major_hallucination_count": null,
+    "omission_count": null,
+    "major_omission_count": null,
+    "section_appropriateness_score": 0.8,
+    "section_miscategorization_count": 1,
+    "major_section_miscategorization_count": 1,
+    "pdsqi_core_mean": 3.0,
+    "pdsqi_accurate": 2,
+    "pdsqi_thorough": 2,
+    "llm_checklist_total_score": 28,
+    "llm_checklist_mean": 3.1111,
+    "llm_checklist_mean_no_usability": 3.125,
+    "checklist_a_mean": 3.3333,
+    "checklist_b_mean": 2.5,
+    "checklist_c_mean": 3.3333,
+    "llm_checklist_abc_mean": 3.125,
+    "content_preservation_core": 3,
+    "noise_suppression": 4,
+    "lay_expression_preservation": 3,
+    "state_update_fidelity": 2,
+    "temporality_preservation": 3,
+    "problem_evidence_linkage": 3,
+    "state_plan_separation": 4,
+    "section_organization_appropriateness": 3,
+    "overall_clinical_usability": 3,
+    "llm_checklist_meaningful_omission_yes": 1,
+    "llm_checklist_concerning_hallucination_yes": 1,
+    "gptf1_active_problems_symptoms_precision": 0.0,
+    "gptf1_active_problems_symptoms_recall": 0.0,
+    "gptf1_active_problems_symptoms_f1": 0.0,
+    "gptf1_active_problems_symptoms_pred_count": 0,
+    "gptf1_active_problems_symptoms_ref_count": 10,
+    "gptf1_negated_findings_precision": 0.0,
+    "gptf1_negated_findings_recall": 0.0,
+    "gptf1_negated_findings_f1": 0.0,
+    "gptf1_negated_findings_pred_count": 0,
+    "gptf1_negated_findings_ref_count": 2,
+    "gptf1_uncertain_findings_precision": 0.0,
+    "gptf1_uncertain_findings_recall": 0.0,
+    "gptf1_uncertain_findings_f1": 0.0,
+    "gptf1_uncertain_findings_pred_count": 0,
+    "gptf1_uncertain_findings_ref_count": 0,
+    "gptf1_medication_treatment_precision": 0.0,
+    "gptf1_medication_treatment_recall": 0.0,
+    "gptf1_medication_treatment_f1": 0.0,
+    "gptf1_medication_treatment_pred_count": 0,
+    "gptf1_medication_treatment_ref_count": 4,
+    "gptf1_plan_followup_precision": 0.0,
+    "gptf1_plan_followup_recall": 0.0,
+    "gptf1_plan_followup_f1": 0.0,
+    "gptf1_plan_followup_pred_count": 0,
+    "gptf1_plan_followup_ref_count": 2,
+    "nair_pred_concept_count": 20,
+    "nair_ref_concept_count": 39,
+    "nair_precision_match_count": 17,
+    "nair_recall_match_count": 18,
+    "semantic_cap_precision_supported_count": 6,
+    "semantic_cap_precision_partial_count": 3,
+    "semantic_cap_precision_denominator": 14,
+    "semantic_cap_recall_supported_count": 9,
+    "semantic_cap_recall_partial_count": 4,
+    "semantic_cap_recall_denominator": 22,
+    "semantic_cap_low_value_source_count": 0,
+    "semantic_cap_low_value_summary_count": 0,
+    "semantic_cap_missing_count": 7,
+    "semantic_cap_unsupported_count": 4,
+    "semantic_cap_contradicted_source_count": 2,
+    "semantic_cap_contradicted_summary_count": 1,
+    "pdsqi_useful": 2,
+    "pdsqi_organized": 4,
+    "pdsqi_comprehensible": 4,
+    "pdsqi_succinct": 4,
+    "pdsqi_synthesized": 3
+  }
+}

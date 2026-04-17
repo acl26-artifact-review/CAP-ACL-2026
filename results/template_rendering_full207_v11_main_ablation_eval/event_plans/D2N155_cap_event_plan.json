@@ -1,0 +1,153 @@
+{
+  "events": [
+    {
+      "event_id": "CL12",
+      "event_type": "ProblemOrientedNoteBundle",
+      "canonical_concept": "diabetic foot ulcer",
+      "visit_state": "active",
+      "status": "affirmed",
+      "temporality": "in two weeks",
+      "speaker_source": "doctor,patient,exam",
+      "clinical_priority": "high",
+      "title": "diabetic foot ulcer",
+      "event_summary": "Problem-oriented bundle for diabetic foot ulcer.",
+      "supporting_cap_ids": [
+        "CAP5",
+        "CAP3",
+        "CAP8",
+        "CAP24",
+        "CAP4",
+        "CAP19",
+        "CAP14",
+        "CAP18",
+        "CAP13",
+        "CAP20",
+        "CAP22",
+        "CAP21"
+      ],
+      "anchor_problem_cap_id": "CAP5",
+      "anchor_problem": "diabetic foot ulcer",
+      "S_cap_ids": [
+        "CAP5"
+      ],
+      "O_cap_ids": [
+        "CAP18"
+      ],
+      "P_cap_ids": [
+        "CAP19",
+        "CAP14",
+        "CAP13",
+        "CAP20",
+        "CAP22",
+        "CAP21"
+      ],
+      "global_cap_ids": [
+        "CAP3",
+        "CAP8",
+        "CAP24",
+        "CAP4"
+      ],
+      "supporting_evidence": [
+        "The patient has a diabetic foot ulcer.",
+        "An ankle brachial index will be ordered."
+      ],
+      "current_state": [
+        "The patient has a diabetic foot ulcer."
+      ],
+      "planned_actions": [
+        "The doctor will order a surgical shoe.",
+        "The doctor wants you to wear a surgical shoe.",
+        "The doctor does not want you to put much pressure on the area.",
+        "The doctor will schedule a follow-up appointment in two weeks.",
+        "The doctor will prescribe colagenase ointment."
+      ],
+      "care_context": [
+        "The patient reports a non-healing foot ulcer.",
+        "The patient reports an ulcer.",
+        "The patient's ulcer has been present for approximately one year.",
+        "The patient reports pain in their foot."
+      ],
+      "key_slots": {
+        "source_modalities": "assessment, interview, plan, exam",
+        "temporal_profile": "current, 1 year ago, future, in two weeks",
+        "anchor_cluster_type": "ProblemState",
+        "anchor_primary_cap_type": "Problem",
+        "bundle_concepts": "diabetic foot ulcer; foot ulcer; foot pain; surgical shoe; ankle brachial index; avoid pressure; follow-up appointment; colagenase ointment; follow-up visit",
+        "history_context": "",
+        "related_factors": "",
+        "visit_primary": "true",
+        "render_in_note": "true",
+        "assessment_fallback": "The patient has diabetic foot ulcer requiring ongoing management.",
+        "bundle_design": "problem_oriented_note_bundle"
+      },
+      "render_sections": [
+        "S",
+        "O",
+        "A",
+        "P",
+        "History of Present Illness",
+        "Findings",
+        "Assessment",
+        "Plan"
+      ]
+    },
+    {
+      "event_id": "CL9",
+      "event_type": "ProblemOrientedNoteBundle",
+      "canonical_concept": "diabetes",
+      "visit_state": "active",
+      "status": "affirmed",
+      "temporality": "past",
+      "speaker_source": "patient,exam",
+      "clinical_priority": "high",
+      "title": "diabetes",
+      "event_summary": "Problem-oriented bundle for diabetes.",
+      "supporting_cap_ids": [
+        "CAP12",
+        "CAP9",
+        "CAP16",
+        "CAP17"
+      ],
+      "anchor_problem_cap_id": "CAP12",
+      "anchor_problem": "diabetes",
+      "S_cap_ids": [
+        "CAP12",
+        "CAP9"
+      ],
+      "supporting_evidence": [
+        "The patient has diabetes.",
+        "The patient has diabetes mellitus."
+      ],
+      "current_state": [
+        "The patient has diabetes.",
+        "The patient has diabetes mellitus."
+      ],
+      "care_context": [
+        "The patient's last A1c was about ten."
+      ],
+      "key_slots": {
+        "source_modalities": "interview, exam, test_result",
+        "temporal_profile": "current, historical, past",
+        "anchor_cluster_type": "ProblemState",
+        "anchor_primary_cap_type": "Problem",
+        "bundle_concepts": "diabetes mellitus; a1c",
+        "history_context": "The patient's last A1c was about ten.",
+        "related_factors": "",
+        "visit_primary": "true",
+        "render_in_note": "true",
+        "assessment_fallback": "The patient has diabetes.",
+        "bundle_design": "problem_oriented_note_bundle"
+      },
+      "render_sections": [
+        "S",
+        "O",
+        "A",
+        "P",
+        "History of Present Illness",
+        "Findings",
+        "Assessment",
+        "Plan"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "section_miscategorizations": [
+    {
+      "text": "The doctor ordered a physical exam.",
+      "current_section": "P",
+      "expected_section": "O",
+      "severity": "major",
+      "reason": "A physical exam is an observed/performed evaluation and should be documented in the Objective section; placing it in the Plan suggests it is a future order rather than an already performed exam, which is misleading."
+    },
+    {
+      "text": "The patient will continue on aspirin.",
+      "current_section": "P",
+      "expected_section": "S",
+      "severity": "minor",
+      "reason": "Continuation of an existing medication reflects the current medication regimen; unless there is a change or new order, it is more appropriately documented as current therapy in the Subjective section. However, documenting continuation in the Plan is common and not highly misleading."
+    },
+    {
+      "text": "The patient will continue on toprol.",
+      "current_section": "P",
+      "expected_section": "S",
+      "severity": "minor",
+      "reason": "As with aspirin, this reflects ongoing therapy rather than a new or changed order. It fits better as current medication state in Subjective, though listing continuation in the Plan is a common but softer organizational issue."
+    }
+  ],
+  "summary_statistics": {
+    "section_appropriateness_score": 0.7,
+    "section_miscategorization_count": 3,
+    "major_section_miscategorization_count": 1
+  }
+}

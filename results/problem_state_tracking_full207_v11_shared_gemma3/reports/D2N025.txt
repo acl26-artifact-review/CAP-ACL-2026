@@ -1,0 +1,208 @@
+Case: D2N025
+
+Problem List and Visit State Tracking
+
+Problem List
+- leg cramps | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T12,T8
+  Summary: The patient reports leg cramps.
+  ClusterId: CL1
+  TemporalProfile: current, recent
+  Updates:
+  - CAP8: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T8 :: The patient reports leg cramps.
+  - CAP9: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=recent turns=T12 :: The patient reports leg cramps.
+- pickle juice | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T12
+  Summary: The patient mentions drinking pickle juice.
+  ClusterId: CL2
+  TemporalProfile: recent
+  Updates:
+  - CAP6: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=recent turns=T12 :: The patient mentions drinking pickle juice.
+- cold | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T12
+  Summary: The patient mentions being cold.
+  ClusterId: CL3
+  TemporalProfile: current
+  Updates:
+  - CAP10: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=current turns=T12 :: The patient mentions being cold.
+- cream | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T16
+  Summary: The patient mentions using cream.
+  ClusterId: CL4
+  TemporalProfile: recent
+  Updates:
+  - CAP11: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=recent turns=T16 :: The patient mentions using cream.
+- abdominal pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T26,T28
+  Summary: The patient reports abdominal pain.
+  ClusterId: CL8
+  TemporalProfile: current
+  Updates:
+  - CAP12: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T26 :: The patient reports abdominal pain.
+  - CAP15: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T28 :: The patient reports pain.
+- heartburn | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T26
+  Summary: The patient experienced heartburn.
+  ClusterId: CL9
+  TemporalProfile: recent
+  Updates:
+  - CAP40: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=recent turns=T26 :: The patient experienced heartburn.
+- anemia | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T29
+  Summary: The patient has had some anemia in the past.
+  ClusterId: CL10
+  TemporalProfile: past
+  Updates:
+  - CAP2: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=past turns=T29 :: The patient has had some anemia in the past.
+  - CAP39: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=past turns=T29 :: The patient has a history of anemia.
+- high blood sugar | verification_status=confirmed | clinical_status=active | modalities=assessment | speakers=doctor | evidence=T30
+  Summary: The patient's blood sugar is a little bit high.
+  ClusterId: CL11
+  TemporalProfile: current
+  Updates:
+  - CAP3: content_source=doctor modality=assessment verification_status=confirmed clinical_status=active temporality=current turns=T30 :: The patient's blood sugar is a little bit high.
+- left hand pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T36
+  Summary: The patient reports pain in the left hand.
+  ClusterId: CL19
+  TemporalProfile: current
+  Updates:
+  - CAP5: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T36 :: The patient reports pain in the left hand.
+- heart problems | verification_status=confirmed | clinical_status=active | modalities=assessment | speakers=doctor | evidence=T46
+  Summary: The patient has heart problems.
+  ClusterId: CL22
+  TemporalProfile: current
+  Updates:
+  - CAP1: content_source=doctor modality=assessment verification_status=confirmed clinical_status=active temporality=current turns=T46 :: The patient has heart problems.
+- knee surgery | verification_status=confirmed | clinical_status=planned | modalities=interview | speakers=patient | evidence=T55
+  Summary: The patient desires knee surgery.
+  ClusterId: CL26
+  TemporalProfile: future
+  Updates:
+  - CAP13: content_source=patient modality=interview verification_status=confirmed clinical_status=planned temporality=future turns=T55 :: The patient desires knee surgery.
+- heart failure | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=doctor | evidence=T63
+  Summary: The patient has chronic heart failure.
+  ClusterId: CL31
+  TemporalProfile: chronic
+  Updates:
+  - CAP7: content_source=doctor modality=interview verification_status=confirmed clinical_status=active temporality=chronic turns=T63 :: The patient has chronic heart failure.
+- knee replacement | verification_status=confirmed | clinical_status=planned | modalities=interview | speakers=doctor | evidence=T70
+  Summary: The patient is scheduled for a right knee replacement.
+  ClusterId: CL32
+  TemporalProfile: end of June
+  Updates:
+  - CAP4: content_source=doctor modality=interview verification_status=confirmed clinical_status=planned temporality=end of June turns=T70 :: The patient is scheduled for a right knee replacement.
+- colonoscopy | verification_status=unconfirmed | clinical_status=planned | modalities=interview | speakers=doctor | evidence=T70
+  Summary: The patient desires a colonoscopy.
+  ClusterId: CL33
+  TemporalProfile: next month
+  Updates:
+  - CAP14: content_source=doctor modality=interview verification_status=unconfirmed clinical_status=planned temporality=next month turns=T70 :: The patient desires a colonoscopy.
+- diabetes | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=doctor | evidence=T71
+  Summary: The patient has diabetes.
+  ClusterId: CL34
+  TemporalProfile: ongoing
+  Updates:
+  - CAP16: content_source=doctor modality=interview verification_status=confirmed clinical_status=active temporality=ongoing turns=T71 :: The patient has diabetes.
+
+Medication Tracking
+- [MedicationState] iron supplement | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T19
+  Summary: The patient reports being on an iron supplement.
+  ClusterId: CL5
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient reports being on an iron supplement. (T19)
+  Updates:
+  - CAP35: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T19 :: The patient reports being on an iron supplement.
+- [MedicationChange] prilosec | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T22
+  Summary: The patient stopped taking another medication.
+  ClusterId: CL6
+  TemporalProfile: two weeks ago
+  PlannedChanges:
+  - The patient stopped taking another medication. (T22)
+  Updates:
+  - CAP36: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=two weeks ago turns=T22 :: The patient stopped taking another medication.
+- [MedicationState] prilosec | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T22
+  Summary: The patient is currently taking prilosec.
+  ClusterId: CL7
+  TemporalProfile: recent
+  CurrentRegimens:
+  - The patient is currently taking prilosec. (T22)
+  Updates:
+  - CAP37: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=recent turns=T22 :: The patient is currently taking prilosec.
+- [MedicationState] torsemide | verification_status=confirmed | clinical_status=active | modalities=assessment | speakers=doctor | evidence=T31
+  Summary: Torsemide is being administered.
+  ClusterId: CL17
+  TemporalProfile: current
+  CurrentRegimens:
+  - Torsemide is being administered. (T31)
+  Updates:
+  - CAP38: content_source=doctor modality=assessment verification_status=confirmed clinical_status=active temporality=current turns=T31 :: Torsemide is being administered.
+- [MedicationChange] magnesium supplement | verification_status=confirmed | clinical_status=planned | modalities=interview,plan | speakers=doctor | evidence=T46
+  Summary: The doctor recommends putting the patient on magnesium supplement.
+  ClusterId: CL23
+  TemporalProfile: future
+  PlannedChanges:
+  - The doctor recommends putting the patient on magnesium supplement. (T46)
+  - The doctor recommends putting the patient on magnesium supplement. (T46)
+  Updates:
+  - CAP22: content_source=doctor modality=plan verification_status=unconfirmed clinical_status=planned temporality=future turns=T46 :: The doctor recommends putting the patient on magnesium supplement.
+  - CAP34: content_source=doctor modality=interview verification_status=confirmed clinical_status=planned temporality=future turns=T46 :: The doctor recommends putting the patient on magnesium supplement.
+- [MedicationChange] clopidogrel | verification_status=confirmed | clinical_status=planned | modalities=interview | speakers=doctor | evidence=T48
+  Summary: The doctor recommends stopping the patient from taking clopidogrel before surgery.
+  ClusterId: CL24
+  TemporalProfile: future
+  PlannedChanges:
+  - The doctor recommends stopping the patient from taking clopidogrel before surgery. (T48)
+  Updates:
+  - CAP33: content_source=doctor modality=interview verification_status=confirmed clinical_status=planned temporality=future turns=T48 :: The doctor recommends stopping the patient from taking clopidogrel before surgery.
+- [MedicationChange] colonoscopy | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T56
+  Summary: The doctor will schedule a colonoscopy for the patient.
+  ClusterId: CL27
+  TemporalProfile: next 30 days
+  PlannedChanges:
+  - The doctor will schedule a colonoscopy for the patient. (T56)
+  Updates:
+  - CAP23: content_source=doctor modality=plan verification_status=unconfirmed clinical_status=planned temporality=next 30 days turns=T56 :: The doctor will schedule a colonoscopy for the patient.
+
+Other Structured States
+- [TestResult] bmp | verification_status=unconfirmed | clinical_status=historical | modalities=test_result | speakers=test_result | evidence=T31
+  Summary: The patient's BMP was up to 3,000 in March.
+  ClusterId: CL12
+  TemporalProfile: april, march
+- [TestResult] creatinine | verification_status=confirmed | clinical_status=stable | modalities=interview,test_result | speakers=doctor,test_result | evidence=T31,T69
+  Summary: The patient's creatinine was .7.
+  ClusterId: CL13
+  TemporalProfile: current
+- [TestResult] potassium | verification_status=confirmed | clinical_status=stable | modalities=test_result | speakers=test_result | evidence=T31
+  Summary: The patient's potassium is 3.9.
+  ClusterId: CL14
+  TemporalProfile: current
+- [TestResult] bun | verification_status=confirmed | clinical_status=stable | modalities=test_result | speakers=test_result | evidence=T31
+  Summary: The patient's BUN was 23.
+  ClusterId: CL15
+  TemporalProfile: current
+- [TestResult] dehydration | verification_status=unconfirmed | clinical_status=active | modalities=test_result | speakers=test_result | evidence=T31
+  Summary: The kidneys may be dehydrated.
+  ClusterId: CL16
+  TemporalProfile: current
+- [TestResult] a1c | verification_status=unconfirmed | clinical_status=historical | modalities=test_result | speakers=test_result | evidence=T35
+  Summary: The patient's last A1C was 5.5 in March.
+  ClusterId: CL18
+  TemporalProfile: march
+- [TestResult] blood sugar | verification_status=confirmed | clinical_status=active | modalities=test_result | speakers=test_result | evidence=T37
+  Summary: The patient's blood sugar is 169 today.
+  ClusterId: CL20
+  TemporalProfile: today
+- [TestResult] magnesium level | verification_status=confirmed | clinical_status=historical | modalities=test_result | speakers=doctor | evidence=T39
+  Summary: The patient's magnesium level was 1.7.
+  ClusterId: CL21
+  TemporalProfile: past
+- [TestResult] ekg | verification_status=confirmed | clinical_status=planned | modalities=exam | speakers=doctor | evidence=T52
+  Summary: The doctor plans to perform an EKG on the patient.
+  ClusterId: CL25
+  TemporalProfile: future
+- [Plan] colonoscopy | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T56
+  Summary: The doctor orders a colonoscopy for the patient.
+  ClusterId: CL28
+  TemporalProfile: future
+- [Plan] county surgical services | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T60
+  Summary: The doctor will refer the patient to county surgical services for surgery.
+  ClusterId: CL29
+  TemporalProfile: future
+- [Plan] springfield | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T60
+  Summary: The doctor will refer the patient to springfield for surgery.
+  ClusterId: CL30
+  TemporalProfile: future

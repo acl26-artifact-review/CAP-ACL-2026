@@ -1,0 +1,1383 @@
+{
+  "case_id": "D2N009",
+  "method": "cluster2sent",
+  "template": "soap",
+  "summary_text": "S:\nThe patient reports back pain, taking ibuprofen and occasionally tylenol, and denies chest pain, shortness of breath, abdominal pain, nausea, or vomiting. He reports no fever and no leg pain, numbness, or tingling. He states he had a previous lumbar discectomy.\n\nO:\nThe patient's vital signs are stable, with blood pressure within normal limits. The back x-ray shows no fracture. Lab results are unremarkable. Physical exam reveals pain to palpation of the right lumbar spine, decreased flexion and extension of the back, and a positive straight leg raise on the right. Heart sounds are regular and rhythmic.\n\nA:\nThe patient's presentation is consistent with a lumbar strain, likely related to his prior discectomy.\n\nP:\nI am prescribing meloxicam 15 milligrams once daily and ultram 50 milligrams every four hours as needed. I am ordering an MRI to evaluate the lumbar spine. I am referring the patient to physical therapy after the MRI results are available. Continue taking tylenol and ibuprofen as needed.",
+  "reference_summary": "CHIEF COMPLAINT\n\nBack pain.\n\nHISTORY OF PRESENT ILLNESS\n\nBryan Smith is a 55-year-old male with a past medical history significant for and prior discectomy, who presents with back pain.\n\nThe patient reports he felt something in the lower right side of his back while pushing a refrigerator up through another room. This happened about 5 days ago. The patient experiences pain while bending over. He has a history of a discectomy. He is worried that something happened. He has been taking ibuprofen, which has not been beneficial alone. With the combination of Tylenol and ibuprofen, he experiences symptomatic relief. He denies numbness and tingling in his legs, and any problems with his bladder or bowels.\n\nREVIEW OF SYSTEMS\n\n• Cardiovascular: Denies chest pain or dyspnea on exertion.\n• Respiratory: Denies shortness of breath.\n• Gastrointestinal: Denies hematemesis, hematochezia, melena, heartburn, or abdominal pain.\n• Genitourinary: Denies urinary urgency, pain, or incontinence.\n• Musculoskeletal: Endorses lower right side back pain.\n\nPHYSICAL EXAMINATION\n\n• Respiratory: Lungs are clear to auscultation bilaterally. No wheezes, rales, or rhonchi.\n• Cardiovascular: Regular rate and rhythm. No murmurs, gallops, or rubs. No extra heart sounds.\n• Musculoskeletal: Pain to palpation to the right lumbar spine and the paraspinal muscles. Decreased flexion and extension of the back. Positive straight leg raise on the right. Strength is good bilaterally in the lower extremities.\n\nRESULTS\n\nX-ray of the lumbar spine is unremarkable. Normal bony alignment. No fractures were noted.\n\nLabs: Within normal limits.\n\nASSESSMENT AND PLAN\n\nBryan Smith is a 55-year-old male with a past medical history significant for prior discectomy, who presents with back pain.\n\nLumbar strain.\n• Medical Reasoning: He reports right-sided low back after moving a refrigerator approximately 5 days ago. X-ray of his lumbar spine is unremarkable. I do not believe this is related to his previous discectomy.\n• Additional Testing: We will order a MRI of the lumbar spine for further evaluation.\n• Medical Treatment: Initiate meloxicam 15 mg once daily, as well as Ultram 50 mg every 4 hours as needed.\n• Specialist Referrals: We will refer him to physical therapy to be started after we get his MRI results back.\n• Patient Education and Counseling: I advised the patient to discontinue the use of ibuprofen, but he may continue using Tylenol if he wishes.\n\nPatient Agreements: The patient understands and agrees with the recommended medical treatment plan.",
+  "source_cap": {
+    "atomic_propositions": [
+      {
+        "prop_id": "CAP1",
+        "cap_type": "Symptom",
+        "canonical_concept": "back pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports pain to palpation of the right lumbar spine."
+      },
+      {
+        "prop_id": "CAP2",
+        "cap_type": "Symptom",
+        "canonical_concept": "decreased flexion and extension",
+        "category": "Symptom",
+        "speaker": "doctor",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports decreased flexion and extension of the back."
+      },
+      {
+        "prop_id": "CAP3",
+        "cap_type": "Symptom",
+        "canonical_concept": "positive straight leg raise",
+        "category": "Symptom",
+        "speaker": "doctor",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports a positive straight leg raise."
+      },
+      {
+        "prop_id": "CAP4",
+        "cap_type": "Symptom",
+        "canonical_concept": "pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports pain in the left hand."
+      },
+      {
+        "prop_id": "CAP5",
+        "cap_type": "Symptom",
+        "canonical_concept": "back pain",
+        "category": "Symptom",
+        "speaker": "doctor",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports pain in their back."
+      },
+      {
+        "prop_id": "CAP6",
+        "cap_type": "Symptom",
+        "canonical_concept": "pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports pain when bending over."
+      },
+      {
+        "prop_id": "CAP7",
+        "cap_type": "Problem",
+        "canonical_concept": "back pain",
+        "category": "Problem",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient has back pain."
+      },
+      {
+        "prop_id": "CAP8",
+        "cap_type": "Symptom",
+        "canonical_concept": "pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports pain."
+      },
+      {
+        "prop_id": "CAP9",
+        "cap_type": "Symptom",
+        "canonical_concept": "numbness",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports numbness."
+      },
+      {
+        "prop_id": "CAP10",
+        "cap_type": "Symptom",
+        "canonical_concept": "pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient has pain."
+      },
+      {
+        "prop_id": "CAP11",
+        "cap_type": "Order",
+        "canonical_concept": "physical therapy",
+        "category": "Order",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "planned",
+        "temporality": "after mri results",
+        "proposition_text": "The doctor will refer the patient to physical therapy after the MRI results are back."
+      },
+      {
+        "prop_id": "CAP12",
+        "cap_type": "MedicationRequest",
+        "canonical_concept": "tylenol",
+        "category": "MedicationRequest",
+        "speaker": "doctor",
+        "predicate": "has",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "continue to take",
+        "proposition_text": "The patient should continue to take tylenol."
+      },
+      {
+        "prop_id": "CAP13",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "ultram",
+        "category": "MedicationStatement",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "every four hours as needed",
+        "claim_type_tags": [
+          "quantitative"
+        ],
+        "proposition_text": "The doctor prescribed ultram 50 milligrams every four hours as needed."
+      },
+      {
+        "prop_id": "CAP14",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "meloxicam",
+        "category": "MedicationStatement",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "once a day",
+        "claim_type_tags": [
+          "quantitative"
+        ],
+        "proposition_text": "The doctor prescribed meloxicam 15 milligrams once a day."
+      },
+      {
+        "prop_id": "CAP15",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "ibuprofen",
+        "category": "MedicationStatement",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient has been taking ibuprofen."
+      },
+      {
+        "prop_id": "CAP16",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "tylenol",
+        "category": "MedicationStatement",
+        "speaker": "patient",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient tried taking tylenol."
+      },
+      {
+        "prop_id": "CAP17",
+        "cap_type": "ProblemHistory",
+        "canonical_concept": "discectomy",
+        "category": "ProblemHistory",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "past",
+        "proposition_text": "The patient has a history of discectomy."
+      }
+    ],
+    "filtered_nonverifiable_units": []
+  },
+  "event_plan": null,
+  "summary_cap": {
+    "atomic_propositions": [
+      {
+        "prop_id": "P1",
+        "cap_type": "Symptom",
+        "canonical_concept": "pain:back",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports back pain"
+      },
+      {
+        "prop_id": "P2",
+        "cap_type": "MedicationPlan",
+        "canonical_concept": "prescribing meloxicam milligrams once",
+        "category": "MedicationPlan",
+        "speaker": "clinician",
+        "predicate": "prescribes",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "medication"
+        ],
+        "proposition_text": "The clinician is prescribing meloxicam 15 milligrams once daily"
+      },
+      {
+        "prop_id": "P3",
+        "cap_type": "MedicationPlan",
+        "canonical_concept": "prescribing ultram milligrams every",
+        "category": "MedicationPlan",
+        "speaker": "clinician",
+        "predicate": "prescribes",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "medication"
+        ],
+        "proposition_text": "The clinician is prescribing ultram 50 milligrams every four hours as needed"
+      },
+      {
+        "prop_id": "P4",
+        "cap_type": "Order",
+        "canonical_concept": "ordering mri evaluate lumbar",
+        "category": "Order",
+        "speaker": "clinician",
+        "predicate": "orders",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "future",
+        "claim_type_tags": [
+          "plan"
+        ],
+        "proposition_text": "The clinician is ordering an MRI to evaluate the lumbar spine"
+      },
+      {
+        "prop_id": "P5",
+        "cap_type": "Referral",
+        "canonical_concept": "referring physical therapy after",
+        "category": "Referral",
+        "speaker": "clinician",
+        "predicate": "refers",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "future",
+        "claim_type_tags": [
+          "plan"
+        ],
+        "proposition_text": "The clinician is referring the patient to physical therapy after the MRI results are available"
+      },
+      {
+        "prop_id": "P6",
+        "cap_type": "Instruction",
+        "canonical_concept": "instructs continue taking tylenol",
+        "category": "Instruction",
+        "speaker": "clinician",
+        "predicate": "instructs",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "plan"
+        ],
+        "proposition_text": "The clinician instructs the patient to continue taking tylenol and ibuprofen as needed"
+      }
+    ],
+    "filtered_nonverifiable_units": [],
+    "runtime_seconds": 12.073
+  },
+  "cap_alignment": {
+    "cap_precision": 0.8333333333333334,
+    "cap_recall": 0.29411764705882354,
+    "cap_f1": 0.4347826086956522,
+    "matched_count": 5,
+    "summary_prop_count": 6,
+    "source_prop_count": 17,
+    "matched_pairs": [
+      {
+        "score": 1.0,
+        "summary_prop_id": "P1",
+        "source_prop_id": "CAP8",
+        "summary_text": "The patient reports back pain",
+        "source_text": "The patient reports pain."
+      },
+      {
+        "score": 0.7826,
+        "summary_prop_id": "P3",
+        "source_prop_id": "CAP13",
+        "summary_text": "The clinician is prescribing ultram 50 milligrams every four hours as needed",
+        "source_text": "The doctor prescribed ultram 50 milligrams every four hours as needed."
+      },
+      {
+        "score": 0.7533,
+        "summary_prop_id": "P5",
+        "source_prop_id": "CAP11",
+        "summary_text": "The clinician is referring the patient to physical therapy after the MRI results are available",
+        "source_text": "The doctor will refer the patient to physical therapy after the MRI results are back."
+      },
+      {
+        "score": 0.63,
+        "summary_prop_id": "P2",
+        "source_prop_id": "CAP14",
+        "summary_text": "The clinician is prescribing meloxicam 15 milligrams once daily",
+        "source_text": "The doctor prescribed meloxicam 15 milligrams once a day."
+      },
+      {
+        "score": 0.605,
+        "summary_prop_id": "P6",
+        "source_prop_id": "CAP12",
+        "summary_text": "The clinician instructs the patient to continue taking tylenol and ibuprofen as needed",
+        "source_text": "The patient should continue to take tylenol."
+      }
+    ],
+    "unsupported_summary_props": [
+      {
+        "prop_id": "P4",
+        "cap_type": "Order",
+        "canonical_concept": "ordering mri evaluate lumbar",
+        "category": "Order",
+        "speaker": "clinician",
+        "predicate": "orders",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "future",
+        "claim_type_tags": [
+          "plan"
+        ],
+        "proposition_text": "The clinician is ordering an MRI to evaluate the lumbar spine"
+      }
+    ],
+    "missing_source_props": [
+      {
+        "prop_id": "CAP1",
+        "cap_type": "Symptom",
+        "canonical_concept": "back pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports pain to palpation of the right lumbar spine."
+      },
+      {
+        "prop_id": "CAP2",
+        "cap_type": "Symptom",
+        "canonical_concept": "decreased flexion and extension",
+        "category": "Symptom",
+        "speaker": "doctor",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports decreased flexion and extension of the back."
+      },
+      {
+        "prop_id": "CAP3",
+        "cap_type": "Symptom",
+        "canonical_concept": "positive straight leg raise",
+        "category": "Symptom",
+        "speaker": "doctor",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports a positive straight leg raise."
+      },
+      {
+        "prop_id": "CAP4",
+        "cap_type": "Symptom",
+        "canonical_concept": "pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports pain in the left hand."
+      },
+      {
+        "prop_id": "CAP5",
+        "cap_type": "Symptom",
+        "canonical_concept": "back pain",
+        "category": "Symptom",
+        "speaker": "doctor",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports pain in their back."
+      },
+      {
+        "prop_id": "CAP6",
+        "cap_type": "Symptom",
+        "canonical_concept": "pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports pain when bending over."
+      },
+      {
+        "prop_id": "CAP7",
+        "cap_type": "Problem",
+        "canonical_concept": "back pain",
+        "category": "Problem",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient has back pain."
+      },
+      {
+        "prop_id": "CAP9",
+        "cap_type": "Symptom",
+        "canonical_concept": "numbness",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports numbness."
+      },
+      {
+        "prop_id": "CAP10",
+        "cap_type": "Symptom",
+        "canonical_concept": "pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient has pain."
+      },
+      {
+        "prop_id": "CAP15",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "ibuprofen",
+        "category": "MedicationStatement",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient has been taking ibuprofen."
+      },
+      {
+        "prop_id": "CAP16",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "tylenol",
+        "category": "MedicationStatement",
+        "speaker": "patient",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient tried taking tylenol."
+      },
+      {
+        "prop_id": "CAP17",
+        "cap_type": "ProblemHistory",
+        "canonical_concept": "discectomy",
+        "category": "ProblemHistory",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "past",
+        "proposition_text": "The patient has a history of discectomy."
+      }
+    ]
+  },
+  "reference_gpt_f1_items": {
+    "active_problems_symptoms": [
+      "Lower right side back pain",
+      "Pain to palpation to the right lumbar spine",
+      "Pain to palpation to the paraspinal muscles",
+      "Decreased flexion and extension of the back",
+      "Positive straight leg raise on the right"
+    ],
+    "negated_findings": [],
+    "uncertain_findings": [],
+    "medication_treatment": [],
+    "plan_followup": [],
+    "_chunk_count": [
+      "3"
+    ]
+  },
+  "summary_gpt_f1_items": {
+    "active_problems_symptoms": [],
+    "negated_findings": [],
+    "uncertain_findings": [],
+    "medication_treatment": [],
+    "plan_followup": [],
+    "_chunk_count": [
+      "1"
+    ]
+  },
+  "gpt_f1_alignment": {
+    "by_category": {
+      "active_problems_symptoms": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "matched_count": 0,
+        "pred_count": 0,
+        "ref_count": 5,
+        "matches": [],
+        "unsupported_pred_items": [],
+        "missing_ref_items": [
+          "Lower right side back pain",
+          "Pain to palpation to the right lumbar spine",
+          "Pain to palpation to the paraspinal muscles",
+          "Decreased flexion and extension of the back",
+          "Positive straight leg raise on the right"
+        ]
+      },
+      "negated_findings": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "matched_count": 0,
+        "pred_count": 0,
+        "ref_count": 0,
+        "matches": [],
+        "unsupported_pred_items": [],
+        "missing_ref_items": []
+      },
+      "uncertain_findings": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "matched_count": 0,
+        "pred_count": 0,
+        "ref_count": 0,
+        "matches": [],
+        "unsupported_pred_items": [],
+        "missing_ref_items": []
+      },
+      "medication_treatment": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "matched_count": 0,
+        "pred_count": 0,
+        "ref_count": 0,
+        "matches": [],
+        "unsupported_pred_items": [],
+        "missing_ref_items": []
+      },
+      "plan_followup": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "matched_count": 0,
+        "pred_count": 0,
+        "ref_count": 0,
+        "matches": [],
+        "unsupported_pred_items": [],
+        "missing_ref_items": []
+      }
+    }
+  },
+  "reference_nair_concepts": {
+    "sections": [
+      {
+        "heading": "Clinical Note",
+        "section_value": "CHIEF COMPLAINT\nBack pain.\nHISTORY OF PRESENT ILLNESS\nBryan Smith is a 55-year-old male with a past medical history significant for and prior discectomy, who presents with back pain.\nThe patient reports he felt something in the lower right side of his back while pushing a refrigerator up through another room. This happened about 5 days ago. The patient experiences pain while bending over. He has a history of a discectomy. He is worried that something happened. He has been taking ibuprofen, which has not been beneficial alone. With the combination of Tylenol and ibuprofen, he experiences symptomatic relief. He denies numbness and tingling in his legs, and any problems with his bladder or bowels.\nREVIEW OF SYSTEMS\n• Cardiovascular: Denies chest pain or dyspnea on exertion.\n• Respiratory: Denies shortness of breath.\n• Gastrointestinal: Denies hematemesis, hematochezia, melena, heartburn, or abdominal pain.\n• Genitourinary: Denies urinary urgency, pain, or incontinence.",
+        "medical_concepts": [
+          "back pain",
+          "discectomy",
+          "ibuprofen",
+          "Tylenol",
+          "numbness",
+          "tingling",
+          "bladder problems",
+          "bowel problems",
+          "chest pain",
+          "dyspnea on exertion",
+          "shortness of breath",
+          "hematemesis",
+          "hematochezia",
+          "melena",
+          "heartburn",
+          "abdominal pain",
+          "urinary urgency",
+          "urinary pain",
+          "urinary incontinence"
+        ]
+      },
+      {
+        "heading": "Clinical Note",
+        "section_value": "• Musculoskeletal: Endorses lower right side back pain.\nPHYSICAL EXAMINATION\n• Respiratory: Lungs are clear to auscultation bilaterally. No wheezes, rales, or rhonchi.\n• Cardiovascular: Regular rate and rhythm. No murmurs, gallops, or rubs. No extra heart sounds.\n• Musculoskeletal: Pain to palpation to the right lumbar spine and the paraspinal muscles. Decreased flexion and extension of the back. Positive straight leg raise on the right. Strength is good bilaterally in the lower extremities.\nRESULTS\nX-ray of the lumbar spine is unremarkable. Normal bony alignment. No fractures were noted.\nLabs: Within normal limits.\nASSESSMENT AND PLAN\nBryan Smith is a 55-year-old male with a past medical history significant for prior discectomy, who presents with back pain.",
+        "medical_concepts": [
+          "lower right side back pain",
+          "back pain",
+          "right lumbar spine pain",
+          "paraspinal muscle pain",
+          "decreased flexion of the back",
+          "decreased extension of the back",
+          "positive straight leg raise",
+          "prior discectomy",
+          "X-ray of the lumbar spine",
+          "fractures",
+          "labs"
+        ]
+      },
+      {
+        "heading": "Clinical Note",
+        "section_value": "Lumbar strain.\n• Medical Reasoning: He reports right-sided low back after moving a refrigerator approximately 5 days ago. X-ray of his lumbar spine is unremarkable. I do not believe this is related to his previous discectomy.\n• Additional Testing: We will order a MRI of the lumbar spine for further evaluation.\n• Medical Treatment: Initiate meloxicam 15 mg once daily, as well as Ultram 50 mg every 4 hours as needed.\n• Specialist Referrals: We will refer him to physical therapy to be started after we get his MRI results back.\n• Patient Education and Counseling: I advised the patient to discontinue the use of ibuprofen, but he may continue using Tylenol if he wishes.\nPatient Agreements: The patient understands and agrees with the recommended medical treatment plan.",
+        "medical_concepts": [
+          "lumbar strain",
+          "right-sided low back pain",
+          "lumbar spine X-ray",
+          "discectomy",
+          "MRI of the lumbar spine",
+          "meloxicam 15 mg once daily",
+          "Ultram 50 mg every 4 hours as needed",
+          "physical therapy",
+          "ibuprofen",
+          "Tylenol"
+        ]
+      }
+    ],
+    "medical_concepts": [
+      "back pain",
+      "discectomy",
+      "ibuprofen",
+      "Tylenol",
+      "numbness",
+      "tingling",
+      "bladder problems",
+      "bowel problems",
+      "chest pain",
+      "dyspnea on exertion",
+      "shortness of breath",
+      "hematemesis",
+      "hematochezia",
+      "melena",
+      "heartburn",
+      "abdominal pain",
+      "urinary urgency",
+      "urinary pain",
+      "urinary incontinence",
+      "lower right side back pain",
+      "right lumbar spine pain",
+      "paraspinal muscle pain",
+      "decreased flexion of the back",
+      "decreased extension of the back",
+      "positive straight leg raise",
+      "prior discectomy",
+      "X-ray of the lumbar spine",
+      "fractures",
+      "labs",
+      "lumbar strain",
+      "right-sided low back pain",
+      "lumbar spine X-ray",
+      "MRI of the lumbar spine",
+      "meloxicam 15 mg once daily",
+      "Ultram 50 mg every 4 hours as needed",
+      "physical therapy"
+    ],
+    "section_count": 3
+  },
+  "summary_nair_concepts": {
+    "sections": [
+      {
+        "heading": "S",
+        "section_value": "The patient reports back pain, taking ibuprofen and occasionally tylenol, and denies chest pain, shortness of breath, abdominal pain, nausea, or vomiting. He reports no fever and no leg pain, numbness, or tingling. He states he had a previous lumbar discectomy.",
+        "medical_concepts": [
+          "back pain",
+          "ibuprofen",
+          "tylenol",
+          "chest pain",
+          "shortness of breath",
+          "abdominal pain",
+          "nausea",
+          "vomiting",
+          "fever",
+          "leg pain",
+          "numbness",
+          "tingling",
+          "lumbar discectomy"
+        ]
+      },
+      {
+        "heading": "O",
+        "section_value": "The patient's vital signs are stable, with blood pressure within normal limits. The back x-ray shows no fracture. Lab results are unremarkable. Physical exam reveals pain to palpation of the right lumbar spine, decreased flexion and extension of the back, and a positive straight leg raise on the right. Heart sounds are regular and rhythmic.",
+        "medical_concepts": [
+          "vital signs",
+          "blood pressure",
+          "back x-ray",
+          "fracture",
+          "lab results",
+          "pain to palpation of the right lumbar spine",
+          "lumbar spine pain",
+          "decreased flexion of the back",
+          "decreased extension of the back",
+          "positive straight leg raise",
+          "heart sounds"
+        ]
+      },
+      {
+        "heading": "A",
+        "section_value": "The patient's presentation is consistent with a lumbar strain, likely related to his prior discectomy.",
+        "medical_concepts": [
+          "lumbar strain",
+          "discectomy"
+        ]
+      },
+      {
+        "heading": "P",
+        "section_value": "I am prescribing meloxicam 15 milligrams once daily and ultram 50 milligrams every four hours as needed. I am ordering an MRI to evaluate the lumbar spine. I am referring the patient to physical therapy after the MRI results are available. Continue taking tylenol and ibuprofen as needed.",
+        "medical_concepts": [
+          "meloxicam",
+          "ultram",
+          "MRI",
+          "lumbar spine",
+          "physical therapy",
+          "tylenol",
+          "ibuprofen"
+        ]
+      }
+    ],
+    "medical_concepts": [
+      "back pain",
+      "ibuprofen",
+      "tylenol",
+      "chest pain",
+      "shortness of breath",
+      "abdominal pain",
+      "nausea",
+      "vomiting",
+      "fever",
+      "leg pain",
+      "numbness",
+      "tingling",
+      "lumbar discectomy",
+      "vital signs",
+      "blood pressure",
+      "back x-ray",
+      "fracture",
+      "lab results",
+      "pain to palpation of the right lumbar spine",
+      "lumbar spine pain",
+      "decreased flexion of the back",
+      "decreased extension of the back",
+      "positive straight leg raise",
+      "heart sounds",
+      "lumbar strain",
+      "discectomy",
+      "meloxicam",
+      "ultram",
+      "MRI",
+      "lumbar spine",
+      "physical therapy"
+    ],
+    "section_count": 4
+  },
+  "nair_alignment": {
+    "pred_concepts": [
+      "back pain",
+      "ibuprofen",
+      "tylenol",
+      "chest pain",
+      "shortness of breath",
+      "abdominal pain",
+      "nausea",
+      "vomiting",
+      "fever",
+      "leg pain",
+      "numbness",
+      "tingling",
+      "lumbar discectomy",
+      "vital signs",
+      "blood pressure",
+      "back x-ray",
+      "fracture",
+      "lab results",
+      "pain to palpation of the right lumbar spine",
+      "lumbar spine pain",
+      "decreased flexion of the back",
+      "decreased extension of the back",
+      "positive straight leg raise",
+      "heart sounds",
+      "lumbar strain",
+      "discectomy",
+      "meloxicam",
+      "ultram",
+      "MRI",
+      "lumbar spine",
+      "physical therapy"
+    ],
+    "ref_concepts": [
+      "back pain",
+      "discectomy",
+      "ibuprofen",
+      "Tylenol",
+      "numbness",
+      "tingling",
+      "bladder problems",
+      "bowel problems",
+      "chest pain",
+      "dyspnea on exertion",
+      "shortness of breath",
+      "hematemesis",
+      "hematochezia",
+      "melena",
+      "heartburn",
+      "abdominal pain",
+      "urinary urgency",
+      "urinary pain",
+      "urinary incontinence",
+      "lower right side back pain",
+      "right lumbar spine pain",
+      "paraspinal muscle pain",
+      "decreased flexion of the back",
+      "decreased extension of the back",
+      "positive straight leg raise",
+      "prior discectomy",
+      "X-ray of the lumbar spine",
+      "fractures",
+      "labs",
+      "lumbar strain",
+      "right-sided low back pain",
+      "lumbar spine X-ray",
+      "MRI of the lumbar spine",
+      "meloxicam 15 mg once daily",
+      "Ultram 50 mg every 4 hours as needed",
+      "physical therapy"
+    ],
+    "precision_alignment": {
+      "found_b": [
+        "back pain",
+        "ibuprofen",
+        "chest pain",
+        "shortness of breath",
+        "abdominal pain",
+        "numbness",
+        "tingling",
+        "lumbar discectomy",
+        "back x-ray",
+        "fracture",
+        "lab results",
+        "pain to palpation of the right lumbar spine",
+        "lumbar spine pain",
+        "decreased flexion of the back",
+        "decreased extension of the back",
+        "positive straight leg raise",
+        "heart sounds",
+        "lumbar strain",
+        "discectomy",
+        "meloxicam",
+        "ultram",
+        "MRI",
+        "lumbar spine",
+        "physical therapy"
+      ],
+      "not_found_b": [
+        "tylenol",
+        "nausea",
+        "vomiting",
+        "fever",
+        "leg pain",
+        "vital signs",
+        "blood pressure"
+      ],
+      "chunk_count": 2,
+      "chunk_results": [
+        {
+          "found_b": [
+            "back pain",
+            "ibuprofen",
+            "chest pain",
+            "shortness of breath",
+            "abdominal pain",
+            "numbness",
+            "tingling",
+            "lumbar discectomy",
+            "back x-ray",
+            "fracture",
+            "lab results",
+            "pain to palpation of the right lumbar spine",
+            "lumbar spine pain",
+            "decreased flexion of the back",
+            "decreased extension of the back",
+            "positive straight leg raise",
+            "heart sounds"
+          ],
+          "not_found_b": [
+            "tylenol",
+            "nausea",
+            "vomiting",
+            "fever",
+            "leg pain",
+            "vital signs",
+            "blood pressure"
+          ]
+        },
+        {
+          "found_b": [
+            "lumbar strain",
+            "discectomy",
+            "meloxicam",
+            "ultram",
+            "MRI",
+            "lumbar spine",
+            "physical therapy"
+          ],
+          "not_found_b": []
+        }
+      ]
+    },
+    "recall_alignment": {
+      "found_b": [
+        "back pain",
+        "discectomy",
+        "ibuprofen",
+        "Tylenol",
+        "numbness",
+        "tingling",
+        "chest pain",
+        "shortness of breath",
+        "abdominal pain",
+        "lower right side back pain",
+        "right lumbar spine pain",
+        "decreased flexion of the back",
+        "decreased extension of the back",
+        "positive straight leg raise",
+        "prior discectomy",
+        "X-ray of the lumbar spine",
+        "fractures",
+        "labs",
+        "lumbar strain",
+        "right-sided low back pain",
+        "lumbar spine X-ray",
+        "MRI of the lumbar spine",
+        "meloxicam 15 mg once daily",
+        "Ultram 50 mg every 4 hours as needed",
+        "physical therapy"
+      ],
+      "not_found_b": [
+        "bladder problems",
+        "bowel problems",
+        "dyspnea on exertion",
+        "hematemesis",
+        "hematochezia",
+        "melena",
+        "heartburn",
+        "urinary urgency",
+        "urinary pain",
+        "urinary incontinence",
+        "paraspinal muscle pain"
+      ],
+      "chunk_count": 2,
+      "chunk_results": [
+        {
+          "found_b": [
+            "back pain",
+            "discectomy",
+            "ibuprofen",
+            "Tylenol",
+            "numbness",
+            "tingling",
+            "chest pain",
+            "shortness of breath",
+            "abdominal pain",
+            "lower right side back pain",
+            "right lumbar spine pain",
+            "decreased flexion of the back",
+            "decreased extension of the back"
+          ],
+          "not_found_b": [
+            "bladder problems",
+            "bowel problems",
+            "dyspnea on exertion",
+            "hematemesis",
+            "hematochezia",
+            "melena",
+            "heartburn",
+            "urinary urgency",
+            "urinary pain",
+            "urinary incontinence",
+            "paraspinal muscle pain"
+          ]
+        },
+        {
+          "found_b": [
+            "positive straight leg raise",
+            "prior discectomy",
+            "X-ray of the lumbar spine",
+            "fractures",
+            "labs",
+            "lumbar strain",
+            "right-sided low back pain",
+            "lumbar spine X-ray",
+            "MRI of the lumbar spine",
+            "meloxicam 15 mg once daily",
+            "Ultram 50 mg every 4 hours as needed",
+            "physical therapy"
+          ],
+          "not_found_b": []
+        }
+      ]
+    }
+  },
+  "semantic_cap_audit": {
+    "source_cap_recall": [
+      {
+        "cap_id": "P1",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P2",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P3",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P4",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P5",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P6",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P7",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P8",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P9",
+        "judgment": "contradicted",
+        "reason": null
+      },
+      {
+        "cap_id": "P10",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P11",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P12",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P13",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P14",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P15",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P16",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P1",
+        "judgment": "supported",
+        "reason": null
+      }
+    ],
+    "summary_cap_precision": [
+      {
+        "cap_id": "P1",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P2",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P3",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P4",
+        "judgment": "unsupported",
+        "reason": null
+      },
+      {
+        "cap_id": "P5",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P6",
+        "judgment": "partial",
+        "reason": null
+      }
+    ],
+    "metrics": {
+      "semantic_cap_precision": 0.5833,
+      "semantic_cap_recall": 0.7647,
+      "semantic_cap_f1": 0.6618,
+      "semantic_cap_precision_supported_count": 2,
+      "semantic_cap_precision_partial_count": 3,
+      "semantic_cap_precision_denominator": 6,
+      "semantic_cap_recall_supported_count": 12,
+      "semantic_cap_recall_partial_count": 2,
+      "semantic_cap_recall_denominator": 17,
+      "semantic_cap_low_value_source_count": 0,
+      "semantic_cap_low_value_summary_count": 0,
+      "semantic_cap_missing_count": 2,
+      "semantic_cap_unsupported_count": 1,
+      "semantic_cap_contradicted_source_count": 1,
+      "semantic_cap_contradicted_summary_count": 0
+    }
+  },
+  "safety_judgment": null,
+  "section_judgment": {
+    "section_miscategorizations": [],
+    "summary_statistics": {
+      "section_appropriateness_score": 1.0,
+      "section_miscategorization_count": 0,
+      "major_section_miscategorization_count": 0
+    }
+  },
+  "pdsqi_judgment": {
+    "citation_applicable": 0,
+    "citation": 0,
+    "accurate": 3,
+    "thorough": 3,
+    "useful": 3,
+    "organized": 5,
+    "comprehensible": 5,
+    "succinct": 4,
+    "abstraction": 1,
+    "synthesized": 4,
+    "voice_summ": 0,
+    "voice_note": 0,
+    "pdsqi_core_mean": 3.8571
+  },
+  "llm_checklist_judgment": {
+    "content_preservation_core": 4,
+    "noise_suppression": 5,
+    "lay_expression_preservation": 4,
+    "state_update_fidelity": 2,
+    "temporality_preservation": 4,
+    "problem_evidence_linkage": 4,
+    "state_plan_separation": 3,
+    "section_organization_appropriateness": 4,
+    "overall_clinical_usability": 3,
+    "clinically_meaningful_omission": "Yes",
+    "clinically_concerning_hallucination": "Yes",
+    "checklist_a_mean": 4.3333,
+    "checklist_b_mean": 3.0,
+    "checklist_c_mean": 3.6667,
+    "llm_checklist_abc_mean": 3.75,
+    "llm_checklist_mean_no_usability": 3.75,
+    "llm_checklist_total_score": 33,
+    "llm_checklist_mean": 3.6667,
+    "llm_checklist_meaningful_omission_yes": 1,
+    "llm_checklist_concerning_hallucination_yes": 1
+  },
+  "metrics": {
+    "case_id": "D2N009",
+    "method": "cluster2sent",
+    "template": "soap",
+    "source_cap_count": 17,
+    "event_plan_count": null,
+    "summary_cap_count": 6,
+    "cap_matched_count": 5,
+    "cap_precision": 0.8333,
+    "cap_recall": 0.2941,
+    "cap_f1": 0.4348,
+    "unsupported_summary_cap_count": 1,
+    "missing_source_cap_count": 12,
+    "summary_runtime_seconds": null,
+    "summary_cap_runtime_seconds": 12.073,
+    "event_plan_runtime_seconds": null,
+    "rouge_l_f1_vs_reference": 0.2631,
+    "token_f1_vs_reference": 0.4396,
+    "gptf1_macro_f1": 0.0,
+    "nair_gpt_precision": 0.7742,
+    "nair_gpt_recall": 0.6944,
+    "nair_gpt_f1": 0.7322,
+    "semantic_cap_precision": 0.5833,
+    "semantic_cap_recall": 0.7647,
+    "semantic_cap_f1": 0.6618,
+    "hallucination_count": null,
+    "major_hallucination_count": null,
+    "omission_count": null,
+    "major_omission_count": null,
+    "section_appropriateness_score": 1.0,
+    "section_miscategorization_count": 0,
+    "major_section_miscategorization_count": 0,
+    "pdsqi_core_mean": 3.8571,
+    "pdsqi_accurate": 3,
+    "pdsqi_thorough": 3,
+    "llm_checklist_total_score": 33,
+    "llm_checklist_mean": 3.6667,
+    "llm_checklist_mean_no_usability": 3.75,
+    "checklist_a_mean": 4.3333,
+    "checklist_b_mean": 3.0,
+    "checklist_c_mean": 3.6667,
+    "llm_checklist_abc_mean": 3.75,
+    "content_preservation_core": 4,
+    "noise_suppression": 5,
+    "lay_expression_preservation": 4,
+    "state_update_fidelity": 2,
+    "temporality_preservation": 4,
+    "problem_evidence_linkage": 4,
+    "state_plan_separation": 3,
+    "section_organization_appropriateness": 4,
+    "overall_clinical_usability": 3,
+    "llm_checklist_meaningful_omission_yes": 1,
+    "llm_checklist_concerning_hallucination_yes": 1,
+    "gptf1_active_problems_symptoms_precision": 0.0,
+    "gptf1_active_problems_symptoms_recall": 0.0,
+    "gptf1_active_problems_symptoms_f1": 0.0,
+    "gptf1_active_problems_symptoms_pred_count": 0,
+    "gptf1_active_problems_symptoms_ref_count": 5,
+    "gptf1_negated_findings_precision": 0.0,
+    "gptf1_negated_findings_recall": 0.0,
+    "gptf1_negated_findings_f1": 0.0,
+    "gptf1_negated_findings_pred_count": 0,
+    "gptf1_negated_findings_ref_count": 0,
+    "gptf1_uncertain_findings_precision": 0.0,
+    "gptf1_uncertain_findings_recall": 0.0,
+    "gptf1_uncertain_findings_f1": 0.0,
+    "gptf1_uncertain_findings_pred_count": 0,
+    "gptf1_uncertain_findings_ref_count": 0,
+    "gptf1_medication_treatment_precision": 0.0,
+    "gptf1_medication_treatment_recall": 0.0,
+    "gptf1_medication_treatment_f1": 0.0,
+    "gptf1_medication_treatment_pred_count": 0,
+    "gptf1_medication_treatment_ref_count": 0,
+    "gptf1_plan_followup_precision": 0.0,
+    "gptf1_plan_followup_recall": 0.0,
+    "gptf1_plan_followup_f1": 0.0,
+    "gptf1_plan_followup_pred_count": 0,
+    "gptf1_plan_followup_ref_count": 0,
+    "nair_pred_concept_count": 31,
+    "nair_ref_concept_count": 36,
+    "nair_precision_match_count": 24,
+    "nair_recall_match_count": 25,
+    "semantic_cap_precision_supported_count": 2,
+    "semantic_cap_precision_partial_count": 3,
+    "semantic_cap_precision_denominator": 6,
+    "semantic_cap_recall_supported_count": 12,
+    "semantic_cap_recall_partial_count": 2,
+    "semantic_cap_recall_denominator": 17,
+    "semantic_cap_low_value_source_count": 0,
+    "semantic_cap_low_value_summary_count": 0,
+    "semantic_cap_missing_count": 2,
+    "semantic_cap_unsupported_count": 1,
+    "semantic_cap_contradicted_source_count": 1,
+    "semantic_cap_contradicted_summary_count": 0,
+    "pdsqi_useful": 3,
+    "pdsqi_organized": 5,
+    "pdsqi_comprehensible": 5,
+    "pdsqi_succinct": 4,
+    "pdsqi_synthesized": 4
+  }
+}

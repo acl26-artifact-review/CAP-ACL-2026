@@ -1,0 +1,521 @@
+{
+  "case_id": "D2N010",
+  "annotator": "B",
+  "seed_gold_caps": [
+    {
+      "gold_id": "G1",
+      "fact_text": "Keith is a 58-year-old male",
+      "category": "Demographics",
+      "speaker": "clinician",
+      "temporality": "current",
+      "certainty": "high",
+      "provenance_sentence": "2"
+    },
+    {
+      "gold_id": "G2",
+      "fact_text": "Keith is being seen for evaluation of high blood sugar",
+      "category": "Chief Complaint",
+      "speaker": "clinician",
+      "temporality": "current",
+      "certainty": "high",
+      "provenance_sentence": "2"
+    },
+    {
+      "gold_id": "G3",
+      "fact_text": "The patient reports his blood sugar is not under control",
+      "category": "Symptom",
+      "speaker": "patient",
+      "temporality": "unknown",
+      "certainty": "high",
+      "provenance_sentence": "1"
+    },
+    {
+      "gold_id": "G4",
+      "fact_text": "The patient has been checking his blood sugars at home",
+      "category": "Plan",
+      "speaker": "patient",
+      "temporality": "unknown",
+      "certainty": "high",
+      "provenance_sentence": "3"
+    },
+    {
+      "gold_id": "G5",
+      "fact_text": "The patient feels his home blood sugar readings have been creeping up slightly",
+      "category": "Symptom",
+      "speaker": "patient",
+      "temporality": "unknown",
+      "certainty": "high",
+      "provenance_sentence": "3"
+    },
+    {
+      "gold_id": "G6",
+      "fact_text": "The patient's home blood sugar readings have been in the 300s",
+      "category": "Test Result",
+      "speaker": "patient",
+      "temporality": "unknown",
+      "certainty": "high",
+      "provenance_sentence": "4-5"
+    },
+    {
+      "gold_id": "G7",
+      "fact_text": "The patient reports his diet has not changed recently",
+      "category": "Lifestyle",
+      "speaker": "patient",
+      "temporality": "unknown",
+      "certainty": "high",
+      "provenance_sentence": "7,9"
+    },
+    {
+      "gold_id": "G8",
+      "fact_text": "The patient does not take sugar with his tea",
+      "category": "Lifestyle",
+      "speaker": "patient",
+      "temporality": "unknown",
+      "certainty": "high",
+      "provenance_sentence": "11"
+    },
+    {
+      "gold_id": "G9",
+      "fact_text": "The patient believes most of his sugar intake comes from fruit",
+      "category": "Lifestyle",
+      "speaker": "patient",
+      "temporality": "unknown",
+      "certainty": "medium",
+      "provenance_sentence": "13,15"
+    },
+    {
+      "gold_id": "G10",
+      "fact_text": "The patient denies recent fever",
+      "category": "Review of Systems",
+      "speaker": "patient",
+      "temporality": "past",
+      "certainty": "high",
+      "provenance_sentence": "18-19"
+    },
+    {
+      "gold_id": "G11",
+      "fact_text": "The patient denies recent chills",
+      "category": "Review of Systems",
+      "speaker": "patient",
+      "temporality": "past",
+      "certainty": "high",
+      "provenance_sentence": "18-19"
+    },
+    {
+      "gold_id": "G12",
+      "fact_text": "The patient reports a bit of right knee joint pain",
+      "category": "Symptom",
+      "speaker": "patient",
+      "temporality": "current",
+      "certainty": "high",
+      "provenance_sentence": "21,23"
+    },
+    {
+      "gold_id": "G13",
+      "fact_text": "The patient does not recall any specific injury or event causing his right knee pain",
+      "category": "Symptom",
+      "speaker": "patient",
+      "temporality": "past",
+      "certainty": "high",
+      "provenance_sentence": "27"
+    },
+    {
+      "gold_id": "G14",
+      "fact_text": "The patient was nauseous a couple of days ago",
+      "category": "Symptom",
+      "speaker": "patient",
+      "temporality": "past",
+      "certainty": "high",
+      "provenance_sentence": "29"
+    },
+    {
+      "gold_id": "G15",
+      "fact_text": "The patient attributes his nausea a couple of days ago to sitting in the back of a car",
+      "category": "Assessment",
+      "speaker": "patient",
+      "temporality": "past",
+      "certainty": "medium",
+      "provenance_sentence": "29"
+    },
+    {
+      "gold_id": "G16",
+      "fact_text": "The patient dislikes sitting in the back of a car",
+      "category": "Social History",
+      "speaker": "patient",
+      "temporality": "unknown",
+      "certainty": "high",
+      "provenance_sentence": "29"
+    },
+    {
+      "gold_id": "G17",
+      "fact_text": "The patient denies vomiting recently",
+      "category": "Review of Systems",
+      "speaker": "patient",
+      "temporality": "past",
+      "certainty": "medium",
+      "provenance_sentence": "28-29"
+    },
+    {
+      "gold_id": "G18",
+      "fact_text": "The patient denies recent belly pain",
+      "category": "Review of Systems",
+      "speaker": "patient",
+      "temporality": "past",
+      "certainty": "medium",
+      "provenance_sentence": "28-29"
+    },
+    {
+      "gold_id": "G19",
+      "fact_text": "The patient denies dysuria or burning with urination",
+      "category": "Review of Systems",
+      "speaker": "patient",
+      "temporality": "current",
+      "certainty": "high",
+      "provenance_sentence": "30-31"
+    },
+    {
+      "gold_id": "G20",
+      "fact_text": "The patient has a history of reflux",
+      "category": "Past Medical History",
+      "speaker": "clinician",
+      "temporality": "unknown",
+      "certainty": "high",
+      "provenance_sentence": "32"
+    },
+    {
+      "gold_id": "G21",
+      "fact_text": "The patient has been treated with protonix for reflux",
+      "category": "Medication",
+      "speaker": "clinician",
+      "temporality": "unknown",
+      "certainty": "high",
+      "provenance_sentence": "32"
+    },
+    {
+      "gold_id": "G22",
+      "fact_text": "The patient feels his reflux is a bit better since starting protonix",
+      "category": "Assessment",
+      "speaker": "patient",
+      "temporality": "unknown",
+      "certainty": "high",
+      "provenance_sentence": "32-33"
+    },
+    {
+      "gold_id": "G23",
+      "fact_text": "The patient no longer wakes up at night with reflux",
+      "category": "Symptom",
+      "speaker": "patient",
+      "temporality": "unknown",
+      "certainty": "high",
+      "provenance_sentence": "33"
+    },
+    {
+      "gold_id": "G24",
+      "fact_text": "The patient has a history of congestive heart failure",
+      "category": "Past Medical History",
+      "speaker": "clinician",
+      "temporality": "unknown",
+      "certainty": "high",
+      "provenance_sentence": "34"
+    },
+    {
+      "gold_id": "G25",
+      "fact_text": "The patient has not noticed recent weight gain",
+      "category": "Symptom",
+      "speaker": "patient",
+      "temporality": "past",
+      "certainty": "high",
+      "provenance_sentence": "34-35"
+    },
+    {
+      "gold_id": "G26",
+      "fact_text": "The patient has not noticed recent fluid retention",
+      "category": "Symptom",
+      "speaker": "patient",
+      "temporality": "past",
+      "certainty": "high",
+      "provenance_sentence": "34-35"
+    },
+    {
+      "gold_id": "G27",
+      "fact_text": "The patient prefers to sleep on his side",
+      "category": "Lifestyle",
+      "speaker": "patient",
+      "temporality": "unknown",
+      "certainty": "high",
+      "provenance_sentence": "37"
+    },
+    {
+      "gold_id": "G28",
+      "fact_text": "The patient is able to sleep lying flat when on his side",
+      "category": "Symptom",
+      "speaker": "clinician",
+      "temporality": "current",
+      "certainty": "medium",
+      "provenance_sentence": "37-39"
+    },
+    {
+      "gold_id": "G29",
+      "fact_text": "The patient has a history of right rotator cuff problems",
+      "category": "Past Medical History",
+      "speaker": "clinician",
+      "temporality": "past",
+      "certainty": "high",
+      "provenance_sentence": "40"
+    },
+    {
+      "gold_id": "G30",
+      "fact_text": "The patient reports his right rotator cuff is now surprisingly good",
+      "category": "Assessment",
+      "speaker": "patient",
+      "temporality": "current",
+      "certainty": "high",
+      "provenance_sentence": "41"
+    },
+    {
+      "gold_id": "G31",
+      "fact_text": "On exam the clinician feels the patient's thyroid is a bit enlarged",
+      "category": "Physical Exam",
+      "speaker": "clinician",
+      "temporality": "current",
+      "certainty": "medium",
+      "provenance_sentence": "42"
+    },
+    {
+      "gold_id": "G32",
+      "fact_text": "On exam the patient's heart rhythm is regular",
+      "category": "Physical Exam",
+      "speaker": "clinician",
+      "temporality": "current",
+      "certainty": "high",
+      "provenance_sentence": "42"
+    },
+    {
+      "gold_id": "G33",
+      "fact_text": "On exam the patient's lungs are clear",
+      "category": "Physical Exam",
+      "speaker": "clinician",
+      "temporality": "current",
+      "certainty": "high",
+      "provenance_sentence": "42"
+    },
+    {
+      "gold_id": "G34",
+      "fact_text": "On exam the patient's abdomen is soft",
+      "category": "Physical Exam",
+      "speaker": "clinician",
+      "temporality": "current",
+      "certainty": "high",
+      "provenance_sentence": "42"
+    },
+    {
+      "gold_id": "G35",
+      "fact_text": "On exam the patient's right knee has erythema",
+      "category": "Physical Exam",
+      "speaker": "clinician",
+      "temporality": "current",
+      "certainty": "high",
+      "provenance_sentence": "42"
+    },
+    {
+      "gold_id": "G36",
+      "fact_text": "On exam the patient's right knee has an insect bite with associated fluctuance",
+      "category": "Physical Exam",
+      "speaker": "clinician",
+      "temporality": "current",
+      "certainty": "high",
+      "provenance_sentence": "42"
+    },
+    {
+      "gold_id": "G37",
+      "fact_text": "On exam the patient has lower extremity edema on the right side",
+      "category": "Physical Exam",
+      "speaker": "clinician",
+      "temporality": "current",
+      "certainty": "high",
+      "provenance_sentence": "42"
+    },
+    {
+      "gold_id": "G38",
+      "fact_text": "The patient's vital signs are within normal limits per clinician review",
+      "category": "Test Result",
+      "speaker": "clinician",
+      "temporality": "current",
+      "certainty": "high",
+      "provenance_sentence": "42"
+    },
+    {
+      "gold_id": "G39",
+      "fact_text": "The patient's Lyme titer is a little elevated",
+      "category": "Test Result",
+      "speaker": "clinician",
+      "temporality": "current",
+      "certainty": "high",
+      "provenance_sentence": "42"
+    },
+    {
+      "gold_id": "G40",
+      "fact_text": "The clinician plans to further evaluate the elevated Lyme titer",
+      "category": "Plan",
+      "speaker": "clinician",
+      "temporality": "future",
+      "certainty": "high",
+      "provenance_sentence": "42"
+    },
+    {
+      "gold_id": "G41",
+      "fact_text": "The patient has a positive rapid strep test",
+      "category": "Test Result",
+      "speaker": "clinician",
+      "temporality": "current",
+      "certainty": "high",
+      "provenance_sentence": "44"
+    },
+    {
+      "gold_id": "G42",
+      "fact_text": "The clinician assesses that the patient has hyperglycemia",
+      "category": "Assessment",
+      "speaker": "clinician",
+      "temporality": "current",
+      "certainty": "high",
+      "provenance_sentence": "44"
+    },
+    {
+      "gold_id": "G43",
+      "fact_text": "The clinician believes the patient's hyperglycemia is probably related to infections in his body",
+      "category": "Assessment",
+      "speaker": "clinician",
+      "temporality": "current",
+      "certainty": "medium",
+      "provenance_sentence": "44"
+    },
+    {
+      "gold_id": "G44",
+      "fact_text": "The clinician believes the positive strep infection is a reason the patient's blood sugar is high",
+      "category": "Assessment",
+      "speaker": "clinician",
+      "temporality": "current",
+      "certainty": "medium",
+      "provenance_sentence": "44"
+    },
+    {
+      "gold_id": "G45",
+      "fact_text": "The clinician plans to treat the patient's strep infection with amoxicillin 500 mg three times a day",
+      "category": "MedicationPlan",
+      "speaker": "clinician",
+      "temporality": "future",
+      "certainty": "high",
+      "provenance_sentence": "44"
+    },
+    {
+      "gold_id": "G46",
+      "fact_text": "The clinician instructs the patient to take all of the prescribed amoxicillin even if he starts feeling better",
+      "category": "Education",
+      "speaker": "clinician",
+      "temporality": "future",
+      "certainty": "high",
+      "provenance_sentence": "44"
+    },
+    {
+      "gold_id": "G47",
+      "fact_text": "The clinician orders amoxicillin 500 mg three times a day for 10 days",
+      "category": "MedicationPlan",
+      "speaker": "clinician",
+      "temporality": "future",
+      "certainty": "high",
+      "provenance_sentence": "46"
+    },
+    {
+      "gold_id": "G48",
+      "fact_text": "The clinician plans to order a Lyme western blot PCR to evaluate for acute Lyme disease",
+      "category": "Plan",
+      "speaker": "clinician",
+      "temporality": "future",
+      "certainty": "high",
+      "provenance_sentence": "46"
+    },
+    {
+      "gold_id": "G49",
+      "fact_text": "The clinician orders a western blot PCR test for Lyme disease",
+      "category": "Procedure",
+      "speaker": "clinician",
+      "temporality": "future",
+      "certainty": "high",
+      "provenance_sentence": "48"
+    },
+    {
+      "gold_id": "G50",
+      "fact_text": "The nurse will set the patient up for the ordered tests",
+      "category": "Plan",
+      "speaker": "clinician",
+      "temporality": "future",
+      "certainty": "high",
+      "provenance_sentence": "48"
+    },
+    {
+      "gold_id": "G51",
+      "fact_text": "The clinician confirms that the elevated Lyme titer is related to Lyme disease",
+      "category": "Education",
+      "speaker": "clinician",
+      "temporality": "current",
+      "certainty": "high",
+      "provenance_sentence": "49-50"
+    },
+    {
+      "gold_id": "G52",
+      "fact_text": "The patient expresses fear of having alpha-gal syndrome",
+      "category": "Counseling",
+      "speaker": "patient",
+      "temporality": "current",
+      "certainty": "high",
+      "provenance_sentence": "51,53"
+    },
+    {
+      "gold_id": "G53",
+      "fact_text": "The clinician does not think the patient has alpha-gal syndrome",
+      "category": "Assessment",
+      "speaker": "clinician",
+      "temporality": "current",
+      "certainty": "medium",
+      "provenance_sentence": "54"
+    },
+    {
+      "gold_id": "G54",
+      "fact_text": "The patient has eaten meat over the last couple of days",
+      "category": "Lifestyle",
+      "speaker": "patient",
+      "temporality": "past",
+      "certainty": "high",
+      "provenance_sentence": "55"
+    },
+    {
+      "gold_id": "G55",
+      "fact_text": "The clinician states that the patient's elevated blood sugar may represent an inflammatory response",
+      "category": "Assessment",
+      "speaker": "clinician",
+      "temporality": "current",
+      "certainty": "medium",
+      "provenance_sentence": "56"
+    },
+    {
+      "gold_id": "G56",
+      "fact_text": "The clinician plans to order additional tests related to the patient's concern about alpha-gal syndrome or inflammation",
+      "category": "Plan",
+      "speaker": "clinician",
+      "temporality": "future",
+      "certainty": "medium",
+      "provenance_sentence": "56"
+    },
+    {
+      "gold_id": "G57",
+      "fact_text": "The clinician advises the patient to call if anything happens after the visit",
+      "category": "Education",
+      "speaker": "clinician",
+      "temporality": "future",
+      "certainty": "high",
+      "provenance_sentence": "58"
+    }
+  ],
+  "generator_model": "gpt-5.1",
+  "generated_at": "2026-04-11T09:01:27.335849+00:00"
+}

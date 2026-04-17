@@ -1,0 +1,30 @@
+{
+  "section_miscategorizations": [
+    {
+      "text": "The patient reports pain in the left hand. The patient reports pain. The patient reports pain. The patient reports pain. The patient reports pain.",
+      "current_section": "Findings",
+      "expected_section": "History of Present Illness",
+      "severity": "major",
+      "reason": "These are patient-reported symptoms and belong in the history of present illness, not in the objective findings section."
+    },
+    {
+      "text": "The patient is being followed for skin cancer family history without evidence of recurrence.",
+      "current_section": "Assessment",
+      "expected_section": "History of Present Illness",
+      "severity": "minor",
+      "reason": "Family history and follow-up context can appear in assessment but more naturally belong in the history; its presence in assessment is not clearly misleading but is organizationally suboptimal."
+    },
+    {
+      "text": "Skin graft closure may be needed.",
+      "current_section": "Plan",
+      "expected_section": "Assessment",
+      "severity": "minor",
+      "reason": "This is more of a diagnostic/clinical impression about potential need rather than a concrete plan or order; however, as a tentative management consideration, its placement in the plan is not strongly misleading."
+    }
+  ],
+  "summary_statistics": {
+    "section_appropriateness_score": 0.6,
+    "section_miscategorization_count": 3,
+    "major_section_miscategorization_count": 1
+  }
+}

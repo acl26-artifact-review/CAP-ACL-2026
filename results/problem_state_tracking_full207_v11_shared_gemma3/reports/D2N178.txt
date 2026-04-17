@@ -1,0 +1,337 @@
+Case: D2N178
+
+Problem List and Visit State Tracking
+
+Problem List
+- hyperglycemia | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T8
+  Summary: The patient's A1c was 9.9.
+  ClusterId: CL1
+  TemporalProfile: current
+  Updates:
+  - CAP18: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T8 :: The patient's A1c was 9.9.
+- diet | verification_status=confirmed | clinical_status=planned | modalities=interview | speakers=doctor | evidence=T18
+  Summary: The doctor recommends reducing sugar and carbohydrates.
+  ClusterId: CL5
+  TemporalProfile: future
+  Updates:
+  - CAP13: content_source=doctor modality=interview verification_status=confirmed clinical_status=planned temporality=future turns=T18 :: The doctor recommends reducing sugar and carbohydrates.
+- left hand pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T20
+  Summary: The patient reports pain in the left hand.
+  ClusterId: CL7
+  TemporalProfile: current
+  Updates:
+  - CAP8: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T20 :: The patient reports pain in the left hand.
+- prescription update | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T28,T38
+  Summary: The patient received a new prescription.
+  ClusterId: CL10
+  TemporalProfile: recent
+  Updates:
+  - CAP3: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=recent turns=T28,T38 :: The patient received a new prescription.
+- eye pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T30
+  Summary: The patient reports eye pain.
+  ClusterId: CL12
+  TemporalProfile: current
+  Updates:
+  - CAP19: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T30 :: The patient reports eye pain.
+- doctor changes | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T32
+  Summary: The patient reports changing doctors.
+  ClusterId: CL13
+  TemporalProfile: ongoing
+  Updates:
+  - CAP20: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=ongoing turns=T32 :: The patient reports changing doctors.
+- left hand | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T36
+  Summary: The patient's pain is in the left hand.
+  ClusterId: CL14
+  TemporalProfile: current
+  Updates:
+  - CAP12: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T36 :: The patient's pain is in the left hand.
+- pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T36
+  Summary: The patient reports pain.
+  ClusterId: CL15
+  TemporalProfile: current
+  Updates:
+  - CAP28: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T36 :: The patient reports pain.
+- foot pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T46,T50
+  Summary: The patient reports that their feet feel like hell.
+  ClusterId: CL22
+  TemporalProfile: current
+  Updates:
+  - CAP7: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T46 :: The patient reports that their feet feel like hell.
+  - CAP21: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T50 :: The patient reports foot pain.
+- vascular disease | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=clinician | evidence=T48
+  Summary: The patient has vascular disease in their legs.
+  ClusterId: CL23
+  TemporalProfile: current
+  Updates:
+  - CAP11: content_source=clinician modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T48 :: The patient has vascular disease in their legs.
+- leg pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T48
+  Summary: The patient reports pain in their legs.
+  ClusterId: CL24
+  TemporalProfile: current
+  Updates:
+  - CAP14: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T48 :: The patient reports pain in their legs.
+- peripheral neuropathy | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=doctor,patient | evidence=T103,T49
+  Summary: The doctor states the patient has peripheral neuropathy.
+  ClusterId: CL25
+  TemporalProfile: current
+  Updates:
+  - CAP10: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=current turns=T49 :: The doctor states the patient has peripheral neuropathy.
+  - CAP27: content_source=doctor modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T103 :: The doctor identifies peripheral neuropathy.
+- hip pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T50
+  Summary: The patient reports pain up to their hips.
+  ClusterId: CL26
+  TemporalProfile: current
+  Updates:
+  - CAP9: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T50 :: The patient reports pain up to their hips.
+- smoking | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T56
+  Summary: The patient is still smoking.
+  ClusterId: CL27
+  TemporalProfile: current
+  Updates:
+  - CAP22: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T56 :: The patient is still smoking.
+- cough | verification_status=confirmed | clinical_status=improving | modalities=interview | speakers=patient | evidence=T70,T92
+  Summary: The patient reports that their cough has improved this morning.
+  ClusterId: CL29
+  TemporalProfile: lately, morning, this morning
+  Updates:
+  - CAP23: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=lately turns=T70 :: The patient reports coughing lately.
+  - CAP5: content_source=patient modality=interview verification_status=confirmed clinical_status=improving temporality=this morning turns=T92 :: The patient reports that their cough has improved this morning.
+  - CAP6: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=morning turns=T92 :: The patient reported that their coughing got better this morning.
+- congestion | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T70
+  Summary: The patient reports congestion.
+  ClusterId: CL30
+  TemporalProfile: current
+  Updates:
+  - CAP29: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T70 :: The patient reports congestion.
+- clear sputum | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T72
+  Summary: The patient reports clear sputum.
+  ClusterId: CL31
+  TemporalProfile: current
+  Updates:
+  - CAP24: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T72 :: The patient reports clear sputum.
+- slowed urinary stream | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T80
+  Summary: The patient reports a slowed urinary stream.
+  ClusterId: CL32
+  TemporalProfile: current
+  Updates:
+  - CAP15: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T80 :: The patient reports a slowed urinary stream.
+- stable urinary stream | verification_status=confirmed | clinical_status=stable | modalities=interview | speakers=patient | evidence=T80
+  Summary: The patient reports a stable urinary stream.
+  ClusterId: CL33
+  TemporalProfile: current
+  Updates:
+  - CAP16: content_source=patient modality=interview verification_status=confirmed clinical_status=stable temporality=current turns=T80 :: The patient reports a stable urinary stream.
+- urinary urgency | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T80
+  Summary: The patient reports urinary urgency.
+  ClusterId: CL34
+  TemporalProfile: current
+  Updates:
+  - CAP25: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T80 :: The patient reports urinary urgency.
+- urinary frequency | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T84
+  Summary: The patient reports urinating multiple times per day.
+  ClusterId: CL35
+  TemporalProfile: multiple times per day
+  Updates:
+  - CAP2: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=multiple times per day turns=T84,T84,T84 :: The patient reports urinating multiple times per day.
+- nocturia | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T86,T88
+  Summary: The patient reports needing to get up once in a while to urinate by morning.
+  ClusterId: CL36
+  TemporalProfile: once in a while
+  Updates:
+  - CAP1: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=once in a while turns=T86,T88,T88 :: The patient reports needing to get up once in a while to urinate by morning.
+- toe tips | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T99
+  Summary: The patient reports sensation in the tips of the first and second toes.
+  ClusterId: CL38
+  TemporalProfile: current
+  Updates:
+  - CAP4: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T99 :: The patient reports sensation in the tips of the first and second toes.
+- decreased sensation | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T99
+  Summary: The patient reports decreased sensation.
+  ClusterId: CL39
+  TemporalProfile: current
+  Updates:
+  - CAP26: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T99 :: The patient reports decreased sensation.
+- moisturize feet | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T101
+  Summary: The doctor recommends keeping the feet moisturized.
+  ClusterId: CL41
+  TemporalProfile: future
+  Updates:
+  - CAP17: content_source=doctor modality=plan verification_status=unconfirmed clinical_status=planned temporality=future turns=T101 :: The doctor recommends keeping the feet moisturized.
+
+Medication Tracking
+- [MedicationState] glimepiride | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=doctor,patient | evidence=T105,T8
+  Summary: The patient is currently taking two milligrams of glimepiride.
+  ClusterId: CL2
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient is currently taking two milligrams of glimepiride. (T8)
+  - The doctor recommends increasing glimepiride. (T105)
+  Updates:
+  - CAP45: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T8 :: The patient is currently taking two milligrams of glimepiride.
+  - CAP56: content_source=doctor modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T105 :: The doctor recommends increasing glimepiride.
+- [MedicationChange] glimepiride | verification_status=confirmed | clinical_status=planned | modalities=interview | speakers=doctor | evidence=T9
+  Summary: The patient should increase their glimepiride to four milligrams twice a day.
+  ClusterId: CL3
+  TemporalProfile: future
+  PlannedChanges:
+  - The patient should increase their glimepiride to four milligrams twice a day. (T9)
+  Updates:
+  - CAP42: content_source=doctor modality=interview verification_status=confirmed clinical_status=planned temporality=future turns=T9 :: The patient should increase their glimepiride to four milligrams twice a day.
+- [MedicationChange] metformin | verification_status=confirmed | clinical_status=planned | modalities=interview | speakers=doctor | evidence=T9
+  Summary: The patient will increase metformin to four milligrams twice a day.
+  ClusterId: CL4
+  TemporalProfile: future
+  PlannedChanges:
+  - The patient will increase metformin to four milligrams twice a day. (T9)
+  Updates:
+  - CAP43: content_source=doctor modality=interview verification_status=confirmed clinical_status=planned temporality=future turns=T9 :: The patient will increase metformin to four milligrams twice a day.
+- [MedicationState] wheat bread | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T18
+  Summary: The patient does not have pasta or bread in the house.
+  ClusterId: CL6
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient does not have pasta or bread in the house. (T18)
+  Updates:
+  - CAP44: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T18 :: The patient does not have pasta or bread in the house.
+- [MedicationState] peanut butter | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T20
+  Summary: The patient occasionally eats peanut butter sandwiches.
+  ClusterId: CL8
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient occasionally eats peanut butter sandwiches. (T20)
+  Updates:
+  - CAP47: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T20 :: The patient occasionally eats peanut butter sandwiches.
+- [MedicationState] seltzer water | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T26
+  Summary: The patient prefers seltzer water.
+  ClusterId: CL9
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient prefers seltzer water. (T26)
+  Updates:
+  - CAP50: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T26 :: The patient prefers seltzer water.
+- [MedicationState] atorvastatin | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=clinician,doctor | evidence=T110,T41,T49
+  Summary: Keep the patient on atorvastatin or Lipitor.
+  ClusterId: CL17
+  TemporalProfile: current, daily
+  CurrentRegimens:
+  - The patient is taking atorvastatin. (T41)
+  - The patient is currently taking atorvastatin. (T49)
+  - Keep the patient on atorvastatin or Lipitor. (T110)
+  - The doctor recommends continuing atorvastatin. (T110)
+  Updates:
+  - CAP55: content_source=doctor modality=interview verification_status=confirmed clinical_status=active temporality=daily turns=T41 :: The patient is taking atorvastatin.
+  - CAP49: content_source=clinician modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T49 :: The patient is currently taking atorvastatin.
+  - CAP48: content_source=doctor modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T110 :: Keep the patient on atorvastatin or Lipitor.
+  - CAP58: content_source=doctor modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T110 :: The doctor recommends continuing atorvastatin.
+- [MedicationState] metoprolol | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=doctor | evidence=T41
+  Summary: The patient is taking metoprolol.
+  ClusterId: CL18
+  TemporalProfile: daily
+  CurrentRegimens:
+  - The patient is taking metoprolol. (T41)
+  Updates:
+  - CAP51: content_source=doctor modality=interview verification_status=confirmed clinical_status=active temporality=daily turns=T41 :: The patient is taking metoprolol.
+- [MedicationState] lisinopril | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=doctor | evidence=T41
+  Summary: The patient is taking lisinopril.
+  ClusterId: CL19
+  TemporalProfile: daily
+  CurrentRegimens:
+  - The patient is taking lisinopril. (T41)
+  Updates:
+  - CAP52: content_source=doctor modality=interview verification_status=confirmed clinical_status=active temporality=daily turns=T41 :: The patient is taking lisinopril.
+- [MedicationState] hydrochlorothiazide | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=doctor | evidence=T41
+  Summary: The patient is taking hydrochlorothiazide.
+  ClusterId: CL20
+  TemporalProfile: daily
+  CurrentRegimens:
+  - The patient is taking hydrochlorothiazide. (T41)
+  Updates:
+  - CAP53: content_source=doctor modality=interview verification_status=confirmed clinical_status=active temporality=daily turns=T41 :: The patient is taking hydrochlorothiazide.
+- [MedicationState] amlodipine | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=doctor | evidence=T41
+  Summary: The patient is taking amlodipine.
+  ClusterId: CL21
+  TemporalProfile: daily
+  CurrentRegimens:
+  - The patient is taking amlodipine. (T41)
+  Updates:
+  - CAP54: content_source=doctor modality=interview verification_status=confirmed clinical_status=active temporality=daily turns=T41 :: The patient is taking amlodipine.
+- [MedicationState] smoking | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=doctor | evidence=T56
+  Summary: The doctor asks if the patient is still smoking.
+  ClusterId: CL28
+  TemporalProfile: current
+  CurrentRegimens:
+  - The doctor asks if the patient is still smoking. (T56)
+  Updates:
+  - CAP46: content_source=doctor modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T56 :: The doctor asks if the patient is still smoking.
+- [MedicationState] metformin | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=doctor | evidence=T101,T110
+  Summary: The doctor recommends continuing metformin.
+  ClusterId: CL43
+  TemporalProfile: current
+  CurrentRegimens:
+  - The doctor recommends continuing metformin. (T101)
+  - Continue the metformin. (T110)
+  Updates:
+  - CAP57: content_source=doctor modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T101 :: The doctor recommends continuing metformin.
+  - CAP60: content_source=doctor modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T110 :: Continue the metformin.
+- [MedicationChange] four milligram pill | verification_status=confirmed | clinical_status=planned | modalities=interview | speakers=doctor | evidence=T116
+  Summary: Give the patient a four milligram pill.
+  ClusterId: CL49
+  TemporalProfile: current
+  PlannedChanges:
+  - Give the patient a four milligram pill. (T116)
+  Updates:
+  - CAP31: content_source=doctor modality=interview verification_status=confirmed clinical_status=planned temporality=current turns=T116 :: Give the patient a four milligram pill.
+- [MedicationChange] twice a day | verification_status=confirmed | clinical_status=planned | modalities=interview | speakers=doctor | evidence=T116
+  Summary: Give the pill twice a day.
+  ClusterId: CL50
+  TemporalProfile: current
+  PlannedChanges:
+  - Give the pill twice a day. (T116)
+  Updates:
+  - CAP33: content_source=doctor modality=interview verification_status=confirmed clinical_status=planned temporality=current turns=T116 :: Give the pill twice a day.
+
+Other Structured States
+- [TestResult] new glasses | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T28
+  Summary: The patient has new glasses.
+  ClusterId: CL11
+  TemporalProfile: recent
+- [Plan] blood pressure | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=doctor | evidence=T41
+  Summary: Check blood pressure.
+  ClusterId: CL16
+  TemporalProfile: current
+- [ExamFinding] thickened nails | verification_status=confirmed | clinical_status=historical | modalities=exam | speakers=doctor | evidence=T95
+  Summary: The patient has thickened nails.
+  ClusterId: CL37
+  TemporalProfile: present
+- [ExamFinding] decreased sensation | verification_status=confirmed | clinical_status=active | modalities=exam | speakers=doctor | evidence=T99
+  Summary: The patient has decreased sensation in the tips of the first and second toes.
+  ClusterId: CL40
+  TemporalProfile: tips of first and second toes
+- [Plan] new prescription | verification_status=confirmed | clinical_status=planned | modalities=interview | speakers=doctor | evidence=T101
+  Summary: The doctor writes a new prescription.
+  ClusterId: CL42
+  TemporalProfile: future
+- [Plan] labs | verification_status=confirmed | clinical_status=planned | modalities=interview | speakers=doctor | evidence=T103
+  Summary: Get labs today.
+  ClusterId: CL44
+  TemporalProfile: current
+- [Plan] blood work | verification_status=confirmed | clinical_status=planned | modalities=interview | speakers=doctor | evidence=T105
+  Summary: The doctor orders blood work.
+  ClusterId: CL45
+  TemporalProfile: today
+- [TestResult] 140 over 60 | verification_status=confirmed | clinical_status=active | modalities=test_result | speakers=doctor | evidence=T110
+  Summary: Blood pressure is 140 over 60.
+  ClusterId: CL46
+  TemporalProfile: current
+- [Plan] kidney function | verification_status=confirmed | clinical_status=planned | modalities=interview | speakers=doctor | evidence=T110
+  Summary: Check kidney function.
+  ClusterId: CL47
+  TemporalProfile: current
+- [FollowUp] four months | verification_status=confirmed | clinical_status=planned | modalities=interview | speakers=doctor | evidence=T110
+  Summary: Follow up in four months.
+  ClusterId: CL48
+  TemporalProfile: future
+- [Plan] four milligram pill | verification_status=confirmed | clinical_status=planned | modalities=interview | speakers=doctor | evidence=T116
+  Summary: Prescribe a four milligram pill.
+  ClusterId: CL51
+  TemporalProfile: current

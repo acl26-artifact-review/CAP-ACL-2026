@@ -1,0 +1,1910 @@
+{
+  "case_id": "D2N090",
+  "method": "cap_event_only",
+  "template": "soap",
+  "summary_text": "S:\nThe patient reports edema in the lower extremities and intermittent dizziness for one week, worse when standing. He denies chest pain, dyspnea, or syncope. The patient was not monitoring what they were eating. The patient feels better after returning home. The patient is following their diet closely. The patient reports no chest pain.\n\nO:\nBlood pressure is mildly low. Heart rate is within normal limits. Neurologic examination is nonfocal. The patient's hemoglobin A1c is 8. The patient's blood glucose is 162.\n\nA:\nThe patient has type 2 diabetes and hyperglycemia. The patient's hemoglobin A1c is 8. The patient's blood glucose is 162.\n\nP:\nThe doctor wants to increase the patient's lantus to 20 units at night. The patient should find time to relax in the afternoon. The doctor orders a hemoglobin a1c. The patient wants to continue meditation.",
+  "reference_summary": "CHIEF COMPLAINT\n\nER follow-up.\n\nHISTORY OF PRESENT ILLNESS\n\nAlbert Powell is a 62-year-old male with a past medical history significant for depression, type 2 diabetes, and kidney transplant. He is here today for an emergency room follow-up.\n\nThe patient states he was not staying on top of his blood sugar readings and felt \" woozy \" over the weekend. His wife was concerned that his levels were elevated and wanted to take him to the emergency room. He was not admitted to the hospital. He reports that his mother is in the hospital and he has been eating poorly. He was not monitoring his blood sugars and what he was eating. When they got home from the visit he felt a lot better. Since then, he has been following his diet pretty closely. He continues Lantus insulin at bedtime.\n\nRegarding his kidney transplant and has been doing pretty well. The patient has been pretty diligent about taking immunotherapy medication and following orders. The last time he saw Dr. Reyes was about 3 weeks ago and everything seemed to be fine.\n\nRegarding his depression, the patient states it has been about a year and a half, but he has been pretty good with that. He has his moments, but as long as he finds some time to relax in the afternoon and then it seems to work out. He thinks he would probably want to continue that at least for a couple more months and see how it goes. His wife got him into meditation recently and he finds that relaxing so he feels he would like to continue that for a couple more months and see how it goes.\n\nThe patient denies any chest pain, shortness of breath, lightheadedness or dizziness.\n\nREVIEW OF SYSTEMS\n\n• Cardiovascular: Denies chest pain or dyspnea.\n• Respiratory: Denies shortness of breath.\n• Neurological: Denies lightheadedness or dizziness.\n• Psychiatric: Endorses depression.\n\nPHYSICAL EXAMINATION\n\n• Constitutional: in no apparent distress.\n• Neck: No carotid bruits appreciable.\n• Respiratory: Lungs are clear to auscultation bilaterally. No wheezes, rales, or rhonchi.\n• Cardiovascular: Grade 2/6 systolic ejection murmur.\n• Musculoskeletal: 1+ edema in the bilateral lower extremities.\n\nRESULTS\n\nFasting glucose is elevated at 162.\nHemoglobin A1c is elevated at 8.\n\nASSESSMENT AND PLAN\n\nAlbert Powell is a 62-year-old male with a past medical history significant for depression, type 2 diabetes, and kidney transplant. He is here today for an emergency room follow-up.\n\nHyperglycemia.\n• Medical Reasoning: He was recently seen in the emergency department with elevated blood glucose levels. He admits to dietary indiscretion prior to this, but has since improved his diet. His recent blood glucose level was 162, and his recent hemoglobin A1c was 8.\n• Additional Testing: Repeat hemoglobin A1c in a few months.\n• Medical Treatment: Increase Lantus to 20 units at night.\n• Patient Education and Counseling: I advised him to continue monitoring his blood glucose levels at home and report those to me, as we may need to make further adjustments to his medication.\n\nDepression.\n• Medical Reasoning: He reports personal stressors over the past year and a half but is doing well overall. He recently started meditating.\n• Medical Treatment: He should continue his current management strategies. We will hold off on medication and therapy at this time.\n• Patient Education and Counseling: The patient was encouraged to contact me if he needs anything.\n\nStatus post renal transplant.\n• Medical Reasoning: His kidney function appears stable and he has been compliant with his immunotherapy medications.\n• Medical Treatment: Continue seeing Dr. Reyes for management of his immunosuppression medication.\n• Patient Education and Counseling: He knows to reach out to me if he needs anything.\n\nPatient Agreements: The patient understands and agrees with the recommended medical treatment plan.",
+  "source_cap": {
+    "atomic_propositions": [
+      {
+        "prop_id": "CAP1",
+        "cap_type": "Problem",
+        "canonical_concept": "hospital admission",
+        "category": "Problem",
+        "speaker": "patient",
+        "status": "uncertain",
+        "visit_state": "planned",
+        "temporality": "okay",
+        "proposition_text": "The doctor does not want the patient to end up in the hospital again."
+      },
+      {
+        "prop_id": "CAP2",
+        "cap_type": "Problem",
+        "canonical_concept": "depression",
+        "category": "Problem",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient reports having been struggling with depression for a year and a half."
+      },
+      {
+        "prop_id": "CAP3",
+        "cap_type": "Problem",
+        "canonical_concept": "hyperglycemia",
+        "category": "Problem",
+        "speaker": "patient",
+        "predicate": "plans",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "plan",
+          "quantitative"
+        ],
+        "proposition_text": "The doctor wants to increase the patient's lantus to 20 units at night."
+      },
+      {
+        "prop_id": "CAP4",
+        "cap_type": "Problem",
+        "canonical_concept": "depression",
+        "category": "Problem",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "past",
+        "claim_type_tags": [
+          "temporal"
+        ],
+        "proposition_text": "The patient has a past medical history of depression."
+      },
+      {
+        "prop_id": "CAP5",
+        "cap_type": "Symptom",
+        "canonical_concept": "poor diet",
+        "category": "Symptom",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "before that happened",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient was not monitoring what they were eating."
+      },
+      {
+        "prop_id": "CAP6",
+        "cap_type": "Problem",
+        "canonical_concept": "kidney transplant",
+        "category": "Problem",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "past",
+        "proposition_text": "The patient has a history of kidney transplant."
+      },
+      {
+        "prop_id": "CAP7",
+        "cap_type": "Symptom",
+        "canonical_concept": "left hand pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports pain in the left hand."
+      },
+      {
+        "prop_id": "CAP8",
+        "cap_type": "Symptom",
+        "canonical_concept": "edema",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports edema in the lower extremities."
+      },
+      {
+        "prop_id": "CAP9",
+        "cap_type": "Problem",
+        "canonical_concept": "hypoglycemia",
+        "category": "Problem",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "weekend",
+        "proposition_text": "The patient felt woozy over the weekend."
+      },
+      {
+        "prop_id": "CAP10",
+        "cap_type": "Symptom",
+        "canonical_concept": "feeling better",
+        "category": "Symptom",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "improving",
+        "temporality": "since then",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient felt better after returning home."
+      },
+      {
+        "prop_id": "CAP11",
+        "cap_type": "Symptom",
+        "canonical_concept": "following diet closely",
+        "category": "Symptom",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "yes",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient is following their diet closely."
+      },
+      {
+        "prop_id": "CAP12",
+        "cap_type": "Problem",
+        "canonical_concept": "diabetes",
+        "category": "Problem",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "past",
+        "claim_type_tags": [
+          "quantitative"
+        ],
+        "proposition_text": "The patient has type 2 diabetes."
+      },
+      {
+        "prop_id": "CAP13",
+        "cap_type": "Symptom",
+        "canonical_concept": "chest pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports no chest pain."
+      },
+      {
+        "prop_id": "CAP14",
+        "cap_type": "Symptom",
+        "canonical_concept": "dizziness",
+        "category": "Symptom",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "weekend",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient felt woozy."
+      },
+      {
+        "prop_id": "CAP15",
+        "cap_type": "Symptom",
+        "canonical_concept": "lightheadedness",
+        "category": "Symptom",
+        "speaker": "doctor",
+        "predicate": "denies",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient denies lightheadedness."
+      },
+      {
+        "prop_id": "CAP16",
+        "cap_type": "Problem",
+        "canonical_concept": "hyperglycemia",
+        "category": "Problem",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient has hyperglycemia."
+      },
+      {
+        "prop_id": "CAP17",
+        "cap_type": "Order",
+        "canonical_concept": "relaxation",
+        "category": "Order",
+        "speaker": "patient",
+        "status": "uncertain",
+        "visit_state": "planned",
+        "temporality": "afternoon",
+        "proposition_text": "The patient should find time to relax in the afternoon."
+      },
+      {
+        "prop_id": "CAP18",
+        "cap_type": "MedicationRequest",
+        "canonical_concept": "lantus",
+        "category": "MedicationRequest",
+        "speaker": "doctor",
+        "predicate": "orders",
+        "status": "uncertain",
+        "visit_state": "planned",
+        "temporality": "current",
+        "claim_type_tags": [
+          "medication",
+          "plan"
+        ],
+        "proposition_text": "The doctor orders a lantus dose increase."
+      },
+      {
+        "prop_id": "CAP19",
+        "cap_type": "TestResult",
+        "canonical_concept": "hemoglobin a1c",
+        "category": "TestResult",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "future",
+        "claim_type_tags": [
+          "quantitative"
+        ],
+        "proposition_text": "The patient's hemoglobin a1c is about 8."
+      },
+      {
+        "prop_id": "CAP20",
+        "cap_type": "Order",
+        "canonical_concept": "meditation",
+        "category": "Order",
+        "speaker": "patient",
+        "predicate": "has",
+        "status": "uncertain",
+        "visit_state": "planned",
+        "temporality": "future",
+        "proposition_text": "The patient wants to continue meditation."
+      },
+      {
+        "prop_id": "CAP21",
+        "cap_type": "TestResult",
+        "canonical_concept": "blood glucose",
+        "category": "TestResult",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "quantitative"
+        ],
+        "proposition_text": "The patient's blood glucose is 162."
+      },
+      {
+        "prop_id": "CAP22",
+        "cap_type": "TestResult",
+        "canonical_concept": "hemoglobin a1c",
+        "category": "TestResult",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "quantitative"
+        ],
+        "proposition_text": "The patient's hemoglobin A1c is 8."
+      },
+      {
+        "prop_id": "CAP23",
+        "cap_type": "Order",
+        "canonical_concept": "hemoglobin a1c",
+        "category": "Order",
+        "speaker": "doctor",
+        "predicate": "orders",
+        "status": "uncertain",
+        "visit_state": "planned",
+        "temporality": "future",
+        "claim_type_tags": [
+          "plan",
+          "quantitative"
+        ],
+        "proposition_text": "The doctor orders a hemoglobin a1c."
+      },
+      {
+        "prop_id": "CAP24",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "following doctor's orders",
+        "category": "MedicationStatement",
+        "speaker": "patient",
+        "predicate": "orders",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "medication",
+          "plan"
+        ],
+        "proposition_text": "The patient is following doctor's orders regarding medication."
+      },
+      {
+        "prop_id": "CAP25",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "medication",
+        "category": "MedicationStatement",
+        "speaker": "doctor",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The doctor is holding off on medical therapy."
+      },
+      {
+        "prop_id": "CAP26",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "immunotherapy medication",
+        "category": "MedicationStatement",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "medication"
+        ],
+        "proposition_text": "The patient is taking immunotherapy medications."
+      },
+      {
+        "prop_id": "CAP27",
+        "cap_type": "ProblemHistory",
+        "canonical_concept": "hip replacement",
+        "category": "ProblemHistory",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "last week",
+        "proposition_text": "The patient's mother had a hip replacement last week."
+      }
+    ],
+    "filtered_nonverifiable_units": []
+  },
+  "event_plan": {
+    "events": [
+      {
+        "event_id": "CL1",
+        "event_type": "ProblemOrientedNoteBundle",
+        "canonical_concept": "diabetes",
+        "visit_state": "active",
+        "status": "affirmed",
+        "temporality": "last week",
+        "speaker_source": "doctor,patient,test_result",
+        "clinical_priority": "high",
+        "title": "diabetes",
+        "event_summary": "Problem-oriented bundle for diabetes.",
+        "supporting_cap_ids": [
+          "CAP16",
+          "CAP3",
+          "CAP8",
+          "CAP12",
+          "CAP9",
+          "CAP14",
+          "CAP5",
+          "CAP10",
+          "CAP11",
+          "CAP15",
+          "CAP13",
+          "CAP19",
+          "CAP22",
+          "CAP17",
+          "CAP20",
+          "CAP21",
+          "CAP23",
+          "CAP25",
+          "CAP26",
+          "CAP24",
+          "CAP27"
+        ],
+        "anchor_problem_cap_id": "CAP12",
+        "anchor_problem": "diabetes",
+        "S_cap_ids": [
+          "CAP16",
+          "CAP3",
+          "CAP9",
+          "CAP24"
+        ],
+        "O_cap_ids": [
+          "CAP19",
+          "CAP22",
+          "CAP21"
+        ],
+        "P_cap_ids": [
+          "CAP17",
+          "CAP20",
+          "CAP23"
+        ],
+        "global_cap_ids": [
+          "CAP8",
+          "CAP14",
+          "CAP5",
+          "CAP10",
+          "CAP11",
+          "CAP15",
+          "CAP13",
+          "CAP25",
+          "CAP26",
+          "CAP27"
+        ],
+        "supporting_evidence": [
+          "The patient has hyperglycemia.",
+          "The doctor wants to increase the patient's lantus to 20 units at night.",
+          "The patient felt woozy over the weekend.",
+          "The patient is following doctor's orders regarding medication.",
+          "The patient's hemoglobin a1c is about 8.",
+          "The patient's hemoglobin A1c is 8."
+        ],
+        "current_state": [
+          "The patient has hyperglycemia.",
+          "The doctor wants to increase the patient's lantus to 20 units at night.",
+          "The patient felt woozy over the weekend.",
+          "The patient is following doctor's orders regarding medication."
+        ],
+        "planned_actions": [
+          "The patient should find time to relax in the afternoon.",
+          "The patient wants to continue meditation.",
+          "The doctor orders a hemoglobin a1c."
+        ],
+        "care_context": [
+          "The patient has type 2 diabetes.",
+          "The patient reports edema in the lower extremities.",
+          "The patient felt woozy.",
+          "The patient was not monitoring what they were eating.",
+          "The patient felt better after returning home.",
+          "The patient is following their diet closely."
+        ],
+        "key_slots": {
+          "source_modalities": "assessment, interview, test_result, plan",
+          "temporal_profile": "current, past, weekend, before that happened, since then, yes, future, afternoon, last week",
+          "anchor_cluster_type": "ProblemState",
+          "anchor_primary_cap_type": "Problem",
+          "bundle_concepts": "hyperglycemia; edema; diabetes; hypoglycemia; dizziness; poor diet; feeling better; following diet closely; lightheadedness; chest pain; hemoglobin a1c; relaxation; meditation; blood glucose; medication; immunotherapy medication; following doctor's orders; hip replacement",
+          "history_context": "",
+          "related_factors": "The patient has type 2 diabetes.",
+          "visit_primary": "true",
+          "render_in_note": "true",
+          "assessment_fallback": "The patient has diabetes.",
+          "bundle_design": "problem_oriented_note_bundle"
+        },
+        "render_sections": [
+          "S",
+          "O",
+          "A",
+          "P",
+          "History of Present Illness",
+          "Findings",
+          "Assessment",
+          "Plan"
+        ]
+      }
+    ]
+  },
+  "summary_cap": {
+    "atomic_propositions": [
+      {
+        "prop_id": "P1",
+        "cap_type": "Symptom",
+        "canonical_concept": "edema lower extremities",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports edema in the lower extremities."
+      },
+      {
+        "prop_id": "P2",
+        "cap_type": "Symptom",
+        "canonical_concept": "intermittent dizziness",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports intermittent dizziness."
+      },
+      {
+        "prop_id": "P3",
+        "cap_type": "Symptom",
+        "canonical_concept": "dizziness worse when standing",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "worsening",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports the dizziness is worse when standing."
+      },
+      {
+        "prop_id": "P4",
+        "cap_type": "ProblemHistory",
+        "canonical_concept": "pain",
+        "category": "ProblemHistory",
+        "speaker": "patient",
+        "predicate": "denies",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "past",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient denies chest pain."
+      },
+      {
+        "prop_id": "P5",
+        "cap_type": "ProblemHistory",
+        "canonical_concept": "denies dyspnea",
+        "category": "ProblemHistory",
+        "speaker": "patient",
+        "predicate": "denies",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "past",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient denies dyspnea."
+      },
+      {
+        "prop_id": "P6",
+        "cap_type": "ProblemHistory",
+        "canonical_concept": "denies syncope",
+        "category": "ProblemHistory",
+        "speaker": "patient",
+        "predicate": "denies",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "past",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient denies syncope."
+      },
+      {
+        "prop_id": "P7",
+        "cap_type": "ProblemHistory",
+        "canonical_concept": "was not monitoring what",
+        "category": "ProblemHistory",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "uncertain",
+        "visit_state": "uncertain",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient was not monitoring what they were eating."
+      },
+      {
+        "prop_id": "P8",
+        "cap_type": "MedicationPlan",
+        "canonical_concept": "wants increase lantus units",
+        "category": "MedicationPlan",
+        "speaker": "doctor",
+        "predicate": "prescribes",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "future",
+        "claim_type_tags": [
+          "medication"
+        ],
+        "proposition_text": "The doctor wants to increase the patient's lantus to 20 units at night."
+      },
+      {
+        "prop_id": "P9",
+        "cap_type": "Counseling",
+        "canonical_concept": "find time relax afternoon",
+        "category": "Counseling",
+        "speaker": "doctor",
+        "predicate": "instructs",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "plan"
+        ],
+        "proposition_text": "The doctor should find time to relax in the afternoon."
+      },
+      {
+        "prop_id": "P10",
+        "cap_type": "Order",
+        "canonical_concept": "orders hemoglobin a1c",
+        "category": "Order",
+        "speaker": "doctor",
+        "predicate": "orders",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "future",
+        "claim_type_tags": [
+          "diagnostic"
+        ],
+        "proposition_text": "The doctor orders a hemoglobin a1c."
+      },
+      {
+        "prop_id": "P11",
+        "cap_type": "ProblemHistory",
+        "canonical_concept": "wants continue meditation",
+        "category": "ProblemHistory",
+        "speaker": "patient",
+        "predicate": "continues",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "future",
+        "claim_type_tags": [
+          "plan"
+        ],
+        "proposition_text": "The patient wants to continue meditation."
+      }
+    ],
+    "filtered_nonverifiable_units": [],
+    "runtime_seconds": 26.713
+  },
+  "cap_alignment": {
+    "cap_precision": 0.8181818181818182,
+    "cap_recall": 0.3333333333333333,
+    "cap_f1": 0.4736842105263157,
+    "matched_count": 9,
+    "summary_prop_count": 11,
+    "source_prop_count": 27,
+    "matched_pairs": [
+      {
+        "score": 1.0,
+        "summary_prop_id": "P11",
+        "source_prop_id": "CAP20",
+        "summary_text": "The patient wants to continue meditation.",
+        "source_text": "The patient wants to continue meditation."
+      },
+      {
+        "score": 1.0,
+        "summary_prop_id": "P10",
+        "source_prop_id": "CAP23",
+        "summary_text": "The doctor orders a hemoglobin a1c.",
+        "source_text": "The doctor orders a hemoglobin a1c."
+      },
+      {
+        "score": 1.0,
+        "summary_prop_id": "P8",
+        "source_prop_id": "CAP3",
+        "summary_text": "The doctor wants to increase the patient's lantus to 20 units at night.",
+        "source_text": "The doctor wants to increase the patient's lantus to 20 units at night."
+      },
+      {
+        "score": 1.0,
+        "summary_prop_id": "P7",
+        "source_prop_id": "CAP5",
+        "summary_text": "The patient was not monitoring what they were eating.",
+        "source_text": "The patient was not monitoring what they were eating."
+      },
+      {
+        "score": 1.0,
+        "summary_prop_id": "P1",
+        "source_prop_id": "CAP8",
+        "summary_text": "The patient reports edema in the lower extremities.",
+        "source_text": "The patient reports edema in the lower extremities."
+      },
+      {
+        "score": 0.9,
+        "summary_prop_id": "P9",
+        "source_prop_id": "CAP17",
+        "summary_text": "The doctor should find time to relax in the afternoon.",
+        "source_text": "The patient should find time to relax in the afternoon."
+      },
+      {
+        "score": 0.7806,
+        "summary_prop_id": "P4",
+        "source_prop_id": "CAP13",
+        "summary_text": "The patient denies chest pain.",
+        "source_text": "The patient reports no chest pain."
+      },
+      {
+        "score": 0.7633,
+        "summary_prop_id": "P2",
+        "source_prop_id": "CAP14",
+        "summary_text": "The patient reports intermittent dizziness.",
+        "source_text": "The patient felt woozy."
+      },
+      {
+        "score": 0.75,
+        "summary_prop_id": "P6",
+        "source_prop_id": "CAP15",
+        "summary_text": "The patient denies syncope.",
+        "source_text": "The patient denies lightheadedness."
+      }
+    ],
+    "unsupported_summary_props": [
+      {
+        "prop_id": "P3",
+        "cap_type": "Symptom",
+        "canonical_concept": "dizziness worse when standing",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "worsening",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports the dizziness is worse when standing."
+      },
+      {
+        "prop_id": "P5",
+        "cap_type": "ProblemHistory",
+        "canonical_concept": "denies dyspnea",
+        "category": "ProblemHistory",
+        "speaker": "patient",
+        "predicate": "denies",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "past",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient denies dyspnea."
+      }
+    ],
+    "missing_source_props": [
+      {
+        "prop_id": "CAP1",
+        "cap_type": "Problem",
+        "canonical_concept": "hospital admission",
+        "category": "Problem",
+        "speaker": "patient",
+        "status": "uncertain",
+        "visit_state": "planned",
+        "temporality": "okay",
+        "proposition_text": "The doctor does not want the patient to end up in the hospital again."
+      },
+      {
+        "prop_id": "CAP2",
+        "cap_type": "Problem",
+        "canonical_concept": "depression",
+        "category": "Problem",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient reports having been struggling with depression for a year and a half."
+      },
+      {
+        "prop_id": "CAP4",
+        "cap_type": "Problem",
+        "canonical_concept": "depression",
+        "category": "Problem",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "past",
+        "claim_type_tags": [
+          "temporal"
+        ],
+        "proposition_text": "The patient has a past medical history of depression."
+      },
+      {
+        "prop_id": "CAP6",
+        "cap_type": "Problem",
+        "canonical_concept": "kidney transplant",
+        "category": "Problem",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "past",
+        "proposition_text": "The patient has a history of kidney transplant."
+      },
+      {
+        "prop_id": "CAP7",
+        "cap_type": "Symptom",
+        "canonical_concept": "left hand pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports pain in the left hand."
+      },
+      {
+        "prop_id": "CAP9",
+        "cap_type": "Problem",
+        "canonical_concept": "hypoglycemia",
+        "category": "Problem",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "weekend",
+        "proposition_text": "The patient felt woozy over the weekend."
+      },
+      {
+        "prop_id": "CAP10",
+        "cap_type": "Symptom",
+        "canonical_concept": "feeling better",
+        "category": "Symptom",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "improving",
+        "temporality": "since then",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient felt better after returning home."
+      },
+      {
+        "prop_id": "CAP11",
+        "cap_type": "Symptom",
+        "canonical_concept": "following diet closely",
+        "category": "Symptom",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "yes",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient is following their diet closely."
+      },
+      {
+        "prop_id": "CAP12",
+        "cap_type": "Problem",
+        "canonical_concept": "diabetes",
+        "category": "Problem",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "past",
+        "claim_type_tags": [
+          "quantitative"
+        ],
+        "proposition_text": "The patient has type 2 diabetes."
+      },
+      {
+        "prop_id": "CAP16",
+        "cap_type": "Problem",
+        "canonical_concept": "hyperglycemia",
+        "category": "Problem",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient has hyperglycemia."
+      },
+      {
+        "prop_id": "CAP18",
+        "cap_type": "MedicationRequest",
+        "canonical_concept": "lantus",
+        "category": "MedicationRequest",
+        "speaker": "doctor",
+        "predicate": "orders",
+        "status": "uncertain",
+        "visit_state": "planned",
+        "temporality": "current",
+        "claim_type_tags": [
+          "medication",
+          "plan"
+        ],
+        "proposition_text": "The doctor orders a lantus dose increase."
+      },
+      {
+        "prop_id": "CAP19",
+        "cap_type": "TestResult",
+        "canonical_concept": "hemoglobin a1c",
+        "category": "TestResult",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "future",
+        "claim_type_tags": [
+          "quantitative"
+        ],
+        "proposition_text": "The patient's hemoglobin a1c is about 8."
+      },
+      {
+        "prop_id": "CAP21",
+        "cap_type": "TestResult",
+        "canonical_concept": "blood glucose",
+        "category": "TestResult",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "quantitative"
+        ],
+        "proposition_text": "The patient's blood glucose is 162."
+      },
+      {
+        "prop_id": "CAP22",
+        "cap_type": "TestResult",
+        "canonical_concept": "hemoglobin a1c",
+        "category": "TestResult",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "quantitative"
+        ],
+        "proposition_text": "The patient's hemoglobin A1c is 8."
+      },
+      {
+        "prop_id": "CAP24",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "following doctor's orders",
+        "category": "MedicationStatement",
+        "speaker": "patient",
+        "predicate": "orders",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "medication",
+          "plan"
+        ],
+        "proposition_text": "The patient is following doctor's orders regarding medication."
+      },
+      {
+        "prop_id": "CAP25",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "medication",
+        "category": "MedicationStatement",
+        "speaker": "doctor",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The doctor is holding off on medical therapy."
+      },
+      {
+        "prop_id": "CAP26",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "immunotherapy medication",
+        "category": "MedicationStatement",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "medication"
+        ],
+        "proposition_text": "The patient is taking immunotherapy medications."
+      },
+      {
+        "prop_id": "CAP27",
+        "cap_type": "ProblemHistory",
+        "canonical_concept": "hip replacement",
+        "category": "ProblemHistory",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "last week",
+        "proposition_text": "The patient's mother had a hip replacement last week."
+      }
+    ]
+  },
+  "reference_gpt_f1_items": {
+    "active_problems_symptoms": [
+      "denies chest pain",
+      "denies shortness of breath",
+      "denies lightheadedness or dizziness",
+      "depression",
+      "no wheezes, rales, or rhonchi",
+      "Grade 2/6 systolic ejection murmur",
+      "1+ edema in the bilateral lower extremities",
+      "Hyperglycemia",
+      "type 2 diabetes",
+      "Status post renal transplant"
+    ],
+    "negated_findings": [
+      "denies chest pain",
+      "denies shortness of breath",
+      "denies lightheadedness or dizziness"
+    ],
+    "uncertain_findings": [
+      "meditating"
+    ],
+    "medication_treatment": [
+      "Increase Lantus to 20 units at night",
+      "Continue seeing Dr. Reyes for management of his immunosuppression medication"
+    ],
+    "plan_followup": [
+      "Repeat hemoglobin A1c in a few months",
+      "report those to me, as we may need to make further adjustments to his medication",
+      "contact me if he needs anything"
+    ],
+    "_chunk_count": [
+      "5"
+    ]
+  },
+  "summary_gpt_f1_items": {
+    "active_problems_symptoms": [],
+    "negated_findings": [],
+    "uncertain_findings": [],
+    "medication_treatment": [],
+    "plan_followup": [],
+    "_chunk_count": [
+      "1"
+    ]
+  },
+  "gpt_f1_alignment": {
+    "by_category": {
+      "active_problems_symptoms": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "matched_count": 0,
+        "pred_count": 0,
+        "ref_count": 10,
+        "matches": [],
+        "unsupported_pred_items": [],
+        "missing_ref_items": [
+          "denies chest pain",
+          "denies shortness of breath",
+          "denies lightheadedness or dizziness",
+          "depression",
+          "no wheezes, rales, or rhonchi",
+          "Grade 2/6 systolic ejection murmur",
+          "1+ edema in the bilateral lower extremities",
+          "Hyperglycemia",
+          "type 2 diabetes",
+          "Status post renal transplant"
+        ]
+      },
+      "negated_findings": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "matched_count": 0,
+        "pred_count": 0,
+        "ref_count": 3,
+        "matches": [],
+        "unsupported_pred_items": [],
+        "missing_ref_items": [
+          "denies chest pain",
+          "denies shortness of breath",
+          "denies lightheadedness or dizziness"
+        ]
+      },
+      "uncertain_findings": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "matched_count": 0,
+        "pred_count": 0,
+        "ref_count": 1,
+        "matches": [],
+        "unsupported_pred_items": [],
+        "missing_ref_items": [
+          "meditating"
+        ]
+      },
+      "medication_treatment": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "matched_count": 0,
+        "pred_count": 0,
+        "ref_count": 2,
+        "matches": [],
+        "unsupported_pred_items": [],
+        "missing_ref_items": [
+          "Increase Lantus to 20 units at night",
+          "Continue seeing Dr. Reyes for management of his immunosuppression medication"
+        ]
+      },
+      "plan_followup": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "matched_count": 0,
+        "pred_count": 0,
+        "ref_count": 3,
+        "matches": [],
+        "unsupported_pred_items": [],
+        "missing_ref_items": [
+          "Repeat hemoglobin A1c in a few months",
+          "report those to me, as we may need to make further adjustments to his medication",
+          "contact me if he needs anything"
+        ]
+      }
+    }
+  },
+  "reference_nair_concepts": {
+    "sections": [
+      {
+        "heading": "Clinical Note",
+        "section_value": "CHIEF COMPLAINT\nER follow-up.\nHISTORY OF PRESENT ILLNESS\nAlbert Powell is a 62-year-old male with a past medical history significant for depression, type 2 diabetes, and kidney transplant. He is here today for an emergency room follow-up.\nThe patient states he was not staying on top of his blood sugar readings and felt \" woozy \" over the weekend. His wife was concerned that his levels were elevated and wanted to take him to the emergency room. He was not admitted to the hospital. He reports that his mother is in the hospital and he has been eating poorly. He was not monitoring his blood sugars and what he was eating. When they got home from the visit he felt a lot better. Since then, he has been following his diet pretty closely. He continues Lantus insulin at bedtime.\nRegarding his kidney transplant and has been doing pretty well. The patient has been pretty diligent about taking immunotherapy medication and following orders. The last time he saw Dr. Reyes was about 3 weeks ago and everything seemed to be fine.",
+        "medical_concepts": [
+          "depression",
+          "type 2 diabetes",
+          "kidney transplant",
+          "blood sugar",
+          "woozy",
+          "elevated blood sugar",
+          "poor diet",
+          "Lantus insulin",
+          "immunotherapy medication",
+          "hospital admission",
+          "emergency room visit"
+        ]
+      },
+      {
+        "heading": "Clinical Note",
+        "section_value": "Regarding his depression, the patient states it has been about a year and a half, but he has been pretty good with that. He has his moments, but as long as he finds some time to relax in the afternoon and then it seems to work out. He thinks he would probably want to continue that at least for a couple more months and see how it goes. His wife got him into meditation recently and he finds that relaxing so he feels he would like to continue that for a couple more months and see how it goes.\nThe patient denies any chest pain, shortness of breath, lightheadedness or dizziness.\nREVIEW OF SYSTEMS\n• Cardiovascular: Denies chest pain or dyspnea.\n• Respiratory: Denies shortness of breath.\n• Neurological: Denies lightheadedness or dizziness.\n• Psychiatric: Endorses depression.\nPHYSICAL EXAMINATION\n• Constitutional: in no apparent distress.\n• Neck: No carotid bruits appreciable.",
+        "medical_concepts": [
+          "depression",
+          "chest pain",
+          "shortness of breath",
+          "lightheadedness",
+          "dizziness",
+          "dyspnea",
+          "carotid bruits"
+        ]
+      },
+      {
+        "heading": "Clinical Note",
+        "section_value": "• Respiratory: Lungs are clear to auscultation bilaterally. No wheezes, rales, or rhonchi.\n• Cardiovascular: Grade 2/6 systolic ejection murmur.\n• Musculoskeletal: 1+ edema in the bilateral lower extremities.\nRESULTS\nFasting glucose is elevated at 162.\nHemoglobin A1c is elevated at 8.\nASSESSMENT AND PLAN\nAlbert Powell is a 62-year-old male with a past medical history significant for depression, type 2 diabetes, and kidney transplant. He is here today for an emergency room follow-up.\nHyperglycemia.\n• Medical Reasoning: He was recently seen in the emergency department with elevated blood glucose levels. He admits to dietary indiscretion prior to this, but has since improved his diet. His recent blood glucose level was 162, and his recent hemoglobin A1c was 8.",
+        "medical_concepts": [
+          "lungs clear to auscultation",
+          "wheezes",
+          "rales",
+          "rhonchi",
+          "systolic ejection murmur",
+          "edema",
+          "bilateral lower extremity edema",
+          "fasting glucose",
+          "elevated fasting glucose",
+          "hemoglobin A1c",
+          "elevated hemoglobin A1c",
+          "depression",
+          "type 2 diabetes",
+          "kidney transplant",
+          "emergency room follow-up",
+          "hyperglycemia",
+          "elevated blood glucose levels",
+          "dietary indiscretion",
+          "blood glucose level"
+        ]
+      },
+      {
+        "heading": "Clinical Note",
+        "section_value": "• Additional Testing: Repeat hemoglobin A1c in a few months.\n• Medical Treatment: Increase Lantus to 20 units at night.\n• Patient Education and Counseling: I advised him to continue monitoring his blood glucose levels at home and report those to me, as we may need to make further adjustments to his medication.\nDepression.\n• Medical Reasoning: He reports personal stressors over the past year and a half but is doing well overall. He recently started meditating.\n• Medical Treatment: He should continue his current management strategies. We will hold off on medication and therapy at this time.\n• Patient Education and Counseling: The patient was encouraged to contact me if he needs anything.\nStatus post renal transplant.\n• Medical Reasoning: His kidney function appears stable and he has been compliant with his immunotherapy medications.\n• Medical Treatment: Continue seeing Dr. Reyes for management of his immunosuppression medication.",
+        "medical_concepts": [
+          "hemoglobin A1c",
+          "Lantus",
+          "blood glucose levels",
+          "depression",
+          "meditation",
+          "status post renal transplant",
+          "kidney function",
+          "immunotherapy medications",
+          "immunosuppression medication"
+        ]
+      },
+      {
+        "heading": "Clinical Note",
+        "section_value": "• Patient Education and Counseling: He knows to reach out to me if he needs anything.\nPatient Agreements: The patient understands and agrees with the recommended medical treatment plan.",
+        "medical_concepts": []
+      }
+    ],
+    "medical_concepts": [
+      "depression",
+      "type 2 diabetes",
+      "kidney transplant",
+      "blood sugar",
+      "woozy",
+      "elevated blood sugar",
+      "poor diet",
+      "Lantus insulin",
+      "immunotherapy medication",
+      "hospital admission",
+      "emergency room visit",
+      "chest pain",
+      "shortness of breath",
+      "lightheadedness",
+      "dizziness",
+      "dyspnea",
+      "carotid bruits",
+      "lungs clear to auscultation",
+      "wheezes",
+      "rales",
+      "rhonchi",
+      "systolic ejection murmur",
+      "edema",
+      "bilateral lower extremity edema",
+      "fasting glucose",
+      "elevated fasting glucose",
+      "hemoglobin A1c",
+      "elevated hemoglobin A1c",
+      "emergency room follow-up",
+      "hyperglycemia",
+      "elevated blood glucose levels",
+      "dietary indiscretion",
+      "blood glucose level",
+      "Lantus",
+      "blood glucose levels",
+      "meditation",
+      "status post renal transplant",
+      "kidney function",
+      "immunotherapy medications",
+      "immunosuppression medication"
+    ],
+    "section_count": 5
+  },
+  "summary_nair_concepts": {
+    "sections": [
+      {
+        "heading": "S",
+        "section_value": "The patient reports edema in the lower extremities and intermittent dizziness for one week, worse when standing. He denies chest pain, dyspnea, or syncope. The patient was not monitoring what they were eating. The patient feels better after returning home. The patient is following their diet closely. The patient reports no chest pain.",
+        "medical_concepts": [
+          "edema",
+          "lower extremity edema",
+          "dizziness",
+          "chest pain",
+          "dyspnea",
+          "syncope"
+        ]
+      },
+      {
+        "heading": "O",
+        "section_value": "Blood pressure is mildly low. Heart rate is within normal limits. Neurologic examination is nonfocal. The patient's hemoglobin A1c is 8. The patient's blood glucose is 162.",
+        "medical_concepts": [
+          "low blood pressure",
+          "heart rate",
+          "neurologic examination",
+          "hemoglobin A1c",
+          "blood glucose"
+        ]
+      },
+      {
+        "heading": "A",
+        "section_value": "The patient has type 2 diabetes and hyperglycemia. The patient's hemoglobin A1c is 8. The patient's blood glucose is 162.",
+        "medical_concepts": [
+          "type 2 diabetes",
+          "hyperglycemia",
+          "hemoglobin A1c",
+          "blood glucose"
+        ]
+      },
+      {
+        "heading": "P",
+        "section_value": "The doctor wants to increase the patient's lantus to 20 units at night. The patient should find time to relax in the afternoon. The doctor orders a hemoglobin a1c. The patient wants to continue meditation.",
+        "medical_concepts": [
+          "lantus",
+          "hemoglobin a1c",
+          "meditation"
+        ]
+      }
+    ],
+    "medical_concepts": [
+      "edema",
+      "lower extremity edema",
+      "dizziness",
+      "chest pain",
+      "dyspnea",
+      "syncope",
+      "low blood pressure",
+      "heart rate",
+      "neurologic examination",
+      "hemoglobin A1c",
+      "blood glucose",
+      "type 2 diabetes",
+      "hyperglycemia",
+      "lantus",
+      "meditation"
+    ],
+    "section_count": 4
+  },
+  "nair_alignment": {
+    "pred_concepts": [
+      "edema",
+      "lower extremity edema",
+      "dizziness",
+      "chest pain",
+      "dyspnea",
+      "syncope",
+      "low blood pressure",
+      "heart rate",
+      "neurologic examination",
+      "hemoglobin A1c",
+      "blood glucose",
+      "type 2 diabetes",
+      "hyperglycemia",
+      "lantus",
+      "meditation"
+    ],
+    "ref_concepts": [
+      "depression",
+      "type 2 diabetes",
+      "kidney transplant",
+      "blood sugar",
+      "woozy",
+      "elevated blood sugar",
+      "poor diet",
+      "Lantus insulin",
+      "immunotherapy medication",
+      "hospital admission",
+      "emergency room visit",
+      "chest pain",
+      "shortness of breath",
+      "lightheadedness",
+      "dizziness",
+      "dyspnea",
+      "carotid bruits",
+      "lungs clear to auscultation",
+      "wheezes",
+      "rales",
+      "rhonchi",
+      "systolic ejection murmur",
+      "edema",
+      "bilateral lower extremity edema",
+      "fasting glucose",
+      "elevated fasting glucose",
+      "hemoglobin A1c",
+      "elevated hemoglobin A1c",
+      "emergency room follow-up",
+      "hyperglycemia",
+      "elevated blood glucose levels",
+      "dietary indiscretion",
+      "blood glucose level",
+      "Lantus",
+      "blood glucose levels",
+      "meditation",
+      "status post renal transplant",
+      "kidney function",
+      "immunotherapy medications",
+      "immunosuppression medication"
+    ],
+    "precision_alignment": {
+      "found_b": [
+        "edema",
+        "lower extremity edema",
+        "dizziness",
+        "chest pain",
+        "dyspnea",
+        "hemoglobin A1c",
+        "blood glucose",
+        "type 2 diabetes",
+        "hyperglycemia",
+        "lantus",
+        "meditation"
+      ],
+      "not_found_b": [
+        "syncope",
+        "low blood pressure",
+        "heart rate",
+        "neurologic examination"
+      ],
+      "chunk_count": 1,
+      "chunk_results": [
+        {
+          "found_b": [
+            "edema",
+            "lower extremity edema",
+            "dizziness",
+            "chest pain",
+            "dyspnea",
+            "hemoglobin A1c",
+            "blood glucose",
+            "type 2 diabetes",
+            "hyperglycemia",
+            "lantus",
+            "meditation"
+          ],
+          "not_found_b": [
+            "syncope",
+            "low blood pressure",
+            "heart rate",
+            "neurologic examination"
+          ]
+        }
+      ]
+    },
+    "recall_alignment": {
+      "found_b": [
+        "type 2 diabetes",
+        "blood sugar",
+        "elevated blood sugar",
+        "poor diet",
+        "Lantus insulin",
+        "chest pain",
+        "lightheadedness",
+        "dizziness",
+        "dyspnea",
+        "edema",
+        "hemoglobin A1c",
+        "hyperglycemia",
+        "elevated blood glucose levels",
+        "dietary indiscretion",
+        "blood glucose level",
+        "Lantus",
+        "blood glucose levels",
+        "meditation"
+      ],
+      "not_found_b": [
+        "depression",
+        "kidney transplant",
+        "woozy",
+        "immunotherapy medication",
+        "hospital admission",
+        "emergency room visit",
+        "shortness of breath",
+        "carotid bruits",
+        "lungs clear to auscultation",
+        "wheezes",
+        "rales",
+        "rhonchi",
+        "systolic ejection murmur",
+        "bilateral lower extremity edema",
+        "fasting glucose",
+        "elevated fasting glucose",
+        "elevated hemoglobin A1c",
+        "emergency room follow-up",
+        "status post renal transplant",
+        "kidney function",
+        "immunotherapy medications",
+        "immunosuppression medication"
+      ],
+      "chunk_count": 2,
+      "chunk_results": [
+        {
+          "found_b": [
+            "type 2 diabetes",
+            "blood sugar",
+            "elevated blood sugar",
+            "poor diet",
+            "Lantus insulin",
+            "chest pain",
+            "lightheadedness",
+            "dizziness",
+            "dyspnea",
+            "edema"
+          ],
+          "not_found_b": [
+            "depression",
+            "kidney transplant",
+            "immunotherapy medication",
+            "hospital admission",
+            "emergency room visit",
+            "shortness of breath",
+            "carotid bruits",
+            "lungs clear to auscultation",
+            "wheezes",
+            "rales",
+            "rhonchi",
+            "systolic ejection murmur",
+            "bilateral lower extremity edema"
+          ]
+        },
+        {
+          "found_b": [
+            "hemoglobin A1c",
+            "hyperglycemia",
+            "elevated blood glucose levels",
+            "dietary indiscretion",
+            "blood glucose level",
+            "Lantus",
+            "blood glucose levels",
+            "meditation"
+          ],
+          "not_found_b": [
+            "fasting glucose",
+            "elevated fasting glucose",
+            "emergency room follow-up",
+            "status post renal transplant",
+            "kidney function",
+            "immunotherapy medications",
+            "immunosuppression medication"
+          ]
+        }
+      ]
+    }
+  },
+  "semantic_cap_audit": {
+    "source_cap_recall": [
+      {
+        "cap_id": "P1",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P2",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P3",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P4",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P5",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P6",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P7",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P8",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P9",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P10",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P11",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P12",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P13",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P14",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P15",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P16",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P1",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P2",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P3",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P4",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P5",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P6",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P7",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P8",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P9",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P10",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P11",
+        "judgment": "missing",
+        "reason": null
+      }
+    ],
+    "summary_cap_precision": [
+      {
+        "cap_id": "P1",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P2",
+        "judgment": "unsupported",
+        "reason": null
+      },
+      {
+        "cap_id": "P3",
+        "judgment": "unsupported",
+        "reason": null
+      },
+      {
+        "cap_id": "P4",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P5",
+        "judgment": "unsupported",
+        "reason": null
+      },
+      {
+        "cap_id": "P6",
+        "judgment": "unsupported",
+        "reason": null
+      },
+      {
+        "cap_id": "P7",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P8",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P9",
+        "judgment": "contradicted",
+        "reason": null
+      },
+      {
+        "cap_id": "P10",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P11",
+        "judgment": "partial",
+        "reason": null
+      }
+    ],
+    "metrics": {
+      "semantic_cap_precision": 0.4091,
+      "semantic_cap_recall": 0.537,
+      "semantic_cap_f1": 0.4644,
+      "semantic_cap_precision_supported_count": 3,
+      "semantic_cap_precision_partial_count": 3,
+      "semantic_cap_precision_denominator": 11,
+      "semantic_cap_recall_supported_count": 13,
+      "semantic_cap_recall_partial_count": 3,
+      "semantic_cap_recall_denominator": 27,
+      "semantic_cap_low_value_source_count": 0,
+      "semantic_cap_low_value_summary_count": 0,
+      "semantic_cap_missing_count": 11,
+      "semantic_cap_unsupported_count": 4,
+      "semantic_cap_contradicted_source_count": 0,
+      "semantic_cap_contradicted_summary_count": 1
+    }
+  },
+  "safety_judgment": null,
+  "section_judgment": {
+    "section_miscategorizations": [
+      {
+        "text": "The patient's hemoglobin A1c is 8.",
+        "current_section": "A",
+        "expected_section": "O",
+        "severity": "major",
+        "reason": "This is an objective lab result and should be documented under Objective rather than repeated in the Assessment."
+      },
+      {
+        "text": "The patient's blood glucose is 162.",
+        "current_section": "A",
+        "expected_section": "O",
+        "severity": "major",
+        "reason": "This is an objective lab value and belongs in the Objective section, not in the Assessment."
+      },
+      {
+        "text": "The doctor orders a hemoglobin a1c.",
+        "current_section": "P",
+        "expected_section": "P",
+        "severity": "minor",
+        "reason": "Content is correctly in the Plan, but the note already documents a hemoglobin A1c result in Objective; without clarification that this is a future follow-up lab, this can be confusing. However, it is still fundamentally a plan/order, so this is only a minor organizational concern."
+      }
+    ],
+    "summary_statistics": {
+      "section_appropriateness_score": 0.7,
+      "section_miscategorization_count": 3,
+      "major_section_miscategorization_count": 2
+    }
+  },
+  "pdsqi_judgment": {
+    "citation_applicable": 0,
+    "citation": 0,
+    "accurate": 2,
+    "thorough": 2,
+    "useful": 2,
+    "organized": 3,
+    "comprehensible": 4,
+    "succinct": 3,
+    "abstraction": 1,
+    "synthesized": 2,
+    "voice_summ": 0,
+    "voice_note": 0,
+    "pdsqi_core_mean": 2.5714
+  },
+  "llm_checklist_judgment": {
+    "content_preservation_core": 2,
+    "noise_suppression": 4,
+    "lay_expression_preservation": 2,
+    "state_update_fidelity": 2,
+    "temporality_preservation": 2,
+    "problem_evidence_linkage": 2,
+    "state_plan_separation": 3,
+    "section_organization_appropriateness": 2,
+    "overall_clinical_usability": 2,
+    "clinically_meaningful_omission": "Yes",
+    "clinically_concerning_hallucination": "Yes",
+    "checklist_a_mean": 2.6667,
+    "checklist_b_mean": 2.0,
+    "checklist_c_mean": 2.3333,
+    "llm_checklist_abc_mean": 2.375,
+    "llm_checklist_mean_no_usability": 2.375,
+    "llm_checklist_total_score": 21,
+    "llm_checklist_mean": 2.3333,
+    "llm_checklist_meaningful_omission_yes": 1,
+    "llm_checklist_concerning_hallucination_yes": 1
+  },
+  "metrics": {
+    "case_id": "D2N090",
+    "method": "cap_event_only",
+    "template": "soap",
+    "source_cap_count": 27,
+    "event_plan_count": 1,
+    "summary_cap_count": 11,
+    "cap_matched_count": 9,
+    "cap_precision": 0.8182,
+    "cap_recall": 0.3333,
+    "cap_f1": 0.4737,
+    "unsupported_summary_cap_count": 2,
+    "missing_source_cap_count": 18,
+    "summary_runtime_seconds": null,
+    "summary_cap_runtime_seconds": 26.713,
+    "event_plan_runtime_seconds": null,
+    "rouge_l_f1_vs_reference": 0.1398,
+    "token_f1_vs_reference": 0.2876,
+    "gptf1_macro_f1": 0.0,
+    "nair_gpt_precision": 0.7333,
+    "nair_gpt_recall": 0.45,
+    "nair_gpt_f1": 0.5577,
+    "semantic_cap_precision": 0.4091,
+    "semantic_cap_recall": 0.537,
+    "semantic_cap_f1": 0.4644,
+    "hallucination_count": null,
+    "major_hallucination_count": null,
+    "omission_count": null,
+    "major_omission_count": null,
+    "section_appropriateness_score": 0.7,
+    "section_miscategorization_count": 3,
+    "major_section_miscategorization_count": 2,
+    "pdsqi_core_mean": 2.5714,
+    "pdsqi_accurate": 2,
+    "pdsqi_thorough": 2,
+    "llm_checklist_total_score": 21,
+    "llm_checklist_mean": 2.3333,
+    "llm_checklist_mean_no_usability": 2.375,
+    "checklist_a_mean": 2.6667,
+    "checklist_b_mean": 2.0,
+    "checklist_c_mean": 2.3333,
+    "llm_checklist_abc_mean": 2.375,
+    "content_preservation_core": 2,
+    "noise_suppression": 4,
+    "lay_expression_preservation": 2,
+    "state_update_fidelity": 2,
+    "temporality_preservation": 2,
+    "problem_evidence_linkage": 2,
+    "state_plan_separation": 3,
+    "section_organization_appropriateness": 2,
+    "overall_clinical_usability": 2,
+    "llm_checklist_meaningful_omission_yes": 1,
+    "llm_checklist_concerning_hallucination_yes": 1,
+    "gptf1_active_problems_symptoms_precision": 0.0,
+    "gptf1_active_problems_symptoms_recall": 0.0,
+    "gptf1_active_problems_symptoms_f1": 0.0,
+    "gptf1_active_problems_symptoms_pred_count": 0,
+    "gptf1_active_problems_symptoms_ref_count": 10,
+    "gptf1_negated_findings_precision": 0.0,
+    "gptf1_negated_findings_recall": 0.0,
+    "gptf1_negated_findings_f1": 0.0,
+    "gptf1_negated_findings_pred_count": 0,
+    "gptf1_negated_findings_ref_count": 3,
+    "gptf1_uncertain_findings_precision": 0.0,
+    "gptf1_uncertain_findings_recall": 0.0,
+    "gptf1_uncertain_findings_f1": 0.0,
+    "gptf1_uncertain_findings_pred_count": 0,
+    "gptf1_uncertain_findings_ref_count": 1,
+    "gptf1_medication_treatment_precision": 0.0,
+    "gptf1_medication_treatment_recall": 0.0,
+    "gptf1_medication_treatment_f1": 0.0,
+    "gptf1_medication_treatment_pred_count": 0,
+    "gptf1_medication_treatment_ref_count": 2,
+    "gptf1_plan_followup_precision": 0.0,
+    "gptf1_plan_followup_recall": 0.0,
+    "gptf1_plan_followup_f1": 0.0,
+    "gptf1_plan_followup_pred_count": 0,
+    "gptf1_plan_followup_ref_count": 3,
+    "nair_pred_concept_count": 15,
+    "nair_ref_concept_count": 40,
+    "nair_precision_match_count": 11,
+    "nair_recall_match_count": 18,
+    "semantic_cap_precision_supported_count": 3,
+    "semantic_cap_precision_partial_count": 3,
+    "semantic_cap_precision_denominator": 11,
+    "semantic_cap_recall_supported_count": 13,
+    "semantic_cap_recall_partial_count": 3,
+    "semantic_cap_recall_denominator": 27,
+    "semantic_cap_low_value_source_count": 0,
+    "semantic_cap_low_value_summary_count": 0,
+    "semantic_cap_missing_count": 11,
+    "semantic_cap_unsupported_count": 4,
+    "semantic_cap_contradicted_source_count": 0,
+    "semantic_cap_contradicted_summary_count": 1,
+    "pdsqi_useful": 2,
+    "pdsqi_organized": 3,
+    "pdsqi_comprehensible": 4,
+    "pdsqi_succinct": 3,
+    "pdsqi_synthesized": 2
+  }
+}

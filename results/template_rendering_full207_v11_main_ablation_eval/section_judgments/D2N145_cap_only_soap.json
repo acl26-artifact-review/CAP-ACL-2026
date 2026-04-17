@@ -1,0 +1,30 @@
+{
+  "section_miscategorizations": [
+    {
+      "text": "The patient reports redness.",
+      "current_section": "O",
+      "expected_section": "S",
+      "severity": "major",
+      "reason": "This is a patient-reported symptom and should be in the Subjective section, not in Objective findings."
+    },
+    {
+      "text": "The patient reports a rash.",
+      "current_section": "O",
+      "expected_section": "S",
+      "severity": "major",
+      "reason": "This is a patient-reported symptom; only the clinician-observed rash belongs in Objective."
+    },
+    {
+      "text": "The patient is worried about elidel.",
+      "current_section": "A",
+      "expected_section": "S",
+      "severity": "minor",
+      "reason": "This is the patient's reported concern rather than the clinician's diagnostic assessment; it fits better in Subjective but does not substantially distort the clinical meaning in Assessment."
+    }
+  ],
+  "summary_statistics": {
+    "section_appropriateness_score": 0.9,
+    "section_miscategorization_count": 3,
+    "major_section_miscategorization_count": 2
+  }
+}

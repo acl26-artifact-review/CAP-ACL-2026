@@ -1,0 +1,79 @@
+Case: D2N132
+
+Problem List and Visit State Tracking
+
+Problem List
+- back pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T0
+  Summary: The patient reports back pain.
+  ClusterId: CL1
+  TemporalProfile: current
+  Updates:
+  - CAP9: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T0 :: The patient reports back pain.
+- fall | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T3
+  Summary: The patient fell down a staircase.
+  ClusterId: CL2
+  TemporalProfile: past
+  Updates:
+  - CAP5: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=past turns=T3 :: The patient fell down a staircase.
+- back problem | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T11
+  Summary: The patient has a back problem.
+  ClusterId: CL3
+  TemporalProfile: current
+  Updates:
+  - CAP7: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T11 :: The patient has a back problem.
+- twisting | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T11
+  Summary: The patient twisted their back.
+  ClusterId: CL4
+  TemporalProfile: past
+  Updates:
+  - CAP10: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=past turns=T11 :: The patient twisted their back.
+- pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T13,T15,T19,T35
+  Summary: The patient reports stiffness with rotation in their lower back.
+  ClusterId: CL5
+  TemporalProfile: current
+  Updates:
+  - CAP1: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T13 :: The patient reports stiffness with rotation in their lower back.
+  - CAP2: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T15 :: The patient's pain is worse when lying flat.
+  - CAP3: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T15 :: The patient's pain is worse with twisting motion.
+  - CAP11: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T15 :: The patient reports pain.
+  - CAP4: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T19 :: The patient reports pain shooting down their legs.
+  - CAP12: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T35 :: The patient reports pain.
+- lumbar fusion | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T19
+  Summary: The patient had a lumbar fusion.
+  ClusterId: CL6
+  TemporalProfile: past, prior
+  Updates:
+  - CAP6: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=past turns=T19 :: The patient had a lumbar fusion.
+  - CAP8: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=prior turns=T19 :: The patient had a lumbar fusion.
+
+Medication Tracking
+- [MedicationState] ibuprofen | verification_status=confirmed | clinical_status=active | modalities=plan | speakers=doctor | evidence=T31
+  Summary: The doctor prescribes ibuprofen at 800mg, three times a day, with food.
+  ClusterId: CL8
+  TemporalProfile: current
+  CurrentRegimens:
+  - The doctor prescribes ibuprofen at 800mg, three times a day, with food. (T31)
+  Updates:
+  - CAP18: content_source=doctor modality=plan verification_status=confirmed clinical_status=active temporality=current turns=T31 :: The doctor prescribes ibuprofen at 800mg, three times a day, with food.
+
+Other Structured States
+- [ExamFinding] normal exam | verification_status=confirmed | clinical_status=active | modalities=exam | speakers=doctor | evidence=T28
+  Summary: The exam is essentially normal, except for the fusion.
+  ClusterId: CL7
+  TemporalProfile: current
+- [Plan] ice | verification_status=confirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T34
+  Summary: The doctor recommends alternating ice and heat on the back.
+  ClusterId: CL9
+  TemporalProfile: future
+- [FollowUp] follow_up | verification_status=confirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T36
+  Summary: The doctor wants the patient to return for follow-up in one week if symptoms worsen.
+  ClusterId: CL10
+  TemporalProfile: next week
+- [Plan] note | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T40
+  Summary: The doctor will close out the note.
+  ClusterId: CL11
+  TemporalProfile: future
+- [Plan] medication | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T40
+  Summary: The doctor orders medications and procedures.
+  ClusterId: CL12
+  TemporalProfile: future

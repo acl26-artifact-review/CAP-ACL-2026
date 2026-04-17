@@ -1,0 +1,120 @@
+Case: D2N160
+
+Problem List and Visit State Tracking
+
+Problem List
+- lacrosse | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T1
+  Summary: The patient injured his elbow while playing lacrosse.
+  ClusterId: CL1
+  TemporalProfile: past week
+  Updates:
+  - CAP18: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=past week turns=T1 :: The patient injured his elbow while playing lacrosse.
+- children | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T3
+  Summary: The patient was playing with his children.
+  ClusterId: CL2
+  TemporalProfile: past week
+  Updates:
+  - CAP19: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=past week turns=T3 :: The patient was playing with his children.
+- right elbow pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T5
+  Summary: The patient reports pain in the right elbow.
+  ClusterId: CL3
+  TemporalProfile: current
+  Updates:
+  - CAP3: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T5 :: The patient reports pain in the right elbow.
+- hit | verification_status=unconfirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T11
+  Summary: The patient was hit by his child.
+  ClusterId: CL4
+  TemporalProfile: past week
+  Updates:
+  - CAP20: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=past week turns=T11 :: The patient was hit by his child.
+- sharp pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T12,T13,T34,T38
+  Summary: The patient reports a sharp pain.
+  ClusterId: CL5
+  TemporalProfile: current
+  Updates:
+  - CAP11: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T12 :: The patient reports pain.
+  - CAP7: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T13 :: The patient reports a sharp pain.
+  - CAP1: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T34 :: The patient reports pain when the elbow is pressed.
+  - CAP2: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T38 :: The patient reports pain with elbow flexion and extension.
+- radiating pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T17
+  Summary: The patient reports pain radiating down the forearm.
+  ClusterId: CL6
+  TemporalProfile: current
+  Updates:
+  - CAP4: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T17 :: The patient reports pain radiating down the forearm.
+- advil | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T19
+  Summary: The patient tried taking advil.
+  ClusterId: CL7
+  TemporalProfile: past
+  Updates:
+  - CAP9: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=past turns=T19 :: The patient tried taking advil.
+- pain relief | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T21
+  Summary: The patient thought advil helped some.
+  ClusterId: CL10
+  TemporalProfile: past
+  Updates:
+  - CAP8: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=past turns=T21 :: The patient thought advil helped some.
+- hypertension | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=doctor | evidence=T22
+  Summary: The patient has hypertension.
+  ClusterId: CL11
+  TemporalProfile: current
+  Updates:
+  - CAP12: content_source=doctor modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T22 :: The patient has hypertension.
+- left hand pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T25
+  Summary: The patient reports pain in the left hand.
+  ClusterId: CL13
+  TemporalProfile: current
+  Updates:
+  - CAP5: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T25 :: The patient reports pain in the left hand.
+- grade 2 murmur | verification_status=confirmed | clinical_status=active | modalities=unknown | speakers=doctor | evidence=T31
+  Summary: The patient has a grade 2 murmur.
+  ClusterId: CL16
+  TemporalProfile: current
+  Updates:
+  - CAP6: content_source=doctor modality=unknown verification_status=confirmed clinical_status=active temporality=current turns=T31 :: The patient has a grade 2 murmur.
+- chest pain | verification_status=refuted | clinical_status=historical | modalities=interview | speakers=patient | evidence=T32
+  Summary: The patient denies chest pain.
+  ClusterId: CL17
+  TemporalProfile: current
+  Updates:
+  - CAP10: content_source=patient modality=interview verification_status=refuted clinical_status=historical temporality=current turns=T32 :: The patient denies chest pain.
+
+Medication Tracking
+- [MedicationState] forget | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T19
+  Summary: The patient usually forgets to take medications.
+  ClusterId: CL8
+  TemporalProfile: past
+  CurrentRegimens:
+  - The patient usually forgets to take medications. (T19)
+  Updates:
+  - CAP15: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=past turns=T19 :: The patient usually forgets to take medications.
+- [MedicationState] advil | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T19
+  Summary: The patient tried taking Advil.
+  ClusterId: CL9
+  TemporalProfile: past
+  CurrentRegimens:
+  - The patient tried taking Advil. (T19)
+  Updates:
+  - CAP17: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=past turns=T19 :: The patient tried taking Advil.
+- [MedicationState] lisinopril | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=doctor | evidence=T22
+  Summary: The patient is taking twenty mg of lisinopril daily.
+  ClusterId: CL12
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient is taking twenty mg of lisinopril daily. (T22)
+  Updates:
+  - CAP14: content_source=doctor modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T22 :: The patient is taking twenty mg of lisinopril daily.
+- [MedicationState] metformin | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=clinician | evidence=T28
+  Summary: The patient is taking metformin daily.
+  ClusterId: CL14
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient is taking metformin daily. (T28)
+  Updates:
+  - CAP16: content_source=clinician modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T28 :: The patient is taking metformin daily.
+
+Other Structured States
+- [TestResult] blood sugar | verification_status=confirmed | clinical_status=active | modalities=exam | speakers=doctor | evidence=T30
+  Summary: The patient's blood sugar is between eighty and one hundred.
+  ClusterId: CL15
+  TemporalProfile: current

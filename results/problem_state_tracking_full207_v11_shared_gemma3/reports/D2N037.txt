@@ -1,0 +1,144 @@
+Case: D2N037
+
+Problem List and Visit State Tracking
+
+Problem List
+- left elbow pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T1,T12,T28,T32,T56,T7
+  Summary: The patient reports pain in the left elbow.
+  ClusterId: CL1
+  TemporalProfile: current, year and a half ago
+  Updates:
+  - CAP12: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=year and a half ago turns=T1 :: The patient reports pain in both elbows.
+  - CAP15: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T7 :: The patient reports extremely sore pain.
+  - CAP3: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T12,T12 :: The patient reports pain in both elbows.
+  - CAP8: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T28 :: The patient reports pain with flexion and extension.
+  - CAP20: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T28 :: The patient reports pain.
+  - CAP7: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T28 :: The patient reports pain in the left elbow.
+  - CAP5: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T32 :: The patient reports pain on the medial side of the elbow.
+  - CAP17: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T56 :: The patient reports pain with torsion.
+- elbow injury | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T1,T9
+  Summary: The patient has an elbow injury.
+  ClusterId: CL2
+  TemporalProfile: current, year and a half ago
+  Updates:
+  - CAP16: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T1 :: The patient has an elbow injury.
+  - CAP32: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=year and a half ago turns=T9 :: The patient has had elbow pain for approximately one year and a half.
+- limited range of motion | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T30
+  Summary: The patient reports limited range of motion.
+  ClusterId: CL5
+  TemporalProfile: current
+  Updates:
+  - CAP13: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T30 :: The patient reports limited range of motion.
+- left hand pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T54
+  Summary: The patient reports pain in the left hand.
+  ClusterId: CL10
+  TemporalProfile: current
+  Updates:
+  - CAP2: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T54,T54 :: The patient reports pain in the left hand.
+- medial epicondylitis | verification_status=unconfirmed | clinical_status=planned | modalities=interview | speakers=doctor | evidence=T58
+  Summary: The doctor believes Dylan has medial epicondylitis.
+  ClusterId: CL11
+  TemporalProfile: future
+  Updates:
+  - CAP1: content_source=doctor modality=interview verification_status=unconfirmed clinical_status=planned temporality=future turns=T58 :: The doctor believes Dylan has medial epicondylitis.
+- golfing | verification_status=unconfirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T61
+  Summary: The patient has had this for a long time.
+  ClusterId: CL12
+  TemporalProfile: long time
+  Updates:
+  - CAP6: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=long time turns=T61 :: The patient has had this for a long time.
+- pitching | verification_status=unconfirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T63
+  Summary: The patient has not been pitching recently.
+  ClusterId: CL13
+  TemporalProfile: past year and a half
+  Updates:
+  - CAP14: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=past year and a half turns=T63 :: The patient has not been pitching recently.
+- tendonitis | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T73
+  Summary: The patient describes pain similar to dry needling.
+  ClusterId: CL16
+  TemporalProfile: current
+  Updates:
+  - CAP9: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T73 :: The patient describes pain similar to dry needling.
+- injection | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=doctor | evidence=T79
+  Summary: The doctor describes injecting blood into the tendon.
+  ClusterId: CL17
+  TemporalProfile: past
+  Updates:
+  - CAP10: content_source=doctor modality=interview verification_status=confirmed clinical_status=historical temporality=past turns=T79 :: The doctor describes injecting blood into the tendon.
+- activation of healing | verification_status=unconfirmed | clinical_status=planned | modalities=interview | speakers=doctor,patient | evidence=T81
+  Summary: The doctor states that the injection activates healing.
+  ClusterId: CL18
+  TemporalProfile: future, past
+  Updates:
+  - CAP11: content_source=doctor modality=interview verification_status=unconfirmed clinical_status=planned temporality=future turns=T81 :: The doctor states that the injection activates healing.
+  - CAP18: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=past turns=T81 :: The patient has heard about healing.
+- issues | verification_status=confirmed | clinical_status=active | modalities=assessment | speakers=doctor | evidence=T86
+  Summary: The patient has issues.
+  ClusterId: CL19
+  TemporalProfile: current
+  Updates:
+  - CAP21: content_source=doctor modality=assessment verification_status=confirmed clinical_status=active temporality=current turns=T86 :: The patient has issues.
+- newborn | verification_status=confirmed | clinical_status=planned | modalities=assessment | speakers=doctor | evidence=T88
+  Summary: The doctor wants to ensure the patient is healed for the newborn.
+  ClusterId: CL20
+  TemporalProfile: future
+  Updates:
+  - CAP4: content_source=doctor modality=assessment verification_status=confirmed clinical_status=planned temporality=future turns=T88 :: The doctor wants to ensure the patient is healed for the newborn.
+- hand pain | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T91
+  Summary: The patient reports hand pain.
+  ClusterId: CL22
+  TemporalProfile: current
+  Updates:
+  - CAP19: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T91 :: The patient reports hand pain.
+
+Medication Tracking
+- [MedicationState] ibuprofen | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T13
+  Summary: The patient takes ibuprofen 800 milligrams three times a day.
+  ClusterId: CL3
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient takes ibuprofen 800 milligrams three times a day. (T13)
+  Updates:
+  - CAP30: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T13 :: The patient takes ibuprofen 800 milligrams three times a day.
+- [MedicationChange] whole blood transfusion | verification_status=unconfirmed | clinical_status=planned | modalities=interview | speakers=doctor | evidence=T68
+  Summary: The doctor will consider a whole blood transfusion.
+  ClusterId: CL15
+  TemporalProfile: future
+  PlannedChanges:
+  - The doctor will consider a whole blood transfusion. (T68)
+  Updates:
+  - CAP31: content_source=doctor modality=interview verification_status=unconfirmed clinical_status=planned temporality=future turns=T68 :: The doctor will consider a whole blood transfusion.
+- [MedicationChange] scheduling | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T88
+  Summary: The doctor wants to schedule the patient for the procedure.
+  ClusterId: CL21
+  TemporalProfile: future
+  PlannedChanges:
+  - The doctor wants to schedule the patient for the procedure. (T88)
+  Updates:
+  - CAP22: content_source=doctor modality=plan verification_status=unconfirmed clinical_status=planned temporality=future turns=T88 :: The doctor wants to schedule the patient for the procedure.
+
+Other Structured States
+- [Plan] icing | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T16
+  Summary: The doctor recommends icing.
+  ClusterId: CL4
+  TemporalProfile: current
+- [ExamFinding] palpation | verification_status=confirmed | clinical_status=active | modalities=exam | speakers=doctor | evidence=T32
+  Summary: The doctor palpated the patient's elbow.
+  ClusterId: CL6
+  TemporalProfile: current
+- [ExamFinding] normal sensation | verification_status=confirmed | clinical_status=stable | modalities=exam | speakers=doctor | evidence=T36,T42
+  Summary: The patient has normal sensation in their fingers.
+  ClusterId: CL7
+  TemporalProfile: current
+- [ExamFinding] no pain with palpation | verification_status=confirmed | clinical_status=stable | modalities=exam | speakers=doctor | evidence=T36
+  Summary: No pain with palpation outside of the elbow.
+  ClusterId: CL8
+  TemporalProfile: current
+- [ExamFinding] equal pulses | verification_status=confirmed | clinical_status=stable | modalities=exam | speakers=doctor | evidence=T44
+  Summary: Pulses are equal in all extremities.
+  ClusterId: CL9
+  TemporalProfile: current
+- [Plan] mri | verification_status=confirmed | clinical_status=planned | modalities=interview | speakers=doctor | evidence=T64
+  Summary: A cervical MRI is planned.
+  ClusterId: CL14
+  TemporalProfile: soon

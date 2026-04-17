@@ -1,0 +1,61 @@
+{
+  "events": [
+    {
+      "event_id": "CL11",
+      "event_type": "ProblemOrientedNoteBundle",
+      "canonical_concept": "diabetes",
+      "visit_state": "active",
+      "status": "affirmed",
+      "temporality": "today",
+      "speaker_source": "patient,doctor,test_result",
+      "clinical_priority": "high",
+      "title": "diabetes",
+      "event_summary": "Problem-oriented bundle for diabetes.",
+      "supporting_cap_ids": [
+        "CAP4",
+        "CAP6",
+        "CAP7"
+      ],
+      "anchor_problem_cap_id": "CAP4",
+      "anchor_problem": "diabetes",
+      "S_cap_ids": [
+        "CAP4"
+      ],
+      "O_cap_ids": [
+        "CAP6",
+        "CAP7"
+      ],
+      "supporting_evidence": [
+        "The patient continues metformin for diabetes.",
+        "The patient's hemoglobin a1c last time i looked at epic was about six . eight.",
+        "A hemoglobin a1c will be ordered."
+      ],
+      "current_state": [
+        "The patient continues metformin for diabetes."
+      ],
+      "key_slots": {
+        "source_modalities": "interview, test_result",
+        "temporal_profile": "current, last time i looked at epic, today",
+        "anchor_cluster_type": "ProblemState",
+        "anchor_primary_cap_type": "Problem",
+        "bundle_concepts": "diabetes; hemoglobin a1c",
+        "history_context": "",
+        "related_factors": "",
+        "visit_primary": "true",
+        "render_in_note": "true",
+        "assessment_fallback": "The patient has diabetes.",
+        "bundle_design": "problem_oriented_note_bundle"
+      },
+      "render_sections": [
+        "S",
+        "O",
+        "A",
+        "P",
+        "History of Present Illness",
+        "Findings",
+        "Assessment",
+        "Plan"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "section_miscategorizations": [
+    {
+      "text": "The patient's A1C was 7.3% and he is currently taking 500mg of metformin daily.",
+      "current_section": "O",
+      "expected_section": "S",
+      "severity": "major",
+      "reason": "The A1C value is an objective lab result and belongs in O, but the statement also embeds the fact that the patient is currently taking metformin, which is an existing medication regimen and per instructions belongs in S unless framed as a treatment change or order. Combining them in O misplaces the medication information."
+    },
+    {
+      "text": "His glucose levels before meals have been in the low 100s.",
+      "current_section": "O",
+      "expected_section": "S",
+      "severity": "minor",
+      "reason": "This appears to be a trend of home glucose readings rather than an in-clinic measurement. Per instructions, home measurements reported by the patient belong in S. However, as a numeric clinical value it is not highly misleading in O, so this is a minor issue."
+    },
+    {
+      "text": "Schedule follow-up in urology in 2-3 days after stone passage, or sooner if symptoms persist.",
+      "current_section": "P",
+      "expected_section": "P",
+      "severity": "minor",
+      "reason": "The content is appropriate for the Plan section, but the phrasing suggests scheduling follow-up in urology after stone passage when the earlier referral to urology is already in the same Plan. This is more of an internal plan-logic issue than a section misplacement; included here as a minor organizational concern."
+    }
+  ],
+  "summary_statistics": {
+    "section_appropriateness_score": 0.7,
+    "section_miscategorization_count": 3,
+    "major_section_miscategorization_count": 1
+  }
+}

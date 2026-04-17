@@ -1,0 +1,30 @@
+{
+  "section_miscategorizations": [
+    {
+      "text": "The patient reports right upper quadrant tenderness with mild to moderate tenderness.",
+      "current_section": "O",
+      "expected_section": "S",
+      "severity": "major",
+      "reason": "This is explicitly framed as a patient-reported symptom rather than an examiner-observed physical finding, so it belongs in the Subjective section."
+    },
+    {
+      "text": "The patient's right upper quadrant ultrasound is ordered.",
+      "current_section": "O",
+      "expected_section": "P",
+      "severity": "major",
+      "reason": "An order for imaging is a management action and should be documented in the Plan, not in Objective findings."
+    },
+    {
+      "text": "The doctor ordered a right upper quadrant ultrasound.",
+      "current_section": "P",
+      "expected_section": "P",
+      "severity": "minor",
+      "reason": "This duplicates the imaging order already (incorrectly) listed in Objective; while the Plan placement here is correct, the duplication across sections creates organizational confusion."
+    }
+  ],
+  "summary_statistics": {
+    "section_appropriateness_score": 0.7,
+    "section_miscategorization_count": 3,
+    "major_section_miscategorization_count": 2
+  }
+}

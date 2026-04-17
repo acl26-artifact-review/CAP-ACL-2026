@@ -1,0 +1,51 @@
+{
+  "section_miscategorizations": [
+    {
+      "text": "The patient denies shortness of breath.",
+      "current_section": "O",
+      "expected_section": "S",
+      "severity": "major",
+      "reason": "A denial of a symptom is part of the review of systems and is patient-reported subjective information, not an observed finding."
+    },
+    {
+      "text": "The patient is checking their blood pressure at home.",
+      "current_section": "A",
+      "expected_section": "S",
+      "severity": "minor",
+      "reason": "This is a description of the patient's current self-monitoring behavior, which is subjective history rather than an assessment or diagnostic impression."
+    },
+    {
+      "text": "The patient reports experiencing symptoms consistent with anxiety.",
+      "current_section": "A",
+      "expected_section": "S",
+      "severity": "major",
+      "reason": "This sentence explicitly describes patient-reported symptoms; it belongs in the subjective history rather than the clinician's assessment section."
+    },
+    {
+      "text": "The patient is taking lisinopril 10 milligrams daily.",
+      "current_section": "P",
+      "expected_section": "S",
+      "severity": "major",
+      "reason": "This describes a current medication regimen, which per instructions belongs in the Subjective section unless framed as a change or new order."
+    },
+    {
+      "text": "The patient is currently taking the full dose of hydrochlorothiazide.",
+      "current_section": "P",
+      "expected_section": "S",
+      "severity": "major",
+      "reason": "This is the patient's current medication state, not a new order or change, so it should be documented in the Subjective section."
+    },
+    {
+      "text": "The patient is currently taking half of the lisinopril dose.",
+      "current_section": "P",
+      "expected_section": "S",
+      "severity": "major",
+      "reason": "This is an existing dosing regimen being reported, which belongs in the Subjective section rather than the Plan."
+    }
+  ],
+  "summary_statistics": {
+    "section_appropriateness_score": 0.6,
+    "section_miscategorization_count": 6,
+    "major_section_miscategorization_count": 5
+  }
+}

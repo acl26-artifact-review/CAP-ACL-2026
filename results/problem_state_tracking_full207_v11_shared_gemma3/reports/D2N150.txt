@@ -1,0 +1,65 @@
+Case: D2N150
+
+Problem List and Visit State Tracking
+
+Problem List
+- knee pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T8
+  Summary: The patient reports knee pain rated 6 to 7 on a scale of 1 to 10.
+  ClusterId: CL1
+  TemporalProfile: current
+  Updates:
+  - CAP1: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T8 :: The patient reports knee pain rated 6 to 7 on a scale of 1 to 10.
+- swelling | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T9
+  Summary: The patient reports swelling in the knee.
+  ClusterId: CL2
+  TemporalProfile: current
+  Updates:
+  - CAP6: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T9 :: The patient reports swelling in the knee.
+- instability | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T15
+  Summary: The patient reports a feeling of looseness in the knee.
+  ClusterId: CL4
+  TemporalProfile: current
+  Updates:
+  - CAP3: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T15 :: The patient reports a feeling of looseness in the knee.
+- limp | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T18
+  Summary: The patient reports a limp.
+  ClusterId: CL5
+  TemporalProfile: current
+  Updates:
+  - CAP7: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T18 :: The patient reports a limp.
+- pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T19,T20,T24
+  Summary: The patient reports pain to palpation at the medial joint line.
+  ClusterId: CL6
+  TemporalProfile: current
+  Updates:
+  - CAP5: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T19 :: The patient reports pain in the knee.
+  - CAP2: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T20 :: The patient reports pain to palpation at the medial joint line.
+  - CAP4: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T24 :: The patient reports pain in the left hand.
+
+Medication Tracking
+- [MedicationState] anti-inflammatories | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T11
+  Summary: The patient is taking anti-inflammatories.
+  ClusterId: CL3
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient is taking anti-inflammatories. (T11)
+  Updates:
+  - CAP13: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T11 :: The patient is taking anti-inflammatories.
+
+Other Structured States
+- [Plan] limit work activities | verification_status=unconfirmed | clinical_status=planned | modalities=interview | speakers=doctor | evidence=T23
+  Summary: The doctor recommends limiting work activities.
+  ClusterId: CL7
+  TemporalProfile: future
+- [Plan] move legs | verification_status=unconfirmed | clinical_status=planned | modalities=interview | speakers=doctor | evidence=T24
+  Summary: The doctor recommends moving the legs slightly.
+  ClusterId: CL8
+  TemporalProfile: future
+- [Plan] slow jogging | verification_status=unconfirmed | clinical_status=planned | modalities=interview | speakers=doctor | evidence=T26
+  Summary: The doctor recommends slowing down jogging.
+  ClusterId: CL9
+  TemporalProfile: future
+- [Plan] mri | verification_status=unconfirmed | clinical_status=planned | modalities=interview,plan | speakers=doctor | evidence=T34
+  Summary: The doctor will have the nurse schedule an MRI.
+  ClusterId: CL10
+  TemporalProfile: future, soon

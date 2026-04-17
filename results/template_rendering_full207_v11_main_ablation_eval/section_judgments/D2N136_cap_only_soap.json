@@ -1,0 +1,30 @@
+{
+  "section_miscategorizations": [
+    {
+      "text": "A rotator cuff repair history was noted two years ago.",
+      "current_section": "A",
+      "expected_section": "S",
+      "severity": "minor",
+      "reason": "Past surgical history is typically part of the subjective/history section rather than the assessment, though its placement here does not substantially distort the clinical meaning."
+    },
+    {
+      "text": "The patient is taking norvasc at a dosage of 5 mg per day.",
+      "current_section": "P",
+      "expected_section": "S",
+      "severity": "major",
+      "reason": "This describes an existing medication regimen, not a new order or change; per instructions, current medications belong in the Subjective section unless framed as a treatment change."
+    },
+    {
+      "text": "The doctor continued the patient on metformin 500 mg twice a day.",
+      "current_section": "P",
+      "expected_section": "P",
+      "severity": "minor",
+      "reason": "This is a plan-level medication decision and is acceptable in P, but could be more clearly distinguished from simple current-medication listing; classification as plan is still essentially correct."
+    }
+  ],
+  "summary_statistics": {
+    "section_appropriateness_score": 0.7,
+    "section_miscategorization_count": 3,
+    "major_section_miscategorization_count": 1
+  }
+}

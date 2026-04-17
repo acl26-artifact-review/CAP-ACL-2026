@@ -1,0 +1,167 @@
+Case: D2N066
+
+Problem List and Visit State Tracking
+
+Problem List
+- back pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T15,T3,T42,T9
+  Summary: The patient has had back pain occasionally over the years.
+  ClusterId: CL1
+  TemporalProfile: current, over the years
+  Updates:
+  - CAP11: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T3 :: The patient reports back pain.
+  - CAP3: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T9 :: The patient reports pain in the left leg.
+  - CAP1: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=over the years turns=T15 :: The patient has had back pain occasionally over the years.
+  - CAP5: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T42 :: The patient is here today for back pain.
+- leg pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T3
+  Summary: The patient reports pain radiating down their left leg.
+  ClusterId: CL2
+  TemporalProfile: current
+  Updates:
+  - CAP2: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T3 :: The patient reports pain radiating down their left leg.
+- lifting | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T3
+  Summary: The patient reports the pain started after bending over to lift something.
+  ClusterId: CL3
+  TemporalProfile: past
+  Updates:
+  - CAP33: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=past turns=T3 :: The patient reports the pain started after bending over to lift something.
+- yard work | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T3
+  Summary: The patient reports back pain began while working in the yard.
+  ClusterId: CL4
+  TemporalProfile: past
+  Updates:
+  - CAP34: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=past turns=T3 :: The patient reports back pain began while working in the yard.
+- argument | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T7
+  Summary: The patient reports the pain started after an argument.
+  ClusterId: CL5
+  TemporalProfile: past
+  Updates:
+  - CAP35: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=past turns=T7 :: The patient reports the pain started after an argument.
+- tingling | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T11
+  Summary: The patient reports tingling in certain positions.
+  ClusterId: CL6
+  TemporalProfile: current
+  Updates:
+  - CAP6: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T11 :: The patient reports tingling in certain positions.
+  - CAP13: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T11 :: The patient reports tingling.
+- diabetes | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T18,T44
+  Summary: The patient has a history of diabetes.
+  ClusterId: CL7
+  TemporalProfile: current, historical
+  Updates:
+  - CAP7: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=historical turns=T18 :: The patient has a history of diabetes.
+  - CAP14: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T44 :: The patient has diabetes.
+- left hand pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T19
+  Summary: The patient reports pain in the left hand.
+  ClusterId: CL9
+  TemporalProfile: current
+  Updates:
+  - CAP4: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T19 :: The patient reports pain in the left hand.
+- high blood pressure | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=physician | evidence=T28
+  Summary: The patient has high blood pressure.
+  ClusterId: CL11
+  TemporalProfile: current
+  Updates:
+  - CAP10: content_source=physician modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T28 :: The patient has high blood pressure.
+- ankle swelling | verification_status=unconfirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T31
+  Summary: The patient reports swelling in their ankles.
+  ClusterId: CL13
+  TemporalProfile: 1-2 months after norvasc start, current
+  Updates:
+  - CAP8: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T31 :: The patient reports swelling in their ankles.
+  - CAP32: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=1-2 months after norvasc start turns=T31 :: The patient reports swelling started approximately one to two months after starting norvasc.
+- physical therapy | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T42
+  Summary: The doctor orders physical therapy.
+  ClusterId: CL16
+  TemporalProfile: current
+  Updates:
+  - CAP12: content_source=doctor modality=plan verification_status=unconfirmed clinical_status=planned temporality=current turns=T42 :: The doctor orders physical therapy.
+- edema | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T44
+  Summary: The patient has edema in their legs.
+  ClusterId: CL19
+  TemporalProfile: current
+  Updates:
+  - CAP9: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T44 :: The patient has edema in their legs.
+
+Medication Tracking
+- [MedicationState] metformin | verification_status=unconfirmed | clinical_status=active | modalities=interview,plan | speakers=doctor,physician | evidence=T18,T44
+  Summary: The doctor continues metformin.
+  ClusterId: CL8
+  TemporalProfile: current, twice a day
+  CurrentRegimens:
+  - The patient is taking metformin 500 mg twice a day. (T18)
+  - The patient is on metformin. (T18)
+  - The doctor continues metformin. (T44)
+  Updates:
+  - CAP28: content_source=physician modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T18 :: The patient is taking metformin 500 mg twice a day.
+  - CAP31: content_source=doctor modality=interview verification_status=confirmed clinical_status=active temporality=twice a day turns=T18 :: The patient is on metformin.
+  - CAP26: content_source=doctor modality=plan verification_status=unconfirmed clinical_status=active temporality=current turns=T44 :: The doctor continues metformin.
+- [MedicationState] norvasc | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=doctor,physician | evidence=T28
+  Summary: The patient is taking norvasc 5 milligrams once a day.
+  ClusterId: CL12
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient is taking norvasc 5 milligrams once a day. (T28)
+  - The patient is taking norvasc 5 mg once daily. (T28)
+  Updates:
+  - CAP29: content_source=doctor modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T28 :: The patient is taking norvasc 5 milligrams once a day.
+  - CAP30: content_source=physician modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T28 :: The patient is taking norvasc 5 mg once daily.
+- [MedicationChange] flexeril | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T42
+  Summary: The doctor recommends starting flexeril.
+  ClusterId: CL17
+  TemporalProfile: current
+  PlannedChanges:
+  - The doctor recommends starting flexeril. (T42)
+  Updates:
+  - CAP24: content_source=doctor modality=plan verification_status=unconfirmed clinical_status=planned temporality=current turns=T42 :: The doctor recommends starting flexeril.
+- [MedicationChange] metformin | verification_status=confirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T44
+  Summary: The patient will take metformin 500 milligrams twice a day.
+  ClusterId: CL20
+  TemporalProfile: current
+  PlannedChanges:
+  - The patient will take metformin 500 milligrams twice a day. (T44)
+  Updates:
+  - CAP15: content_source=doctor modality=plan verification_status=confirmed clinical_status=planned temporality=current turns=T44 :: The patient will take metformin 500 milligrams twice a day.
+- [MedicationChange] hydrochlorothiazide | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T44
+  Summary: The patient will take hydrochlorothiazide 10 milligrams once a day.
+  ClusterId: CL21
+  TemporalProfile: current
+  PlannedChanges:
+  - The patient will take hydrochlorothiazide 10 milligrams once a day. (T44)
+  - The doctor orders hydrochlorothiazide. (T44)
+  Updates:
+  - CAP16: content_source=doctor modality=plan verification_status=confirmed clinical_status=planned temporality=current turns=T44 :: The patient will take hydrochlorothiazide 10 milligrams once a day.
+  - CAP27: content_source=doctor modality=plan verification_status=unconfirmed clinical_status=planned temporality=current turns=T44 :: The doctor orders hydrochlorothiazide.
+- [MedicationChange] naproxen | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T44
+  Summary: The doctor recommends starting naproxen.
+  ClusterId: CL24
+  TemporalProfile: current
+  PlannedChanges:
+  - The doctor recommends starting naproxen. (T44)
+  Updates:
+  - CAP23: content_source=doctor modality=plan verification_status=unconfirmed clinical_status=planned temporality=current turns=T44 :: The doctor recommends starting naproxen.
+
+Other Structured States
+- [TestResult] hemoglobin a1c | verification_status=unconfirmed | clinical_status=planned | modalities=exam,test_result | speakers=doctor,test_result | evidence=T26,T44
+  Summary: The patient's hemoglobin A1c was 7.1 percent.
+  ClusterId: CL10
+  TemporalProfile: current, last time
+- [TestResult] complete blood count | verification_status=unconfirmed | clinical_status=planned | modalities=exam | speakers=doctor | evidence=T36
+  Summary: The doctor orders a complete blood count.
+  ClusterId: CL14
+  TemporalProfile: current
+- [TestResult] basic metabolic panel | verification_status=unconfirmed | clinical_status=planned | modalities=exam | speakers=doctor | evidence=T36
+  Summary: The doctor orders a basic metabolic panel.
+  ClusterId: CL15
+  TemporalProfile: current
+- [TestResult] electrocardiogram | verification_status=unconfirmed | clinical_status=planned | modalities=exam | speakers=doctor | evidence=T42
+  Summary: The doctor orders an electrocardiogram.
+  ClusterId: CL18
+  TemporalProfile: current
+- [Plan] hemoglobin a1c | verification_status=confirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T44
+  Summary: An hemoglobin a1c test will be ordered.
+  ClusterId: CL22
+  TemporalProfile: current
+- [Plan] norvasc | verification_status=confirmed | clinical_status=active | modalities=plan | speakers=doctor | evidence=T44
+  Summary: The patient will stop taking norvasc.
+  ClusterId: CL23
+  TemporalProfile: current

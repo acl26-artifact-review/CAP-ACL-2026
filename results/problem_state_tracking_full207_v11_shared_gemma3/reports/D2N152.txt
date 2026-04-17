@@ -1,0 +1,162 @@
+Case: D2N152
+
+Problem List and Visit State Tracking
+
+Problem List
+- back pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T1
+  Summary: The patient reports back pain.
+  ClusterId: CL1
+  TemporalProfile: current
+  Updates:
+  - CAP14: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T1 :: The patient reports back pain.
+- history of left hand pain | verification_status=unconfirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T5
+  Summary: The patient recalls a previous episode of left hand pain.
+  ClusterId: CL2
+  TemporalProfile: past
+  Updates:
+  - CAP32: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=past turns=T5 :: The patient recalls a previous episode of left hand pain.
+- possible injury | verification_status=unconfirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T5
+  Summary: The patient suspects a possible injury.
+  ClusterId: CL3
+  TemporalProfile: past
+  Updates:
+  - CAP33: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=past turns=T5 :: The patient suspects a possible injury.
+- low back pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T10,T46,T64
+  Summary: The patient reports pain in the lower back.
+  ClusterId: CL4
+  TemporalProfile: current
+  Updates:
+  - CAP9: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T10 :: The patient reports pain in the lower back.
+  - CAP11: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T46 :: The patient reports pain in their low back.
+  - CAP12: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T64 :: The patient reports low back pain.
+  - CAP13: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T64 :: The patient reports low back pain.
+- left eye irritation | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T11
+  Summary: The patient reports irritation in the left eye.
+  ClusterId: CL5
+  TemporalProfile: current
+  Updates:
+  - CAP8: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T11 :: The patient reports irritation in the left eye.
+- high blood sugar | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T25,T29
+  Summary: The patient reports that their blood sugar levels have been trending higher.
+  ClusterId: CL7
+  TemporalProfile: current, morning
+  Updates:
+  - CAP3: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=morning turns=T25 :: The patient reports trying to test their blood sugar in the mornings.
+  - CAP1: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T29 :: The patient reports that their blood sugar levels have bumped towards the higher side.
+  - CAP2: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T29 :: The patient reports that their blood sugar levels have been trending higher.
+- left hand pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T27
+  Summary: The patient reports pain in the left hand.
+  ClusterId: CL8
+  TemporalProfile: current
+  Updates:
+  - CAP10: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T27 :: The patient reports pain in the left hand.
+- skiing | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T27
+  Summary: The patient reports skiing.
+  ClusterId: CL9
+  TemporalProfile: past
+  Updates:
+  - CAP15: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=past turns=T27 :: The patient reports skiing.
+- diabetes | verification_status=confirmed | clinical_status=active | modalities=interview,unknown | speakers=clinician,doctor | evidence=T59,T64
+  Summary: The clinician's impression is that the patient's diabetes is under control.
+  ClusterId: CL12
+  TemporalProfile: current
+  Updates:
+  - CAP7: content_source=doctor modality=unknown verification_status=confirmed clinical_status=active temporality=current turns=T59 :: The doctor's impression is that the patient has diabetes.
+  - CAP6: content_source=clinician modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T64 :: The clinician's impression is that the patient's diabetes is under control.
+- musculoskeletal low back strain | verification_status=confirmed | clinical_status=active | modalities=interview,unknown | speakers=clinician,doctor | evidence=T64
+  Summary: The clinician believes the patient has a musculoskeletal low back strain.
+  ClusterId: CL13
+  TemporalProfile: current
+  Updates:
+  - CAP4: content_source=doctor modality=unknown verification_status=confirmed clinical_status=active temporality=current turns=T64 :: The doctor believes the patient has a musculoskeletal low back strain.
+  - CAP5: content_source=clinician modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T64 :: The clinician believes the patient has a musculoskeletal low back strain.
+- pain | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T75
+  Summary: The patient reports pain.
+  ClusterId: CL24
+  TemporalProfile: current
+  Updates:
+  - CAP16: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T75 :: The patient reports pain.
+
+Medication Tracking
+- [MedicationState] metformin | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=clinician,patient | evidence=T20,T64
+  Summary: The patient is taking metformin twice a day.
+  ClusterId: CL6
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient is taking metformin twice a day. (T20)
+  - The patient is taking metformin. (T20)
+  - The clinician continues metformin. (T64)
+  Updates:
+  - CAP24: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T20 :: The patient is taking metformin twice a day.
+  - CAP25: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T20 :: The patient is taking metformin.
+  - CAP31: content_source=clinician modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T64 :: The clinician continues metformin.
+- [MedicationState] tylenol | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=clinician | evidence=T64
+  Summary: The clinician recommends taking tylenol.
+  ClusterId: CL18
+  TemporalProfile: current
+  CurrentRegimens:
+  - The clinician recommends taking tylenol. (T64)
+  Updates:
+  - CAP26: content_source=clinician modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T64 :: The clinician recommends taking tylenol.
+- [MedicationChange] ibuprofen | verification_status=confirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T64
+  Summary: The doctor prescribed ibuprofen.
+  ClusterId: CL19
+  TemporalProfile: current
+  PlannedChanges:
+  - The doctor prescribed ibuprofen. (T64)
+  Updates:
+  - CAP27: content_source=doctor modality=plan verification_status=confirmed clinical_status=planned temporality=current turns=T64 :: The doctor prescribed ibuprofen.
+- [MedicationChange] flexeril | verification_status=confirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T64
+  Summary: The doctor prescribed flexeril.
+  ClusterId: CL20
+  TemporalProfile: current
+  PlannedChanges:
+  - The doctor prescribed flexeril. (T64)
+  Updates:
+  - CAP28: content_source=doctor modality=plan verification_status=confirmed clinical_status=planned temporality=current turns=T64 :: The doctor prescribed flexeril.
+- [MedicationState] ibuprofen | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=clinician | evidence=T64
+  Summary: The clinician prescribes ibuprofen.
+  ClusterId: CL21
+  TemporalProfile: current
+  CurrentRegimens:
+  - The clinician prescribes ibuprofen. (T64)
+  Updates:
+  - CAP29: content_source=clinician modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T64 :: The clinician prescribes ibuprofen.
+- [MedicationState] flexeril | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=clinician | evidence=T64
+  Summary: The clinician prescribes flexeril.
+  ClusterId: CL22
+  TemporalProfile: current
+  CurrentRegimens:
+  - The clinician prescribes flexeril. (T64)
+  Updates:
+  - CAP30: content_source=clinician modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T64 :: The clinician prescribes flexeril.
+
+Other Structured States
+- [Plan] lift legs | verification_status=confirmed | clinical_status=planned | modalities=interview | speakers=doctor | evidence=T49
+  Summary: The doctor will lift the patient's legs.
+  ClusterId: CL10
+  TemporalProfile: current
+- [Plan] lift right leg | verification_status=confirmed | clinical_status=planned | modalities=interview | speakers=doctor | evidence=T50
+  Summary: The doctor will lift the patient's right leg.
+  ClusterId: CL11
+  TemporalProfile: current
+- [Plan] low back x-ray | verification_status=confirmed | clinical_status=planned | modalities=interview,plan | speakers=clinician,doctor | evidence=T64
+  Summary: The doctor ordered a low back x-ray.
+  ClusterId: CL14
+  TemporalProfile: outpatient, soon
+- [TestResult] a1c | verification_status=unconfirmed | clinical_status=planned | modalities=test_result | speakers=doctor | evidence=T64
+  Summary: The doctor ordered an a1c test.
+  ClusterId: CL15
+  TemporalProfile: future
+- [Plan] a1c test | verification_status=confirmed | clinical_status=planned | modalities=interview | speakers=clinician | evidence=T64
+  Summary: The clinician orders an a1c test.
+  ClusterId: CL16
+  TemporalProfile: soon
+- [Plan] physical therapy | verification_status=confirmed | clinical_status=planned | modalities=interview | speakers=clinician | evidence=T64
+  Summary: The clinician orders physical therapy.
+  ClusterId: CL17
+  TemporalProfile: two for two reasons
+- [Plan] diet and exercise | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=clinician | evidence=T64
+  Summary: The clinician advises the patient to continue with diet and exercise.
+  ClusterId: CL23
+  TemporalProfile: current

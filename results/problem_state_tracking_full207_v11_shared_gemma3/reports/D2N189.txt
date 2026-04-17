@@ -1,0 +1,103 @@
+Case: D2N189
+
+Problem List and Visit State Tracking
+
+Problem List
+- pain | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T5
+  Summary: The patient reports pain.
+  ClusterId: CL1
+  TemporalProfile: current
+  Updates:
+  - CAP5: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T5 :: The patient reports pain.
+- shortness of breath | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T10
+  Summary: The patient reports shortness of breath.
+  ClusterId: CL2
+  TemporalProfile: current
+  Updates:
+  - CAP3: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T10 :: The patient reports shortness of breath.
+- stent | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T18
+  Summary: The patient has a stent.
+  ClusterId: CL5
+  TemporalProfile: current
+  Updates:
+  - CAP4: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T18 :: The patient has a stent.
+- left hand pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T21
+  Summary: The patient reports pain in the left hand.
+  ClusterId: CL8
+  TemporalProfile: current
+  Updates:
+  - CAP2: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T21 :: The patient reports pain in the left hand.
+- inferior myocardial infarction | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=doctor | evidence=T27
+  Summary: The doctor wants to continue aspirin and brilinta for the patient's inferior myocardial infarction.
+  ClusterId: CL9
+  TemporalProfile: current
+  Updates:
+  - CAP1: content_source=doctor modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T27 :: The doctor wants to continue aspirin and brilinta for the patient's inferior myocardial infarction.
+
+Medication Tracking
+- [MedicationState] brilinta | verification_status=confirmed | clinical_status=active | modalities=interview,plan | speakers=clinician,doctor | evidence=T12,T18,T28
+  Summary: The patient should continue taking brilinta.
+  ClusterId: CL3
+  TemporalProfile: current, ongoing
+  CurrentRegimens:
+  - The doctor states the patient is taking brilinta. (T12)
+  - The patient should continue taking brilinta. (T18)
+  - The patient should continue taking brilinta for at least one year. (T28)
+  Updates:
+  - CAP13: content_source=doctor modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T12 :: The doctor states the patient is taking brilinta.
+  - CAP17: content_source=clinician modality=plan verification_status=confirmed clinical_status=active temporality=ongoing turns=T18 :: The patient should continue taking brilinta.
+  - CAP10: content_source=doctor modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T28 :: The patient should continue taking brilinta for at least one year.
+- [MedicationState] baby aspirin | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T15
+  Summary: The patient reports taking baby aspirin.
+  ClusterId: CL4
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient reports taking baby aspirin. (T15)
+  Updates:
+  - CAP15: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T15 :: The patient reports taking baby aspirin.
+- [MedicationState] crestor | verification_status=confirmed | clinical_status=active | modalities=interview,plan | speakers=clinician,doctor | evidence=T18,T28
+  Summary: The patient should continue taking crestor.
+  ClusterId: CL6
+  TemporalProfile: current, ongoing
+  CurrentRegimens:
+  - The patient should continue taking crestor. (T18)
+  - The patient should continue taking crestor forty milligrams once a day. (T28)
+  Updates:
+  - CAP18: content_source=clinician modality=plan verification_status=confirmed clinical_status=active temporality=ongoing turns=T18 :: The patient should continue taking crestor.
+  - CAP11: content_source=doctor modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T28 :: The patient should continue taking crestor forty milligrams once a day.
+- [MedicationState] aspirin | verification_status=confirmed | clinical_status=active | modalities=interview,plan | speakers=clinician,doctor | evidence=T18,T28
+  Summary: The patient should continue taking aspirin.
+  ClusterId: CL7
+  TemporalProfile: current, ongoing
+  CurrentRegimens:
+  - The patient should continue taking aspirin. (T18)
+  - The patient should continue taking aspirin lifelong. (T28)
+  Updates:
+  - CAP16: content_source=clinician modality=plan verification_status=confirmed clinical_status=active temporality=ongoing turns=T18 :: The patient should continue taking aspirin.
+  - CAP14: content_source=doctor modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T28 :: The patient should continue taking aspirin lifelong.
+- [MedicationState] toprol | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=doctor | evidence=T34
+  Summary: The patient should continue taking toprol fifty milligrams once a day.
+  ClusterId: CL14
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient should continue taking toprol fifty milligrams once a day. (T34)
+  Updates:
+  - CAP12: content_source=doctor modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T34 :: The patient should continue taking toprol fifty milligrams once a day.
+
+Other Structured States
+- [Plan] echocardiogram | verification_status=confirmed | clinical_status=planned | modalities=interview | speakers=doctor | evidence=T28
+  Summary: The doctor orders an echocardiogram for the patient in about six months.
+  ClusterId: CL10
+  TemporalProfile: in six months
+- [Plan] cardiac rehab | verification_status=confirmed | clinical_status=planned | modalities=interview | speakers=doctor | evidence=T32
+  Summary: The doctor recommends the patient enroll in cardiac rehab.
+  ClusterId: CL11
+  TemporalProfile: soon
+- [Plan] liver function studies | verification_status=confirmed | clinical_status=planned | modalities=interview | speakers=doctor | evidence=T34
+  Summary: The doctor orders liver function studies.
+  ClusterId: CL12
+  TemporalProfile: future
+- [Plan] lipid panel | verification_status=confirmed | clinical_status=planned | modalities=interview | speakers=doctor | evidence=T34
+  Summary: The doctor orders a lipid panel.
+  ClusterId: CL13
+  TemporalProfile: future

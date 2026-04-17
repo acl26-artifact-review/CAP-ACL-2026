@@ -1,0 +1,109 @@
+Case: D2N126
+
+Problem List and Visit State Tracking
+
+Problem List
+- weight bearing | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T3
+  Summary: The patient reports difficulty bearing weight with their knee.
+  ClusterId: CL1
+  TemporalProfile: current
+  Updates:
+  - CAP3: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T3 :: The patient reports difficulty bearing weight with their knee.
+- knee pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T7
+  Summary: The patient reports pain in the outside of their knee.
+  ClusterId: CL2
+  TemporalProfile: current
+  Updates:
+  - CAP1: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T7 :: The patient reports pain in the outside of their knee.
+- knee instability | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T7
+  Summary: The patient reports a feeling of instability in their knee.
+  ClusterId: CL3
+  TemporalProfile: current
+  Updates:
+  - CAP2: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T7 :: The patient reports a feeling of instability in their knee.
+- left hand pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T9
+  Summary: The patient reports pain in the left hand.
+  ClusterId: CL4
+  TemporalProfile: current
+  Updates:
+  - CAP4: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T9 :: The patient reports pain in the left hand.
+- knee injury | verification_status=unconfirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T9
+  Summary: The patient has sustained a knee injury.
+  ClusterId: CL5
+  TemporalProfile: current, immediately after the injury
+  Updates:
+  - CAP7: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T9 :: The patient has sustained a knee injury.
+  - CAP12: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=immediately after the injury turns=T9 :: The patient experienced an injury.
+- numbness | verification_status=unconfirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T9
+  Summary: The patient denies numbness.
+  ClusterId: CL6
+  TemporalProfile: current
+  Updates:
+  - CAP13: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=current turns=T9 :: The patient denies numbness.
+- toes | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T14
+  Summary: The patient can feel their toes.
+  ClusterId: CL7
+  TemporalProfile: current
+  Updates:
+  - CAP8: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T14 :: The patient can feel their toes.
+- skiing | verification_status=unconfirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T16
+  Summary: The patient is an active skier.
+  ClusterId: CL8
+  TemporalProfile: current
+  Updates:
+  - CAP9: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=current turns=T16 :: The patient is an active skier.
+- childcare | verification_status=unconfirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T17
+  Summary: The patient has two four-year-old children.
+  ClusterId: CL9
+  TemporalProfile: current
+  Updates:
+  - CAP10: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=current turns=T17 :: The patient has two four-year-old children.
+- acl rupture | verification_status=unconfirmed | clinical_status=planned | modalities=assessment | speakers=doctor | evidence=T27
+  Summary: The doctor suspects an ACL rupture.
+  ClusterId: CL11
+  TemporalProfile: future
+  Updates:
+  - CAP11: content_source=doctor modality=assessment verification_status=unconfirmed clinical_status=planned temporality=future turns=T27 :: The doctor suspects an ACL rupture.
+- right knee pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T29
+  Summary: The patient reports pain in their right knee.
+  ClusterId: CL12
+  TemporalProfile: current
+  Updates:
+  - CAP5: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T29 :: The patient reports pain in their right knee.
+  - CAP6: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T29 :: The patient reports pain in the right knee.
+
+Medication Tracking
+- [MedicationState] ibuprofen | verification_status=confirmed | clinical_status=active | modalities=plan | speakers=doctor | evidence=T33
+  Summary: The doctor recommends ibuprofen.
+  ClusterId: CL15
+  TemporalProfile: current
+  CurrentRegimens:
+  - The doctor recommends ibuprofen. (T33)
+  Updates:
+  - CAP18: content_source=doctor modality=plan verification_status=confirmed clinical_status=active temporality=current turns=T33 :: The doctor recommends ibuprofen.
+- [MedicationChange] ibuprofen | verification_status=confirmed | clinical_status=planned | modalities=interview | speakers=doctor | evidence=T38
+  Summary: The doctor will prescribe ibuprofen at a dose of 600 to 800 milligrams every eight hours as needed.
+  ClusterId: CL17
+  TemporalProfile: current
+  PlannedChanges:
+  - The doctor will prescribe ibuprofen at a dose of 600 to 800 milligrams every eight hours as needed. (T38)
+  Updates:
+  - CAP17: content_source=doctor modality=interview verification_status=confirmed clinical_status=planned temporality=current turns=T38 :: The doctor will prescribe ibuprofen at a dose of 600 to 800 milligrams every eight hours as needed.
+
+Other Structured States
+- [Demographics] twins | verification_status=unconfirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T18
+  Summary: The patient has twins.
+  ClusterId: CL10
+  TemporalProfile: current
+- [Plan] brace | verification_status=confirmed | clinical_status=planned | modalities=interview,plan | speakers=doctor | evidence=T32,T38
+  Summary: The doctor will put the patient in a brace.
+  ClusterId: CL13
+  TemporalProfile: current
+- [Plan] knee mri | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T32
+  Summary: The doctor orders a knee MRI.
+  ClusterId: CL14
+  TemporalProfile: within 2 days
+- [TestResult] mri | verification_status=unconfirmed | clinical_status=planned | modalities=interview | speakers=doctor | evidence=T38
+  Summary: The doctor plans to order an MRI.
+  ClusterId: CL16
+  TemporalProfile: next couple days

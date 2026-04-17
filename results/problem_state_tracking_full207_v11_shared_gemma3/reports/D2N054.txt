@@ -1,0 +1,85 @@
+Case: D2N054
+
+Problem List and Visit State Tracking
+
+Problem List
+- ankle injury | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T5
+  Summary: The patient previously sustained an ankle injury 20 years ago.
+  ClusterId: CL1
+  TemporalProfile: 20 years ago
+  Updates:
+  - CAP1: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=20 years ago turns=T5 :: The patient previously sustained an ankle injury 20 years ago.
+- foot pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T17,T19,T7
+  Summary: The patient rates their pain as 11 out of 10.
+  ClusterId: CL2
+  TemporalProfile: current
+  Updates:
+  - CAP4: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T7 :: The patient reports pain in their right foot.
+  - CAP2: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T17 :: The patient rates their pain as 11 out of 10.
+  - CAP10: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T19 :: The patient reports foot pain.
+- ankle surgery | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T7
+  Summary: The patient has had surgery on their other ankle.
+  ClusterId: CL3
+  TemporalProfile: past
+  Updates:
+  - CAP3: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=past turns=T7 :: The patient has had surgery on their other ankle.
+- ankle swelling | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T7
+  Summary: The patient reports swelling in their other ankle.
+  ClusterId: CL4
+  TemporalProfile: current
+  Updates:
+  - CAP5: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T7 :: The patient reports swelling in their other ankle.
+- numbness | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T18,T19
+  Summary: The patient reports numbness in their foot.
+  ClusterId: CL5
+  TemporalProfile: current
+  Updates:
+  - CAP11: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T18 :: The patient reports numbness.
+  - CAP7: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T19 :: The patient reports numbness in their foot.
+- tingling | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T18
+  Summary: The patient reports tingling.
+  ClusterId: CL6
+  TemporalProfile: current
+  Updates:
+  - CAP12: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T18 :: The patient reports tingling.
+- foot injury | verification_status=confirmed | clinical_status=active | modalities=assessment,interview | speakers=doctor,patient | evidence=T19
+  Summary: The patient has a foot injury.
+  ClusterId: CL7
+  TemporalProfile: current
+  Updates:
+  - CAP6: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=current turns=T19 :: The patient has an injury to their foot.
+  - CAP9: content_source=doctor modality=assessment verification_status=confirmed clinical_status=active temporality=current turns=T19 :: The patient has a foot injury.
+- lisfranc fracture | verification_status=confirmed | clinical_status=active | modalities=assessment | speakers=doctor | evidence=T22
+  Summary: The patient has a lisfranc fracture.
+  ClusterId: CL8
+  TemporalProfile: current
+  Updates:
+  - CAP8: content_source=doctor modality=assessment verification_status=confirmed clinical_status=active temporality=current turns=T22 :: The patient has a lisfranc fracture.
+
+Medication Tracking
+- [MedicationChange] mri | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T26
+  Summary: An MRI is ordered.
+  ClusterId: CL13
+  TemporalProfile: today
+  PlannedChanges:
+  - An MRI is ordered. (T26)
+  Updates:
+  - CAP15: content_source=doctor modality=plan verification_status=unconfirmed clinical_status=planned temporality=today turns=T26 :: An MRI is ordered.
+
+Other Structured States
+- [Plan] surgery | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T22
+  Summary: Surgery is planned.
+  ClusterId: CL9
+  TemporalProfile: tomorrow
+- [FollowUp] follow-up | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T22
+  Summary: A follow-up appointment is scheduled.
+  ClusterId: CL10
+  TemporalProfile: in two weeks
+- [Plan] mri | verification_status=confirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T26
+  Summary: The patient will receive an MRI this afternoon.
+  ClusterId: CL11
+  TemporalProfile: this afternoon
+- [TestResult] mri | verification_status=confirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T26
+  Summary: A cervical MRI is ordered.
+  ClusterId: CL12
+  TemporalProfile: this afternoon

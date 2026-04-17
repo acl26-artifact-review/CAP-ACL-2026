@@ -1,0 +1,149 @@
+Case: D2N077
+
+Problem List and Visit State Tracking
+
+Problem List
+- swelling | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T1,T27
+  Summary: The patient reports swelling in the wrist.
+  ClusterId: CL1
+  TemporalProfile: current
+  Updates:
+  - CAP7: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T1 :: The patient reports swelling in the wrist.
+  - CAP10: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T27 :: The patient reports swelling in their wrist.
+- wrist injury | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T1
+  Summary: The patient has a wrist injury.
+  ClusterId: CL2
+  TemporalProfile: current
+  Updates:
+  - CAP12: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T1 :: The patient has a wrist injury.
+- right wrist pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T3
+  Summary: The patient reports pain in the right wrist.
+  ClusterId: CL3
+  TemporalProfile: current
+  Updates:
+  - CAP6: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T3 :: The patient reports pain in the right wrist.
+- pain relief | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T11
+  Summary: The patient reports that ibuprofen helps a little bit.
+  ClusterId: CL4
+  TemporalProfile: recent
+  Updates:
+  - CAP4: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=recent turns=T11 :: The patient reports that ibuprofen helps a little bit.
+- injury | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T15
+  Summary: The patient sustained an injury yesterday morning.
+  ClusterId: CL6
+  TemporalProfile: yesterday morning
+  Updates:
+  - CAP8: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=yesterday morning turns=T15 :: The patient sustained an injury yesterday morning.
+- cold | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T21
+  Summary: The patient reports a cold.
+  ClusterId: CL7
+  TemporalProfile: current
+  Updates:
+  - CAP14: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T21 :: The patient reports a cold.
+- wrist tingling | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T27,T29
+  Summary: The patient reports tingling in their wrist.
+  ClusterId: CL8
+  TemporalProfile: current
+  Updates:
+  - CAP9: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T27 :: The patient reports tingling in their wrist.
+  - CAP17: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T29 :: The patient reports tingling.
+- pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T37,T39,T40
+  Summary: The patient reports pain with wrist movement.
+  ClusterId: CL9
+  TemporalProfile: current
+  Updates:
+  - CAP11: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T37 :: The patient reports pain in the fingers.
+  - CAP1: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T39,T40,T39,T39 :: The patient reports pain with wrist movement.
+  - CAP2: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T39,T39,T39 :: The patient reports pain in the left hand.
+- difficulty | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T41,T47
+  Summary: The patient reports difficulty making a fist.
+  ClusterId: CL10
+  TemporalProfile: current
+  Updates:
+  - CAP3: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T41,T47 :: The patient reports difficulty making a fist.
+- wrist pain | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T55
+  Summary: The patient reports wrist pain.
+  ClusterId: CL11
+  TemporalProfile: current
+  Updates:
+  - CAP15: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T55 :: The patient reports wrist pain.
+- brace | verification_status=confirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T64
+  Summary: The patient will wear the brace for six weeks.
+  ClusterId: CL15
+  TemporalProfile: six weeks
+  Updates:
+  - CAP5: content_source=doctor modality=plan verification_status=confirmed clinical_status=planned temporality=six weeks turns=T64 :: The patient will wear the brace for six weeks.
+- vacation | verification_status=unconfirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T72
+  Summary: The patient is going on vacation.
+  ClusterId: CL19
+  TemporalProfile: upcoming
+  Updates:
+  - CAP13: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=upcoming turns=T72 :: The patient is going on vacation.
+- fracture | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T80
+  Summary: The patient has a fracture.
+  ClusterId: CL20
+  TemporalProfile: current
+  Updates:
+  - CAP16: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T80 :: The patient has a fracture.
+
+Medication Tracking
+- [MedicationState] ibuprofen | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T11
+  Summary: The patient reports taking ibuprofen.
+  ClusterId: CL5
+  TemporalProfile: current, recent
+  CurrentRegimens:
+  - The patient reports taking ibuprofen. (T11)
+  - The patient took ibuprofen. (T11)
+  Updates:
+  - CAP29: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T11 :: The patient reports taking ibuprofen.
+  - CAP30: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=recent turns=T11 :: The patient took ibuprofen.
+- [MedicationChange] ultram | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T58
+  Summary: The doctor will prescribe ultram at 50 milligrams every six hours.
+  ClusterId: CL12
+  TemporalProfile: every six hours
+  PlannedChanges:
+  - The doctor will prescribe ultram at 50 milligrams every six hours. (T58)
+  Updates:
+  - CAP18: content_source=doctor modality=plan verification_status=unconfirmed clinical_status=planned temporality=every six hours turns=T58 :: The doctor will prescribe ultram at 50 milligrams every six hours.
+- [MedicationChange] brace | verification_status=confirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T64
+  Summary: The doctor orders the patient to wear a brace.
+  ClusterId: CL16
+  TemporalProfile: future
+  PlannedChanges:
+  - The doctor orders the patient to wear a brace. (T64)
+  Updates:
+  - CAP21: content_source=doctor modality=plan verification_status=confirmed clinical_status=planned temporality=future turns=T64 :: The doctor orders the patient to wear a brace.
+
+Other Structured States
+- [Plan] physical therapy | verification_status=confirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T58,T74
+  Summary: The doctor wants the patient to attend physical therapy.
+  ClusterId: CL13
+  TemporalProfile: a few weeks after surgery, future
+- [Plan] pain medication | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T58
+  Summary: The doctor will provide pain medication.
+  ClusterId: CL14
+  TemporalProfile: ongoing
+- [FollowUp] follow-up | verification_status=confirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T64
+  Summary: The doctor wants to see the patient for follow-up.
+  ClusterId: CL17
+  TemporalProfile: future
+- [Plan] surgery | verification_status=confirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T69
+  Summary: The doctor plans to perform surgery on the patient.
+  ClusterId: CL18
+  TemporalProfile: future
+- [ExamFinding] dorsal angulation | verification_status=confirmed | clinical_status=active | modalities=exam | speakers=doctor | evidence=T80
+  Summary: Dorsal angulation of the distal fracture fragment is present.
+  ClusterId: CL21
+  TemporalProfile: current
+- [ExamFinding] dinner fork deformity | verification_status=confirmed | clinical_status=active | modalities=exam | speakers=doctor | evidence=T80
+  Summary: A dinner fork deformity may be present.
+  ClusterId: CL22
+  TemporalProfile: current
+- [ExamFinding] ulnar styloid fracture | verification_status=confirmed | clinical_status=active | modalities=exam | speakers=doctor | evidence=T80
+  Summary: An ulnar styloid fracture is present.
+  ClusterId: CL23
+  TemporalProfile: current
+- [ExamFinding] extra-articular fracture | verification_status=confirmed | clinical_status=active | modalities=exam | speakers=doctor | evidence=T80
+  Summary: The fracture appears extra-articular.
+  ClusterId: CL24
+  TemporalProfile: current

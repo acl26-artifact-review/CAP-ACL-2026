@@ -1,0 +1,746 @@
+{
+  "caps": [
+    {
+      "cap_id": "CAP1",
+      "cap_type": "Problem",
+      "content_source": "doctor",
+      "modality": "assessment",
+      "canonical_concept": "acute disk herniation",
+      "verification_status": "confirmed",
+      "clinical_status": "active",
+      "temporality": "current",
+      "proposition_text": "The doctor believes the patient has an acute disk herniation.",
+      "evidence": [
+        {
+          "turn_id": "T42",
+          "turn_speaker": "doctor",
+          "span_text": "okay but i think overall things look really good so you know i had them do an lumbar spine x-ray on you before i saw you and i looked at the results of your lumbar spine x-ray which showed no acute bony abnormality you know there was no fracture of your back or anything which is not surprising based on your history so let's just talk a little bit about my assessment and plan so i do believe it sounds like you have an acute disk herniation now this did happen a few months ago but it sounds like that's what you had based on the fact that you're still having symptoms",
+          "char_start": 4715,
+          "char_end": 5285
+        }
+      ],
+      "assertion": "present",
+      "visit_state": "active",
+      "linked_problem": null,
+      "event_cluster_id": "CL18"
+    },
+    {
+      "cap_id": "CAP2",
+      "cap_type": "Problem",
+      "content_source": "patient",
+      "modality": "interview",
+      "canonical_concept": "back injury",
+      "verification_status": "unconfirmed",
+      "clinical_status": "historical",
+      "temporality": "four months ago",
+      "proposition_text": "The patient sustained a back injury four months ago.",
+      "evidence": [
+        {
+          "turn_id": "T1",
+          "turn_speaker": "patient",
+          "span_text": "yeah i was moving some boxes when my son was moving out of his college dorm and i really hurt my lower back",
+          "char_start": 98,
+          "char_end": 205
+        }
+      ],
+      "assertion": "historical",
+      "visit_state": "historical",
+      "linked_problem": null,
+      "event_cluster_id": "CL1"
+    },
+    {
+      "cap_id": "CAP3",
+      "cap_type": "Symptom",
+      "content_source": "patient",
+      "modality": "interview",
+      "canonical_concept": "low back pain",
+      "verification_status": "confirmed",
+      "clinical_status": "active",
+      "temporality": "current",
+      "proposition_text": "The patient reports pain in their lower back.",
+      "evidence": [
+        {
+          "turn_id": "T7",
+          "turn_speaker": "patient",
+          "span_text": "that's completely gone it it just happened when i first felt the the tweak in my lower back i felt that sensation but i have n't since",
+          "char_start": 1011,
+          "char_end": 1145
+        }
+      ],
+      "assertion": "present",
+      "visit_state": "active",
+      "linked_problem": null,
+      "event_cluster_id": "CL3"
+    },
+    {
+      "cap_id": "CAP4",
+      "cap_type": "Symptom",
+      "content_source": "patient",
+      "modality": "interview",
+      "canonical_concept": "pain",
+      "verification_status": "confirmed",
+      "clinical_status": "active",
+      "temporality": "current",
+      "proposition_text": "The patient reports sharp pain upon certain movements.",
+      "evidence": [
+        {
+          "turn_id": "T10",
+          "turn_speaker": "doctor",
+          "span_text": "okay and are and do you still have pain down there in your lower back if i turn a certain way or if i roll over in my sleep i'll wake up from it from a like a sharp pain but then that that goes away if i if i position myself the right way okay and what have you been taking for the pain",
+          "char_start": 1389,
+          "char_end": 1675
+        }
+      ],
+      "assertion": "present",
+      "visit_state": "active",
+      "linked_problem": null,
+      "event_cluster_id": "CL3"
+    },
+    {
+      "cap_id": "CAP5",
+      "cap_type": "Problem",
+      "content_source": "patient",
+      "modality": "interview",
+      "canonical_concept": "fear of carrying heavy objects",
+      "verification_status": "confirmed",
+      "clinical_status": "active",
+      "temporality": "current",
+      "proposition_text": "The patient is nervous about carrying heavy objects.",
+      "evidence": [
+        {
+          "turn_id": "T9",
+          "turn_speaker": "patient",
+          "span_text": "only if i'm carrying something heavy otherwise it seems relatively normal but i i feel the sensation so i'm a little nervous about carrying something heavy",
+          "char_start": 1224,
+          "char_end": 1379
+        }
+      ],
+      "assertion": "present",
+      "visit_state": "active",
+      "linked_problem": null,
+      "event_cluster_id": "CL4"
+    },
+    {
+      "cap_id": "CAP6",
+      "cap_type": "Symptom",
+      "content_source": "patient",
+      "modality": "interview",
+      "canonical_concept": "left hand pain",
+      "verification_status": "confirmed",
+      "clinical_status": "active",
+      "temporality": "current",
+      "attributes": {
+        "laterality": "left"
+      },
+      "proposition_text": "The patient reports pain in the left hand.",
+      "evidence": [
+        {
+          "turn_id": "T9",
+          "turn_speaker": "patient",
+          "span_text": "only if i'm carrying something heavy otherwise it seems relatively normal but i i feel the sensation so i'm a little nervous about carrying something heavy",
+          "char_start": 1224,
+          "char_end": 1379
+        }
+      ],
+      "assertion": "present",
+      "visit_state": "active",
+      "linked_problem": null,
+      "event_cluster_id": "CL5"
+    },
+    {
+      "cap_id": "CAP7",
+      "cap_type": "Symptom",
+      "content_source": "patient",
+      "modality": "interview",
+      "canonical_concept": "positive straight leg raise",
+      "verification_status": "confirmed",
+      "clinical_status": "active",
+      "temporality": "current",
+      "proposition_text": "The patient reports a positive straight leg raise.",
+      "evidence": [
+        {
+          "turn_id": "T40",
+          "turn_speaker": "doctor",
+          "span_text": "okay so there is no pain to palpation of the lumbar spine there is decreased flexion and extension of the lower back the patient does have a positive straight leg raise and there is some spasm of the paraspinal muscles of the lumbar spine on musculoskeletal exam the lower extremities strength is equal bilaterally so what does that mean jeremy that means that you have some you know maybe a some arthritis in your neck here and or maybe just a a little bit of some injury from from that from that back that back thing that you told me about",
+          "char_start": 4147,
+          "char_end": 4688
+        }
+      ],
+      "assertion": "present",
+      "visit_state": "active",
+      "linked_problem": null,
+      "event_cluster_id": "CL16"
+    },
+    {
+      "cap_id": "CAP8",
+      "cap_type": "Symptom",
+      "content_source": "patient",
+      "modality": "interview",
+      "canonical_concept": "tingling",
+      "verification_status": "confirmed",
+      "clinical_status": "active",
+      "temporality": "current",
+      "proposition_text": "The patient reports tingling in their feet.",
+      "evidence": [
+        {
+          "turn_id": "T6",
+          "turn_speaker": "doctor",
+          "span_text": "okay and what exactly are your symptoms are you having pain when you're just sitting there or when you're moving around for a very short period of time it felt like i was gon na tapple over i like i could n't support my my upper body weight and then my right toe or the the toes on my right foot tingled a little bit but that went away after about an hour okay are you still getting that numbing and tingling periodically in your feet or is that completely gone",
+          "char_start": 539,
+          "char_end": 1000
+        }
+      ],
+      "assertion": "present",
+      "visit_state": "active",
+      "linked_problem": null,
+      "event_cluster_id": "CL2"
+    },
+    {
+      "cap_id": "CAP9",
+      "cap_type": "Problem",
+      "content_source": "patient",
+      "modality": "interview",
+      "canonical_concept": "nervousness",
+      "verification_status": "confirmed",
+      "clinical_status": "active",
+      "temporality": "current",
+      "proposition_text": "The patient is a little nervous.",
+      "evidence": [
+        {
+          "turn_id": "T9",
+          "turn_speaker": "patient",
+          "span_text": "only if i'm carrying something heavy otherwise it seems relatively normal but i i feel the sensation so i'm a little nervous about carrying something heavy",
+          "char_start": 1224,
+          "char_end": 1379
+        }
+      ],
+      "assertion": "present",
+      "visit_state": "active",
+      "linked_problem": null,
+      "event_cluster_id": "CL6"
+    },
+    {
+      "cap_id": "CAP10",
+      "cap_type": "Symptom",
+      "content_source": "patient",
+      "modality": "interview",
+      "canonical_concept": "numbness",
+      "verification_status": "confirmed",
+      "clinical_status": "active",
+      "temporality": "current",
+      "proposition_text": "The patient reports periodic numbness.",
+      "evidence": [
+        {
+          "turn_id": "T9",
+          "turn_speaker": "patient",
+          "span_text": "only if i'm carrying something heavy otherwise it seems relatively normal but i i feel the sensation so i'm a little nervous about carrying something heavy",
+          "char_start": 1224,
+          "char_end": 1379
+        }
+      ],
+      "assertion": "present",
+      "visit_state": "active",
+      "linked_problem": null,
+      "event_cluster_id": "CL7"
+    },
+    {
+      "cap_id": "CAP11",
+      "cap_type": "Symptom",
+      "content_source": "patient",
+      "modality": "interview",
+      "canonical_concept": "pain",
+      "verification_status": "confirmed",
+      "clinical_status": "active",
+      "temporality": "current",
+      "proposition_text": "The patient feels a sensation.",
+      "evidence": [
+        {
+          "turn_id": "T9",
+          "turn_speaker": "patient",
+          "span_text": "only if i'm carrying something heavy otherwise it seems relatively normal but i i feel the sensation so i'm a little nervous about carrying something heavy",
+          "char_start": 1224,
+          "char_end": 1379
+        }
+      ],
+      "assertion": "present",
+      "visit_state": "active",
+      "linked_problem": null,
+      "event_cluster_id": "CL3"
+    },
+    {
+      "cap_id": "CAP12",
+      "cap_type": "Symptom",
+      "content_source": "patient",
+      "modality": "interview",
+      "canonical_concept": "neck pain",
+      "verification_status": "confirmed",
+      "clinical_status": "active",
+      "temporality": "current",
+      "proposition_text": "The patient reports neck pain.",
+      "evidence": [
+        {
+          "turn_id": "T36",
+          "turn_speaker": "doctor",
+          "span_text": "on your neck exam i i do appreciate some bony protuberance of the c5 c6 do you have any pain when i touch here",
+          "char_start": 3907,
+          "char_end": 4017
+        }
+      ],
+      "assertion": "present",
+      "visit_state": "active",
+      "linked_problem": null,
+      "event_cluster_id": "CL14"
+    },
+    {
+      "cap_id": "CAP13",
+      "cap_type": "Symptom",
+      "content_source": "patient",
+      "modality": "interview",
+      "canonical_concept": "no pain",
+      "verification_status": "confirmed",
+      "clinical_status": "active",
+      "temporality": "current",
+      "proposition_text": "The patient denies pain.",
+      "evidence": [
+        {
+          "turn_id": "T37",
+          "turn_speaker": "patient",
+          "span_text": "no",
+          "char_start": 4028,
+          "char_end": 4030
+        }
+      ],
+      "assertion": "present",
+      "visit_state": "active",
+      "linked_problem": null,
+      "event_cluster_id": "CL15"
+    },
+    {
+      "cap_id": "CAP14",
+      "cap_type": "Symptom",
+      "content_source": "patient",
+      "modality": "interview",
+      "canonical_concept": "spasm",
+      "verification_status": "confirmed",
+      "clinical_status": "active",
+      "temporality": "current",
+      "proposition_text": "The patient reports spasm.",
+      "evidence": [
+        {
+          "turn_id": "T40",
+          "turn_speaker": "doctor",
+          "span_text": "okay so there is no pain to palpation of the lumbar spine there is decreased flexion and extension of the lower back the patient does have a positive straight leg raise and there is some spasm of the paraspinal muscles of the lumbar spine on musculoskeletal exam the lower extremities strength is equal bilaterally so what does that mean jeremy that means that you have some you know maybe a some arthritis in your neck here and or maybe just a a little bit of some injury from from that from that back that back thing that you told me about",
+          "char_start": 4147,
+          "char_end": 4688
+        }
+      ],
+      "assertion": "present",
+      "visit_state": "active",
+      "linked_problem": null,
+      "event_cluster_id": "CL17"
+    },
+    {
+      "cap_id": "CAP15",
+      "cap_type": "Symptom",
+      "content_source": "patient",
+      "modality": "interview",
+      "canonical_concept": "pain",
+      "verification_status": "unconfirmed",
+      "clinical_status": "active",
+      "temporality": "current",
+      "proposition_text": "The patient reports pain.",
+      "evidence": [
+        {
+          "turn_id": "T55",
+          "turn_speaker": "patient",
+          "span_text": "not at this point",
+          "char_start": 6232,
+          "char_end": 6249
+        }
+      ],
+      "assertion": "uncertain",
+      "visit_state": "active",
+      "linked_problem": null,
+      "event_cluster_id": "CL3"
+    },
+    {
+      "cap_id": "CAP16",
+      "cap_type": "Order",
+      "content_source": "patient",
+      "modality": "interview",
+      "canonical_concept": "MRI",
+      "verification_status": "unconfirmed",
+      "clinical_status": "planned",
+      "temporality": "future",
+      "proposition_text": "The patient was concerned because he thinks we maxed out our insurance so he did not do it.",
+      "evidence": [
+        {
+          "turn_id": "T17",
+          "turn_speaker": "patient",
+          "span_text": "i went to an urgent care and they wanted me to do an mri but i was a little concerned because i think we maxed out our insurance so i i did n't do it because it started to feel better but because it's been going on so long i'm i'm a little bit concerned now i i do wan na actually move forward with that",
+          "char_start": 2194,
+          "char_end": 2497
+        }
+      ],
+      "assertion": "hypothetical",
+      "visit_state": "planned",
+      "linked_problem": null,
+      "event_cluster_id": "CL13"
+    },
+    {
+      "cap_id": "CAP17",
+      "cap_type": "Order",
+      "content_source": "doctor",
+      "modality": "interview",
+      "canonical_concept": "epidural steroid injection",
+      "verification_status": "unconfirmed",
+      "clinical_status": "planned",
+      "temporality": "when appropriate",
+      "proposition_text": "The doctor will consider an epidural steroid injection if the patient has a herniated disk.",
+      "evidence": [
+        {
+          "turn_id": "T50",
+          "turn_speaker": "doctor",
+          "span_text": "now if you do have a herniated disk we can go ahead and talk about some other treatment options maybe like an epidural steroid injection to help take down some of that inflammation",
+          "char_start": 5889,
+          "char_end": 6069
+        }
+      ],
+      "assertion": "hypothetical",
+      "visit_state": "planned",
+      "linked_problem": null,
+      "event_cluster_id": "CL22"
+    },
+    {
+      "cap_id": "CAP18",
+      "cap_type": "Order",
+      "content_source": "patient",
+      "modality": "interview",
+      "canonical_concept": "MRI",
+      "verification_status": "unconfirmed",
+      "clinical_status": "planned",
+      "temporality": "future",
+      "proposition_text": "The patient wants to move forward with an MRI.",
+      "evidence": [
+        {
+          "turn_id": "T17",
+          "turn_speaker": "patient",
+          "span_text": "i went to an urgent care and they wanted me to do an mri but i was a little concerned because i think we maxed out our insurance so i i did n't do it because it started to feel better but because it's been going on so long i'm i'm a little bit concerned now i i do wan na actually move forward with that",
+          "char_start": 2194,
+          "char_end": 2497
+        }
+      ],
+      "assertion": "hypothetical",
+      "visit_state": "planned",
+      "linked_problem": null,
+      "event_cluster_id": "CL13"
+    },
+    {
+      "cap_id": "CAP19",
+      "cap_type": "Order",
+      "content_source": "doctor",
+      "modality": "plan",
+      "canonical_concept": "lumbar spine MRI",
+      "verification_status": "unconfirmed",
+      "clinical_status": "planned",
+      "temporality": "future",
+      "proposition_text": "The doctor orders a lumbar spine MRI.",
+      "evidence": [
+        {
+          "turn_id": "T44",
+          "turn_speaker": "doctor",
+          "span_text": "i do wan na go ahead and order a a lumbar spine mri to get a a a better look at what's going on you know x-rays really just look at the bones they do n't show us any of the soft tissue so let's go ahead and order the lumbar spine mri i wan na continue with physical therapy so i'm going to refer you to a a physical therapist through our health system",
+          "char_start": 5312,
+          "char_end": 5663
+        }
+      ],
+      "assertion": "hypothetical",
+      "visit_state": "planned",
+      "linked_problem": null,
+      "event_cluster_id": "CL19"
+    },
+    {
+      "cap_id": "CAP20",
+      "cap_type": "MedicationStatement",
+      "content_source": "doctor",
+      "modality": "interview",
+      "canonical_concept": "meloxicam",
+      "verification_status": "confirmed",
+      "clinical_status": "planned",
+      "temporality": "daily",
+      "attributes": {
+        "dosage": "15 milligrams",
+        "frequency": "once a day"
+      },
+      "proposition_text": "The doctor prescribes meloxicam fifteen milligrams once a day.",
+      "evidence": [
+        {
+          "turn_id": "T46",
+          "turn_speaker": "doctor",
+          "span_text": "and then i also wan na go ahead and prescribe meloxicam fifteen milligrams once a day",
+          "char_start": 5690,
+          "char_end": 5775
+        }
+      ],
+      "assertion": "hypothetical",
+      "visit_state": "planned",
+      "linked_problem": null,
+      "event_cluster_id": "CL21"
+    },
+    {
+      "cap_id": "CAP21",
+      "cap_type": "MedicationStatement",
+      "content_source": "patient",
+      "modality": "interview",
+      "canonical_concept": "tylenol",
+      "verification_status": "confirmed",
+      "clinical_status": "active",
+      "temporality": "past",
+      "proposition_text": "The patient took some tylenol.",
+      "evidence": [
+        {
+          "turn_id": "T11",
+          "turn_speaker": "patient",
+          "span_text": "i took some tylenol i took some ibuprofen i've tried heat i've tried ice and nothing really seems to help",
+          "char_start": 1686,
+          "char_end": 1791
+        }
+      ],
+      "assertion": "present",
+      "visit_state": "active",
+      "linked_problem": null,
+      "event_cluster_id": "CL8"
+    },
+    {
+      "cap_id": "CAP22",
+      "cap_type": "MedicationStatement",
+      "content_source": "patient",
+      "modality": "interview",
+      "canonical_concept": "ibuprofen",
+      "verification_status": "confirmed",
+      "clinical_status": "active",
+      "temporality": "past",
+      "proposition_text": "The patient took some ibuprofen.",
+      "evidence": [
+        {
+          "turn_id": "T11",
+          "turn_speaker": "patient",
+          "span_text": "i took some tylenol i took some ibuprofen i've tried heat i've tried ice and nothing really seems to help",
+          "char_start": 1686,
+          "char_end": 1791
+        }
+      ],
+      "assertion": "present",
+      "visit_state": "active",
+      "linked_problem": null,
+      "event_cluster_id": "CL9"
+    },
+    {
+      "cap_id": "CAP23",
+      "cap_type": "MedicationStatement",
+      "content_source": "patient",
+      "modality": "interview",
+      "canonical_concept": "acetaminophen",
+      "verification_status": "confirmed",
+      "clinical_status": "active",
+      "temporality": "current",
+      "proposition_text": "The patient took acetaminophen.",
+      "evidence": [
+        {
+          "turn_id": "T11",
+          "turn_speaker": "patient",
+          "span_text": "i took some tylenol i took some ibuprofen i've tried heat i've tried ice and nothing really seems to help",
+          "char_start": 1686,
+          "char_end": 1791
+        }
+      ],
+      "assertion": "present",
+      "visit_state": "active",
+      "linked_problem": null,
+      "event_cluster_id": "CL10"
+    },
+    {
+      "cap_id": "CAP24",
+      "cap_type": "MedicationStatement",
+      "content_source": "patient",
+      "modality": "interview",
+      "canonical_concept": "ibuprofen",
+      "verification_status": "confirmed",
+      "clinical_status": "active",
+      "temporality": "current",
+      "proposition_text": "The patient took ibuprofen.",
+      "evidence": [
+        {
+          "turn_id": "T11",
+          "turn_speaker": "patient",
+          "span_text": "i took some tylenol i took some ibuprofen i've tried heat i've tried ice and nothing really seems to help",
+          "char_start": 1686,
+          "char_end": 1791
+        }
+      ],
+      "assertion": "present",
+      "visit_state": "active",
+      "linked_problem": null,
+      "event_cluster_id": "CL9"
+    },
+    {
+      "cap_id": "CAP25",
+      "cap_type": "MedicationStatement",
+      "content_source": "patient",
+      "modality": "interview",
+      "canonical_concept": "heat",
+      "verification_status": "confirmed",
+      "clinical_status": "active",
+      "temporality": "current",
+      "proposition_text": "The patient applied heat.",
+      "evidence": [
+        {
+          "turn_id": "T11",
+          "turn_speaker": "patient",
+          "span_text": "i took some tylenol i took some ibuprofen i've tried heat i've tried ice and nothing really seems to help",
+          "char_start": 1686,
+          "char_end": 1791
+        }
+      ],
+      "assertion": "present",
+      "visit_state": "active",
+      "linked_problem": null,
+      "event_cluster_id": "CL11"
+    },
+    {
+      "cap_id": "CAP26",
+      "cap_type": "MedicationStatement",
+      "content_source": "patient",
+      "modality": "interview",
+      "canonical_concept": "ice",
+      "verification_status": "confirmed",
+      "clinical_status": "active",
+      "temporality": "current",
+      "proposition_text": "The patient applied ice.",
+      "evidence": [
+        {
+          "turn_id": "T11",
+          "turn_speaker": "patient",
+          "span_text": "i took some tylenol i took some ibuprofen i've tried heat i've tried ice and nothing really seems to help",
+          "char_start": 1686,
+          "char_end": 1791
+        }
+      ],
+      "assertion": "present",
+      "visit_state": "active",
+      "linked_problem": null,
+      "event_cluster_id": "CL12"
+    },
+    {
+      "cap_id": "CAP27",
+      "cap_type": "MedicationStatement",
+      "content_source": "patient",
+      "modality": "interview",
+      "canonical_concept": "heat",
+      "verification_status": "confirmed",
+      "clinical_status": "active",
+      "temporality": "past",
+      "proposition_text": "The patient tried heat.",
+      "evidence": [
+        {
+          "turn_id": "T11",
+          "turn_speaker": "patient",
+          "span_text": "i took some tylenol i took some ibuprofen i've tried heat i've tried ice and nothing really seems to help",
+          "char_start": 1686,
+          "char_end": 1791
+        }
+      ],
+      "assertion": "present",
+      "visit_state": "active",
+      "linked_problem": null,
+      "event_cluster_id": "CL11"
+    },
+    {
+      "cap_id": "CAP28",
+      "cap_type": "MedicationStatement",
+      "content_source": "patient",
+      "modality": "interview",
+      "canonical_concept": "ice",
+      "verification_status": "confirmed",
+      "clinical_status": "active",
+      "temporality": "past",
+      "proposition_text": "The patient tried ice.",
+      "evidence": [
+        {
+          "turn_id": "T11",
+          "turn_speaker": "patient",
+          "span_text": "i took some tylenol i took some ibuprofen i've tried heat i've tried ice and nothing really seems to help",
+          "char_start": 1686,
+          "char_end": 1791
+        }
+      ],
+      "assertion": "present",
+      "visit_state": "active",
+      "linked_problem": null,
+      "event_cluster_id": "CL12"
+    },
+    {
+      "cap_id": "CAP29",
+      "cap_type": "MedicationStatement",
+      "content_source": "doctor",
+      "modality": "plan",
+      "canonical_concept": "meloxicam",
+      "verification_status": "unconfirmed",
+      "clinical_status": "planned",
+      "temporality": "future",
+      "attributes": {
+        "dosage": "15 milligrams",
+        "frequency": "once a day"
+      },
+      "proposition_text": "The doctor prescribes meloxicam.",
+      "evidence": [
+        {
+          "turn_id": "T46",
+          "turn_speaker": "doctor",
+          "span_text": "and then i also wan na go ahead and prescribe meloxicam fifteen milligrams once a day",
+          "char_start": 5690,
+          "char_end": 5775
+        }
+      ],
+      "assertion": "hypothetical",
+      "visit_state": "planned",
+      "linked_problem": null,
+      "event_cluster_id": "CL21"
+    },
+    {
+      "cap_id": "CAP30",
+      "cap_type": "Counseling",
+      "content_source": "doctor",
+      "modality": "plan",
+      "canonical_concept": "physical therapy",
+      "verification_status": "unconfirmed",
+      "clinical_status": "planned",
+      "temporality": "future",
+      "proposition_text": "The doctor recommends physical therapy.",
+      "evidence": [
+        {
+          "turn_id": "T44",
+          "turn_speaker": "doctor",
+          "span_text": "i do wan na go ahead and order a a lumbar spine mri to get a a a better look at what's going on you know x-rays really just look at the bones they do n't show us any of the soft tissue so let's go ahead and order the lumbar spine mri i wan na continue with physical therapy so i'm going to refer you to a a physical therapist through our health system",
+          "char_start": 5312,
+          "char_end": 5663
+        }
+      ],
+      "assertion": "hypothetical",
+      "visit_state": "planned",
+      "linked_problem": null,
+      "event_cluster_id": "CL20"
+    }
+  ],
+  "filtered_nonverifiable_units": [
+    "Is the pain worse at night?",
+    "Is the ibuprofen any better than the tylenol?",
+    "not at this point"
+  ],
+  "chunk_count": 7,
+  "rescue_used": false,
+  "rescue_attempted": false,
+  "legacy_fallback_chunk_count": 0,
+  "extraction_mode": "single_call",
+  "runtime_seconds": 122.89
+}

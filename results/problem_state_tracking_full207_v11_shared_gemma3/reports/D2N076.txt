@@ -1,0 +1,170 @@
+Case: D2N076
+
+Problem List and Visit State Tracking
+
+Problem List
+- rare syndrome | verification_status=unconfirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T7
+  Summary: The patient is aware of a rare syndrome.
+  ClusterId: CL1
+  TemporalProfile: rare
+  Updates:
+  - CAP4: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=rare turns=T7 :: The patient is aware of a rare syndrome.
+- not walking | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T10
+  Summary: The patient is not walking.
+  ClusterId: CL2
+  TemporalProfile: current
+  Updates:
+  - CAP13: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T10 :: The patient is not walking.
+- not sitting | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T10
+  Summary: The patient is not sitting.
+  ClusterId: CL3
+  TemporalProfile: current
+  Updates:
+  - CAP14: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T10 :: The patient is not sitting.
+- difficulty breathing | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T13
+  Summary: The patient reports difficulty breathing.
+  ClusterId: CL4
+  TemporalProfile: current
+  Updates:
+  - CAP12: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T13 :: The patient reports difficulty breathing.
+- syndrome | verification_status=unconfirmed | clinical_status=historical | modalities=interview,unknown | speakers=patient,unknown | evidence=T15,T27
+  Summary: The patient has been diagnosed with a syndrome.
+  ClusterId: CL5
+  TemporalProfile: current, past
+  Updates:
+  - CAP5: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T15 :: The patient has been diagnosed with a syndrome.
+  - CAP15: content_source=unknown modality=unknown verification_status=unconfirmed clinical_status=historical temporality=past turns=T27 :: The patient has a syndrome.
+- reflex | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T15
+  Summary: The patient reports reflex.
+  ClusterId: CL6
+  TemporalProfile: current
+  Updates:
+  - CAP20: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T15 :: The patient reports reflex.
+- kidney fusion | verification_status=unconfirmed | clinical_status=active | modalities=interview,unknown | speakers=patient,unknown | evidence=T21,T31
+  Summary: The patient's geneticist reported a potential risk of kidney fusion.
+  ClusterId: CL8
+  TemporalProfile: current, past
+  Updates:
+  - CAP10: content_source=unknown modality=unknown verification_status=unconfirmed clinical_status=historical temporality=past turns=T21 :: The patient may have fused kidneys.
+  - CAP3: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T31 :: The patient's geneticist reported a potential risk of kidney fusion.
+- orthopedic evaluation | verification_status=unconfirmed | clinical_status=historical | modalities=unknown | speakers=unknown | evidence=T23
+  Summary: The patient has had an orthopedic evaluation.
+  ClusterId: CL10
+  TemporalProfile: past
+  Updates:
+  - CAP7: content_source=unknown modality=unknown verification_status=unconfirmed clinical_status=historical temporality=past turns=T23 :: The patient has had an orthopedic evaluation.
+- ophthalmological evaluation | verification_status=unconfirmed | clinical_status=historical | modalities=unknown | speakers=unknown | evidence=T23
+  Summary: The patient has had an ophthalmological evaluation.
+  ClusterId: CL11
+  TemporalProfile: past
+  Updates:
+  - CAP8: content_source=unknown modality=unknown verification_status=unconfirmed clinical_status=historical temporality=past turns=T23 :: The patient has had an ophthalmological evaluation.
+- left hand pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T25
+  Summary: The patient reports pain in the left hand.
+  ClusterId: CL12
+  TemporalProfile: current
+  Updates:
+  - CAP6: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T25 :: The patient reports pain in the left hand.
+- audiological evaluation | verification_status=unconfirmed | clinical_status=historical | modalities=unknown | speakers=unknown | evidence=T25
+  Summary: The patient has had an audiological evaluation.
+  ClusterId: CL13
+  TemporalProfile: past
+  Updates:
+  - CAP9: content_source=unknown modality=unknown verification_status=unconfirmed clinical_status=historical temporality=past turns=T25 :: The patient has had an audiological evaluation.
+- leg problems | verification_status=unconfirmed | clinical_status=historical | modalities=unknown | speakers=unknown | evidence=T27
+  Summary: The patient may have leg problems.
+  ClusterId: CL14
+  TemporalProfile: past
+  Updates:
+  - CAP11: content_source=unknown modality=unknown verification_status=unconfirmed clinical_status=historical temporality=past turns=T27 :: The patient may have leg problems.
+- polyuria | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T31
+  Summary: The patient reports frequent urination.
+  ClusterId: CL15
+  TemporalProfile: current
+  Updates:
+  - CAP16: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T31 :: The patient reports frequent urination.
+- polydipsia | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T31
+  Summary: The patient reports excessive thirst.
+  ClusterId: CL16
+  TemporalProfile: current
+  Updates:
+  - CAP17: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T31 :: The patient reports excessive thirst.
+- congenital anomalies | verification_status=unconfirmed | clinical_status=historical | modalities=assessment | speakers=doctor | evidence=T52
+  Summary: The syndrome involves congenital anomalies.
+  ClusterId: CL18
+  TemporalProfile: historical
+  Updates:
+  - CAP19: content_source=doctor modality=assessment verification_status=unconfirmed clinical_status=historical temporality=historical turns=T52 :: The syndrome involves congenital anomalies.
+- pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T53,T65
+  Summary: The patient reports pain.
+  ClusterId: CL19
+  TemporalProfile: current
+  Updates:
+  - CAP21: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T53 :: The patient reports pain.
+  - CAP22: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T65 :: The patient reports pain.
+- kidney ultrasound | verification_status=unconfirmed | clinical_status=planned | modalities=assessment | speakers=doctor | evidence=T54
+  Summary: A kidney ultrasound is planned.
+  ClusterId: CL20
+  TemporalProfile: future
+  Updates:
+  - CAP18: content_source=doctor modality=assessment verification_status=unconfirmed clinical_status=planned temporality=future turns=T54 :: A kidney ultrasound is planned.
+- smith-magenis syndrome | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=doctor | evidence=T78
+  Summary: Katherine is a 22-month-old former 34 and 3-week-old, twin with Smith-Magenis syndrome.
+  ClusterId: CL25
+  TemporalProfile: current
+  Updates:
+  - CAP1: content_source=doctor modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T78 :: Katherine is a 22-month-old former 34 and 3-week-old, twin with Smith-Magenis syndrome.
+- congenital anomalies of the kidney and urinary tract | verification_status=unconfirmed | clinical_status=historical | modalities=interview | speakers=doctor | evidence=T78
+  Summary: Several organ systems can be affected by this chromosomal deletion syndrome.
+  ClusterId: CL26
+  TemporalProfile: literature
+  Updates:
+  - CAP2: content_source=doctor modality=interview verification_status=unconfirmed clinical_status=historical temporality=literature turns=T78 :: Several organ systems can be affected by this chromosomal deletion syndrome.
+
+Medication Tracking
+- [MedicationState] cow's milk | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T15
+  Summary: Cow's milk was discontinued.
+  ClusterId: CL7
+  TemporalProfile: past
+  CurrentRegimens:
+  - Cow's milk was discontinued. (T15)
+  Updates:
+  - CAP31: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=past turns=T15 :: Cow's milk was discontinued.
+- [MedicationChange] speech therapy | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=unknown | evidence=T21
+  Summary: Speech therapy will be started within the next couple of weeks.
+  ClusterId: CL9
+  TemporalProfile: within the next couple of weeks
+  PlannedChanges:
+  - Speech therapy will be started within the next couple of weeks. (T21)
+  Updates:
+  - CAP26: content_source=unknown modality=plan verification_status=unconfirmed clinical_status=planned temporality=within the next couple of weeks turns=T21 :: Speech therapy will be started within the next couple of weeks.
+- [MedicationState] ripple pea protein milk | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T37
+  Summary: The patient previously consumed only milk, now consuming ripple pea protein milk.
+  ClusterId: CL17
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient previously consumed only milk, now consuming ripple pea protein milk. (T37)
+  Updates:
+  - CAP30: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T37 :: The patient previously consumed only milk, now consuming ripple pea protein milk.
+- [MedicationChange] ultrasound | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T74
+  Summary: The doctor will call with ultrasound results.
+  ClusterId: CL23
+  TemporalProfile: today
+  PlannedChanges:
+  - The doctor will call with ultrasound results. (T74)
+  Updates:
+  - CAP28: content_source=doctor modality=plan verification_status=unconfirmed clinical_status=planned temporality=today turns=T74 :: The doctor will call with ultrasound results.
+
+Other Structured States
+- [Plan] kidney ultrasound | verification_status=confirmed | clinical_status=planned | modalities=interview | speakers=doctor | evidence=T54,T79
+  Summary: We will obtain the screening of the kidneys by ultrasound today.
+  ClusterId: CL21
+  TemporalProfile: soon, today
+- [Plan] follow-up | verification_status=confirmed | clinical_status=planned | modalities=interview,plan | speakers=doctor | evidence=T70,T79
+  Summary: The patient may need to see the doctor again if the ultrasound is abnormal.
+  ClusterId: CL22
+  TemporalProfile: future, if abnormal
+- [Plan] instructions | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T74
+  Summary: The nurse will provide instructions for the ultrasound.
+  ClusterId: CL24
+  TemporalProfile: soon

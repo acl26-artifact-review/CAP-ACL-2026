@@ -1,0 +1,114 @@
+Case: D2N205
+
+Problem List and Visit State Tracking
+
+Problem List
+- shortness of breath | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T3
+  Summary: The patient reports shortness of breath.
+  ClusterId: CL1
+  TemporalProfile: weekend
+  Updates:
+  - CAP4: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=weekend turns=T3 :: The patient reports shortness of breath.
+- difficulty walking | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T3
+  Summary: The patient reports difficulty walking.
+  ClusterId: CL2
+  TemporalProfile: current
+  Updates:
+  - CAP7: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T3 :: The patient reports difficulty walking.
+- dog walk distance | verification_status=unconfirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T5
+  Summary: The patient could only walk down to the end of the street this weekend.
+  ClusterId: CL3
+  TemporalProfile: before this weekend, this weekend
+  Updates:
+  - CAP20: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=this weekend turns=T5 :: The patient could only walk down to the end of the street this weekend.
+  - CAP22: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=before this weekend turns=T5 :: The patient normally took their dog for mile-long walks every day.
+- activity level | verification_status=unconfirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T5
+  Summary: The patient previously walked their dog for mile-long walks every day.
+  ClusterId: CL4
+  TemporalProfile: before this weekend
+  Updates:
+  - CAP21: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=before this weekend turns=T5 :: The patient previously walked their dog for mile-long walks every day.
+- dry cough | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T9
+  Summary: The patient reports a dry cough.
+  ClusterId: CL5
+  TemporalProfile: current
+  Updates:
+  - CAP5: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T9 :: The patient reports a dry cough.
+  - CAP6: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T9 :: The patient reports a dry cough.
+- nausea | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T21
+  Summary: The patient reports nausea.
+  ClusterId: CL6
+  TemporalProfile: current
+  Updates:
+  - CAP10: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T21 :: The patient reports nausea.
+- fatigue | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T21
+  Summary: The patient reports fatigue.
+  ClusterId: CL7
+  TemporalProfile: current
+  Updates:
+  - CAP11: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T21 :: The patient reports fatigue.
+- lung cancer | verification_status=confirmed | clinical_status=active | modalities=assessment,interview | speakers=clinician,patient | evidence=T22
+  Summary: The patient has lung cancer.
+  ClusterId: CL8
+  TemporalProfile: current
+  Updates:
+  - CAP1: content_source=clinician modality=assessment verification_status=confirmed clinical_status=active temporality=current turns=T22 :: The patient has lung cancer.
+  - CAP8: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T22 :: The patient has lung cancer.
+- radiation pneumonitis | verification_status=confirmed | clinical_status=active | modalities=assessment,interview | speakers=clinician,patient | evidence=T22
+  Summary: The patient has radiation pneumonitis.
+  ClusterId: CL9
+  TemporalProfile: current
+  Updates:
+  - CAP2: content_source=clinician modality=assessment verification_status=confirmed clinical_status=active temporality=current turns=T22 :: The patient has radiation pneumonitis.
+  - CAP9: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T22 :: The patient has radiation pneumonitis.
+- dysphagia | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T23
+  Summary: The patient reports dysphagia.
+  ClusterId: CL13
+  TemporalProfile: current
+  Updates:
+  - CAP12: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T23 :: The patient reports dysphagia.
+- pain | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T24,T27
+  Summary: The patient reports pain in the left hand.
+  ClusterId: CL14
+  TemporalProfile: current
+  Updates:
+  - CAP3: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T24 :: The patient reports pain in the left hand.
+  - CAP13: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T27 :: The patient reports pain.
+
+Medication Tracking
+- [MedicationChange] prednisone | verification_status=confirmed | clinical_status=planned | modalities=plan | speakers=clinician,doctor | evidence=T22,T24
+  Summary: The doctor prescribes prednisone.
+  ClusterId: CL12
+  TemporalProfile: current
+  PlannedChanges:
+  - The clinician prescribes prednisone. (T22)
+  - The doctor prescribes prednisone. (T24)
+  Updates:
+  - CAP19: content_source=clinician modality=plan verification_status=confirmed clinical_status=planned temporality=current turns=T22 :: The clinician prescribes prednisone.
+  - CAP17: content_source=doctor modality=plan verification_status=confirmed clinical_status=planned temporality=current turns=T24 :: The doctor prescribes prednisone.
+- [MedicationChange] lidocaine | verification_status=confirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T24
+  Summary: The doctor prescribes lidocaine.
+  ClusterId: CL15
+  TemporalProfile: current
+  PlannedChanges:
+  - The doctor prescribes lidocaine. (T24)
+  Updates:
+  - CAP18: content_source=doctor modality=plan verification_status=confirmed clinical_status=planned temporality=current turns=T24 :: The doctor prescribes lidocaine.
+- [MedicationChange] medication | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T28
+  Summary: The doctor will get you those medications those prescriptions.
+  ClusterId: CL16
+  TemporalProfile: future
+  PlannedChanges:
+  - The doctor will get you those medications those prescriptions. (T28)
+  Updates:
+  - CAP16: content_source=doctor modality=plan verification_status=unconfirmed clinical_status=planned temporality=future turns=T28 :: The doctor will get you those medications those prescriptions.
+
+Other Structured States
+- [ExamFinding] erythema | verification_status=confirmed | clinical_status=active | modalities=exam | speakers=clinician | evidence=T22
+  Summary: The clinician observes erythema on the anterior aspect of the patient's chest on the left side.
+  ClusterId: CL10
+  TemporalProfile: current
+- [ExamFinding] crackles | verification_status=confirmed | clinical_status=active | modalities=exam | speakers=clinician | evidence=T22
+  Summary: The clinician detects faint crackles in the patient's lungs bilaterally.
+  ClusterId: CL11
+  TemporalProfile: current

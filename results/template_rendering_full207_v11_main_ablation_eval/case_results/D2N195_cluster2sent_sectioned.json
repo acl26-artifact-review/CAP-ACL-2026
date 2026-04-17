@@ -1,0 +1,1533 @@
+{
+  "case_id": "D2N195",
+  "method": "cluster2sent",
+  "template": "sectioned",
+  "summary_text": "Chief Complaint\nPatient reports fatigue and knee pain.\n\nHistory of Present Illness\nThe patient reports fatigue for the past two months and knee pain after playing basketball. The patient describes the knee pain as achy and states the swelling has decreased overnight. The patient tried tylenol for the pain and reports a pain level of four on a scale of one to ten. The patient denies blood in stool.\n\nFindings\nThe clinician performed a physical exam revealing pain to palpation of the medial aspect of the right knee, edema, and ecchymosis. The x-ray of the right knee was normal. The patient's blood pressures are typically in the one forties to one fifties range. The patient's blood sugars are typically around one fifty when taken.\n\nAssessment\nThe patient has an MCL strain due to twisting the knee during basketball.\n\nPlan\nThe clinician prescribed tylenol fifteen milligrams and a knee immobilizer. The clinician is prescribing meloxicam fifteen milligrams. The clinician is increasing norvasc to five milligrams. The clinician wants the patient to start taking blood sugars daily. The clinician wants to consult with a nutritionist.",
+  "reference_summary": "CHIEF COMPLAINT\n\nRight knee pain\n\nHISTORY OF PRESENT ILLNESS\n\nMatthew Allen is a pleasant 40-year-old male who presents to the clinic today for the evaluation of right knee pain. The onset of his pain began yesterday after he went up for a rebound while playing basketball and felt a pop in his knee. He states that he experienced swelling and difficulty with ambulation following this incident. He locates his pain today to the medial aspect of his knee. His pain is described as aching and is rated at 4 out of 10. In terms of his swelling, he states that this has improved some. He is also able to weight-bear, but he finds that he is favoring his left leg while doing so. His tried treatments include Tylenol with some relief as well as rest.\n\nThe patient has a history of hypertension and diabetes. He reports that he does not check is blood pressure at home very often, but he typically runs 140 to 150 range over 80. He is taking 5 mg of Norvasc daily. In terms of his diet, he states that he enjoys eating whatever he likes. His most recent A1C was 7.2. He is taking metformin 500 mg daily, however there are days where he skips this because of gastrointestinal upset. He denies checking his blood sugar at home consistently and that when he does check he has been around 150.\n\nMEDICAL HISTORY\n\nPatient reports history of hypertension and diabetes.\n\nSOCIAL HISTORY\n\nPatient reports playing basketball, however this most recent event was the first time he played in 2 years.\n\nMEDICATIONS\n\nPatient reports he is taking Norvasc 5 mg daily, metformin 500 mg daily, and Tylenol.\n\nREVIEW OF SYSTEMS\n\nMusculoskeletal: Reports right knee pain and swelling.\n\nVITALS\n\nBlood pressure is 140/80 today.\n\nPHYSICAL EXAM\n\nCV: Grade 2/6 systolic ejection murmur.\nRESPIRATORY: Normal respiratory effort no respiratory distress\nMSK: Examination of the right knee: Pain with palpation over the medial aspect. Mild pain with flexion and extension. Edema, swelling, and ecchymosis noted. Mild redness. Negative varus and valgus stress test with firm endpoint.\n\nRESULTS\n\n4 views of the right knee were taken. These reveal no evidence of any fractures or dislocations. No other abnormalities are noted.\n\nASSESSMENT\n\nRight knee MCL strain.\nDiabetes.\nHypertension.\n\nPLAN\n\nAfter reviewing the patient's examination and radiographic findings today, I had a lengthy discussion with the patient in regards to his current symptoms. I have recommended that we obtain an MRI of the right knee to further evaluate for a possible MCL tear. In the meantime, he will continue with Tylenol for pain relief. I have also prescribed him meloxicam 15 mg for pain and swelling. He will be placed into a knee immobilizer and has been advised to remain non weight-bearing for the next couple of weeks.\n\nIn terms of his diabetes, he was advised to start logging his blood sugars daily and to avoid eating large amounts of strawberries. He will also be provided with a referral for a consult with a nutritionist.\n\nFor his hypertension, we are going to increase his Norvasc to 5 mg daily as his blood pressures have been elevated. We discussed our goal is for him to get closer to the 120/80 range.\n\nINSTRUCTIONS\n\nThe patient will follow up with me in 2 weeks to review his MRI results.",
+  "source_cap": {
+    "atomic_propositions": [
+      {
+        "prop_id": "CAP1",
+        "cap_type": "Symptom",
+        "canonical_concept": "blood pressure",
+        "category": "Symptom",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient's blood pressure is typically in the one forties to one fifties range on the top number and around eighty on the bottom number."
+      },
+      {
+        "prop_id": "CAP2",
+        "cap_type": "Symptom",
+        "canonical_concept": "blood pressure",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "quantitative",
+          "symptom"
+        ],
+        "proposition_text": "The patient reports a blood pressure of 140 over 80."
+      },
+      {
+        "prop_id": "CAP3",
+        "cap_type": "Symptom",
+        "canonical_concept": "blood pressure",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "quantitative",
+          "symptom"
+        ],
+        "proposition_text": "The patient reports a blood pressure of 110 over 70."
+      },
+      {
+        "prop_id": "CAP4",
+        "cap_type": "Problem",
+        "canonical_concept": "hypertension",
+        "category": "Problem",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The doctor is checking up on the patient's hypertension."
+      },
+      {
+        "prop_id": "CAP5",
+        "cap_type": "Problem",
+        "canonical_concept": "diabetes",
+        "category": "Problem",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The doctor is checking up on the patient's diabetes."
+      },
+      {
+        "prop_id": "CAP6",
+        "cap_type": "Symptom",
+        "canonical_concept": "knee pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports pain in the left knee."
+      },
+      {
+        "prop_id": "CAP7",
+        "cap_type": "Symptom",
+        "canonical_concept": "pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports a pain level of four."
+      },
+      {
+        "prop_id": "CAP8",
+        "cap_type": "Symptom",
+        "canonical_concept": "pain",
+        "category": "Symptom",
+        "speaker": "doctor",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports pain in the left hand."
+      },
+      {
+        "prop_id": "CAP9",
+        "cap_type": "Symptom",
+        "canonical_concept": "swelling",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports swelling in the knee."
+      },
+      {
+        "prop_id": "CAP10",
+        "cap_type": "Symptom",
+        "canonical_concept": "knee pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports pain in the knee."
+      },
+      {
+        "prop_id": "CAP11",
+        "cap_type": "Symptom",
+        "canonical_concept": "pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient describes the pain as achy."
+      },
+      {
+        "prop_id": "CAP12",
+        "cap_type": "Problem",
+        "canonical_concept": "hypertension",
+        "category": "Problem",
+        "speaker": "patient",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The doctor believes the patient has hypertension."
+      },
+      {
+        "prop_id": "CAP13",
+        "cap_type": "Problem",
+        "canonical_concept": "diabetes",
+        "category": "Problem",
+        "speaker": "doctor",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The doctor believes the patient has diabetes."
+      },
+      {
+        "prop_id": "CAP14",
+        "cap_type": "Symptom",
+        "canonical_concept": "blood sugar",
+        "category": "Symptom",
+        "speaker": "doctor",
+        "predicate": "reports",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports irregular blood sugar readings."
+      },
+      {
+        "prop_id": "CAP15",
+        "cap_type": "Problem",
+        "canonical_concept": "knee injury",
+        "category": "Problem",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient has a knee injury."
+      },
+      {
+        "prop_id": "CAP16",
+        "cap_type": "Problem",
+        "canonical_concept": "metformin",
+        "category": "Problem",
+        "speaker": "doctor",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "medication"
+        ],
+        "proposition_text": "The patient is taking metformin."
+      },
+      {
+        "prop_id": "CAP17",
+        "cap_type": "Symptom",
+        "canonical_concept": "stomach upset",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports stomach upset."
+      },
+      {
+        "prop_id": "CAP18",
+        "cap_type": "Problem",
+        "canonical_concept": "hypertension",
+        "category": "Problem",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient has hypertension."
+      },
+      {
+        "prop_id": "CAP19",
+        "cap_type": "MedicationRequest",
+        "canonical_concept": "norvasta",
+        "category": "MedicationRequest",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "planned",
+        "temporality": "current",
+        "claim_type_tags": [
+          "medication",
+          "quantitative"
+        ],
+        "proposition_text": "The doctor will prescribe norvasta at a dose of 5 milligrams."
+      },
+      {
+        "prop_id": "CAP20",
+        "cap_type": "MedicationRequest",
+        "canonical_concept": "metformin",
+        "category": "MedicationRequest",
+        "speaker": "doctor",
+        "status": "uncertain",
+        "visit_state": "planned",
+        "temporality": "current",
+        "claim_type_tags": [
+          "medication"
+        ],
+        "proposition_text": "The doctor wants to change the patient's medication."
+      },
+      {
+        "prop_id": "CAP21",
+        "cap_type": "MedicationRequest",
+        "canonical_concept": "norvasta",
+        "category": "MedicationRequest",
+        "speaker": "doctor",
+        "predicate": "plans",
+        "status": "affirmed",
+        "visit_state": "planned",
+        "temporality": "current",
+        "claim_type_tags": [
+          "medication",
+          "plan"
+        ],
+        "proposition_text": "The doctor will increase the norvasta dose."
+      },
+      {
+        "prop_id": "CAP22",
+        "cap_type": "Order",
+        "canonical_concept": "knee immobilizer",
+        "category": "Order",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "planned",
+        "temporality": "future",
+        "proposition_text": "The doctor ordered a knee immobilizer."
+      },
+      {
+        "prop_id": "CAP23",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "norvasc",
+        "category": "MedicationStatement",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient is taking five milligrams of norvasc daily."
+      },
+      {
+        "prop_id": "CAP24",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "tylenol",
+        "category": "MedicationStatement",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "yesterday",
+        "proposition_text": "The patient took Tylenol yesterday."
+      },
+      {
+        "prop_id": "CAP25",
+        "cap_type": "FollowUp",
+        "canonical_concept": "MRI",
+        "category": "FollowUp",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "planned",
+        "temporality": "future",
+        "proposition_text": "The doctor ordered an MRI."
+      },
+      {
+        "prop_id": "CAP26",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "meloxicam",
+        "category": "MedicationStatement",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "planned",
+        "temporality": "future",
+        "proposition_text": "The doctor prescribed meloxicam."
+      },
+      {
+        "prop_id": "CAP27",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "norvasc",
+        "category": "MedicationStatement",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "planned",
+        "temporality": "future",
+        "proposition_text": "The doctor prescribed norvasc."
+      },
+      {
+        "prop_id": "CAP28",
+        "cap_type": "Counseling",
+        "canonical_concept": "diet",
+        "category": "Counseling",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "planned",
+        "temporality": "current",
+        "proposition_text": "The doctor will refer the patient to nutrition counseling."
+      }
+    ],
+    "filtered_nonverifiable_units": []
+  },
+  "event_plan": null,
+  "summary_cap": {
+    "atomic_propositions": [],
+    "filtered_nonverifiable_units": [],
+    "runtime_seconds": 0.549
+  },
+  "cap_alignment": {
+    "cap_precision": 0.0,
+    "cap_recall": 0.0,
+    "cap_f1": 0.0,
+    "matched_count": 0,
+    "summary_prop_count": 0,
+    "source_prop_count": 28,
+    "matched_pairs": [],
+    "unsupported_summary_props": [],
+    "missing_source_props": [
+      {
+        "prop_id": "CAP1",
+        "cap_type": "Symptom",
+        "canonical_concept": "blood pressure",
+        "category": "Symptom",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient's blood pressure is typically in the one forties to one fifties range on the top number and around eighty on the bottom number."
+      },
+      {
+        "prop_id": "CAP2",
+        "cap_type": "Symptom",
+        "canonical_concept": "blood pressure",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "quantitative",
+          "symptom"
+        ],
+        "proposition_text": "The patient reports a blood pressure of 140 over 80."
+      },
+      {
+        "prop_id": "CAP3",
+        "cap_type": "Symptom",
+        "canonical_concept": "blood pressure",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "quantitative",
+          "symptom"
+        ],
+        "proposition_text": "The patient reports a blood pressure of 110 over 70."
+      },
+      {
+        "prop_id": "CAP4",
+        "cap_type": "Problem",
+        "canonical_concept": "hypertension",
+        "category": "Problem",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The doctor is checking up on the patient's hypertension."
+      },
+      {
+        "prop_id": "CAP5",
+        "cap_type": "Problem",
+        "canonical_concept": "diabetes",
+        "category": "Problem",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The doctor is checking up on the patient's diabetes."
+      },
+      {
+        "prop_id": "CAP6",
+        "cap_type": "Symptom",
+        "canonical_concept": "knee pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports pain in the left knee."
+      },
+      {
+        "prop_id": "CAP7",
+        "cap_type": "Symptom",
+        "canonical_concept": "pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports a pain level of four."
+      },
+      {
+        "prop_id": "CAP8",
+        "cap_type": "Symptom",
+        "canonical_concept": "pain",
+        "category": "Symptom",
+        "speaker": "doctor",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports pain in the left hand."
+      },
+      {
+        "prop_id": "CAP9",
+        "cap_type": "Symptom",
+        "canonical_concept": "swelling",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports swelling in the knee."
+      },
+      {
+        "prop_id": "CAP10",
+        "cap_type": "Symptom",
+        "canonical_concept": "knee pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports pain in the knee."
+      },
+      {
+        "prop_id": "CAP11",
+        "cap_type": "Symptom",
+        "canonical_concept": "pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient describes the pain as achy."
+      },
+      {
+        "prop_id": "CAP12",
+        "cap_type": "Problem",
+        "canonical_concept": "hypertension",
+        "category": "Problem",
+        "speaker": "patient",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The doctor believes the patient has hypertension."
+      },
+      {
+        "prop_id": "CAP13",
+        "cap_type": "Problem",
+        "canonical_concept": "diabetes",
+        "category": "Problem",
+        "speaker": "doctor",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The doctor believes the patient has diabetes."
+      },
+      {
+        "prop_id": "CAP14",
+        "cap_type": "Symptom",
+        "canonical_concept": "blood sugar",
+        "category": "Symptom",
+        "speaker": "doctor",
+        "predicate": "reports",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports irregular blood sugar readings."
+      },
+      {
+        "prop_id": "CAP15",
+        "cap_type": "Problem",
+        "canonical_concept": "knee injury",
+        "category": "Problem",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient has a knee injury."
+      },
+      {
+        "prop_id": "CAP16",
+        "cap_type": "Problem",
+        "canonical_concept": "metformin",
+        "category": "Problem",
+        "speaker": "doctor",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "medication"
+        ],
+        "proposition_text": "The patient is taking metformin."
+      },
+      {
+        "prop_id": "CAP17",
+        "cap_type": "Symptom",
+        "canonical_concept": "stomach upset",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports stomach upset."
+      },
+      {
+        "prop_id": "CAP18",
+        "cap_type": "Problem",
+        "canonical_concept": "hypertension",
+        "category": "Problem",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient has hypertension."
+      },
+      {
+        "prop_id": "CAP19",
+        "cap_type": "MedicationRequest",
+        "canonical_concept": "norvasta",
+        "category": "MedicationRequest",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "planned",
+        "temporality": "current",
+        "claim_type_tags": [
+          "medication",
+          "quantitative"
+        ],
+        "proposition_text": "The doctor will prescribe norvasta at a dose of 5 milligrams."
+      },
+      {
+        "prop_id": "CAP20",
+        "cap_type": "MedicationRequest",
+        "canonical_concept": "metformin",
+        "category": "MedicationRequest",
+        "speaker": "doctor",
+        "status": "uncertain",
+        "visit_state": "planned",
+        "temporality": "current",
+        "claim_type_tags": [
+          "medication"
+        ],
+        "proposition_text": "The doctor wants to change the patient's medication."
+      },
+      {
+        "prop_id": "CAP21",
+        "cap_type": "MedicationRequest",
+        "canonical_concept": "norvasta",
+        "category": "MedicationRequest",
+        "speaker": "doctor",
+        "predicate": "plans",
+        "status": "affirmed",
+        "visit_state": "planned",
+        "temporality": "current",
+        "claim_type_tags": [
+          "medication",
+          "plan"
+        ],
+        "proposition_text": "The doctor will increase the norvasta dose."
+      },
+      {
+        "prop_id": "CAP22",
+        "cap_type": "Order",
+        "canonical_concept": "knee immobilizer",
+        "category": "Order",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "planned",
+        "temporality": "future",
+        "proposition_text": "The doctor ordered a knee immobilizer."
+      },
+      {
+        "prop_id": "CAP23",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "norvasc",
+        "category": "MedicationStatement",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient is taking five milligrams of norvasc daily."
+      },
+      {
+        "prop_id": "CAP24",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "tylenol",
+        "category": "MedicationStatement",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "yesterday",
+        "proposition_text": "The patient took Tylenol yesterday."
+      },
+      {
+        "prop_id": "CAP25",
+        "cap_type": "FollowUp",
+        "canonical_concept": "MRI",
+        "category": "FollowUp",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "planned",
+        "temporality": "future",
+        "proposition_text": "The doctor ordered an MRI."
+      },
+      {
+        "prop_id": "CAP26",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "meloxicam",
+        "category": "MedicationStatement",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "planned",
+        "temporality": "future",
+        "proposition_text": "The doctor prescribed meloxicam."
+      },
+      {
+        "prop_id": "CAP27",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "norvasc",
+        "category": "MedicationStatement",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "planned",
+        "temporality": "future",
+        "proposition_text": "The doctor prescribed norvasc."
+      },
+      {
+        "prop_id": "CAP28",
+        "cap_type": "Counseling",
+        "canonical_concept": "diet",
+        "category": "Counseling",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "planned",
+        "temporality": "current",
+        "proposition_text": "The doctor will refer the patient to nutrition counseling."
+      }
+    ]
+  },
+  "reference_gpt_f1_items": {
+    "active_problems_symptoms": [],
+    "negated_findings": [],
+    "uncertain_findings": [],
+    "medication_treatment": [],
+    "plan_followup": [],
+    "_chunk_count": [
+      "4"
+    ],
+    "_parse_failures": [
+      "{\"chunk_index\": 1, \"stage\": \"call_llm\", \"error\": \"LLM call failed after retries: Error code: 404\"}",
+      "{\"chunk_index\": 2, \"stage\": \"call_llm\", \"error\": \"LLM call failed after retries: Error code: 404\"}",
+      "{\"chunk_index\": 3, \"stage\": \"call_llm\", \"error\": \"LLM call failed after retries: Error code: 404\"}",
+      "{\"chunk_index\": 4, \"stage\": \"call_llm\", \"error\": \"LLM call failed after retries: Error code: 404\"}"
+    ]
+  },
+  "summary_gpt_f1_items": {
+    "active_problems_symptoms": [],
+    "negated_findings": [],
+    "uncertain_findings": [],
+    "medication_treatment": [],
+    "plan_followup": [],
+    "_chunk_count": [
+      "1"
+    ],
+    "_parse_failures": [
+      "{\"chunk_index\": 1, \"stage\": \"call_llm\", \"error\": \"LLM call failed after retries: Error code: 404\"}"
+    ]
+  },
+  "gpt_f1_alignment": {
+    "by_category": {
+      "active_problems_symptoms": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "matched_count": 0,
+        "pred_count": 0,
+        "ref_count": 0,
+        "matches": [],
+        "unsupported_pred_items": [],
+        "missing_ref_items": []
+      },
+      "negated_findings": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "matched_count": 0,
+        "pred_count": 0,
+        "ref_count": 0,
+        "matches": [],
+        "unsupported_pred_items": [],
+        "missing_ref_items": []
+      },
+      "uncertain_findings": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "matched_count": 0,
+        "pred_count": 0,
+        "ref_count": 0,
+        "matches": [],
+        "unsupported_pred_items": [],
+        "missing_ref_items": []
+      },
+      "medication_treatment": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "matched_count": 0,
+        "pred_count": 0,
+        "ref_count": 0,
+        "matches": [],
+        "unsupported_pred_items": [],
+        "missing_ref_items": []
+      },
+      "plan_followup": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "matched_count": 0,
+        "pred_count": 0,
+        "ref_count": 0,
+        "matches": [],
+        "unsupported_pred_items": [],
+        "missing_ref_items": []
+      }
+    }
+  },
+  "reference_nair_concepts": {
+    "sections": [
+      {
+        "heading": "Clinical Note",
+        "section_value": "CHIEF COMPLAINT\nRight knee pain\nHISTORY OF PRESENT ILLNESS\nMatthew Allen is a pleasant 40-year-old male who presents to the clinic today for the evaluation of right knee pain. The onset of his pain began yesterday after he went up for a rebound while playing basketball and felt a pop in his knee. He states that he experienced swelling and difficulty with ambulation following this incident. He locates his pain today to the medial aspect of his knee. His pain is described as aching and is rated at 4 out of 10. In terms of his swelling, he states that this has improved some. He is also able to weight-bear, but he finds that he is favoring his left leg while doing so. His tried treatments include Tylenol with some relief as well as rest.\nThe patient has a history of hypertension and diabetes. He reports that he does not check is blood pressure at home very often, but he typically runs 140 to 150 range over 80. He is taking 5 mg of Norvasc daily. In terms of his diet, he states that he enjoys eating whatever he likes. His most recent A1C was 7.2. He is taking metformin 500 mg daily, however there are days where he skips this because of gastrointestinal upset. He denies checking his blood sugar at home consistently and that when he does check he has been around 150.\nMEDICAL HISTORY\nPatient reports history of hypertension and diabetes.\nSOCIAL HISTORY",
+        "medical_concepts": [
+          "right knee pain",
+          "knee pain",
+          "swelling",
+          "difficulty with ambulation",
+          "medial knee pain",
+          "aching pain",
+          "hypertension",
+          "diabetes",
+          "blood pressure",
+          "A1C",
+          "gastrointestinal upset",
+          "blood sugar",
+          "Tylenol",
+          "Norvasc",
+          "metformin"
+        ]
+      },
+      {
+        "heading": "Clinical Note",
+        "section_value": "Patient reports playing basketball, however this most recent event was the first time he played in 2 years.\nMEDICATIONS\nPatient reports he is taking Norvasc 5 mg daily, metformin 500 mg daily, and Tylenol.\nREVIEW OF SYSTEMS\nMusculoskeletal: Reports right knee pain and swelling.\nVITALS\nBlood pressure is 140/80 today.\nPHYSICAL EXAM\nCV: Grade 2/6 systolic ejection murmur.\nRESPIRATORY: Normal respiratory effort no respiratory distress",
+        "medical_concepts": [
+          "Norvasc",
+          "metformin",
+          "Tylenol",
+          "right knee pain",
+          "knee swelling",
+          "blood pressure",
+          "systolic ejection murmur",
+          "respiratory distress"
+        ]
+      },
+      {
+        "heading": "Clinical Note",
+        "section_value": "MSK: Examination of the right knee: Pain with palpation over the medial aspect. Mild pain with flexion and extension. Edema, swelling, and ecchymosis noted. Mild redness. Negative varus and valgus stress test with firm endpoint.\nRESULTS\n4 views of the right knee were taken. These reveal no evidence of any fractures or dislocations. No other abnormalities are noted.\nASSESSMENT\nRight knee MCL strain.\nDiabetes.\nHypertension.\nPLAN\nAfter reviewing the patient's examination and radiographic findings today, I had a lengthy discussion with the patient in regards to his current symptoms. I have recommended that we obtain an MRI of the right knee to further evaluate for a possible MCL tear. In the meantime, he will continue with Tylenol for pain relief. I have also prescribed him meloxicam 15 mg for pain and swelling. He will be placed into a knee immobilizer and has been advised to remain non weight-bearing for the next couple of weeks.\nIn terms of his diabetes, he was advised to start logging his blood sugars daily and to avoid eating large amounts of strawberries. He will also be provided with a referral for a consult with a nutritionist.",
+        "medical_concepts": [
+          "right knee pain",
+          "pain with palpation",
+          "pain with flexion",
+          "pain with extension",
+          "edema",
+          "swelling",
+          "ecchymosis",
+          "redness",
+          "varus stress test",
+          "valgus stress test",
+          "right knee X-ray",
+          "fracture",
+          "dislocation",
+          "right knee MCL strain",
+          "MCL tear",
+          "diabetes",
+          "hypertension",
+          "MRI of the right knee",
+          "Tylenol",
+          "meloxicam 15 mg"
+        ]
+      },
+      {
+        "heading": "Clinical Note",
+        "section_value": "For his hypertension, we are going to increase his Norvasc to 5 mg daily as his blood pressures have been elevated. We discussed our goal is for him to get closer to the 120/80 range.\nINSTRUCTIONS\nThe patient will follow up with me in 2 weeks to review his MRI results.",
+        "medical_concepts": [
+          "hypertension",
+          "Norvasc",
+          "elevated blood pressure",
+          "MRI"
+        ]
+      }
+    ],
+    "medical_concepts": [
+      "right knee pain",
+      "knee pain",
+      "swelling",
+      "difficulty with ambulation",
+      "medial knee pain",
+      "aching pain",
+      "hypertension",
+      "diabetes",
+      "blood pressure",
+      "A1C",
+      "gastrointestinal upset",
+      "blood sugar",
+      "Tylenol",
+      "Norvasc",
+      "metformin",
+      "knee swelling",
+      "systolic ejection murmur",
+      "respiratory distress",
+      "pain with palpation",
+      "pain with flexion",
+      "pain with extension",
+      "edema",
+      "ecchymosis",
+      "redness",
+      "varus stress test",
+      "valgus stress test",
+      "right knee X-ray",
+      "fracture",
+      "dislocation",
+      "right knee MCL strain",
+      "MCL tear",
+      "MRI of the right knee",
+      "meloxicam 15 mg",
+      "elevated blood pressure",
+      "MRI"
+    ],
+    "section_count": 4
+  },
+  "summary_nair_concepts": {
+    "sections": [
+      {
+        "heading": "Clinical Note",
+        "section_value": "Chief Complaint\nPatient reports fatigue and knee pain.\nHistory of Present Illness\nThe patient reports fatigue for the past two months and knee pain after playing basketball. The patient describes the knee pain as achy and states the swelling has decreased overnight. The patient tried tylenol for the pain and reports a pain level of four on a scale of one to ten. The patient denies blood in stool.\nFindings\nThe clinician performed a physical exam revealing pain to palpation of the medial aspect of the right knee, edema, and ecchymosis. The x-ray of the right knee was normal. The patient's blood pressures are typically in the one forties to one fifties range. The patient's blood sugars are typically around one fifty when taken.\nAssessment\nThe patient has an MCL strain due to twisting the knee during basketball.\nPlan\nThe clinician prescribed tylenol fifteen milligrams and a knee immobilizer. The clinician is prescribing meloxicam fifteen milligrams. The clinician is increasing norvasc to five milligrams. The clinician wants the patient to start taking blood sugars daily. The clinician wants to consult with a nutritionist.",
+        "medical_concepts": [
+          "fatigue",
+          "knee pain",
+          "swelling",
+          "blood in stool",
+          "pain to palpation of the medial aspect of the right knee",
+          "edema",
+          "ecchymosis",
+          "x-ray",
+          "elevated blood pressure",
+          "elevated blood sugar",
+          "MCL strain",
+          "tylenol",
+          "knee immobilizer",
+          "meloxicam",
+          "norvasc",
+          "blood sugar monitoring",
+          "nutritionist consultation"
+        ]
+      }
+    ],
+    "medical_concepts": [
+      "fatigue",
+      "knee pain",
+      "swelling",
+      "blood in stool",
+      "pain to palpation of the medial aspect of the right knee",
+      "edema",
+      "ecchymosis",
+      "x-ray",
+      "elevated blood pressure",
+      "elevated blood sugar",
+      "MCL strain",
+      "tylenol",
+      "knee immobilizer",
+      "meloxicam",
+      "norvasc",
+      "blood sugar monitoring",
+      "nutritionist consultation"
+    ],
+    "section_count": 1
+  },
+  "nair_alignment": {
+    "pred_concepts": [
+      "fatigue",
+      "knee pain",
+      "swelling",
+      "blood in stool",
+      "pain to palpation of the medial aspect of the right knee",
+      "edema",
+      "ecchymosis",
+      "x-ray",
+      "elevated blood pressure",
+      "elevated blood sugar",
+      "MCL strain",
+      "tylenol",
+      "knee immobilizer",
+      "meloxicam",
+      "norvasc",
+      "blood sugar monitoring",
+      "nutritionist consultation"
+    ],
+    "ref_concepts": [
+      "right knee pain",
+      "knee pain",
+      "swelling",
+      "difficulty with ambulation",
+      "medial knee pain",
+      "aching pain",
+      "hypertension",
+      "diabetes",
+      "blood pressure",
+      "A1C",
+      "gastrointestinal upset",
+      "blood sugar",
+      "Tylenol",
+      "Norvasc",
+      "metformin",
+      "knee swelling",
+      "systolic ejection murmur",
+      "respiratory distress",
+      "pain with palpation",
+      "pain with flexion",
+      "pain with extension",
+      "edema",
+      "ecchymosis",
+      "redness",
+      "varus stress test",
+      "valgus stress test",
+      "right knee X-ray",
+      "fracture",
+      "dislocation",
+      "right knee MCL strain",
+      "MCL tear",
+      "MRI of the right knee",
+      "meloxicam 15 mg",
+      "elevated blood pressure",
+      "MRI"
+    ],
+    "precision_alignment": {
+      "found_b": [
+        "knee pain",
+        "swelling",
+        "pain to palpation of the medial aspect of the right knee",
+        "edema",
+        "ecchymosis",
+        "x-ray",
+        "elevated blood pressure",
+        "MCL strain",
+        "tylenol",
+        "knee immobilizer",
+        "meloxicam",
+        "norvasc",
+        "blood sugar monitoring",
+        "nutritionist consultation"
+      ],
+      "not_found_b": [
+        "fatigue",
+        "blood in stool",
+        "elevated blood sugar"
+      ],
+      "chunk_count": 1,
+      "chunk_results": [
+        {
+          "found_b": [
+            "knee pain",
+            "swelling",
+            "pain to palpation of the medial aspect of the right knee",
+            "edema",
+            "ecchymosis",
+            "x-ray",
+            "elevated blood pressure",
+            "MCL strain",
+            "tylenol",
+            "knee immobilizer",
+            "meloxicam",
+            "norvasc",
+            "blood sugar monitoring",
+            "nutritionist consultation"
+          ],
+          "not_found_b": [
+            "fatigue",
+            "blood in stool",
+            "elevated blood sugar"
+          ]
+        }
+      ]
+    },
+    "recall_alignment": {
+      "found_b": [
+        "right knee pain",
+        "knee pain",
+        "swelling",
+        "medial knee pain",
+        "aching pain",
+        "hypertension",
+        "blood pressure",
+        "blood sugar",
+        "Tylenol",
+        "Norvasc",
+        "knee swelling",
+        "pain with palpation",
+        "edema",
+        "ecchymosis",
+        "right knee X-ray",
+        "right knee MCL strain",
+        "meloxicam 15 mg",
+        "elevated blood pressure"
+      ],
+      "not_found_b": [
+        "difficulty with ambulation",
+        "diabetes",
+        "A1C",
+        "gastrointestinal upset",
+        "metformin",
+        "systolic ejection murmur",
+        "respiratory distress",
+        "pain with flexion",
+        "pain with extension",
+        "redness",
+        "varus stress test",
+        "valgus stress test",
+        "fracture",
+        "dislocation",
+        "MCL tear",
+        "MRI of the right knee",
+        "MRI"
+      ],
+      "chunk_count": 2,
+      "chunk_results": [
+        {
+          "found_b": [
+            "right knee pain",
+            "knee pain",
+            "swelling",
+            "medial knee pain",
+            "aching pain",
+            "hypertension",
+            "blood pressure",
+            "blood sugar",
+            "Tylenol",
+            "Norvasc",
+            "knee swelling",
+            "pain with palpation",
+            "edema",
+            "ecchymosis"
+          ],
+          "not_found_b": [
+            "difficulty with ambulation",
+            "diabetes",
+            "A1C",
+            "gastrointestinal upset",
+            "metformin",
+            "systolic ejection murmur",
+            "respiratory distress",
+            "pain with flexion",
+            "pain with extension",
+            "redness"
+          ]
+        },
+        {
+          "found_b": [
+            "right knee X-ray",
+            "right knee MCL strain",
+            "meloxicam 15 mg",
+            "elevated blood pressure"
+          ],
+          "not_found_b": [
+            "varus stress test",
+            "valgus stress test",
+            "fracture",
+            "dislocation",
+            "MCL tear",
+            "MRI of the right knee",
+            "MRI"
+          ]
+        }
+      ]
+    }
+  },
+  "semantic_cap_audit": {
+    "source_cap_recall": [
+      {
+        "cap_id": "P1",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P2",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P3",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P4",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P5",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P6",
+        "judgment": "contradicted",
+        "reason": null
+      },
+      {
+        "cap_id": "P7",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P8",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P9",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P10",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P11",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P12",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P13",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P14",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P15",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P16",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P1",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P2",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P3",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P4",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P5",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P6",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P7",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P8",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P9",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P10",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P11",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P12",
+        "judgment": "partial",
+        "reason": null
+      }
+    ],
+    "summary_cap_precision": [],
+    "metrics": {
+      "semantic_cap_precision": 0.0,
+      "semantic_cap_recall": 0.3571,
+      "semantic_cap_f1": 0.0,
+      "semantic_cap_precision_supported_count": 0,
+      "semantic_cap_precision_partial_count": 0,
+      "semantic_cap_precision_denominator": 0,
+      "semantic_cap_recall_supported_count": 6,
+      "semantic_cap_recall_partial_count": 8,
+      "semantic_cap_recall_denominator": 28,
+      "semantic_cap_low_value_source_count": 0,
+      "semantic_cap_low_value_summary_count": 0,
+      "semantic_cap_missing_count": 13,
+      "semantic_cap_unsupported_count": 0,
+      "semantic_cap_contradicted_source_count": 1,
+      "semantic_cap_contradicted_summary_count": 0
+    }
+  },
+  "safety_judgment": null,
+  "section_judgment": {
+    "section_miscategorizations": [
+      {
+        "text": "The patient's blood pressures are typically in the one forties to one fifties range.",
+        "current_section": "Findings",
+        "expected_section": "History of Present Illness",
+        "severity": "minor",
+        "reason": "This is a historical/typical home trend rather than an in-visit vital sign or test result; it fits better as patient-reported history, though its placement in Findings is not highly misleading."
+      },
+      {
+        "text": "The patient's blood sugars are typically around one fifty when taken.",
+        "current_section": "Findings",
+        "expected_section": "History of Present Illness",
+        "severity": "minor",
+        "reason": "This describes usual blood sugar values over time, which is historical context rather than a specific exam or lab finding from this encounter."
+      }
+    ],
+    "summary_statistics": {
+      "section_appropriateness_score": 0.9,
+      "section_miscategorization_count": 2,
+      "major_section_miscategorization_count": 0
+    }
+  },
+  "pdsqi_judgment": {
+    "citation_applicable": 0,
+    "citation": 0,
+    "accurate": 2,
+    "thorough": 2,
+    "useful": 2,
+    "organized": 3,
+    "comprehensible": 4,
+    "succinct": 4,
+    "abstraction": 1,
+    "synthesized": 3,
+    "voice_summ": 0,
+    "voice_note": 0,
+    "pdsqi_core_mean": 2.8571
+  },
+  "llm_checklist_judgment": {
+    "content_preservation_core": 2,
+    "noise_suppression": 4,
+    "lay_expression_preservation": 3,
+    "state_update_fidelity": 2,
+    "temporality_preservation": 3,
+    "problem_evidence_linkage": 3,
+    "state_plan_separation": 3,
+    "section_organization_appropriateness": 3,
+    "overall_clinical_usability": 2,
+    "clinically_meaningful_omission": "Yes",
+    "clinically_concerning_hallucination": "Yes",
+    "checklist_a_mean": 3.0,
+    "checklist_b_mean": 2.5,
+    "checklist_c_mean": 3.0,
+    "llm_checklist_abc_mean": 2.875,
+    "llm_checklist_mean_no_usability": 2.875,
+    "llm_checklist_total_score": 25,
+    "llm_checklist_mean": 2.7778,
+    "llm_checklist_meaningful_omission_yes": 1,
+    "llm_checklist_concerning_hallucination_yes": 1
+  },
+  "metrics": {
+    "case_id": "D2N195",
+    "method": "cluster2sent",
+    "template": "sectioned",
+    "source_cap_count": 28,
+    "event_plan_count": null,
+    "summary_cap_count": 0,
+    "cap_matched_count": 0,
+    "cap_precision": 0.0,
+    "cap_recall": 0.0,
+    "cap_f1": 0.0,
+    "unsupported_summary_cap_count": 0,
+    "missing_source_cap_count": 28,
+    "summary_runtime_seconds": null,
+    "summary_cap_runtime_seconds": 0.549,
+    "event_plan_runtime_seconds": null,
+    "rouge_l_f1_vs_reference": 0.1979,
+    "token_f1_vs_reference": 0.3422,
+    "gptf1_macro_f1": 0.0,
+    "nair_gpt_precision": 0.8235,
+    "nair_gpt_recall": 0.5143,
+    "nair_gpt_f1": 0.6332,
+    "semantic_cap_precision": 0.0,
+    "semantic_cap_recall": 0.3571,
+    "semantic_cap_f1": 0.0,
+    "hallucination_count": null,
+    "major_hallucination_count": null,
+    "omission_count": null,
+    "major_omission_count": null,
+    "section_appropriateness_score": 0.9,
+    "section_miscategorization_count": 2,
+    "major_section_miscategorization_count": 0,
+    "pdsqi_core_mean": 2.8571,
+    "pdsqi_accurate": 2,
+    "pdsqi_thorough": 2,
+    "llm_checklist_total_score": 25,
+    "llm_checklist_mean": 2.7778,
+    "llm_checklist_mean_no_usability": 2.875,
+    "checklist_a_mean": 3.0,
+    "checklist_b_mean": 2.5,
+    "checklist_c_mean": 3.0,
+    "llm_checklist_abc_mean": 2.875,
+    "content_preservation_core": 2,
+    "noise_suppression": 4,
+    "lay_expression_preservation": 3,
+    "state_update_fidelity": 2,
+    "temporality_preservation": 3,
+    "problem_evidence_linkage": 3,
+    "state_plan_separation": 3,
+    "section_organization_appropriateness": 3,
+    "overall_clinical_usability": 2,
+    "llm_checklist_meaningful_omission_yes": 1,
+    "llm_checklist_concerning_hallucination_yes": 1,
+    "gptf1_active_problems_symptoms_precision": 0.0,
+    "gptf1_active_problems_symptoms_recall": 0.0,
+    "gptf1_active_problems_symptoms_f1": 0.0,
+    "gptf1_active_problems_symptoms_pred_count": 0,
+    "gptf1_active_problems_symptoms_ref_count": 0,
+    "gptf1_negated_findings_precision": 0.0,
+    "gptf1_negated_findings_recall": 0.0,
+    "gptf1_negated_findings_f1": 0.0,
+    "gptf1_negated_findings_pred_count": 0,
+    "gptf1_negated_findings_ref_count": 0,
+    "gptf1_uncertain_findings_precision": 0.0,
+    "gptf1_uncertain_findings_recall": 0.0,
+    "gptf1_uncertain_findings_f1": 0.0,
+    "gptf1_uncertain_findings_pred_count": 0,
+    "gptf1_uncertain_findings_ref_count": 0,
+    "gptf1_medication_treatment_precision": 0.0,
+    "gptf1_medication_treatment_recall": 0.0,
+    "gptf1_medication_treatment_f1": 0.0,
+    "gptf1_medication_treatment_pred_count": 0,
+    "gptf1_medication_treatment_ref_count": 0,
+    "gptf1_plan_followup_precision": 0.0,
+    "gptf1_plan_followup_recall": 0.0,
+    "gptf1_plan_followup_f1": 0.0,
+    "gptf1_plan_followup_pred_count": 0,
+    "gptf1_plan_followup_ref_count": 0,
+    "nair_pred_concept_count": 17,
+    "nair_ref_concept_count": 35,
+    "nair_precision_match_count": 14,
+    "nair_recall_match_count": 18,
+    "semantic_cap_precision_supported_count": 0,
+    "semantic_cap_precision_partial_count": 0,
+    "semantic_cap_precision_denominator": 0,
+    "semantic_cap_recall_supported_count": 6,
+    "semantic_cap_recall_partial_count": 8,
+    "semantic_cap_recall_denominator": 28,
+    "semantic_cap_low_value_source_count": 0,
+    "semantic_cap_low_value_summary_count": 0,
+    "semantic_cap_missing_count": 13,
+    "semantic_cap_unsupported_count": 0,
+    "semantic_cap_contradicted_source_count": 1,
+    "semantic_cap_contradicted_summary_count": 0,
+    "pdsqi_useful": 2,
+    "pdsqi_organized": 3,
+    "pdsqi_comprehensible": 4,
+    "pdsqi_succinct": 4,
+    "pdsqi_synthesized": 3
+  }
+}

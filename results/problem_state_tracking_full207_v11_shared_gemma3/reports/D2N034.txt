@@ -1,0 +1,82 @@
+Case: D2N034
+
+Problem List and Visit State Tracking
+
+Problem List
+- shoulder injury | verification_status=unconfirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T1,T3
+  Summary: The patient has a history of shoulder pain.
+  ClusterId: CL1
+  TemporalProfile: past 3 weeks
+  Updates:
+  - CAP1: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=past 3 weeks turns=T1,T3 :: The patient has a history of shoulder pain.
+- shoulder pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T1,T15,T17,T39
+  Summary: The patient reports left shoulder pain.
+  ClusterId: CL2
+  TemporalProfile: current
+  Updates:
+  - CAP2: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T1,T1 :: The patient reports left shoulder pain.
+  - CAP6: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T15 :: The patient reports pain in their shoulder.
+  - CAP7: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T17 :: The patient describes the pain as constant.
+  - CAP8: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T39 :: The patient reports shoulder pain.
+- basement work | verification_status=unconfirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T3
+  Summary: The patient has been doing work in the basement.
+  ClusterId: CL3
+  TemporalProfile: recent
+  Updates:
+  - CAP4: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=recent turns=T3 :: The patient has been doing work in the basement.
+- left hand pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T27
+  Summary: The patient reports pain in the left hand.
+  ClusterId: CL6
+  TemporalProfile: current
+  Updates:
+  - CAP5: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T27 :: The patient reports pain in the left hand.
+- rotator cuff tendinopathy | verification_status=confirmed | clinical_status=active | modalities=assessment | speakers=doctor | evidence=T34
+  Summary: The doctor assesses the patient's symptoms as likely due to a rotator cuff tendinopathy.
+  ClusterId: CL8
+  TemporalProfile: current
+  Updates:
+  - CAP3: content_source=doctor modality=assessment verification_status=confirmed clinical_status=active temporality=current turns=T34 :: The doctor assesses the patient's symptoms as likely due to a rotator cuff tendinopathy.
+
+Medication Tracking
+- [MedicationState] tylenol | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=doctor,patient | evidence=T19,T37
+  Summary: The doctor does not need to prescribe anything else for the pain.
+  ClusterId: CL4
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient has not taken anything for the pain recently. (T19)
+  - The patient has not taken anything for the pain. (T19)
+  - The doctor does not need to prescribe anything else for the pain. (T37)
+  Updates:
+  - CAP17: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T19 :: The patient has not taken anything for the pain recently.
+  - CAP18: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T19 :: The patient has not taken anything for the pain.
+  - CAP16: content_source=doctor modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T37 :: The doctor does not need to prescribe anything else for the pain.
+- [MedicationChange] tylenol | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T37
+  Summary: The doctor does not prescribe anything else for the pain, as it's working pretty good.
+  ClusterId: CL12
+  TemporalProfile: future
+  PlannedChanges:
+  - The doctor does not prescribe anything else for the pain, as it's working pretty good. (T37)
+  Updates:
+  - CAP15: content_source=doctor modality=plan verification_status=unconfirmed clinical_status=planned temporality=future turns=T37 :: The doctor does not prescribe anything else for the pain, as it's working pretty good.
+
+Other Structured States
+- [ExamFinding] limited active and passive range of motion | verification_status=confirmed | clinical_status=active | modalities=exam | speakers=doctor | evidence=T25
+  Summary: The patient has limited active and passive range of motion.
+  ClusterId: CL5
+  TemporalProfile: current
+- [ExamFinding] no tenderness | verification_status=confirmed | clinical_status=active | modalities=exam | speakers=doctor | evidence=T27
+  Summary: The patient has no tenderness at the sternoclavicular or acromioclavicular joints.
+  ClusterId: CL7
+  TemporalProfile: current
+- [Plan] mri | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T34
+  Summary: The doctor orders an MRI of the left shoulder.
+  ClusterId: CL9
+  TemporalProfile: future
+- [Plan] physical therapy | verification_status=confirmed | clinical_status=planned | modalities=interview,plan | speakers=doctor | evidence=T35,T37
+  Summary: The doctor is referring the patient to physical therapy for approximately six to eight weeks.
+  ClusterId: CL10
+  TemporalProfile: 6 to 8 weeks, future
+- [Plan] steroid injection | verification_status=unconfirmed | clinical_status=planned | modalities=interview | speakers=doctor | evidence=T37
+  Summary: The doctor may consider a steroid injection of the shoulder if the patient's symptoms do not improve.
+  ClusterId: CL11
+  TemporalProfile: if symptoms do not improve

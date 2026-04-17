@@ -1,0 +1,44 @@
+{
+  "section_miscategorizations": [
+    {
+      "text": "The patient has a history of iga deficiency.",
+      "current_section": "O",
+      "expected_section": "S",
+      "severity": "major",
+      "reason": "Past medical history belongs in the subjective section unless it is being reported as a new objective finding; here it is simply stated as history, not as a new test result."
+    },
+    {
+      "text": "The patient has type two diabetes and an iga deficiency.",
+      "current_section": "A",
+      "expected_section": "S",
+      "severity": "major",
+      "reason": "These are established diagnoses/past medical history and are not being newly synthesized or interpreted; they function as background history and fit better in the subjective section."
+    },
+    {
+      "text": "He may experience respiratory tract infections, sinus infections, and abdominal infections.",
+      "current_section": "A",
+      "expected_section": "P",
+      "severity": "minor",
+      "reason": "This is anticipatory counseling about expected/recurrent infections, which is closer to patient education/management planning than diagnostic synthesis, though its placement in Assessment is not highly misleading."
+    },
+    {
+      "text": "The patient's family owns a donut shop.",
+      "current_section": "A",
+      "expected_section": "S",
+      "severity": "major",
+      "reason": "This is social history, not diagnostic assessment or problem synthesis, and should not appear in the Assessment section."
+    },
+    {
+      "text": "Order blood transfusions.",
+      "current_section": "P",
+      "expected_section": "A",
+      "severity": "major",
+      "reason": "A plan to order blood transfusions without any corresponding anemia/bleeding diagnosis or rationale in the Assessment creates a disconnect; the need for transfusion should be grounded in an Assessment statement describing the underlying problem."
+    }
+  ],
+  "summary_statistics": {
+    "section_appropriateness_score": 0.6,
+    "section_miscategorization_count": 5,
+    "major_section_miscategorization_count": 4
+  }
+}

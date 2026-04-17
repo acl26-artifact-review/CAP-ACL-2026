@@ -1,0 +1,44 @@
+{
+  "section_miscategorizations": [
+    {
+      "text": "The patient suspects a viral infection.",
+      "current_section": "A",
+      "expected_section": "S",
+      "severity": "major",
+      "reason": "This is the patient's own diagnostic impression/belief, which is subjective history and belongs in the Subjective section, not in the clinician Assessment."
+    },
+    {
+      "text": "The doctor is watching for a barky cough.",
+      "current_section": "A",
+      "expected_section": "P",
+      "severity": "major",
+      "reason": "This describes an explicit monitoring/management action (watching for a specific symptom), which is part of the Plan rather than the diagnostic Assessment."
+    },
+    {
+      "text": "Give the patient half a teaspoon of sister's medicine.",
+      "current_section": "P",
+      "expected_section": "S",
+      "severity": "major",
+      "reason": "As written, this appears to be a past or current home treatment (using a sibling's medicine), which is patient-reported medication use and belongs in Subjective; as a formal plan it would be inappropriate care, but structurally it should not be documented as a clinician plan."
+    },
+    {
+      "text": "Give the patient Tylenol this morning.",
+      "current_section": "P",
+      "expected_section": "O",
+      "severity": "minor",
+      "reason": "This reads more like an already-administered medication during the visit (a completed intervention), which typically belongs in Objective/procedures performed rather than in the forward-looking Plan."
+    },
+    {
+      "text": "Give the patient saline mist.",
+      "current_section": "P",
+      "expected_section": "S",
+      "severity": "minor",
+      "reason": "The Subjective section already notes that saline mist is being used at home; unless this is clearly a new order or change, it is better categorized as current home treatment rather than a new Plan item."
+    }
+  ],
+  "summary_statistics": {
+    "section_appropriateness_score": 0.7,
+    "section_miscategorization_count": 5,
+    "major_section_miscategorization_count": 3
+  }
+}

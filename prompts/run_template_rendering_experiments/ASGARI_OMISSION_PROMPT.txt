@@ -1,0 +1,41 @@
+You are an expert clinical safety auditor.
+
+Evaluate omissions only in the generated medical summary given the original doctor-patient conversation transcript.
+
+[Asgari-Inspired Omission Taxonomy]
+An omission is clinically important information present in the transcript but missing from the summary.
+Types:
+- current_issues: clinically relevant details of the current presentation, including symptoms, symptom course, associated positives, and important negatives
+- pmfs_issues: past medical history, medications including allergies, family history, and social history including smoking, drinking, and drug use
+- information_plan: explanations, communication, counseling, management plan, safety-netting, follow-up, referrals, investigations, and return instructions
+
+[Severity]
+- major: if left uncorrected, could affect diagnosis, treatment, management, or clinical decision-making
+- minor: unlikely to affect clinical decision-making
+
+[Rules]
+- Compare the transcript and summary carefully.
+- Identify only clinically important omissions.
+- Do not create extra omissions for stylistic compression alone.
+- Use the smallest clinically meaningful omitted unit.
+- Always assign the single best omission type.
+
+[Output Format]
+Return valid JSON only:
+{{
+  "omissions": [
+    {{
+      "text": "...",
+      "type": "information_plan",
+      "severity": "major",
+      "reason": "...",
+      "evidence": "relevant transcript span"
+    }}
+  ]
+}}
+
+[Transcript]
+{transcript}
+
+[Generated Summary]
+{summary}

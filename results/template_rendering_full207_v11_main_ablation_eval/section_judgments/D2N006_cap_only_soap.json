@@ -1,0 +1,30 @@
+{
+  "section_miscategorizations": [
+    {
+      "text": "A right upper quadrant ultrasound is ordered.",
+      "current_section": "O",
+      "expected_section": "P",
+      "severity": "major",
+      "reason": "Ordering an ultrasound is a management action/plan, not an observed finding or completed test result."
+    },
+    {
+      "text": "An autoimmune panel was sent.",
+      "current_section": "O",
+      "expected_section": "P",
+      "severity": "major",
+      "reason": "Sending a lab panel is an order/management action and belongs in the Plan, not in Objective findings."
+    },
+    {
+      "text": "A right upper quadrant ultrasound is planned.",
+      "current_section": "P",
+      "expected_section": "P",
+      "severity": "minor",
+      "reason": "This duplicates the earlier statement that the ultrasound was ordered in the Objective section; the plan should consolidate the ordering here, and the Objective section should only contain completed or observed data."
+    }
+  ],
+  "summary_statistics": {
+    "section_appropriateness_score": 0.7,
+    "section_miscategorization_count": 3,
+    "major_section_miscategorization_count": 2
+  }
+}

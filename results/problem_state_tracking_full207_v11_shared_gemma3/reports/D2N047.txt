@@ -1,0 +1,94 @@
+Case: D2N047
+
+Problem List and Visit State Tracking
+
+Problem List
+- urinary hesitancy | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T1
+  Summary: The patient reports urinary hesitancy.
+  ClusterId: CL1
+  TemporalProfile: current
+  Updates:
+  - CAP9: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T1 :: The patient reports urinary hesitancy.
+- weak urinary stream | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T2
+  Summary: The patient reports a weak urinary stream.
+  ClusterId: CL2
+  TemporalProfile: current
+  Updates:
+  - CAP3: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T2 :: The patient reports a weak urinary stream.
+- incomplete bladder emptying | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T7
+  Summary: The patient reports incomplete bladder emptying.
+  ClusterId: CL3
+  TemporalProfile: current
+  Updates:
+  - CAP6: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T7 :: The patient reports incomplete bladder emptying.
+- multiple nighttime awakenings | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T9
+  Summary: The patient reports multiple nighttime awakenings.
+  ClusterId: CL4
+  TemporalProfile: current
+  Updates:
+  - CAP7: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T9 :: The patient reports multiple nighttime awakenings.
+- nighttime urination | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T9
+  Summary: The patient reports nighttime urination.
+  ClusterId: CL5
+  TemporalProfile: current
+  Updates:
+  - CAP10: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T9 :: The patient reports nighttime urination.
+- urinary symptoms worsening | verification_status=unconfirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T9
+  Summary: The patient's urinary symptoms have been worsening over the last six months.
+  ClusterId: CL6
+  TemporalProfile: 6 months, over the last six months
+  Updates:
+  - CAP15: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=over the last six months turns=T9 :: The patient's urinary symptoms have been worsening over the last six months.
+  - CAP16: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=6 months turns=T9 :: The patient's urinary symptoms have been present for approximately six months.
+- burning urination | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T11
+  Summary: The patient denies burning urination.
+  ClusterId: CL7
+  TemporalProfile: current
+  Updates:
+  - CAP11: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T11 :: The patient denies burning urination.
+- diarrhea | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T13
+  Summary: The patient reports diarrhea last week.
+  ClusterId: CL8
+  TemporalProfile: last week
+  Updates:
+  - CAP8: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=last week turns=T13 :: The patient reports diarrhea last week.
+- urinary retention | verification_status=unconfirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T14
+  Summary: The patient has never experienced urinary retention.
+  ClusterId: CL9
+  TemporalProfile: never
+  Updates:
+  - CAP4: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=never turns=T14 :: The patient has never experienced urinary retention.
+- urologist | verification_status=unconfirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T18
+  Summary: The patient has never seen a urologist.
+  ClusterId: CL10
+  TemporalProfile: never
+  Updates:
+  - CAP5: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=never turns=T18 :: The patient has never seen a urologist.
+- heart stent | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T20
+  Summary: The patient has a right coronary artery stent placed in 2018.
+  ClusterId: CL11
+  TemporalProfile: 2018
+  Updates:
+  - CAP1: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=2018 turns=T20 :: The patient has a right coronary artery stent placed in 2018.
+- pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T27
+  Summary: The patient reports pain in the left hand.
+  ClusterId: CL12
+  TemporalProfile: current
+  Updates:
+  - CAP2: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T27 :: The patient reports pain in the left hand.
+  - CAP13: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T27 :: The patient reports pain.
+- hand pain | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T43
+  Summary: The patient reports hand pain.
+  ClusterId: CL13
+  TemporalProfile: current
+  Updates:
+  - CAP12: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T43 :: The patient reports hand pain.
+
+Medication Tracking
+- None
+
+Other Structured States
+- [Plan] urologist consultation | verification_status=unconfirmed | clinical_status=planned | modalities=interview | speakers=doctor | evidence=T43
+  Summary: The doctor will reach out to the urologist to schedule a consultation.
+  ClusterId: CL14
+  TemporalProfile: this week

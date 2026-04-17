@@ -1,0 +1,44 @@
+{
+  "section_miscategorizations": [
+    {
+      "text": "The patient also reports hypogonadism and reports feeling fatigued.",
+      "current_section": "S",
+      "expected_section": "A",
+      "severity": "major",
+      "reason": "Hypogonadism is a diagnosed condition and belongs in the assessment; mixing it into subjective symptoms could mislead a reader about what is established diagnosis versus current complaints."
+    },
+    {
+      "text": "The patient has pain in the left hand, hypogonadism, and elevated testosterone levels.",
+      "current_section": "A",
+      "expected_section": "O",
+      "severity": "major",
+      "reason": "Elevated testosterone levels are an objective lab finding and should be documented in the Objective section; including it only in the Assessment obscures where the data came from."
+    },
+    {
+      "text": "The patient's blood thickness is at increased risk.",
+      "current_section": "A",
+      "expected_section": "A",
+      "severity": "minor",
+      "reason": "This is an assessment statement and belongs in A, but the phrasing is ambiguous and would benefit from being explicitly tied to an objective finding (e.g., hematocrit) in O; however, it is not clearly in the wrong section."
+    },
+    {
+      "text": "The doctor will get the prescriptions.",
+      "current_section": "P",
+      "expected_section": "P",
+      "severity": "minor",
+      "reason": "This is a plan/action statement and correctly placed in P, though it is vague; it does not represent a miscategorization but is organizationally weak."
+    },
+    {
+      "text": "The patient requests to increase his testosterone dosage to 175 milligrams.",
+      "current_section": "P",
+      "expected_section": "S",
+      "severity": "major",
+      "reason": "This is a patient request/preference (subjective) rather than an actual management decision; it should be in S unless the clinician explicitly adopts it as part of the plan."
+    }
+  ],
+  "summary_statistics": {
+    "section_appropriateness_score": 0.7,
+    "section_miscategorization_count": 5,
+    "major_section_miscategorization_count": 3
+  }
+}

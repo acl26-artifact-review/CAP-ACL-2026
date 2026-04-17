@@ -1,0 +1,170 @@
+Case: D2N201
+
+Problem List and Visit State Tracking
+
+Problem List
+- back pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T0
+  Summary: The patient reports back pain.
+  ClusterId: CL1
+  TemporalProfile: current
+  Updates:
+  - CAP14: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T0 :: The patient reports back pain.
+- impact | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T5
+  Summary: The patient reports a hard impact.
+  ClusterId: CL2
+  TemporalProfile: past
+  Updates:
+  - CAP31: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=past turns=T5 :: The patient reports a hard impact.
+- fall | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T5
+  Summary: The patient reports a fall.
+  ClusterId: CL3
+  TemporalProfile: past
+  Updates:
+  - CAP34: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=past turns=T5 :: The patient reports a fall.
+- basketball | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T5
+  Summary: The patient reports playing basketball.
+  ClusterId: CL4
+  TemporalProfile: past
+  Updates:
+  - CAP35: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=past turns=T5 :: The patient reports playing basketball.
+- radiating pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T17,T63,T8,T89
+  Summary: The patient reports that the pain radiates down their leg.
+  ClusterId: CL5
+  TemporalProfile: current
+  Updates:
+  - CAP3: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T8 :: The patient describes the pain as a 7 on a scale of 1 to 10.
+  - CAP6: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T17 :: The patient reports that the pain radiates down their leg.
+  - CAP11: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T63 :: The patient reports right-sided lumbar paravertebral tenderness.
+  - CAP17: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T63 :: The patient reports midline tenderness.
+  - CAP18: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T89 :: The patient reports having pain.
+  - CAP21: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T89 :: The patient reports pain.
+- left hand pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T17
+  Summary: The patient reports pain in the left hand.
+  ClusterId: CL6
+  TemporalProfile: current
+  Updates:
+  - CAP8: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T17 :: The patient reports pain in the left hand.
+- numbness | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T19,T20
+  Summary: The patient reports numbness in the genital or rectal area.
+  ClusterId: CL7
+  TemporalProfile: current
+  Updates:
+  - CAP9: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T19 :: The patient reports numbness in their toes.
+  - CAP10: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T19 :: The patient reports numbness in their toes.
+  - CAP7: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T20 :: The patient reports numbness in the genital or rectal area.
+- weakness | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T22
+  Summary: The patient reports weakness.
+  ClusterId: CL8
+  TemporalProfile: current
+  Updates:
+  - CAP19: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T22 :: The patient reports weakness.
+- difficulty standing | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T28
+  Summary: The patient reports difficulty standing.
+  ClusterId: CL10
+  TemporalProfile: current
+  Updates:
+  - CAP15: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T28 :: The patient reports difficulty standing.
+- incontinence | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T32
+  Summary: The patient reports incontinence.
+  ClusterId: CL11
+  TemporalProfile: once
+  Updates:
+  - CAP20: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=once turns=T32 :: The patient reports incontinence.
+- drinking | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T33
+  Summary: The patient reports drinking.
+  ClusterId: CL12
+  TemporalProfile: current
+  Updates:
+  - CAP22: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T33 :: The patient reports drinking.
+- injections | verification_status=unconfirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T35
+  Summary: The patient received injections in the past.
+  ClusterId: CL13
+  TemporalProfile: past
+  Updates:
+  - CAP30: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=past turns=T35 :: The patient received injections in the past.
+- physical therapy | verification_status=unconfirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T36
+  Summary: The patient participated in physical therapy.
+  ClusterId: CL14
+  TemporalProfile: past
+  Updates:
+  - CAP32: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=past turns=T36 :: The patient participated in physical therapy.
+- sedentary | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T43
+  Summary: The patient reports spending most of the day at home watching television.
+  ClusterId: CL15
+  TemporalProfile: current
+  Updates:
+  - CAP4: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T43 :: The patient reports spending most of the day at home watching television.
+- weight gain | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T47
+  Summary: The patient reports having gained approximately eighty pounds in the past year.
+  ClusterId: CL16
+  TemporalProfile: past year
+  Updates:
+  - CAP5: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=past year turns=T47 :: The patient reports having gained approximately eighty pounds in the past year.
+  - CAP29: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=past year turns=T47 :: The patient has gained about eighty pounds in the past year.
+- scoliosis | verification_status=unconfirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T49
+  Summary: The patient's fourth cousin has scoliosis.
+  ClusterId: CL17
+  TemporalProfile: distant
+  Updates:
+  - CAP33: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=distant turns=T49 :: The patient's fourth cousin has scoliosis.
+- smoking | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T52,T59
+  Summary: The patient reports having smoked.
+  ClusterId: CL18
+  TemporalProfile: past, unknown
+  Updates:
+  - CAP23: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=unknown turns=T52 :: The patient has smoked.
+  - CAP16: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=past turns=T59 :: The patient reports having smoked.
+- denies smoking | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T63
+  Summary: The patient denies smoking.
+  ClusterId: CL19
+  TemporalProfile: past
+  Updates:
+  - CAP24: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=past turns=T63 :: The patient denies smoking.
+- herniated disk | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=doctor | evidence=T82
+  Summary: The patient has a herniated disk.
+  ClusterId: CL20
+  TemporalProfile: current
+  Updates:
+  - CAP1: content_source=doctor modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T82 :: The patient has a herniated disk.
+- radiculopathy | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=doctor | evidence=T82
+  Summary: The patient has radiculopathy.
+  ClusterId: CL21
+  TemporalProfile: current
+  Updates:
+  - CAP2: content_source=doctor modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T82 :: The patient has radiculopathy.
+- tingling | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T82
+  Summary: The patient reports tingling in their leg.
+  ClusterId: CL22
+  TemporalProfile: current
+  Updates:
+  - CAP12: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T82 :: The patient reports tingling in their leg.
+- chronic lumbar back pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=doctor | evidence=T89
+  Summary: The patient has chronic lumbar back pain.
+  ClusterId: CL26
+  TemporalProfile: current
+  Updates:
+  - CAP13: content_source=doctor modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T89 :: The patient has chronic lumbar back pain.
+
+Medication Tracking
+- [MedicationChange] corticosteroid | verification_status=confirmed | clinical_status=planned | modalities=interview | speakers=doctor | evidence=T82
+  Summary: A corticosteroid will be injected.
+  ClusterId: CL24
+  TemporalProfile: future
+  PlannedChanges:
+  - A corticosteroid will be injected. (T82)
+  Updates:
+  - CAP28: content_source=doctor modality=interview verification_status=confirmed clinical_status=planned temporality=future turns=T82 :: A corticosteroid will be injected.
+
+Other Structured States
+- [Plan] lying on side | verification_status=confirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T25
+  Summary: Lying on side makes the patient feel better.
+  ClusterId: CL9
+  TemporalProfile: current
+- [Plan] spinal injection | verification_status=confirmed | clinical_status=planned | modalities=interview | speakers=doctor | evidence=T82
+  Summary: A spinal injection is ordered.
+  ClusterId: CL23
+  TemporalProfile: future
+- [Plan] prescription | verification_status=confirmed | clinical_status=planned | modalities=interview | speakers=doctor | evidence=T84
+  Summary: A prescription for pain medication is ordered.
+  ClusterId: CL25
+  TemporalProfile: future

@@ -1,0 +1,2352 @@
+{
+  "case_id": "D2N041",
+  "method": "cluster2sent",
+  "template": "sectioned",
+  "summary_text": "Chief Complaint\nPatient reports fatigue and fever.\n\nHistory of Present Illness\nThe patient reports fatigue for the past four days and felt feverish last night, noting sweating. The patient reports difficulty swallowing, which occurs every time they swallow. The patient denies having chills. The patient reports a stuffy nose but no significant discomfort. The patient reports swollen tonsils. The patient reports no stomach pain. The patient drinks water primarily, with occasional wine. The patient reports blood pressure fluctuations, ranging from 120/80 to 140/80. The patient reports blood sugar fluctuations, ranging from 80-90 in the morning to 140 at night. The patient takes metformin 1000mg twice daily with breakfast and dinner.\n\nFindings\nThe doctor observes a low-grade fever (104°F), blood pressure of 130/80 mmHg, and heart rate of 84 bpm. The doctor notes facial examination reveals no pain upon palpation of the sinuses, nasal edema and erythema, and bilateral exudates in the throat. The doctor notes cervical lymphadenopathy on the right side. The doctor observes coarse rhonchi at the lung bases that clear with coughing. The doctor notes a regular heart rhythm without murmurs or rubs.\n\nAssessment\nThe patient presents with symptoms consistent with a likely upper respiratory infection and possible strep throat.\n\nPlan\nThe doctor plans a rapid strep test, amoxicillin 500mg three times daily for 10 days, lidocaine swish and swallow, and increased lisinopril to 40mg daily. The doctor plans a lipid panel and hemoglobin A1c testing.",
+  "reference_summary": "CHIEF COMPLAINT\n\nSore throat.\n\nMEDICAL HISTORY\n\nPatient reports history of hypertension and diabetes.\n\nSOCIAL HISTORY\n\nPatient reports working as a cashier in a supermarket. She enjoys drinking wine.\n\nMEDICATIONS\n\nPatient reports taking lisinopril 20 mg daily, multi-vitamin, vitamin D, and metformin 1000 mg twice daily.\n\nREVIEW OF SYSTEMS\n\nConstitutional: Reports fever, chills, and profuse sweating.\nHENT: Reports sore throat, dysphagia, tonsil swelling, and congestion.\nGastrointestinal: Denies abdominal symptoms.\n\nVITALS\n\nTemperature: 100.4 degrees F.\nBlood pressure: 132/80 mm Hg.\nHeart rate: 84 BPM.\n\nPHYSICAL EXAM\n\nHead and Face\n- Examination: No pain to palpation of the frontal or maxillary sinuses.\n\nEars, Nose, Mouth, and Throat\n- Examination of Nose: Edema and erythema of the nasal turbinates noted bilaterally with associated clear discharge.\n- Examination of Throat: Erythema and edema of the peritonsillar space with exudates present bilaterally. The uvula is midline.\n\nNeck\n- General Examination: No thyromegaly, but there is some cervical lymphadenopathy on the right side.\n\nRespiratory\n- Auscultation of Lungs: Coarse rhonchi at the bases that clear with cough.\n\nCardiovascular\n- Auscultation of Heart: Regular rate and rhythm. No murmurs, gallops or rubs.\n\nRESULTS\n\nRapid COVID-19 test performed today in office is negative.\n\nASSESSMENT AND PLAN\n\n1. Sore throat.\n- Medical Reasoning: The patient has experienced sore throat, fever, chills, profuse sweating, and difficulty swallowing for 4 days. There is erythema and edema of the peritonsillar space with exudates present bilaterally as well as edema and erythema of her turbinates, bilaterally.\n- Patient Education and Counseling: We discussed treatment options today. I have stressed the importance of hydration.\n- Medical Treatment: We will perform a rapid strep test today. If she is positive for strep, I will prescribe amoxicillin 500 mg 3 times a day for 10 days. Prescription for lidocaine swish and swallow provided for pain relief. ibuprofen can also be taken for pain and fever relief.\n\n2. Hypertension.\n- Medical Reasoning: The patient states her blood pressure fluctuates often. Her blood pressure today in office was 132/80 mm Hg. - Patient Education and Counseling: We discussed treatment options including increasing her lisinopril and diet modifications.\n- Medical Treatment: Lipid panel ordered. Prescription for lisinopril 40 mg once a day is also provided.\n\n3. Diabetes.\n- Medical Reasoning: The patient’s blood sugar fluctuates between 80 to 90 in the morning to 140 in the evening. She is already at 1000 mg of metformin twice a day, which she does take with meals.\n- Patient Education and Counseling: We discussed the importance of achieving a healthy lifestyle and what effects that can have on her diabetes.\n- Medical Treatment: I have placed an order a hemoglobin A1c.\n\nPatient Agreements: The patient understands and agrees with the recommended medical treatment plan.",
+  "source_cap": {
+    "atomic_propositions": [
+      {
+        "prop_id": "CAP1",
+        "cap_type": "Problem",
+        "canonical_concept": "upper respiratory infection",
+        "category": "Problem",
+        "speaker": "doctor",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The doctor is concerned that the patient might have strep in the back of their throat."
+      },
+      {
+        "prop_id": "CAP2",
+        "cap_type": "Symptom",
+        "canonical_concept": "hypertension",
+        "category": "Symptom",
+        "speaker": "doctor",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "quantitative",
+          "symptom"
+        ],
+        "proposition_text": "The patient reports blood pressure readings ranging from 120/140 to potentially higher."
+      },
+      {
+        "prop_id": "CAP3",
+        "cap_type": "Symptom",
+        "canonical_concept": "hypertension",
+        "category": "Symptom",
+        "speaker": "doctor",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports blood pressure that is sometimes elevated."
+      },
+      {
+        "prop_id": "CAP4",
+        "cap_type": "Symptom",
+        "canonical_concept": "blood sugar",
+        "category": "Symptom",
+        "speaker": "patient",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "variable",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient's blood sugars are sometimes out of control."
+      },
+      {
+        "prop_id": "CAP5",
+        "cap_type": "Symptom",
+        "canonical_concept": "fever",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "uncertain",
+        "visit_state": "historical",
+        "temporality": "last night",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports having a fever last night."
+      },
+      {
+        "prop_id": "CAP6",
+        "cap_type": "Symptom",
+        "canonical_concept": "hypertension",
+        "category": "Symptom",
+        "speaker": "doctor",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports blood pressure that varies significantly."
+      },
+      {
+        "prop_id": "CAP7",
+        "cap_type": "Symptom",
+        "canonical_concept": "pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports pain in the left hand."
+      },
+      {
+        "prop_id": "CAP8",
+        "cap_type": "Problem",
+        "canonical_concept": "diabetes",
+        "category": "Problem",
+        "speaker": "doctor",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "quantitative"
+        ],
+        "proposition_text": "The doctor wants to order a hemoglobin A1c."
+      },
+      {
+        "prop_id": "CAP9",
+        "cap_type": "Problem",
+        "canonical_concept": "hypertension",
+        "category": "Problem",
+        "speaker": "doctor",
+        "predicate": "plans",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "plan"
+        ],
+        "proposition_text": "The doctor wants to increase the lisinopril."
+      },
+      {
+        "prop_id": "CAP10",
+        "cap_type": "Symptom",
+        "canonical_concept": "sore throat",
+        "category": "Symptom",
+        "speaker": "doctor",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports a sore throat."
+      },
+      {
+        "prop_id": "CAP11",
+        "cap_type": "Symptom",
+        "canonical_concept": "sweating",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "last night",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports sweating last night."
+      },
+      {
+        "prop_id": "CAP12",
+        "cap_type": "Symptom",
+        "canonical_concept": "stuffy nose",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports a stuffy nose."
+      },
+      {
+        "prop_id": "CAP13",
+        "cap_type": "Symptom",
+        "canonical_concept": "stuffy nose",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports a stuffy nose."
+      },
+      {
+        "prop_id": "CAP14",
+        "cap_type": "Symptom",
+        "canonical_concept": "difficulty swallowing",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports difficulty swallowing."
+      },
+      {
+        "prop_id": "CAP15",
+        "cap_type": "Symptom",
+        "canonical_concept": "swollen tonsils",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports swollen tonsils."
+      },
+      {
+        "prop_id": "CAP16",
+        "cap_type": "Symptom",
+        "canonical_concept": "swollen tonsils",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports swollen tonsils."
+      },
+      {
+        "prop_id": "CAP17",
+        "cap_type": "Symptom",
+        "canonical_concept": "pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports pain."
+      },
+      {
+        "prop_id": "CAP18",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "lisinopril",
+        "category": "MedicationStatement",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "medication",
+          "quantitative"
+        ],
+        "proposition_text": "The patient is taking lisinopril at a dose of 20 milligrams per day."
+      },
+      {
+        "prop_id": "CAP19",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "covid vaccine",
+        "category": "MedicationStatement",
+        "speaker": "doctor",
+        "status": "uncertain",
+        "visit_state": "planned",
+        "temporality": "future",
+        "proposition_text": "The patient is hoping not to receive another covid vaccine."
+      },
+      {
+        "prop_id": "CAP20",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "covid vaccine",
+        "category": "MedicationStatement",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "past",
+        "proposition_text": "The patient received a covid vaccine."
+      },
+      {
+        "prop_id": "CAP21",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "lisinopril",
+        "category": "MedicationStatement",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient is taking lisinopril."
+      },
+      {
+        "prop_id": "CAP22",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "metformin",
+        "category": "MedicationStatement",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "ongoing",
+        "claim_type_tags": [
+          "medication"
+        ],
+        "proposition_text": "The patient is taking metformin."
+      },
+      {
+        "prop_id": "CAP23",
+        "cap_type": "ProblemHistory",
+        "canonical_concept": "strep throat",
+        "category": "ProblemHistory",
+        "speaker": "doctor",
+        "status": "uncertain",
+        "visit_state": "historical",
+        "temporality": "past",
+        "proposition_text": "The patient had strep throat as a child."
+      }
+    ],
+    "filtered_nonverifiable_units": []
+  },
+  "event_plan": null,
+  "summary_cap": {
+    "atomic_propositions": [
+      {
+        "prop_id": "P1",
+        "cap_type": "ChiefComplaint",
+        "canonical_concept": "fatigue",
+        "category": "ChiefComplaint",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports fatigue."
+      },
+      {
+        "prop_id": "P2",
+        "cap_type": "Symptom",
+        "canonical_concept": "fever",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports fever."
+      },
+      {
+        "prop_id": "P3",
+        "cap_type": "History",
+        "canonical_concept": "fatigue for past four",
+        "category": "History",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "past",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports fatigue for the past four days."
+      },
+      {
+        "prop_id": "P4",
+        "cap_type": "Finding",
+        "canonical_concept": "feeling feverish last night",
+        "category": "Finding",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports feeling feverish last night."
+      },
+      {
+        "prop_id": "P5",
+        "cap_type": "Finding",
+        "canonical_concept": "sweating",
+        "category": "Finding",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports sweating."
+      },
+      {
+        "prop_id": "P6",
+        "cap_type": "ProblemHistory",
+        "canonical_concept": "difficulty swallowing",
+        "category": "ProblemHistory",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports difficulty swallowing."
+      },
+      {
+        "prop_id": "P7",
+        "cap_type": "Finding",
+        "canonical_concept": "stuffy nose",
+        "category": "Finding",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports a stuffy nose."
+      },
+      {
+        "prop_id": "P8",
+        "cap_type": "Finding",
+        "canonical_concept": "swollen tonsils",
+        "category": "Finding",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports swollen tonsils."
+      },
+      {
+        "prop_id": "P9",
+        "cap_type": "Finding",
+        "canonical_concept": "pain",
+        "category": "Finding",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports no stomach pain."
+      },
+      {
+        "prop_id": "P10",
+        "cap_type": "Lifestyle",
+        "canonical_concept": "drinks water primarily",
+        "category": "Lifestyle",
+        "speaker": "patient",
+        "predicate": "drinks",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient drinks water primarily."
+      },
+      {
+        "prop_id": "P11",
+        "cap_type": "Lifestyle",
+        "canonical_concept": "occasionally drinks wine",
+        "category": "Lifestyle",
+        "speaker": "patient",
+        "predicate": "drinks",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient occasionally drinks wine."
+      },
+      {
+        "prop_id": "P12",
+        "cap_type": "Finding",
+        "canonical_concept": "blood pressure",
+        "category": "Finding",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "exam"
+        ],
+        "proposition_text": "The patient reports blood pressure fluctuations, ranging from 120/80 to 140/80."
+      },
+      {
+        "prop_id": "P13",
+        "cap_type": "Finding",
+        "canonical_concept": "blood sugar fluctuations ranging",
+        "category": "Finding",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "exam"
+        ],
+        "proposition_text": "The patient reports blood sugar fluctuations, ranging from 80-90 in the morning to 140 at night."
+      },
+      {
+        "prop_id": "P14",
+        "cap_type": "MedicationPlan",
+        "canonical_concept": "metformin",
+        "category": "MedicationPlan",
+        "speaker": "patient",
+        "predicate": "takes",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "medication"
+        ],
+        "proposition_text": "The patient takes metformin 1000mg twice daily with breakfast and dinner."
+      },
+      {
+        "prop_id": "P15",
+        "cap_type": "Symptom",
+        "canonical_concept": "low-grade fever",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports a low-grade fever of 104°F."
+      },
+      {
+        "prop_id": "P16",
+        "cap_type": "Finding",
+        "canonical_concept": "blood pressure",
+        "category": "Finding",
+        "speaker": "clinician",
+        "predicate": "observes",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "exam"
+        ],
+        "proposition_text": "The clinician observes a blood pressure of 130/80 mmHg."
+      },
+      {
+        "prop_id": "P17",
+        "cap_type": "Finding",
+        "canonical_concept": "observes heart rate bpm",
+        "category": "Finding",
+        "speaker": "clinician",
+        "predicate": "observes",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "exam"
+        ],
+        "proposition_text": "The clinician observes a heart rate of 84 bpm."
+      },
+      {
+        "prop_id": "P18",
+        "cap_type": "Finding",
+        "canonical_concept": "pain",
+        "category": "Finding",
+        "speaker": "clinician",
+        "predicate": "observes",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "exam"
+        ],
+        "proposition_text": "The clinician observes facial examination reveals no pain upon palpation of the sinuses."
+      },
+      {
+        "prop_id": "P19",
+        "cap_type": "Finding",
+        "canonical_concept": "observes nasal edema and",
+        "category": "Finding",
+        "speaker": "clinician",
+        "predicate": "observes",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "exam"
+        ],
+        "proposition_text": "The clinician observes nasal edema and erythema."
+      },
+      {
+        "prop_id": "P20",
+        "cap_type": "Finding",
+        "canonical_concept": "observes bilateral exudates throat",
+        "category": "Finding",
+        "speaker": "clinician",
+        "predicate": "observes",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "exam"
+        ],
+        "proposition_text": "The clinician observes bilateral exudates in the throat."
+      },
+      {
+        "prop_id": "P21",
+        "cap_type": "Finding",
+        "canonical_concept": "observes cervical lymphadenopathy right",
+        "category": "Finding",
+        "speaker": "clinician",
+        "predicate": "observes",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "exam"
+        ],
+        "proposition_text": "The clinician observes cervical lymphadenopathy on the right side."
+      },
+      {
+        "prop_id": "P22",
+        "cap_type": "Finding",
+        "canonical_concept": "cough",
+        "category": "Finding",
+        "speaker": "clinician",
+        "predicate": "observes",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "exam"
+        ],
+        "proposition_text": "The clinician observes coarse rhonchi at the lung bases that clear with coughing."
+      },
+      {
+        "prop_id": "P23",
+        "cap_type": "Finding",
+        "canonical_concept": "observes regular heart rhythm",
+        "category": "Finding",
+        "speaker": "clinician",
+        "predicate": "observes",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "exam"
+        ],
+        "proposition_text": "The clinician observes a regular heart rhythm without murmurs or rubs."
+      },
+      {
+        "prop_id": "P24",
+        "cap_type": "Diagnosis",
+        "canonical_concept": "diagnoses symptoms consistent likely",
+        "category": "Diagnosis",
+        "speaker": "clinician",
+        "predicate": "diagnoses",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "diagnostic"
+        ],
+        "proposition_text": "The clinician diagnoses symptoms consistent with a likely upper respiratory infection."
+      },
+      {
+        "prop_id": "P25",
+        "cap_type": "Diagnosis",
+        "canonical_concept": "suspects possible strep throat",
+        "category": "Diagnosis",
+        "speaker": "clinician",
+        "predicate": "suspects",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "diagnostic"
+        ],
+        "proposition_text": "The clinician suspects possible strep throat."
+      },
+      {
+        "prop_id": "P26",
+        "cap_type": "Plan",
+        "canonical_concept": "plans rapid strep test",
+        "category": "Plan",
+        "speaker": "clinician",
+        "predicate": "plans",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "future",
+        "claim_type_tags": [
+          "plan"
+        ],
+        "proposition_text": "The clinician plans a rapid strep test."
+      },
+      {
+        "prop_id": "P27",
+        "cap_type": "MedicationPlan",
+        "canonical_concept": "prescribes amoxicillin 500mg three",
+        "category": "MedicationPlan",
+        "speaker": "clinician",
+        "predicate": "prescribes",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "future",
+        "claim_type_tags": [
+          "medication"
+        ],
+        "proposition_text": "The clinician prescribes amoxicillin 500mg three times daily for 10 days."
+      },
+      {
+        "prop_id": "P28",
+        "cap_type": "MedicationPlan",
+        "canonical_concept": "prescribes lidocaine swish and",
+        "category": "MedicationPlan",
+        "speaker": "clinician",
+        "predicate": "prescribes",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "future",
+        "claim_type_tags": [
+          "medication"
+        ],
+        "proposition_text": "The clinician prescribes lidocaine swish and swallow."
+      }
+    ],
+    "filtered_nonverifiable_units": [],
+    "runtime_seconds": 26.367
+  },
+  "cap_alignment": {
+    "cap_precision": 0.32142857142857145,
+    "cap_recall": 0.391304347826087,
+    "cap_f1": 0.35294117647058826,
+    "matched_count": 9,
+    "summary_prop_count": 28,
+    "source_prop_count": 23,
+    "matched_pairs": [
+      {
+        "score": 1.0,
+        "summary_prop_id": "P18",
+        "source_prop_id": "CAP17",
+        "summary_text": "The clinician observes facial examination reveals no pain upon palpation of the sinuses.",
+        "source_text": "The patient reports pain."
+      },
+      {
+        "score": 1.0,
+        "summary_prop_id": "P14",
+        "source_prop_id": "CAP22",
+        "summary_text": "The patient takes metformin 1000mg twice daily with breakfast and dinner.",
+        "source_text": "The patient is taking metformin."
+      },
+      {
+        "score": 1.0,
+        "summary_prop_id": "P9",
+        "source_prop_id": "CAP7",
+        "summary_text": "The patient reports no stomach pain.",
+        "source_text": "The patient reports pain in the left hand."
+      },
+      {
+        "score": 1.0,
+        "summary_prop_id": "P8",
+        "source_prop_id": "CAP16",
+        "summary_text": "The patient reports swollen tonsils.",
+        "source_text": "The patient reports swollen tonsils."
+      },
+      {
+        "score": 1.0,
+        "summary_prop_id": "P7",
+        "source_prop_id": "CAP13",
+        "summary_text": "The patient reports a stuffy nose.",
+        "source_text": "The patient reports a stuffy nose."
+      },
+      {
+        "score": 1.0,
+        "summary_prop_id": "P6",
+        "source_prop_id": "CAP14",
+        "summary_text": "The patient reports difficulty swallowing.",
+        "source_text": "The patient reports difficulty swallowing."
+      },
+      {
+        "score": 1.0,
+        "summary_prop_id": "P5",
+        "source_prop_id": "CAP11",
+        "summary_text": "The patient reports sweating.",
+        "source_text": "The patient reports sweating last night."
+      },
+      {
+        "score": 1.0,
+        "summary_prop_id": "P2",
+        "source_prop_id": "CAP5",
+        "summary_text": "The patient reports fever.",
+        "source_text": "The patient reports having a fever last night."
+      },
+      {
+        "score": 0.7692,
+        "summary_prop_id": "P12",
+        "source_prop_id": "CAP2",
+        "summary_text": "The patient reports blood pressure fluctuations, ranging from 120/80 to 140/80.",
+        "source_text": "The patient reports blood pressure readings ranging from 120/140 to potentially higher."
+      }
+    ],
+    "unsupported_summary_props": [
+      {
+        "prop_id": "P1",
+        "cap_type": "ChiefComplaint",
+        "canonical_concept": "fatigue",
+        "category": "ChiefComplaint",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports fatigue."
+      },
+      {
+        "prop_id": "P3",
+        "cap_type": "History",
+        "canonical_concept": "fatigue for past four",
+        "category": "History",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "past",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports fatigue for the past four days."
+      },
+      {
+        "prop_id": "P4",
+        "cap_type": "Finding",
+        "canonical_concept": "feeling feverish last night",
+        "category": "Finding",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports feeling feverish last night."
+      },
+      {
+        "prop_id": "P10",
+        "cap_type": "Lifestyle",
+        "canonical_concept": "drinks water primarily",
+        "category": "Lifestyle",
+        "speaker": "patient",
+        "predicate": "drinks",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient drinks water primarily."
+      },
+      {
+        "prop_id": "P11",
+        "cap_type": "Lifestyle",
+        "canonical_concept": "occasionally drinks wine",
+        "category": "Lifestyle",
+        "speaker": "patient",
+        "predicate": "drinks",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient occasionally drinks wine."
+      },
+      {
+        "prop_id": "P13",
+        "cap_type": "Finding",
+        "canonical_concept": "blood sugar fluctuations ranging",
+        "category": "Finding",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "exam"
+        ],
+        "proposition_text": "The patient reports blood sugar fluctuations, ranging from 80-90 in the morning to 140 at night."
+      },
+      {
+        "prop_id": "P15",
+        "cap_type": "Symptom",
+        "canonical_concept": "low-grade fever",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports a low-grade fever of 104°F."
+      },
+      {
+        "prop_id": "P16",
+        "cap_type": "Finding",
+        "canonical_concept": "blood pressure",
+        "category": "Finding",
+        "speaker": "clinician",
+        "predicate": "observes",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "exam"
+        ],
+        "proposition_text": "The clinician observes a blood pressure of 130/80 mmHg."
+      },
+      {
+        "prop_id": "P17",
+        "cap_type": "Finding",
+        "canonical_concept": "observes heart rate bpm",
+        "category": "Finding",
+        "speaker": "clinician",
+        "predicate": "observes",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "exam"
+        ],
+        "proposition_text": "The clinician observes a heart rate of 84 bpm."
+      },
+      {
+        "prop_id": "P19",
+        "cap_type": "Finding",
+        "canonical_concept": "observes nasal edema and",
+        "category": "Finding",
+        "speaker": "clinician",
+        "predicate": "observes",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "exam"
+        ],
+        "proposition_text": "The clinician observes nasal edema and erythema."
+      },
+      {
+        "prop_id": "P20",
+        "cap_type": "Finding",
+        "canonical_concept": "observes bilateral exudates throat",
+        "category": "Finding",
+        "speaker": "clinician",
+        "predicate": "observes",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "exam"
+        ],
+        "proposition_text": "The clinician observes bilateral exudates in the throat."
+      },
+      {
+        "prop_id": "P21",
+        "cap_type": "Finding",
+        "canonical_concept": "observes cervical lymphadenopathy right",
+        "category": "Finding",
+        "speaker": "clinician",
+        "predicate": "observes",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "exam"
+        ],
+        "proposition_text": "The clinician observes cervical lymphadenopathy on the right side."
+      },
+      {
+        "prop_id": "P22",
+        "cap_type": "Finding",
+        "canonical_concept": "cough",
+        "category": "Finding",
+        "speaker": "clinician",
+        "predicate": "observes",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "exam"
+        ],
+        "proposition_text": "The clinician observes coarse rhonchi at the lung bases that clear with coughing."
+      },
+      {
+        "prop_id": "P23",
+        "cap_type": "Finding",
+        "canonical_concept": "observes regular heart rhythm",
+        "category": "Finding",
+        "speaker": "clinician",
+        "predicate": "observes",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "exam"
+        ],
+        "proposition_text": "The clinician observes a regular heart rhythm without murmurs or rubs."
+      },
+      {
+        "prop_id": "P24",
+        "cap_type": "Diagnosis",
+        "canonical_concept": "diagnoses symptoms consistent likely",
+        "category": "Diagnosis",
+        "speaker": "clinician",
+        "predicate": "diagnoses",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "diagnostic"
+        ],
+        "proposition_text": "The clinician diagnoses symptoms consistent with a likely upper respiratory infection."
+      },
+      {
+        "prop_id": "P25",
+        "cap_type": "Diagnosis",
+        "canonical_concept": "suspects possible strep throat",
+        "category": "Diagnosis",
+        "speaker": "clinician",
+        "predicate": "suspects",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "diagnostic"
+        ],
+        "proposition_text": "The clinician suspects possible strep throat."
+      },
+      {
+        "prop_id": "P26",
+        "cap_type": "Plan",
+        "canonical_concept": "plans rapid strep test",
+        "category": "Plan",
+        "speaker": "clinician",
+        "predicate": "plans",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "future",
+        "claim_type_tags": [
+          "plan"
+        ],
+        "proposition_text": "The clinician plans a rapid strep test."
+      },
+      {
+        "prop_id": "P27",
+        "cap_type": "MedicationPlan",
+        "canonical_concept": "prescribes amoxicillin 500mg three",
+        "category": "MedicationPlan",
+        "speaker": "clinician",
+        "predicate": "prescribes",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "future",
+        "claim_type_tags": [
+          "medication"
+        ],
+        "proposition_text": "The clinician prescribes amoxicillin 500mg three times daily for 10 days."
+      },
+      {
+        "prop_id": "P28",
+        "cap_type": "MedicationPlan",
+        "canonical_concept": "prescribes lidocaine swish and",
+        "category": "MedicationPlan",
+        "speaker": "clinician",
+        "predicate": "prescribes",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "future",
+        "claim_type_tags": [
+          "medication"
+        ],
+        "proposition_text": "The clinician prescribes lidocaine swish and swallow."
+      }
+    ],
+    "missing_source_props": [
+      {
+        "prop_id": "CAP1",
+        "cap_type": "Problem",
+        "canonical_concept": "upper respiratory infection",
+        "category": "Problem",
+        "speaker": "doctor",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The doctor is concerned that the patient might have strep in the back of their throat."
+      },
+      {
+        "prop_id": "CAP3",
+        "cap_type": "Symptom",
+        "canonical_concept": "hypertension",
+        "category": "Symptom",
+        "speaker": "doctor",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports blood pressure that is sometimes elevated."
+      },
+      {
+        "prop_id": "CAP4",
+        "cap_type": "Symptom",
+        "canonical_concept": "blood sugar",
+        "category": "Symptom",
+        "speaker": "patient",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "variable",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient's blood sugars are sometimes out of control."
+      },
+      {
+        "prop_id": "CAP6",
+        "cap_type": "Symptom",
+        "canonical_concept": "hypertension",
+        "category": "Symptom",
+        "speaker": "doctor",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports blood pressure that varies significantly."
+      },
+      {
+        "prop_id": "CAP8",
+        "cap_type": "Problem",
+        "canonical_concept": "diabetes",
+        "category": "Problem",
+        "speaker": "doctor",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "quantitative"
+        ],
+        "proposition_text": "The doctor wants to order a hemoglobin A1c."
+      },
+      {
+        "prop_id": "CAP9",
+        "cap_type": "Problem",
+        "canonical_concept": "hypertension",
+        "category": "Problem",
+        "speaker": "doctor",
+        "predicate": "plans",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "plan"
+        ],
+        "proposition_text": "The doctor wants to increase the lisinopril."
+      },
+      {
+        "prop_id": "CAP10",
+        "cap_type": "Symptom",
+        "canonical_concept": "sore throat",
+        "category": "Symptom",
+        "speaker": "doctor",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports a sore throat."
+      },
+      {
+        "prop_id": "CAP12",
+        "cap_type": "Symptom",
+        "canonical_concept": "stuffy nose",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports a stuffy nose."
+      },
+      {
+        "prop_id": "CAP15",
+        "cap_type": "Symptom",
+        "canonical_concept": "swollen tonsils",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports swollen tonsils."
+      },
+      {
+        "prop_id": "CAP18",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "lisinopril",
+        "category": "MedicationStatement",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "medication",
+          "quantitative"
+        ],
+        "proposition_text": "The patient is taking lisinopril at a dose of 20 milligrams per day."
+      },
+      {
+        "prop_id": "CAP19",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "covid vaccine",
+        "category": "MedicationStatement",
+        "speaker": "doctor",
+        "status": "uncertain",
+        "visit_state": "planned",
+        "temporality": "future",
+        "proposition_text": "The patient is hoping not to receive another covid vaccine."
+      },
+      {
+        "prop_id": "CAP20",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "covid vaccine",
+        "category": "MedicationStatement",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "past",
+        "proposition_text": "The patient received a covid vaccine."
+      },
+      {
+        "prop_id": "CAP21",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "lisinopril",
+        "category": "MedicationStatement",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient is taking lisinopril."
+      },
+      {
+        "prop_id": "CAP23",
+        "cap_type": "ProblemHistory",
+        "canonical_concept": "strep throat",
+        "category": "ProblemHistory",
+        "speaker": "doctor",
+        "status": "uncertain",
+        "visit_state": "historical",
+        "temporality": "past",
+        "proposition_text": "The patient had strep throat as a child."
+      }
+    ]
+  },
+  "reference_gpt_f1_items": {
+    "active_problems_symptoms": [
+      "sore throat",
+      "fever",
+      "chills",
+      "profuse sweating",
+      "hypertension",
+      "diabetes",
+      "dysphagia",
+      "tonsil swelling",
+      "congestion",
+      "edema of nasal turbinates",
+      "erythema of nasal turbinates",
+      "clear discharge",
+      "erythema of peritonsillar space",
+      "edema of peritonsillar space",
+      "exudates",
+      "cervical lymphadenopathy",
+      "coarse rhonchi",
+      "Blood sugar fluctuates",
+      "Difficulty swallowing"
+    ],
+    "negated_findings": [
+      "denies abdominal symptoms"
+    ],
+    "uncertain_findings": [],
+    "medication_treatment": [
+      "lisinopril 20 mg daily",
+      "multi-vitamin",
+      "vitamin D",
+      "metformin 1000 mg twice daily",
+      "amoxicillin 500 mg 3 times a day for 10 days",
+      "lidocaine swish and swallow",
+      "ibuprofen",
+      "lisinopril 40 mg once a day",
+      "lipid panel",
+      "metformin twice a day",
+      "hemoglobin A1c"
+    ],
+    "plan_followup": [],
+    "_chunk_count": [
+      "5"
+    ]
+  },
+  "summary_gpt_f1_items": {
+    "active_problems_symptoms": [],
+    "negated_findings": [],
+    "uncertain_findings": [],
+    "medication_treatment": [],
+    "plan_followup": [],
+    "_chunk_count": [
+      "1"
+    ]
+  },
+  "gpt_f1_alignment": {
+    "by_category": {
+      "active_problems_symptoms": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "matched_count": 0,
+        "pred_count": 0,
+        "ref_count": 19,
+        "matches": [],
+        "unsupported_pred_items": [],
+        "missing_ref_items": [
+          "sore throat",
+          "fever",
+          "chills",
+          "profuse sweating",
+          "hypertension",
+          "diabetes",
+          "dysphagia",
+          "tonsil swelling",
+          "congestion",
+          "edema of nasal turbinates",
+          "erythema of nasal turbinates",
+          "clear discharge",
+          "erythema of peritonsillar space",
+          "edema of peritonsillar space",
+          "exudates",
+          "cervical lymphadenopathy",
+          "coarse rhonchi",
+          "Blood sugar fluctuates",
+          "Difficulty swallowing"
+        ]
+      },
+      "negated_findings": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "matched_count": 0,
+        "pred_count": 0,
+        "ref_count": 1,
+        "matches": [],
+        "unsupported_pred_items": [],
+        "missing_ref_items": [
+          "denies abdominal symptoms"
+        ]
+      },
+      "uncertain_findings": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "matched_count": 0,
+        "pred_count": 0,
+        "ref_count": 0,
+        "matches": [],
+        "unsupported_pred_items": [],
+        "missing_ref_items": []
+      },
+      "medication_treatment": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "matched_count": 0,
+        "pred_count": 0,
+        "ref_count": 11,
+        "matches": [],
+        "unsupported_pred_items": [],
+        "missing_ref_items": [
+          "lisinopril 20 mg daily",
+          "multi-vitamin",
+          "vitamin D",
+          "metformin 1000 mg twice daily",
+          "amoxicillin 500 mg 3 times a day for 10 days",
+          "lidocaine swish and swallow",
+          "ibuprofen",
+          "lisinopril 40 mg once a day",
+          "lipid panel",
+          "metformin twice a day",
+          "hemoglobin A1c"
+        ]
+      },
+      "plan_followup": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "matched_count": 0,
+        "pred_count": 0,
+        "ref_count": 0,
+        "matches": [],
+        "unsupported_pred_items": [],
+        "missing_ref_items": []
+      }
+    }
+  },
+  "reference_nair_concepts": {
+    "sections": [
+      {
+        "heading": "Clinical Note",
+        "section_value": "CHIEF COMPLAINT\nSore throat.\nMEDICAL HISTORY\nPatient reports history of hypertension and diabetes.\nSOCIAL HISTORY\nPatient reports working as a cashier in a supermarket. She enjoys drinking wine.\nMEDICATIONS\nPatient reports taking lisinopril 20 mg daily, multi-vitamin, vitamin D, and metformin 1000 mg twice daily.\nREVIEW OF SYSTEMS\nConstitutional: Reports fever, chills, and profuse sweating.",
+        "medical_concepts": [
+          "sore throat",
+          "hypertension",
+          "diabetes",
+          "lisinopril",
+          "multivitamin",
+          "vitamin D",
+          "metformin",
+          "fever",
+          "chills",
+          "profuse sweating"
+        ]
+      },
+      {
+        "heading": "Clinical Note",
+        "section_value": "HENT: Reports sore throat, dysphagia, tonsil swelling, and congestion.\nGastrointestinal: Denies abdominal symptoms.\nVITALS\nTemperature: 100.4 degrees F.\nBlood pressure: 132/80 mm Hg.\nHeart rate: 84 BPM.\nPHYSICAL EXAM\nHead and Face\n- Examination: No pain to palpation of the frontal or maxillary sinuses.\nEars, Nose, Mouth, and Throat",
+        "medical_concepts": [
+          "sore throat",
+          "dysphagia",
+          "tonsil swelling",
+          "congestion",
+          "abdominal symptoms",
+          "temperature",
+          "blood pressure",
+          "heart rate",
+          "frontal sinus tenderness",
+          "maxillary sinus tenderness"
+        ]
+      },
+      {
+        "heading": "Clinical Note",
+        "section_value": "- Examination of Nose: Edema and erythema of the nasal turbinates noted bilaterally with associated clear discharge.\n- Examination of Throat: Erythema and edema of the peritonsillar space with exudates present bilaterally. The uvula is midline.\nNeck\n- General Examination: No thyromegaly, but there is some cervical lymphadenopathy on the right side.\nRespiratory\n- Auscultation of Lungs: Coarse rhonchi at the bases that clear with cough.\nCardiovascular\n- Auscultation of Heart: Regular rate and rhythm. No murmurs, gallops or rubs.\nRESULTS\nRapid COVID-19 test performed today in office is negative.",
+        "medical_concepts": [
+          "edema of nasal turbinates",
+          "erythema of nasal turbinates",
+          "nasal discharge",
+          "erythema of peritonsillar space",
+          "edema of peritonsillar space",
+          "peritonsillar exudates",
+          "thyromegaly",
+          "cervical lymphadenopathy",
+          "coarse rhonchi",
+          "cough",
+          "murmurs",
+          "gallops",
+          "rubs",
+          "Rapid COVID-19 test"
+        ]
+      },
+      {
+        "heading": "Clinical Note",
+        "section_value": "ASSESSMENT AND PLAN\n1. Sore throat.\n- Medical Reasoning: The patient has experienced sore throat, fever, chills, profuse sweating, and difficulty swallowing for 4 days. There is erythema and edema of the peritonsillar space with exudates present bilaterally as well as edema and erythema of her turbinates, bilaterally.\n- Patient Education and Counseling: We discussed treatment options today. I have stressed the importance of hydration.\n- Medical Treatment: We will perform a rapid strep test today. If she is positive for strep, I will prescribe amoxicillin 500 mg 3 times a day for 10 days. Prescription for lidocaine swish and swallow provided for pain relief. ibuprofen can also be taken for pain and fever relief.\n2. Hypertension.\n- Medical Reasoning: The patient states her blood pressure fluctuates often. Her blood pressure today in office was 132/80 mm Hg. - Patient Education and Counseling: We discussed treatment options including increasing her lisinopril and diet modifications.\n- Medical Treatment: Lipid panel ordered. Prescription for lisinopril 40 mg once a day is also provided.\n3. Diabetes.\n- Medical Reasoning: The patient’s blood sugar fluctuates between 80 to 90 in the morning to 140 in the evening. She is already at 1000 mg of metformin twice a day, which she does take with meals.",
+        "medical_concepts": [
+          "sore throat",
+          "fever",
+          "chills",
+          "profuse sweating",
+          "difficulty swallowing",
+          "erythema of peritonsillar space",
+          "edema of peritonsillar space",
+          "exudates of peritonsillar space",
+          "edema of turbinates",
+          "erythema of turbinates",
+          "rapid strep test",
+          "strep throat",
+          "amoxicillin",
+          "lidocaine",
+          "ibuprofen",
+          "pain",
+          "hypertension",
+          "blood pressure 132/80 mm Hg",
+          "lisinopril",
+          "lipid panel"
+        ]
+      },
+      {
+        "heading": "Clinical Note",
+        "section_value": "- Patient Education and Counseling: We discussed the importance of achieving a healthy lifestyle and what effects that can have on her diabetes.\n- Medical Treatment: I have placed an order a hemoglobin A1c.\nPatient Agreements: The patient understands and agrees with the recommended medical treatment plan.",
+        "medical_concepts": [
+          "diabetes",
+          "hemoglobin A1c"
+        ]
+      }
+    ],
+    "medical_concepts": [
+      "sore throat",
+      "hypertension",
+      "diabetes",
+      "lisinopril",
+      "multivitamin",
+      "vitamin D",
+      "metformin",
+      "fever",
+      "chills",
+      "profuse sweating",
+      "dysphagia",
+      "tonsil swelling",
+      "congestion",
+      "abdominal symptoms",
+      "temperature",
+      "blood pressure",
+      "heart rate",
+      "frontal sinus tenderness",
+      "maxillary sinus tenderness",
+      "edema of nasal turbinates",
+      "erythema of nasal turbinates",
+      "nasal discharge",
+      "erythema of peritonsillar space",
+      "edema of peritonsillar space",
+      "peritonsillar exudates",
+      "thyromegaly",
+      "cervical lymphadenopathy",
+      "coarse rhonchi",
+      "cough",
+      "murmurs",
+      "gallops",
+      "rubs",
+      "Rapid COVID-19 test",
+      "difficulty swallowing",
+      "exudates of peritonsillar space",
+      "edema of turbinates",
+      "erythema of turbinates",
+      "rapid strep test",
+      "strep throat",
+      "amoxicillin",
+      "lidocaine",
+      "ibuprofen",
+      "pain",
+      "blood pressure 132/80 mm Hg",
+      "lipid panel",
+      "hemoglobin A1c"
+    ],
+    "section_count": 5
+  },
+  "summary_nair_concepts": {
+    "sections": [
+      {
+        "heading": "Clinical Note",
+        "section_value": "Chief Complaint\nPatient reports fatigue and fever.\nHistory of Present Illness\nThe patient reports fatigue for the past four days and felt feverish last night, noting sweating. The patient reports difficulty swallowing, which occurs every time they swallow. The patient denies having chills. The patient reports a stuffy nose but no significant discomfort. The patient reports swollen tonsils. The patient reports no stomach pain. The patient drinks water primarily, with occasional wine. The patient reports blood pressure fluctuations, ranging from 120/80 to 140/80. The patient reports blood sugar fluctuations, ranging from 80-90 in the morning to 140 at night. The patient takes metformin 1000mg twice daily with breakfast and dinner.\nFindings\nThe doctor observes a low-grade fever (104°F), blood pressure of 130/80 mmHg, and heart rate of 84 bpm. The doctor notes facial examination reveals no pain upon palpation of the sinuses, nasal edema and erythema, and bilateral exudates in the throat. The doctor notes cervical lymphadenopathy on the right side. The doctor observes coarse rhonchi at the lung bases that clear with coughing. The doctor notes a regular heart rhythm without murmurs or rubs.\nAssessment\nThe patient presents with symptoms consistent with a likely upper respiratory infection and possible strep throat.\nPlan",
+        "medical_concepts": [
+          "fatigue",
+          "fever",
+          "felt feverish",
+          "sweating",
+          "difficulty swallowing",
+          "chills",
+          "stuffy nose",
+          "swollen tonsils",
+          "stomach pain",
+          "blood pressure fluctuations",
+          "blood sugar fluctuations",
+          "metformin",
+          "low-grade fever",
+          "blood pressure",
+          "heart rate",
+          "sinus pain",
+          "nasal edema",
+          "nasal erythema",
+          "bilateral exudates in the throat",
+          "cervical lymphadenopathy"
+        ]
+      },
+      {
+        "heading": "Clinical Note",
+        "section_value": "The doctor plans a rapid strep test, amoxicillin 500mg three times daily for 10 days, lidocaine swish and swallow, and increased lisinopril to 40mg daily. The doctor plans a lipid panel and hemoglobin A1c testing.",
+        "medical_concepts": [
+          "rapid strep test",
+          "amoxicillin",
+          "lidocaine",
+          "lisinopril",
+          "lipid panel",
+          "hemoglobin A1c"
+        ]
+      }
+    ],
+    "medical_concepts": [
+      "fatigue",
+      "fever",
+      "felt feverish",
+      "sweating",
+      "difficulty swallowing",
+      "chills",
+      "stuffy nose",
+      "swollen tonsils",
+      "stomach pain",
+      "blood pressure fluctuations",
+      "blood sugar fluctuations",
+      "metformin",
+      "low-grade fever",
+      "blood pressure",
+      "heart rate",
+      "sinus pain",
+      "nasal edema",
+      "nasal erythema",
+      "bilateral exudates in the throat",
+      "cervical lymphadenopathy",
+      "rapid strep test",
+      "amoxicillin",
+      "lidocaine",
+      "lisinopril",
+      "lipid panel",
+      "hemoglobin A1c"
+    ],
+    "section_count": 2
+  },
+  "nair_alignment": {
+    "pred_concepts": [
+      "fatigue",
+      "fever",
+      "felt feverish",
+      "sweating",
+      "difficulty swallowing",
+      "chills",
+      "stuffy nose",
+      "swollen tonsils",
+      "stomach pain",
+      "blood pressure fluctuations",
+      "blood sugar fluctuations",
+      "metformin",
+      "low-grade fever",
+      "blood pressure",
+      "heart rate",
+      "sinus pain",
+      "nasal edema",
+      "nasal erythema",
+      "bilateral exudates in the throat",
+      "cervical lymphadenopathy",
+      "rapid strep test",
+      "amoxicillin",
+      "lidocaine",
+      "lisinopril",
+      "lipid panel",
+      "hemoglobin A1c"
+    ],
+    "ref_concepts": [
+      "sore throat",
+      "hypertension",
+      "diabetes",
+      "lisinopril",
+      "multivitamin",
+      "vitamin D",
+      "metformin",
+      "fever",
+      "chills",
+      "profuse sweating",
+      "dysphagia",
+      "tonsil swelling",
+      "congestion",
+      "abdominal symptoms",
+      "temperature",
+      "blood pressure",
+      "heart rate",
+      "frontal sinus tenderness",
+      "maxillary sinus tenderness",
+      "edema of nasal turbinates",
+      "erythema of nasal turbinates",
+      "nasal discharge",
+      "erythema of peritonsillar space",
+      "edema of peritonsillar space",
+      "peritonsillar exudates",
+      "thyromegaly",
+      "cervical lymphadenopathy",
+      "coarse rhonchi",
+      "cough",
+      "murmurs",
+      "gallops",
+      "rubs",
+      "Rapid COVID-19 test",
+      "difficulty swallowing",
+      "exudates of peritonsillar space",
+      "edema of turbinates",
+      "erythema of turbinates",
+      "rapid strep test",
+      "strep throat",
+      "amoxicillin",
+      "lidocaine",
+      "ibuprofen",
+      "pain",
+      "blood pressure 132/80 mm Hg",
+      "lipid panel",
+      "hemoglobin A1c"
+    ],
+    "precision_alignment": {
+      "found_b": [
+        "fever",
+        "sweating",
+        "difficulty swallowing",
+        "chills",
+        "swollen tonsils",
+        "blood pressure fluctuations",
+        "blood sugar fluctuations",
+        "metformin",
+        "low-grade fever",
+        "blood pressure",
+        "heart rate",
+        "sinus pain",
+        "nasal edema",
+        "nasal erythema",
+        "bilateral exudates in the throat",
+        "cervical lymphadenopathy",
+        "rapid strep test",
+        "amoxicillin",
+        "lidocaine",
+        "lisinopril",
+        "lipid panel",
+        "hemoglobin A1c"
+      ],
+      "not_found_b": [
+        "fatigue",
+        "felt feverish",
+        "stuffy nose",
+        "stomach pain"
+      ],
+      "chunk_count": 2,
+      "chunk_results": [
+        {
+          "found_b": [
+            "fever",
+            "sweating",
+            "difficulty swallowing",
+            "chills",
+            "swollen tonsils",
+            "blood pressure fluctuations",
+            "blood sugar fluctuations",
+            "metformin",
+            "low-grade fever",
+            "blood pressure",
+            "heart rate",
+            "sinus pain",
+            "nasal edema",
+            "nasal erythema",
+            "bilateral exudates in the throat",
+            "cervical lymphadenopathy",
+            "rapid strep test",
+            "amoxicillin",
+            "lidocaine",
+            "lisinopril"
+          ],
+          "not_found_b": [
+            "fatigue",
+            "felt feverish",
+            "stuffy nose",
+            "stomach pain"
+          ]
+        },
+        {
+          "found_b": [
+            "lipid panel",
+            "hemoglobin A1c"
+          ],
+          "not_found_b": []
+        }
+      ]
+    },
+    "recall_alignment": {
+      "found_b": [
+        "diabetes",
+        "lisinopril",
+        "metformin",
+        "fever",
+        "chills",
+        "dysphagia",
+        "tonsil swelling",
+        "congestion",
+        "abdominal symptoms",
+        "temperature",
+        "blood pressure",
+        "heart rate",
+        "cervical lymphadenopathy",
+        "coarse rhonchi",
+        "cough",
+        "murmurs",
+        "rubs",
+        "difficulty swallowing",
+        "rapid strep test",
+        "strep throat",
+        "amoxicillin",
+        "lidocaine",
+        "lipid panel",
+        "hemoglobin A1c"
+      ],
+      "not_found_b": [
+        "sore throat",
+        "hypertension",
+        "multivitamin",
+        "vitamin D",
+        "profuse sweating",
+        "frontal sinus tenderness",
+        "maxillary sinus tenderness",
+        "edema of nasal turbinates",
+        "erythema of nasal turbinates",
+        "nasal discharge",
+        "erythema of peritonsillar space",
+        "edema of peritonsillar space",
+        "peritonsillar exudates",
+        "thyromegaly",
+        "gallops",
+        "Rapid COVID-19 test",
+        "exudates of peritonsillar space",
+        "edema of turbinates",
+        "erythema of turbinates",
+        "ibuprofen",
+        "pain",
+        "blood pressure 132/80 mm Hg"
+      ],
+      "chunk_count": 2,
+      "chunk_results": [
+        {
+          "found_b": [
+            "diabetes",
+            "lisinopril",
+            "metformin",
+            "fever",
+            "chills",
+            "dysphagia",
+            "tonsil swelling",
+            "congestion",
+            "abdominal symptoms",
+            "temperature",
+            "blood pressure",
+            "heart rate"
+          ],
+          "not_found_b": [
+            "sore throat",
+            "hypertension",
+            "multivitamin",
+            "vitamin D",
+            "profuse sweating",
+            "frontal sinus tenderness",
+            "maxillary sinus tenderness",
+            "edema of nasal turbinates",
+            "erythema of nasal turbinates",
+            "nasal discharge",
+            "erythema of peritonsillar space",
+            "edema of peritonsillar space"
+          ]
+        },
+        {
+          "found_b": [
+            "cervical lymphadenopathy",
+            "coarse rhonchi",
+            "cough",
+            "murmurs",
+            "rubs",
+            "difficulty swallowing",
+            "rapid strep test",
+            "strep throat",
+            "amoxicillin",
+            "lidocaine",
+            "lipid panel",
+            "hemoglobin A1c"
+          ],
+          "not_found_b": [
+            "peritonsillar exudates",
+            "thyromegaly",
+            "exudates of peritonsillar space",
+            "edema of turbinates",
+            "erythema of turbinates",
+            "ibuprofen",
+            "pain",
+            "blood pressure 132/80 mm Hg",
+            "Rapid COVID-19 test",
+            "gallops"
+          ]
+        }
+      ]
+    }
+  },
+  "semantic_cap_audit": {
+    "source_cap_recall": [
+      {
+        "cap_id": "P1",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P2",
+        "judgment": "contradicted",
+        "reason": null
+      },
+      {
+        "cap_id": "P3",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P4",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P5",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P6",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P7",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P8",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P9",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P10",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P11",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P12",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P13",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P14",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P15",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P16",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P1",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P2",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P3",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P4",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P5",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P6",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P7",
+        "judgment": "partial",
+        "reason": null
+      }
+    ],
+    "summary_cap_precision": [
+      {
+        "cap_id": "P1",
+        "judgment": "unsupported",
+        "reason": null
+      },
+      {
+        "cap_id": "P2",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P3",
+        "judgment": "unsupported",
+        "reason": null
+      },
+      {
+        "cap_id": "P4",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P5",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P6",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P7",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P8",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P9",
+        "judgment": "contradicted",
+        "reason": null
+      },
+      {
+        "cap_id": "P10",
+        "judgment": "unsupported",
+        "reason": null
+      },
+      {
+        "cap_id": "P11",
+        "judgment": "unsupported",
+        "reason": null
+      },
+      {
+        "cap_id": "P12",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P13",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P14",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P15",
+        "judgment": "contradicted",
+        "reason": null
+      },
+      {
+        "cap_id": "P16",
+        "judgment": "unsupported",
+        "reason": null
+      },
+      {
+        "cap_id": "P1",
+        "judgment": "unsupported",
+        "reason": null
+      },
+      {
+        "cap_id": "P2",
+        "judgment": "unsupported",
+        "reason": null
+      },
+      {
+        "cap_id": "P3",
+        "judgment": "unsupported",
+        "reason": null
+      },
+      {
+        "cap_id": "P4",
+        "judgment": "unsupported",
+        "reason": null
+      },
+      {
+        "cap_id": "P5",
+        "judgment": "unsupported",
+        "reason": null
+      },
+      {
+        "cap_id": "P6",
+        "judgment": "unsupported",
+        "reason": null
+      },
+      {
+        "cap_id": "P7",
+        "judgment": "unsupported",
+        "reason": null
+      },
+      {
+        "cap_id": "P8",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P9",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P10",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P11",
+        "judgment": "unsupported",
+        "reason": null
+      },
+      {
+        "cap_id": "P12",
+        "judgment": "unsupported",
+        "reason": null
+      }
+    ],
+    "metrics": {
+      "semantic_cap_precision": 0.3036,
+      "semantic_cap_recall": 0.6087,
+      "semantic_cap_f1": 0.4051,
+      "semantic_cap_precision_supported_count": 5,
+      "semantic_cap_precision_partial_count": 7,
+      "semantic_cap_precision_denominator": 28,
+      "semantic_cap_recall_supported_count": 11,
+      "semantic_cap_recall_partial_count": 6,
+      "semantic_cap_recall_denominator": 23,
+      "semantic_cap_low_value_source_count": 0,
+      "semantic_cap_low_value_summary_count": 0,
+      "semantic_cap_missing_count": 5,
+      "semantic_cap_unsupported_count": 14,
+      "semantic_cap_contradicted_source_count": 1,
+      "semantic_cap_contradicted_summary_count": 2
+    }
+  },
+  "safety_judgment": null,
+  "section_judgment": {
+    "section_miscategorizations": [
+      {
+        "text": "The doctor observes a low-grade fever (104°F), blood pressure of 130/80 mmHg, and heart rate of 84 bpm.",
+        "current_section": "Findings",
+        "expected_section": "Findings",
+        "severity": "minor",
+        "reason": "Content belongs in Findings, but the term 'low-grade fever' is inconsistent with the documented temperature of 104°F (which is high). This is a documentation accuracy issue rather than a section placement problem; section choice itself is appropriate."
+      }
+    ],
+    "summary_statistics": {
+      "section_appropriateness_score": 0.9,
+      "section_miscategorization_count": 1,
+      "major_section_miscategorization_count": 0
+    }
+  },
+  "pdsqi_judgment": {
+    "citation_applicable": 0,
+    "citation": 0,
+    "accurate": 2,
+    "thorough": 2,
+    "useful": 2,
+    "organized": 4,
+    "comprehensible": 4,
+    "succinct": 4,
+    "abstraction": 1,
+    "synthesized": 3,
+    "voice_summ": 0,
+    "voice_note": 0,
+    "pdsqi_core_mean": 3.0
+  },
+  "llm_checklist_judgment": {
+    "content_preservation_core": 3,
+    "noise_suppression": 5,
+    "lay_expression_preservation": 3,
+    "state_update_fidelity": 2,
+    "temporality_preservation": 3,
+    "problem_evidence_linkage": 3,
+    "state_plan_separation": 2,
+    "section_organization_appropriateness": 3,
+    "overall_clinical_usability": 3,
+    "clinically_meaningful_omission": "Yes",
+    "clinically_concerning_hallucination": "Yes",
+    "checklist_a_mean": 3.6667,
+    "checklist_b_mean": 2.5,
+    "checklist_c_mean": 2.6667,
+    "llm_checklist_abc_mean": 3.0,
+    "llm_checklist_mean_no_usability": 3.0,
+    "llm_checklist_total_score": 27,
+    "llm_checklist_mean": 3.0,
+    "llm_checklist_meaningful_omission_yes": 1,
+    "llm_checklist_concerning_hallucination_yes": 1
+  },
+  "metrics": {
+    "case_id": "D2N041",
+    "method": "cluster2sent",
+    "template": "sectioned",
+    "source_cap_count": 23,
+    "event_plan_count": null,
+    "summary_cap_count": 28,
+    "cap_matched_count": 9,
+    "cap_precision": 0.3214,
+    "cap_recall": 0.3913,
+    "cap_f1": 0.3529,
+    "unsupported_summary_cap_count": 19,
+    "missing_source_cap_count": 14,
+    "summary_runtime_seconds": null,
+    "summary_cap_runtime_seconds": 26.367,
+    "event_plan_runtime_seconds": null,
+    "rouge_l_f1_vs_reference": 0.2449,
+    "token_f1_vs_reference": 0.4461,
+    "gptf1_macro_f1": 0.0,
+    "nair_gpt_precision": 0.8462,
+    "nair_gpt_recall": 0.5217,
+    "nair_gpt_f1": 0.6455,
+    "semantic_cap_precision": 0.3036,
+    "semantic_cap_recall": 0.6087,
+    "semantic_cap_f1": 0.4051,
+    "hallucination_count": null,
+    "major_hallucination_count": null,
+    "omission_count": null,
+    "major_omission_count": null,
+    "section_appropriateness_score": 0.9,
+    "section_miscategorization_count": 1,
+    "major_section_miscategorization_count": 0,
+    "pdsqi_core_mean": 3.0,
+    "pdsqi_accurate": 2,
+    "pdsqi_thorough": 2,
+    "llm_checklist_total_score": 27,
+    "llm_checklist_mean": 3.0,
+    "llm_checklist_mean_no_usability": 3.0,
+    "checklist_a_mean": 3.6667,
+    "checklist_b_mean": 2.5,
+    "checklist_c_mean": 2.6667,
+    "llm_checklist_abc_mean": 3.0,
+    "content_preservation_core": 3,
+    "noise_suppression": 5,
+    "lay_expression_preservation": 3,
+    "state_update_fidelity": 2,
+    "temporality_preservation": 3,
+    "problem_evidence_linkage": 3,
+    "state_plan_separation": 2,
+    "section_organization_appropriateness": 3,
+    "overall_clinical_usability": 3,
+    "llm_checklist_meaningful_omission_yes": 1,
+    "llm_checklist_concerning_hallucination_yes": 1,
+    "gptf1_active_problems_symptoms_precision": 0.0,
+    "gptf1_active_problems_symptoms_recall": 0.0,
+    "gptf1_active_problems_symptoms_f1": 0.0,
+    "gptf1_active_problems_symptoms_pred_count": 0,
+    "gptf1_active_problems_symptoms_ref_count": 19,
+    "gptf1_negated_findings_precision": 0.0,
+    "gptf1_negated_findings_recall": 0.0,
+    "gptf1_negated_findings_f1": 0.0,
+    "gptf1_negated_findings_pred_count": 0,
+    "gptf1_negated_findings_ref_count": 1,
+    "gptf1_uncertain_findings_precision": 0.0,
+    "gptf1_uncertain_findings_recall": 0.0,
+    "gptf1_uncertain_findings_f1": 0.0,
+    "gptf1_uncertain_findings_pred_count": 0,
+    "gptf1_uncertain_findings_ref_count": 0,
+    "gptf1_medication_treatment_precision": 0.0,
+    "gptf1_medication_treatment_recall": 0.0,
+    "gptf1_medication_treatment_f1": 0.0,
+    "gptf1_medication_treatment_pred_count": 0,
+    "gptf1_medication_treatment_ref_count": 11,
+    "gptf1_plan_followup_precision": 0.0,
+    "gptf1_plan_followup_recall": 0.0,
+    "gptf1_plan_followup_f1": 0.0,
+    "gptf1_plan_followup_pred_count": 0,
+    "gptf1_plan_followup_ref_count": 0,
+    "nair_pred_concept_count": 26,
+    "nair_ref_concept_count": 46,
+    "nair_precision_match_count": 22,
+    "nair_recall_match_count": 24,
+    "semantic_cap_precision_supported_count": 5,
+    "semantic_cap_precision_partial_count": 7,
+    "semantic_cap_precision_denominator": 28,
+    "semantic_cap_recall_supported_count": 11,
+    "semantic_cap_recall_partial_count": 6,
+    "semantic_cap_recall_denominator": 23,
+    "semantic_cap_low_value_source_count": 0,
+    "semantic_cap_low_value_summary_count": 0,
+    "semantic_cap_missing_count": 5,
+    "semantic_cap_unsupported_count": 14,
+    "semantic_cap_contradicted_source_count": 1,
+    "semantic_cap_contradicted_summary_count": 2,
+    "pdsqi_useful": 2,
+    "pdsqi_organized": 4,
+    "pdsqi_comprehensible": 4,
+    "pdsqi_succinct": 4,
+    "pdsqi_synthesized": 3
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "section_miscategorizations": [
+    {
+      "text": "Dragon shows a creatinine of 0.8 and an EKG with normal intervals.",
+      "current_section": "Findings",
+      "expected_section": "Findings",
+      "severity": "minor",
+      "reason": "The clinical content (creatinine and EKG results) is appropriate for Findings, but the inclusion of the dictation-system reference ('Dragon shows') is non-clinical metadata that would more properly be omitted or placed in a technical/documentation note rather than the clinical Findings section."
+    },
+    {
+      "text": "Prescribe Coreg 25 milligrams twice daily and Carvedilol 25 milligrams twice daily.",
+      "current_section": "Plan",
+      "expected_section": "Plan",
+      "severity": "major",
+      "reason": "Coreg is the brand name for carvedilol; listing both as if they are separate prescriptions in the Plan section is internally contradictory and could mislead a reader into thinking two different medications are being ordered. While the section is correct, the duplicated/discordant content within the Plan represents a clinically misleading organization of the medication plan."
+    }
+  ],
+  "summary_statistics": {
+    "section_appropriateness_score": 0.7,
+    "section_miscategorization_count": 2,
+    "major_section_miscategorization_count": 1
+  }
+}

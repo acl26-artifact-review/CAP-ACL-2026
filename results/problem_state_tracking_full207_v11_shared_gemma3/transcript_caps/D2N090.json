@@ -1,0 +1,690 @@
+{
+  "caps": [
+    {
+      "cap_id": "CAP1",
+      "cap_type": "Problem",
+      "content_source": "doctor",
+      "modality": "assessment",
+      "canonical_concept": "hospital admission",
+      "verification_status": "unconfirmed",
+      "clinical_status": "planned",
+      "temporality": "okay",
+      "proposition_text": "The doctor does not want the patient to end up in the hospital again.",
+      "evidence": [
+        {
+          "turn_id": "T13",
+          "turn_speaker": "patient",
+          "span_text": "uh , yeah . my mother was actually in the hospital the last week. she had a bit of a fall and had to do a hip replacement. she's feeling better now but we have been just grabbing meals at the cafeteria or picking up fast food on our way home and i just really was n't monitoring what i was eating .",
+          "char_start": 1045,
+          "char_end": 1343
+        }
+      ],
+      "assertion": "hypothetical",
+      "visit_state": "planned",
+      "linked_problem": null,
+      "event_cluster_id": "CL10"
+    },
+    {
+      "cap_id": "CAP2",
+      "cap_type": "Problem",
+      "content_source": "patient",
+      "modality": "interview",
+      "canonical_concept": "depression",
+      "verification_status": "unconfirmed",
+      "clinical_status": "active",
+      "temporality": "current",
+      "proposition_text": "The patient reports having been struggling with depression for a year and a half.",
+      "evidence": [
+        {
+          "turn_id": "T35",
+          "turn_speaker": "patient",
+          "span_text": "and it's been about a , a tough , ugh , year-and-a-half or so , but i've been pretty good with it . i , i have my moments , but i- as long as i find some time to relax , at least in the afternoon , then , then it seems to work out okay .",
+          "char_start": 2796,
+          "char_end": 3033
+        }
+      ],
+      "assertion": "uncertain",
+      "visit_state": "active",
+      "linked_problem": null,
+      "event_cluster_id": "CL3"
+    },
+    {
+      "cap_id": "CAP3",
+      "cap_type": "Problem",
+      "content_source": "doctor",
+      "modality": "interview",
+      "canonical_concept": "hyperglycemia",
+      "verification_status": "confirmed",
+      "clinical_status": "active",
+      "temporality": "current",
+      "proposition_text": "The doctor wants to increase the patient's lantus to 20 units at night.",
+      "evidence": [
+        {
+          "turn_id": "T63",
+          "turn_speaker": "patient",
+          "span_text": "i did not .",
+          "char_start": 5103,
+          "char_end": 5114
+        }
+      ],
+      "assertion": "present",
+      "visit_state": "active",
+      "linked_problem": null,
+      "event_cluster_id": "CL1"
+    },
+    {
+      "cap_id": "CAP4",
+      "cap_type": "Problem",
+      "content_source": "patient",
+      "modality": "interview",
+      "canonical_concept": "depression",
+      "verification_status": "confirmed",
+      "clinical_status": "active",
+      "temporality": "past",
+      "proposition_text": "The patient has a past medical history of depression.",
+      "evidence": [
+        {
+          "turn_id": "T4",
+          "turn_speaker": "doctor",
+          "span_text": "so , albert is a 62-year-old male , with a past medical history significant for depression , type 2 diabetes , and kidney transplant , who is here today for emergency room follow-up .",
+          "char_start": 222,
+          "char_end": 405
+        }
+      ],
+      "assertion": "present",
+      "visit_state": "active",
+      "linked_problem": null,
+      "event_cluster_id": "CL3"
+    },
+    {
+      "cap_id": "CAP5",
+      "cap_type": "Symptom",
+      "content_source": "patient",
+      "modality": "interview",
+      "canonical_concept": "poor diet",
+      "verification_status": "confirmed",
+      "clinical_status": "active",
+      "temporality": "before that happened",
+      "proposition_text": "The patient was not monitoring what they were eating.",
+      "evidence": [
+        {
+          "turn_id": "T9",
+          "turn_speaker": "patient",
+          "span_text": "yeah , it was .",
+          "char_start": 832,
+          "char_end": 847
+        }
+      ],
+      "assertion": "present",
+      "visit_state": "active",
+      "linked_problem": null,
+      "event_cluster_id": "CL8"
+    },
+    {
+      "cap_id": "CAP6",
+      "cap_type": "Problem",
+      "content_source": "patient",
+      "modality": "interview",
+      "canonical_concept": "kidney transplant",
+      "verification_status": "confirmed",
+      "clinical_status": "historical",
+      "temporality": "past",
+      "proposition_text": "The patient has a history of kidney transplant.",
+      "evidence": [
+        {
+          "turn_id": "T4",
+          "turn_speaker": "doctor",
+          "span_text": "so , albert is a 62-year-old male , with a past medical history significant for depression , type 2 diabetes , and kidney transplant , who is here today for emergency room follow-up .",
+          "char_start": 222,
+          "char_end": 405
+        }
+      ],
+      "assertion": "historical",
+      "visit_state": "historical",
+      "linked_problem": null,
+      "event_cluster_id": "CL4"
+    },
+    {
+      "cap_id": "CAP7",
+      "cap_type": "Symptom",
+      "content_source": "patient",
+      "modality": "interview",
+      "canonical_concept": "left hand pain",
+      "verification_status": "confirmed",
+      "clinical_status": "active",
+      "temporality": "current",
+      "attributes": {
+        "laterality": "left"
+      },
+      "proposition_text": "The patient reports pain in the left hand.",
+      "evidence": [
+        {
+          "turn_id": "T9",
+          "turn_speaker": "patient",
+          "span_text": "yeah , it was .",
+          "char_start": 832,
+          "char_end": 847
+        }
+      ],
+      "assertion": "present",
+      "visit_state": "active",
+      "linked_problem": null,
+      "event_cluster_id": "CL9"
+    },
+    {
+      "cap_id": "CAP8",
+      "cap_type": "Symptom",
+      "content_source": "patient",
+      "modality": "interview",
+      "canonical_concept": "edema",
+      "verification_status": "confirmed",
+      "clinical_status": "active",
+      "temporality": "current",
+      "attributes": {
+        "location": "lower extremities"
+      },
+      "proposition_text": "The patient reports edema in the lower extremities.",
+      "evidence": [
+        {
+          "turn_id": "T3",
+          "turn_speaker": "patient",
+          "span_text": "sure .",
+          "char_start": 206,
+          "char_end": 212
+        }
+      ],
+      "assertion": "present",
+      "visit_state": "active",
+      "linked_problem": null,
+      "event_cluster_id": "CL2"
+    },
+    {
+      "cap_id": "CAP9",
+      "cap_type": "Problem",
+      "content_source": "patient",
+      "modality": "interview",
+      "canonical_concept": "hypoglycemia",
+      "verification_status": "confirmed",
+      "clinical_status": "active",
+      "temporality": "weekend",
+      "proposition_text": "The patient felt woozy over the weekend.",
+      "evidence": [
+        {
+          "turn_id": "T7",
+          "turn_speaker": "patient",
+          "span_text": "well , i , uh , i was n't really , uh , staying on top of my , uh , blood sugar readings , and i felt kinda woozy over the weekend . and i was little concerned , and my wife wanted to take me in and just have me checked out .",
+          "char_start": 544,
+          "char_end": 769
+        }
+      ],
+      "assertion": "present",
+      "visit_state": "active",
+      "linked_problem": null,
+      "event_cluster_id": "CL6"
+    },
+    {
+      "cap_id": "CAP10",
+      "cap_type": "Symptom",
+      "content_source": "patient",
+      "modality": "interview",
+      "canonical_concept": "feeling better",
+      "verification_status": "confirmed",
+      "clinical_status": "improving",
+      "temporality": "since then",
+      "proposition_text": "The patient felt better after returning home.",
+      "evidence": [
+        {
+          "turn_id": "T15",
+          "turn_speaker": "patient",
+          "span_text": "uh , actually , when we got home from the , uh , f- from the visit , i felt a lot better .",
+          "char_start": 1426,
+          "char_end": 1516
+        }
+      ],
+      "assertion": "present",
+      "visit_state": "improving",
+      "linked_problem": null,
+      "event_cluster_id": "CL12"
+    },
+    {
+      "cap_id": "CAP11",
+      "cap_type": "Symptom",
+      "content_source": "patient",
+      "modality": "interview",
+      "canonical_concept": "following diet closely",
+      "verification_status": "confirmed",
+      "clinical_status": "active",
+      "temporality": "yes",
+      "proposition_text": "The patient is following their diet closely.",
+      "evidence": [
+        {
+          "turn_id": "T17",
+          "turn_speaker": "patient",
+          "span_text": "yes .",
+          "char_start": 1611,
+          "char_end": 1616
+        }
+      ],
+      "assertion": "present",
+      "visit_state": "active",
+      "linked_problem": null,
+      "event_cluster_id": "CL13"
+    },
+    {
+      "cap_id": "CAP12",
+      "cap_type": "Problem",
+      "content_source": "patient",
+      "modality": "interview",
+      "canonical_concept": "diabetes",
+      "verification_status": "confirmed",
+      "clinical_status": "active",
+      "temporality": "past",
+      "proposition_text": "The patient has type 2 diabetes.",
+      "evidence": [
+        {
+          "turn_id": "T4",
+          "turn_speaker": "doctor",
+          "span_text": "so , albert is a 62-year-old male , with a past medical history significant for depression , type 2 diabetes , and kidney transplant , who is here today for emergency room follow-up .",
+          "char_start": 222,
+          "char_end": 405
+        }
+      ],
+      "assertion": "present",
+      "visit_state": "active",
+      "linked_problem": null,
+      "event_cluster_id": "CL5"
+    },
+    {
+      "cap_id": "CAP13",
+      "cap_type": "Symptom",
+      "content_source": "patient",
+      "modality": "interview",
+      "canonical_concept": "chest pain",
+      "verification_status": "confirmed",
+      "clinical_status": "active",
+      "temporality": "current",
+      "proposition_text": "The patient reports no chest pain.",
+      "evidence": [
+        {
+          "turn_id": "T47",
+          "turn_speaker": "patient",
+          "span_text": "no .",
+          "char_start": 3930,
+          "char_end": 3934
+        }
+      ],
+      "assertion": "present",
+      "visit_state": "active",
+      "linked_problem": null,
+      "event_cluster_id": "CL20"
+    },
+    {
+      "cap_id": "CAP14",
+      "cap_type": "Symptom",
+      "content_source": "patient",
+      "modality": "interview",
+      "canonical_concept": "dizziness",
+      "verification_status": "confirmed",
+      "clinical_status": "active",
+      "temporality": "weekend",
+      "proposition_text": "The patient felt woozy.",
+      "evidence": [
+        {
+          "turn_id": "T7",
+          "turn_speaker": "patient",
+          "span_text": "well , i , uh , i was n't really , uh , staying on top of my , uh , blood sugar readings , and i felt kinda woozy over the weekend . and i was little concerned , and my wife wanted to take me in and just have me checked out .",
+          "char_start": 544,
+          "char_end": 769
+        }
+      ],
+      "assertion": "present",
+      "visit_state": "active",
+      "linked_problem": null,
+      "event_cluster_id": "CL7"
+    },
+    {
+      "cap_id": "CAP15",
+      "cap_type": "Symptom",
+      "content_source": "patient",
+      "modality": "interview",
+      "canonical_concept": "lightheadedness",
+      "verification_status": "confirmed",
+      "clinical_status": "active",
+      "temporality": "current",
+      "proposition_text": "The patient denies lightheadedness.",
+      "evidence": [
+        {
+          "turn_id": "T46",
+          "turn_speaker": "doctor",
+          "span_text": "lightheadedness ? dizziness ?",
+          "char_start": 3890,
+          "char_end": 3919
+        }
+      ],
+      "assertion": "present",
+      "visit_state": "active",
+      "linked_problem": null,
+      "event_cluster_id": "CL19"
+    },
+    {
+      "cap_id": "CAP16",
+      "cap_type": "Problem",
+      "content_source": "doctor",
+      "modality": "assessment",
+      "canonical_concept": "hyperglycemia",
+      "verification_status": "confirmed",
+      "clinical_status": "active",
+      "temporality": "current",
+      "proposition_text": "The patient has hyperglycemia.",
+      "evidence": [
+        {
+          "turn_id": "T3",
+          "turn_speaker": "patient",
+          "span_text": "sure .",
+          "char_start": 206,
+          "char_end": 212
+        }
+      ],
+      "assertion": "present",
+      "visit_state": "active",
+      "linked_problem": null,
+      "event_cluster_id": "CL1"
+    },
+    {
+      "cap_id": "CAP17",
+      "cap_type": "Order",
+      "content_source": "doctor",
+      "modality": "plan",
+      "canonical_concept": "relaxation",
+      "verification_status": "unconfirmed",
+      "clinical_status": "planned",
+      "temporality": "afternoon",
+      "proposition_text": "The patient should find time to relax in the afternoon.",
+      "evidence": [
+        {
+          "turn_id": "T29",
+          "turn_speaker": "patient",
+          "span_text": "yeah . i've , i've been pretty diligent about it , following doctor's orders , so it's been , it's been pretty good so far .",
+          "char_start": 2345,
+          "char_end": 2469
+        }
+      ],
+      "assertion": "hypothetical",
+      "visit_state": "planned",
+      "linked_problem": null,
+      "event_cluster_id": "CL15"
+    },
+    {
+      "cap_id": "CAP18",
+      "cap_type": "MedicationRequest",
+      "content_source": "doctor",
+      "modality": "plan",
+      "canonical_concept": "lantus",
+      "verification_status": "unconfirmed",
+      "clinical_status": "planned",
+      "temporality": "current",
+      "attributes": {
+        "dose": "20 units"
+      },
+      "proposition_text": "The doctor orders a lantus dose increase.",
+      "evidence": [
+        {
+          "turn_id": "T70",
+          "turn_speaker": "doctor",
+          "span_text": "so , let me talk a little bit about my assessment and my plan for you .",
+          "char_start": 5596,
+          "char_end": 5667
+        }
+      ],
+      "assertion": "hypothetical",
+      "visit_state": "planned",
+      "linked_problem": null,
+      "event_cluster_id": "CL24"
+    },
+    {
+      "cap_id": "CAP19",
+      "cap_type": "TestResult",
+      "content_source": "doctor",
+      "modality": "test_result",
+      "canonical_concept": "hemoglobin a1c",
+      "verification_status": "confirmed",
+      "clinical_status": "historical",
+      "temporality": "future",
+      "proposition_text": "The patient's hemoglobin a1c is about 8.",
+      "evidence": [
+        {
+          "turn_id": "T65",
+          "turn_speaker": "doctor",
+          "span_text": "okay . i'm looking at your diabetes labs . you know , your hemoglobin a1c is about 8 , and that's a , that's a little high .",
+          "char_start": 5200,
+          "char_end": 5324
+        }
+      ],
+      "assertion": "historical",
+      "visit_state": "historical",
+      "linked_problem": null,
+      "event_cluster_id": "CL22"
+    },
+    {
+      "cap_id": "CAP20",
+      "cap_type": "Order",
+      "content_source": "doctor",
+      "modality": "plan",
+      "canonical_concept": "meditation",
+      "verification_status": "unconfirmed",
+      "clinical_status": "planned",
+      "temporality": "future",
+      "proposition_text": "The patient wants to continue meditation.",
+      "evidence": [
+        {
+          "turn_id": "T41",
+          "turn_speaker": "patient",
+          "span_text": "uh , i think i probably wan na shy away from any therapy . my , my wife got me into meditation recently and , and , uh , i , i find that relaxing . so , i think i'd like to continue that , at least for a couple more months and see how it goes .",
+          "char_start": 3364,
+          "char_end": 3608
+        }
+      ],
+      "assertion": "hypothetical",
+      "visit_state": "planned",
+      "linked_problem": null,
+      "event_cluster_id": "CL18"
+    },
+    {
+      "cap_id": "CAP21",
+      "cap_type": "TestResult",
+      "content_source": "test_result",
+      "modality": "test_result",
+      "canonical_concept": "blood glucose",
+      "verification_status": "confirmed",
+      "clinical_status": "active",
+      "temporality": "current",
+      "attributes": {
+        "value": "162"
+      },
+      "proposition_text": "The patient's blood glucose is 162.",
+      "evidence": [
+        {
+          "turn_id": "T61",
+          "turn_speaker": "doctor",
+          "span_text": "hey , dragon . show me the glucose .",
+          "char_start": 4957,
+          "char_end": 4993
+        }
+      ],
+      "assertion": "present",
+      "visit_state": "active",
+      "linked_problem": null,
+      "event_cluster_id": "CL21"
+    },
+    {
+      "cap_id": "CAP22",
+      "cap_type": "TestResult",
+      "content_source": "test_result",
+      "modality": "test_result",
+      "canonical_concept": "hemoglobin a1c",
+      "verification_status": "confirmed",
+      "clinical_status": "active",
+      "temporality": "current",
+      "attributes": {
+        "value": "8"
+      },
+      "proposition_text": "The patient's hemoglobin A1c is 8.",
+      "evidence": [
+        {
+          "turn_id": "T65",
+          "turn_speaker": "doctor",
+          "span_text": "okay . i'm looking at your diabetes labs . you know , your hemoglobin a1c is about 8 , and that's a , that's a little high .",
+          "char_start": 5200,
+          "char_end": 5324
+        }
+      ],
+      "assertion": "present",
+      "visit_state": "active",
+      "linked_problem": null,
+      "event_cluster_id": "CL22"
+    },
+    {
+      "cap_id": "CAP23",
+      "cap_type": "Order",
+      "content_source": "doctor",
+      "modality": "plan",
+      "canonical_concept": "hemoglobin a1c",
+      "verification_status": "unconfirmed",
+      "clinical_status": "planned",
+      "temporality": "future",
+      "proposition_text": "The doctor orders a hemoglobin a1c.",
+      "evidence": [
+        {
+          "turn_id": "T65",
+          "turn_speaker": "doctor",
+          "span_text": "okay . i'm looking at your diabetes labs . you know , your hemoglobin a1c is about 8 , and that's a , that's a little high .",
+          "char_start": 5200,
+          "char_end": 5324
+        }
+      ],
+      "assertion": "hypothetical",
+      "visit_state": "planned",
+      "linked_problem": null,
+      "event_cluster_id": "CL23"
+    },
+    {
+      "cap_id": "CAP24",
+      "cap_type": "MedicationStatement",
+      "content_source": "patient",
+      "modality": "interview",
+      "canonical_concept": "following doctor's orders",
+      "verification_status": "confirmed",
+      "clinical_status": "active",
+      "temporality": "current",
+      "proposition_text": "The patient is following doctor's orders regarding medication.",
+      "evidence": [
+        {
+          "turn_id": "T29",
+          "turn_speaker": "patient",
+          "span_text": "yeah . i've , i've been pretty diligent about it , following doctor's orders , so it's been , it's been pretty good so far .",
+          "char_start": 2345,
+          "char_end": 2469
+        }
+      ],
+      "assertion": "present",
+      "visit_state": "active",
+      "linked_problem": null,
+      "event_cluster_id": "CL16"
+    },
+    {
+      "cap_id": "CAP25",
+      "cap_type": "MedicationStatement",
+      "content_source": "doctor",
+      "modality": "assessment",
+      "canonical_concept": "medication",
+      "verification_status": "unconfirmed",
+      "clinical_status": "active",
+      "temporality": "current",
+      "proposition_text": "The doctor is holding off on medical therapy.",
+      "evidence": [
+        {
+          "turn_id": "T36",
+          "turn_speaker": "doctor",
+          "span_text": "okay . so , i know that we've kind of talked about holding off on medical therapy-",
+          "char_start": 3043,
+          "char_end": 3125
+        }
+      ],
+      "assertion": "uncertain",
+      "visit_state": "active",
+      "linked_problem": null,
+      "event_cluster_id": "CL17"
+    },
+    {
+      "cap_id": "CAP26",
+      "cap_type": "MedicationStatement",
+      "content_source": "patient",
+      "modality": "interview",
+      "canonical_concept": "immunotherapy medication",
+      "verification_status": "confirmed",
+      "clinical_status": "active",
+      "temporality": "current",
+      "proposition_text": "The patient is taking immunotherapy medications.",
+      "evidence": [
+        {
+          "turn_id": "T18",
+          "turn_speaker": "doctor",
+          "span_text": "okay . 'cause we do n't wan na end up in the hospitaltoo",
+          "char_start": 1626,
+          "char_end": 1682
+        }
+      ],
+      "assertion": "present",
+      "visit_state": "active",
+      "linked_problem": null,
+      "event_cluster_id": "CL14"
+    },
+    {
+      "cap_id": "CAP27",
+      "cap_type": "ProblemHistory",
+      "content_source": "patient",
+      "modality": "interview",
+      "canonical_concept": "hip replacement",
+      "verification_status": "confirmed",
+      "clinical_status": "historical",
+      "temporality": "last week",
+      "proposition_text": "The patient's mother had a hip replacement last week.",
+      "evidence": [
+        {
+          "turn_id": "T13",
+          "turn_speaker": "patient",
+          "span_text": "uh , yeah . my mother was actually in the hospital the last week. she had a bit of a fall and had to do a hip replacement. she's feeling better now but we have been just grabbing meals at the cafeteria or picking up fast food on our way home and i just really was n't monitoring what i was eating .",
+          "char_start": 1045,
+          "char_end": 1343
+        }
+      ],
+      "assertion": "historical",
+      "visit_state": "historical",
+      "linked_problem": null,
+      "event_cluster_id": "CL11"
+    }
+  ],
+  "filtered_nonverifiable_units": [
+    "Is the pain worse at night?",
+    "stop eating",
+    "you're seeing people",
+    "you're having people over",
+    "your kidney function is good",
+    "okay",
+    "okay . so , i know that we've kind of talked about holding off on medical therapy-",
+    "mm-hmm .",
+    "um , is that something that you wan na revisit , or do you wan na look into therapy , or do you think anything's needed right now ?",
+    "okay . all right . well , i know the nurse did a quick review of systems with you , when you-",
+    "no .",
+    "none whatsoever .",
+    "do you think anything's needed right now ?",
+    "sure",
+    "mm-hmm"
+  ],
+  "chunk_count": 9,
+  "rescue_used": false,
+  "rescue_attempted": false,
+  "legacy_fallback_chunk_count": 0,
+  "extraction_mode": "single_call",
+  "runtime_seconds": 164.829
+}

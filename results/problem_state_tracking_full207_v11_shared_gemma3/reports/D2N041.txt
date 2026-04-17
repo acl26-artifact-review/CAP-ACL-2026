@@ -1,0 +1,122 @@
+Case: D2N041
+
+Problem List and Visit State Tracking
+
+Problem List
+- sore throat | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T0
+  Summary: The patient reports a sore throat.
+  ClusterId: CL1
+  TemporalProfile: current
+  Updates:
+  - CAP10: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T0 :: The patient reports a sore throat.
+- fever | verification_status=unconfirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T1
+  Summary: The patient reports having a fever last night.
+  ClusterId: CL2
+  TemporalProfile: last night
+  Updates:
+  - CAP5: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=last night turns=T1 :: The patient reports having a fever last night.
+- sweating | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T3
+  Summary: The patient reports sweating last night.
+  ClusterId: CL3
+  TemporalProfile: last night
+  Updates:
+  - CAP11: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=last night turns=T3 :: The patient reports sweating last night.
+- difficulty swallowing | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T5
+  Summary: The patient reports difficulty swallowing.
+  ClusterId: CL4
+  TemporalProfile: current
+  Updates:
+  - CAP14: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T5 :: The patient reports difficulty swallowing.
+- stuffy nose | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T11
+  Summary: The patient reports a stuffy nose.
+  ClusterId: CL5
+  TemporalProfile: current
+  Updates:
+  - CAP12: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T11 :: The patient reports a stuffy nose.
+  - CAP13: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T11 :: The patient reports a stuffy nose.
+- swollen tonsils | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T11
+  Summary: The patient reports swollen tonsils.
+  ClusterId: CL6
+  TemporalProfile: current
+  Updates:
+  - CAP15: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T11 :: The patient reports swollen tonsils.
+  - CAP16: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T11 :: The patient reports swollen tonsils.
+- strep throat | verification_status=unconfirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T14
+  Summary: The patient had strep throat as a child.
+  ClusterId: CL7
+  TemporalProfile: past
+  Updates:
+  - CAP23: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=past turns=T14 :: The patient had strep throat as a child.
+- hypertension | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=doctor,patient | evidence=T22,T44
+  Summary: The patient reports blood pressure readings ranging from 120/140 to potentially higher.
+  ClusterId: CL10
+  TemporalProfile: current
+  Updates:
+  - CAP2: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T22 :: The patient reports blood pressure readings ranging from 120/140 to potentially higher.
+  - CAP3: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T22 :: The patient reports blood pressure that is sometimes elevated.
+  - CAP6: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T22 :: The patient reports blood pressure that varies significantly.
+  - CAP9: content_source=doctor modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T44 :: The doctor wants to increase the lisinopril.
+- blood sugar | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T29
+  Summary: The patient's blood sugars are sometimes out of control.
+  ClusterId: CL12
+  TemporalProfile: variable
+  Updates:
+  - CAP4: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=variable turns=T29 :: The patient's blood sugars are sometimes out of control.
+- pain | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T29,T47
+  Summary: The patient reports pain in the left hand.
+  ClusterId: CL13
+  TemporalProfile: current
+  Updates:
+  - CAP7: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T29 :: The patient reports pain in the left hand.
+  - CAP17: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T47 :: The patient reports pain.
+- upper respiratory infection | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=doctor | evidence=T42
+  Summary: The doctor is concerned that the patient might have strep in the back of their throat.
+  ClusterId: CL15
+  TemporalProfile: current
+  Updates:
+  - CAP1: content_source=doctor modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T42,T42,T42 :: The doctor is concerned that the patient might have strep in the back of their throat.
+- diabetes | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=doctor | evidence=T44
+  Summary: The doctor wants to order a hemoglobin A1c.
+  ClusterId: CL16
+  TemporalProfile: current
+  Updates:
+  - CAP8: content_source=doctor modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T44 :: The doctor wants to order a hemoglobin A1c.
+
+Medication Tracking
+- [MedicationChange] covid vaccine | verification_status=unconfirmed | clinical_status=planned | modalities=interview | speakers=patient | evidence=T18
+  Summary: The patient is hoping not to receive another covid vaccine.
+  ClusterId: CL8
+  TemporalProfile: future
+  PlannedChanges:
+  - The patient is hoping not to receive another covid vaccine. (T18)
+  Updates:
+  - CAP19: content_source=patient modality=interview verification_status=unconfirmed clinical_status=planned temporality=future turns=T18 :: The patient is hoping not to receive another covid vaccine.
+- [MedicationState] covid vaccine | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T18
+  Summary: The patient received a covid vaccine.
+  ClusterId: CL9
+  TemporalProfile: past
+  CurrentRegimens:
+  - The patient received a covid vaccine. (T18)
+  Updates:
+  - CAP20: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=past turns=T18 :: The patient received a covid vaccine.
+- [MedicationState] lisinopril | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=clinician | evidence=T24
+  Summary: The patient is taking lisinopril at a dose of 20 milligrams per day.
+  ClusterId: CL11
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient is taking lisinopril at a dose of 20 milligrams per day. (T24)
+  - The patient is taking lisinopril. (T24)
+  Updates:
+  - CAP18: content_source=clinician modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T24 :: The patient is taking lisinopril at a dose of 20 milligrams per day.
+  - CAP21: content_source=clinician modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T24 :: The patient is taking lisinopril.
+- [MedicationState] metformin | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=doctor | evidence=T30
+  Summary: The patient is taking metformin.
+  ClusterId: CL14
+  TemporalProfile: ongoing
+  CurrentRegimens:
+  - The patient is taking metformin. (T30)
+  Updates:
+  - CAP22: content_source=doctor modality=interview verification_status=confirmed clinical_status=active temporality=ongoing turns=T30 :: The patient is taking metformin.
+
+Other Structured States
+- None

@@ -1,0 +1,1887 @@
+{
+  "case_id": "D2N054",
+  "method": "cluster2sent",
+  "template": "soap",
+  "summary_text": "S:\nThe patient reports a history of prior ankle injuries twenty years ago, including a cast for an ankle fracture, and occasional soreness in both ankles. He also reports numbness in his right foot since the current injury. He denies taking medications for pain relief. The patient states he hurt his foot before but this is the first time he's been seen for it.\n\nO:\nThe physical exam reveals bruising on the right foot, swelling, and tenderness to palpation at the midfoot. Capillary refill is brisk bilaterally. Dorsal displacement of the base of the second metatarsal with a 3 millimeter separation of the first and second metatarsal bases is noted on the x-ray. The dorsalis pedis pulse is strong and bounding. The patient's vitals are within normal limits.\n\nA:\nThe patient has a lisfranc fracture with associated swelling and tenderness. The x-ray findings indicate dorsal displacement of the second metatarsal and separation of the first and second metatarsals. He is likely to require surgery.\n\nP:\nAn order for an MRI has been placed for the right foot. The patient will undergo outpatient surgery tomorrow, followed by a 24-hour post-procedure follow-up and a two-week follow-up. A cast and crutches will be provided. Weight-bearing will be advanced gradually based on healing and tolerance. The patient will be discharged home that evening following the procedure.",
+  "reference_summary": "CHIEF COMPLAINT\n\nRight foot pain.\n\nHISTORY OF PRESENT ILLNESS\n\nElijah Reyes is a pleasant 45-year-old male who presents to the clinic today for the evaluation of right foot pain. The patient was referred by his primary care physician. He sustained an injury yesterday when he dropped a landscape brick on his right foot while doing yard work. He was able to get up and continue working after the injury. He rates his pain level as an 11 out of 10. The patient also reports numbness in his entire right foot, which has been present for a long time. The patient denies taking any medication for pain.\n\nThe patient reports he fractured his right ankle 20 years ago. He received non-operative treatment with casting. He has experienced intermittent soreness and swelling in his right ankle since then.\n\nThe patient reports surgical history of his left ankle. He continues to experience soreness and occasional giving way of the left ankle.\n\nMEDICAL HISTORY\n\nPatient reports history of a right ankle fracture 20 years ago.\n\nSURGICAL HISTORY\n\nPatient reports history of left ankle surgery.\n\nREVIEW OF SYSTEMS\n\nMusculoskeletal: Reports right foot pain, right ankle soreness and swelling, and left ankle soreness and instability.\nNeurological: Reports right foot numbness.\n\nVITALS\n\nAll vital signs are within the normal limits.\n\nPHYSICAL EXAM\n\nCV: Capillary refill is brisk in less than 3 seconds in the right foot. Strong bounding dorsalis pedis pulse.\nNEURO: Normal sensation. Right foot motor and sensation are intact and equal to the contralateral side.\nMSK: Examination of the right foot: Bruising on the plantar and dorsal aspects of the foot. I do appreciate associated swelling. Tenderness to palpation over the midfoot.\n\nRESULTS\n\nAn x-ray of the right foot was obtained and reviewed today. It demonstrates dorsal displacement of the base of the 2nd metatarsal with a 3 mm separation of the 1st and 2nd metatarsal bases and presence of bony fragments.\n\nASSESSMENT\n\nRight foot pain, due to a Lisfranc fracture.\n\nPLAN\n\nAfter reviewing the patient's examination and radiographic findings today, I have had a lengthy discussion with him regarding his current symptoms. We discussed treatment options and I have recommended that we proceed with a right foot ORIF and all indicated procedures. We reviewed the risks, benefits, and alternatives of the surgery. I advised him that this procedure will be performed in an outpatient setting and he will be discharged home that same evening. He will then follow up with me 24 hours post procedure, and again 2 weeks later. I explained that he will be placed in a cast and will remain non-weight-bearing for 6 to 8 weeks. He will use crutches while ambulating and we will advance his weight-bearing gradually based on how he tolerates the procedure.\n\nI have also recommended that we obtain an MRI of the right foot to further assess the ligaments. I explained to him that if he has poor bone alignment or ligament healing, this can lead to losing the arch in his foot causing pes planus and developing arthritis. I will send an order to the outpatient MRI facility downstairs for him to obtain the MRI this afternoon.\n\nThe patient wishes to think over his options before proceeding with the operation.",
+  "source_cap": {
+    "atomic_propositions": [
+      {
+        "prop_id": "CAP1",
+        "cap_type": "Problem",
+        "canonical_concept": "ankle injury",
+        "category": "Problem",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "20 years ago",
+        "claim_type_tags": [
+          "quantitative"
+        ],
+        "proposition_text": "The patient previously sustained an ankle injury 20 years ago."
+      },
+      {
+        "prop_id": "CAP2",
+        "cap_type": "Symptom",
+        "canonical_concept": "foot pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "quantitative",
+          "symptom"
+        ],
+        "proposition_text": "The patient rates their pain as 11 out of 10."
+      },
+      {
+        "prop_id": "CAP3",
+        "cap_type": "Problem",
+        "canonical_concept": "ankle surgery",
+        "category": "Problem",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "past",
+        "proposition_text": "The patient has had surgery on their other ankle."
+      },
+      {
+        "prop_id": "CAP4",
+        "cap_type": "Symptom",
+        "canonical_concept": "foot pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports pain in their right foot."
+      },
+      {
+        "prop_id": "CAP5",
+        "cap_type": "Symptom",
+        "canonical_concept": "ankle swelling",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports swelling in their other ankle."
+      },
+      {
+        "prop_id": "CAP6",
+        "cap_type": "Problem",
+        "canonical_concept": "foot injury",
+        "category": "Problem",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "current",
+        "proposition_text": "The patient has an injury to their foot."
+      },
+      {
+        "prop_id": "CAP7",
+        "cap_type": "Symptom",
+        "canonical_concept": "numbness",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports numbness in their foot."
+      },
+      {
+        "prop_id": "CAP8",
+        "cap_type": "Problem",
+        "canonical_concept": "lisfranc fracture",
+        "category": "Problem",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient has a lisfranc fracture."
+      },
+      {
+        "prop_id": "CAP9",
+        "cap_type": "Problem",
+        "canonical_concept": "foot injury",
+        "category": "Problem",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient has a foot injury."
+      },
+      {
+        "prop_id": "CAP10",
+        "cap_type": "Symptom",
+        "canonical_concept": "foot pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports foot pain."
+      },
+      {
+        "prop_id": "CAP11",
+        "cap_type": "Symptom",
+        "canonical_concept": "numbness",
+        "category": "Symptom",
+        "speaker": "doctor",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports numbness."
+      },
+      {
+        "prop_id": "CAP12",
+        "cap_type": "Symptom",
+        "canonical_concept": "tingling",
+        "category": "Symptom",
+        "speaker": "doctor",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports tingling."
+      },
+      {
+        "prop_id": "CAP13",
+        "cap_type": "Order",
+        "canonical_concept": "MRI",
+        "category": "Order",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "planned",
+        "temporality": "this afternoon",
+        "proposition_text": "The patient will receive an MRI this afternoon."
+      },
+      {
+        "prop_id": "CAP14",
+        "cap_type": "TestResult",
+        "canonical_concept": "MRI",
+        "category": "TestResult",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "planned",
+        "temporality": "this afternoon",
+        "proposition_text": "A cervical MRI is ordered."
+      },
+      {
+        "prop_id": "CAP15",
+        "cap_type": "MedicationRequest",
+        "canonical_concept": "MRI",
+        "category": "MedicationRequest",
+        "speaker": "doctor",
+        "status": "uncertain",
+        "visit_state": "planned",
+        "temporality": "today",
+        "proposition_text": "An MRI is ordered."
+      },
+      {
+        "prop_id": "CAP16",
+        "cap_type": "Order",
+        "canonical_concept": "surgery",
+        "category": "Order",
+        "speaker": "doctor",
+        "status": "uncertain",
+        "visit_state": "planned",
+        "temporality": "tomorrow",
+        "proposition_text": "Surgery is planned."
+      },
+      {
+        "prop_id": "CAP17",
+        "cap_type": "FollowUp",
+        "canonical_concept": "follow-up",
+        "category": "FollowUp",
+        "speaker": "doctor",
+        "status": "uncertain",
+        "visit_state": "planned",
+        "temporality": "in two weeks",
+        "claim_type_tags": [
+          "temporal"
+        ],
+        "proposition_text": "A follow-up appointment is scheduled."
+      }
+    ],
+    "filtered_nonverifiable_units": []
+  },
+  "event_plan": null,
+  "summary_cap": {
+    "atomic_propositions": [
+      {
+        "prop_id": "P1",
+        "cap_type": "History",
+        "canonical_concept": "history prior ankle injuries",
+        "category": "History",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "past",
+        "claim_type_tags": [
+          "history"
+        ],
+        "proposition_text": "The patient reports a history of prior ankle injuries twenty years ago"
+      },
+      {
+        "prop_id": "P2",
+        "cap_type": "Symptom",
+        "canonical_concept": "occasional soreness both ankles",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports occasional soreness in both ankles"
+      },
+      {
+        "prop_id": "P3",
+        "cap_type": "Symptom",
+        "canonical_concept": "sensory change",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports numbness in his right foot"
+      },
+      {
+        "prop_id": "P4",
+        "cap_type": "Denial",
+        "canonical_concept": "pain",
+        "category": "Denial",
+        "speaker": "patient",
+        "predicate": "denies",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "medication"
+        ],
+        "proposition_text": "The patient denies taking medications for pain relief"
+      },
+      {
+        "prop_id": "P5",
+        "cap_type": "History",
+        "canonical_concept": "hurt his foot before",
+        "category": "History",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "past",
+        "claim_type_tags": [
+          "history"
+        ],
+        "proposition_text": "The patient states he hurt his foot before"
+      },
+      {
+        "prop_id": "P6",
+        "cap_type": "History",
+        "canonical_concept": "first time been seen",
+        "category": "History",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "history"
+        ],
+        "proposition_text": "The patient states this is the first time he's been seen for it"
+      },
+      {
+        "prop_id": "P7",
+        "cap_type": "Finding",
+        "canonical_concept": "physical exam reveals bruising",
+        "category": "Finding",
+        "speaker": "clinician",
+        "predicate": "examines",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "exam"
+        ],
+        "proposition_text": "The physical exam reveals bruising on the right foot"
+      },
+      {
+        "prop_id": "P8",
+        "cap_type": "Finding",
+        "canonical_concept": "physical exam reveals swelling",
+        "category": "Finding",
+        "speaker": "clinician",
+        "predicate": "examines",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "exam"
+        ],
+        "proposition_text": "The physical exam reveals swelling on the right foot"
+      },
+      {
+        "prop_id": "P9",
+        "cap_type": "Finding",
+        "canonical_concept": "physical exam reveals tenderness",
+        "category": "Finding",
+        "speaker": "clinician",
+        "predicate": "examines",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "exam"
+        ],
+        "proposition_text": "The physical exam reveals tenderness to palpation at the midfoot"
+      },
+      {
+        "prop_id": "P10",
+        "cap_type": "Finding",
+        "canonical_concept": "capillary refill brisk bilaterally",
+        "category": "Finding",
+        "speaker": "clinician",
+        "predicate": "examines",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "exam"
+        ],
+        "proposition_text": "Capillary refill is brisk bilaterally"
+      },
+      {
+        "prop_id": "P11",
+        "cap_type": "Finding",
+        "canonical_concept": "dorsal displacement base second",
+        "category": "Finding",
+        "speaker": "clinician",
+        "predicate": "examines",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "exam"
+        ],
+        "proposition_text": "Dorsal displacement of the base of the second metatarsal is noted on the x-ray"
+      },
+      {
+        "prop_id": "P12",
+        "cap_type": "Finding",
+        "canonical_concept": "dorsalis pedis pulse strong",
+        "category": "Finding",
+        "speaker": "clinician",
+        "predicate": "examines",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "exam"
+        ],
+        "proposition_text": "The dorsalis pedis pulse is strong and bounding"
+      },
+      {
+        "prop_id": "P13",
+        "cap_type": "Diagnosis",
+        "canonical_concept": "lisfranc fracture",
+        "category": "Diagnosis",
+        "speaker": "clinician",
+        "predicate": "diagnoses",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "diagnostic"
+        ],
+        "proposition_text": "The patient has a lisfranc fracture"
+      },
+      {
+        "prop_id": "P14",
+        "cap_type": "Order",
+        "canonical_concept": "order for mri been",
+        "category": "Order",
+        "speaker": "clinician",
+        "predicate": "orders",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "future",
+        "claim_type_tags": [
+          "plan"
+        ],
+        "proposition_text": "An order for an MRI has been placed for the right foot."
+      },
+      {
+        "prop_id": "P15",
+        "cap_type": "MedicationPlan",
+        "canonical_concept": "cast and crutches provided",
+        "category": "MedicationPlan",
+        "speaker": "clinician",
+        "predicate": "prescribes",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "future",
+        "claim_type_tags": [
+          "medication"
+        ],
+        "proposition_text": "A cast and crutches will be provided."
+      },
+      {
+        "prop_id": "P16",
+        "cap_type": "Plan",
+        "canonical_concept": "weight-bearing advanced gradually based",
+        "category": "Plan",
+        "speaker": "clinician",
+        "predicate": "plans",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "future",
+        "claim_type_tags": [
+          "plan"
+        ],
+        "proposition_text": "Weight-bearing will be advanced gradually based on healing and tolerance."
+      },
+      {
+        "prop_id": "P17",
+        "cap_type": "FollowUpPlan",
+        "canonical_concept": "undergo outpatient surgery tomorrow",
+        "category": "FollowUpPlan",
+        "speaker": "clinician",
+        "predicate": "plans",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "future",
+        "claim_type_tags": [
+          "plan"
+        ],
+        "proposition_text": "The patient will undergo outpatient surgery tomorrow."
+      },
+      {
+        "prop_id": "P18",
+        "cap_type": "FollowUpPlan",
+        "canonical_concept": "-hour post-procedure follow-up",
+        "category": "FollowUpPlan",
+        "speaker": "clinician",
+        "predicate": "plans",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "future",
+        "claim_type_tags": [
+          "plan"
+        ],
+        "proposition_text": "The patient will have a 24-hour post-procedure follow-up."
+      },
+      {
+        "prop_id": "P19",
+        "cap_type": "FollowUpPlan",
+        "canonical_concept": "two-week follow-up",
+        "category": "FollowUpPlan",
+        "speaker": "clinician",
+        "predicate": "plans",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "future",
+        "claim_type_tags": [
+          "plan"
+        ],
+        "proposition_text": "The patient will have a two-week follow-up."
+      },
+      {
+        "prop_id": "P20",
+        "cap_type": "DischargePlan",
+        "canonical_concept": "discharged home evening following",
+        "category": "DischargePlan",
+        "speaker": "clinician",
+        "predicate": "plans",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "future",
+        "claim_type_tags": [
+          "plan"
+        ],
+        "proposition_text": "The patient will be discharged home that evening following the procedure."
+      }
+    ],
+    "filtered_nonverifiable_units": [],
+    "runtime_seconds": 31.07
+  },
+  "cap_alignment": {
+    "cap_precision": 0.25,
+    "cap_recall": 0.29411764705882354,
+    "cap_f1": 0.27027027027027023,
+    "matched_count": 5,
+    "summary_prop_count": 20,
+    "source_prop_count": 17,
+    "matched_pairs": [
+      {
+        "score": 1.0,
+        "summary_prop_id": "P13",
+        "source_prop_id": "CAP8",
+        "summary_text": "The patient has a lisfranc fracture",
+        "source_text": "The patient has a lisfranc fracture."
+      },
+      {
+        "score": 0.8,
+        "summary_prop_id": "P3",
+        "source_prop_id": "CAP7",
+        "summary_text": "The patient reports numbness in his right foot",
+        "source_text": "The patient reports numbness in their foot."
+      },
+      {
+        "score": 0.741,
+        "summary_prop_id": "P4",
+        "source_prop_id": "CAP10",
+        "summary_text": "The patient denies taking medications for pain relief",
+        "source_text": "The patient reports foot pain."
+      },
+      {
+        "score": 0.7079,
+        "summary_prop_id": "P1",
+        "source_prop_id": "CAP1",
+        "summary_text": "The patient reports a history of prior ankle injuries twenty years ago",
+        "source_text": "The patient previously sustained an ankle injury 20 years ago."
+      },
+      {
+        "score": 0.5817,
+        "summary_prop_id": "P2",
+        "source_prop_id": "CAP5",
+        "summary_text": "The patient reports occasional soreness in both ankles",
+        "source_text": "The patient reports swelling in their other ankle."
+      }
+    ],
+    "unsupported_summary_props": [
+      {
+        "prop_id": "P5",
+        "cap_type": "History",
+        "canonical_concept": "hurt his foot before",
+        "category": "History",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "past",
+        "claim_type_tags": [
+          "history"
+        ],
+        "proposition_text": "The patient states he hurt his foot before"
+      },
+      {
+        "prop_id": "P6",
+        "cap_type": "History",
+        "canonical_concept": "first time been seen",
+        "category": "History",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "history"
+        ],
+        "proposition_text": "The patient states this is the first time he's been seen for it"
+      },
+      {
+        "prop_id": "P7",
+        "cap_type": "Finding",
+        "canonical_concept": "physical exam reveals bruising",
+        "category": "Finding",
+        "speaker": "clinician",
+        "predicate": "examines",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "exam"
+        ],
+        "proposition_text": "The physical exam reveals bruising on the right foot"
+      },
+      {
+        "prop_id": "P8",
+        "cap_type": "Finding",
+        "canonical_concept": "physical exam reveals swelling",
+        "category": "Finding",
+        "speaker": "clinician",
+        "predicate": "examines",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "exam"
+        ],
+        "proposition_text": "The physical exam reveals swelling on the right foot"
+      },
+      {
+        "prop_id": "P9",
+        "cap_type": "Finding",
+        "canonical_concept": "physical exam reveals tenderness",
+        "category": "Finding",
+        "speaker": "clinician",
+        "predicate": "examines",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "exam"
+        ],
+        "proposition_text": "The physical exam reveals tenderness to palpation at the midfoot"
+      },
+      {
+        "prop_id": "P10",
+        "cap_type": "Finding",
+        "canonical_concept": "capillary refill brisk bilaterally",
+        "category": "Finding",
+        "speaker": "clinician",
+        "predicate": "examines",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "exam"
+        ],
+        "proposition_text": "Capillary refill is brisk bilaterally"
+      },
+      {
+        "prop_id": "P11",
+        "cap_type": "Finding",
+        "canonical_concept": "dorsal displacement base second",
+        "category": "Finding",
+        "speaker": "clinician",
+        "predicate": "examines",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "exam"
+        ],
+        "proposition_text": "Dorsal displacement of the base of the second metatarsal is noted on the x-ray"
+      },
+      {
+        "prop_id": "P12",
+        "cap_type": "Finding",
+        "canonical_concept": "dorsalis pedis pulse strong",
+        "category": "Finding",
+        "speaker": "clinician",
+        "predicate": "examines",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "exam"
+        ],
+        "proposition_text": "The dorsalis pedis pulse is strong and bounding"
+      },
+      {
+        "prop_id": "P14",
+        "cap_type": "Order",
+        "canonical_concept": "order for mri been",
+        "category": "Order",
+        "speaker": "clinician",
+        "predicate": "orders",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "future",
+        "claim_type_tags": [
+          "plan"
+        ],
+        "proposition_text": "An order for an MRI has been placed for the right foot."
+      },
+      {
+        "prop_id": "P15",
+        "cap_type": "MedicationPlan",
+        "canonical_concept": "cast and crutches provided",
+        "category": "MedicationPlan",
+        "speaker": "clinician",
+        "predicate": "prescribes",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "future",
+        "claim_type_tags": [
+          "medication"
+        ],
+        "proposition_text": "A cast and crutches will be provided."
+      },
+      {
+        "prop_id": "P16",
+        "cap_type": "Plan",
+        "canonical_concept": "weight-bearing advanced gradually based",
+        "category": "Plan",
+        "speaker": "clinician",
+        "predicate": "plans",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "future",
+        "claim_type_tags": [
+          "plan"
+        ],
+        "proposition_text": "Weight-bearing will be advanced gradually based on healing and tolerance."
+      },
+      {
+        "prop_id": "P17",
+        "cap_type": "FollowUpPlan",
+        "canonical_concept": "undergo outpatient surgery tomorrow",
+        "category": "FollowUpPlan",
+        "speaker": "clinician",
+        "predicate": "plans",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "future",
+        "claim_type_tags": [
+          "plan"
+        ],
+        "proposition_text": "The patient will undergo outpatient surgery tomorrow."
+      },
+      {
+        "prop_id": "P18",
+        "cap_type": "FollowUpPlan",
+        "canonical_concept": "-hour post-procedure follow-up",
+        "category": "FollowUpPlan",
+        "speaker": "clinician",
+        "predicate": "plans",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "future",
+        "claim_type_tags": [
+          "plan"
+        ],
+        "proposition_text": "The patient will have a 24-hour post-procedure follow-up."
+      },
+      {
+        "prop_id": "P19",
+        "cap_type": "FollowUpPlan",
+        "canonical_concept": "two-week follow-up",
+        "category": "FollowUpPlan",
+        "speaker": "clinician",
+        "predicate": "plans",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "future",
+        "claim_type_tags": [
+          "plan"
+        ],
+        "proposition_text": "The patient will have a two-week follow-up."
+      },
+      {
+        "prop_id": "P20",
+        "cap_type": "DischargePlan",
+        "canonical_concept": "discharged home evening following",
+        "category": "DischargePlan",
+        "speaker": "clinician",
+        "predicate": "plans",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "future",
+        "claim_type_tags": [
+          "plan"
+        ],
+        "proposition_text": "The patient will be discharged home that evening following the procedure."
+      }
+    ],
+    "missing_source_props": [
+      {
+        "prop_id": "CAP2",
+        "cap_type": "Symptom",
+        "canonical_concept": "foot pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "quantitative",
+          "symptom"
+        ],
+        "proposition_text": "The patient rates their pain as 11 out of 10."
+      },
+      {
+        "prop_id": "CAP3",
+        "cap_type": "Problem",
+        "canonical_concept": "ankle surgery",
+        "category": "Problem",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "past",
+        "proposition_text": "The patient has had surgery on their other ankle."
+      },
+      {
+        "prop_id": "CAP4",
+        "cap_type": "Symptom",
+        "canonical_concept": "foot pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports pain in their right foot."
+      },
+      {
+        "prop_id": "CAP6",
+        "cap_type": "Problem",
+        "canonical_concept": "foot injury",
+        "category": "Problem",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "current",
+        "proposition_text": "The patient has an injury to their foot."
+      },
+      {
+        "prop_id": "CAP9",
+        "cap_type": "Problem",
+        "canonical_concept": "foot injury",
+        "category": "Problem",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient has a foot injury."
+      },
+      {
+        "prop_id": "CAP11",
+        "cap_type": "Symptom",
+        "canonical_concept": "numbness",
+        "category": "Symptom",
+        "speaker": "doctor",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports numbness."
+      },
+      {
+        "prop_id": "CAP12",
+        "cap_type": "Symptom",
+        "canonical_concept": "tingling",
+        "category": "Symptom",
+        "speaker": "doctor",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports tingling."
+      },
+      {
+        "prop_id": "CAP13",
+        "cap_type": "Order",
+        "canonical_concept": "MRI",
+        "category": "Order",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "planned",
+        "temporality": "this afternoon",
+        "proposition_text": "The patient will receive an MRI this afternoon."
+      },
+      {
+        "prop_id": "CAP14",
+        "cap_type": "TestResult",
+        "canonical_concept": "MRI",
+        "category": "TestResult",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "planned",
+        "temporality": "this afternoon",
+        "proposition_text": "A cervical MRI is ordered."
+      },
+      {
+        "prop_id": "CAP15",
+        "cap_type": "MedicationRequest",
+        "canonical_concept": "MRI",
+        "category": "MedicationRequest",
+        "speaker": "doctor",
+        "status": "uncertain",
+        "visit_state": "planned",
+        "temporality": "today",
+        "proposition_text": "An MRI is ordered."
+      },
+      {
+        "prop_id": "CAP16",
+        "cap_type": "Order",
+        "canonical_concept": "surgery",
+        "category": "Order",
+        "speaker": "doctor",
+        "status": "uncertain",
+        "visit_state": "planned",
+        "temporality": "tomorrow",
+        "proposition_text": "Surgery is planned."
+      },
+      {
+        "prop_id": "CAP17",
+        "cap_type": "FollowUp",
+        "canonical_concept": "follow-up",
+        "category": "FollowUp",
+        "speaker": "doctor",
+        "status": "uncertain",
+        "visit_state": "planned",
+        "temporality": "in two weeks",
+        "claim_type_tags": [
+          "temporal"
+        ],
+        "proposition_text": "A follow-up appointment is scheduled."
+      }
+    ]
+  },
+  "reference_gpt_f1_items": {
+    "active_problems_symptoms": [
+      "right foot pain",
+      "right ankle soreness and swelling",
+      "left ankle soreness and instability",
+      "right foot numbness"
+    ],
+    "negated_findings": [],
+    "uncertain_findings": [],
+    "medication_treatment": [],
+    "plan_followup": [],
+    "_chunk_count": [
+      "3"
+    ]
+  },
+  "summary_gpt_f1_items": {
+    "active_problems_symptoms": [],
+    "negated_findings": [],
+    "uncertain_findings": [],
+    "medication_treatment": [],
+    "plan_followup": [],
+    "_chunk_count": [
+      "1"
+    ]
+  },
+  "gpt_f1_alignment": {
+    "by_category": {
+      "active_problems_symptoms": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "matched_count": 0,
+        "pred_count": 0,
+        "ref_count": 4,
+        "matches": [],
+        "unsupported_pred_items": [],
+        "missing_ref_items": [
+          "right foot pain",
+          "right ankle soreness and swelling",
+          "left ankle soreness and instability",
+          "right foot numbness"
+        ]
+      },
+      "negated_findings": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "matched_count": 0,
+        "pred_count": 0,
+        "ref_count": 0,
+        "matches": [],
+        "unsupported_pred_items": [],
+        "missing_ref_items": []
+      },
+      "uncertain_findings": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "matched_count": 0,
+        "pred_count": 0,
+        "ref_count": 0,
+        "matches": [],
+        "unsupported_pred_items": [],
+        "missing_ref_items": []
+      },
+      "medication_treatment": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "matched_count": 0,
+        "pred_count": 0,
+        "ref_count": 0,
+        "matches": [],
+        "unsupported_pred_items": [],
+        "missing_ref_items": []
+      },
+      "plan_followup": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "matched_count": 0,
+        "pred_count": 0,
+        "ref_count": 0,
+        "matches": [],
+        "unsupported_pred_items": [],
+        "missing_ref_items": []
+      }
+    }
+  },
+  "reference_nair_concepts": {
+    "sections": [
+      {
+        "heading": "Clinical Note",
+        "section_value": "CHIEF COMPLAINT\nRight foot pain.\nHISTORY OF PRESENT ILLNESS\nElijah Reyes is a pleasant 45-year-old male who presents to the clinic today for the evaluation of right foot pain. The patient was referred by his primary care physician. He sustained an injury yesterday when he dropped a landscape brick on his right foot while doing yard work. He was able to get up and continue working after the injury. He rates his pain level as an 11 out of 10. The patient also reports numbness in his entire right foot, which has been present for a long time. The patient denies taking any medication for pain.\nThe patient reports he fractured his right ankle 20 years ago. He received non-operative treatment with casting. He has experienced intermittent soreness and swelling in his right ankle since then.\nThe patient reports surgical history of his left ankle. He continues to experience soreness and occasional giving way of the left ankle.\nMEDICAL HISTORY\nPatient reports history of a right ankle fracture 20 years ago.\nSURGICAL HISTORY\nPatient reports history of left ankle surgery.",
+        "medical_concepts": [
+          "right foot pain",
+          "foot injury",
+          "pain",
+          "numbness of right foot",
+          "right ankle fracture",
+          "casting",
+          "soreness of right ankle",
+          "swelling of right ankle",
+          "left ankle surgery",
+          "soreness of left ankle",
+          "ankle instability",
+          "giving way of the left ankle"
+        ]
+      },
+      {
+        "heading": "Clinical Note",
+        "section_value": "REVIEW OF SYSTEMS\nMusculoskeletal: Reports right foot pain, right ankle soreness and swelling, and left ankle soreness and instability.\nNeurological: Reports right foot numbness.\nVITALS\nAll vital signs are within the normal limits.\nPHYSICAL EXAM\nCV: Capillary refill is brisk in less than 3 seconds in the right foot. Strong bounding dorsalis pedis pulse.\nNEURO: Normal sensation. Right foot motor and sensation are intact and equal to the contralateral side.\nMSK: Examination of the right foot: Bruising on the plantar and dorsal aspects of the foot. I do appreciate associated swelling. Tenderness to palpation over the midfoot.\nRESULTS",
+        "medical_concepts": [
+          "right foot pain",
+          "right ankle soreness",
+          "right ankle swelling",
+          "left ankle soreness",
+          "left ankle instability",
+          "right foot numbness",
+          "vital signs",
+          "capillary refill",
+          "dorsalis pedis pulse",
+          "normal sensation",
+          "right foot motor function",
+          "right foot bruising",
+          "plantar foot bruising",
+          "dorsal foot bruising",
+          "right foot swelling",
+          "midfoot tenderness"
+        ]
+      },
+      {
+        "heading": "Clinical Note",
+        "section_value": "An x-ray of the right foot was obtained and reviewed today. It demonstrates dorsal displacement of the base of the 2nd metatarsal with a 3 mm separation of the 1st and 2nd metatarsal bases and presence of bony fragments.\nASSESSMENT\nRight foot pain, due to a Lisfranc fracture.\nPLAN\nAfter reviewing the patient's examination and radiographic findings today, I have had a lengthy discussion with him regarding his current symptoms. We discussed treatment options and I have recommended that we proceed with a right foot ORIF and all indicated procedures. We reviewed the risks, benefits, and alternatives of the surgery. I advised him that this procedure will be performed in an outpatient setting and he will be discharged home that same evening. He will then follow up with me 24 hours post procedure, and again 2 weeks later. I explained that he will be placed in a cast and will remain non-weight-bearing for 6 to 8 weeks. He will use crutches while ambulating and we will advance his weight-bearing gradually based on how he tolerates the procedure.",
+        "medical_concepts": [
+          "x-ray",
+          "right foot",
+          "dorsal displacement of the base of the 2nd metatarsal",
+          "separation of the 1st and 2nd metatarsal bases",
+          "bony fragments",
+          "right foot pain",
+          "Lisfranc fracture",
+          "open reduction and internal fixation",
+          "outpatient surgery",
+          "cast",
+          "non-weight-bearing",
+          "crutches",
+          "weight-bearing"
+        ]
+      },
+      {
+        "heading": "Clinical Note",
+        "section_value": "I have also recommended that we obtain an MRI of the right foot to further assess the ligaments. I explained to him that if he has poor bone alignment or ligament healing, this can lead to losing the arch in his foot causing pes planus and developing arthritis. I will send an order to the outpatient MRI facility downstairs for him to obtain the MRI this afternoon.\nThe patient wishes to think over his options before proceeding with the operation.",
+        "medical_concepts": [
+          "MRI",
+          "right foot",
+          "ligament injury",
+          "poor bone alignment",
+          "ligament healing",
+          "loss of arch",
+          "pes planus",
+          "arthritis",
+          "operation"
+        ]
+      }
+    ],
+    "medical_concepts": [
+      "right foot pain",
+      "foot injury",
+      "pain",
+      "numbness of right foot",
+      "right ankle fracture",
+      "casting",
+      "soreness of right ankle",
+      "swelling of right ankle",
+      "left ankle surgery",
+      "soreness of left ankle",
+      "ankle instability",
+      "giving way of the left ankle",
+      "right ankle soreness",
+      "right ankle swelling",
+      "left ankle soreness",
+      "left ankle instability",
+      "right foot numbness",
+      "vital signs",
+      "capillary refill",
+      "dorsalis pedis pulse",
+      "normal sensation",
+      "right foot motor function",
+      "right foot bruising",
+      "plantar foot bruising",
+      "dorsal foot bruising",
+      "right foot swelling",
+      "midfoot tenderness",
+      "x-ray",
+      "right foot",
+      "dorsal displacement of the base of the 2nd metatarsal",
+      "separation of the 1st and 2nd metatarsal bases",
+      "bony fragments",
+      "Lisfranc fracture",
+      "open reduction and internal fixation",
+      "outpatient surgery",
+      "cast",
+      "non-weight-bearing",
+      "crutches",
+      "weight-bearing",
+      "MRI",
+      "ligament injury",
+      "poor bone alignment",
+      "ligament healing",
+      "loss of arch",
+      "pes planus",
+      "arthritis",
+      "operation"
+    ],
+    "section_count": 4
+  },
+  "summary_nair_concepts": {
+    "sections": [
+      {
+        "heading": "S",
+        "section_value": "The patient reports a history of prior ankle injuries twenty years ago, including a cast for an ankle fracture, and occasional soreness in both ankles. He also reports numbness in his right foot since the current injury. He denies taking medications for pain relief. The patient states he hurt his foot before but this is the first time he's been seen for it.",
+        "medical_concepts": [
+          "ankle injuries",
+          "ankle fracture",
+          "soreness in both ankles",
+          "numbness in right foot",
+          "foot injury",
+          "pain"
+        ]
+      },
+      {
+        "heading": "O",
+        "section_value": "The physical exam reveals bruising on the right foot, swelling, and tenderness to palpation at the midfoot. Capillary refill is brisk bilaterally. Dorsal displacement of the base of the second metatarsal with a 3 millimeter separation of the first and second metatarsal bases is noted on the x-ray. The dorsalis pedis pulse is strong and bounding. The patient's vitals are within normal limits.",
+        "medical_concepts": [
+          "bruising of right foot",
+          "swelling",
+          "tenderness to palpation at the midfoot",
+          "capillary refill",
+          "dorsal displacement of the base of the second metatarsal",
+          "separation of the first and second metatarsal bases",
+          "x-ray",
+          "dorsalis pedis pulse",
+          "vital signs within normal limits"
+        ]
+      },
+      {
+        "heading": "A",
+        "section_value": "The patient has a lisfranc fracture with associated swelling and tenderness. The x-ray findings indicate dorsal displacement of the second metatarsal and separation of the first and second metatarsals. He is likely to require surgery.",
+        "medical_concepts": [
+          "Lisfranc fracture",
+          "swelling",
+          "tenderness",
+          "x-ray",
+          "dorsal displacement of the second metatarsal",
+          "separation of the first and second metatarsals",
+          "surgery"
+        ]
+      },
+      {
+        "heading": "P",
+        "section_value": "An order for an MRI has been placed for the right foot. The patient will undergo outpatient surgery tomorrow, followed by a 24-hour post-procedure follow-up and a two-week follow-up. A cast and crutches will be provided. Weight-bearing will be advanced gradually based on healing and tolerance. The patient will be discharged home that evening following the procedure.",
+        "medical_concepts": [
+          "MRI",
+          "outpatient surgery",
+          "post-procedure follow-up",
+          "cast",
+          "crutches",
+          "weight-bearing"
+        ]
+      }
+    ],
+    "medical_concepts": [
+      "ankle injuries",
+      "ankle fracture",
+      "soreness in both ankles",
+      "numbness in right foot",
+      "foot injury",
+      "pain",
+      "bruising of right foot",
+      "swelling",
+      "tenderness to palpation at the midfoot",
+      "capillary refill",
+      "dorsal displacement of the base of the second metatarsal",
+      "separation of the first and second metatarsal bases",
+      "x-ray",
+      "dorsalis pedis pulse",
+      "vital signs within normal limits",
+      "Lisfranc fracture",
+      "tenderness",
+      "dorsal displacement of the second metatarsal",
+      "separation of the first and second metatarsals",
+      "surgery",
+      "MRI",
+      "outpatient surgery",
+      "post-procedure follow-up",
+      "cast",
+      "crutches",
+      "weight-bearing"
+    ],
+    "section_count": 4
+  },
+  "nair_alignment": {
+    "pred_concepts": [
+      "ankle injuries",
+      "ankle fracture",
+      "soreness in both ankles",
+      "numbness in right foot",
+      "foot injury",
+      "pain",
+      "bruising of right foot",
+      "swelling",
+      "tenderness to palpation at the midfoot",
+      "capillary refill",
+      "dorsal displacement of the base of the second metatarsal",
+      "separation of the first and second metatarsal bases",
+      "x-ray",
+      "dorsalis pedis pulse",
+      "vital signs within normal limits",
+      "Lisfranc fracture",
+      "tenderness",
+      "dorsal displacement of the second metatarsal",
+      "separation of the first and second metatarsals",
+      "surgery",
+      "MRI",
+      "outpatient surgery",
+      "post-procedure follow-up",
+      "cast",
+      "crutches",
+      "weight-bearing"
+    ],
+    "ref_concepts": [
+      "right foot pain",
+      "foot injury",
+      "pain",
+      "numbness of right foot",
+      "right ankle fracture",
+      "casting",
+      "soreness of right ankle",
+      "swelling of right ankle",
+      "left ankle surgery",
+      "soreness of left ankle",
+      "ankle instability",
+      "giving way of the left ankle",
+      "right ankle soreness",
+      "right ankle swelling",
+      "left ankle soreness",
+      "left ankle instability",
+      "right foot numbness",
+      "vital signs",
+      "capillary refill",
+      "dorsalis pedis pulse",
+      "normal sensation",
+      "right foot motor function",
+      "right foot bruising",
+      "plantar foot bruising",
+      "dorsal foot bruising",
+      "right foot swelling",
+      "midfoot tenderness",
+      "x-ray",
+      "right foot",
+      "dorsal displacement of the base of the 2nd metatarsal",
+      "separation of the 1st and 2nd metatarsal bases",
+      "bony fragments",
+      "Lisfranc fracture",
+      "open reduction and internal fixation",
+      "outpatient surgery",
+      "cast",
+      "non-weight-bearing",
+      "crutches",
+      "weight-bearing",
+      "MRI",
+      "ligament injury",
+      "poor bone alignment",
+      "ligament healing",
+      "loss of arch",
+      "pes planus",
+      "arthritis",
+      "operation"
+    ],
+    "precision_alignment": {
+      "found_b": [
+        "ankle fracture",
+        "soreness in both ankles",
+        "numbness in right foot",
+        "foot injury",
+        "pain",
+        "bruising of right foot",
+        "tenderness to palpation at the midfoot",
+        "capillary refill",
+        "dorsal displacement of the base of the second metatarsal",
+        "separation of the first and second metatarsal bases",
+        "x-ray",
+        "dorsalis pedis pulse",
+        "vital signs within normal limits",
+        "Lisfranc fracture",
+        "tenderness",
+        "surgery",
+        "MRI",
+        "outpatient surgery",
+        "post-procedure follow-up",
+        "cast",
+        "crutches",
+        "weight-bearing"
+      ],
+      "not_found_b": [
+        "ankle injuries",
+        "swelling",
+        "dorsal displacement of the second metatarsal",
+        "separation of the first and second metatarsals"
+      ],
+      "chunk_count": 2,
+      "chunk_results": [
+        {
+          "found_b": [
+            "ankle fracture",
+            "soreness in both ankles",
+            "numbness in right foot",
+            "foot injury",
+            "pain",
+            "bruising of right foot",
+            "tenderness to palpation at the midfoot",
+            "capillary refill",
+            "dorsal displacement of the base of the second metatarsal",
+            "separation of the first and second metatarsal bases",
+            "x-ray",
+            "dorsalis pedis pulse",
+            "vital signs within normal limits",
+            "Lisfranc fracture",
+            "tenderness",
+            "surgery",
+            "MRI",
+            "outpatient surgery",
+            "post-procedure follow-up",
+            "cast"
+          ],
+          "not_found_b": [
+            "ankle injuries",
+            "swelling",
+            "dorsal displacement of the second metatarsal",
+            "separation of the first and second metatarsals"
+          ]
+        },
+        {
+          "found_b": [
+            "crutches",
+            "weight-bearing"
+          ],
+          "not_found_b": []
+        }
+      ]
+    },
+    "recall_alignment": {
+      "found_b": [
+        "foot injury",
+        "pain",
+        "numbness of right foot",
+        "casting",
+        "right foot numbness",
+        "vital signs",
+        "capillary refill",
+        "dorsalis pedis pulse",
+        "right foot bruising",
+        "dorsal foot bruising",
+        "right foot swelling",
+        "midfoot tenderness",
+        "x-ray",
+        "right foot",
+        "dorsal displacement of the base of the 2nd metatarsal",
+        "separation of the 1st and 2nd metatarsal bases",
+        "Lisfranc fracture",
+        "outpatient surgery",
+        "cast",
+        "crutches",
+        "weight-bearing",
+        "MRI",
+        "operation"
+      ],
+      "not_found_b": [
+        "right foot pain",
+        "right ankle fracture",
+        "soreness of right ankle",
+        "swelling of right ankle",
+        "left ankle surgery",
+        "soreness of left ankle",
+        "ankle instability",
+        "giving way of the left ankle",
+        "right ankle soreness",
+        "right ankle swelling",
+        "left ankle soreness",
+        "left ankle instability",
+        "normal sensation",
+        "right foot motor function",
+        "plantar foot bruising",
+        "bony fragments",
+        "open reduction and internal fixation",
+        "non-weight-bearing",
+        "ligament injury",
+        "poor bone alignment",
+        "ligament healing",
+        "loss of arch",
+        "pes planus",
+        "arthritis"
+      ],
+      "chunk_count": 2,
+      "chunk_results": [
+        {
+          "found_b": [
+            "foot injury",
+            "pain",
+            "numbness of right foot",
+            "casting",
+            "right foot numbness",
+            "vital signs",
+            "capillary refill",
+            "dorsalis pedis pulse",
+            "right foot bruising"
+          ],
+          "not_found_b": [
+            "right foot pain",
+            "right ankle fracture",
+            "soreness of right ankle",
+            "swelling of right ankle",
+            "left ankle surgery",
+            "soreness of left ankle",
+            "ankle instability",
+            "giving way of the left ankle",
+            "right ankle soreness",
+            "right ankle swelling",
+            "left ankle soreness",
+            "left ankle instability",
+            "normal sensation",
+            "right foot motor function",
+            "plantar foot bruising"
+          ]
+        },
+        {
+          "found_b": [
+            "dorsal foot bruising",
+            "right foot swelling",
+            "midfoot tenderness",
+            "x-ray",
+            "right foot",
+            "dorsal displacement of the base of the 2nd metatarsal",
+            "separation of the 1st and 2nd metatarsal bases",
+            "Lisfranc fracture",
+            "outpatient surgery",
+            "cast",
+            "crutches",
+            "weight-bearing",
+            "MRI",
+            "operation"
+          ],
+          "not_found_b": [
+            "bony fragments",
+            "open reduction and internal fixation",
+            "non-weight-bearing",
+            "ligament injury",
+            "poor bone alignment",
+            "ligament healing",
+            "loss of arch",
+            "pes planus",
+            "arthritis"
+          ]
+        }
+      ]
+    }
+  },
+  "semantic_cap_audit": {
+    "source_cap_recall": [
+      {
+        "cap_id": "P1",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P2",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P3",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P4",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P5",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P6",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P7",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P8",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P9",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P10",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P11",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P12",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P13",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P14",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P15",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P16",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P1",
+        "judgment": "supported",
+        "reason": null
+      }
+    ],
+    "summary_cap_precision": [
+      {
+        "cap_id": "P1",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P2",
+        "judgment": "unsupported",
+        "reason": null
+      },
+      {
+        "cap_id": "P3",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P4",
+        "judgment": "unsupported",
+        "reason": null
+      },
+      {
+        "cap_id": "P5",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P6",
+        "judgment": "unsupported",
+        "reason": null
+      },
+      {
+        "cap_id": "P7",
+        "judgment": "unsupported",
+        "reason": null
+      },
+      {
+        "cap_id": "P8",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P9",
+        "judgment": "unsupported",
+        "reason": null
+      },
+      {
+        "cap_id": "P10",
+        "judgment": "unsupported",
+        "reason": null
+      },
+      {
+        "cap_id": "P11",
+        "judgment": "unsupported",
+        "reason": null
+      },
+      {
+        "cap_id": "P12",
+        "judgment": "unsupported",
+        "reason": null
+      },
+      {
+        "cap_id": "P13",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P14",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P15",
+        "judgment": "unsupported",
+        "reason": null
+      },
+      {
+        "cap_id": "P16",
+        "judgment": "unsupported",
+        "reason": null
+      },
+      {
+        "cap_id": "P1",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P2",
+        "judgment": "unsupported",
+        "reason": null
+      },
+      {
+        "cap_id": "P3",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P4",
+        "judgment": "unsupported",
+        "reason": null
+      }
+    ],
+    "metrics": {
+      "semantic_cap_precision": 0.25,
+      "semantic_cap_recall": 0.5882,
+      "semantic_cap_f1": 0.3509,
+      "semantic_cap_precision_supported_count": 2,
+      "semantic_cap_precision_partial_count": 6,
+      "semantic_cap_precision_denominator": 20,
+      "semantic_cap_recall_supported_count": 7,
+      "semantic_cap_recall_partial_count": 6,
+      "semantic_cap_recall_denominator": 17,
+      "semantic_cap_low_value_source_count": 0,
+      "semantic_cap_low_value_summary_count": 0,
+      "semantic_cap_missing_count": 4,
+      "semantic_cap_unsupported_count": 12,
+      "semantic_cap_contradicted_source_count": 0,
+      "semantic_cap_contradicted_summary_count": 0
+    }
+  },
+  "safety_judgment": null,
+  "section_judgment": {
+    "section_miscategorizations": [],
+    "summary_statistics": {
+      "section_appropriateness_score": 1.0,
+      "section_miscategorization_count": 0,
+      "major_section_miscategorization_count": 0
+    }
+  },
+  "pdsqi_judgment": {
+    "citation_applicable": 0,
+    "citation": 0,
+    "accurate": 3,
+    "thorough": 3,
+    "useful": 3,
+    "organized": 5,
+    "comprehensible": 5,
+    "succinct": 5,
+    "abstraction": 1,
+    "synthesized": 4,
+    "voice_summ": 0,
+    "voice_note": 0,
+    "pdsqi_core_mean": 4.0
+  },
+  "llm_checklist_judgment": {
+    "content_preservation_core": 4,
+    "noise_suppression": 5,
+    "lay_expression_preservation": 3,
+    "state_update_fidelity": 2,
+    "temporality_preservation": 4,
+    "problem_evidence_linkage": 5,
+    "state_plan_separation": 3,
+    "section_organization_appropriateness": 4,
+    "overall_clinical_usability": 3,
+    "clinically_meaningful_omission": "Yes",
+    "clinically_concerning_hallucination": "Yes",
+    "checklist_a_mean": 4.0,
+    "checklist_b_mean": 3.0,
+    "checklist_c_mean": 4.0,
+    "llm_checklist_abc_mean": 3.75,
+    "llm_checklist_mean_no_usability": 3.75,
+    "llm_checklist_total_score": 33,
+    "llm_checklist_mean": 3.6667,
+    "llm_checklist_meaningful_omission_yes": 1,
+    "llm_checklist_concerning_hallucination_yes": 1
+  },
+  "metrics": {
+    "case_id": "D2N054",
+    "method": "cluster2sent",
+    "template": "soap",
+    "source_cap_count": 17,
+    "event_plan_count": null,
+    "summary_cap_count": 20,
+    "cap_matched_count": 5,
+    "cap_precision": 0.25,
+    "cap_recall": 0.2941,
+    "cap_f1": 0.2703,
+    "unsupported_summary_cap_count": 15,
+    "missing_source_cap_count": 12,
+    "summary_runtime_seconds": null,
+    "summary_cap_runtime_seconds": 31.07,
+    "event_plan_runtime_seconds": null,
+    "rouge_l_f1_vs_reference": 0.2271,
+    "token_f1_vs_reference": 0.4594,
+    "gptf1_macro_f1": 0.0,
+    "nair_gpt_precision": 0.8462,
+    "nair_gpt_recall": 0.4894,
+    "nair_gpt_f1": 0.6201,
+    "semantic_cap_precision": 0.25,
+    "semantic_cap_recall": 0.5882,
+    "semantic_cap_f1": 0.3509,
+    "hallucination_count": null,
+    "major_hallucination_count": null,
+    "omission_count": null,
+    "major_omission_count": null,
+    "section_appropriateness_score": 1.0,
+    "section_miscategorization_count": 0,
+    "major_section_miscategorization_count": 0,
+    "pdsqi_core_mean": 4.0,
+    "pdsqi_accurate": 3,
+    "pdsqi_thorough": 3,
+    "llm_checklist_total_score": 33,
+    "llm_checklist_mean": 3.6667,
+    "llm_checklist_mean_no_usability": 3.75,
+    "checklist_a_mean": 4.0,
+    "checklist_b_mean": 3.0,
+    "checklist_c_mean": 4.0,
+    "llm_checklist_abc_mean": 3.75,
+    "content_preservation_core": 4,
+    "noise_suppression": 5,
+    "lay_expression_preservation": 3,
+    "state_update_fidelity": 2,
+    "temporality_preservation": 4,
+    "problem_evidence_linkage": 5,
+    "state_plan_separation": 3,
+    "section_organization_appropriateness": 4,
+    "overall_clinical_usability": 3,
+    "llm_checklist_meaningful_omission_yes": 1,
+    "llm_checklist_concerning_hallucination_yes": 1,
+    "gptf1_active_problems_symptoms_precision": 0.0,
+    "gptf1_active_problems_symptoms_recall": 0.0,
+    "gptf1_active_problems_symptoms_f1": 0.0,
+    "gptf1_active_problems_symptoms_pred_count": 0,
+    "gptf1_active_problems_symptoms_ref_count": 4,
+    "gptf1_negated_findings_precision": 0.0,
+    "gptf1_negated_findings_recall": 0.0,
+    "gptf1_negated_findings_f1": 0.0,
+    "gptf1_negated_findings_pred_count": 0,
+    "gptf1_negated_findings_ref_count": 0,
+    "gptf1_uncertain_findings_precision": 0.0,
+    "gptf1_uncertain_findings_recall": 0.0,
+    "gptf1_uncertain_findings_f1": 0.0,
+    "gptf1_uncertain_findings_pred_count": 0,
+    "gptf1_uncertain_findings_ref_count": 0,
+    "gptf1_medication_treatment_precision": 0.0,
+    "gptf1_medication_treatment_recall": 0.0,
+    "gptf1_medication_treatment_f1": 0.0,
+    "gptf1_medication_treatment_pred_count": 0,
+    "gptf1_medication_treatment_ref_count": 0,
+    "gptf1_plan_followup_precision": 0.0,
+    "gptf1_plan_followup_recall": 0.0,
+    "gptf1_plan_followup_f1": 0.0,
+    "gptf1_plan_followup_pred_count": 0,
+    "gptf1_plan_followup_ref_count": 0,
+    "nair_pred_concept_count": 26,
+    "nair_ref_concept_count": 47,
+    "nair_precision_match_count": 22,
+    "nair_recall_match_count": 23,
+    "semantic_cap_precision_supported_count": 2,
+    "semantic_cap_precision_partial_count": 6,
+    "semantic_cap_precision_denominator": 20,
+    "semantic_cap_recall_supported_count": 7,
+    "semantic_cap_recall_partial_count": 6,
+    "semantic_cap_recall_denominator": 17,
+    "semantic_cap_low_value_source_count": 0,
+    "semantic_cap_low_value_summary_count": 0,
+    "semantic_cap_missing_count": 4,
+    "semantic_cap_unsupported_count": 12,
+    "semantic_cap_contradicted_source_count": 0,
+    "semantic_cap_contradicted_summary_count": 0,
+    "pdsqi_useful": 3,
+    "pdsqi_organized": 5,
+    "pdsqi_comprehensible": 5,
+    "pdsqi_succinct": 5,
+    "pdsqi_synthesized": 4
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "section_miscategorizations": [
+    {
+      "text": "The patient reports no fever and his vital signs are within normal limits.",
+      "current_section": "S",
+      "expected_section": "S",
+      "severity": "minor",
+      "reason": "The phrase about vital signs being within normal limits implies clinician-measured data, which belongs in O, but it is embedded in a patient-reported context and not clearly distinguished as an objective measurement."
+    },
+    {
+      "text": "Blood pressure is 160/104.",
+      "current_section": "O",
+      "expected_section": "O",
+      "severity": "minor",
+      "reason": "This objective blood pressure conflicts with the earlier statement that vital signs are within normal limits in S; the issue is internal inconsistency between S and O rather than pure misplacement of this sentence, which is correctly in O."
+    }
+  ],
+  "summary_statistics": {
+    "section_appropriateness_score": 0.8,
+    "section_miscategorization_count": 2,
+    "major_section_miscategorization_count": 0
+  }
+}

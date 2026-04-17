@@ -1,0 +1,458 @@
+{
+  "case_id": "D2N050",
+  "annotator": "B",
+  "seed_gold_caps": [
+    {
+      "gold_id": "G1",
+      "fact_text": "The patient is being evaluated for kidney stones after referral from their primary care provider",
+      "category": "Chief Complaint",
+      "speaker": "clinician",
+      "temporality": "current",
+      "certainty": "high",
+      "provenance_sentence": "0"
+    },
+    {
+      "gold_id": "G2",
+      "fact_text": "About a week ago the patient developed sudden onset pain in the right back while working in a barn moving hay",
+      "category": "Symptom",
+      "speaker": "patient",
+      "temporality": "past",
+      "certainty": "high",
+      "provenance_sentence": "1"
+    },
+    {
+      "gold_id": "G3",
+      "fact_text": "The patient initially thought the right back pain was from throwing hay",
+      "category": "Symptom",
+      "speaker": "patient",
+      "temporality": "past",
+      "certainty": "high",
+      "provenance_sentence": "1"
+    },
+    {
+      "gold_id": "G4",
+      "fact_text": "At the time of onset of back pain the patient broke out into a sweat",
+      "category": "Symptom",
+      "speaker": "patient",
+      "temporality": "past",
+      "certainty": "high",
+      "provenance_sentence": "1"
+    },
+    {
+      "gold_id": "G5",
+      "fact_text": "At the time of onset of back pain the patient became very nauseated",
+      "category": "Symptom",
+      "speaker": "patient",
+      "temporality": "past",
+      "certainty": "high",
+      "provenance_sentence": "1"
+    },
+    {
+      "gold_id": "G6",
+      "fact_text": "After developing pain the patient went to see their doctor",
+      "category": "Plan",
+      "speaker": "patient",
+      "temporality": "past",
+      "certainty": "high",
+      "provenance_sentence": "1"
+    },
+    {
+      "gold_id": "G7",
+      "fact_text": "The prior doctor ordered a CT scan for the patient",
+      "category": "Test Result",
+      "speaker": "patient",
+      "temporality": "past",
+      "certainty": "high",
+      "provenance_sentence": "1"
+    },
+    {
+      "gold_id": "G8",
+      "fact_text": "The prior doctor told the patient that the CT scan showed a kidney stone",
+      "category": "Test Result",
+      "speaker": "patient",
+      "temporality": "past",
+      "certainty": "high",
+      "provenance_sentence": "1"
+    },
+    {
+      "gold_id": "G9",
+      "fact_text": "The patient reports never having had a kidney stone before this episode",
+      "category": "Past Medical History",
+      "speaker": "patient",
+      "temporality": "past",
+      "certainty": "high",
+      "provenance_sentence": "1,13"
+    },
+    {
+      "gold_id": "G10",
+      "fact_text": "The patient reports that their father has had kidney stones in the past",
+      "category": "Past Medical History",
+      "speaker": "patient",
+      "temporality": "past",
+      "certainty": "high",
+      "provenance_sentence": "1,13"
+    },
+    {
+      "gold_id": "G11",
+      "fact_text": "During the episode the patient's right back pain radiated almost down to the groin",
+      "category": "Symptom",
+      "speaker": "patient",
+      "temporality": "past",
+      "certainty": "high",
+      "provenance_sentence": "3-5"
+    },
+    {
+      "gold_id": "G12",
+      "fact_text": "The pain did not radiate all the way down to the groin",
+      "category": "Symptom",
+      "speaker": "patient",
+      "temporality": "past",
+      "certainty": "high",
+      "provenance_sentence": "5"
+    },
+    {
+      "gold_id": "G13",
+      "fact_text": "Since the initial episode the patient has not had more pain in the right back area",
+      "category": "Symptom",
+      "speaker": "patient",
+      "temporality": "unknown",
+      "certainty": "high",
+      "provenance_sentence": "5"
+    },
+    {
+      "gold_id": "G14",
+      "fact_text": "After learning they had a kidney stone the patient had recurrent pain episodes a couple of times",
+      "category": "Symptom",
+      "speaker": "patient",
+      "temporality": "past",
+      "certainty": "high",
+      "provenance_sentence": "7"
+    },
+    {
+      "gold_id": "G15",
+      "fact_text": "The recurrent pain episodes after diagnosis did not last as long as the initial episode",
+      "category": "Symptom",
+      "speaker": "patient",
+      "temporality": "past",
+      "certainty": "high",
+      "provenance_sentence": "7"
+    },
+    {
+      "gold_id": "G16",
+      "fact_text": "The patient has been straining their urine using a provided cup",
+      "category": "Plan",
+      "speaker": "patient",
+      "temporality": "unknown",
+      "certainty": "high",
+      "provenance_sentence": "7-9"
+    },
+    {
+      "gold_id": "G17",
+      "fact_text": "The patient has not seen any stone material in the urine strainer",
+      "category": "Test Result",
+      "speaker": "patient",
+      "temporality": "unknown",
+      "certainty": "high",
+      "provenance_sentence": "9"
+    },
+    {
+      "gold_id": "G18",
+      "fact_text": "The patient has not noticed their urine being darker than usual",
+      "category": "Review of Systems",
+      "speaker": "patient",
+      "temporality": "unknown",
+      "certainty": "high",
+      "provenance_sentence": "10-11"
+    },
+    {
+      "gold_id": "G19",
+      "fact_text": "The patient does not report visible blood in the urine",
+      "category": "Review of Systems",
+      "speaker": "patient",
+      "temporality": "unknown",
+      "certainty": "medium",
+      "provenance_sentence": "10-11"
+    },
+    {
+      "gold_id": "G20",
+      "fact_text": "The clinician states the patient's vital signs look good",
+      "category": "Physical Exam",
+      "speaker": "clinician",
+      "temporality": "current",
+      "certainty": "high",
+      "provenance_sentence": "14"
+    },
+    {
+      "gold_id": "G21",
+      "fact_text": "The clinician reports no fever on examination",
+      "category": "Physical Exam",
+      "speaker": "clinician",
+      "temporality": "current",
+      "certainty": "high",
+      "provenance_sentence": "14"
+    },
+    {
+      "gold_id": "G22",
+      "fact_text": "The clinician reports the patient's blood pressure is normal",
+      "category": "Physical Exam",
+      "speaker": "clinician",
+      "temporality": "current",
+      "certainty": "high",
+      "provenance_sentence": "14"
+    },
+    {
+      "gold_id": "G23",
+      "fact_text": "The clinician reports the patient's heart rate is normal",
+      "category": "Physical Exam",
+      "speaker": "clinician",
+      "temporality": "current",
+      "certainty": "high",
+      "provenance_sentence": "14"
+    },
+    {
+      "gold_id": "G24",
+      "fact_text": "On abdominal exam there is no tenderness to palpation",
+      "category": "Physical Exam",
+      "speaker": "clinician",
+      "temporality": "current",
+      "certainty": "high",
+      "provenance_sentence": "14"
+    },
+    {
+      "gold_id": "G25",
+      "fact_text": "On abdominal exam there is no rebound tenderness",
+      "category": "Physical Exam",
+      "speaker": "clinician",
+      "temporality": "current",
+      "certainty": "high",
+      "provenance_sentence": "14"
+    },
+    {
+      "gold_id": "G26",
+      "fact_text": "On abdominal exam there is no guarding",
+      "category": "Physical Exam",
+      "speaker": "clinician",
+      "temporality": "current",
+      "certainty": "high",
+      "provenance_sentence": "14"
+    },
+    {
+      "gold_id": "G27",
+      "fact_text": "There is right-sided costovertebral angle tenderness on exam",
+      "category": "Physical Exam",
+      "speaker": "clinician",
+      "temporality": "current",
+      "certainty": "high",
+      "provenance_sentence": "14"
+    },
+    {
+      "gold_id": "G28",
+      "fact_text": "The clinician explains that the right CVA tenderness suggests inflammation over the kidney",
+      "category": "Assessment",
+      "speaker": "clinician",
+      "temporality": "current",
+      "certainty": "high",
+      "provenance_sentence": "18"
+    },
+    {
+      "gold_id": "G29",
+      "fact_text": "The clinician attributes the kidney inflammation to the known kidney stone",
+      "category": "Assessment",
+      "speaker": "clinician",
+      "temporality": "current",
+      "certainty": "high",
+      "provenance_sentence": "18"
+    },
+    {
+      "gold_id": "G30",
+      "fact_text": "The clinician reviewed the patient's CT scan results",
+      "category": "Test Result",
+      "speaker": "clinician",
+      "temporality": "past",
+      "certainty": "high",
+      "provenance_sentence": "18"
+    },
+    {
+      "gold_id": "G31",
+      "fact_text": "The CT scan shows a 0.5 cm stone in the proximal right ureter",
+      "category": "Test Result",
+      "speaker": "clinician",
+      "temporality": "past",
+      "certainty": "high",
+      "provenance_sentence": "18"
+    },
+    {
+      "gold_id": "G32",
+      "fact_text": "The CT scan shows no evidence of hydronephrosis",
+      "category": "Test Result",
+      "speaker": "clinician",
+      "temporality": "past",
+      "certainty": "high",
+      "provenance_sentence": "18"
+    },
+    {
+      "gold_id": "G33",
+      "fact_text": "The clinician diagnoses the patient with a right ureteral kidney stone",
+      "category": "Assessment",
+      "speaker": "clinician",
+      "temporality": "current",
+      "certainty": "high",
+      "provenance_sentence": "18"
+    },
+    {
+      "gold_id": "G34",
+      "fact_text": "The clinician recommends the patient increase fluid intake to help pass the stone",
+      "category": "Plan",
+      "speaker": "clinician",
+      "temporality": "future",
+      "certainty": "high",
+      "provenance_sentence": "18"
+    },
+    {
+      "gold_id": "G35",
+      "fact_text": "The clinician will prescribe oxycodone 5 mg every 6 to 8 hours for pain",
+      "category": "MedicationPlan",
+      "speaker": "clinician",
+      "temporality": "future",
+      "certainty": "high",
+      "provenance_sentence": "18"
+    },
+    {
+      "gold_id": "G36",
+      "fact_text": "The clinician advises the patient to continue taking Tylenol between oxycodone doses for breakthrough pain",
+      "category": "MedicationPlan",
+      "speaker": "clinician",
+      "temporality": "future",
+      "certainty": "high",
+      "provenance_sentence": "18"
+    },
+    {
+      "gold_id": "G37",
+      "fact_text": "The patient already has a urine strainer",
+      "category": "Finding",
+      "speaker": "clinician",
+      "temporality": "unknown",
+      "certainty": "high",
+      "provenance_sentence": "18"
+    },
+    {
+      "gold_id": "G38",
+      "fact_text": "The clinician instructs the patient to continue using the urine strainer until the stone passes",
+      "category": "Plan",
+      "speaker": "clinician",
+      "temporality": "future",
+      "certainty": "high",
+      "provenance_sentence": "18"
+    },
+    {
+      "gold_id": "G39",
+      "fact_text": "The clinician will order a basic metabolic panel",
+      "category": "Plan",
+      "speaker": "clinician",
+      "temporality": "future",
+      "certainty": "high",
+      "provenance_sentence": "18"
+    },
+    {
+      "gold_id": "G40",
+      "fact_text": "The clinician will order a urinalysis",
+      "category": "Plan",
+      "speaker": "clinician",
+      "temporality": "future",
+      "certainty": "high",
+      "provenance_sentence": "18"
+    },
+    {
+      "gold_id": "G41",
+      "fact_text": "The clinician will order a urine culture",
+      "category": "Plan",
+      "speaker": "clinician",
+      "temporality": "future",
+      "certainty": "high",
+      "provenance_sentence": "18"
+    },
+    {
+      "gold_id": "G42",
+      "fact_text": "The purpose of the urinalysis is to determine if antibiotics are needed for infection",
+      "category": "Plan",
+      "speaker": "clinician",
+      "temporality": "future",
+      "certainty": "high",
+      "provenance_sentence": "18"
+    },
+    {
+      "gold_id": "G43",
+      "fact_text": "The clinician plans to prescribe antibiotics only if urinalysis suggests infection",
+      "category": "MedicationPlan",
+      "speaker": "clinician",
+      "temporality": "future",
+      "certainty": "medium",
+      "provenance_sentence": "18"
+    },
+    {
+      "gold_id": "G44",
+      "fact_text": "The clinician wants to see the patient back in about one to two weeks",
+      "category": "Plan",
+      "speaker": "clinician",
+      "temporality": "future",
+      "certainty": "high",
+      "provenance_sentence": "18"
+    },
+    {
+      "gold_id": "G45",
+      "fact_text": "The clinician hopes the patient will have passed the stone within one to two weeks",
+      "category": "Assessment",
+      "speaker": "clinician",
+      "temporality": "future",
+      "certainty": "medium",
+      "provenance_sentence": "18"
+    },
+    {
+      "gold_id": "G46",
+      "fact_text": "If the stone has not passed in one to two weeks the clinician will discuss further treatment options",
+      "category": "Plan",
+      "speaker": "clinician",
+      "temporality": "future",
+      "certainty": "high",
+      "provenance_sentence": "18"
+    },
+    {
+      "gold_id": "G47",
+      "fact_text": "One potential future treatment discussed is lithotripsy to break up the stone with shock waves",
+      "category": "Plan",
+      "speaker": "clinician",
+      "temporality": "future",
+      "certainty": "medium",
+      "provenance_sentence": "18"
+    },
+    {
+      "gold_id": "G48",
+      "fact_text": "The clinician describes lithotripsy as a not very invasive procedure",
+      "category": "Education",
+      "speaker": "clinician",
+      "temporality": "unknown",
+      "certainty": "high",
+      "provenance_sentence": "18"
+    },
+    {
+      "gold_id": "G49",
+      "fact_text": "The patient agrees with the proposed plan of care",
+      "category": "Counseling",
+      "speaker": "patient",
+      "temporality": "current",
+      "certainty": "high",
+      "provenance_sentence": "19"
+    },
+    {
+      "gold_id": "G50",
+      "fact_text": "The clinician will send a nurse in with the oxycodone prescription",
+      "category": "MedicationPlan",
+      "speaker": "clinician",
+      "temporality": "future",
+      "certainty": "high",
+      "provenance_sentence": "22"
+    }
+  ],
+  "generator_model": "gpt-5.1",
+  "generated_at": "2026-04-11T09:01:19.050442+00:00"
+}

@@ -1,0 +1,23 @@
+{
+  "section_miscategorizations": [
+    {
+      "text": "Order a hemoglobin A1c test.",
+      "current_section": "P",
+      "expected_section": "P",
+      "severity": "minor",
+      "reason": "This would normally be appropriate in Plan, but in this note the hemoglobin A1c result (8%) is already documented in O, implying the test has already been performed. As written, it reads as a new order for a test that has already occurred, creating organizational confusion between past objective data and future orders."
+    },
+    {
+      "text": "Continue metformin 500 mg twice a day.",
+      "current_section": "P",
+      "expected_section": "P",
+      "severity": "minor",
+      "reason": "This is a treatment/medication management action and belongs in the Plan. However, because there is no prior mention of metformin in S or O, it is unclear whether this is a true continuation versus a new prescription, which slightly blurs the boundary between documenting current meds (S) and management changes (P)."
+    }
+  ],
+  "summary_statistics": {
+    "section_appropriateness_score": 0.6,
+    "section_miscategorization_count": 2,
+    "major_section_miscategorization_count": 0
+  }
+}

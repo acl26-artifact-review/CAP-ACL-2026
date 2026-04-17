@@ -1,0 +1,30 @@
+{
+  "section_miscategorizations": [
+    {
+      "text": "The patient reports ankle swelling.",
+      "current_section": "Findings",
+      "expected_section": "History of Present Illness",
+      "severity": "major",
+      "reason": "Ankle swelling here is explicitly reported by the patient and not documented as an exam finding; per template, patient-reported symptoms belong in the HPI, not Findings."
+    },
+    {
+      "text": "Start Bumex 2 milligrams once daily.",
+      "current_section": "Plan",
+      "expected_section": "Assessment",
+      "severity": "major",
+      "reason": "The HPI already states the patient currently takes Bumex 2 milligrams once daily; repeating it in the Plan as 'Start' implies a new medication order and contradicts the history, which could mislead the reader about the actual management change."
+    },
+    {
+      "text": "The doctor ordered a nutrition consult.",
+      "current_section": "Plan",
+      "expected_section": "Plan",
+      "severity": "minor",
+      "reason": "This is a restatement of the plan action in the past tense rather than a distinct future-oriented order; while still a plan element, the redundant phrasing slightly blurs whether it is a new order or documentation of a completed action."
+    }
+  ],
+  "summary_statistics": {
+    "section_appropriateness_score": 0.8,
+    "section_miscategorization_count": 3,
+    "major_section_miscategorization_count": 2
+  }
+}

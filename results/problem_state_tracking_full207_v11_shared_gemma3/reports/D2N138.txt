@@ -1,0 +1,242 @@
+Case: D2N138
+
+Problem List and Visit State Tracking
+
+Problem List
+- chest pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T24,T30,T64,T8
+  Summary: The patient reports chest pain.
+  ClusterId: CL2
+  TemporalProfile: current
+  Updates:
+  - CAP11: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T8 :: The patient reports chest pain.
+  - CAP7: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T24 :: The patient reports pain in the left hand.
+  - CAP12: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T30 :: The patient reports chest pain.
+  - CAP20: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T64 :: The patient reports pain.
+- peanut allergy | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T8
+  Summary: The patient has a known peanut allergy.
+  ClusterId: CL4
+  TemporalProfile: current
+  Updates:
+  - CAP48: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T8 :: The patient has a known peanut allergy.
+- asthma | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=doctor,patient | evidence=T114,T24,T63,T87
+  Summary: The patient will be re-checked for asthma in four months.
+  ClusterId: CL5
+  TemporalProfile: current, four months
+  Updates:
+  - CAP17: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T24 :: The patient has asthma.
+  - CAP10: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T63 :: The patient is being evaluated for asthma.
+  - CAP19: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T87 :: The patient has asthma.
+  - CAP5: content_source=doctor modality=interview verification_status=confirmed clinical_status=active temporality=four months turns=T114 :: The patient will be re-checked for asthma in four months.
+- breathing issues | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T35
+  Summary: The patient reports breathing issues.
+  ClusterId: CL9
+  TemporalProfile: past year
+  Updates:
+  - CAP13: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=past year turns=T35 :: The patient reports breathing issues.
+- inhaler use | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T42
+  Summary: The patient does not typically use an inhaler in the summer.
+  ClusterId: CL11
+  TemporalProfile: summer
+  Updates:
+  - CAP2: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=summer turns=T42 :: The patient does not typically use an inhaler in the summer.
+- enlistment | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T42
+  Summary: The patient anticipates enlistment in early spring 2022.
+  ClusterId: CL12
+  TemporalProfile: early spring 2022
+  Updates:
+  - CAP8: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=early spring 2022 turns=T42 :: The patient anticipates enlistment in early spring 2022.
+- allergy | verification_status=confirmed | clinical_status=resolved | modalities=interview | speakers=patient | evidence=T52,T54
+  Summary: The patient has a history of hives related to peanut exposure.
+  ClusterId: CL13
+  TemporalProfile: past
+  Updates:
+  - CAP6: content_source=patient modality=interview verification_status=confirmed clinical_status=resolved temporality=past turns=T52 :: The patient has learned to avoid contact with peanuts.
+  - CAP3: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=past turns=T54 :: The patient has a history of hives related to peanut exposure.
+- airplane-induced anxiety | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T54
+  Summary: The patient reports airplane-induced anxiety.
+  ClusterId: CL14
+  TemporalProfile: current
+  Updates:
+  - CAP14: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T54 :: The patient reports airplane-induced anxiety.
+- cough | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T64
+  Summary: The patient reports a cough.
+  ClusterId: CL18
+  TemporalProfile: current
+  Updates:
+  - CAP15: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T64 :: The patient reports a cough.
+- vaping | verification_status=unconfirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T66
+  Summary: The patient admits to a past habit of vaping and smoking.
+  ClusterId: CL19
+  TemporalProfile: past year
+  Updates:
+  - CAP4: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=past year turns=T66 :: The patient admits to a past habit of vaping and smoking.
+- smoking | verification_status=unconfirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T66
+  Summary: The patient reports attempting to quit smoking.
+  ClusterId: CL20
+  TemporalProfile: past year
+  Updates:
+  - CAP9: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=past year turns=T66 :: The patient reports attempting to quit smoking.
+- smoke exposure | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T80
+  Summary: The patient recalls being alarmed by smoke and fires during the 2019 fall.
+  ClusterId: CL21
+  TemporalProfile: past
+  Updates:
+  - CAP1: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=past turns=T80 :: The patient recalls being alarmed by smoke and fires during the 2019 fall.
+- bronchitis | verification_status=unconfirmed | clinical_status=active | modalities=assessment | speakers=doctor | evidence=T80
+  Summary: The doctor suspects bronchitis.
+  ClusterId: CL22
+  TemporalProfile: current
+  Updates:
+  - CAP18: content_source=doctor modality=assessment verification_status=unconfirmed clinical_status=active temporality=current turns=T80 :: The doctor suspects bronchitis.
+- inhalers | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T92
+  Summary: The patient will use inhalers.
+  ClusterId: CL23
+  TemporalProfile: current
+  Updates:
+  - CAP16: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T92 :: The patient will use inhalers.
+
+Medication Tracking
+- [MedicationState] wixela | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T24,T4
+  Summary: The patient is not taking the wixela.
+  ClusterId: CL1
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient is currently using Wixela. (T4)
+  - The patient is not taking the wixela. (T24)
+  Updates:
+  - CAP38: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T4 :: The patient is currently using Wixela.
+  - CAP33: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T24 :: The patient is not taking the wixela.
+- [MedicationState] zyrtec | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=doctor,patient | evidence=T110,T42,T54,T8
+  Summary: The patient should take Zyrtec as needed.
+  ClusterId: CL3
+  TemporalProfile: current, seasonal, spring, summer, fall
+  CurrentRegimens:
+  - The patient uses Zyrtec seasonally. (T8)
+  - The patient uses zyrtec. (T42)
+  - The patient takes Zyrtec daily. (T54)
+  - The patient should take Zyrtec as needed. (T110)
+  Updates:
+  - CAP40: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=seasonal turns=T8 :: The patient uses Zyrtec seasonally.
+  - CAP47: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=spring, summer, fall turns=T42 :: The patient uses zyrtec.
+  - CAP42: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T54 :: The patient takes Zyrtec daily.
+  - CAP36: content_source=doctor modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T110 :: The patient should take Zyrtec as needed.
+- [MedicationState] inhaler | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T24
+  Summary: The patient is taking inhalers.
+  ClusterId: CL7
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient is taking inhalers. (T24)
+  Updates:
+  - CAP41: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T24 :: The patient is taking inhalers.
+- [MedicationChange] prednisone | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T35
+  Summary: The doctor will assume no one has put the patient on prednisone for breathing issues.
+  ClusterId: CL10
+  TemporalProfile: future
+  PlannedChanges:
+  - The doctor will assume no one has put the patient on prednisone for breathing issues. (T35)
+  Updates:
+  - CAP21: content_source=doctor modality=plan verification_status=unconfirmed clinical_status=planned temporality=future turns=T35 :: The doctor will assume no one has put the patient on prednisone for breathing issues.
+- [MedicationState] epipen | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T54
+  Summary: The patient carries an epinephrine auto-injector.
+  ClusterId: CL15
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient carries an epinephrine auto-injector. (T54)
+  Updates:
+  - CAP39: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T54 :: The patient carries an epinephrine auto-injector.
+- [MedicationChange] alvesco | verification_status=confirmed | clinical_status=planned | modalities=interview,plan | speakers=doctor | evidence=T102,T92,T96
+  Summary: The doctor recommends stepping down to alvesco.
+  ClusterId: CL26
+  TemporalProfile: current, future
+  PlannedChanges:
+  - The doctor recommends stepping down to alvesco. (T92)
+  - The doctor will prescribe alvesco. (T96)
+  - The doctor will order alvesco. (T102)
+  Updates:
+  - CAP26: content_source=doctor modality=interview verification_status=unconfirmed clinical_status=planned temporality=future turns=T92 :: The doctor recommends stepping down to alvesco.
+  - CAP43: content_source=doctor modality=plan verification_status=confirmed clinical_status=planned temporality=future turns=T96 :: The doctor will prescribe alvesco.
+  - CAP44: content_source=doctor modality=plan verification_status=confirmed clinical_status=planned temporality=current turns=T102 :: The doctor will order alvesco.
+- [MedicationChange] two puffs twice a day | verification_status=confirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T94
+  Summary: The patient should take two puffs of alvesco twice a day.
+  ClusterId: CL27
+  TemporalProfile: future
+  PlannedChanges:
+  - The patient should take two puffs of alvesco twice a day. (T94)
+  Updates:
+  - CAP30: content_source=doctor modality=plan verification_status=confirmed clinical_status=planned temporality=future turns=T94 :: The patient should take two puffs of alvesco twice a day.
+- [MedicationChange] 80 mcg | verification_status=confirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T94
+  Summary: The dose of alvesco will be 80 mcg.
+  ClusterId: CL28
+  TemporalProfile: future
+  PlannedChanges:
+  - The dose of alvesco will be 80 mcg. (T94)
+  Updates:
+  - CAP32: content_source=doctor modality=plan verification_status=confirmed clinical_status=planned temporality=future turns=T94 :: The dose of alvesco will be 80 mcg.
+- [MedicationChange] albuterol | verification_status=confirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T102
+  Summary: The doctor will order albuterol.
+  ClusterId: CL30
+  TemporalProfile: current
+  PlannedChanges:
+  - The doctor will order albuterol. (T102)
+  Updates:
+  - CAP45: content_source=doctor modality=plan verification_status=confirmed clinical_status=planned temporality=current turns=T102 :: The doctor will order albuterol.
+- [MedicationChange] epipen | verification_status=confirmed | clinical_status=planned | modalities=interview,plan | speakers=doctor | evidence=T108,T110
+  Summary: The doctor will order an epipen refill.
+  ClusterId: CL31
+  TemporalProfile: current
+  PlannedChanges:
+  - The doctor will order an epipen refill. (T108)
+  - The doctor will refill the patient's epipen. (T110)
+  Updates:
+  - CAP34: content_source=doctor modality=plan verification_status=confirmed clinical_status=planned temporality=current turns=T108 :: The doctor will order an epipen refill.
+  - CAP37: content_source=doctor modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T110 :: The doctor will refill the patient's epipen.
+- [MedicationState] albuterol | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=doctor | evidence=T110
+  Summary: The patient should take albuterol if needed.
+  ClusterId: CL32
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient should take albuterol if needed. (T110)
+  Updates:
+  - CAP35: content_source=doctor modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T110 :: The patient should take albuterol if needed.
+- [MedicationChange] zyrtec | verification_status=confirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T110
+  Summary: The doctor will order zyrtec.
+  ClusterId: CL33
+  TemporalProfile: current
+  PlannedChanges:
+  - The doctor will order zyrtec. (T110)
+  Updates:
+  - CAP46: content_source=doctor modality=plan verification_status=confirmed clinical_status=planned temporality=current turns=T110 :: The doctor will order zyrtec.
+
+Other Structured States
+- [TestResult] fitness test | verification_status=confirmed | clinical_status=planned | modalities=interview | speakers=patient | evidence=T24
+  Summary: A fitness test will be performed.
+  ClusterId: CL6
+  TemporalProfile: future
+- [Plan] exertional tests | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T30
+  Summary: The patient will complete exertional tests.
+  ClusterId: CL8
+  TemporalProfile: spring 2022
+- [Plan] wixela | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T63
+  Summary: The physician will consider getting the patient below wixela.
+  ClusterId: CL16
+  TemporalProfile: future
+- [Plan] breathing test | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T63
+  Summary: A breathing test is planned.
+  ClusterId: CL17
+  TemporalProfile: today
+- [Plan] alvesco | verification_status=unconfirmed | clinical_status=planned | modalities=interview | speakers=doctor | evidence=T92
+  Summary: The doctor suggests using alvesco only during illness or smoke season.
+  ClusterId: CL24
+  TemporalProfile: future
+- [TestResult] numbers | verification_status=unconfirmed | clinical_status=historical | modalities=interview | speakers=doctor | evidence=T92
+  Summary: The patient's numbers were lower at that time.
+  ClusterId: CL25
+  TemporalProfile: past
+- [FollowUp] breathing test | verification_status=confirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T98
+  Summary: A breathing test will be repeated in four months.
+  ClusterId: CL29
+  TemporalProfile: four months
+- [TestResult] spirometry | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=doctor | evidence=T118
+  Summary: A spirometry test will be repeated in four months.
+  ClusterId: CL34
+  TemporalProfile: four months

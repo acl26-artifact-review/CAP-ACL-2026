@@ -1,0 +1,112 @@
+Case: D2N010
+
+Problem List and Visit State Tracking
+
+Problem List
+- high blood sugar | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T1
+  Summary: The patient reports that their blood sugars have been running in the 300s.
+  ClusterId: CL1
+  TemporalProfile: current
+  Updates:
+  - CAP1: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T1 :: The patient reports that their blood sugars have been running in the 300s.
+- poor blood sugar control | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T1
+  Summary: The patient's blood sugar is not under control.
+  ClusterId: CL2
+  TemporalProfile: current
+  Updates:
+  - CAP4: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T1 :: The patient's blood sugar is not under control.
+- pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T7
+  Summary: The patient reports pain in the left hand.
+  ClusterId: CL3
+  TemporalProfile: current
+  Updates:
+  - CAP5: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T7 :: The patient reports pain in the left hand.
+- diet | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T9
+  Summary: The patient's diet has not changed much.
+  ClusterId: CL4
+  TemporalProfile: current
+  Updates:
+  - CAP6: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T9 :: The patient's diet has not changed much.
+- knee injury | verification_status=unconfirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T23
+  Summary: The patient has a history of a knee injury.
+  ClusterId: CL5
+  TemporalProfile: past
+  Updates:
+  - CAP2: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=past turns=T23 :: The patient has a history of a knee injury.
+- knee pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T23
+  Summary: The patient reports mild knee pain.
+  ClusterId: CL6
+  TemporalProfile: current
+  Updates:
+  - CAP8: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T23 :: The patient reports mild knee pain.
+- nausea | verification_status=unconfirmed | clinical_status=resolved | modalities=interview | speakers=patient | evidence=T29
+  Summary: The patient experienced nausea a couple of days ago.
+  ClusterId: CL7
+  TemporalProfile: past
+  Updates:
+  - CAP3: content_source=patient modality=interview verification_status=unconfirmed clinical_status=resolved temporality=past turns=T29 :: The patient experienced nausea a couple of days ago.
+  - CAP14: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=past turns=T29 :: The patient reports nausea.
+- weight gain | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T29
+  Summary: The patient reports no recent weight gain.
+  ClusterId: CL8
+  TemporalProfile: recent
+  Updates:
+  - CAP7: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=recent turns=T29 :: The patient reports no recent weight gain.
+- fluid retention | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T29
+  Summary: The patient reports no fluid retention.
+  ClusterId: CL9
+  TemporalProfile: recent
+  Updates:
+  - CAP9: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=recent turns=T29 :: The patient reports no fluid retention.
+- belly pain | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T29
+  Summary: The patient reports belly pain.
+  ClusterId: CL10
+  TemporalProfile: past
+  Updates:
+  - CAP11: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=past turns=T29 :: The patient reports belly pain.
+- difficulty sleeping | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T29
+  Summary: The patient has difficulty sleeping.
+  ClusterId: CL11
+  TemporalProfile: current
+  Updates:
+  - CAP13: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T29 :: The patient has difficulty sleeping.
+- vomiting | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T29
+  Summary: The patient reports vomiting.
+  ClusterId: CL12
+  TemporalProfile: past
+  Updates:
+  - CAP15: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=past turns=T29 :: The patient reports vomiting.
+- reflux | verification_status=unconfirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T33
+  Summary: The patient has a history of reflux.
+  ClusterId: CL14
+  TemporalProfile: past
+  Updates:
+  - CAP18: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=past turns=T33 :: The patient has a history of reflux.
+- sleep problems | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T37
+  Summary: The patient reports sleep problems.
+  ClusterId: CL15
+  TemporalProfile: current
+  Updates:
+  - CAP12: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T37 :: The patient reports sleep problems.
+- elevated blood sugar | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T55
+  Summary: The patient reports elevated blood sugar.
+  ClusterId: CL16
+  TemporalProfile: current
+  Updates:
+  - CAP10: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T55 :: The patient reports elevated blood sugar.
+
+Medication Tracking
+- [MedicationState] protonix | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T29
+  Summary: The patient is taking protonix.
+  ClusterId: CL13
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient is taking protonix. (T29)
+  Updates:
+  - CAP17: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T29 :: The patient is taking protonix.
+
+Other Structured States
+- [Plan] tests | verification_status=confirmed | clinical_status=planned | modalities=assessment | speakers=doctor | evidence=T60
+  Summary: The doctor orders tests to look into the elevated blood sugar.
+  ClusterId: CL17
+  TemporalProfile: future

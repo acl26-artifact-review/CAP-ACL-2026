@@ -1,0 +1,170 @@
+Case: D2N087
+
+Problem List and Visit State Tracking
+
+Problem List
+- tick bite | verification_status=unconfirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T1,T24
+  Summary: The patient reports having received tick bites in the past.
+  ClusterId: CL1
+  TemporalProfile: current, past
+  Updates:
+  - CAP4: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T1 :: The patient has a tick bite around their knee.
+  - CAP3: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=past turns=T24 :: The patient reports having received tick bites in the past.
+- warmth | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T3
+  Summary: The patient feels warmth in the affected area.
+  ClusterId: CL2
+  TemporalProfile: current
+  Updates:
+  - CAP7: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T3 :: The patient feels warmth in the affected area.
+- arthritic pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T5,T64
+  Summary: The patient experiences typical arthritic pain.
+  ClusterId: CL3
+  TemporalProfile: current
+  Updates:
+  - CAP17: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T5 :: The patient reports pain.
+  - CAP13: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T5 :: The patient experiences typical arthritic pain.
+  - CAP1: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T64 :: The patient reports pain to palpation of the right anterior knee.
+  - CAP20: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T64 :: The patient reports pain.
+- hunting | verification_status=unconfirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T6
+  Summary: The patient was a hunter.
+  ClusterId: CL4
+  TemporalProfile: past
+  Updates:
+  - CAP30: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=past turns=T6 :: The patient was a hunter.
+- knee pain | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T9
+  Summary: The patient reports difficulty moving their knee.
+  ClusterId: CL5
+  TemporalProfile: current
+  Updates:
+  - CAP12: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T9 :: The patient reports difficulty moving their knee.
+- hunting season | verification_status=unconfirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T9
+  Summary: Hunting season is open.
+  ClusterId: CL6
+  TemporalProfile: past
+  Updates:
+  - CAP31: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=past turns=T9 :: Hunting season is open.
+- lyme disease | verification_status=unconfirmed | clinical_status=historical | modalities=interview | speakers=doctor,patient | evidence=T26,T66
+  Summary: The patient has not been previously diagnosed with Lyme disease.
+  ClusterId: CL7
+  TemporalProfile: future, past
+  Updates:
+  - CAP2: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=past turns=T26 :: The patient has not been previously diagnosed with Lyme disease.
+  - CAP6: content_source=doctor modality=interview verification_status=unconfirmed clinical_status=historical temporality=future turns=T66 :: The doctor suspects Lyme disease based on the presentation.
+- body aches | verification_status=unconfirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T32
+  Summary: The patient reports body aches.
+  ClusterId: CL8
+  TemporalProfile: current
+  Updates:
+  - CAP16: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=current turns=T32 :: The patient reports body aches.
+- chills | verification_status=unconfirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T32
+  Summary: The patient reports chills.
+  ClusterId: CL9
+  TemporalProfile: current
+  Updates:
+  - CAP18: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=current turns=T32 :: The patient reports chills.
+- headache | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T33
+  Summary: The patient reports a headache.
+  ClusterId: CL10
+  TemporalProfile: current
+  Updates:
+  - CAP15: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T33 :: The patient reports a headache.
+- dizziness | verification_status=unconfirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T36
+  Summary: The patient reports dizziness.
+  ClusterId: CL11
+  TemporalProfile: current
+  Updates:
+  - CAP19: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=current turns=T36 :: The patient reports dizziness.
+- high blood pressure | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T38
+  Summary: The patient has high blood pressure.
+  ClusterId: CL12
+  TemporalProfile: current
+  Updates:
+  - CAP14: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T38 :: The patient has high blood pressure.
+- left hand pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T41
+  Summary: The patient reports pain in the left hand.
+  ClusterId: CL13
+  TemporalProfile: current
+  Updates:
+  - CAP8: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T41 :: The patient reports pain in the left hand.
+- sugar | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T49
+  Summary: The patient tries to avoid pie because of sugar.
+  ClusterId: CL15
+  TemporalProfile: current
+  Updates:
+  - CAP5: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T49 :: The patient tries to avoid pie because of sugar.
+- edema | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T62
+  Summary: The patient reports edema in the right knee.
+  ClusterId: CL17
+  TemporalProfile: current
+  Updates:
+  - CAP9: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T62 :: The patient reports edema in the right knee.
+- hypertension | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=doctor | evidence=T72
+  Summary: The doctor recommends continuing the patient on lisinopril.
+  ClusterId: CL19
+  TemporalProfile: current
+  Updates:
+  - CAP10: content_source=doctor modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T72 :: The doctor recommends continuing the patient on lisinopril.
+- diabetes | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=doctor | evidence=T74
+  Summary: The doctor recommends continuing the patient on metformin.
+  ClusterId: CL24
+  TemporalProfile: current
+  Updates:
+  - CAP11: content_source=doctor modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T74 :: The doctor recommends continuing the patient on metformin.
+
+Medication Tracking
+- [MedicationState] lisinopril | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T41
+  Summary: The patient is taking lisinopril.
+  ClusterId: CL14
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient is taking lisinopril. (T41)
+  Updates:
+  - CAP26: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T41 :: The patient is taking lisinopril.
+- [MedicationState] metformin | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=doctor,patient | evidence=T52,T53
+  Summary: The doctor is asking if the patient is taking metformin twice a day.
+  ClusterId: CL16
+  TemporalProfile: current
+  CurrentRegimens:
+  - The doctor is asking if the patient is taking metformin twice a day. (T52)
+  - The patient reports taking metformin 'most of the time'. (T53)
+  Updates:
+  - CAP24: content_source=doctor modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T52 :: The doctor is asking if the patient is taking metformin twice a day.
+  - CAP25: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T53 :: The patient reports taking metformin 'most of the time'.
+- [MedicationChange] doxycycline | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T67
+  Summary: The doctor orders Doxycycline.
+  ClusterId: CL18
+  TemporalProfile: future
+  PlannedChanges:
+  - The doctor orders Doxycycline. (T67)
+  Updates:
+  - CAP27: content_source=doctor modality=plan verification_status=unconfirmed clinical_status=planned temporality=future turns=T67 :: The doctor orders Doxycycline.
+- [MedicationChange] lisinopril | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T72
+  Summary: The doctor orders Lisinopril.
+  ClusterId: CL22
+  TemporalProfile: future
+  PlannedChanges:
+  - The doctor orders Lisinopril. (T72)
+  Updates:
+  - CAP28: content_source=doctor modality=plan verification_status=unconfirmed clinical_status=planned temporality=future turns=T72 :: The doctor orders Lisinopril.
+- [MedicationChange] metformin | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T72
+  Summary: The doctor orders Metformin.
+  ClusterId: CL23
+  TemporalProfile: future
+  PlannedChanges:
+  - The doctor orders Metformin. (T72)
+  Updates:
+  - CAP29: content_source=doctor modality=plan verification_status=unconfirmed clinical_status=planned temporality=future turns=T72 :: The doctor orders Metformin.
+
+Other Structured States
+- [TestResult] hemoglobin a1c | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T72
+  Summary: The doctor orders a Hemoglobin A1c test.
+  ClusterId: CL20
+  TemporalProfile: future
+- [TestResult] lipid panel | verification_status=unconfirmed | clinical_status=planned | modalities=test_result | speakers=doctor | evidence=T72
+  Summary: The doctor orders a lipid panel.
+  ClusterId: CL21
+  TemporalProfile: future
+- [TestResult] basic metabolic panel | verification_status=unconfirmed | clinical_status=planned | modalities=test_result | speakers=doctor | evidence=T76
+  Summary: The doctor orders a basic metabolic panel.
+  ClusterId: CL25
+  TemporalProfile: future

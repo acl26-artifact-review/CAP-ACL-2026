@@ -1,0 +1,44 @@
+{
+  "section_miscategorizations": [
+    {
+      "text": "The patient's hemoglobin a1c is over the past couple months.",
+      "current_section": "O",
+      "expected_section": "O",
+      "severity": "minor",
+      "reason": "The intent appears to be an objective lab result (elevated A1c over past months), which belongs in O, but the sentence is incomplete/unclear. This is more a clarity issue than a section misplacement."
+    },
+    {
+      "text": "The patient will continue on albuterol, two puffs every four to six hours as needed.",
+      "current_section": "O",
+      "expected_section": "P",
+      "severity": "major",
+      "reason": "This is a treatment plan/medication management decision (continuation of therapy), which belongs in the Plan section, not in Objective findings."
+    },
+    {
+      "text": "The patient will add symbicort, two puffs twice a day during the summer.",
+      "current_section": "O",
+      "expected_section": "P",
+      "severity": "major",
+      "reason": "This is a new medication order (addition of Symbicort) and timing instructions, which are explicit management actions and should be in the Plan section."
+    },
+    {
+      "text": "The patient will increase the metformin dose.",
+      "current_section": "O",
+      "expected_section": "P",
+      "severity": "major",
+      "reason": "This describes a change in medication dosing, which is a treatment plan item and belongs in the Plan section."
+    },
+    {
+      "text": "The patient was taking prozac.",
+      "current_section": "O",
+      "expected_section": "S",
+      "severity": "major",
+      "reason": "This is a statement of current/past medication use, not a new order or change. Per instructions, current medications belong in Subjective unless framed as a treatment change."
+    }
+  ],
+  "summary_statistics": {
+    "section_appropriateness_score": 0.4,
+    "section_miscategorization_count": 5,
+    "major_section_miscategorization_count": 4
+  }
+}

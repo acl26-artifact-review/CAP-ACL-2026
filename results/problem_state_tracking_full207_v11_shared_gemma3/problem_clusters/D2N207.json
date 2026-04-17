@@ -1,0 +1,1677 @@
+{
+  "clusters": [
+    {
+      "cluster_id": "CL1",
+      "cluster_type": "MedicationState",
+      "canonical_concept": "lasix",
+      "primary_cap_type": "MedicationStatement",
+      "source_cap_types": [
+        "MedicationStatement"
+      ],
+      "final_verification_status": "confirmed",
+      "clinical_status": "active",
+      "final_assertion": "present",
+      "visit_state": "active",
+      "source_speakers": [
+        "doctor"
+      ],
+      "source_modalities": [
+        "interview",
+        "plan"
+      ],
+      "temporal_profile": [
+        "additional dose",
+        "current"
+      ],
+      "evidence_turn_ids": [
+        "T10",
+        "T46"
+      ],
+      "supporting_cap_ids": [
+        "CAP32",
+        "CAP36",
+        "CAP30"
+      ],
+      "cluster_summary": "The patient will receive an additional lasix dose at 4:00 PM if needed.",
+      "salience_score": 8,
+      "is_low_value": false,
+      "updates": [
+        {
+          "cap_id": "CAP32",
+          "content_source": "doctor",
+          "modality": "interview",
+          "verification_status": "confirmed",
+          "clinical_status": "active",
+          "assertion": "present",
+          "visit_state": "active",
+          "temporality": "current",
+          "turn_ids": [
+            "T10"
+          ],
+          "proposition_text": "The dose of lasix is 40 milligrams once a day."
+        },
+        {
+          "cap_id": "CAP36",
+          "content_source": "doctor",
+          "modality": "interview",
+          "verification_status": "confirmed",
+          "clinical_status": "active",
+          "assertion": "present",
+          "visit_state": "active",
+          "temporality": "current",
+          "turn_ids": [
+            "T10"
+          ],
+          "proposition_text": "The patient is taking lasix."
+        },
+        {
+          "cap_id": "CAP30",
+          "content_source": "doctor",
+          "modality": "plan",
+          "verification_status": "confirmed",
+          "clinical_status": "active",
+          "assertion": "present",
+          "visit_state": "active",
+          "temporality": "additional dose",
+          "turn_ids": [
+            "T46"
+          ],
+          "proposition_text": "The patient will receive an additional lasix dose at 4:00 PM if needed."
+        }
+      ],
+      "current_regimens": [
+        {
+          "proposition_text": "The dose of lasix is 40 milligrams once a day.",
+          "turn_ids": [
+            "T10"
+          ],
+          "attributes": {
+            "dose": "40 mg",
+            "frequency": "once a day"
+          }
+        },
+        {
+          "proposition_text": "The patient is taking lasix.",
+          "turn_ids": [
+            "T10"
+          ],
+          "attributes": {}
+        },
+        {
+          "proposition_text": "The patient will receive an additional lasix dose at 4:00 PM if needed.",
+          "turn_ids": [
+            "T46"
+          ],
+          "attributes": {
+            "dose": "80 mg"
+          }
+        }
+      ]
+    },
+    {
+      "cluster_id": "CL2",
+      "cluster_type": "ProblemState",
+      "canonical_concept": "dyspnea",
+      "primary_cap_type": "Symptom",
+      "source_cap_types": [
+        "Symptom"
+      ],
+      "final_verification_status": "confirmed",
+      "clinical_status": "active",
+      "final_assertion": "present",
+      "visit_state": "active",
+      "source_speakers": [
+        "patient"
+      ],
+      "source_modalities": [
+        "interview"
+      ],
+      "temporal_profile": [
+        "current"
+      ],
+      "evidence_turn_ids": [
+        "T13"
+      ],
+      "supporting_cap_ids": [
+        "CAP14"
+      ],
+      "cluster_summary": "The patient reports shortness of breath.",
+      "salience_score": 10,
+      "is_low_value": false,
+      "updates": [
+        {
+          "cap_id": "CAP14",
+          "content_source": "patient",
+          "modality": "interview",
+          "verification_status": "confirmed",
+          "clinical_status": "active",
+          "assertion": "present",
+          "visit_state": "active",
+          "temporality": "current",
+          "turn_ids": [
+            "T13"
+          ],
+          "proposition_text": "The patient reports shortness of breath."
+        }
+      ]
+    },
+    {
+      "cluster_id": "CL3",
+      "cluster_type": "ProblemState",
+      "canonical_concept": "nocturia",
+      "primary_cap_type": "Symptom",
+      "source_cap_types": [
+        "Symptom"
+      ],
+      "final_verification_status": "confirmed",
+      "clinical_status": "active",
+      "final_assertion": "present",
+      "visit_state": "active",
+      "source_speakers": [
+        "patient"
+      ],
+      "source_modalities": [
+        "interview"
+      ],
+      "temporal_profile": [
+        "current"
+      ],
+      "evidence_turn_ids": [
+        "T15"
+      ],
+      "supporting_cap_ids": [
+        "CAP15"
+      ],
+      "cluster_summary": "The patient reports urinating at night.",
+      "salience_score": 10,
+      "is_low_value": false,
+      "updates": [
+        {
+          "cap_id": "CAP15",
+          "content_source": "patient",
+          "modality": "interview",
+          "verification_status": "confirmed",
+          "clinical_status": "active",
+          "assertion": "present",
+          "visit_state": "active",
+          "temporality": "current",
+          "turn_ids": [
+            "T15"
+          ],
+          "proposition_text": "The patient reports urinating at night."
+        }
+      ]
+    },
+    {
+      "cluster_id": "CL4",
+      "cluster_type": "ProblemState",
+      "canonical_concept": "kidney dysfunction",
+      "primary_cap_type": "Problem",
+      "source_cap_types": [
+        "Problem"
+      ],
+      "final_verification_status": "unconfirmed",
+      "clinical_status": "active",
+      "final_assertion": "uncertain",
+      "visit_state": "active",
+      "source_speakers": [
+        "doctor"
+      ],
+      "source_modalities": [
+        "interview"
+      ],
+      "temporal_profile": [
+        "current"
+      ],
+      "evidence_turn_ids": [
+        "T24",
+        "T35"
+      ],
+      "supporting_cap_ids": [
+        "CAP18",
+        "CAP2"
+      ],
+      "cluster_summary": "The doctor recommends avoiding anti-inflammatories to prevent worsening kidney function.",
+      "salience_score": 10,
+      "is_low_value": false,
+      "updates": [
+        {
+          "cap_id": "CAP18",
+          "content_source": "doctor",
+          "modality": "interview",
+          "verification_status": "confirmed",
+          "clinical_status": "active",
+          "assertion": "present",
+          "visit_state": "active",
+          "temporality": "current",
+          "turn_ids": [
+            "T24"
+          ],
+          "proposition_text": "The patient has kidney dysfunction."
+        },
+        {
+          "cap_id": "CAP2",
+          "content_source": "doctor",
+          "modality": "interview",
+          "verification_status": "unconfirmed",
+          "clinical_status": "active",
+          "assertion": "uncertain",
+          "visit_state": "active",
+          "temporality": "current",
+          "turn_ids": [
+            "T35"
+          ],
+          "proposition_text": "The doctor recommends avoiding anti-inflammatories to prevent worsening kidney function."
+        }
+      ]
+    },
+    {
+      "cluster_id": "CL5",
+      "cluster_type": "ProblemState",
+      "canonical_concept": "pain",
+      "primary_cap_type": "Symptom",
+      "source_cap_types": [
+        "Problem",
+        "Symptom"
+      ],
+      "final_verification_status": "confirmed",
+      "clinical_status": "active",
+      "final_assertion": "present",
+      "visit_state": "active",
+      "source_speakers": [
+        "patient"
+      ],
+      "source_modalities": [
+        "interview"
+      ],
+      "temporal_profile": [
+        "current"
+      ],
+      "evidence_turn_ids": [
+        "T25",
+        "T27"
+      ],
+      "supporting_cap_ids": [
+        "CAP11",
+        "CAP20"
+      ],
+      "cluster_summary": "The patient reports pain in their feet.",
+      "salience_score": 10,
+      "is_low_value": false,
+      "updates": [
+        {
+          "cap_id": "CAP11",
+          "content_source": "patient",
+          "modality": "interview",
+          "verification_status": "confirmed",
+          "clinical_status": "active",
+          "assertion": "present",
+          "visit_state": "active",
+          "temporality": "current",
+          "turn_ids": [
+            "T25"
+          ],
+          "proposition_text": "The patient reports pain in their feet."
+        },
+        {
+          "cap_id": "CAP20",
+          "content_source": "patient",
+          "modality": "interview",
+          "verification_status": "confirmed",
+          "clinical_status": "active",
+          "assertion": "present",
+          "visit_state": "active",
+          "temporality": "current",
+          "turn_ids": [
+            "T27"
+          ],
+          "proposition_text": "The patient reports pain."
+        }
+      ]
+    },
+    {
+      "cluster_id": "CL6",
+      "cluster_type": "MedicationState",
+      "canonical_concept": "motrin",
+      "primary_cap_type": "MedicationStatement",
+      "source_cap_types": [
+        "MedicationStatement"
+      ],
+      "final_verification_status": "confirmed",
+      "clinical_status": "active",
+      "final_assertion": "present",
+      "visit_state": "active",
+      "source_speakers": [
+        "patient"
+      ],
+      "source_modalities": [
+        "interview"
+      ],
+      "temporal_profile": [
+        "past"
+      ],
+      "evidence_turn_ids": [
+        "T25"
+      ],
+      "supporting_cap_ids": [
+        "CAP37"
+      ],
+      "cluster_summary": "The patient took motrin.",
+      "salience_score": 8,
+      "is_low_value": false,
+      "updates": [
+        {
+          "cap_id": "CAP37",
+          "content_source": "patient",
+          "modality": "interview",
+          "verification_status": "confirmed",
+          "clinical_status": "active",
+          "assertion": "present",
+          "visit_state": "active",
+          "temporality": "past",
+          "turn_ids": [
+            "T25"
+          ],
+          "proposition_text": "The patient took motrin."
+        }
+      ],
+      "current_regimens": [
+        {
+          "proposition_text": "The patient took motrin.",
+          "turn_ids": [
+            "T25"
+          ],
+          "attributes": {
+            "use": "taken"
+          }
+        }
+      ]
+    },
+    {
+      "cluster_id": "CL7",
+      "cluster_type": "MedicationState",
+      "canonical_concept": "tylenol",
+      "primary_cap_type": "MedicationStatement",
+      "source_cap_types": [
+        "MedicationStatement"
+      ],
+      "final_verification_status": "confirmed",
+      "clinical_status": "active",
+      "final_assertion": "present",
+      "visit_state": "active",
+      "source_speakers": [
+        "patient"
+      ],
+      "source_modalities": [
+        "interview"
+      ],
+      "temporal_profile": [
+        "current"
+      ],
+      "evidence_turn_ids": [
+        "T26"
+      ],
+      "supporting_cap_ids": [
+        "CAP38"
+      ],
+      "cluster_summary": "The patient takes tylenol.",
+      "salience_score": 8,
+      "is_low_value": false,
+      "updates": [
+        {
+          "cap_id": "CAP38",
+          "content_source": "patient",
+          "modality": "interview",
+          "verification_status": "confirmed",
+          "clinical_status": "active",
+          "assertion": "present",
+          "visit_state": "active",
+          "temporality": "current",
+          "turn_ids": [
+            "T26"
+          ],
+          "proposition_text": "The patient takes tylenol."
+        }
+      ],
+      "current_regimens": [
+        {
+          "proposition_text": "The patient takes tylenol.",
+          "turn_ids": [
+            "T26"
+          ],
+          "attributes": {
+            "use": "taken"
+          }
+        }
+      ]
+    },
+    {
+      "cluster_id": "CL8",
+      "cluster_type": "ProblemState",
+      "canonical_concept": "high potassium",
+      "primary_cap_type": "Problem",
+      "source_cap_types": [
+        "Problem"
+      ],
+      "final_verification_status": "unconfirmed",
+      "clinical_status": "planned",
+      "final_assertion": "hypothetical",
+      "visit_state": "planned",
+      "source_speakers": [
+        "doctor"
+      ],
+      "source_modalities": [
+        "interview"
+      ],
+      "temporal_profile": [
+        "future"
+      ],
+      "evidence_turn_ids": [
+        "T33"
+      ],
+      "supporting_cap_ids": [
+        "CAP3"
+      ],
+      "cluster_summary": "The doctor advises the patient to avoid high potassium foods.",
+      "salience_score": 10,
+      "is_low_value": false,
+      "updates": [
+        {
+          "cap_id": "CAP3",
+          "content_source": "doctor",
+          "modality": "interview",
+          "verification_status": "unconfirmed",
+          "clinical_status": "planned",
+          "assertion": "hypothetical",
+          "visit_state": "planned",
+          "temporality": "future",
+          "turn_ids": [
+            "T33"
+          ],
+          "proposition_text": "The doctor advises the patient to avoid high potassium foods."
+        }
+      ]
+    },
+    {
+      "cluster_id": "CL9",
+      "cluster_type": "ProblemState",
+      "canonical_concept": "bananas",
+      "primary_cap_type": "Symptom",
+      "source_cap_types": [
+        "Symptom"
+      ],
+      "final_verification_status": "confirmed",
+      "clinical_status": "active",
+      "final_assertion": "present",
+      "visit_state": "active",
+      "source_speakers": [
+        "patient"
+      ],
+      "source_modalities": [
+        "interview"
+      ],
+      "temporal_profile": [
+        "current"
+      ],
+      "evidence_turn_ids": [
+        "T34"
+      ],
+      "supporting_cap_ids": [
+        "CAP4"
+      ],
+      "cluster_summary": "The patient is unsure if bananas are a problem.",
+      "salience_score": 10,
+      "is_low_value": false,
+      "updates": [
+        {
+          "cap_id": "CAP4",
+          "content_source": "patient",
+          "modality": "interview",
+          "verification_status": "confirmed",
+          "clinical_status": "active",
+          "assertion": "present",
+          "visit_state": "active",
+          "temporality": "current",
+          "turn_ids": [
+            "T34"
+          ],
+          "proposition_text": "The patient is unsure if bananas are a problem."
+        }
+      ]
+    },
+    {
+      "cluster_id": "CL10",
+      "cluster_type": "ProblemState",
+      "canonical_concept": "potatoes",
+      "primary_cap_type": "Symptom",
+      "source_cap_types": [
+        "Symptom"
+      ],
+      "final_verification_status": "confirmed",
+      "clinical_status": "active",
+      "final_assertion": "present",
+      "visit_state": "active",
+      "source_speakers": [
+        "patient"
+      ],
+      "source_modalities": [
+        "interview"
+      ],
+      "temporal_profile": [
+        "current"
+      ],
+      "evidence_turn_ids": [
+        "T34"
+      ],
+      "supporting_cap_ids": [
+        "CAP5"
+      ],
+      "cluster_summary": "The patient is unsure if potatoes are a problem.",
+      "salience_score": 10,
+      "is_low_value": false,
+      "updates": [
+        {
+          "cap_id": "CAP5",
+          "content_source": "patient",
+          "modality": "interview",
+          "verification_status": "confirmed",
+          "clinical_status": "active",
+          "assertion": "present",
+          "visit_state": "active",
+          "temporality": "current",
+          "turn_ids": [
+            "T34"
+          ],
+          "proposition_text": "The patient is unsure if potatoes are a problem."
+        }
+      ]
+    },
+    {
+      "cluster_id": "CL11",
+      "cluster_type": "MedicationChange",
+      "canonical_concept": "referral to a dietitian",
+      "primary_cap_type": "MedicationRequest",
+      "source_cap_types": [
+        "MedicationRequest"
+      ],
+      "final_verification_status": "unconfirmed",
+      "clinical_status": "planned",
+      "final_assertion": "hypothetical",
+      "visit_state": "planned",
+      "source_speakers": [
+        "doctor"
+      ],
+      "source_modalities": [
+        "plan"
+      ],
+      "temporal_profile": [
+        "future"
+      ],
+      "evidence_turn_ids": [
+        "T38"
+      ],
+      "supporting_cap_ids": [
+        "CAP24"
+      ],
+      "cluster_summary": "The doctor orders a referral to a dietitian.",
+      "salience_score": 9,
+      "is_low_value": false,
+      "updates": [
+        {
+          "cap_id": "CAP24",
+          "content_source": "doctor",
+          "modality": "plan",
+          "verification_status": "unconfirmed",
+          "clinical_status": "planned",
+          "assertion": "hypothetical",
+          "visit_state": "planned",
+          "temporality": "future",
+          "turn_ids": [
+            "T38"
+          ],
+          "proposition_text": "The doctor orders a referral to a dietitian."
+        }
+      ],
+      "planned_changes": [
+        {
+          "proposition_text": "The doctor orders a referral to a dietitian.",
+          "turn_ids": [
+            "T38"
+          ],
+          "attributes": {}
+        }
+      ]
+    },
+    {
+      "cluster_id": "CL12",
+      "cluster_type": "ProblemState",
+      "canonical_concept": "shortness of breath",
+      "primary_cap_type": "Problem",
+      "source_cap_types": [
+        "Problem",
+        "Symptom"
+      ],
+      "final_verification_status": "unconfirmed",
+      "clinical_status": "active",
+      "final_assertion": "uncertain",
+      "visit_state": "active",
+      "source_speakers": [
+        "patient"
+      ],
+      "source_modalities": [
+        "interview"
+      ],
+      "temporal_profile": [
+        "acute",
+        "current"
+      ],
+      "evidence_turn_ids": [
+        "T46"
+      ],
+      "supporting_cap_ids": [
+        "CAP6",
+        "CAP16"
+      ],
+      "cluster_summary": "The patient is experiencing an acute heart failure exacerbation.",
+      "salience_score": 10,
+      "is_low_value": false,
+      "updates": [
+        {
+          "cap_id": "CAP6",
+          "content_source": "patient",
+          "modality": "interview",
+          "verification_status": "confirmed",
+          "clinical_status": "active",
+          "assertion": "present",
+          "visit_state": "active",
+          "temporality": "acute",
+          "turn_ids": [
+            "T46"
+          ],
+          "proposition_text": "The patient is experiencing an acute heart failure exacerbation."
+        },
+        {
+          "cap_id": "CAP16",
+          "content_source": "patient",
+          "modality": "interview",
+          "verification_status": "unconfirmed",
+          "clinical_status": "active",
+          "assertion": "uncertain",
+          "visit_state": "active",
+          "temporality": "current",
+          "turn_ids": [
+            "T46"
+          ],
+          "proposition_text": "The patient reports shortness of breath."
+        }
+      ]
+    },
+    {
+      "cluster_id": "CL13",
+      "cluster_type": "ProblemState",
+      "canonical_concept": "heart failure exacerbation",
+      "primary_cap_type": "Problem",
+      "source_cap_types": [
+        "Problem"
+      ],
+      "final_verification_status": "confirmed",
+      "clinical_status": "active",
+      "final_assertion": "present",
+      "visit_state": "active",
+      "source_speakers": [
+        "doctor"
+      ],
+      "source_modalities": [
+        "assessment"
+      ],
+      "temporal_profile": [
+        "current"
+      ],
+      "evidence_turn_ids": [
+        "T46"
+      ],
+      "supporting_cap_ids": [
+        "CAP7"
+      ],
+      "cluster_summary": "The doctor assesses an acute heart failure exacerbation.",
+      "salience_score": 10,
+      "is_low_value": false,
+      "updates": [
+        {
+          "cap_id": "CAP7",
+          "content_source": "doctor",
+          "modality": "assessment",
+          "verification_status": "confirmed",
+          "clinical_status": "active",
+          "assertion": "present",
+          "visit_state": "active",
+          "temporality": "current",
+          "turn_ids": [
+            "T46"
+          ],
+          "proposition_text": "The doctor assesses an acute heart failure exacerbation."
+        }
+      ]
+    },
+    {
+      "cluster_id": "CL14",
+      "cluster_type": "ProblemState",
+      "canonical_concept": "edema",
+      "primary_cap_type": "Problem",
+      "source_cap_types": [
+        "Problem"
+      ],
+      "final_verification_status": "confirmed",
+      "clinical_status": "active",
+      "final_assertion": "present",
+      "visit_state": "active",
+      "source_speakers": [
+        "doctor"
+      ],
+      "source_modalities": [
+        "assessment"
+      ],
+      "temporal_profile": [
+        "current"
+      ],
+      "evidence_turn_ids": [
+        "T46"
+      ],
+      "supporting_cap_ids": [
+        "CAP12"
+      ],
+      "cluster_summary": "The doctor finds bilateral lower extremity edema.",
+      "salience_score": 10,
+      "is_low_value": false,
+      "updates": [
+        {
+          "cap_id": "CAP12",
+          "content_source": "doctor",
+          "modality": "assessment",
+          "verification_status": "confirmed",
+          "clinical_status": "active",
+          "assertion": "present",
+          "visit_state": "active",
+          "temporality": "current",
+          "turn_ids": [
+            "T46"
+          ],
+          "proposition_text": "The doctor finds bilateral lower extremity edema."
+        }
+      ]
+    },
+    {
+      "cluster_id": "CL15",
+      "cluster_type": "Plan",
+      "canonical_concept": "lasix",
+      "primary_cap_type": "Order",
+      "source_cap_types": [
+        "Order"
+      ],
+      "final_verification_status": "unconfirmed",
+      "clinical_status": "planned",
+      "final_assertion": "hypothetical",
+      "visit_state": "planned",
+      "source_speakers": [
+        "doctor"
+      ],
+      "source_modalities": [
+        "plan"
+      ],
+      "temporal_profile": [
+        "future"
+      ],
+      "evidence_turn_ids": [
+        "T46"
+      ],
+      "supporting_cap_ids": [
+        "CAP22"
+      ],
+      "cluster_summary": "The doctor orders lasix at eighty milligrams a day.",
+      "salience_score": 9,
+      "is_low_value": false,
+      "updates": [
+        {
+          "cap_id": "CAP22",
+          "content_source": "doctor",
+          "modality": "plan",
+          "verification_status": "unconfirmed",
+          "clinical_status": "planned",
+          "assertion": "hypothetical",
+          "visit_state": "planned",
+          "temporality": "future",
+          "turn_ids": [
+            "T46"
+          ],
+          "proposition_text": "The doctor orders lasix at eighty milligrams a day."
+        }
+      ]
+    },
+    {
+      "cluster_id": "CL16",
+      "cluster_type": "MedicationChange",
+      "canonical_concept": "lasix",
+      "primary_cap_type": "MedicationStatement",
+      "source_cap_types": [
+        "MedicationStatement"
+      ],
+      "final_verification_status": "unconfirmed",
+      "clinical_status": "planned",
+      "final_assertion": "hypothetical",
+      "visit_state": "planned",
+      "source_speakers": [
+        "doctor"
+      ],
+      "source_modalities": [
+        "plan"
+      ],
+      "temporal_profile": [
+        "future",
+        "increased dose"
+      ],
+      "evidence_turn_ids": [
+        "T46"
+      ],
+      "supporting_cap_ids": [
+        "CAP29",
+        "CAP31",
+        "CAP34",
+        "CAP35"
+      ],
+      "cluster_summary": "The doctor plans to increase the lasix dosage to eighty milligrams a day.",
+      "salience_score": 8,
+      "is_low_value": false,
+      "updates": [
+        {
+          "cap_id": "CAP29",
+          "content_source": "doctor",
+          "modality": "plan",
+          "verification_status": "unconfirmed",
+          "clinical_status": "planned",
+          "assertion": "hypothetical",
+          "visit_state": "planned",
+          "temporality": "future",
+          "turn_ids": [
+            "T46"
+          ],
+          "proposition_text": "The doctor plans to increase the lasix dosage to eighty milligrams a day."
+        },
+        {
+          "cap_id": "CAP31",
+          "content_source": "doctor",
+          "modality": "plan",
+          "verification_status": "confirmed",
+          "clinical_status": "active",
+          "assertion": "present",
+          "visit_state": "active",
+          "temporality": "increased dose",
+          "turn_ids": [
+            "T46"
+          ],
+          "proposition_text": "The patient's lasix dose will be increased to 80 milligrams per day."
+        },
+        {
+          "cap_id": "CAP34",
+          "content_source": "doctor",
+          "modality": "plan",
+          "verification_status": "unconfirmed",
+          "clinical_status": "planned",
+          "assertion": "hypothetical",
+          "visit_state": "planned",
+          "temporality": "future",
+          "turn_ids": [
+            "T46"
+          ],
+          "proposition_text": "The doctor plans to increase lasix dosage."
+        },
+        {
+          "cap_id": "CAP35",
+          "content_source": "doctor",
+          "modality": "plan",
+          "verification_status": "unconfirmed",
+          "clinical_status": "planned",
+          "assertion": "hypothetical",
+          "visit_state": "planned",
+          "temporality": "future",
+          "turn_ids": [
+            "T46"
+          ],
+          "proposition_text": "The doctor plans to increase lasix."
+        }
+      ],
+      "planned_changes": [
+        {
+          "proposition_text": "The doctor plans to increase the lasix dosage to eighty milligrams a day.",
+          "turn_ids": [
+            "T46"
+          ],
+          "attributes": {}
+        },
+        {
+          "proposition_text": "The patient's lasix dose will be increased to 80 milligrams per day.",
+          "turn_ids": [
+            "T46"
+          ],
+          "attributes": {
+            "dose": "80 mg"
+          }
+        },
+        {
+          "proposition_text": "The doctor plans to increase lasix dosage.",
+          "turn_ids": [
+            "T46"
+          ],
+          "attributes": {}
+        },
+        {
+          "proposition_text": "The doctor plans to increase lasix.",
+          "turn_ids": [
+            "T46"
+          ],
+          "attributes": {}
+        }
+      ]
+    },
+    {
+      "cluster_id": "CL17",
+      "cluster_type": "FollowUp",
+      "canonical_concept": "lasix",
+      "primary_cap_type": "FollowUp",
+      "source_cap_types": [
+        "FollowUp"
+      ],
+      "final_verification_status": "unconfirmed",
+      "clinical_status": "planned",
+      "final_assertion": "hypothetical",
+      "visit_state": "planned",
+      "source_speakers": [
+        "doctor"
+      ],
+      "source_modalities": [
+        "plan"
+      ],
+      "temporal_profile": [
+        "future"
+      ],
+      "evidence_turn_ids": [
+        "T46"
+      ],
+      "supporting_cap_ids": [
+        "CAP33"
+      ],
+      "cluster_summary": "The doctor orders a follow-up call in two days.",
+      "salience_score": 8,
+      "is_low_value": false,
+      "updates": [
+        {
+          "cap_id": "CAP33",
+          "content_source": "doctor",
+          "modality": "plan",
+          "verification_status": "unconfirmed",
+          "clinical_status": "planned",
+          "assertion": "hypothetical",
+          "visit_state": "planned",
+          "temporality": "future",
+          "turn_ids": [
+            "T46"
+          ],
+          "proposition_text": "The doctor orders a follow-up call in two days."
+        }
+      ]
+    },
+    {
+      "cluster_id": "CL18",
+      "cluster_type": "ProblemState",
+      "canonical_concept": "chronic kidney disease",
+      "primary_cap_type": "Problem",
+      "source_cap_types": [
+        "Problem"
+      ],
+      "final_verification_status": "confirmed",
+      "clinical_status": "active",
+      "final_assertion": "present",
+      "visit_state": "active",
+      "source_speakers": [
+        "doctor"
+      ],
+      "source_modalities": [
+        "interview"
+      ],
+      "temporal_profile": [
+        "current"
+      ],
+      "evidence_turn_ids": [
+        "T50"
+      ],
+      "supporting_cap_ids": [
+        "CAP8"
+      ],
+      "cluster_summary": "The patient has stage three chronic kidney disease.",
+      "salience_score": 10,
+      "is_low_value": false,
+      "updates": [
+        {
+          "cap_id": "CAP8",
+          "content_source": "doctor",
+          "modality": "interview",
+          "verification_status": "confirmed",
+          "clinical_status": "active",
+          "assertion": "present",
+          "visit_state": "active",
+          "temporality": "current",
+          "turn_ids": [
+            "T50"
+          ],
+          "proposition_text": "The patient has stage three chronic kidney disease."
+        }
+      ]
+    },
+    {
+      "cluster_id": "CL19",
+      "cluster_type": "MedicationChange",
+      "canonical_concept": "motrin",
+      "primary_cap_type": "MedicationRequest",
+      "source_cap_types": [
+        "MedicationRequest"
+      ],
+      "final_verification_status": "refuted",
+      "clinical_status": "historical",
+      "final_assertion": "historical",
+      "visit_state": "historical",
+      "source_speakers": [
+        "doctor"
+      ],
+      "source_modalities": [
+        "plan"
+      ],
+      "temporal_profile": [
+        "current"
+      ],
+      "evidence_turn_ids": [
+        "T50"
+      ],
+      "supporting_cap_ids": [
+        "CAP21"
+      ],
+      "cluster_summary": "The doctor wants the patient to stop taking Motrin and Advil.",
+      "salience_score": 9,
+      "is_low_value": false,
+      "updates": [
+        {
+          "cap_id": "CAP21",
+          "content_source": "doctor",
+          "modality": "plan",
+          "verification_status": "refuted",
+          "clinical_status": "historical",
+          "assertion": "historical",
+          "visit_state": "historical",
+          "temporality": "current",
+          "turn_ids": [
+            "T50"
+          ],
+          "proposition_text": "The doctor wants the patient to stop taking Motrin and Advil."
+        }
+      ],
+      "planned_changes": [
+        {
+          "proposition_text": "The doctor wants the patient to stop taking Motrin and Advil.",
+          "turn_ids": [
+            "T50"
+          ],
+          "attributes": {}
+        }
+      ]
+    },
+    {
+      "cluster_id": "CL20",
+      "cluster_type": "MedicationChange",
+      "canonical_concept": "tylenol",
+      "primary_cap_type": "MedicationRequest",
+      "source_cap_types": [
+        "MedicationRequest"
+      ],
+      "final_verification_status": "unconfirmed",
+      "clinical_status": "planned",
+      "final_assertion": "hypothetical",
+      "visit_state": "planned",
+      "source_speakers": [
+        "doctor"
+      ],
+      "source_modalities": [
+        "plan"
+      ],
+      "temporal_profile": [
+        "current"
+      ],
+      "evidence_turn_ids": [
+        "T50"
+      ],
+      "supporting_cap_ids": [
+        "CAP25"
+      ],
+      "cluster_summary": "The doctor wants the patient to take Tylenol.",
+      "salience_score": 9,
+      "is_low_value": false,
+      "updates": [
+        {
+          "cap_id": "CAP25",
+          "content_source": "doctor",
+          "modality": "plan",
+          "verification_status": "unconfirmed",
+          "clinical_status": "planned",
+          "assertion": "hypothetical",
+          "visit_state": "planned",
+          "temporality": "current",
+          "turn_ids": [
+            "T50"
+          ],
+          "proposition_text": "The doctor wants the patient to take Tylenol."
+        }
+      ],
+      "planned_changes": [
+        {
+          "proposition_text": "The doctor wants the patient to take Tylenol.",
+          "turn_ids": [
+            "T50"
+          ],
+          "attributes": {}
+        }
+      ]
+    },
+    {
+      "cluster_id": "CL21",
+      "cluster_type": "Plan",
+      "canonical_concept": "chest x-ray",
+      "primary_cap_type": "Order",
+      "source_cap_types": [
+        "Order"
+      ],
+      "final_verification_status": "unconfirmed",
+      "clinical_status": "planned",
+      "final_assertion": "hypothetical",
+      "visit_state": "planned",
+      "source_speakers": [
+        "doctor"
+      ],
+      "source_modalities": [
+        "plan"
+      ],
+      "temporal_profile": [
+        "soon"
+      ],
+      "evidence_turn_ids": [
+        "T50"
+      ],
+      "supporting_cap_ids": [
+        "CAP27"
+      ],
+      "cluster_summary": "A chest x-ray will be ordered.",
+      "salience_score": 9,
+      "is_low_value": false,
+      "updates": [
+        {
+          "cap_id": "CAP27",
+          "content_source": "doctor",
+          "modality": "plan",
+          "verification_status": "unconfirmed",
+          "clinical_status": "planned",
+          "assertion": "hypothetical",
+          "visit_state": "planned",
+          "temporality": "soon",
+          "turn_ids": [
+            "T50"
+          ],
+          "proposition_text": "A chest x-ray will be ordered."
+        }
+      ]
+    },
+    {
+      "cluster_id": "CL22",
+      "cluster_type": "Plan",
+      "canonical_concept": "echocardiogram",
+      "primary_cap_type": "Order",
+      "source_cap_types": [
+        "Order"
+      ],
+      "final_verification_status": "unconfirmed",
+      "clinical_status": "planned",
+      "final_assertion": "hypothetical",
+      "visit_state": "planned",
+      "source_speakers": [
+        "doctor"
+      ],
+      "source_modalities": [
+        "plan"
+      ],
+      "temporal_profile": [
+        "soon"
+      ],
+      "evidence_turn_ids": [
+        "T50"
+      ],
+      "supporting_cap_ids": [
+        "CAP28"
+      ],
+      "cluster_summary": "An echocardiogram will be ordered.",
+      "salience_score": 9,
+      "is_low_value": false,
+      "updates": [
+        {
+          "cap_id": "CAP28",
+          "content_source": "doctor",
+          "modality": "plan",
+          "verification_status": "unconfirmed",
+          "clinical_status": "planned",
+          "assertion": "hypothetical",
+          "visit_state": "planned",
+          "temporality": "soon",
+          "turn_ids": [
+            "T50"
+          ],
+          "proposition_text": "An echocardiogram will be ordered."
+        }
+      ]
+    },
+    {
+      "cluster_id": "CL23",
+      "cluster_type": "ProblemState",
+      "canonical_concept": "foot pain",
+      "primary_cap_type": "Symptom",
+      "source_cap_types": [
+        "Symptom"
+      ],
+      "final_verification_status": "unconfirmed",
+      "clinical_status": "active",
+      "final_assertion": "uncertain",
+      "visit_state": "active",
+      "source_speakers": [
+        "patient"
+      ],
+      "source_modalities": [
+        "interview"
+      ],
+      "temporal_profile": [
+        "current"
+      ],
+      "evidence_turn_ids": [
+        "T51"
+      ],
+      "supporting_cap_ids": [
+        "CAP19"
+      ],
+      "cluster_summary": "The patient reports foot pain.",
+      "salience_score": 10,
+      "is_low_value": false,
+      "updates": [
+        {
+          "cap_id": "CAP19",
+          "content_source": "patient",
+          "modality": "interview",
+          "verification_status": "unconfirmed",
+          "clinical_status": "active",
+          "assertion": "uncertain",
+          "visit_state": "active",
+          "temporality": "current",
+          "turn_ids": [
+            "T51"
+          ],
+          "proposition_text": "The patient reports foot pain."
+        }
+      ]
+    },
+    {
+      "cluster_id": "CL24",
+      "cluster_type": "ProblemState",
+      "canonical_concept": "left hand pain",
+      "primary_cap_type": "Symptom",
+      "source_cap_types": [
+        "Symptom"
+      ],
+      "final_verification_status": "confirmed",
+      "clinical_status": "active",
+      "final_assertion": "present",
+      "visit_state": "active",
+      "source_speakers": [
+        "patient"
+      ],
+      "source_modalities": [
+        "interview"
+      ],
+      "temporal_profile": [
+        "current"
+      ],
+      "evidence_turn_ids": [
+        "T59"
+      ],
+      "supporting_cap_ids": [
+        "CAP9"
+      ],
+      "cluster_summary": "The patient reports pain in the left hand.",
+      "salience_score": 10,
+      "is_low_value": false,
+      "updates": [
+        {
+          "cap_id": "CAP9",
+          "content_source": "patient",
+          "modality": "interview",
+          "verification_status": "confirmed",
+          "clinical_status": "active",
+          "assertion": "present",
+          "visit_state": "active",
+          "temporality": "current",
+          "turn_ids": [
+            "T59"
+          ],
+          "proposition_text": "The patient reports pain in the left hand."
+        }
+      ]
+    },
+    {
+      "cluster_id": "CL25",
+      "cluster_type": "ProblemState",
+      "canonical_concept": "possible gout flare",
+      "primary_cap_type": "Problem",
+      "source_cap_types": [
+        "Problem"
+      ],
+      "final_verification_status": "unconfirmed",
+      "clinical_status": "active",
+      "final_assertion": "uncertain",
+      "visit_state": "active",
+      "source_speakers": [
+        "doctor"
+      ],
+      "source_modalities": [
+        "interview"
+      ],
+      "temporal_profile": [
+        "current",
+        "possible"
+      ],
+      "evidence_turn_ids": [
+        "T60"
+      ],
+      "supporting_cap_ids": [
+        "CAP1",
+        "CAP13"
+      ],
+      "cluster_summary": "The doctor suspects a possible gout flare.",
+      "salience_score": 10,
+      "is_low_value": false,
+      "updates": [
+        {
+          "cap_id": "CAP1",
+          "content_source": "doctor",
+          "modality": "interview",
+          "verification_status": "unconfirmed",
+          "clinical_status": "active",
+          "assertion": "uncertain",
+          "visit_state": "active",
+          "temporality": "possible",
+          "turn_ids": [
+            "T60"
+          ],
+          "proposition_text": "The doctor suggests gout as a possible cause of the patient's pain."
+        },
+        {
+          "cap_id": "CAP13",
+          "content_source": "doctor",
+          "modality": "interview",
+          "verification_status": "unconfirmed",
+          "clinical_status": "active",
+          "assertion": "uncertain",
+          "visit_state": "active",
+          "temporality": "current",
+          "turn_ids": [
+            "T60"
+          ],
+          "proposition_text": "The doctor suspects a possible gout flare."
+        }
+      ]
+    },
+    {
+      "cluster_id": "CL26",
+      "cluster_type": "ProblemState",
+      "canonical_concept": "alternative medication",
+      "primary_cap_type": "Problem",
+      "source_cap_types": [
+        "Problem"
+      ],
+      "final_verification_status": "unconfirmed",
+      "clinical_status": "planned",
+      "final_assertion": "hypothetical",
+      "visit_state": "planned",
+      "source_speakers": [
+        "doctor"
+      ],
+      "source_modalities": [
+        "interview"
+      ],
+      "temporal_profile": [
+        "future"
+      ],
+      "evidence_turn_ids": [
+        "T60"
+      ],
+      "supporting_cap_ids": [
+        "CAP17"
+      ],
+      "cluster_summary": "The doctor recommends an alternative medication.",
+      "salience_score": 10,
+      "is_low_value": false,
+      "updates": [
+        {
+          "cap_id": "CAP17",
+          "content_source": "doctor",
+          "modality": "interview",
+          "verification_status": "unconfirmed",
+          "clinical_status": "planned",
+          "assertion": "hypothetical",
+          "visit_state": "planned",
+          "temporality": "future",
+          "turn_ids": [
+            "T60"
+          ],
+          "proposition_text": "The doctor recommends an alternative medication."
+        }
+      ]
+    },
+    {
+      "cluster_id": "CL27",
+      "cluster_type": "TestResult",
+      "canonical_concept": "uric acid",
+      "primary_cap_type": "TestResult",
+      "source_cap_types": [
+        "TestResult"
+      ],
+      "final_verification_status": "unconfirmed",
+      "clinical_status": "planned",
+      "final_assertion": "hypothetical",
+      "visit_state": "planned",
+      "source_speakers": [
+        "doctor"
+      ],
+      "source_modalities": [
+        "plan"
+      ],
+      "temporal_profile": [
+        "current"
+      ],
+      "evidence_turn_ids": [
+        "T60"
+      ],
+      "supporting_cap_ids": [
+        "CAP23"
+      ],
+      "cluster_summary": "The doctor wants to order a uric acid test.",
+      "salience_score": 9,
+      "is_low_value": false,
+      "updates": [
+        {
+          "cap_id": "CAP23",
+          "content_source": "doctor",
+          "modality": "plan",
+          "verification_status": "unconfirmed",
+          "clinical_status": "planned",
+          "assertion": "hypothetical",
+          "visit_state": "planned",
+          "temporality": "current",
+          "turn_ids": [
+            "T60"
+          ],
+          "proposition_text": "The doctor wants to order a uric acid test."
+        }
+      ]
+    },
+    {
+      "cluster_id": "CL28",
+      "cluster_type": "MedicationChange",
+      "canonical_concept": "uric acid test",
+      "primary_cap_type": "MedicationRequest",
+      "source_cap_types": [
+        "MedicationRequest"
+      ],
+      "final_verification_status": "unconfirmed",
+      "clinical_status": "planned",
+      "final_assertion": "hypothetical",
+      "visit_state": "planned",
+      "source_speakers": [
+        "doctor"
+      ],
+      "source_modalities": [
+        "interview"
+      ],
+      "temporal_profile": [
+        "soon"
+      ],
+      "evidence_turn_ids": [
+        "T60"
+      ],
+      "supporting_cap_ids": [
+        "CAP26"
+      ],
+      "cluster_summary": "The doctor orders a uric acid test.",
+      "salience_score": 9,
+      "is_low_value": false,
+      "updates": [
+        {
+          "cap_id": "CAP26",
+          "content_source": "doctor",
+          "modality": "interview",
+          "verification_status": "unconfirmed",
+          "clinical_status": "planned",
+          "assertion": "hypothetical",
+          "visit_state": "planned",
+          "temporality": "soon",
+          "turn_ids": [
+            "T60"
+          ],
+          "proposition_text": "The doctor orders a uric acid test."
+        }
+      ],
+      "planned_changes": [
+        {
+          "proposition_text": "The doctor orders a uric acid test.",
+          "turn_ids": [
+            "T60"
+          ],
+          "attributes": {}
+        }
+      ]
+    },
+    {
+      "cluster_id": "CL29",
+      "cluster_type": "ProblemState",
+      "canonical_concept": "dietitian referral",
+      "primary_cap_type": "Problem",
+      "source_cap_types": [
+        "Problem"
+      ],
+      "final_verification_status": "unconfirmed",
+      "clinical_status": "planned",
+      "final_assertion": "hypothetical",
+      "visit_state": "planned",
+      "source_speakers": [
+        "doctor"
+      ],
+      "source_modalities": [
+        "interview"
+      ],
+      "temporal_profile": [
+        "future"
+      ],
+      "evidence_turn_ids": [
+        "T64"
+      ],
+      "supporting_cap_ids": [
+        "CAP10"
+      ],
+      "cluster_summary": "The doctor orders a referral to a dietitian.",
+      "salience_score": 10,
+      "is_low_value": false,
+      "updates": [
+        {
+          "cap_id": "CAP10",
+          "content_source": "doctor",
+          "modality": "interview",
+          "verification_status": "unconfirmed",
+          "clinical_status": "planned",
+          "assertion": "hypothetical",
+          "visit_state": "planned",
+          "temporality": "future",
+          "turn_ids": [
+            "T64"
+          ],
+          "proposition_text": "The doctor orders a referral to a dietitian."
+        }
+      ]
+    },
+    {
+      "cluster_id": "CL30",
+      "cluster_type": "Plan",
+      "canonical_concept": "salt intake",
+      "primary_cap_type": "Counseling",
+      "source_cap_types": [
+        "Counseling"
+      ],
+      "final_verification_status": "confirmed",
+      "clinical_status": "active",
+      "final_assertion": "present",
+      "visit_state": "active",
+      "source_speakers": [
+        "doctor"
+      ],
+      "source_modalities": [
+        "interview"
+      ],
+      "temporal_profile": [
+        "current"
+      ],
+      "evidence_turn_ids": [
+        "T64"
+      ],
+      "supporting_cap_ids": [
+        "CAP39"
+      ],
+      "cluster_summary": "The doctor advises the patient to watch their salt intake.",
+      "salience_score": 5,
+      "is_low_value": false,
+      "updates": [
+        {
+          "cap_id": "CAP39",
+          "content_source": "doctor",
+          "modality": "interview",
+          "verification_status": "confirmed",
+          "clinical_status": "active",
+          "assertion": "present",
+          "visit_state": "active",
+          "temporality": "current",
+          "turn_ids": [
+            "T64"
+          ],
+          "proposition_text": "The doctor advises the patient to watch their salt intake."
+        }
+      ]
+    }
+  ]
+}

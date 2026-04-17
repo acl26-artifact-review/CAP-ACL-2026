@@ -1,0 +1,284 @@
+{
+  "caps": [
+    {
+      "cap_id": "CAP1",
+      "cap_type": "Problem",
+      "content_source": "clinician",
+      "modality": "assessment",
+      "canonical_concept": "heart attack",
+      "verification_status": "unconfirmed",
+      "clinical_status": "active",
+      "temporality": "current",
+      "proposition_text": "The clinician suspects a mild heart attack.",
+      "evidence": [
+        {
+          "turn_id": "S23",
+          "turn_speaker": "note",
+          "span_text": "Regarding his left arm pain, I have explained to him that his symptoms are likely a mild heart attack. I have recommended that we obtain an EKG for further evaluation. I have also recommended that the patient take aspirin and nitroglycerin for pain. The patient will follow up with me once the EKG results are available for review and further discussion.",
+          "char_start": 0,
+          "char_end": 354
+        }
+      ],
+      "assertion": "uncertain",
+      "visit_state": "active",
+      "linked_problem": null
+    },
+    {
+      "cap_id": "CAP2",
+      "cap_type": "Symptom",
+      "content_source": "clinician",
+      "modality": "assessment",
+      "canonical_concept": "left arm pain",
+      "verification_status": "confirmed",
+      "clinical_status": "active",
+      "temporality": "current",
+      "proposition_text": "The patient reports left arm pain.",
+      "evidence": [
+        {
+          "turn_id": "S19",
+          "turn_speaker": "note",
+          "span_text": "Left arm pain.",
+          "char_start": 0,
+          "char_end": 14
+        }
+      ],
+      "assertion": "present",
+      "visit_state": "active",
+      "linked_problem": null
+    },
+    {
+      "cap_id": "CAP3",
+      "cap_type": "Problem",
+      "content_source": "clinician",
+      "modality": "assessment",
+      "canonical_concept": "type 2 diabetes",
+      "verification_status": "confirmed",
+      "clinical_status": "active",
+      "temporality": "current",
+      "proposition_text": "The patient has type 2 diabetes.",
+      "evidence": [
+        {
+          "turn_id": "S20",
+          "turn_speaker": "note",
+          "span_text": "Type 2 diabetes.",
+          "char_start": 0,
+          "char_end": 16
+        }
+      ],
+      "assertion": "present",
+      "visit_state": "active",
+      "linked_problem": null
+    },
+    {
+      "cap_id": "CAP4",
+      "cap_type": "Problem",
+      "content_source": "clinician",
+      "modality": "assessment",
+      "canonical_concept": "hypertension",
+      "verification_status": "confirmed",
+      "clinical_status": "active",
+      "temporality": "current",
+      "proposition_text": "The patient has hypertension.",
+      "evidence": [
+        {
+          "turn_id": "S21",
+          "turn_speaker": "note",
+          "span_text": "Hypertension.",
+          "char_start": 0,
+          "char_end": 13
+        }
+      ],
+      "assertion": "present",
+      "visit_state": "active",
+      "linked_problem": null
+    },
+    {
+      "cap_id": "CAP5",
+      "cap_type": "MedicationRequest",
+      "content_source": "clinician",
+      "modality": "plan",
+      "canonical_concept": "metformin",
+      "verification_status": "confirmed",
+      "clinical_status": "active",
+      "temporality": "current",
+      "proposition_text": "The clinician prescribes 500 mg of metformin.",
+      "evidence": [
+        {
+          "turn_id": "S24",
+          "turn_speaker": "note",
+          "span_text": "In regards to his diabetes, the patient will continue the 500 mg of metformin for now.",
+          "char_start": 0,
+          "char_end": 86
+        }
+      ],
+      "assertion": "present",
+      "visit_state": "active",
+      "linked_problem": null
+    },
+    {
+      "cap_id": "CAP6",
+      "cap_type": "MedicationRequest",
+      "content_source": "clinician",
+      "modality": "plan",
+      "canonical_concept": "Norvasc",
+      "verification_status": "confirmed",
+      "clinical_status": "active",
+      "temporality": "current",
+      "proposition_text": "The clinician prescribes 2.5 mg of Norvasc.",
+      "evidence": [
+        {
+          "turn_id": "S25",
+          "turn_speaker": "note",
+          "span_text": "For his hypertension, the patient will continue the 2.5 mg of Norvasc.",
+          "char_start": 0,
+          "char_end": 70
+        }
+      ],
+      "assertion": "present",
+      "visit_state": "active",
+      "linked_problem": null
+    },
+    {
+      "cap_id": "CAP7",
+      "cap_type": "Order",
+      "content_source": "clinician",
+      "modality": "plan",
+      "canonical_concept": "EKG",
+      "verification_status": "unconfirmed",
+      "clinical_status": "planned",
+      "temporality": "future",
+      "proposition_text": "The clinician recommends obtaining an EKG.",
+      "evidence": [
+        {
+          "turn_id": "S23",
+          "turn_speaker": "note",
+          "span_text": "Regarding his left arm pain, I have explained to him that his symptoms are likely a mild heart attack. I have recommended that we obtain an EKG for further evaluation. I have also recommended that the patient take aspirin and nitroglycerin for pain. The patient will follow up with me once the EKG results are available for review and further discussion.",
+          "char_start": 0,
+          "char_end": 354
+        }
+      ],
+      "assertion": "hypothetical",
+      "visit_state": "planned",
+      "linked_problem": null
+    },
+    {
+      "cap_id": "CAP8",
+      "cap_type": "MedicationStatement",
+      "content_source": "patient",
+      "modality": "assessment",
+      "canonical_concept": "metformin",
+      "verification_status": "confirmed",
+      "clinical_status": "active",
+      "temporality": "current",
+      "proposition_text": "The patient takes metformin 500 mg.",
+      "evidence": [
+        {
+          "turn_id": "S9",
+          "turn_speaker": "note",
+          "span_text": "Patient reports that he currently takes metformin 500 mg and Norvasc 2.5 mg.",
+          "char_start": 0,
+          "char_end": 76
+        }
+      ],
+      "assertion": "present",
+      "visit_state": "active",
+      "linked_problem": null
+    },
+    {
+      "cap_id": "CAP9",
+      "cap_type": "MedicationStatement",
+      "content_source": "patient",
+      "modality": "assessment",
+      "canonical_concept": "Norvasc",
+      "verification_status": "confirmed",
+      "clinical_status": "active",
+      "temporality": "current",
+      "proposition_text": "The patient takes Norvasc 2.5 mg.",
+      "evidence": [
+        {
+          "turn_id": "S9",
+          "turn_speaker": "note",
+          "span_text": "Patient reports that he currently takes metformin 500 mg and Norvasc 2.5 mg.",
+          "char_start": 0,
+          "char_end": 76
+        }
+      ],
+      "assertion": "present",
+      "visit_state": "active",
+      "linked_problem": null
+    },
+    {
+      "cap_id": "CAP10",
+      "cap_type": "MedicationStatement",
+      "content_source": "clinician",
+      "modality": "unknown",
+      "canonical_concept": "aspirin",
+      "verification_status": "unconfirmed",
+      "clinical_status": "planned",
+      "temporality": "future",
+      "proposition_text": "The clinician recommends taking aspirin.",
+      "evidence": [
+        {
+          "turn_id": "S23",
+          "turn_speaker": "note",
+          "span_text": "Regarding his left arm pain, I have explained to him that his symptoms are likely a mild heart attack. I have recommended that we obtain an EKG for further evaluation. I have also recommended that the patient take aspirin and nitroglycerin for pain. The patient will follow up with me once the EKG results are available for review and further discussion.",
+          "char_start": 0,
+          "char_end": 354
+        }
+      ],
+      "assertion": "hypothetical",
+      "visit_state": "planned",
+      "linked_problem": null
+    },
+    {
+      "cap_id": "CAP11",
+      "cap_type": "MedicationStatement",
+      "content_source": "clinician",
+      "modality": "unknown",
+      "canonical_concept": "nitroglycerin",
+      "verification_status": "unconfirmed",
+      "clinical_status": "planned",
+      "temporality": "future",
+      "proposition_text": "The clinician recommends taking nitroglycerin.",
+      "evidence": [
+        {
+          "turn_id": "S23",
+          "turn_speaker": "note",
+          "span_text": "Regarding his left arm pain, I have explained to him that his symptoms are likely a mild heart attack. I have recommended that we obtain an EKG for further evaluation. I have also recommended that the patient take aspirin and nitroglycerin for pain. The patient will follow up with me once the EKG results are available for review and further discussion.",
+          "char_start": 0,
+          "char_end": 354
+        }
+      ],
+      "assertion": "hypothetical",
+      "visit_state": "planned",
+      "linked_problem": null
+    },
+    {
+      "cap_id": "CAP12",
+      "cap_type": "FollowUp",
+      "content_source": "clinician",
+      "modality": "plan",
+      "canonical_concept": "follow up",
+      "verification_status": "unconfirmed",
+      "clinical_status": "planned",
+      "temporality": "future",
+      "proposition_text": "The clinician recommends a follow-up.",
+      "evidence": [
+        {
+          "turn_id": "S23",
+          "turn_speaker": "note",
+          "span_text": "Regarding his left arm pain, I have explained to him that his symptoms are likely a mild heart attack. I have recommended that we obtain an EKG for further evaluation. I have also recommended that the patient take aspirin and nitroglycerin for pain. The patient will follow up with me once the EKG results are available for review and further discussion.",
+          "char_start": 0,
+          "char_end": 354
+        }
+      ],
+      "assertion": "hypothetical",
+      "visit_state": "planned",
+      "linked_problem": null
+    }
+  ],
+  "filtered_nonverifiable_units": [],
+  "chunk_count": 4,
+  "extraction_mode": "single_call",
+  "runtime_seconds": 26.355
+}

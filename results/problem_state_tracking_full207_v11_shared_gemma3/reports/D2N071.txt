@@ -1,0 +1,112 @@
+Case: D2N071
+
+Problem List and Visit State Tracking
+
+Problem List
+- pollen | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T5
+  Summary: The patient reports experiencing symptoms related to pollen.
+  ClusterId: CL3
+  TemporalProfile: current
+  Updates:
+  - CAP2: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T5 :: The patient reports experiencing symptoms related to pollen.
+- depression | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T5
+  Summary: The patient reports experiencing symptoms of depression.
+  ClusterId: CL4
+  TemporalProfile: current
+  Updates:
+  - CAP4: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T5 :: The patient reports experiencing symptoms of depression.
+- hypertension | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T9
+  Summary: The patient reports difficulty managing hypertension.
+  ClusterId: CL5
+  TemporalProfile: current
+  Updates:
+  - CAP5: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T9 :: The patient reports difficulty managing hypertension.
+  - CAP7: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T9 :: The patient reports struggling with hypertension.
+- forgetting medications | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T11
+  Summary: The patient reports forgetting to take medications occasionally.
+  ClusterId: CL6
+  TemporalProfile: current
+  Updates:
+  - CAP3: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T11 :: The patient reports forgetting to take medications occasionally.
+- nasal congestion | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T13
+  Summary: The patient reports nasal congestion.
+  ClusterId: CL7
+  TemporalProfile: current
+  Updates:
+  - CAP9: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T13 :: The patient reports nasal congestion.
+- pounding chest | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T15
+  Summary: The patient reports pounding chest.
+  ClusterId: CL8
+  TemporalProfile: current
+  Updates:
+  - CAP8: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T15 :: The patient reports pounding chest.
+- shortness of breath | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T16
+  Summary: The patient reports shortness of breath.
+  ClusterId: CL9
+  TemporalProfile: current
+  Updates:
+  - CAP6: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T16 :: The patient reports shortness of breath.
+- sinus congestion | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T19
+  Summary: The patient has some pain to palpation of the sinuses.
+  ClusterId: CL10
+  TemporalProfile: current
+  Updates:
+  - CAP1: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T19 :: The patient has some pain to palpation of the sinuses.
+- chest pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T29
+  Summary: The patient reports chest pain.
+  ClusterId: CL13
+  TemporalProfile: current
+  Updates:
+  - CAP10: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T29 :: The patient reports chest pain.
+
+Medication Tracking
+- [MedicationState] prozac | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T0
+  Summary: The patient reports taking prozac.
+  ClusterId: CL1
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient reports taking prozac. (T0)
+  Updates:
+  - CAP19: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T0 :: The patient reports taking prozac.
+- [MedicationState] norvasc | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T0
+  Summary: The patient reports taking norvasc.
+  ClusterId: CL2
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient reports taking norvasc. (T0)
+  Updates:
+  - CAP20: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T0 :: The patient reports taking norvasc.
+- [MedicationChange] prozac | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T34
+  Summary: The doctor plans to continue the patient on prozac at a dose of 20 milligrams daily.
+  ClusterId: CL17
+  TemporalProfile: current
+  PlannedChanges:
+  - The doctor plans to continue the patient on prozac at a dose of 20 milligrams daily. (T34)
+  Updates:
+  - CAP18: content_source=doctor modality=plan verification_status=unconfirmed clinical_status=planned temporality=current turns=T34 :: The doctor plans to continue the patient on prozac at a dose of 20 milligrams daily.
+
+Other Structured States
+- [ExamFinding] systolic ejection murmur | verification_status=confirmed | clinical_status=active | modalities=exam | speakers=exam | evidence=T19
+  Summary: The patient has a slight two out of six systolic ejection murmur.
+  ClusterId: CL11
+  TemporalProfile: current
+- [TestResult] ekg | verification_status=confirmed | clinical_status=historical | modalities=test_result | speakers=test_result | evidence=T28
+  Summary: The patient's EKG is completely normal.
+  ClusterId: CL12
+  TemporalProfile: before today
+- [Plan] prozac refill | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T33
+  Summary: The doctor orders a refill of prozac.
+  ClusterId: CL14
+  TemporalProfile: current
+- [Plan] blood work | verification_status=unconfirmed | clinical_status=planned | modalities=interview,plan | speakers=doctor | evidence=T34,T38
+  Summary: The doctor orders routine blood work.
+  ClusterId: CL15
+  TemporalProfile: current, future
+- [Plan] echocardiogram | verification_status=unconfirmed | clinical_status=planned | modalities=interview,plan | speakers=doctor | evidence=T34,T38
+  Summary: The doctor orders an echocardiogram.
+  ClusterId: CL16
+  TemporalProfile: current, future
+- [Plan] patient portal | verification_status=unconfirmed | clinical_status=planned | modalities=interview | speakers=doctor | evidence=T40
+  Summary: The doctor will follow up with the patient through the patient portal.
+  ClusterId: CL18
+  TemporalProfile: future

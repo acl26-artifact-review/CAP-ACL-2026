@@ -1,0 +1,65 @@
+{
+  "section_miscategorizations": [
+    {
+      "text": "The patient's blood sugars are 150-160.",
+      "current_section": "Findings",
+      "expected_section": "History of Present Illness",
+      "severity": "minor",
+      "reason": "This appears to be a patient-reported home blood glucose range rather than an in-clinic lab or vital; it fits better as history but does not substantially mislead as an objective finding."
+    },
+    {
+      "text": "The patient reports no fever.",
+      "current_section": "Findings",
+      "expected_section": "History of Present Illness",
+      "severity": "minor",
+      "reason": "Absence of fever is being reported by the patient as part of the symptom history rather than documented as an exam finding."
+    },
+    {
+      "text": "The patient has type 2 diabetes.",
+      "current_section": "Assessment",
+      "expected_section": "Assessment",
+      "severity": "minor",
+      "reason": "This duplicates the subsequent statement \"The patient has diabetes.\" within the same section; while not a cross-section error, it is an organizational issue but does not change clinical meaning."
+    },
+    {
+      "text": "The patient has diabetes.",
+      "current_section": "Assessment",
+      "expected_section": "Assessment",
+      "severity": "minor",
+      "reason": "Redundant with the prior more specific diagnosis of type 2 diabetes; this is an internal organizational issue within the section rather than a true miscategorization."
+    },
+    {
+      "text": "The patient is currently taking metformin 500 milligrams twice a day.",
+      "current_section": "Plan",
+      "expected_section": "History of Present Illness",
+      "severity": "major",
+      "reason": "Current medication regimen belongs in history/medication history; placing it in the plan could mislead a reader into thinking this is a new or changed order."
+    },
+    {
+      "text": "The patient is currently taking flovent twice a day.",
+      "current_section": "Plan",
+      "expected_section": "History of Present Illness",
+      "severity": "major",
+      "reason": "This is existing therapy, not a new intervention; documenting it in the plan may be misread as a new prescription rather than current medication state."
+    },
+    {
+      "text": "The patient is currently taking albuterol as needed.",
+      "current_section": "Plan",
+      "expected_section": "History of Present Illness",
+      "severity": "major",
+      "reason": "This is part of the current medication regimen; in the plan section it may be interpreted as a new or adjusted order."
+    },
+    {
+      "text": "The patient is currently taking metformin 500 milligrams once a day.",
+      "current_section": "Plan",
+      "expected_section": "History of Present Illness",
+      "severity": "major",
+      "reason": "This is another statement of current medication use; listing it under plan risks confusion about whether this is a new dosing instruction versus historical information."
+    }
+  ],
+  "summary_statistics": {
+    "section_appropriateness_score": 0.6,
+    "section_miscategorization_count": 8,
+    "major_section_miscategorization_count": 4
+  }
+}

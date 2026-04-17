@@ -1,0 +1,118 @@
+{
+  "events": [
+    {
+      "event_id": "CL6",
+      "event_type": "ProblemOrientedNoteBundle",
+      "canonical_concept": "diabetes",
+      "visit_state": "active",
+      "status": "affirmed",
+      "temporality": "past",
+      "speaker_source": "patient,doctor",
+      "clinical_priority": "high",
+      "title": "diabetes",
+      "event_summary": "Problem-oriented bundle for diabetes.",
+      "supporting_cap_ids": [
+        "CAP11",
+        "CAP12",
+        "CAP13"
+      ],
+      "anchor_problem_cap_id": "CAP11",
+      "anchor_problem": "diabetes",
+      "S_cap_ids": [
+        "CAP11",
+        "CAP12"
+      ],
+      "supporting_evidence": [
+        "The patient has diabetes."
+      ],
+      "current_state": [
+        "The patient has diabetes."
+      ],
+      "care_context": [
+        "The patient's A1C was around ten."
+      ],
+      "key_slots": {
+        "source_modalities": "interview, exam",
+        "temporal_profile": "current, past",
+        "anchor_cluster_type": "ProblemState",
+        "anchor_primary_cap_type": "Problem",
+        "bundle_concepts": "diabetes; a1c",
+        "history_context": "The patient's A1C was around ten.",
+        "related_factors": "",
+        "visit_primary": "true",
+        "render_in_note": "true",
+        "assessment_fallback": "The patient has diabetes.",
+        "bundle_design": "problem_oriented_note_bundle"
+      },
+      "render_sections": [
+        "S",
+        "O",
+        "A",
+        "P",
+        "History of Present Illness",
+        "Findings",
+        "Assessment",
+        "Plan"
+      ]
+    },
+    {
+      "event_id": "CL10",
+      "event_type": "ProblemOrientedNoteBundle",
+      "canonical_concept": "infection",
+      "visit_state": "active",
+      "status": "affirmed",
+      "temporality": "future",
+      "speaker_source": "patient,doctor",
+      "clinical_priority": "high",
+      "title": "infection",
+      "event_summary": "Problem-oriented bundle for infection.",
+      "supporting_cap_ids": [
+        "CAP10",
+        "CAP15",
+        "CAP14"
+      ],
+      "anchor_problem_cap_id": "CAP10",
+      "anchor_problem": "infection",
+      "S_cap_ids": [
+        "CAP10"
+      ],
+      "P_cap_ids": [
+        "CAP15",
+        "CAP14"
+      ],
+      "supporting_evidence": [
+        "The patient has an infection."
+      ],
+      "current_state": [
+        "The patient has an infection."
+      ],
+      "planned_actions": [
+        "The doctor ordered clindamycin.",
+        "The doctor ordered a surgical shoe."
+      ],
+      "key_slots": {
+        "source_modalities": "interview, plan",
+        "temporal_profile": "current, future",
+        "anchor_cluster_type": "ProblemState",
+        "anchor_primary_cap_type": "Problem",
+        "bundle_concepts": "infection; antibiotic; shoe",
+        "history_context": "",
+        "related_factors": "",
+        "visit_primary": "true",
+        "render_in_note": "true",
+        "assessment_fallback": "Symptoms are concerning for infection.",
+        "bundle_design": "problem_oriented_note_bundle"
+      },
+      "render_sections": [
+        "S",
+        "O",
+        "A",
+        "P",
+        "History of Present Illness",
+        "Findings",
+        "Assessment",
+        "Plan"
+      ]
+    }
+  ]
+}

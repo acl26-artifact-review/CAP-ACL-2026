@@ -1,0 +1,51 @@
+{
+  "section_miscategorizations": [
+    {
+      "text": "The patient reports an elevated A1c level.",
+      "current_section": "S",
+      "expected_section": "O",
+      "severity": "major",
+      "reason": "A1c is an objective lab value; even if the patient mentions it, the elevated level itself is an objective lab finding and belongs in the Objective section."
+    },
+    {
+      "text": "The patient has an abnormal lab result.",
+      "current_section": "O",
+      "expected_section": "A",
+      "severity": "minor",
+      "reason": "In this context it is framed as a synthesized problem statement rather than a specific measured value; it fits better as part of the clinician's assessment of abnormal results."
+    },
+    {
+      "text": "The patient's metformin dose is 100 mg daily.",
+      "current_section": "O",
+      "expected_section": "S",
+      "severity": "major",
+      "reason": "This describes the patient's current medication regimen, which per instructions belongs in Subjective unless framed as a treatment change or order."
+    },
+    {
+      "text": "The patient is currently taking metformin.",
+      "current_section": "O",
+      "expected_section": "S",
+      "severity": "major",
+      "reason": "Current medications the patient is already taking should be documented in the Subjective section unless they are being changed or ordered."
+    },
+    {
+      "text": "The patient is taking lisinopril.",
+      "current_section": "O",
+      "expected_section": "S",
+      "severity": "major",
+      "reason": "This is an existing medication and should be listed in the Subjective section per the template rules."
+    },
+    {
+      "text": "The patient reports pain.",
+      "current_section": "A",
+      "expected_section": "S",
+      "severity": "major",
+      "reason": "Pain is a symptom reported by the patient and belongs in the Subjective section, not in the Assessment."
+    }
+  ],
+  "summary_statistics": {
+    "section_appropriateness_score": 0.6,
+    "section_miscategorization_count": 6,
+    "major_section_miscategorization_count": 5
+  }
+}

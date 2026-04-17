@@ -1,0 +1,37 @@
+{
+  "section_miscategorizations": [
+    {
+      "text": "The patient reports a slight feeling of instability when walking.",
+      "current_section": "O",
+      "expected_section": "S",
+      "severity": "major",
+      "reason": "This is a patient-reported symptom and should be in the Subjective section, not Objective findings."
+    },
+    {
+      "text": "X-rays demonstrate no acute fractures or bony abnormalities, but suggest a possible sprain of the posterior cruciate ligament.",
+      "current_section": "O",
+      "expected_section": "A",
+      "severity": "major",
+      "reason": "Imaging results (no acute fractures or bony abnormalities) belong in Objective, but the interpretive phrase 'suggest a possible sprain of the posterior cruciate ligament' is a diagnostic impression and should be in the Assessment."
+    },
+    {
+      "text": "An MRI scan is recommended to evaluate the ligament and potentially meniscus.",
+      "current_section": "A",
+      "expected_section": "P",
+      "severity": "major",
+      "reason": "Recommending an MRI is an order/management action and belongs in the Plan, not the Assessment."
+    },
+    {
+      "text": "The clinician will order a brace for temporary support and refer the patient to physical therapy.",
+      "current_section": "A",
+      "expected_section": "P",
+      "severity": "major",
+      "reason": "Ordering a brace and referring to physical therapy are treatment and referral actions that should be documented in the Plan section."
+    }
+  ],
+  "summary_statistics": {
+    "section_appropriateness_score": 0.7,
+    "section_miscategorization_count": 4,
+    "major_section_miscategorization_count": 4
+  }
+}

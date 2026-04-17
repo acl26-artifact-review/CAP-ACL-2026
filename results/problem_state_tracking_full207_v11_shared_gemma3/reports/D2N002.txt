@@ -1,0 +1,115 @@
+Case: D2N002
+
+Problem List and Visit State Tracking
+
+Problem List
+- knee pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T11,T5
+  Summary: The patient reports bilateral knee pain.
+  ClusterId: CL1
+  TemporalProfile: current, recent
+  Updates:
+  - CAP1: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=recent turns=T5,T11 :: The patient reports bilateral knee pain.
+  - CAP3: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=recent turns=T5,T11 :: The patient experiences knee pain.
+  - CAP4: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T11,T11 :: The patient reports knee pain.
+- joint pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T11,T5
+  Summary: The patient reports joint pain.
+  ClusterId: CL2
+  TemporalProfile: recent
+  Updates:
+  - CAP2: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=recent turns=T11,T5 :: The patient reports joint pain.
+- kidney transplant | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T11,T24
+  Summary: The patient has had a kidney transplant several years ago.
+  ClusterId: CL4
+  TemporalProfile: a few years ago, past
+  Updates:
+  - CAP22: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=past turns=T11 :: The patient has a past medical history of a kidney transplant.
+  - CAP6: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=a few years ago turns=T24 :: The patient has had a kidney transplant several years ago.
+- arthritis | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T11,T42
+  Summary: The patient has arthritis.
+  ClusterId: CL5
+  TemporalProfile: chronic, past
+  Updates:
+  - CAP24: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=past turns=T11 :: The patient has a past medical history of arthritis.
+  - CAP13: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=chronic turns=T42 :: The patient has arthritis.
+- hypothyroidism | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T11
+  Summary: The patient has a past medical history of hypothyroidism.
+  ClusterId: CL6
+  TemporalProfile: past
+  Updates:
+  - CAP23: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=past turns=T11 :: The patient has a past medical history of hypothyroidism.
+- elbow pain | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T35,T47,T55,T75
+  Summary: The patient occasionally experiences elbow pain.
+  ClusterId: CL8
+  TemporalProfile: current, occasionally
+  Updates:
+  - CAP12: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T35 :: The patient reports pain.
+  - CAP10: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=occasionally turns=T47 :: The patient occasionally experiences elbow pain.
+  - CAP11: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=occasionally turns=T47 :: The patient reports occasional elbow pain.
+  - CAP7: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T55 :: The patient reports pain to palpation of the right knee.
+  - CAP14: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T75 :: The patient reports pain.
+- left hand | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T35
+  Summary: The patient's pain is in the left hand.
+  ClusterId: CL9
+  TemporalProfile: current
+  Updates:
+  - CAP8: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T35 :: The patient's pain is in the left hand.
+- hyperthyroidism | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T39
+  Summary: The patient is being treated for hyperthyroidism.
+  ClusterId: CL10
+  TemporalProfile: ongoing
+  Updates:
+  - CAP9: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=ongoing turns=T39 :: The patient is being treated for hyperthyroidism.
+- decreased range of motion | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T55
+  Summary: The patient reports decreased range of motion in the right knee.
+  ClusterId: CL12
+  TemporalProfile: current
+  Updates:
+  - CAP5: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T55 :: The patient reports decreased range of motion in the right knee.
+
+Medication Tracking
+- [MedicationState] tylenol | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T13
+  Summary: The patient reports taking tylenol for the pain.
+  ClusterId: CL7
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient reports taking tylenol for the pain. (T13)
+  Updates:
+  - CAP20: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T13 :: The patient reports taking tylenol for the pain.
+- [MedicationState] synthroid | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=doctor | evidence=T39
+  Summary: The patient is taking synthroid.
+  ClusterId: CL11
+  TemporalProfile: ongoing
+  CurrentRegimens:
+  - The patient is taking synthroid. (T39)
+  Updates:
+  - CAP21: content_source=doctor modality=interview verification_status=confirmed clinical_status=active temporality=ongoing turns=T39 :: The patient is taking synthroid.
+- [MedicationChange] ultram | verification_status=confirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T64
+  Summary: The doctor prescribes ultram 50 milligrams every six hours as needed.
+  ClusterId: CL15
+  TemporalProfile: future
+  PlannedChanges:
+  - The doctor prescribes ultram 50 milligrams every six hours as needed. (T64)
+  Updates:
+  - CAP19: content_source=doctor modality=plan verification_status=confirmed clinical_status=planned temporality=future turns=T64 :: The doctor prescribes ultram 50 milligrams every six hours as needed.
+
+Other Structured States
+- [Plan] icing | verification_status=confirmed | clinical_status=planned | modalities=interview | speakers=doctor | evidence=T9
+  Summary: The patient should ice them.
+  ClusterId: CL3
+  TemporalProfile: current
+- [ExamFinding] edema | verification_status=confirmed | clinical_status=active | modalities=exam | speakers=doctor | evidence=T64
+  Summary: The doctor observes edema in the right knee.
+  ClusterId: CL13
+  TemporalProfile: current
+- [ExamFinding] erythema | verification_status=confirmed | clinical_status=active | modalities=exam | speakers=doctor | evidence=T64
+  Summary: The doctor observes erythema in the right knee.
+  ClusterId: CL14
+  TemporalProfile: current
+- [Plan] take it easy | verification_status=confirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T68
+  Summary: The doctor advises the patient to take it easy.
+  ClusterId: CL16
+  TemporalProfile: future
+- [Plan] autoimmune panel | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T74
+  Summary: The doctor orders an autoimmune panel.
+  ClusterId: CL17
+  TemporalProfile: future

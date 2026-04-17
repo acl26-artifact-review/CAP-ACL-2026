@@ -1,0 +1,485 @@
+{
+  "clusters": [
+    {
+      "cluster_id": "CL1",
+      "cluster_type": "ProblemState",
+      "canonical_concept": "depression",
+      "primary_cap_type": "Symptom",
+      "source_cap_types": [
+        "Problem",
+        "Symptom"
+      ],
+      "final_verification_status": "confirmed",
+      "clinical_status": "active",
+      "final_assertion": "present",
+      "visit_state": "active",
+      "source_speakers": [
+        "patient"
+      ],
+      "source_modalities": [
+        "interview"
+      ],
+      "temporal_profile": [
+        "current"
+      ],
+      "evidence_turn_ids": [
+        "T5"
+      ],
+      "supporting_cap_ids": [
+        "CAP3",
+        "CAP5"
+      ],
+      "cluster_summary": "The patient reports struggling with depression.",
+      "salience_score": 10,
+      "is_low_value": false,
+      "updates": [
+        {
+          "cap_id": "CAP3",
+          "content_source": "patient",
+          "modality": "interview",
+          "verification_status": "confirmed",
+          "clinical_status": "active",
+          "assertion": "present",
+          "visit_state": "active",
+          "temporality": "current",
+          "turn_ids": [
+            "T5"
+          ],
+          "proposition_text": "The patient reports struggling with depression."
+        },
+        {
+          "cap_id": "CAP5",
+          "content_source": "patient",
+          "modality": "interview",
+          "verification_status": "confirmed",
+          "clinical_status": "active",
+          "assertion": "present",
+          "visit_state": "active",
+          "temporality": "current",
+          "turn_ids": [
+            "T5"
+          ],
+          "proposition_text": "The patient is experiencing depression."
+        }
+      ]
+    },
+    {
+      "cluster_id": "CL2",
+      "cluster_type": "MedicationState",
+      "canonical_concept": "prozac",
+      "primary_cap_type": "MedicationStatement",
+      "source_cap_types": [
+        "MedicationStatement"
+      ],
+      "final_verification_status": "confirmed",
+      "clinical_status": "active",
+      "final_assertion": "present",
+      "visit_state": "active",
+      "source_speakers": [
+        "doctor"
+      ],
+      "source_modalities": [
+        "interview"
+      ],
+      "temporal_profile": [
+        "current"
+      ],
+      "evidence_turn_ids": [
+        "T6"
+      ],
+      "supporting_cap_ids": [
+        "CAP12"
+      ],
+      "cluster_summary": "The patient is currently taking prozac 20 milligrams a day.",
+      "salience_score": 8,
+      "is_low_value": false,
+      "updates": [
+        {
+          "cap_id": "CAP12",
+          "content_source": "doctor",
+          "modality": "interview",
+          "verification_status": "confirmed",
+          "clinical_status": "active",
+          "assertion": "present",
+          "visit_state": "active",
+          "temporality": "current",
+          "turn_ids": [
+            "T6"
+          ],
+          "proposition_text": "The patient is currently taking prozac 20 milligrams a day."
+        }
+      ],
+      "current_regimens": [
+        {
+          "proposition_text": "The patient is currently taking prozac 20 milligrams a day.",
+          "turn_ids": [
+            "T6"
+          ],
+          "attributes": {
+            "dose": "20 milligrams a day"
+          }
+        }
+      ]
+    },
+    {
+      "cluster_id": "CL3",
+      "cluster_type": "Plan",
+      "canonical_concept": "increase dose",
+      "primary_cap_type": "Order",
+      "source_cap_types": [
+        "Order"
+      ],
+      "final_verification_status": "unconfirmed",
+      "clinical_status": "planned",
+      "final_assertion": "hypothetical",
+      "visit_state": "planned",
+      "source_speakers": [
+        "doctor"
+      ],
+      "source_modalities": [
+        "interview"
+      ],
+      "temporal_profile": [
+        "future"
+      ],
+      "evidence_turn_ids": [
+        "T11"
+      ],
+      "supporting_cap_ids": [
+        "CAP10"
+      ],
+      "cluster_summary": "The doctor suggests increasing the dose of medication.",
+      "salience_score": 9,
+      "is_low_value": false,
+      "updates": [
+        {
+          "cap_id": "CAP10",
+          "content_source": "doctor",
+          "modality": "interview",
+          "verification_status": "unconfirmed",
+          "clinical_status": "planned",
+          "assertion": "hypothetical",
+          "visit_state": "planned",
+          "temporality": "future",
+          "turn_ids": [
+            "T11"
+          ],
+          "proposition_text": "The doctor suggests increasing the dose of medication."
+        }
+      ]
+    },
+    {
+      "cluster_id": "CL4",
+      "cluster_type": "ProblemState",
+      "canonical_concept": "back pain",
+      "primary_cap_type": "Symptom",
+      "source_cap_types": [
+        "Problem",
+        "Symptom"
+      ],
+      "final_verification_status": "confirmed",
+      "clinical_status": "active",
+      "final_assertion": "present",
+      "visit_state": "active",
+      "source_speakers": [
+        "patient"
+      ],
+      "source_modalities": [
+        "interview"
+      ],
+      "temporal_profile": [
+        "current"
+      ],
+      "evidence_turn_ids": [
+        "T13",
+        "T24"
+      ],
+      "supporting_cap_ids": [
+        "CAP9",
+        "CAP4",
+        "CAP1",
+        "CAP6"
+      ],
+      "cluster_summary": "The patient reports chronic back pain.",
+      "salience_score": 10,
+      "is_low_value": false,
+      "updates": [
+        {
+          "cap_id": "CAP9",
+          "content_source": "patient",
+          "modality": "interview",
+          "verification_status": "confirmed",
+          "clinical_status": "active",
+          "assertion": "present",
+          "visit_state": "active",
+          "temporality": "current",
+          "turn_ids": [
+            "T13"
+          ],
+          "proposition_text": "The patient reports pain."
+        },
+        {
+          "cap_id": "CAP4",
+          "content_source": "patient",
+          "modality": "interview",
+          "verification_status": "confirmed",
+          "clinical_status": "active",
+          "assertion": "present",
+          "visit_state": "active",
+          "temporality": "current",
+          "turn_ids": [
+            "T13"
+          ],
+          "proposition_text": "The patient reports chronic back pain."
+        },
+        {
+          "cap_id": "CAP1",
+          "content_source": "patient",
+          "modality": "interview",
+          "verification_status": "confirmed",
+          "clinical_status": "active",
+          "assertion": "present",
+          "visit_state": "active",
+          "temporality": "current",
+          "turn_ids": [
+            "T24"
+          ],
+          "proposition_text": "The patient reports pain to palpation of lumbar spine."
+        },
+        {
+          "cap_id": "CAP6",
+          "content_source": "patient",
+          "modality": "interview",
+          "verification_status": "confirmed",
+          "clinical_status": "active",
+          "assertion": "present",
+          "visit_state": "active",
+          "temporality": "current",
+          "turn_ids": [
+            "T24"
+          ],
+          "proposition_text": "The patient has back pain."
+        }
+      ]
+    },
+    {
+      "cluster_id": "CL5",
+      "cluster_type": "ProblemState",
+      "canonical_concept": "stiffness",
+      "primary_cap_type": "Symptom",
+      "source_cap_types": [
+        "Symptom"
+      ],
+      "final_verification_status": "confirmed",
+      "clinical_status": "active",
+      "final_assertion": "present",
+      "visit_state": "active",
+      "source_speakers": [
+        "patient"
+      ],
+      "source_modalities": [
+        "interview"
+      ],
+      "temporal_profile": [
+        "current"
+      ],
+      "evidence_turn_ids": [
+        "T13"
+      ],
+      "supporting_cap_ids": [
+        "CAP8"
+      ],
+      "cluster_summary": "The patient reports stiffness.",
+      "salience_score": 10,
+      "is_low_value": false,
+      "updates": [
+        {
+          "cap_id": "CAP8",
+          "content_source": "patient",
+          "modality": "interview",
+          "verification_status": "confirmed",
+          "clinical_status": "active",
+          "assertion": "present",
+          "visit_state": "active",
+          "temporality": "current",
+          "turn_ids": [
+            "T13"
+          ],
+          "proposition_text": "The patient reports stiffness."
+        }
+      ]
+    },
+    {
+      "cluster_id": "CL6",
+      "cluster_type": "ProblemState",
+      "canonical_concept": "numbness",
+      "primary_cap_type": "Symptom",
+      "source_cap_types": [
+        "Symptom"
+      ],
+      "final_verification_status": "confirmed",
+      "clinical_status": "active",
+      "final_assertion": "present",
+      "visit_state": "active",
+      "source_speakers": [
+        "patient"
+      ],
+      "source_modalities": [
+        "interview"
+      ],
+      "temporal_profile": [
+        "current"
+      ],
+      "evidence_turn_ids": [
+        "T15"
+      ],
+      "supporting_cap_ids": [
+        "CAP7"
+      ],
+      "cluster_summary": "The patient reports numbness.",
+      "salience_score": 10,
+      "is_low_value": false,
+      "updates": [
+        {
+          "cap_id": "CAP7",
+          "content_source": "patient",
+          "modality": "interview",
+          "verification_status": "confirmed",
+          "clinical_status": "active",
+          "assertion": "present",
+          "visit_state": "active",
+          "temporality": "current",
+          "turn_ids": [
+            "T15"
+          ],
+          "proposition_text": "The patient reports numbness."
+        }
+      ]
+    },
+    {
+      "cluster_id": "CL7",
+      "cluster_type": "ProblemState",
+      "canonical_concept": "numbing",
+      "primary_cap_type": "Symptom",
+      "source_cap_types": [
+        "Symptom"
+      ],
+      "final_verification_status": "confirmed",
+      "clinical_status": "active",
+      "final_assertion": "present",
+      "visit_state": "active",
+      "source_speakers": [
+        "patient"
+      ],
+      "source_modalities": [
+        "interview"
+      ],
+      "temporal_profile": [
+        "current"
+      ],
+      "evidence_turn_ids": [
+        "T19"
+      ],
+      "supporting_cap_ids": [
+        "CAP2"
+      ],
+      "cluster_summary": "The patient reports a feeling of numbness.",
+      "salience_score": 10,
+      "is_low_value": false,
+      "updates": [
+        {
+          "cap_id": "CAP2",
+          "content_source": "patient",
+          "modality": "interview",
+          "verification_status": "confirmed",
+          "clinical_status": "active",
+          "assertion": "present",
+          "visit_state": "active",
+          "temporality": "current",
+          "turn_ids": [
+            "T19"
+          ],
+          "proposition_text": "The patient reports a feeling of numbness."
+        }
+      ]
+    },
+    {
+      "cluster_id": "CL8",
+      "cluster_type": "MedicationChange",
+      "canonical_concept": "prozac",
+      "primary_cap_type": "MedicationStatement",
+      "source_cap_types": [
+        "MedicationStatement"
+      ],
+      "final_verification_status": "confirmed",
+      "clinical_status": "planned",
+      "final_assertion": "hypothetical",
+      "visit_state": "planned",
+      "source_speakers": [
+        "doctor"
+      ],
+      "source_modalities": [
+        "plan"
+      ],
+      "temporal_profile": [
+        "future"
+      ],
+      "evidence_turn_ids": [
+        "T28"
+      ],
+      "supporting_cap_ids": [
+        "CAP11",
+        "CAP13"
+      ],
+      "cluster_summary": "The doctor will increase the dosage of prozac to 40 milligrams.",
+      "salience_score": 8,
+      "is_low_value": false,
+      "updates": [
+        {
+          "cap_id": "CAP11",
+          "content_source": "doctor",
+          "modality": "plan",
+          "verification_status": "confirmed",
+          "clinical_status": "planned",
+          "assertion": "hypothetical",
+          "visit_state": "planned",
+          "temporality": "future",
+          "turn_ids": [
+            "T28"
+          ],
+          "proposition_text": "The doctor will increase the dosage of prozac to 40 milligrams."
+        },
+        {
+          "cap_id": "CAP13",
+          "content_source": "doctor",
+          "modality": "plan",
+          "verification_status": "confirmed",
+          "clinical_status": "planned",
+          "assertion": "hypothetical",
+          "visit_state": "planned",
+          "temporality": "future",
+          "turn_ids": [
+            "T28"
+          ],
+          "proposition_text": "The doctor will increase the dosage of prozac."
+        }
+      ],
+      "planned_changes": [
+        {
+          "proposition_text": "The doctor will increase the dosage of prozac to 40 milligrams.",
+          "turn_ids": [
+            "T28"
+          ],
+          "attributes": {}
+        },
+        {
+          "proposition_text": "The doctor will increase the dosage of prozac.",
+          "turn_ids": [
+            "T28"
+          ],
+          "attributes": {}
+        }
+      ]
+    }
+  ]
+}

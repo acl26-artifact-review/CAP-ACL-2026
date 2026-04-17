@@ -1,0 +1,1801 @@
+{
+  "case_id": "D2N046",
+  "method": "cluster2sent",
+  "template": "sectioned",
+  "summary_text": "Chief Complaint\nEvaluation of a newly diagnosed ovarian cancer and related symptoms.\n\nHistory of Present Illness\nThe patient reports experiencing severe pain and bleeding related to her newly diagnosed ovarian cancer. She also reports constipation and weight loss. She denies vomiting. She takes no oral hormone replacement therapy and has no history of endometriosis. She reports a family history of gynecological cancers.\n\nFindings\nA physical exam revealed a left adnexal mass, with slight tenderness to palpation of the left lower quadrant. The abdominal CT scan showed a three centimeter left ovarian mass with associated localized lymph node involvement, and no evidence of gross peritoneal or metastatic disease.\n\nAssessment\nBased on the CT findings, the patient is most likely diagnosed with stage three ovarian cancer.\n\nPlan\nI will order blood tests including CA-125, HCG, AFP, and LDH to further characterize the tumor. I will also arrange for genetic counseling and testing to assess for a genetic predisposition to ovarian cancer. I recommend a hysterectomy with lymph node dissection and subsequent chemotherapy with cisplatin and taxol, potentially followed by intraperitoneal chemotherapy. I will perform surgery after recovery and send tissue samples for pathology to determine the stage of the cancer.",
+  "reference_summary": "CHIEF COMPLAINT\n\nNew patient evaluation of newly diagnosed ovarian cancer.\n\nFAMILY HISTORY\n\nThe patient was adopted and has no knowledge of any family history.\n\nREVIEW OF SYSTEMS\n\nConstitutional: Reports unintentional weight loss\nGastrointestinal: Reports abdominal pain and constipation. Denies vomiting.\nGenitourinary: Reports abnormal vaginal bleeding. Denies urinary issues.\nPsychiatric: Reports depression\n\nPHYSICAL EXAM\n\nGastrointestinal\n- Examination of Abdomen: There is slight tenderness to palpation of the left lower quadrant. No rebounding or guarding.\n\nPelvic\n- Examination: There are no external lesions on the labia. The vaginal vault is within normal limits. The cervix is pink without lesions. On bimanual exam, I appreciate a left adnexal mass. No masses on the right.\n\nRESULTS\n\nCT scan of the abdomen was reviewed and demonstrated a 3 cm left ovarian mass with associated localized lymph node involvement. There is no evidence of gross peritoneal or metastatic disease.\n\nASSESSMENT AND PLAN\n\n1. Ovarian cancer.\n- Medical Reasoning: Looking at her abdominal CT results, it appears to be stage IIIA disease based on the lymph node involvement.\n- Patient Education and Counseling: I explained to the patient that the typical approach to treating this stage of cancer is surgical intervention followed by adjunct chemotherapy. The procedure and subsequent chemotherapy plans were discussed in detail. Given that she is young and otherwise healthy, I reassured her that I believe her prognosis is favorable based on her current status, however, this is dependent on the final pathology report. All of her questions were answered.\n- Medical Treatment: I want to start by ordering several blood tests including a CA-125, hCG, AFP, and LDH. I also want her to undergo genetic counseling and testing to see if she has a genetic predisposition for developing ovarian cancer. I recommend we perform a hysterectomy and oophorectomy, as well as a lymph node dissection to remove any involved lymph nodes. Any concerning tissue will be biopsied and sent to pathology for staging. After she has recovered from surgery, she will start chemotherapy treatment with cisplatin and Taxol. We may also consider intraperitoneal chemotherapy.\n\nPatient Agreements: The patient understands and agrees with the recommended medical treatment plan.",
+  "source_cap": {
+    "atomic_propositions": [
+      {
+        "prop_id": "CAP1",
+        "cap_type": "Problem",
+        "canonical_concept": "ovarian cancer",
+        "category": "Problem",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The doctor believes the patient likely has ovarian cancer."
+      },
+      {
+        "prop_id": "CAP2",
+        "cap_type": "Problem",
+        "canonical_concept": "stage three a disease",
+        "category": "Problem",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient's ovarian cancer is stage three A."
+      },
+      {
+        "prop_id": "CAP3",
+        "cap_type": "Problem",
+        "canonical_concept": "endometriosis",
+        "category": "Problem",
+        "speaker": "doctor",
+        "status": "uncertain",
+        "visit_state": "historical",
+        "temporality": "historical",
+        "proposition_text": "The patient has a history of endometriosis."
+      },
+      {
+        "prop_id": "CAP4",
+        "cap_type": "Symptom",
+        "canonical_concept": "pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "safety_relevant",
+          "symptom"
+        ],
+        "proposition_text": "The patient reports severe pain."
+      },
+      {
+        "prop_id": "CAP5",
+        "cap_type": "Symptom",
+        "canonical_concept": "weight loss",
+        "category": "Symptom",
+        "speaker": "doctor",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports weight loss."
+      },
+      {
+        "prop_id": "CAP6",
+        "cap_type": "Problem",
+        "canonical_concept": "ovarian cancer",
+        "category": "Problem",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient has ovarian cancer."
+      },
+      {
+        "prop_id": "CAP7",
+        "cap_type": "Symptom",
+        "canonical_concept": "constipation",
+        "category": "Symptom",
+        "speaker": "doctor",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports constipation."
+      },
+      {
+        "prop_id": "CAP8",
+        "cap_type": "Order",
+        "canonical_concept": "lymph node dissection",
+        "category": "Order",
+        "speaker": "doctor",
+        "status": "uncertain",
+        "visit_state": "planned",
+        "temporality": "current",
+        "proposition_text": "The doctor wants to perform a lymph node dissection."
+      },
+      {
+        "prop_id": "CAP9",
+        "cap_type": "MedicationRequest",
+        "canonical_concept": "ca-125",
+        "category": "MedicationRequest",
+        "speaker": "doctor",
+        "status": "uncertain",
+        "visit_state": "planned",
+        "temporality": "current",
+        "claim_type_tags": [
+          "quantitative"
+        ],
+        "proposition_text": "The doctor wants to order a ca-125 test."
+      },
+      {
+        "prop_id": "CAP10",
+        "cap_type": "MedicationRequest",
+        "canonical_concept": "hcg",
+        "category": "MedicationRequest",
+        "speaker": "doctor",
+        "status": "uncertain",
+        "visit_state": "planned",
+        "temporality": "current",
+        "proposition_text": "The doctor wants to order an hcg test."
+      },
+      {
+        "prop_id": "CAP11",
+        "cap_type": "MedicationRequest",
+        "canonical_concept": "afp",
+        "category": "MedicationRequest",
+        "speaker": "doctor",
+        "status": "uncertain",
+        "visit_state": "planned",
+        "temporality": "current",
+        "proposition_text": "The doctor wants to order an afp test."
+      },
+      {
+        "prop_id": "CAP12",
+        "cap_type": "MedicationRequest",
+        "canonical_concept": "ldh",
+        "category": "MedicationRequest",
+        "speaker": "doctor",
+        "status": "uncertain",
+        "visit_state": "planned",
+        "temporality": "current",
+        "proposition_text": "The doctor wants to order an ldh test."
+      },
+      {
+        "prop_id": "CAP13",
+        "cap_type": "Order",
+        "canonical_concept": "hysterectomy",
+        "category": "Order",
+        "speaker": "doctor",
+        "status": "uncertain",
+        "visit_state": "planned",
+        "temporality": "current",
+        "proposition_text": "The doctor wants to perform a hysterectomy."
+      },
+      {
+        "prop_id": "CAP14",
+        "cap_type": "Order",
+        "canonical_concept": "intraperitoneal chemotherapy",
+        "category": "Order",
+        "speaker": "doctor",
+        "status": "uncertain",
+        "visit_state": "planned",
+        "temporality": "current",
+        "proposition_text": "The doctor wants to administer intraperitoneal chemotherapy."
+      },
+      {
+        "prop_id": "CAP15",
+        "cap_type": "Order",
+        "canonical_concept": "chemotherapy",
+        "category": "Order",
+        "speaker": "doctor",
+        "predicate": "plans",
+        "status": "uncertain",
+        "visit_state": "planned",
+        "temporality": "current",
+        "claim_type_tags": [
+          "plan"
+        ],
+        "proposition_text": "The doctor wants to start chemotherapy."
+      },
+      {
+        "prop_id": "CAP16",
+        "cap_type": "MedicationRequest",
+        "canonical_concept": "cisplatin",
+        "category": "MedicationRequest",
+        "speaker": "doctor",
+        "status": "uncertain",
+        "visit_state": "planned",
+        "temporality": "current",
+        "proposition_text": "The doctor wants to administer cisplatin."
+      },
+      {
+        "prop_id": "CAP17",
+        "cap_type": "MedicationRequest",
+        "canonical_concept": "taxol",
+        "category": "MedicationRequest",
+        "speaker": "doctor",
+        "status": "uncertain",
+        "visit_state": "planned",
+        "temporality": "current",
+        "proposition_text": "The doctor wants to administer taxol."
+      },
+      {
+        "prop_id": "CAP18",
+        "cap_type": "Counseling",
+        "canonical_concept": "genetic counseling",
+        "category": "Counseling",
+        "speaker": "doctor",
+        "predicate": "recommends",
+        "status": "uncertain",
+        "visit_state": "planned",
+        "temporality": "current",
+        "claim_type_tags": [
+          "plan"
+        ],
+        "proposition_text": "The doctor recommends genetic counseling."
+      }
+    ],
+    "filtered_nonverifiable_units": []
+  },
+  "event_plan": null,
+  "summary_cap": {
+    "atomic_propositions": [
+      {
+        "prop_id": "P1",
+        "cap_type": "ChiefComplaint",
+        "canonical_concept": "newly diagnosed ovarian cancer",
+        "category": "ChiefComplaint",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "temporal"
+        ],
+        "proposition_text": "The patient reports a newly diagnosed ovarian cancer."
+      },
+      {
+        "prop_id": "P2",
+        "cap_type": "Problem",
+        "canonical_concept": "pain",
+        "category": "Problem",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports severe pain."
+      },
+      {
+        "prop_id": "P3",
+        "cap_type": "Problem",
+        "canonical_concept": "bleeding",
+        "category": "Problem",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports bleeding."
+      },
+      {
+        "prop_id": "P4",
+        "cap_type": "Problem",
+        "canonical_concept": "constipation",
+        "category": "Problem",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports constipation."
+      },
+      {
+        "prop_id": "P5",
+        "cap_type": "Problem",
+        "canonical_concept": "weight loss",
+        "category": "Problem",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports weight loss."
+      },
+      {
+        "prop_id": "P6",
+        "cap_type": "Allergy",
+        "canonical_concept": "denies taking oral hormone",
+        "category": "Allergy",
+        "speaker": "patient",
+        "predicate": "denies",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "medication"
+        ],
+        "proposition_text": "The patient denies taking oral hormone replacement therapy."
+      },
+      {
+        "prop_id": "P7",
+        "cap_type": "History",
+        "canonical_concept": "history endometriosis",
+        "category": "History",
+        "speaker": "patient",
+        "predicate": "has",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "past",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient has a history of endometriosis."
+      },
+      {
+        "prop_id": "P8",
+        "cap_type": "History",
+        "canonical_concept": "family history gynecological cancers",
+        "category": "History",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "past",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports a family history of gynecological cancers."
+      },
+      {
+        "prop_id": "P9",
+        "cap_type": "Finding",
+        "canonical_concept": "physical exam revealed left",
+        "category": "Finding",
+        "speaker": "clinician",
+        "predicate": "revealed",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "exam"
+        ],
+        "proposition_text": "A physical exam revealed a left adnexal mass."
+      },
+      {
+        "prop_id": "P10",
+        "cap_type": "Finding",
+        "canonical_concept": "left lower quadrant tender",
+        "category": "Finding",
+        "speaker": "clinician",
+        "predicate": "revealed",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "exam"
+        ],
+        "proposition_text": "The left lower quadrant is slightly tender to palpation."
+      },
+      {
+        "prop_id": "P11",
+        "cap_type": "TestResult",
+        "canonical_concept": "abdominal scan showed three",
+        "category": "TestResult",
+        "speaker": "test_result",
+        "predicate": "shows",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "diagnostic"
+        ],
+        "proposition_text": "The abdominal CT scan showed a three centimeter left ovarian mass."
+      },
+      {
+        "prop_id": "P12",
+        "cap_type": "Finding",
+        "canonical_concept": "localized lymph node involvement",
+        "category": "Finding",
+        "speaker": "test_result",
+        "predicate": "shows",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "exam"
+        ],
+        "proposition_text": "Localized lymph node involvement was observed."
+      },
+      {
+        "prop_id": "P13",
+        "cap_type": "Diagnosis",
+        "canonical_concept": "most likely diagnosed stage",
+        "category": "Diagnosis",
+        "speaker": "clinician",
+        "predicate": "diagnoses",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "diagnostic"
+        ],
+        "proposition_text": "The patient is most likely diagnosed with stage three ovarian cancer."
+      },
+      {
+        "prop_id": "P14",
+        "cap_type": "MedicationPlan",
+        "canonical_concept": "prescribes blood tests including",
+        "category": "MedicationPlan",
+        "speaker": "clinician",
+        "predicate": "prescribes",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "future",
+        "claim_type_tags": [
+          "medication"
+        ],
+        "proposition_text": "The clinician prescribes blood tests including CA-125, HCG, AFP, and LDH"
+      },
+      {
+        "prop_id": "P15",
+        "cap_type": "MedicationPlan",
+        "canonical_concept": "prescribes genetic counseling and",
+        "category": "MedicationPlan",
+        "speaker": "clinician",
+        "predicate": "prescribes",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "future",
+        "claim_type_tags": [
+          "medication"
+        ],
+        "proposition_text": "The clinician prescribes genetic counseling and testing"
+      },
+      {
+        "prop_id": "P16",
+        "cap_type": "MedicationPlan",
+        "canonical_concept": "prescribes chemotherapy cisplatin and",
+        "category": "MedicationPlan",
+        "speaker": "clinician",
+        "predicate": "prescribes",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "future",
+        "claim_type_tags": [
+          "medication"
+        ],
+        "proposition_text": "The clinician prescribes chemotherapy with cisplatin and taxol"
+      },
+      {
+        "prop_id": "P17",
+        "cap_type": "MedicationPlan",
+        "canonical_concept": "prescribes intraperitoneal chemotherapy",
+        "category": "MedicationPlan",
+        "speaker": "clinician",
+        "predicate": "prescribes",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "future",
+        "claim_type_tags": [
+          "medication"
+        ],
+        "proposition_text": "The clinician prescribes intraperitoneal chemotherapy"
+      },
+      {
+        "prop_id": "P18",
+        "cap_type": "Plan",
+        "canonical_concept": "plans surgery after recovery",
+        "category": "Plan",
+        "speaker": "clinician",
+        "predicate": "plans",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "future",
+        "claim_type_tags": [
+          "plan"
+        ],
+        "proposition_text": "The clinician plans surgery after recovery"
+      },
+      {
+        "prop_id": "P19",
+        "cap_type": "TestPlan",
+        "canonical_concept": "orders tissue samples for",
+        "category": "TestPlan",
+        "speaker": "clinician",
+        "predicate": "orders",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "future",
+        "claim_type_tags": [
+          "test"
+        ],
+        "proposition_text": "The clinician orders tissue samples for pathology"
+      }
+    ],
+    "filtered_nonverifiable_units": [],
+    "runtime_seconds": 26.86
+  },
+  "cap_alignment": {
+    "cap_precision": 0.3684210526315789,
+    "cap_recall": 0.3888888888888889,
+    "cap_f1": 0.37837837837837834,
+    "matched_count": 7,
+    "summary_prop_count": 19,
+    "source_prop_count": 18,
+    "matched_pairs": [
+      {
+        "score": 1.0,
+        "summary_prop_id": "P7",
+        "source_prop_id": "CAP3",
+        "summary_text": "The patient has a history of endometriosis.",
+        "source_text": "The patient has a history of endometriosis."
+      },
+      {
+        "score": 1.0,
+        "summary_prop_id": "P5",
+        "source_prop_id": "CAP5",
+        "summary_text": "The patient reports weight loss.",
+        "source_text": "The patient reports weight loss."
+      },
+      {
+        "score": 1.0,
+        "summary_prop_id": "P4",
+        "source_prop_id": "CAP7",
+        "summary_text": "The patient reports constipation.",
+        "source_text": "The patient reports constipation."
+      },
+      {
+        "score": 1.0,
+        "summary_prop_id": "P2",
+        "source_prop_id": "CAP4",
+        "summary_text": "The patient reports severe pain.",
+        "source_text": "The patient reports severe pain."
+      },
+      {
+        "score": 0.8,
+        "summary_prop_id": "P17",
+        "source_prop_id": "CAP14",
+        "summary_text": "The clinician prescribes intraperitoneal chemotherapy",
+        "source_text": "The doctor wants to administer intraperitoneal chemotherapy."
+      },
+      {
+        "score": 0.7803,
+        "summary_prop_id": "P1",
+        "source_prop_id": "CAP6",
+        "summary_text": "The patient reports a newly diagnosed ovarian cancer.",
+        "source_text": "The patient has ovarian cancer."
+      },
+      {
+        "score": 0.6667,
+        "summary_prop_id": "P15",
+        "source_prop_id": "CAP18",
+        "summary_text": "The clinician prescribes genetic counseling and testing",
+        "source_text": "The doctor recommends genetic counseling."
+      }
+    ],
+    "unsupported_summary_props": [
+      {
+        "prop_id": "P3",
+        "cap_type": "Problem",
+        "canonical_concept": "bleeding",
+        "category": "Problem",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports bleeding."
+      },
+      {
+        "prop_id": "P6",
+        "cap_type": "Allergy",
+        "canonical_concept": "denies taking oral hormone",
+        "category": "Allergy",
+        "speaker": "patient",
+        "predicate": "denies",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "medication"
+        ],
+        "proposition_text": "The patient denies taking oral hormone replacement therapy."
+      },
+      {
+        "prop_id": "P8",
+        "cap_type": "History",
+        "canonical_concept": "family history gynecological cancers",
+        "category": "History",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "past",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports a family history of gynecological cancers."
+      },
+      {
+        "prop_id": "P9",
+        "cap_type": "Finding",
+        "canonical_concept": "physical exam revealed left",
+        "category": "Finding",
+        "speaker": "clinician",
+        "predicate": "revealed",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "exam"
+        ],
+        "proposition_text": "A physical exam revealed a left adnexal mass."
+      },
+      {
+        "prop_id": "P10",
+        "cap_type": "Finding",
+        "canonical_concept": "left lower quadrant tender",
+        "category": "Finding",
+        "speaker": "clinician",
+        "predicate": "revealed",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "exam"
+        ],
+        "proposition_text": "The left lower quadrant is slightly tender to palpation."
+      },
+      {
+        "prop_id": "P11",
+        "cap_type": "TestResult",
+        "canonical_concept": "abdominal scan showed three",
+        "category": "TestResult",
+        "speaker": "test_result",
+        "predicate": "shows",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "diagnostic"
+        ],
+        "proposition_text": "The abdominal CT scan showed a three centimeter left ovarian mass."
+      },
+      {
+        "prop_id": "P12",
+        "cap_type": "Finding",
+        "canonical_concept": "localized lymph node involvement",
+        "category": "Finding",
+        "speaker": "test_result",
+        "predicate": "shows",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "exam"
+        ],
+        "proposition_text": "Localized lymph node involvement was observed."
+      },
+      {
+        "prop_id": "P13",
+        "cap_type": "Diagnosis",
+        "canonical_concept": "most likely diagnosed stage",
+        "category": "Diagnosis",
+        "speaker": "clinician",
+        "predicate": "diagnoses",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "diagnostic"
+        ],
+        "proposition_text": "The patient is most likely diagnosed with stage three ovarian cancer."
+      },
+      {
+        "prop_id": "P14",
+        "cap_type": "MedicationPlan",
+        "canonical_concept": "prescribes blood tests including",
+        "category": "MedicationPlan",
+        "speaker": "clinician",
+        "predicate": "prescribes",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "future",
+        "claim_type_tags": [
+          "medication"
+        ],
+        "proposition_text": "The clinician prescribes blood tests including CA-125, HCG, AFP, and LDH"
+      },
+      {
+        "prop_id": "P16",
+        "cap_type": "MedicationPlan",
+        "canonical_concept": "prescribes chemotherapy cisplatin and",
+        "category": "MedicationPlan",
+        "speaker": "clinician",
+        "predicate": "prescribes",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "future",
+        "claim_type_tags": [
+          "medication"
+        ],
+        "proposition_text": "The clinician prescribes chemotherapy with cisplatin and taxol"
+      },
+      {
+        "prop_id": "P18",
+        "cap_type": "Plan",
+        "canonical_concept": "plans surgery after recovery",
+        "category": "Plan",
+        "speaker": "clinician",
+        "predicate": "plans",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "future",
+        "claim_type_tags": [
+          "plan"
+        ],
+        "proposition_text": "The clinician plans surgery after recovery"
+      },
+      {
+        "prop_id": "P19",
+        "cap_type": "TestPlan",
+        "canonical_concept": "orders tissue samples for",
+        "category": "TestPlan",
+        "speaker": "clinician",
+        "predicate": "orders",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "future",
+        "claim_type_tags": [
+          "test"
+        ],
+        "proposition_text": "The clinician orders tissue samples for pathology"
+      }
+    ],
+    "missing_source_props": [
+      {
+        "prop_id": "CAP1",
+        "cap_type": "Problem",
+        "canonical_concept": "ovarian cancer",
+        "category": "Problem",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The doctor believes the patient likely has ovarian cancer."
+      },
+      {
+        "prop_id": "CAP2",
+        "cap_type": "Problem",
+        "canonical_concept": "stage three a disease",
+        "category": "Problem",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient's ovarian cancer is stage three A."
+      },
+      {
+        "prop_id": "CAP8",
+        "cap_type": "Order",
+        "canonical_concept": "lymph node dissection",
+        "category": "Order",
+        "speaker": "doctor",
+        "status": "uncertain",
+        "visit_state": "planned",
+        "temporality": "current",
+        "proposition_text": "The doctor wants to perform a lymph node dissection."
+      },
+      {
+        "prop_id": "CAP9",
+        "cap_type": "MedicationRequest",
+        "canonical_concept": "ca-125",
+        "category": "MedicationRequest",
+        "speaker": "doctor",
+        "status": "uncertain",
+        "visit_state": "planned",
+        "temporality": "current",
+        "claim_type_tags": [
+          "quantitative"
+        ],
+        "proposition_text": "The doctor wants to order a ca-125 test."
+      },
+      {
+        "prop_id": "CAP10",
+        "cap_type": "MedicationRequest",
+        "canonical_concept": "hcg",
+        "category": "MedicationRequest",
+        "speaker": "doctor",
+        "status": "uncertain",
+        "visit_state": "planned",
+        "temporality": "current",
+        "proposition_text": "The doctor wants to order an hcg test."
+      },
+      {
+        "prop_id": "CAP11",
+        "cap_type": "MedicationRequest",
+        "canonical_concept": "afp",
+        "category": "MedicationRequest",
+        "speaker": "doctor",
+        "status": "uncertain",
+        "visit_state": "planned",
+        "temporality": "current",
+        "proposition_text": "The doctor wants to order an afp test."
+      },
+      {
+        "prop_id": "CAP12",
+        "cap_type": "MedicationRequest",
+        "canonical_concept": "ldh",
+        "category": "MedicationRequest",
+        "speaker": "doctor",
+        "status": "uncertain",
+        "visit_state": "planned",
+        "temporality": "current",
+        "proposition_text": "The doctor wants to order an ldh test."
+      },
+      {
+        "prop_id": "CAP13",
+        "cap_type": "Order",
+        "canonical_concept": "hysterectomy",
+        "category": "Order",
+        "speaker": "doctor",
+        "status": "uncertain",
+        "visit_state": "planned",
+        "temporality": "current",
+        "proposition_text": "The doctor wants to perform a hysterectomy."
+      },
+      {
+        "prop_id": "CAP15",
+        "cap_type": "Order",
+        "canonical_concept": "chemotherapy",
+        "category": "Order",
+        "speaker": "doctor",
+        "predicate": "plans",
+        "status": "uncertain",
+        "visit_state": "planned",
+        "temporality": "current",
+        "claim_type_tags": [
+          "plan"
+        ],
+        "proposition_text": "The doctor wants to start chemotherapy."
+      },
+      {
+        "prop_id": "CAP16",
+        "cap_type": "MedicationRequest",
+        "canonical_concept": "cisplatin",
+        "category": "MedicationRequest",
+        "speaker": "doctor",
+        "status": "uncertain",
+        "visit_state": "planned",
+        "temporality": "current",
+        "proposition_text": "The doctor wants to administer cisplatin."
+      },
+      {
+        "prop_id": "CAP17",
+        "cap_type": "MedicationRequest",
+        "canonical_concept": "taxol",
+        "category": "MedicationRequest",
+        "speaker": "doctor",
+        "status": "uncertain",
+        "visit_state": "planned",
+        "temporality": "current",
+        "proposition_text": "The doctor wants to administer taxol."
+      }
+    ]
+  },
+  "reference_gpt_f1_items": {
+    "active_problems_symptoms": [
+      "unintentional weight loss",
+      "abdominal pain",
+      "constipation",
+      "abnormal vaginal bleeding",
+      "depression",
+      "CA-125",
+      "hCG",
+      "AFP",
+      "LDH"
+    ],
+    "negated_findings": [
+      "vomiting",
+      "urinary issues"
+    ],
+    "uncertain_findings": [
+      "genetic predisposition for developing ovarian cancer"
+    ],
+    "medication_treatment": [
+      "cisplatin",
+      "Taxol",
+      "intraperitoneal chemotherapy"
+    ],
+    "plan_followup": [
+      "blood tests",
+      "genetic counseling and testing",
+      "hysterectomy",
+      "oophorectomy",
+      "lymph node dissection",
+      "biopsied",
+      "chemotherapy treatment"
+    ],
+    "_chunk_count": [
+      "3"
+    ]
+  },
+  "summary_gpt_f1_items": {
+    "active_problems_symptoms": [],
+    "negated_findings": [],
+    "uncertain_findings": [],
+    "medication_treatment": [],
+    "plan_followup": [],
+    "_chunk_count": [
+      "1"
+    ]
+  },
+  "gpt_f1_alignment": {
+    "by_category": {
+      "active_problems_symptoms": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "matched_count": 0,
+        "pred_count": 0,
+        "ref_count": 9,
+        "matches": [],
+        "unsupported_pred_items": [],
+        "missing_ref_items": [
+          "unintentional weight loss",
+          "abdominal pain",
+          "constipation",
+          "abnormal vaginal bleeding",
+          "depression",
+          "CA-125",
+          "hCG",
+          "AFP",
+          "LDH"
+        ]
+      },
+      "negated_findings": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "matched_count": 0,
+        "pred_count": 0,
+        "ref_count": 2,
+        "matches": [],
+        "unsupported_pred_items": [],
+        "missing_ref_items": [
+          "vomiting",
+          "urinary issues"
+        ]
+      },
+      "uncertain_findings": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "matched_count": 0,
+        "pred_count": 0,
+        "ref_count": 1,
+        "matches": [],
+        "unsupported_pred_items": [],
+        "missing_ref_items": [
+          "genetic predisposition for developing ovarian cancer"
+        ]
+      },
+      "medication_treatment": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "matched_count": 0,
+        "pred_count": 0,
+        "ref_count": 3,
+        "matches": [],
+        "unsupported_pred_items": [],
+        "missing_ref_items": [
+          "cisplatin",
+          "Taxol",
+          "intraperitoneal chemotherapy"
+        ]
+      },
+      "plan_followup": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "matched_count": 0,
+        "pred_count": 0,
+        "ref_count": 7,
+        "matches": [],
+        "unsupported_pred_items": [],
+        "missing_ref_items": [
+          "blood tests",
+          "genetic counseling and testing",
+          "hysterectomy",
+          "oophorectomy",
+          "lymph node dissection",
+          "biopsied",
+          "chemotherapy treatment"
+        ]
+      }
+    }
+  },
+  "reference_nair_concepts": {
+    "sections": [
+      {
+        "heading": "Clinical Note",
+        "section_value": "CHIEF COMPLAINT\nNew patient evaluation of newly diagnosed ovarian cancer.\nFAMILY HISTORY\nThe patient was adopted and has no knowledge of any family history.\nREVIEW OF SYSTEMS\nConstitutional: Reports unintentional weight loss\nGastrointestinal: Reports abdominal pain and constipation. Denies vomiting.\nGenitourinary: Reports abnormal vaginal bleeding. Denies urinary issues.\nPsychiatric: Reports depression\nPHYSICAL EXAM",
+        "medical_concepts": [
+          "ovarian cancer",
+          "family history",
+          "unintentional weight loss",
+          "abdominal pain",
+          "constipation",
+          "vomiting",
+          "abnormal vaginal bleeding",
+          "urinary issues",
+          "depression"
+        ]
+      },
+      {
+        "heading": "Clinical Note",
+        "section_value": "Gastrointestinal\n- Examination of Abdomen: There is slight tenderness to palpation of the left lower quadrant. No rebounding or guarding.\nPelvic\n- Examination: There are no external lesions on the labia. The vaginal vault is within normal limits. The cervix is pink without lesions. On bimanual exam, I appreciate a left adnexal mass. No masses on the right.\nRESULTS\nCT scan of the abdomen was reviewed and demonstrated a 3 cm left ovarian mass with associated localized lymph node involvement. There is no evidence of gross peritoneal or metastatic disease.\nASSESSMENT AND PLAN\n1. Ovarian cancer.\n- Medical Reasoning: Looking at her abdominal CT results, it appears to be stage IIIA disease based on the lymph node involvement.\n- Patient Education and Counseling: I explained to the patient that the typical approach to treating this stage of cancer is surgical intervention followed by adjunct chemotherapy. The procedure and subsequent chemotherapy plans were discussed in detail. Given that she is young and otherwise healthy, I reassured her that I believe her prognosis is favorable based on her current status, however, this is dependent on the final pathology report. All of her questions were answered.",
+        "medical_concepts": [
+          "abdominal tenderness",
+          "left lower quadrant tenderness",
+          "rebound tenderness",
+          "guarding",
+          "external genital lesions",
+          "labial lesions",
+          "vaginal vault",
+          "cervical lesions",
+          "bimanual exam",
+          "adnexal mass",
+          "left adnexal mass",
+          "CT scan of the abdomen",
+          "ovarian mass",
+          "left ovarian mass",
+          "lymph node involvement",
+          "peritoneal disease",
+          "metastatic disease",
+          "ovarian cancer",
+          "stage IIIA ovarian cancer",
+          "surgical intervention"
+        ]
+      },
+      {
+        "heading": "Clinical Note",
+        "section_value": "- Medical Treatment: I want to start by ordering several blood tests including a CA-125, hCG, AFP, and LDH. I also want her to undergo genetic counseling and testing to see if she has a genetic predisposition for developing ovarian cancer. I recommend we perform a hysterectomy and oophorectomy, as well as a lymph node dissection to remove any involved lymph nodes. Any concerning tissue will be biopsied and sent to pathology for staging. After she has recovered from surgery, she will start chemotherapy treatment with cisplatin and Taxol. We may also consider intraperitoneal chemotherapy.\nPatient Agreements: The patient understands and agrees with the recommended medical treatment plan.",
+        "medical_concepts": [
+          "blood tests",
+          "CA-125",
+          "hCG",
+          "AFP",
+          "LDH",
+          "genetic counseling",
+          "genetic testing",
+          "genetic predisposition for developing ovarian cancer",
+          "ovarian cancer",
+          "hysterectomy",
+          "oophorectomy",
+          "lymph node dissection",
+          "lymph nodes",
+          "biopsy",
+          "pathology",
+          "staging",
+          "chemotherapy",
+          "cisplatin",
+          "Taxol",
+          "intraperitoneal chemotherapy"
+        ]
+      }
+    ],
+    "medical_concepts": [
+      "ovarian cancer",
+      "family history",
+      "unintentional weight loss",
+      "abdominal pain",
+      "constipation",
+      "vomiting",
+      "abnormal vaginal bleeding",
+      "urinary issues",
+      "depression",
+      "abdominal tenderness",
+      "left lower quadrant tenderness",
+      "rebound tenderness",
+      "guarding",
+      "external genital lesions",
+      "labial lesions",
+      "vaginal vault",
+      "cervical lesions",
+      "bimanual exam",
+      "adnexal mass",
+      "left adnexal mass",
+      "CT scan of the abdomen",
+      "ovarian mass",
+      "left ovarian mass",
+      "lymph node involvement",
+      "peritoneal disease",
+      "metastatic disease",
+      "stage IIIA ovarian cancer",
+      "surgical intervention",
+      "blood tests",
+      "CA-125",
+      "hCG",
+      "AFP",
+      "LDH",
+      "genetic counseling",
+      "genetic testing",
+      "genetic predisposition for developing ovarian cancer",
+      "hysterectomy",
+      "oophorectomy",
+      "lymph node dissection",
+      "lymph nodes",
+      "biopsy",
+      "pathology",
+      "staging",
+      "chemotherapy",
+      "cisplatin",
+      "Taxol",
+      "intraperitoneal chemotherapy"
+    ],
+    "section_count": 3
+  },
+  "summary_nair_concepts": {
+    "sections": [
+      {
+        "heading": "Clinical Note",
+        "section_value": "Chief Complaint\nEvaluation of a newly diagnosed ovarian cancer and related symptoms.\nHistory of Present Illness\nThe patient reports experiencing severe pain and bleeding related to her newly diagnosed ovarian cancer. She also reports constipation and weight loss. She denies vomiting. She takes no oral hormone replacement therapy and has no history of endometriosis. She reports a family history of gynecological cancers.\nFindings\nA physical exam revealed a left adnexal mass, with slight tenderness to palpation of the left lower quadrant. The abdominal CT scan showed a three centimeter left ovarian mass with associated localized lymph node involvement, and no evidence of gross peritoneal or metastatic disease.\nAssessment\nBased on the CT findings, the patient is most likely diagnosed with stage three ovarian cancer.\nPlan\nI will order blood tests including CA-125, HCG, AFP, and LDH to further characterize the tumor. I will also arrange for genetic counseling and testing to assess for a genetic predisposition to ovarian cancer. I recommend a hysterectomy with lymph node dissection and subsequent chemotherapy with cisplatin and taxol, potentially followed by intraperitoneal chemotherapy. I will perform surgery after recovery and send tissue samples for pathology to determine the stage of the cancer.",
+        "medical_concepts": [
+          "ovarian cancer",
+          "severe pain",
+          "bleeding",
+          "constipation",
+          "weight loss",
+          "vomiting",
+          "oral hormone replacement therapy",
+          "endometriosis",
+          "family history of gynecological cancers",
+          "left adnexal mass",
+          "tenderness to palpation of the left lower quadrant",
+          "abdominal CT scan",
+          "left ovarian mass",
+          "localized lymph node involvement",
+          "peritoneal disease",
+          "metastatic disease",
+          "stage three ovarian cancer",
+          "blood tests",
+          "CA-125",
+          "HCG"
+        ]
+      }
+    ],
+    "medical_concepts": [
+      "ovarian cancer",
+      "severe pain",
+      "bleeding",
+      "constipation",
+      "weight loss",
+      "vomiting",
+      "oral hormone replacement therapy",
+      "endometriosis",
+      "family history of gynecological cancers",
+      "left adnexal mass",
+      "tenderness to palpation of the left lower quadrant",
+      "abdominal CT scan",
+      "left ovarian mass",
+      "localized lymph node involvement",
+      "peritoneal disease",
+      "metastatic disease",
+      "stage three ovarian cancer",
+      "blood tests",
+      "CA-125",
+      "HCG"
+    ],
+    "section_count": 1
+  },
+  "nair_alignment": {
+    "pred_concepts": [
+      "ovarian cancer",
+      "severe pain",
+      "bleeding",
+      "constipation",
+      "weight loss",
+      "vomiting",
+      "oral hormone replacement therapy",
+      "endometriosis",
+      "family history of gynecological cancers",
+      "left adnexal mass",
+      "tenderness to palpation of the left lower quadrant",
+      "abdominal CT scan",
+      "left ovarian mass",
+      "localized lymph node involvement",
+      "peritoneal disease",
+      "metastatic disease",
+      "stage three ovarian cancer",
+      "blood tests",
+      "CA-125",
+      "HCG"
+    ],
+    "ref_concepts": [
+      "ovarian cancer",
+      "family history",
+      "unintentional weight loss",
+      "abdominal pain",
+      "constipation",
+      "vomiting",
+      "abnormal vaginal bleeding",
+      "urinary issues",
+      "depression",
+      "abdominal tenderness",
+      "left lower quadrant tenderness",
+      "rebound tenderness",
+      "guarding",
+      "external genital lesions",
+      "labial lesions",
+      "vaginal vault",
+      "cervical lesions",
+      "bimanual exam",
+      "adnexal mass",
+      "left adnexal mass",
+      "CT scan of the abdomen",
+      "ovarian mass",
+      "left ovarian mass",
+      "lymph node involvement",
+      "peritoneal disease",
+      "metastatic disease",
+      "stage IIIA ovarian cancer",
+      "surgical intervention",
+      "blood tests",
+      "CA-125",
+      "hCG",
+      "AFP",
+      "LDH",
+      "genetic counseling",
+      "genetic testing",
+      "genetic predisposition for developing ovarian cancer",
+      "hysterectomy",
+      "oophorectomy",
+      "lymph node dissection",
+      "lymph nodes",
+      "biopsy",
+      "pathology",
+      "staging",
+      "chemotherapy",
+      "cisplatin",
+      "Taxol",
+      "intraperitoneal chemotherapy"
+    ],
+    "precision_alignment": {
+      "found_b": [
+        "ovarian cancer",
+        "bleeding",
+        "constipation",
+        "weight loss",
+        "vomiting",
+        "left adnexal mass",
+        "tenderness to palpation of the left lower quadrant",
+        "abdominal CT scan",
+        "left ovarian mass",
+        "localized lymph node involvement",
+        "peritoneal disease",
+        "metastatic disease",
+        "blood tests",
+        "CA-125",
+        "HCG"
+      ],
+      "not_found_b": [
+        "severe pain",
+        "oral hormone replacement therapy",
+        "endometriosis",
+        "family history of gynecological cancers",
+        "stage three ovarian cancer"
+      ],
+      "chunk_count": 1,
+      "chunk_results": [
+        {
+          "found_b": [
+            "ovarian cancer",
+            "bleeding",
+            "constipation",
+            "weight loss",
+            "vomiting",
+            "left adnexal mass",
+            "tenderness to palpation of the left lower quadrant",
+            "abdominal CT scan",
+            "left ovarian mass",
+            "localized lymph node involvement",
+            "peritoneal disease",
+            "metastatic disease",
+            "blood tests",
+            "CA-125",
+            "HCG"
+          ],
+          "not_found_b": [
+            "severe pain",
+            "oral hormone replacement therapy",
+            "endometriosis",
+            "family history of gynecological cancers",
+            "stage three ovarian cancer"
+          ]
+        }
+      ]
+    },
+    "recall_alignment": {
+      "found_b": [
+        "ovarian cancer",
+        "family history",
+        "unintentional weight loss",
+        "abdominal pain",
+        "constipation",
+        "vomiting",
+        "abnormal vaginal bleeding",
+        "abdominal tenderness",
+        "left lower quadrant tenderness",
+        "adnexal mass",
+        "left adnexal mass",
+        "CT scan of the abdomen",
+        "ovarian mass",
+        "left ovarian mass",
+        "lymph node involvement",
+        "peritoneal disease",
+        "metastatic disease",
+        "surgical intervention",
+        "blood tests",
+        "CA-125",
+        "hCG",
+        "AFP",
+        "LDH",
+        "genetic counseling",
+        "genetic testing",
+        "genetic predisposition for developing ovarian cancer",
+        "hysterectomy",
+        "lymph node dissection",
+        "lymph nodes",
+        "pathology",
+        "staging",
+        "chemotherapy",
+        "cisplatin",
+        "Taxol",
+        "intraperitoneal chemotherapy"
+      ],
+      "not_found_b": [
+        "urinary issues",
+        "depression",
+        "rebound tenderness",
+        "guarding",
+        "external genital lesions",
+        "labial lesions",
+        "vaginal vault",
+        "cervical lesions",
+        "bimanual exam",
+        "stage IIIA ovarian cancer",
+        "oophorectomy",
+        "biopsy"
+      ],
+      "chunk_count": 2,
+      "chunk_results": [
+        {
+          "found_b": [
+            "ovarian cancer",
+            "family history",
+            "unintentional weight loss",
+            "abdominal pain",
+            "constipation",
+            "vomiting",
+            "abnormal vaginal bleeding",
+            "abdominal tenderness",
+            "left lower quadrant tenderness",
+            "adnexal mass",
+            "left adnexal mass",
+            "CT scan of the abdomen",
+            "ovarian mass",
+            "left ovarian mass",
+            "lymph node involvement"
+          ],
+          "not_found_b": [
+            "urinary issues",
+            "depression",
+            "rebound tenderness",
+            "guarding",
+            "external genital lesions",
+            "labial lesions",
+            "vaginal vault",
+            "cervical lesions",
+            "bimanual exam"
+          ]
+        },
+        {
+          "found_b": [
+            "peritoneal disease",
+            "metastatic disease",
+            "surgical intervention",
+            "blood tests",
+            "CA-125",
+            "hCG",
+            "AFP",
+            "LDH",
+            "genetic counseling",
+            "genetic testing",
+            "genetic predisposition for developing ovarian cancer",
+            "hysterectomy",
+            "lymph node dissection",
+            "lymph nodes",
+            "pathology",
+            "staging",
+            "chemotherapy",
+            "cisplatin",
+            "Taxol",
+            "intraperitoneal chemotherapy"
+          ],
+          "not_found_b": [
+            "stage IIIA ovarian cancer",
+            "oophorectomy",
+            "biopsy"
+          ]
+        }
+      ]
+    }
+  },
+  "semantic_cap_audit": {
+    "source_cap_recall": [
+      {
+        "cap_id": "P1",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P2",
+        "judgment": "contradicted",
+        "reason": null
+      },
+      {
+        "cap_id": "P3",
+        "judgment": "contradicted",
+        "reason": null
+      },
+      {
+        "cap_id": "P4",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P5",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P6",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P7",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P8",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P9",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P10",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P11",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P12",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P13",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P14",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P15",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P16",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P1",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P2",
+        "judgment": "supported",
+        "reason": null
+      }
+    ],
+    "summary_cap_precision": [
+      {
+        "cap_id": "P1",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P2",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P3",
+        "judgment": "unsupported",
+        "reason": null
+      },
+      {
+        "cap_id": "P4",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P5",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P6",
+        "judgment": "unsupported",
+        "reason": null
+      },
+      {
+        "cap_id": "P7",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P8",
+        "judgment": "unsupported",
+        "reason": null
+      },
+      {
+        "cap_id": "P9",
+        "judgment": "unsupported",
+        "reason": null
+      },
+      {
+        "cap_id": "P10",
+        "judgment": "unsupported",
+        "reason": null
+      },
+      {
+        "cap_id": "P11",
+        "judgment": "unsupported",
+        "reason": null
+      },
+      {
+        "cap_id": "P12",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P13",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P14",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P15",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P16",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P1",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P2",
+        "judgment": "unsupported",
+        "reason": null
+      },
+      {
+        "cap_id": "P3",
+        "judgment": "unsupported",
+        "reason": null
+      }
+    ],
+    "metrics": {
+      "semantic_cap_precision": 0.3158,
+      "semantic_cap_recall": 0.8333,
+      "semantic_cap_f1": 0.458,
+      "semantic_cap_precision_supported_count": 1,
+      "semantic_cap_precision_partial_count": 10,
+      "semantic_cap_precision_denominator": 19,
+      "semantic_cap_recall_supported_count": 14,
+      "semantic_cap_recall_partial_count": 2,
+      "semantic_cap_recall_denominator": 18,
+      "semantic_cap_low_value_source_count": 0,
+      "semantic_cap_low_value_summary_count": 0,
+      "semantic_cap_missing_count": 0,
+      "semantic_cap_unsupported_count": 8,
+      "semantic_cap_contradicted_source_count": 2,
+      "semantic_cap_contradicted_summary_count": 0
+    }
+  },
+  "safety_judgment": null,
+  "section_judgment": {
+    "section_miscategorizations": [],
+    "summary_statistics": {
+      "section_appropriateness_score": 1.0,
+      "section_miscategorization_count": 0,
+      "major_section_miscategorization_count": 0
+    }
+  },
+  "pdsqi_judgment": {
+    "citation_applicable": 0,
+    "citation": 0,
+    "accurate": 3,
+    "thorough": 3,
+    "useful": 3,
+    "organized": 4,
+    "comprehensible": 5,
+    "succinct": 5,
+    "abstraction": 1,
+    "synthesized": 4,
+    "voice_summ": 0,
+    "voice_note": 0,
+    "pdsqi_core_mean": 3.8571
+  },
+  "llm_checklist_judgment": {
+    "content_preservation_core": 4,
+    "noise_suppression": 5,
+    "lay_expression_preservation": 3,
+    "state_update_fidelity": 2,
+    "temporality_preservation": 4,
+    "problem_evidence_linkage": 4,
+    "state_plan_separation": 3,
+    "section_organization_appropriateness": 3,
+    "overall_clinical_usability": 3,
+    "clinically_meaningful_omission": "Yes",
+    "clinically_concerning_hallucination": "Yes",
+    "checklist_a_mean": 4.0,
+    "checklist_b_mean": 3.0,
+    "checklist_c_mean": 3.3333,
+    "llm_checklist_abc_mean": 3.5,
+    "llm_checklist_mean_no_usability": 3.5,
+    "llm_checklist_total_score": 31,
+    "llm_checklist_mean": 3.4444,
+    "llm_checklist_meaningful_omission_yes": 1,
+    "llm_checklist_concerning_hallucination_yes": 1
+  },
+  "metrics": {
+    "case_id": "D2N046",
+    "method": "cluster2sent",
+    "template": "sectioned",
+    "source_cap_count": 18,
+    "event_plan_count": null,
+    "summary_cap_count": 19,
+    "cap_matched_count": 7,
+    "cap_precision": 0.3684,
+    "cap_recall": 0.3889,
+    "cap_f1": 0.3784,
+    "unsupported_summary_cap_count": 12,
+    "missing_source_cap_count": 11,
+    "summary_runtime_seconds": null,
+    "summary_cap_runtime_seconds": 26.86,
+    "event_plan_runtime_seconds": null,
+    "rouge_l_f1_vs_reference": 0.3534,
+    "token_f1_vs_reference": 0.5574,
+    "gptf1_macro_f1": 0.0,
+    "nair_gpt_precision": 0.75,
+    "nair_gpt_recall": 0.7447,
+    "nair_gpt_f1": 0.7473,
+    "semantic_cap_precision": 0.3158,
+    "semantic_cap_recall": 0.8333,
+    "semantic_cap_f1": 0.458,
+    "hallucination_count": null,
+    "major_hallucination_count": null,
+    "omission_count": null,
+    "major_omission_count": null,
+    "section_appropriateness_score": 1.0,
+    "section_miscategorization_count": 0,
+    "major_section_miscategorization_count": 0,
+    "pdsqi_core_mean": 3.8571,
+    "pdsqi_accurate": 3,
+    "pdsqi_thorough": 3,
+    "llm_checklist_total_score": 31,
+    "llm_checklist_mean": 3.4444,
+    "llm_checklist_mean_no_usability": 3.5,
+    "checklist_a_mean": 4.0,
+    "checklist_b_mean": 3.0,
+    "checklist_c_mean": 3.3333,
+    "llm_checklist_abc_mean": 3.5,
+    "content_preservation_core": 4,
+    "noise_suppression": 5,
+    "lay_expression_preservation": 3,
+    "state_update_fidelity": 2,
+    "temporality_preservation": 4,
+    "problem_evidence_linkage": 4,
+    "state_plan_separation": 3,
+    "section_organization_appropriateness": 3,
+    "overall_clinical_usability": 3,
+    "llm_checklist_meaningful_omission_yes": 1,
+    "llm_checklist_concerning_hallucination_yes": 1,
+    "gptf1_active_problems_symptoms_precision": 0.0,
+    "gptf1_active_problems_symptoms_recall": 0.0,
+    "gptf1_active_problems_symptoms_f1": 0.0,
+    "gptf1_active_problems_symptoms_pred_count": 0,
+    "gptf1_active_problems_symptoms_ref_count": 9,
+    "gptf1_negated_findings_precision": 0.0,
+    "gptf1_negated_findings_recall": 0.0,
+    "gptf1_negated_findings_f1": 0.0,
+    "gptf1_negated_findings_pred_count": 0,
+    "gptf1_negated_findings_ref_count": 2,
+    "gptf1_uncertain_findings_precision": 0.0,
+    "gptf1_uncertain_findings_recall": 0.0,
+    "gptf1_uncertain_findings_f1": 0.0,
+    "gptf1_uncertain_findings_pred_count": 0,
+    "gptf1_uncertain_findings_ref_count": 1,
+    "gptf1_medication_treatment_precision": 0.0,
+    "gptf1_medication_treatment_recall": 0.0,
+    "gptf1_medication_treatment_f1": 0.0,
+    "gptf1_medication_treatment_pred_count": 0,
+    "gptf1_medication_treatment_ref_count": 3,
+    "gptf1_plan_followup_precision": 0.0,
+    "gptf1_plan_followup_recall": 0.0,
+    "gptf1_plan_followup_f1": 0.0,
+    "gptf1_plan_followup_pred_count": 0,
+    "gptf1_plan_followup_ref_count": 7,
+    "nair_pred_concept_count": 20,
+    "nair_ref_concept_count": 47,
+    "nair_precision_match_count": 15,
+    "nair_recall_match_count": 35,
+    "semantic_cap_precision_supported_count": 1,
+    "semantic_cap_precision_partial_count": 10,
+    "semantic_cap_precision_denominator": 19,
+    "semantic_cap_recall_supported_count": 14,
+    "semantic_cap_recall_partial_count": 2,
+    "semantic_cap_recall_denominator": 18,
+    "semantic_cap_low_value_source_count": 0,
+    "semantic_cap_low_value_summary_count": 0,
+    "semantic_cap_missing_count": 0,
+    "semantic_cap_unsupported_count": 8,
+    "semantic_cap_contradicted_source_count": 2,
+    "semantic_cap_contradicted_summary_count": 0,
+    "pdsqi_useful": 3,
+    "pdsqi_organized": 4,
+    "pdsqi_comprehensible": 5,
+    "pdsqi_succinct": 5,
+    "pdsqi_synthesized": 4
+  }
+}

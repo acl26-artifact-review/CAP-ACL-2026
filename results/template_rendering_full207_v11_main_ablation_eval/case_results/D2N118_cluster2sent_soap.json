@@ -1,0 +1,2300 @@
+{
+  "case_id": "D2N118",
+  "method": "cluster2sent",
+  "template": "soap",
+  "summary_text": "S:\nThe patient reports recurrent kidney stones, with pain fluctuating in intensity, and denies current blood in urine. He reports passing a stone recently and states he has not experienced pain for several days. He reports taking metformin daily as prescribed.\n\nO:\nBlood pressure was elevated at 150/90 today. The patient's heart rate is 72 bpm with a grade 2/6 systolic ejection murmur. Lung sounds are clear bilaterally. Abdominal exam reveals no tenderness. A1C was 6.0% at the last visit.\n\nA:\nThe patient has a history of hypertension, type 2 diabetes, and recurrent kidney stones. The recent blood pressure reading suggests the need to continue monitoring and potentially adjusting medication.\n\nP:\nOrder a referral to urology for evaluation of recurrent kidney stones. Prescribe 500 mg metformin daily. Order a urine culture. Start melatonin 10mg as needed for insomnia. Schedule a follow-up appointment in three months to assess progress and adjust management.",
+  "reference_summary": "CHIEF COMPLAINT\n\nKidney stone.\n\nMEDICAL HISTORY\n\nPatient reports history of hypertension, diabetes, and kidney stones.\n\nMEDICATIONS\n\nPatient reports taking Norvasc 2.5 mg and metformin 500 mg.\n\nREVIEW OF SYSTEMS\n\nConstitutional: Reports insomnia.\nCardiovascular: Denies chest pain.\nGastrointestinal: Denies abdominal pain.\nGenitourinary: Denies hematuria.\n\nVITALS\n\nBlood pressure: 150/90 mm Hg\n\nPHYSICAL EXAM\n\nRespiratory\n- Auscultation of Lungs: Clear bilaterally. No wheezes, rales, or rhonchi.\n\nCardiovascular\n- Auscultation of Heart: Grade 2/6 systolic ejection murmur, unchanged.\n\nGastrointestinal\n- Examination of Abdomen: No masses or tenderness. No tenderness of the CVA.\n\nRESULTS\n\nA1c: 6.7\n\nASSESSMENT AND PLAN\n\n1. Kidney stones.\n- Medical Reasoning: Patient recently experience an episode of kidney stones which is her 7th or 8th episode. Based on the patient's symptoms and exam today, I think she has likely passed her kidney stones.\n- Patient Education and Counseling: I advised the patient that we will obtain further testing, however, based on her recurrent episodes a referral to urology is necessary.\n- Medical Treatment: Urine culture and urinalysis were ordered. She will be referred to Dr. Harris in urology.\n\n2. Hypertension.\n- Medical Reasoning: Patient is currently stable and doing well on Norvasc 2.5 mg.\n- Medical Treatment: Continue Norvasc 2.5 mg. Referral to nutrition provided.\n\n3. Diabetes.\n- Medical Reasoning: Patient is currently stable and compliant with her metformin.\n- Patient Education and Counseling: She was advised to start checking her blood sugar prior to every meal.\n- Medical Treatment: Continue metformin 500 mg daily. Start daily blood sugar monitoring before each meal.\n\n4. Insomnia.\n- Medical Reasoning: The patient has a history of insomnia.\n- Patient Education and Counseling: We discussed proper sleep hygiene.\n- Medical Treatment: I have recommended she take 10 mg of melatonin as needed.\n\nPatient Agreements: The patient understands and agrees with the recommended medical treatment plan.\n\nINSTRUCTIONS\n\nPatient will return for follow-up in 3 months.",
+  "source_cap": {
+    "atomic_propositions": [
+      {
+        "prop_id": "CAP1",
+        "cap_type": "Problem",
+        "canonical_concept": "sodium intake",
+        "category": "Problem",
+        "speaker": "patient",
+        "predicate": "has",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "quantitative"
+        ],
+        "proposition_text": "The doctor wants to keep the patient's sodium intake at least 2300 milligrams per day."
+      },
+      {
+        "prop_id": "CAP2",
+        "cap_type": "Problem",
+        "canonical_concept": "hypertension",
+        "category": "Problem",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient is doing well on two and a half milligrams of lisinopril."
+      },
+      {
+        "prop_id": "CAP3",
+        "cap_type": "Problem",
+        "canonical_concept": "hypertension",
+        "category": "Problem",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "past",
+        "claim_type_tags": [
+          "temporal"
+        ],
+        "proposition_text": "The patient has a past medical history of hypertension."
+      },
+      {
+        "prop_id": "CAP4",
+        "cap_type": "Symptom",
+        "canonical_concept": "blood sugar",
+        "category": "Symptom",
+        "speaker": "doctor",
+        "status": "uncertain",
+        "visit_state": "historical",
+        "temporality": "daily",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient does not regularly check their blood sugar."
+      },
+      {
+        "prop_id": "CAP5",
+        "cap_type": "Problem",
+        "canonical_concept": "systolic ejection murmur",
+        "category": "Problem",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "quantitative"
+        ],
+        "proposition_text": "The patient has a grade 2 systolic ejection murmur."
+      },
+      {
+        "prop_id": "CAP6",
+        "cap_type": "Symptom",
+        "canonical_concept": "pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports pain in the left hand."
+      },
+      {
+        "prop_id": "CAP7",
+        "cap_type": "Symptom",
+        "canonical_concept": "left hand pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports pain in the left hand."
+      },
+      {
+        "prop_id": "CAP8",
+        "cap_type": "Symptom",
+        "canonical_concept": "pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports pain in their kidneys."
+      },
+      {
+        "prop_id": "CAP9",
+        "cap_type": "Symptom",
+        "canonical_concept": "blood in urine",
+        "category": "Symptom",
+        "speaker": "doctor",
+        "predicate": "denies",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient denies blood in their urine."
+      },
+      {
+        "prop_id": "CAP10",
+        "cap_type": "Symptom",
+        "canonical_concept": "blood in urine",
+        "category": "Symptom",
+        "speaker": "doctor",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports blood in their urine."
+      },
+      {
+        "prop_id": "CAP11",
+        "cap_type": "Problem",
+        "canonical_concept": "kidney stones",
+        "category": "Problem",
+        "speaker": "doctor",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "recurrent",
+        "claim_type_tags": [
+          "temporal"
+        ],
+        "proposition_text": "The patient is experiencing recurrent kidney stones."
+      },
+      {
+        "prop_id": "CAP12",
+        "cap_type": "Problem",
+        "canonical_concept": "urology",
+        "category": "Problem",
+        "speaker": "doctor",
+        "predicate": "orders",
+        "status": "uncertain",
+        "visit_state": "planned",
+        "temporality": "future",
+        "claim_type_tags": [
+          "plan"
+        ],
+        "proposition_text": "The doctor orders a referral to urology."
+      },
+      {
+        "prop_id": "CAP13",
+        "cap_type": "Symptom",
+        "canonical_concept": "back pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports no back pain."
+      },
+      {
+        "prop_id": "CAP14",
+        "cap_type": "Problem",
+        "canonical_concept": "type 2 diabetes",
+        "category": "Problem",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "historical",
+        "claim_type_tags": [
+          "quantitative"
+        ],
+        "proposition_text": "The patient has type 2 diabetes."
+      },
+      {
+        "prop_id": "CAP15",
+        "cap_type": "Problem",
+        "canonical_concept": "kidney stones",
+        "category": "Problem",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "past",
+        "proposition_text": "The patient previously had kidney stones."
+      },
+      {
+        "prop_id": "CAP16",
+        "cap_type": "Symptom",
+        "canonical_concept": "insomnia",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports worrying about things."
+      },
+      {
+        "prop_id": "CAP17",
+        "cap_type": "Symptom",
+        "canonical_concept": "pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "negated",
+        "visit_state": "resolved",
+        "temporality": "past",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports no pain."
+      },
+      {
+        "prop_id": "CAP18",
+        "cap_type": "Symptom",
+        "canonical_concept": "chest pain",
+        "category": "Symptom",
+        "speaker": "doctor",
+        "predicate": "denies",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient denies chest pain."
+      },
+      {
+        "prop_id": "CAP19",
+        "cap_type": "Symptom",
+        "canonical_concept": "belly pain",
+        "category": "Symptom",
+        "speaker": "doctor",
+        "predicate": "denies",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient denies belly pain."
+      },
+      {
+        "prop_id": "CAP20",
+        "cap_type": "Symptom",
+        "canonical_concept": "insomnia",
+        "category": "Symptom",
+        "speaker": "doctor",
+        "predicate": "reports",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports staying awake."
+      },
+      {
+        "prop_id": "CAP21",
+        "cap_type": "Problem",
+        "canonical_concept": "hypertension",
+        "category": "Problem",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient has hypertension."
+      },
+      {
+        "prop_id": "CAP22",
+        "cap_type": "Problem",
+        "canonical_concept": "diabetes",
+        "category": "Problem",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient has diabetes."
+      },
+      {
+        "prop_id": "CAP23",
+        "cap_type": "Symptom",
+        "canonical_concept": "pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports pain."
+      },
+      {
+        "prop_id": "CAP24",
+        "cap_type": "Symptom",
+        "canonical_concept": "worrying",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports worrying."
+      },
+      {
+        "prop_id": "CAP25",
+        "cap_type": "Symptom",
+        "canonical_concept": "insomnia",
+        "category": "Symptom",
+        "speaker": "doctor",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports insomnia."
+      },
+      {
+        "prop_id": "CAP26",
+        "cap_type": "Order",
+        "canonical_concept": "blood sugar monitoring",
+        "category": "Order",
+        "speaker": "doctor",
+        "predicate": "plans",
+        "status": "uncertain",
+        "visit_state": "planned",
+        "temporality": "before every meal",
+        "claim_type_tags": [
+          "plan"
+        ],
+        "proposition_text": "The doctor wants the patient to start taking their blood sugars before every meal."
+      },
+      {
+        "prop_id": "CAP27",
+        "cap_type": "ExamFinding",
+        "canonical_concept": "blood pressure",
+        "category": "ExamFinding",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "quantitative"
+        ],
+        "proposition_text": "The patient's blood pressure was measured at 150 over 90."
+      },
+      {
+        "prop_id": "CAP28",
+        "cap_type": "Order",
+        "canonical_concept": "blood sugars",
+        "category": "Order",
+        "speaker": "doctor",
+        "predicate": "has",
+        "status": "uncertain",
+        "visit_state": "planned",
+        "temporality": "before every meal",
+        "proposition_text": "The patient should take blood sugars before meals."
+      },
+      {
+        "prop_id": "CAP29",
+        "cap_type": "Order",
+        "canonical_concept": "urine culture",
+        "category": "Order",
+        "speaker": "doctor",
+        "predicate": "orders",
+        "status": "uncertain",
+        "visit_state": "planned",
+        "temporality": "future",
+        "claim_type_tags": [
+          "plan"
+        ],
+        "proposition_text": "The doctor orders a urine culture."
+      },
+      {
+        "prop_id": "CAP30",
+        "cap_type": "Order",
+        "canonical_concept": "sleep hygiene",
+        "category": "Order",
+        "speaker": "doctor",
+        "predicate": "recommends",
+        "status": "uncertain",
+        "visit_state": "planned",
+        "temporality": "current",
+        "claim_type_tags": [
+          "plan"
+        ],
+        "proposition_text": "The doctor recommends proper sleep hygiene."
+      },
+      {
+        "prop_id": "CAP31",
+        "cap_type": "Order",
+        "canonical_concept": "electronics off",
+        "category": "Order",
+        "speaker": "doctor",
+        "predicate": "recommends",
+        "status": "uncertain",
+        "visit_state": "planned",
+        "temporality": "current",
+        "claim_type_tags": [
+          "plan"
+        ],
+        "proposition_text": "The doctor recommends turning electronics off."
+      },
+      {
+        "prop_id": "CAP32",
+        "cap_type": "Order",
+        "canonical_concept": "dark room",
+        "category": "Order",
+        "speaker": "doctor",
+        "predicate": "recommends",
+        "status": "uncertain",
+        "visit_state": "planned",
+        "temporality": "current",
+        "claim_type_tags": [
+          "plan"
+        ],
+        "proposition_text": "The doctor recommends a dark room."
+      },
+      {
+        "prop_id": "CAP33",
+        "cap_type": "Order",
+        "canonical_concept": "iPhone",
+        "category": "Order",
+        "speaker": "doctor",
+        "predicate": "recommends",
+        "status": "uncertain",
+        "visit_state": "planned",
+        "temporality": "current",
+        "claim_type_tags": [
+          "plan"
+        ],
+        "proposition_text": "The doctor recommends using an iPhone."
+      },
+      {
+        "prop_id": "CAP34",
+        "cap_type": "TestResult",
+        "canonical_concept": "A1C",
+        "category": "TestResult",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "current",
+        "claim_type_tags": [
+          "quantitative"
+        ],
+        "proposition_text": "The patient's A1C was 6.7%"
+      },
+      {
+        "prop_id": "CAP35",
+        "cap_type": "Order",
+        "canonical_concept": "urinalysis",
+        "category": "Order",
+        "speaker": "doctor",
+        "predicate": "orders",
+        "status": "uncertain",
+        "visit_state": "planned",
+        "temporality": "future",
+        "claim_type_tags": [
+          "plan"
+        ],
+        "proposition_text": "The doctor orders a urinalysis."
+      },
+      {
+        "prop_id": "CAP36",
+        "cap_type": "Order",
+        "canonical_concept": "meditation apps",
+        "category": "Order",
+        "speaker": "patient",
+        "predicate": "recommends",
+        "status": "uncertain",
+        "visit_state": "planned",
+        "temporality": "current",
+        "claim_type_tags": [
+          "plan"
+        ],
+        "proposition_text": "The doctor recommends meditation apps."
+      },
+      {
+        "prop_id": "CAP37",
+        "cap_type": "MedicationRequest",
+        "canonical_concept": "melatonin",
+        "category": "MedicationRequest",
+        "speaker": "doctor",
+        "predicate": "recommends",
+        "status": "uncertain",
+        "visit_state": "planned",
+        "temporality": "current",
+        "claim_type_tags": [
+          "plan"
+        ],
+        "proposition_text": "The doctor recommends taking melatonin."
+      },
+      {
+        "prop_id": "CAP38",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "lisinopril",
+        "category": "MedicationStatement",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The doctor is continuing the patient on two and a half milligrams of lisinopril."
+      },
+      {
+        "prop_id": "CAP39",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "blood pressure cuff",
+        "category": "MedicationStatement",
+        "speaker": "doctor",
+        "predicate": "has",
+        "status": "affirmed",
+        "visit_state": "planned",
+        "temporality": "future",
+        "proposition_text": "The patient should take blood pressure readings using a blood pressure cuff."
+      },
+      {
+        "prop_id": "CAP40",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "metformin",
+        "category": "MedicationStatement",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "medication"
+        ],
+        "proposition_text": "The doctor is continuing the patient on five hundred milligrams of metformin."
+      },
+      {
+        "prop_id": "CAP41",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "norvasc",
+        "category": "MedicationStatement",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "medication",
+          "quantitative",
+          "temporal"
+        ],
+        "proposition_text": "The patient is currently taking norvasc at a dose of 2.5."
+      },
+      {
+        "prop_id": "CAP42",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "melatonin",
+        "category": "MedicationStatement",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "planned",
+        "temporality": "as needed",
+        "proposition_text": "The doctor will prescribe ten milligrams of melatonin as needed."
+      },
+      {
+        "prop_id": "CAP43",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "norvasc",
+        "category": "MedicationStatement",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "medication",
+          "quantitative"
+        ],
+        "proposition_text": "The patient is taking 2.5 mg of norvasc."
+      },
+      {
+        "prop_id": "CAP44",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "metformin",
+        "category": "MedicationStatement",
+        "speaker": "doctor",
+        "predicate": "has",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "medication"
+        ],
+        "proposition_text": "The doctor will continue the patient on metformin."
+      },
+      {
+        "prop_id": "CAP45",
+        "cap_type": "FollowUp",
+        "canonical_concept": "follow-up",
+        "category": "FollowUp",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "planned",
+        "temporality": "in three months",
+        "proposition_text": "The patient should return in three months."
+      },
+      {
+        "prop_id": "CAP46",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "norvasc",
+        "category": "MedicationStatement",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "Norvasc is working for the patient."
+      },
+      {
+        "prop_id": "CAP47",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "percocet",
+        "category": "MedicationStatement",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient recalls receiving percocet."
+      },
+      {
+        "prop_id": "CAP48",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "metformin",
+        "category": "MedicationStatement",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "medication"
+        ],
+        "proposition_text": "The patient is taking metformin."
+      },
+      {
+        "prop_id": "CAP49",
+        "cap_type": "ProblemHistory",
+        "canonical_concept": "kidney stone",
+        "category": "ProblemHistory",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "past",
+        "claim_type_tags": [
+          "temporal"
+        ],
+        "proposition_text": "The patient has a past medical history of kidney stones."
+      },
+      {
+        "prop_id": "CAP50",
+        "cap_type": "Counseling",
+        "canonical_concept": "sleep hygiene",
+        "category": "Counseling",
+        "speaker": "doctor",
+        "predicate": "recommends",
+        "status": "affirmed",
+        "visit_state": "planned",
+        "temporality": "as possible",
+        "claim_type_tags": [
+          "plan"
+        ],
+        "proposition_text": "The doctor recommends practicing proper sleep hygiene."
+      }
+    ],
+    "filtered_nonverifiable_units": []
+  },
+  "event_plan": null,
+  "summary_cap": {
+    "atomic_propositions": [],
+    "filtered_nonverifiable_units": [],
+    "runtime_seconds": 1.249
+  },
+  "cap_alignment": {
+    "cap_precision": 0.0,
+    "cap_recall": 0.0,
+    "cap_f1": 0.0,
+    "matched_count": 0,
+    "summary_prop_count": 0,
+    "source_prop_count": 50,
+    "matched_pairs": [],
+    "unsupported_summary_props": [],
+    "missing_source_props": [
+      {
+        "prop_id": "CAP1",
+        "cap_type": "Problem",
+        "canonical_concept": "sodium intake",
+        "category": "Problem",
+        "speaker": "patient",
+        "predicate": "has",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "quantitative"
+        ],
+        "proposition_text": "The doctor wants to keep the patient's sodium intake at least 2300 milligrams per day."
+      },
+      {
+        "prop_id": "CAP2",
+        "cap_type": "Problem",
+        "canonical_concept": "hypertension",
+        "category": "Problem",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient is doing well on two and a half milligrams of lisinopril."
+      },
+      {
+        "prop_id": "CAP3",
+        "cap_type": "Problem",
+        "canonical_concept": "hypertension",
+        "category": "Problem",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "past",
+        "claim_type_tags": [
+          "temporal"
+        ],
+        "proposition_text": "The patient has a past medical history of hypertension."
+      },
+      {
+        "prop_id": "CAP4",
+        "cap_type": "Symptom",
+        "canonical_concept": "blood sugar",
+        "category": "Symptom",
+        "speaker": "doctor",
+        "status": "uncertain",
+        "visit_state": "historical",
+        "temporality": "daily",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient does not regularly check their blood sugar."
+      },
+      {
+        "prop_id": "CAP5",
+        "cap_type": "Problem",
+        "canonical_concept": "systolic ejection murmur",
+        "category": "Problem",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "quantitative"
+        ],
+        "proposition_text": "The patient has a grade 2 systolic ejection murmur."
+      },
+      {
+        "prop_id": "CAP6",
+        "cap_type": "Symptom",
+        "canonical_concept": "pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports pain in the left hand."
+      },
+      {
+        "prop_id": "CAP7",
+        "cap_type": "Symptom",
+        "canonical_concept": "left hand pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports pain in the left hand."
+      },
+      {
+        "prop_id": "CAP8",
+        "cap_type": "Symptom",
+        "canonical_concept": "pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports pain in their kidneys."
+      },
+      {
+        "prop_id": "CAP9",
+        "cap_type": "Symptom",
+        "canonical_concept": "blood in urine",
+        "category": "Symptom",
+        "speaker": "doctor",
+        "predicate": "denies",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient denies blood in their urine."
+      },
+      {
+        "prop_id": "CAP10",
+        "cap_type": "Symptom",
+        "canonical_concept": "blood in urine",
+        "category": "Symptom",
+        "speaker": "doctor",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports blood in their urine."
+      },
+      {
+        "prop_id": "CAP11",
+        "cap_type": "Problem",
+        "canonical_concept": "kidney stones",
+        "category": "Problem",
+        "speaker": "doctor",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "recurrent",
+        "claim_type_tags": [
+          "temporal"
+        ],
+        "proposition_text": "The patient is experiencing recurrent kidney stones."
+      },
+      {
+        "prop_id": "CAP12",
+        "cap_type": "Problem",
+        "canonical_concept": "urology",
+        "category": "Problem",
+        "speaker": "doctor",
+        "predicate": "orders",
+        "status": "uncertain",
+        "visit_state": "planned",
+        "temporality": "future",
+        "claim_type_tags": [
+          "plan"
+        ],
+        "proposition_text": "The doctor orders a referral to urology."
+      },
+      {
+        "prop_id": "CAP13",
+        "cap_type": "Symptom",
+        "canonical_concept": "back pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports no back pain."
+      },
+      {
+        "prop_id": "CAP14",
+        "cap_type": "Problem",
+        "canonical_concept": "type 2 diabetes",
+        "category": "Problem",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "historical",
+        "claim_type_tags": [
+          "quantitative"
+        ],
+        "proposition_text": "The patient has type 2 diabetes."
+      },
+      {
+        "prop_id": "CAP15",
+        "cap_type": "Problem",
+        "canonical_concept": "kidney stones",
+        "category": "Problem",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "past",
+        "proposition_text": "The patient previously had kidney stones."
+      },
+      {
+        "prop_id": "CAP16",
+        "cap_type": "Symptom",
+        "canonical_concept": "insomnia",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports worrying about things."
+      },
+      {
+        "prop_id": "CAP17",
+        "cap_type": "Symptom",
+        "canonical_concept": "pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "negated",
+        "visit_state": "resolved",
+        "temporality": "past",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports no pain."
+      },
+      {
+        "prop_id": "CAP18",
+        "cap_type": "Symptom",
+        "canonical_concept": "chest pain",
+        "category": "Symptom",
+        "speaker": "doctor",
+        "predicate": "denies",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient denies chest pain."
+      },
+      {
+        "prop_id": "CAP19",
+        "cap_type": "Symptom",
+        "canonical_concept": "belly pain",
+        "category": "Symptom",
+        "speaker": "doctor",
+        "predicate": "denies",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient denies belly pain."
+      },
+      {
+        "prop_id": "CAP20",
+        "cap_type": "Symptom",
+        "canonical_concept": "insomnia",
+        "category": "Symptom",
+        "speaker": "doctor",
+        "predicate": "reports",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports staying awake."
+      },
+      {
+        "prop_id": "CAP21",
+        "cap_type": "Problem",
+        "canonical_concept": "hypertension",
+        "category": "Problem",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient has hypertension."
+      },
+      {
+        "prop_id": "CAP22",
+        "cap_type": "Problem",
+        "canonical_concept": "diabetes",
+        "category": "Problem",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient has diabetes."
+      },
+      {
+        "prop_id": "CAP23",
+        "cap_type": "Symptom",
+        "canonical_concept": "pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports pain."
+      },
+      {
+        "prop_id": "CAP24",
+        "cap_type": "Symptom",
+        "canonical_concept": "worrying",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports worrying."
+      },
+      {
+        "prop_id": "CAP25",
+        "cap_type": "Symptom",
+        "canonical_concept": "insomnia",
+        "category": "Symptom",
+        "speaker": "doctor",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports insomnia."
+      },
+      {
+        "prop_id": "CAP26",
+        "cap_type": "Order",
+        "canonical_concept": "blood sugar monitoring",
+        "category": "Order",
+        "speaker": "doctor",
+        "predicate": "plans",
+        "status": "uncertain",
+        "visit_state": "planned",
+        "temporality": "before every meal",
+        "claim_type_tags": [
+          "plan"
+        ],
+        "proposition_text": "The doctor wants the patient to start taking their blood sugars before every meal."
+      },
+      {
+        "prop_id": "CAP27",
+        "cap_type": "ExamFinding",
+        "canonical_concept": "blood pressure",
+        "category": "ExamFinding",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "quantitative"
+        ],
+        "proposition_text": "The patient's blood pressure was measured at 150 over 90."
+      },
+      {
+        "prop_id": "CAP28",
+        "cap_type": "Order",
+        "canonical_concept": "blood sugars",
+        "category": "Order",
+        "speaker": "doctor",
+        "predicate": "has",
+        "status": "uncertain",
+        "visit_state": "planned",
+        "temporality": "before every meal",
+        "proposition_text": "The patient should take blood sugars before meals."
+      },
+      {
+        "prop_id": "CAP29",
+        "cap_type": "Order",
+        "canonical_concept": "urine culture",
+        "category": "Order",
+        "speaker": "doctor",
+        "predicate": "orders",
+        "status": "uncertain",
+        "visit_state": "planned",
+        "temporality": "future",
+        "claim_type_tags": [
+          "plan"
+        ],
+        "proposition_text": "The doctor orders a urine culture."
+      },
+      {
+        "prop_id": "CAP30",
+        "cap_type": "Order",
+        "canonical_concept": "sleep hygiene",
+        "category": "Order",
+        "speaker": "doctor",
+        "predicate": "recommends",
+        "status": "uncertain",
+        "visit_state": "planned",
+        "temporality": "current",
+        "claim_type_tags": [
+          "plan"
+        ],
+        "proposition_text": "The doctor recommends proper sleep hygiene."
+      },
+      {
+        "prop_id": "CAP31",
+        "cap_type": "Order",
+        "canonical_concept": "electronics off",
+        "category": "Order",
+        "speaker": "doctor",
+        "predicate": "recommends",
+        "status": "uncertain",
+        "visit_state": "planned",
+        "temporality": "current",
+        "claim_type_tags": [
+          "plan"
+        ],
+        "proposition_text": "The doctor recommends turning electronics off."
+      },
+      {
+        "prop_id": "CAP32",
+        "cap_type": "Order",
+        "canonical_concept": "dark room",
+        "category": "Order",
+        "speaker": "doctor",
+        "predicate": "recommends",
+        "status": "uncertain",
+        "visit_state": "planned",
+        "temporality": "current",
+        "claim_type_tags": [
+          "plan"
+        ],
+        "proposition_text": "The doctor recommends a dark room."
+      },
+      {
+        "prop_id": "CAP33",
+        "cap_type": "Order",
+        "canonical_concept": "iPhone",
+        "category": "Order",
+        "speaker": "doctor",
+        "predicate": "recommends",
+        "status": "uncertain",
+        "visit_state": "planned",
+        "temporality": "current",
+        "claim_type_tags": [
+          "plan"
+        ],
+        "proposition_text": "The doctor recommends using an iPhone."
+      },
+      {
+        "prop_id": "CAP34",
+        "cap_type": "TestResult",
+        "canonical_concept": "A1C",
+        "category": "TestResult",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "current",
+        "claim_type_tags": [
+          "quantitative"
+        ],
+        "proposition_text": "The patient's A1C was 6.7%"
+      },
+      {
+        "prop_id": "CAP35",
+        "cap_type": "Order",
+        "canonical_concept": "urinalysis",
+        "category": "Order",
+        "speaker": "doctor",
+        "predicate": "orders",
+        "status": "uncertain",
+        "visit_state": "planned",
+        "temporality": "future",
+        "claim_type_tags": [
+          "plan"
+        ],
+        "proposition_text": "The doctor orders a urinalysis."
+      },
+      {
+        "prop_id": "CAP36",
+        "cap_type": "Order",
+        "canonical_concept": "meditation apps",
+        "category": "Order",
+        "speaker": "patient",
+        "predicate": "recommends",
+        "status": "uncertain",
+        "visit_state": "planned",
+        "temporality": "current",
+        "claim_type_tags": [
+          "plan"
+        ],
+        "proposition_text": "The doctor recommends meditation apps."
+      },
+      {
+        "prop_id": "CAP37",
+        "cap_type": "MedicationRequest",
+        "canonical_concept": "melatonin",
+        "category": "MedicationRequest",
+        "speaker": "doctor",
+        "predicate": "recommends",
+        "status": "uncertain",
+        "visit_state": "planned",
+        "temporality": "current",
+        "claim_type_tags": [
+          "plan"
+        ],
+        "proposition_text": "The doctor recommends taking melatonin."
+      },
+      {
+        "prop_id": "CAP38",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "lisinopril",
+        "category": "MedicationStatement",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The doctor is continuing the patient on two and a half milligrams of lisinopril."
+      },
+      {
+        "prop_id": "CAP39",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "blood pressure cuff",
+        "category": "MedicationStatement",
+        "speaker": "doctor",
+        "predicate": "has",
+        "status": "affirmed",
+        "visit_state": "planned",
+        "temporality": "future",
+        "proposition_text": "The patient should take blood pressure readings using a blood pressure cuff."
+      },
+      {
+        "prop_id": "CAP40",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "metformin",
+        "category": "MedicationStatement",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "medication"
+        ],
+        "proposition_text": "The doctor is continuing the patient on five hundred milligrams of metformin."
+      },
+      {
+        "prop_id": "CAP41",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "norvasc",
+        "category": "MedicationStatement",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "medication",
+          "quantitative",
+          "temporal"
+        ],
+        "proposition_text": "The patient is currently taking norvasc at a dose of 2.5."
+      },
+      {
+        "prop_id": "CAP42",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "melatonin",
+        "category": "MedicationStatement",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "planned",
+        "temporality": "as needed",
+        "proposition_text": "The doctor will prescribe ten milligrams of melatonin as needed."
+      },
+      {
+        "prop_id": "CAP43",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "norvasc",
+        "category": "MedicationStatement",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "medication",
+          "quantitative"
+        ],
+        "proposition_text": "The patient is taking 2.5 mg of norvasc."
+      },
+      {
+        "prop_id": "CAP44",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "metformin",
+        "category": "MedicationStatement",
+        "speaker": "doctor",
+        "predicate": "has",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "medication"
+        ],
+        "proposition_text": "The doctor will continue the patient on metformin."
+      },
+      {
+        "prop_id": "CAP45",
+        "cap_type": "FollowUp",
+        "canonical_concept": "follow-up",
+        "category": "FollowUp",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "planned",
+        "temporality": "in three months",
+        "proposition_text": "The patient should return in three months."
+      },
+      {
+        "prop_id": "CAP46",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "norvasc",
+        "category": "MedicationStatement",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "Norvasc is working for the patient."
+      },
+      {
+        "prop_id": "CAP47",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "percocet",
+        "category": "MedicationStatement",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient recalls receiving percocet."
+      },
+      {
+        "prop_id": "CAP48",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "metformin",
+        "category": "MedicationStatement",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "medication"
+        ],
+        "proposition_text": "The patient is taking metformin."
+      },
+      {
+        "prop_id": "CAP49",
+        "cap_type": "ProblemHistory",
+        "canonical_concept": "kidney stone",
+        "category": "ProblemHistory",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "past",
+        "claim_type_tags": [
+          "temporal"
+        ],
+        "proposition_text": "The patient has a past medical history of kidney stones."
+      },
+      {
+        "prop_id": "CAP50",
+        "cap_type": "Counseling",
+        "canonical_concept": "sleep hygiene",
+        "category": "Counseling",
+        "speaker": "doctor",
+        "predicate": "recommends",
+        "status": "affirmed",
+        "visit_state": "planned",
+        "temporality": "as possible",
+        "claim_type_tags": [
+          "plan"
+        ],
+        "proposition_text": "The doctor recommends practicing proper sleep hygiene."
+      }
+    ]
+  },
+  "reference_gpt_f1_items": {
+    "active_problems_symptoms": [],
+    "negated_findings": [],
+    "uncertain_findings": [],
+    "medication_treatment": [],
+    "plan_followup": [],
+    "_chunk_count": [
+      "5"
+    ],
+    "_parse_failures": [
+      "{\"chunk_index\": 1, \"stage\": \"call_llm\", \"error\": \"LLM call failed after retries: Error code: 404\"}",
+      "{\"chunk_index\": 2, \"stage\": \"call_llm\", \"error\": \"LLM call failed after retries: Error code: 404\"}",
+      "{\"chunk_index\": 3, \"stage\": \"call_llm\", \"error\": \"LLM call failed after retries: Error code: 404\"}",
+      "{\"chunk_index\": 4, \"stage\": \"call_llm\", \"error\": \"LLM call failed after retries: Error code: 404\"}",
+      "{\"chunk_index\": 5, \"stage\": \"call_llm\", \"error\": \"LLM call failed after retries: Error code: 404\"}"
+    ]
+  },
+  "summary_gpt_f1_items": {
+    "active_problems_symptoms": [],
+    "negated_findings": [],
+    "uncertain_findings": [],
+    "medication_treatment": [],
+    "plan_followup": [],
+    "_chunk_count": [
+      "1"
+    ],
+    "_parse_failures": [
+      "{\"chunk_index\": 1, \"stage\": \"call_llm\", \"error\": \"LLM call failed after retries: Error code: 404\"}"
+    ]
+  },
+  "gpt_f1_alignment": {
+    "by_category": {
+      "active_problems_symptoms": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "matched_count": 0,
+        "pred_count": 0,
+        "ref_count": 0,
+        "matches": [],
+        "unsupported_pred_items": [],
+        "missing_ref_items": []
+      },
+      "negated_findings": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "matched_count": 0,
+        "pred_count": 0,
+        "ref_count": 0,
+        "matches": [],
+        "unsupported_pred_items": [],
+        "missing_ref_items": []
+      },
+      "uncertain_findings": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "matched_count": 0,
+        "pred_count": 0,
+        "ref_count": 0,
+        "matches": [],
+        "unsupported_pred_items": [],
+        "missing_ref_items": []
+      },
+      "medication_treatment": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "matched_count": 0,
+        "pred_count": 0,
+        "ref_count": 0,
+        "matches": [],
+        "unsupported_pred_items": [],
+        "missing_ref_items": []
+      },
+      "plan_followup": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "matched_count": 0,
+        "pred_count": 0,
+        "ref_count": 0,
+        "matches": [],
+        "unsupported_pred_items": [],
+        "missing_ref_items": []
+      }
+    }
+  },
+  "reference_nair_concepts": {
+    "sections": [
+      {
+        "heading": "Clinical Note",
+        "section_value": "CHIEF COMPLAINT\nKidney stone.\nMEDICAL HISTORY\nPatient reports history of hypertension, diabetes, and kidney stones.\nMEDICATIONS\nPatient reports taking Norvasc 2.5 mg and metformin 500 mg.\nREVIEW OF SYSTEMS\nConstitutional: Reports insomnia.\nCardiovascular: Denies chest pain.\nGastrointestinal: Denies abdominal pain.",
+        "medical_concepts": [
+          "kidney stone",
+          "hypertension",
+          "diabetes",
+          "kidney stones",
+          "Norvasc",
+          "metformin",
+          "insomnia",
+          "chest pain",
+          "abdominal pain"
+        ]
+      },
+      {
+        "heading": "Clinical Note",
+        "section_value": "Genitourinary: Denies hematuria.\nVITALS\nBlood pressure: 150/90 mm Hg\nPHYSICAL EXAM\nRespiratory\n- Auscultation of Lungs: Clear bilaterally. No wheezes, rales, or rhonchi.\nCardiovascular\n- Auscultation of Heart: Grade 2/6 systolic ejection murmur, unchanged.\nGastrointestinal\n- Examination of Abdomen: No masses or tenderness. No tenderness of the CVA.",
+        "medical_concepts": [
+          "hematuria",
+          "blood pressure",
+          "wheezes",
+          "rales",
+          "rhonchi",
+          "systolic ejection murmur",
+          "abdominal mass",
+          "abdominal tenderness",
+          "costovertebral angle tenderness"
+        ]
+      },
+      {
+        "heading": "Clinical Note",
+        "section_value": "RESULTS\nA1c: 6.7\nASSESSMENT AND PLAN\n1. Kidney stones.\n- Medical Reasoning: Patient recently experience an episode of kidney stones which is her 7th or 8th episode. Based on the patient's symptoms and exam today, I think she has likely passed her kidney stones.\n- Patient Education and Counseling: I advised the patient that we will obtain further testing, however, based on her recurrent episodes a referral to urology is necessary.\n- Medical Treatment: Urine culture and urinalysis were ordered. She will be referred to Dr. Harris in urology.\n2. Hypertension.\n- Medical Reasoning: Patient is currently stable and doing well on Norvasc 2.5 mg.\n- Medical Treatment: Continue Norvasc 2.5 mg. Referral to nutrition provided.",
+        "medical_concepts": [
+          "A1c",
+          "kidney stones",
+          "urology referral",
+          "urine culture",
+          "urinalysis",
+          "hypertension",
+          "Norvasc 2.5 mg",
+          "nutrition referral"
+        ]
+      },
+      {
+        "heading": "Clinical Note",
+        "section_value": "3. Diabetes.\n- Medical Reasoning: Patient is currently stable and compliant with her metformin.\n- Patient Education and Counseling: She was advised to start checking her blood sugar prior to every meal.\n- Medical Treatment: Continue metformin 500 mg daily. Start daily blood sugar monitoring before each meal.\n4. Insomnia.\n- Medical Reasoning: The patient has a history of insomnia.\n- Patient Education and Counseling: We discussed proper sleep hygiene.\n- Medical Treatment: I have recommended she take 10 mg of melatonin as needed.\nPatient Agreements: The patient understands and agrees with the recommended medical treatment plan.\nINSTRUCTIONS",
+        "medical_concepts": [
+          "diabetes",
+          "metformin",
+          "blood sugar",
+          "blood sugar monitoring",
+          "insomnia",
+          "sleep hygiene",
+          "melatonin"
+        ]
+      },
+      {
+        "heading": "Clinical Note",
+        "section_value": "Patient will return for follow-up in 3 months.",
+        "medical_concepts": []
+      }
+    ],
+    "medical_concepts": [
+      "kidney stone",
+      "hypertension",
+      "diabetes",
+      "kidney stones",
+      "Norvasc",
+      "metformin",
+      "insomnia",
+      "chest pain",
+      "abdominal pain",
+      "hematuria",
+      "blood pressure",
+      "wheezes",
+      "rales",
+      "rhonchi",
+      "systolic ejection murmur",
+      "abdominal mass",
+      "abdominal tenderness",
+      "costovertebral angle tenderness",
+      "A1c",
+      "urology referral",
+      "urine culture",
+      "urinalysis",
+      "Norvasc 2.5 mg",
+      "nutrition referral",
+      "blood sugar",
+      "blood sugar monitoring",
+      "sleep hygiene",
+      "melatonin"
+    ],
+    "section_count": 5
+  },
+  "summary_nair_concepts": {
+    "sections": [
+      {
+        "heading": "S",
+        "section_value": "The patient reports recurrent kidney stones, with pain fluctuating in intensity, and denies current blood in urine. He reports passing a stone recently and states he has not experienced pain for several days. He reports taking metformin daily as prescribed.",
+        "medical_concepts": [
+          "recurrent kidney stones",
+          "kidney stones",
+          "pain",
+          "blood in urine",
+          "hematuria",
+          "passing a stone",
+          "metformin"
+        ]
+      },
+      {
+        "heading": "O",
+        "section_value": "Blood pressure was elevated at 150/90 today. The patient's heart rate is 72 bpm with a grade 2/6 systolic ejection murmur. Lung sounds are clear bilaterally. Abdominal exam reveals no tenderness. A1C was 6.0% at the last visit.",
+        "medical_concepts": [
+          "elevated blood pressure",
+          "systolic ejection murmur",
+          "lung sounds",
+          "abdominal tenderness",
+          "A1C"
+        ]
+      },
+      {
+        "heading": "A",
+        "section_value": "The patient has a history of hypertension, type 2 diabetes, and recurrent kidney stones. The recent blood pressure reading suggests the need to continue monitoring and potentially adjusting medication.",
+        "medical_concepts": [
+          "hypertension",
+          "type 2 diabetes",
+          "recurrent kidney stones",
+          "blood pressure"
+        ]
+      },
+      {
+        "heading": "P",
+        "section_value": "Order a referral to urology for evaluation of recurrent kidney stones. Prescribe 500 mg metformin daily. Order a urine culture. Start melatonin 10mg as needed for insomnia. Schedule a follow-up appointment in three months to assess progress and adjust management.",
+        "medical_concepts": [
+          "referral to urology",
+          "recurrent kidney stones",
+          "metformin",
+          "urine culture",
+          "melatonin",
+          "insomnia",
+          "follow-up appointment"
+        ]
+      }
+    ],
+    "medical_concepts": [
+      "recurrent kidney stones",
+      "kidney stones",
+      "pain",
+      "blood in urine",
+      "hematuria",
+      "passing a stone",
+      "metformin",
+      "elevated blood pressure",
+      "systolic ejection murmur",
+      "lung sounds",
+      "abdominal tenderness",
+      "A1C",
+      "hypertension",
+      "type 2 diabetes",
+      "blood pressure",
+      "referral to urology",
+      "urine culture",
+      "melatonin",
+      "insomnia",
+      "follow-up appointment"
+    ],
+    "section_count": 4
+  },
+  "nair_alignment": {
+    "pred_concepts": [
+      "recurrent kidney stones",
+      "kidney stones",
+      "pain",
+      "blood in urine",
+      "hematuria",
+      "passing a stone",
+      "metformin",
+      "elevated blood pressure",
+      "systolic ejection murmur",
+      "lung sounds",
+      "abdominal tenderness",
+      "A1C",
+      "hypertension",
+      "type 2 diabetes",
+      "blood pressure",
+      "referral to urology",
+      "urine culture",
+      "melatonin",
+      "insomnia",
+      "follow-up appointment"
+    ],
+    "ref_concepts": [
+      "kidney stone",
+      "hypertension",
+      "diabetes",
+      "kidney stones",
+      "Norvasc",
+      "metformin",
+      "insomnia",
+      "chest pain",
+      "abdominal pain",
+      "hematuria",
+      "blood pressure",
+      "wheezes",
+      "rales",
+      "rhonchi",
+      "systolic ejection murmur",
+      "abdominal mass",
+      "abdominal tenderness",
+      "costovertebral angle tenderness",
+      "A1c",
+      "urology referral",
+      "urine culture",
+      "urinalysis",
+      "Norvasc 2.5 mg",
+      "nutrition referral",
+      "blood sugar",
+      "blood sugar monitoring",
+      "sleep hygiene",
+      "melatonin"
+    ],
+    "precision_alignment": {
+      "found_b": [
+        "recurrent kidney stones",
+        "kidney stones",
+        "blood in urine",
+        "hematuria",
+        "passing a stone",
+        "metformin",
+        "elevated blood pressure",
+        "systolic ejection murmur",
+        "abdominal tenderness",
+        "A1C",
+        "hypertension",
+        "blood pressure",
+        "referral to urology",
+        "urine culture",
+        "melatonin",
+        "insomnia",
+        "follow-up appointment"
+      ],
+      "not_found_b": [
+        "pain",
+        "lung sounds",
+        "type 2 diabetes"
+      ],
+      "chunk_count": 1,
+      "chunk_results": [
+        {
+          "found_b": [
+            "recurrent kidney stones",
+            "kidney stones",
+            "blood in urine",
+            "hematuria",
+            "passing a stone",
+            "metformin",
+            "elevated blood pressure",
+            "systolic ejection murmur",
+            "abdominal tenderness",
+            "A1C",
+            "hypertension",
+            "blood pressure",
+            "referral to urology",
+            "urine culture",
+            "melatonin",
+            "insomnia",
+            "follow-up appointment"
+          ],
+          "not_found_b": [
+            "pain",
+            "lung sounds",
+            "type 2 diabetes"
+          ]
+        }
+      ]
+    },
+    "recall_alignment": {
+      "found_b": [
+        "kidney stone",
+        "hypertension",
+        "diabetes",
+        "kidney stones",
+        "metformin",
+        "insomnia",
+        "hematuria",
+        "blood pressure",
+        "systolic ejection murmur",
+        "abdominal tenderness",
+        "A1c",
+        "urology referral",
+        "urine culture",
+        "blood sugar",
+        "melatonin"
+      ],
+      "not_found_b": [
+        "Norvasc",
+        "chest pain",
+        "abdominal pain",
+        "wheezes",
+        "rales",
+        "rhonchi",
+        "abdominal mass",
+        "costovertebral angle tenderness",
+        "urinalysis",
+        "Norvasc 2.5 mg",
+        "nutrition referral",
+        "blood sugar monitoring",
+        "sleep hygiene"
+      ],
+      "chunk_count": 2,
+      "chunk_results": [
+        {
+          "found_b": [
+            "kidney stone",
+            "hypertension",
+            "diabetes",
+            "kidney stones",
+            "metformin",
+            "insomnia",
+            "hematuria",
+            "blood pressure",
+            "systolic ejection murmur",
+            "abdominal tenderness",
+            "A1c",
+            "urology referral",
+            "urine culture"
+          ],
+          "not_found_b": [
+            "Norvasc",
+            "chest pain",
+            "abdominal pain",
+            "wheezes",
+            "rales",
+            "rhonchi",
+            "abdominal mass",
+            "costovertebral angle tenderness",
+            "urinalysis",
+            "Norvasc 2.5 mg",
+            "nutrition referral"
+          ]
+        },
+        {
+          "found_b": [
+            "blood sugar",
+            "melatonin"
+          ],
+          "not_found_b": [
+            "blood sugar monitoring",
+            "sleep hygiene"
+          ]
+        }
+      ]
+    }
+  },
+  "semantic_cap_audit": {
+    "source_cap_recall": [
+      {
+        "cap_id": "P1",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P2",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P3",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P4",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P5",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P6",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P7",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P8",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P9",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P10",
+        "judgment": "contradicted",
+        "reason": null
+      },
+      {
+        "cap_id": "P11",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P12",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P13",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P14",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P15",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P16",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P1",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P2",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P3",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P4",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P5",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P6",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P7",
+        "judgment": "contradicted",
+        "reason": null
+      },
+      {
+        "cap_id": "P8",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P9",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P10",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P11",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P12",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P13",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P14",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P15",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P16",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P1",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P2",
+        "judgment": "contradicted",
+        "reason": null
+      },
+      {
+        "cap_id": "P3",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P4",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P5",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P6",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P7",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P8",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P9",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P10",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P11",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P12",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P13",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P14",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P15",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P16",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P1",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P2",
+        "judgment": "missing",
+        "reason": null
+      }
+    ],
+    "summary_cap_precision": [],
+    "metrics": {
+      "semantic_cap_precision": 0.0,
+      "semantic_cap_recall": 0.33,
+      "semantic_cap_f1": 0.0,
+      "semantic_cap_precision_supported_count": 0,
+      "semantic_cap_precision_partial_count": 0,
+      "semantic_cap_precision_denominator": 0,
+      "semantic_cap_recall_supported_count": 13,
+      "semantic_cap_recall_partial_count": 7,
+      "semantic_cap_recall_denominator": 50,
+      "semantic_cap_low_value_source_count": 0,
+      "semantic_cap_low_value_summary_count": 0,
+      "semantic_cap_missing_count": 27,
+      "semantic_cap_unsupported_count": 0,
+      "semantic_cap_contradicted_source_count": 3,
+      "semantic_cap_contradicted_summary_count": 0
+    }
+  },
+  "safety_judgment": null,
+  "section_judgment": {
+    "section_miscategorizations": [
+      {
+        "text": "Prescribe 500 mg metformin daily.",
+        "current_section": "P",
+        "expected_section": "P",
+        "severity": "minor",
+        "reason": "This appears to be a new prescription, which belongs in the Plan. However, the Subjective section already states the patient is taking metformin daily as prescribed, creating ambiguity about whether this is a continuation vs. a new order. The placement in P is acceptable, but the duplication/ambiguity slightly blurs the distinction between current meds (S) and treatment changes (P)."
+      }
+    ],
+    "summary_statistics": {
+      "section_appropriateness_score": 0.9,
+      "section_miscategorization_count": 1,
+      "major_section_miscategorization_count": 0
+    }
+  },
+  "pdsqi_judgment": {
+    "citation_applicable": 0,
+    "citation": 0,
+    "accurate": 2,
+    "thorough": 2,
+    "useful": 2,
+    "organized": 4,
+    "comprehensible": 4,
+    "succinct": 4,
+    "abstraction": 1,
+    "synthesized": 3,
+    "voice_summ": 0,
+    "voice_note": 0,
+    "pdsqi_core_mean": 3.0
+  },
+  "llm_checklist_judgment": {
+    "content_preservation_core": 3,
+    "noise_suppression": 5,
+    "lay_expression_preservation": 3,
+    "state_update_fidelity": 2,
+    "temporality_preservation": 3,
+    "problem_evidence_linkage": 3,
+    "state_plan_separation": 3,
+    "section_organization_appropriateness": 3,
+    "overall_clinical_usability": 3,
+    "clinically_meaningful_omission": "Yes",
+    "clinically_concerning_hallucination": "Yes",
+    "checklist_a_mean": 3.6667,
+    "checklist_b_mean": 2.5,
+    "checklist_c_mean": 3.0,
+    "llm_checklist_abc_mean": 3.125,
+    "llm_checklist_mean_no_usability": 3.125,
+    "llm_checklist_total_score": 28,
+    "llm_checklist_mean": 3.1111,
+    "llm_checklist_meaningful_omission_yes": 1,
+    "llm_checklist_concerning_hallucination_yes": 1
+  },
+  "metrics": {
+    "case_id": "D2N118",
+    "method": "cluster2sent",
+    "template": "soap",
+    "source_cap_count": 50,
+    "event_plan_count": null,
+    "summary_cap_count": 0,
+    "cap_matched_count": 0,
+    "cap_precision": 0.0,
+    "cap_recall": 0.0,
+    "cap_f1": 0.0,
+    "unsupported_summary_cap_count": 0,
+    "missing_source_cap_count": 50,
+    "summary_runtime_seconds": null,
+    "summary_cap_runtime_seconds": 1.249,
+    "event_plan_runtime_seconds": null,
+    "rouge_l_f1_vs_reference": 0.1957,
+    "token_f1_vs_reference": 0.4043,
+    "gptf1_macro_f1": 0.0,
+    "nair_gpt_precision": 0.85,
+    "nair_gpt_recall": 0.5357,
+    "nair_gpt_f1": 0.6572,
+    "semantic_cap_precision": 0.0,
+    "semantic_cap_recall": 0.33,
+    "semantic_cap_f1": 0.0,
+    "hallucination_count": null,
+    "major_hallucination_count": null,
+    "omission_count": null,
+    "major_omission_count": null,
+    "section_appropriateness_score": 0.9,
+    "section_miscategorization_count": 1,
+    "major_section_miscategorization_count": 0,
+    "pdsqi_core_mean": 3.0,
+    "pdsqi_accurate": 2,
+    "pdsqi_thorough": 2,
+    "llm_checklist_total_score": 28,
+    "llm_checklist_mean": 3.1111,
+    "llm_checklist_mean_no_usability": 3.125,
+    "checklist_a_mean": 3.6667,
+    "checklist_b_mean": 2.5,
+    "checklist_c_mean": 3.0,
+    "llm_checklist_abc_mean": 3.125,
+    "content_preservation_core": 3,
+    "noise_suppression": 5,
+    "lay_expression_preservation": 3,
+    "state_update_fidelity": 2,
+    "temporality_preservation": 3,
+    "problem_evidence_linkage": 3,
+    "state_plan_separation": 3,
+    "section_organization_appropriateness": 3,
+    "overall_clinical_usability": 3,
+    "llm_checklist_meaningful_omission_yes": 1,
+    "llm_checklist_concerning_hallucination_yes": 1,
+    "gptf1_active_problems_symptoms_precision": 0.0,
+    "gptf1_active_problems_symptoms_recall": 0.0,
+    "gptf1_active_problems_symptoms_f1": 0.0,
+    "gptf1_active_problems_symptoms_pred_count": 0,
+    "gptf1_active_problems_symptoms_ref_count": 0,
+    "gptf1_negated_findings_precision": 0.0,
+    "gptf1_negated_findings_recall": 0.0,
+    "gptf1_negated_findings_f1": 0.0,
+    "gptf1_negated_findings_pred_count": 0,
+    "gptf1_negated_findings_ref_count": 0,
+    "gptf1_uncertain_findings_precision": 0.0,
+    "gptf1_uncertain_findings_recall": 0.0,
+    "gptf1_uncertain_findings_f1": 0.0,
+    "gptf1_uncertain_findings_pred_count": 0,
+    "gptf1_uncertain_findings_ref_count": 0,
+    "gptf1_medication_treatment_precision": 0.0,
+    "gptf1_medication_treatment_recall": 0.0,
+    "gptf1_medication_treatment_f1": 0.0,
+    "gptf1_medication_treatment_pred_count": 0,
+    "gptf1_medication_treatment_ref_count": 0,
+    "gptf1_plan_followup_precision": 0.0,
+    "gptf1_plan_followup_recall": 0.0,
+    "gptf1_plan_followup_f1": 0.0,
+    "gptf1_plan_followup_pred_count": 0,
+    "gptf1_plan_followup_ref_count": 0,
+    "nair_pred_concept_count": 20,
+    "nair_ref_concept_count": 28,
+    "nair_precision_match_count": 17,
+    "nair_recall_match_count": 15,
+    "semantic_cap_precision_supported_count": 0,
+    "semantic_cap_precision_partial_count": 0,
+    "semantic_cap_precision_denominator": 0,
+    "semantic_cap_recall_supported_count": 13,
+    "semantic_cap_recall_partial_count": 7,
+    "semantic_cap_recall_denominator": 50,
+    "semantic_cap_low_value_source_count": 0,
+    "semantic_cap_low_value_summary_count": 0,
+    "semantic_cap_missing_count": 27,
+    "semantic_cap_unsupported_count": 0,
+    "semantic_cap_contradicted_source_count": 3,
+    "semantic_cap_contradicted_summary_count": 0,
+    "pdsqi_useful": 2,
+    "pdsqi_organized": 4,
+    "pdsqi_comprehensible": 4,
+    "pdsqi_succinct": 4,
+    "pdsqi_synthesized": 3
+  }
+}

@@ -1,0 +1,179 @@
+Case: D2N067
+
+Problem List and Visit State Tracking
+
+Problem List
+- knee injury | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T1,T19,T57
+  Summary: The patient has a history of a knee injury.
+  ClusterId: CL1
+  TemporalProfile: past, two weeks ago
+  Updates:
+  - CAP35: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=two weeks ago turns=T1 :: The patient injured their knee two weeks ago while skiing.
+  - CAP7: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=past turns=T19 :: The patient has a history of a knee injury.
+  - CAP36: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=past turns=T57 :: The patient had a knee injury fourteen years ago.
+- knee twisting | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T5
+  Summary: The patient twisted their knee two weeks ago.
+  ClusterId: CL2
+  TemporalProfile: two weeks ago
+  Updates:
+  - CAP37: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=two weeks ago turns=T5 :: The patient twisted their knee two weeks ago.
+- knee pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T13,T18,T34,T57,T7,T72,T77,T9
+  Summary: The patient reports knee pain with a severity of 7.
+  ClusterId: CL3
+  TemporalProfile: current
+  Updates:
+  - CAP11: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T7 :: The patient reports pain in the right knee.
+  - CAP23: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T9 :: The patient reports pain.
+  - CAP6: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T13 :: The patient reports left knee pain is not present.
+  - CAP4: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T18 :: The patient reports knee pain with a severity of 7.
+  - CAP5: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T18 :: The patient reports knee pain with a severity of 11.
+  - CAP13: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T18 :: The patient is experiencing bilateral knee pain.
+  - CAP1: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T34,T34,T34 :: The patient reports left-sided pain lasting as long as their walk.
+  - CAP8: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T34 :: The patient reports pain at a severity of 11.
+  - CAP24: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T34 :: The patient has pain.
+  - CAP14: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T57 :: The patient reports high right knee pain.
+  - CAP9: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T72 :: The patient reports pain in the right inside knee.
+  - CAP10: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T72 :: The patient denies pain in the right outside knee.
+  - CAP21: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T77 :: The patient reports knee pain.
+- pop | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T10
+  Summary: The patient heard a pop.
+  ClusterId: CL4
+  TemporalProfile: current
+  Updates:
+  - CAP17: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=current turns=T10 :: The patient heard a pop.
+- knee instability | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T21
+  Summary: The patient reports knee instability.
+  ClusterId: CL5
+  TemporalProfile: current
+  Updates:
+  - CAP18: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T21 :: The patient reports knee instability.
+- hand pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T38
+  Summary: The patient has hand pain.
+  ClusterId: CL6
+  TemporalProfile: current
+  Updates:
+  - CAP19: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T38 :: The patient has hand pain.
+- knee swelling | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T50,T77,T82
+  Summary: The patient reports knee swelling.
+  ClusterId: CL9
+  TemporalProfile: current
+  Updates:
+  - CAP25: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T50 :: The patient reports swelling.
+  - CAP22: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T77 :: The patient reports knee swelling.
+  - CAP20: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T82 :: The patient reports mild swelling.
+- stiffness | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T50
+  Summary: The patient reports stiffness.
+  ClusterId: CL10
+  TemporalProfile: current
+  Updates:
+  - CAP26: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T50 :: The patient reports stiffness.
+- tenderness | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T50
+  Summary: The patient reports tenderness.
+  ClusterId: CL11
+  TemporalProfile: current
+  Updates:
+  - CAP27: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T50 :: The patient reports tenderness.
+- gymnastics | verification_status=unconfirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T51
+  Summary: The patient was a good gymnast.
+  ClusterId: CL12
+  TemporalProfile: past
+  Updates:
+  - CAP40: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=past turns=T51 :: The patient was a good gymnast.
+- reconstructive surgery | verification_status=unconfirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T53
+  Summary: The patient's knee surgery involved reconstructive surgery.
+  ClusterId: CL13
+  TemporalProfile: past
+  Updates:
+  - CAP38: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=past turns=T53 :: The patient's knee surgery involved reconstructive surgery.
+- knee surgery | verification_status=unconfirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T53
+  Summary: The patient had knee surgery.
+  ClusterId: CL14
+  TemporalProfile: past
+  Updates:
+  - CAP41: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=past turns=T53 :: The patient had knee surgery.
+- back surgery | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T55
+  Summary: The patient had surgery on their back.
+  ClusterId: CL15
+  TemporalProfile: past
+  Updates:
+  - CAP39: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=past turns=T55 :: The patient had surgery on their back.
+- skiing | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T59,T65
+  Summary: The patient regularly skis.
+  ClusterId: CL16
+  TemporalProfile: current
+  Updates:
+  - CAP2: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T59,T65 :: The patient regularly skis.
+- pain tolerance | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T61
+  Summary: The patient has a high pain tolerance.
+  ClusterId: CL17
+  TemporalProfile: current
+  Updates:
+  - CAP15: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T61 :: The patient has a high pain tolerance.
+- left hand pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T63
+  Summary: The patient reports pain in the left hand.
+  ClusterId: CL18
+  TemporalProfile: current
+  Updates:
+  - CAP12: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T63 :: The patient reports pain in the left hand.
+- shooting pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T75
+  Summary: The patient describes a shooting pain.
+  ClusterId: CL20
+  TemporalProfile: current
+  Updates:
+  - CAP16: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T75 :: The patient describes a shooting pain.
+- bruising | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T82
+  Summary: The patient reports bruising.
+  ClusterId: CL21
+  TemporalProfile: current
+  Updates:
+  - CAP28: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T82 :: The patient reports bruising.
+- strain | verification_status=confirmed | clinical_status=active | modalities=assessment | speakers=doctor | evidence=T90
+  Summary: The doctor believes the patient has a strain of the posterior cruciate ligament.
+  ClusterId: CL23
+  TemporalProfile: current
+  Updates:
+  - CAP3: content_source=doctor modality=assessment verification_status=confirmed clinical_status=active temporality=current turns=T90 :: The doctor believes the patient has a strain of the posterior cruciate ligament.
+
+Medication Tracking
+- [MedicationState] thc gummies | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T45
+  Summary: The patient takes THC gummies.
+  ClusterId: CL8
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient takes THC gummies. (T45)
+  Updates:
+  - CAP33: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T45 :: The patient takes THC gummies.
+- [MedicationState] thc | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T66
+  Summary: The patient denies taking THC.
+  ClusterId: CL19
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient denies taking THC. (T66)
+  Updates:
+  - CAP34: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T66 :: The patient denies taking THC.
+- [MedicationChange] ibuprofen | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T90
+  Summary: The doctor prescribes ibuprofen eight hundred milligrams to be taken twice a day as needed.
+  ClusterId: CL24
+  TemporalProfile: future
+  PlannedChanges:
+  - The doctor prescribes ibuprofen eight hundred milligrams to be taken twice a day as needed. (T90)
+  Updates:
+  - CAP29: content_source=doctor modality=plan verification_status=unconfirmed clinical_status=planned temporality=future turns=T90 :: The doctor prescribes ibuprofen eight hundred milligrams to be taken twice a day as needed.
+- [MedicationChange] meloxicam | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T90
+  Summary: The doctor prescribes meloxicam fifteen milligrams to be taken once a day.
+  ClusterId: CL25
+  TemporalProfile: future
+  PlannedChanges:
+  - The doctor prescribes meloxicam fifteen milligrams to be taken once a day. (T90)
+  Updates:
+  - CAP30: content_source=doctor modality=plan verification_status=unconfirmed clinical_status=planned temporality=future turns=T90 :: The doctor prescribes meloxicam fifteen milligrams to be taken once a day.
+
+Other Structured States
+- [Plan] brace | verification_status=confirmed | clinical_status=planned | modalities=interview | speakers=doctor | evidence=T39
+  Summary: The patient wears a brace.
+  ClusterId: CL7
+  TemporalProfile: current
+- [ExamFinding] mild swelling | verification_status=confirmed | clinical_status=active | modalities=exam | speakers=exam | evidence=T82
+  Summary: There is mild swelling.
+  ClusterId: CL22
+  TemporalProfile: current

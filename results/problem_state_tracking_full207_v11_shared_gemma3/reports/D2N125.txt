@@ -1,0 +1,148 @@
+Case: D2N125
+
+Problem List and Visit State Tracking
+
+Problem List
+- facial pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T0
+  Summary: The patient reports facial pain.
+  ClusterId: CL1
+  TemporalProfile: current
+  Updates:
+  - CAP11: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T0 :: The patient reports facial pain.
+- stabbing pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T0
+  Summary: The patient describes stabbing pain.
+  ClusterId: CL2
+  TemporalProfile: current
+  Updates:
+  - CAP12: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T0 :: The patient describes stabbing pain.
+- shooting pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T3
+  Summary: The patient reports shooting pain.
+  ClusterId: CL3
+  TemporalProfile: current
+  Updates:
+  - CAP13: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T3 :: The patient reports shooting pain.
+- numbness | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T30,T6
+  Summary: The patient reports numbness on their right side.
+  ClusterId: CL4
+  TemporalProfile: current
+  Updates:
+  - CAP18: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T6 :: The patient denies numbness.
+  - CAP6: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T30 :: The patient reports numbness on their right side.
+- tingling | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T6
+  Summary: The patient denies tingling.
+  ClusterId: CL5
+  TemporalProfile: current
+  Updates:
+  - CAP19: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T6 :: The patient denies tingling.
+- weakness | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T10,T8
+  Summary: The patient denies weakness.
+  ClusterId: CL6
+  TemporalProfile: current
+  Updates:
+  - CAP20: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T8 :: The patient denies weakness.
+  - CAP21: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T10 :: The patient reports weakness.
+- trigger | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T10,T11
+  Summary: The patient reports triggers for the pain.
+  ClusterId: CL7
+  TemporalProfile: current
+  Updates:
+  - CAP2: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T10,T11,T10 :: The patient reports triggers for the pain.
+- cold sensitivity | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T10
+  Summary: The patient reports that cold triggers pain.
+  ClusterId: CL8
+  TemporalProfile: current
+  Updates:
+  - CAP7: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T10 :: The patient reports that cold triggers pain.
+- temperature sensitivity | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T10
+  Summary: The patient reports that temperature triggers pain.
+  ClusterId: CL9
+  TemporalProfile: current
+  Updates:
+  - CAP8: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T10 :: The patient reports that temperature triggers pain.
+- neurosurgeon referral | verification_status=unconfirmed | clinical_status=planned | modalities=interview | speakers=patient | evidence=T12
+  Summary: The patient needs a neurosurgeon referral.
+  ClusterId: CL10
+  TemporalProfile: future
+  Updates:
+  - CAP10: content_source=patient modality=interview verification_status=unconfirmed clinical_status=planned temporality=future turns=T12 :: The patient needs a neurosurgeon referral.
+- pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T13,T14,T26
+  Summary: The patient reports pain that is rated as a 10 and described as stabbing.
+  ClusterId: CL11
+  TemporalProfile: current
+  Updates:
+  - CAP14: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T13 :: The patient reports excruciating pain.
+  - CAP15: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T14 :: The patient reports stabbing pain.
+  - CAP3: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T26,T26 :: The patient reports pain that is rated as a 10 and described as stabbing.
+- headache | verification_status=unconfirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T19
+  Summary: The patient reports occasional headaches.
+  ClusterId: CL12
+  TemporalProfile: current, occasional
+  Updates:
+  - CAP16: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T19 :: The patient reports occasional headaches.
+  - CAP17: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=occasional turns=T19 :: The patient occasionally gets headaches.
+- sharp pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T32
+  Summary: The patient reports sharp pain on their left side.
+  ClusterId: CL14
+  TemporalProfile: current
+  Updates:
+  - CAP5: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T32 :: The patient reports sharp pain on their left side.
+- trigeminal neuralgia | verification_status=confirmed | clinical_status=historical | modalities=assessment | speakers=doctor | evidence=T35
+  Summary: The doctor suggests the patient may have trigeminal neuralgia.
+  ClusterId: CL15
+  TemporalProfile: future
+  Updates:
+  - CAP1: content_source=doctor modality=assessment verification_status=confirmed clinical_status=historical temporality=future turns=T35 :: The doctor suggests the patient may have trigeminal neuralgia.
+- facial shooting electrical pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T38
+  Summary: The patient reports facial shooting electrical pain.
+  ClusterId: CL16
+  TemporalProfile: current
+  Updates:
+  - CAP9: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T38 :: The patient reports facial shooting electrical pain.
+- nerve compression | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T42
+  Summary: The patient's nerve compression is the root cause of the problem.
+  ClusterId: CL18
+  TemporalProfile: current
+  Updates:
+  - CAP4: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T42 :: The patient's nerve compression is the root cause of the problem.
+
+Medication Tracking
+- [MedicationState] tylenol | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T19
+  Summary: The patient takes some tylenol.
+  ClusterId: CL13
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient takes some tylenol. (T19)
+  Updates:
+  - CAP27: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T19 :: The patient takes some tylenol.
+- [MedicationChange] gabapentin | verification_status=confirmed | clinical_status=planned | modalities=interview | speakers=doctor,patient | evidence=T38
+  Summary: The patient wants to try gabapentin.
+  ClusterId: CL17
+  TemporalProfile: future, initial
+  PlannedChanges:
+  - The patient wants to try gabapentin. (T38)
+  - The doctor recommends starting with gabapentin. (T38)
+  Updates:
+  - CAP24: content_source=patient modality=interview verification_status=confirmed clinical_status=planned temporality=future turns=T38 :: The patient wants to try gabapentin.
+  - CAP25: content_source=doctor modality=interview verification_status=confirmed clinical_status=planned temporality=initial turns=T38 :: The doctor recommends starting with gabapentin.
+- [MedicationChange] tegretol | verification_status=confirmed | clinical_status=planned | modalities=interview | speakers=doctor | evidence=T43
+  Summary: The doctor recommends starting with tegretol.
+  ClusterId: CL19
+  TemporalProfile: initial
+  PlannedChanges:
+  - The doctor recommends starting with tegretol. (T43)
+  Updates:
+  - CAP26: content_source=doctor modality=interview verification_status=confirmed clinical_status=planned temporality=initial turns=T43 :: The doctor recommends starting with tegretol.
+- [MedicationState] dermatologic skin reaction | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=doctor | evidence=T45
+  Summary: The doctor mentions potential dermatologic skin reactions as a side effect.
+  ClusterId: CL20
+  TemporalProfile: potential
+  CurrentRegimens:
+  - The doctor mentions potential dermatologic skin reactions as a side effect. (T45)
+  Updates:
+  - CAP23: content_source=doctor modality=interview verification_status=confirmed clinical_status=active temporality=potential turns=T45 :: The doctor mentions potential dermatologic skin reactions as a side effect.
+
+Other Structured States
+- [TestResult] genetic testing | verification_status=unconfirmed | clinical_status=planned | modalities=test_result | speakers=patient | evidence=T46
+  Summary: The patient wants genetic testing.
+  ClusterId: CL21
+  TemporalProfile: future

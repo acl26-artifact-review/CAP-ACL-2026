@@ -1,0 +1,1615 @@
+{
+  "case_id": "D2N129",
+  "method": "cap_event",
+  "template": "soap",
+  "summary_text": "S:\nThe patient reports diabetes levels being up and down due to her diet, and that she has been eating a lot more desserts than she normally would. She also reports snacking a lot during shifts. The patient reports no willpower.\n\nO:\nPhysical exam reveals normal blood pressure, heart sounds are regular, and neurological exam is intact. The patient's skin is warm and dry.\n\nA:\nThe patient's primary problem is type 2 diabetes, with secondary hypertension. Her current blood sugar levels are elevated.\n\nP:\nThe doctor wants to see the patient again in about two months. The doctor wants the patient to check their blood sugars in the morning and call them in about two weeks. The patient is currently taking metformin twice a day. The doctor recommends dietary changes to help manage the patient's diabetes.",
+  "reference_summary": "CHIEF COMPLAINT\n\nAnnual exam.\n\nHISTORY OF PRESENT ILLNESS\n\nBeverly Ortiz is a 24-year-old female patient with a history of type 2 diabetes and high blood pressure. She is here today for her yearly exam.\n\nThe patient states she has been doing well. She has recently began working at a bakery this summer.\n\nThe patient states her diabetes is uncontrolled. Her blood sugars have fluctuated recently, which she attributes to her change in diet due to work. She is trying to improve her diet by removing additional sweets. She has been taking her medication as prescribed and has not missed any doses.\n\nThe patient states her blood pressure has been good despite her blood sugar levels being up and down. She has continued taking metformin twice a day.\n\nShe has been sleeping well and is able to sleep a full 8 hours. She denies thoughts of self-harm or suicidal ideations.\n\nPHYSICAL EXAMINATION\n\n• Neurological/Psychological: Grip strength equal bilaterally. Neurologically intact.\n• Neck: Supple without thyromegaly or lymphadenopathy. No carotid bruits appreciable.\nLungs are clear to auscultation bilaterally. No wheezes, rales, or rhonchi.\n• Cardiovascular: Regular rate. Grade 2/6 systolic ejection fraction murmur. No gallops or rubs. No extra heart sounds. Good pulses.\n\nRESULTS\n\nHemoglobin A1c is elevated.\n\nASSESSMENT AND PLAN\n\nBeverly Ortiz is a 24-year-old female patient with a history of type 2 diabetes and high blood pressure. She is here today for her yearly exam.\n\nDiabetes mellitus type 2.\n• Medical Reasoning: Her blood glucose levels have been uncontrolled. She is still taking metformin twice a day, but does admit to dietary indiscretion with an increase in her sweets intake.. Her most recent hemoglobin A1c was elevated.\n• Medical Treatment: Continue metformin twice a day.\n• Patient Education and Counseling: I encouraged her to check her fasting blood glucose levels each morning and call them in about 2 weeks. She will follow up in about 2 months, at which time we will discuss further treatment recommendations.\n\nHypertension.\n• Medical Reasoning: Appears to be relatively stable.\n• Medical Treatment: Continue lisinopril 10 mg once daily.\n\nPatient Agreements: The patient understands and agrees with the recommended medical treatment plan.",
+  "source_cap": {
+    "atomic_propositions": [
+      {
+        "prop_id": "CAP1",
+        "cap_type": "Symptom",
+        "canonical_concept": "eating desserts",
+        "category": "Symptom",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "recent",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient has been eating a lot more desserts than she normally would."
+      },
+      {
+        "prop_id": "CAP2",
+        "cap_type": "Symptom",
+        "canonical_concept": "high blood pressure",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports that their blood pressures have been normal."
+      },
+      {
+        "prop_id": "CAP3",
+        "cap_type": "Symptom",
+        "canonical_concept": "snacking",
+        "category": "Symptom",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "recent",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient has been snacking a lot during shifts."
+      },
+      {
+        "prop_id": "CAP4",
+        "cap_type": "Problem",
+        "canonical_concept": "type 2 diabetes",
+        "category": "Problem",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "historical",
+        "claim_type_tags": [
+          "quantitative"
+        ],
+        "proposition_text": "The patient has a history of type 2 diabetes."
+      },
+      {
+        "prop_id": "CAP5",
+        "cap_type": "Problem",
+        "canonical_concept": "high blood pressure",
+        "category": "Problem",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "historical",
+        "proposition_text": "The patient has a history of high blood pressure."
+      },
+      {
+        "prop_id": "CAP6",
+        "cap_type": "Symptom",
+        "canonical_concept": "diabetes",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports diabetes levels being up and down."
+      },
+      {
+        "prop_id": "CAP7",
+        "cap_type": "Problem",
+        "canonical_concept": "diabetes",
+        "category": "Problem",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The doctor assessed the patient's first problem as diabetes."
+      },
+      {
+        "prop_id": "CAP8",
+        "cap_type": "Problem",
+        "canonical_concept": "hypertension",
+        "category": "Problem",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "stable",
+        "temporality": "current",
+        "proposition_text": "The doctor assessed the patient's second problem as hypertension."
+      },
+      {
+        "prop_id": "CAP9",
+        "cap_type": "Problem",
+        "canonical_concept": "diet related",
+        "category": "Problem",
+        "speaker": "patient",
+        "status": "uncertain",
+        "visit_state": "historical",
+        "temporality": "current",
+        "proposition_text": "The doctor believes the patient's diabetes is diet related."
+      },
+      {
+        "prop_id": "CAP10",
+        "cap_type": "Symptom",
+        "canonical_concept": "diet",
+        "category": "Symptom",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "lately",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient's diet has been pretty bad lately."
+      },
+      {
+        "prop_id": "CAP11",
+        "cap_type": "Symptom",
+        "canonical_concept": "pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports pain in the left hand."
+      },
+      {
+        "prop_id": "CAP12",
+        "cap_type": "Problem",
+        "canonical_concept": "hemoglobin a1c level",
+        "category": "Problem",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "planned",
+        "temporality": "current",
+        "claim_type_tags": [
+          "quantitative"
+        ],
+        "proposition_text": "The hemoglobin a1c level should be under seven."
+      },
+      {
+        "prop_id": "CAP13",
+        "cap_type": "Symptom",
+        "canonical_concept": "left hand",
+        "category": "Symptom",
+        "speaker": "patient",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient's pain is in the left hand."
+      },
+      {
+        "prop_id": "CAP14",
+        "cap_type": "Problem",
+        "canonical_concept": "elevated blood sugars",
+        "category": "Problem",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient's blood sugars have been elevated."
+      },
+      {
+        "prop_id": "CAP15",
+        "cap_type": "Problem",
+        "canonical_concept": "difficulty resisting temptation",
+        "category": "Problem",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient reports difficulty resisting temptation."
+      },
+      {
+        "prop_id": "CAP16",
+        "cap_type": "Problem",
+        "canonical_concept": "diabetes",
+        "category": "Problem",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient's first problem is diabetes."
+      },
+      {
+        "prop_id": "CAP17",
+        "cap_type": "Symptom",
+        "canonical_concept": "willpower",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports no willpower."
+      },
+      {
+        "prop_id": "CAP18",
+        "cap_type": "Symptom",
+        "canonical_concept": "touch sensation",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports feeling touch."
+      },
+      {
+        "prop_id": "CAP19",
+        "cap_type": "Problem",
+        "canonical_concept": "diabetes",
+        "category": "Problem",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient has diabetes."
+      },
+      {
+        "prop_id": "CAP20",
+        "cap_type": "Symptom",
+        "canonical_concept": "pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports pain."
+      },
+      {
+        "prop_id": "CAP21",
+        "cap_type": "Problem",
+        "canonical_concept": "pain",
+        "category": "Problem",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient has pain."
+      },
+      {
+        "prop_id": "CAP22",
+        "cap_type": "Symptom",
+        "canonical_concept": "pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports pain."
+      },
+      {
+        "prop_id": "CAP23",
+        "cap_type": "Order",
+        "canonical_concept": "blood sugar check",
+        "category": "Order",
+        "speaker": "doctor",
+        "status": "uncertain",
+        "visit_state": "planned",
+        "temporality": "in two weeks",
+        "proposition_text": "The doctor wants the patient to check their blood sugars in the morning."
+      },
+      {
+        "prop_id": "CAP24",
+        "cap_type": "Order",
+        "canonical_concept": "call in blood sugars",
+        "category": "Order",
+        "speaker": "doctor",
+        "status": "uncertain",
+        "visit_state": "planned",
+        "temporality": "in two weeks",
+        "proposition_text": "The doctor wants the patient to call them in about two weeks."
+      },
+      {
+        "prop_id": "CAP25",
+        "cap_type": "Order",
+        "canonical_concept": "follow up",
+        "category": "Order",
+        "speaker": "doctor",
+        "status": "uncertain",
+        "visit_state": "planned",
+        "temporality": "in two months",
+        "proposition_text": "The doctor wants to see the patient again in about two months."
+      },
+      {
+        "prop_id": "CAP26",
+        "cap_type": "Order",
+        "canonical_concept": "hemoglobin a1c",
+        "category": "Order",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "planned",
+        "temporality": "current",
+        "claim_type_tags": [
+          "quantitative"
+        ],
+        "proposition_text": "A hemoglobin a1c test is ordered."
+      },
+      {
+        "prop_id": "CAP27",
+        "cap_type": "Order",
+        "canonical_concept": "blood pressure",
+        "category": "Order",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "Blood pressure is monitored."
+      },
+      {
+        "prop_id": "CAP28",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "lisinopril",
+        "category": "MedicationStatement",
+        "speaker": "doctor",
+        "predicate": "has",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "medication",
+          "quantitative"
+        ],
+        "proposition_text": "The doctor instructed the patient to continue taking lisinopril 10 mg once a day."
+      },
+      {
+        "prop_id": "CAP29",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "metformin",
+        "category": "MedicationStatement",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "medication"
+        ],
+        "proposition_text": "The patient is taking metformin."
+      }
+    ],
+    "filtered_nonverifiable_units": []
+  },
+  "event_plan": {
+    "events": [
+      {
+        "event_id": "CL2",
+        "event_type": "ProblemOrientedNoteBundle",
+        "canonical_concept": "diabetes",
+        "visit_state": "active",
+        "status": "affirmed",
+        "temporality": "in two weeks",
+        "speaker_source": "clinician,doctor,patient",
+        "clinical_priority": "high",
+        "title": "diabetes",
+        "event_summary": "Problem-oriented bundle for diabetes.",
+        "supporting_cap_ids": [
+          "CAP16",
+          "CAP4",
+          "CAP6",
+          "CAP19",
+          "CAP7",
+          "CAP1",
+          "CAP3",
+          "CAP17",
+          "CAP12",
+          "CAP18",
+          "CAP8",
+          "CAP9",
+          "CAP25",
+          "CAP23",
+          "CAP24",
+          "CAP29"
+        ],
+        "anchor_problem_cap_id": "CAP16",
+        "anchor_problem": "diabetes",
+        "S_cap_ids": [
+          "CAP16",
+          "CAP4",
+          "CAP19",
+          "CAP7"
+        ],
+        "P_cap_ids": [
+          "CAP25",
+          "CAP23",
+          "CAP24"
+        ],
+        "global_cap_ids": [
+          "CAP6",
+          "CAP1",
+          "CAP3",
+          "CAP17",
+          "CAP18",
+          "CAP29"
+        ],
+        "supporting_evidence": [
+          "The patient's first problem is diabetes.",
+          "The patient has a history of type 2 diabetes.",
+          "The patient has diabetes.",
+          "The doctor assessed the patient's first problem as diabetes."
+        ],
+        "current_state": [
+          "The patient's first problem is diabetes.",
+          "The patient has a history of type 2 diabetes.",
+          "The patient has diabetes.",
+          "The doctor assessed the patient's first problem as diabetes."
+        ],
+        "planned_actions": [
+          "The doctor wants to see the patient again in about two months.",
+          "The doctor wants the patient to check their blood sugars in the morning.",
+          "The doctor wants the patient to call them in about two weeks."
+        ],
+        "care_context": [
+          "The hemoglobin a1c level should be under seven.",
+          "The doctor assessed the patient's second problem as hypertension.",
+          "The doctor believes the patient's diabetes is diet related.",
+          "The patient reports diabetes levels being up and down.",
+          "The patient has been eating a lot more desserts than she normally would.",
+          "The patient has been snacking a lot during shifts."
+        ],
+        "key_slots": {
+          "source_modalities": "assessment, interview",
+          "temporal_profile": "current, historical, recent, in two months, in two weeks",
+          "anchor_cluster_type": "ProblemState",
+          "anchor_primary_cap_type": "Problem",
+          "bundle_concepts": "diabetes; eating desserts; snacking; willpower; hemoglobin a1c level; touch sensation; hypertension; diet related; follow up; blood sugar check; call in blood sugars; metformin",
+          "history_context": "",
+          "related_factors": "The hemoglobin a1c level should be under seven.; The doctor assessed the patient's second problem as hypertension.; The doctor believes the patient's diabetes is diet related.",
+          "visit_primary": "true",
+          "render_in_note": "true",
+          "assessment_fallback": "The patient has diabetes.",
+          "bundle_design": "problem_oriented_note_bundle"
+        },
+        "render_sections": [
+          "S",
+          "O",
+          "A",
+          "P",
+          "History of Present Illness",
+          "Findings",
+          "Assessment",
+          "Plan"
+        ]
+      }
+    ]
+  },
+  "summary_cap": {
+    "atomic_propositions": [],
+    "filtered_nonverifiable_units": [],
+    "runtime_seconds": 0.523
+  },
+  "cap_alignment": {
+    "cap_precision": 0.0,
+    "cap_recall": 0.0,
+    "cap_f1": 0.0,
+    "matched_count": 0,
+    "summary_prop_count": 0,
+    "source_prop_count": 29,
+    "matched_pairs": [],
+    "unsupported_summary_props": [],
+    "missing_source_props": [
+      {
+        "prop_id": "CAP1",
+        "cap_type": "Symptom",
+        "canonical_concept": "eating desserts",
+        "category": "Symptom",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "recent",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient has been eating a lot more desserts than she normally would."
+      },
+      {
+        "prop_id": "CAP2",
+        "cap_type": "Symptom",
+        "canonical_concept": "high blood pressure",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports that their blood pressures have been normal."
+      },
+      {
+        "prop_id": "CAP3",
+        "cap_type": "Symptom",
+        "canonical_concept": "snacking",
+        "category": "Symptom",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "recent",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient has been snacking a lot during shifts."
+      },
+      {
+        "prop_id": "CAP4",
+        "cap_type": "Problem",
+        "canonical_concept": "type 2 diabetes",
+        "category": "Problem",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "historical",
+        "claim_type_tags": [
+          "quantitative"
+        ],
+        "proposition_text": "The patient has a history of type 2 diabetes."
+      },
+      {
+        "prop_id": "CAP5",
+        "cap_type": "Problem",
+        "canonical_concept": "high blood pressure",
+        "category": "Problem",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "historical",
+        "proposition_text": "The patient has a history of high blood pressure."
+      },
+      {
+        "prop_id": "CAP6",
+        "cap_type": "Symptom",
+        "canonical_concept": "diabetes",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports diabetes levels being up and down."
+      },
+      {
+        "prop_id": "CAP7",
+        "cap_type": "Problem",
+        "canonical_concept": "diabetes",
+        "category": "Problem",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The doctor assessed the patient's first problem as diabetes."
+      },
+      {
+        "prop_id": "CAP8",
+        "cap_type": "Problem",
+        "canonical_concept": "hypertension",
+        "category": "Problem",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "stable",
+        "temporality": "current",
+        "proposition_text": "The doctor assessed the patient's second problem as hypertension."
+      },
+      {
+        "prop_id": "CAP9",
+        "cap_type": "Problem",
+        "canonical_concept": "diet related",
+        "category": "Problem",
+        "speaker": "patient",
+        "status": "uncertain",
+        "visit_state": "historical",
+        "temporality": "current",
+        "proposition_text": "The doctor believes the patient's diabetes is diet related."
+      },
+      {
+        "prop_id": "CAP10",
+        "cap_type": "Symptom",
+        "canonical_concept": "diet",
+        "category": "Symptom",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "lately",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient's diet has been pretty bad lately."
+      },
+      {
+        "prop_id": "CAP11",
+        "cap_type": "Symptom",
+        "canonical_concept": "pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports pain in the left hand."
+      },
+      {
+        "prop_id": "CAP12",
+        "cap_type": "Problem",
+        "canonical_concept": "hemoglobin a1c level",
+        "category": "Problem",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "planned",
+        "temporality": "current",
+        "claim_type_tags": [
+          "quantitative"
+        ],
+        "proposition_text": "The hemoglobin a1c level should be under seven."
+      },
+      {
+        "prop_id": "CAP13",
+        "cap_type": "Symptom",
+        "canonical_concept": "left hand",
+        "category": "Symptom",
+        "speaker": "patient",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient's pain is in the left hand."
+      },
+      {
+        "prop_id": "CAP14",
+        "cap_type": "Problem",
+        "canonical_concept": "elevated blood sugars",
+        "category": "Problem",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient's blood sugars have been elevated."
+      },
+      {
+        "prop_id": "CAP15",
+        "cap_type": "Problem",
+        "canonical_concept": "difficulty resisting temptation",
+        "category": "Problem",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient reports difficulty resisting temptation."
+      },
+      {
+        "prop_id": "CAP16",
+        "cap_type": "Problem",
+        "canonical_concept": "diabetes",
+        "category": "Problem",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient's first problem is diabetes."
+      },
+      {
+        "prop_id": "CAP17",
+        "cap_type": "Symptom",
+        "canonical_concept": "willpower",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports no willpower."
+      },
+      {
+        "prop_id": "CAP18",
+        "cap_type": "Symptom",
+        "canonical_concept": "touch sensation",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports feeling touch."
+      },
+      {
+        "prop_id": "CAP19",
+        "cap_type": "Problem",
+        "canonical_concept": "diabetes",
+        "category": "Problem",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient has diabetes."
+      },
+      {
+        "prop_id": "CAP20",
+        "cap_type": "Symptom",
+        "canonical_concept": "pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports pain."
+      },
+      {
+        "prop_id": "CAP21",
+        "cap_type": "Problem",
+        "canonical_concept": "pain",
+        "category": "Problem",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient has pain."
+      },
+      {
+        "prop_id": "CAP22",
+        "cap_type": "Symptom",
+        "canonical_concept": "pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports pain."
+      },
+      {
+        "prop_id": "CAP23",
+        "cap_type": "Order",
+        "canonical_concept": "blood sugar check",
+        "category": "Order",
+        "speaker": "doctor",
+        "status": "uncertain",
+        "visit_state": "planned",
+        "temporality": "in two weeks",
+        "proposition_text": "The doctor wants the patient to check their blood sugars in the morning."
+      },
+      {
+        "prop_id": "CAP24",
+        "cap_type": "Order",
+        "canonical_concept": "call in blood sugars",
+        "category": "Order",
+        "speaker": "doctor",
+        "status": "uncertain",
+        "visit_state": "planned",
+        "temporality": "in two weeks",
+        "proposition_text": "The doctor wants the patient to call them in about two weeks."
+      },
+      {
+        "prop_id": "CAP25",
+        "cap_type": "Order",
+        "canonical_concept": "follow up",
+        "category": "Order",
+        "speaker": "doctor",
+        "status": "uncertain",
+        "visit_state": "planned",
+        "temporality": "in two months",
+        "proposition_text": "The doctor wants to see the patient again in about two months."
+      },
+      {
+        "prop_id": "CAP26",
+        "cap_type": "Order",
+        "canonical_concept": "hemoglobin a1c",
+        "category": "Order",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "planned",
+        "temporality": "current",
+        "claim_type_tags": [
+          "quantitative"
+        ],
+        "proposition_text": "A hemoglobin a1c test is ordered."
+      },
+      {
+        "prop_id": "CAP27",
+        "cap_type": "Order",
+        "canonical_concept": "blood pressure",
+        "category": "Order",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "Blood pressure is monitored."
+      },
+      {
+        "prop_id": "CAP28",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "lisinopril",
+        "category": "MedicationStatement",
+        "speaker": "doctor",
+        "predicate": "has",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "medication",
+          "quantitative"
+        ],
+        "proposition_text": "The doctor instructed the patient to continue taking lisinopril 10 mg once a day."
+      },
+      {
+        "prop_id": "CAP29",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "metformin",
+        "category": "MedicationStatement",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "medication"
+        ],
+        "proposition_text": "The patient is taking metformin."
+      }
+    ]
+  },
+  "reference_gpt_f1_items": {
+    "active_problems_symptoms": [],
+    "negated_findings": [],
+    "uncertain_findings": [],
+    "medication_treatment": [],
+    "plan_followup": [],
+    "_chunk_count": [
+      "3"
+    ],
+    "_parse_failures": [
+      "{\"chunk_index\": 1, \"stage\": \"call_llm\", \"error\": \"LLM call failed after retries: Error code: 404\"}",
+      "{\"chunk_index\": 2, \"stage\": \"call_llm\", \"error\": \"LLM call failed after retries: Error code: 404\"}",
+      "{\"chunk_index\": 3, \"stage\": \"call_llm\", \"error\": \"LLM call failed after retries: Error code: 404\"}"
+    ]
+  },
+  "summary_gpt_f1_items": {
+    "active_problems_symptoms": [],
+    "negated_findings": [],
+    "uncertain_findings": [],
+    "medication_treatment": [],
+    "plan_followup": [],
+    "_chunk_count": [
+      "1"
+    ],
+    "_parse_failures": [
+      "{\"chunk_index\": 1, \"stage\": \"call_llm\", \"error\": \"LLM call failed after retries: Error code: 404\"}"
+    ]
+  },
+  "gpt_f1_alignment": {
+    "by_category": {
+      "active_problems_symptoms": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "matched_count": 0,
+        "pred_count": 0,
+        "ref_count": 0,
+        "matches": [],
+        "unsupported_pred_items": [],
+        "missing_ref_items": []
+      },
+      "negated_findings": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "matched_count": 0,
+        "pred_count": 0,
+        "ref_count": 0,
+        "matches": [],
+        "unsupported_pred_items": [],
+        "missing_ref_items": []
+      },
+      "uncertain_findings": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "matched_count": 0,
+        "pred_count": 0,
+        "ref_count": 0,
+        "matches": [],
+        "unsupported_pred_items": [],
+        "missing_ref_items": []
+      },
+      "medication_treatment": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "matched_count": 0,
+        "pred_count": 0,
+        "ref_count": 0,
+        "matches": [],
+        "unsupported_pred_items": [],
+        "missing_ref_items": []
+      },
+      "plan_followup": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "matched_count": 0,
+        "pred_count": 0,
+        "ref_count": 0,
+        "matches": [],
+        "unsupported_pred_items": [],
+        "missing_ref_items": []
+      }
+    }
+  },
+  "reference_nair_concepts": {
+    "sections": [
+      {
+        "heading": "Clinical Note",
+        "section_value": "CHIEF COMPLAINT\nAnnual exam.\nHISTORY OF PRESENT ILLNESS\nBeverly Ortiz is a 24-year-old female patient with a history of type 2 diabetes and high blood pressure. She is here today for her yearly exam.\nThe patient states she has been doing well. She has recently began working at a bakery this summer.\nThe patient states her diabetes is uncontrolled. Her blood sugars have fluctuated recently, which she attributes to her change in diet due to work. She is trying to improve her diet by removing additional sweets. She has been taking her medication as prescribed and has not missed any doses.\nThe patient states her blood pressure has been good despite her blood sugar levels being up and down. She has continued taking metformin twice a day.\nShe has been sleeping well and is able to sleep a full 8 hours. She denies thoughts of self-harm or suicidal ideations.\nPHYSICAL EXAMINATION\n• Neurological/Psychological: Grip strength equal bilaterally. Neurologically intact.",
+        "medical_concepts": [
+          "annual exam",
+          "type 2 diabetes",
+          "high blood pressure",
+          "uncontrolled diabetes",
+          "fluctuating blood sugars",
+          "change in diet",
+          "metformin",
+          "sleeping well",
+          "suicidal ideation",
+          "self-harm thoughts",
+          "neurologically intact",
+          "grip strength"
+        ]
+      },
+      {
+        "heading": "Clinical Note",
+        "section_value": "• Neck: Supple without thyromegaly or lymphadenopathy. No carotid bruits appreciable.\nLungs are clear to auscultation bilaterally. No wheezes, rales, or rhonchi.\n• Cardiovascular: Regular rate. Grade 2/6 systolic ejection fraction murmur. No gallops or rubs. No extra heart sounds. Good pulses.\nRESULTS\nHemoglobin A1c is elevated.\nASSESSMENT AND PLAN\nBeverly Ortiz is a 24-year-old female patient with a history of type 2 diabetes and high blood pressure. She is here today for her yearly exam.\nDiabetes mellitus type 2.\n• Medical Reasoning: Her blood glucose levels have been uncontrolled. She is still taking metformin twice a day, but does admit to dietary indiscretion with an increase in her sweets intake.. Her most recent hemoglobin A1c was elevated.\n• Medical Treatment: Continue metformin twice a day.",
+        "medical_concepts": [
+          "neck supple",
+          "thyromegaly",
+          "lymphadenopathy",
+          "carotid bruits",
+          "lungs clear to auscultation",
+          "wheezes",
+          "rales",
+          "rhonchi",
+          "regular heart rate",
+          "systolic ejection murmur",
+          "gallops",
+          "rubs",
+          "extra heart sounds",
+          "pulses",
+          "hemoglobin A1c",
+          "elevated hemoglobin A1c",
+          "type 2 diabetes",
+          "diabetes mellitus type 2",
+          "high blood pressure",
+          "uncontrolled blood glucose levels"
+        ]
+      },
+      {
+        "heading": "Clinical Note",
+        "section_value": "• Patient Education and Counseling: I encouraged her to check her fasting blood glucose levels each morning and call them in about 2 weeks. She will follow up in about 2 months, at which time we will discuss further treatment recommendations.\nHypertension.\n• Medical Reasoning: Appears to be relatively stable.\n• Medical Treatment: Continue lisinopril 10 mg once daily.\nPatient Agreements: The patient understands and agrees with the recommended medical treatment plan.",
+        "medical_concepts": [
+          "fasting blood glucose",
+          "hypertension",
+          "lisinopril"
+        ]
+      }
+    ],
+    "medical_concepts": [
+      "annual exam",
+      "type 2 diabetes",
+      "high blood pressure",
+      "uncontrolled diabetes",
+      "fluctuating blood sugars",
+      "change in diet",
+      "metformin",
+      "sleeping well",
+      "suicidal ideation",
+      "self-harm thoughts",
+      "neurologically intact",
+      "grip strength",
+      "neck supple",
+      "thyromegaly",
+      "lymphadenopathy",
+      "carotid bruits",
+      "lungs clear to auscultation",
+      "wheezes",
+      "rales",
+      "rhonchi",
+      "regular heart rate",
+      "systolic ejection murmur",
+      "gallops",
+      "rubs",
+      "extra heart sounds",
+      "pulses",
+      "hemoglobin A1c",
+      "elevated hemoglobin A1c",
+      "diabetes mellitus type 2",
+      "uncontrolled blood glucose levels",
+      "fasting blood glucose",
+      "hypertension",
+      "lisinopril"
+    ],
+    "section_count": 3
+  },
+  "summary_nair_concepts": {
+    "sections": [
+      {
+        "heading": "S",
+        "section_value": "The patient reports diabetes levels being up and down due to her diet, and that she has been eating a lot more desserts than she normally would. She also reports snacking a lot during shifts. The patient reports no willpower.",
+        "medical_concepts": [
+          "diabetes"
+        ]
+      },
+      {
+        "heading": "O",
+        "section_value": "Physical exam reveals normal blood pressure, heart sounds are regular, and neurological exam is intact. The patient's skin is warm and dry.",
+        "medical_concepts": [
+          "physical exam",
+          "blood pressure",
+          "heart sounds",
+          "neurological exam",
+          "skin warm and dry"
+        ]
+      },
+      {
+        "heading": "A",
+        "section_value": "The patient's primary problem is type 2 diabetes, with secondary hypertension. Her current blood sugar levels are elevated.",
+        "medical_concepts": [
+          "type 2 diabetes",
+          "hypertension",
+          "elevated blood sugar levels"
+        ]
+      },
+      {
+        "heading": "P",
+        "section_value": "The doctor wants to see the patient again in about two months. The doctor wants the patient to check their blood sugars in the morning and call them in about two weeks. The patient is currently taking metformin twice a day. The doctor recommends dietary changes to help manage the patient's diabetes.",
+        "medical_concepts": [
+          "blood sugar",
+          "metformin",
+          "diabetes"
+        ]
+      }
+    ],
+    "medical_concepts": [
+      "diabetes",
+      "physical exam",
+      "blood pressure",
+      "heart sounds",
+      "neurological exam",
+      "skin warm and dry",
+      "type 2 diabetes",
+      "hypertension",
+      "elevated blood sugar levels",
+      "blood sugar",
+      "metformin"
+    ],
+    "section_count": 4
+  },
+  "nair_alignment": {
+    "pred_concepts": [
+      "diabetes",
+      "physical exam",
+      "blood pressure",
+      "heart sounds",
+      "neurological exam",
+      "skin warm and dry",
+      "type 2 diabetes",
+      "hypertension",
+      "elevated blood sugar levels",
+      "blood sugar",
+      "metformin"
+    ],
+    "ref_concepts": [
+      "annual exam",
+      "type 2 diabetes",
+      "high blood pressure",
+      "uncontrolled diabetes",
+      "fluctuating blood sugars",
+      "change in diet",
+      "metformin",
+      "sleeping well",
+      "suicidal ideation",
+      "self-harm thoughts",
+      "neurologically intact",
+      "grip strength",
+      "neck supple",
+      "thyromegaly",
+      "lymphadenopathy",
+      "carotid bruits",
+      "lungs clear to auscultation",
+      "wheezes",
+      "rales",
+      "rhonchi",
+      "regular heart rate",
+      "systolic ejection murmur",
+      "gallops",
+      "rubs",
+      "extra heart sounds",
+      "pulses",
+      "hemoglobin A1c",
+      "elevated hemoglobin A1c",
+      "diabetes mellitus type 2",
+      "uncontrolled blood glucose levels",
+      "fasting blood glucose",
+      "hypertension",
+      "lisinopril"
+    ],
+    "precision_alignment": {
+      "found_b": [
+        "diabetes",
+        "physical exam",
+        "blood pressure",
+        "heart sounds",
+        "neurological exam",
+        "type 2 diabetes",
+        "hypertension",
+        "elevated blood sugar levels",
+        "blood sugar",
+        "metformin"
+      ],
+      "not_found_b": [
+        "skin warm and dry"
+      ],
+      "chunk_count": 1,
+      "chunk_results": [
+        {
+          "found_b": [
+            "diabetes",
+            "physical exam",
+            "blood pressure",
+            "heart sounds",
+            "neurological exam",
+            "type 2 diabetes",
+            "hypertension",
+            "elevated blood sugar levels",
+            "blood sugar",
+            "metformin"
+          ],
+          "not_found_b": [
+            "skin warm and dry"
+          ]
+        }
+      ]
+    },
+    "recall_alignment": {
+      "found_b": [
+        "type 2 diabetes",
+        "high blood pressure",
+        "uncontrolled diabetes",
+        "fluctuating blood sugars",
+        "change in diet",
+        "metformin",
+        "neurologically intact",
+        "regular heart rate",
+        "diabetes mellitus type 2",
+        "uncontrolled blood glucose levels",
+        "hypertension"
+      ],
+      "not_found_b": [
+        "annual exam",
+        "sleeping well",
+        "suicidal ideation",
+        "self-harm thoughts",
+        "grip strength",
+        "neck supple",
+        "thyromegaly",
+        "lymphadenopathy",
+        "carotid bruits",
+        "lungs clear to auscultation",
+        "wheezes",
+        "rales",
+        "rhonchi",
+        "systolic ejection murmur",
+        "gallops",
+        "rubs",
+        "extra heart sounds",
+        "pulses",
+        "hemoglobin A1c",
+        "elevated hemoglobin A1c",
+        "fasting blood glucose",
+        "lisinopril"
+      ],
+      "chunk_count": 2,
+      "chunk_results": [
+        {
+          "found_b": [
+            "type 2 diabetes",
+            "high blood pressure",
+            "uncontrolled diabetes",
+            "fluctuating blood sugars",
+            "change in diet",
+            "metformin",
+            "neurologically intact",
+            "regular heart rate"
+          ],
+          "not_found_b": [
+            "annual exam",
+            "sleeping well",
+            "suicidal ideation",
+            "self-harm thoughts",
+            "grip strength",
+            "neck supple",
+            "thyromegaly",
+            "lymphadenopathy",
+            "carotid bruits",
+            "lungs clear to auscultation",
+            "wheezes",
+            "rales",
+            "rhonchi",
+            "systolic ejection murmur",
+            "gallops",
+            "rubs"
+          ]
+        },
+        {
+          "found_b": [
+            "diabetes mellitus type 2",
+            "uncontrolled blood glucose levels",
+            "hypertension"
+          ],
+          "not_found_b": [
+            "extra heart sounds",
+            "pulses",
+            "hemoglobin A1c",
+            "elevated hemoglobin A1c",
+            "fasting blood glucose",
+            "lisinopril"
+          ]
+        }
+      ]
+    }
+  },
+  "semantic_cap_audit": {
+    "source_cap_recall": [
+      {
+        "cap_id": "P1",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P2",
+        "judgment": "contradicted",
+        "reason": null
+      },
+      {
+        "cap_id": "P3",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P4",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P5",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P6",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P7",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P8",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P9",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P10",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P11",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P12",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P13",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P14",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P15",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P16",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P1",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P2",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P3",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P4",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P5",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P6",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P7",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P8",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P9",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P10",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P11",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P12",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P13",
+        "judgment": "partial",
+        "reason": null
+      }
+    ],
+    "summary_cap_precision": [],
+    "metrics": {
+      "semantic_cap_precision": 0.0,
+      "semantic_cap_recall": 0.4483,
+      "semantic_cap_f1": 0.0,
+      "semantic_cap_precision_supported_count": 0,
+      "semantic_cap_precision_partial_count": 0,
+      "semantic_cap_precision_denominator": 0,
+      "semantic_cap_recall_supported_count": 9,
+      "semantic_cap_recall_partial_count": 8,
+      "semantic_cap_recall_denominator": 29,
+      "semantic_cap_low_value_source_count": 0,
+      "semantic_cap_low_value_summary_count": 0,
+      "semantic_cap_missing_count": 11,
+      "semantic_cap_unsupported_count": 0,
+      "semantic_cap_contradicted_source_count": 1,
+      "semantic_cap_contradicted_summary_count": 0
+    }
+  },
+  "safety_judgment": null,
+  "section_judgment": {
+    "section_miscategorizations": [
+      {
+        "text": "The patient is currently taking metformin twice a day.",
+        "current_section": "P",
+        "expected_section": "S",
+        "severity": "major",
+        "reason": "This describes an existing medication regimen rather than a new order or change; per instructions, current medications belong in the Subjective section unless framed as a treatment change."
+      }
+    ],
+    "summary_statistics": {
+      "section_appropriateness_score": 0.8,
+      "section_miscategorization_count": 1,
+      "major_section_miscategorization_count": 1
+    }
+  },
+  "pdsqi_judgment": {
+    "citation_applicable": 0,
+    "citation": 0,
+    "accurate": 3,
+    "thorough": 2,
+    "useful": 3,
+    "organized": 3,
+    "comprehensible": 4,
+    "succinct": 4,
+    "abstraction": 1,
+    "synthesized": 3,
+    "voice_summ": 0,
+    "voice_note": 0,
+    "pdsqi_core_mean": 3.1429
+  },
+  "llm_checklist_judgment": {
+    "content_preservation_core": 3,
+    "noise_suppression": 4,
+    "lay_expression_preservation": 3,
+    "state_update_fidelity": 2,
+    "temporality_preservation": 3,
+    "problem_evidence_linkage": 3,
+    "state_plan_separation": 2,
+    "section_organization_appropriateness": 3,
+    "overall_clinical_usability": 3,
+    "clinically_meaningful_omission": "Yes",
+    "clinically_concerning_hallucination": "Yes",
+    "checklist_a_mean": 3.3333,
+    "checklist_b_mean": 2.5,
+    "checklist_c_mean": 2.6667,
+    "llm_checklist_abc_mean": 2.875,
+    "llm_checklist_mean_no_usability": 2.875,
+    "llm_checklist_total_score": 26,
+    "llm_checklist_mean": 2.8889,
+    "llm_checklist_meaningful_omission_yes": 1,
+    "llm_checklist_concerning_hallucination_yes": 1
+  },
+  "metrics": {
+    "case_id": "D2N129",
+    "method": "cap_event",
+    "template": "soap",
+    "source_cap_count": 29,
+    "event_plan_count": 1,
+    "summary_cap_count": 0,
+    "cap_matched_count": 0,
+    "cap_precision": 0.0,
+    "cap_recall": 0.0,
+    "cap_f1": 0.0,
+    "unsupported_summary_cap_count": 0,
+    "missing_source_cap_count": 29,
+    "summary_runtime_seconds": null,
+    "summary_cap_runtime_seconds": 0.523,
+    "event_plan_runtime_seconds": null,
+    "rouge_l_f1_vs_reference": 0.1737,
+    "token_f1_vs_reference": 0.3394,
+    "gptf1_macro_f1": 0.0,
+    "nair_gpt_precision": 0.9091,
+    "nair_gpt_recall": 0.3333,
+    "nair_gpt_f1": 0.4878,
+    "semantic_cap_precision": 0.0,
+    "semantic_cap_recall": 0.4483,
+    "semantic_cap_f1": 0.0,
+    "hallucination_count": null,
+    "major_hallucination_count": null,
+    "omission_count": null,
+    "major_omission_count": null,
+    "section_appropriateness_score": 0.8,
+    "section_miscategorization_count": 1,
+    "major_section_miscategorization_count": 1,
+    "pdsqi_core_mean": 3.1429,
+    "pdsqi_accurate": 3,
+    "pdsqi_thorough": 2,
+    "llm_checklist_total_score": 26,
+    "llm_checklist_mean": 2.8889,
+    "llm_checklist_mean_no_usability": 2.875,
+    "checklist_a_mean": 3.3333,
+    "checklist_b_mean": 2.5,
+    "checklist_c_mean": 2.6667,
+    "llm_checklist_abc_mean": 2.875,
+    "content_preservation_core": 3,
+    "noise_suppression": 4,
+    "lay_expression_preservation": 3,
+    "state_update_fidelity": 2,
+    "temporality_preservation": 3,
+    "problem_evidence_linkage": 3,
+    "state_plan_separation": 2,
+    "section_organization_appropriateness": 3,
+    "overall_clinical_usability": 3,
+    "llm_checklist_meaningful_omission_yes": 1,
+    "llm_checklist_concerning_hallucination_yes": 1,
+    "gptf1_active_problems_symptoms_precision": 0.0,
+    "gptf1_active_problems_symptoms_recall": 0.0,
+    "gptf1_active_problems_symptoms_f1": 0.0,
+    "gptf1_active_problems_symptoms_pred_count": 0,
+    "gptf1_active_problems_symptoms_ref_count": 0,
+    "gptf1_negated_findings_precision": 0.0,
+    "gptf1_negated_findings_recall": 0.0,
+    "gptf1_negated_findings_f1": 0.0,
+    "gptf1_negated_findings_pred_count": 0,
+    "gptf1_negated_findings_ref_count": 0,
+    "gptf1_uncertain_findings_precision": 0.0,
+    "gptf1_uncertain_findings_recall": 0.0,
+    "gptf1_uncertain_findings_f1": 0.0,
+    "gptf1_uncertain_findings_pred_count": 0,
+    "gptf1_uncertain_findings_ref_count": 0,
+    "gptf1_medication_treatment_precision": 0.0,
+    "gptf1_medication_treatment_recall": 0.0,
+    "gptf1_medication_treatment_f1": 0.0,
+    "gptf1_medication_treatment_pred_count": 0,
+    "gptf1_medication_treatment_ref_count": 0,
+    "gptf1_plan_followup_precision": 0.0,
+    "gptf1_plan_followup_recall": 0.0,
+    "gptf1_plan_followup_f1": 0.0,
+    "gptf1_plan_followup_pred_count": 0,
+    "gptf1_plan_followup_ref_count": 0,
+    "nair_pred_concept_count": 11,
+    "nair_ref_concept_count": 33,
+    "nair_precision_match_count": 10,
+    "nair_recall_match_count": 11,
+    "semantic_cap_precision_supported_count": 0,
+    "semantic_cap_precision_partial_count": 0,
+    "semantic_cap_precision_denominator": 0,
+    "semantic_cap_recall_supported_count": 9,
+    "semantic_cap_recall_partial_count": 8,
+    "semantic_cap_recall_denominator": 29,
+    "semantic_cap_low_value_source_count": 0,
+    "semantic_cap_low_value_summary_count": 0,
+    "semantic_cap_missing_count": 11,
+    "semantic_cap_unsupported_count": 0,
+    "semantic_cap_contradicted_source_count": 1,
+    "semantic_cap_contradicted_summary_count": 0,
+    "pdsqi_useful": 3,
+    "pdsqi_organized": 3,
+    "pdsqi_comprehensible": 4,
+    "pdsqi_succinct": 4,
+    "pdsqi_synthesized": 3
+  }
+}

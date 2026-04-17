@@ -1,0 +1,1415 @@
+{
+  "case_id": "D2N070",
+  "method": "cluster2sent",
+  "template": "soap",
+  "summary_text": "S:\nThe patient reports back pain following lifting heavy objects. The patient reports tingling in his toes on the right foot. The patient admits to inconsistent weekend adherence to his diet. The patient reports blood pressure readings are slightly elevated at home on weekends.\n\nO:\nThe clinician hears a systolic heart murmur. The clinician finds pain to palpation of the lumbar spine. The clinician notes pain with flexion and extension of the back. The clinician notes a normal x-ray of the back.\n\nA:\nThe patient has lumbar pain and right foot tingling. He has a history of knee osteoarthritis and reports inconsistent diet adherence. The clinician heard a systolic heart murmur.\n\nP:\nThe clinician prescribes meloxicam 15 mg once daily for back pain. The clinician plans to increase metformin to 1000 mg twice a day for diabetes. The clinician plans to repeat a hemoglobin a1c in 6 months for diabetes. The clinician plans to increase lisinopril from 10 mg to 20 mg daily for hypertension.",
+  "reference_summary": "CHIEF COMPLAINT\n\nBack pain.\n\nHISTORY OF PRESENT ILLNESS\n\nMr. Logan Walker is a 58-year-old male with a past medical history significant for diabetes type 2, hypertension, and osteoarthritis, who presents today with back pain.\n\nMr. Walker reports that he was helping his daughter move some heavy equipment and lifted some heavy boxes a little too quickly on Saturday. He thought he heard a pop when he moved and he had to lie down for about an hour before his pain resolved. He has had stiffness ever since. The pain is located in his lower back. He took Tylenol, ibuprofen, and used Icy Hot on the area, but it did not seem to help. The patient endorses some tingling in his toes on his right foot, which resolved Sunday afternoon. He finds it difficult to find a comfortable position to sleep at night, and he tends to lie on his right side, which seems to help a little bit.\n\nRegarding his diabetes type 2, Mr. Walker reports that he has not cooked a meal at home in weeks, due to travel. He notes that his diet has not been great, and he thinks he needs to eat clean for a couple of weeks.\n\nHe monitors his blood pressure at home and it is under control for the most part.\n\nRegarding his osteoarthritis, Mr. Walker reports occasional aggravation of his knee when he runs too much or lifts boxes that are too heavy.\n\nThe patient denies chest pain, nausea, vomiting, fevers, and chills.\n\nREVIEW OF SYSTEMS\n\n• Constitutional: Denies fevers, chills.\n• Cardiovascular: Denies chest pain.\n• Musculoskeletal: Endorses back pain and stiffness. Endorses knee pain with exertion.\n• Neurological: Endorsed tingling in toes until Sunday, denies tingling today.\n\nPHYSICAL EXAMINATION\n\n• Cardiovascular: Slight 2/6 systolic ejection murmur.\n• Musculoskeletal: Pain to palpation of the lumbar spine. Pain with flexion and extension of the back. Negative straight leg raise.\n\nVITALS REVIEWED\n\n• Blood Pressure: Elevated\n\nRESULTS\n\nHemoglobin A1c is elevated at 8.\n\nX-ray of the back is unremarkable. Normal bony alignment. No fracture present.\n\nASSESSMENT AND PLAN\n\nMr. Logan Walker is a 58-year-old male with a past medical history significant for diabetes type 2, hypertension, and osteoarthritis, who presents today with low back pain.\n\nLumbar strain.\n• Medical Reasoning: He injured his lower back while moving heavy boxes. His recent x-ray was unremarkable.\n• Medical Treatment: Initiate meloxicam 15 mg once a day.\n• Specialist Referrals: Referral to physical therapy.\n• Patient Education and Counseling: He was encouraged to continue icing the area and avoid strenuous activity.\n\nDiabetes type 2.\n• Medical Reasoning: His recent hemoglobin A1c was elevated at 8. He does admit to some dietary indiscretion lately.\n• Additional Testing: Repeat hemoglobin A1c in 6 months.\n• Medical Treatment: Increase metformin to 1000 mg twice a day.\n\nHypertension.\n• Medical Reasoning: His blood pressures have been slightly elevated based on home monitoring and in clinic today.\n• Medical Treatment: Increase lisinopril from 10 mg to 20 mg a day.\n\nOsteoarthritis.\n• Medical Reasoning: This is mostly well controlled.\n• Medical Treatment: Continue to monitor the knee. No further work up is needed at this time.\n\nPatient Agreements: The patient understands and agrees with the recommended medical treatment plan.",
+  "source_cap": {
+    "atomic_propositions": [
+      {
+        "prop_id": "P1",
+        "cap_type": "Symptom",
+        "canonical_concept": "pain:back",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports back pain."
+      },
+      {
+        "prop_id": "P2",
+        "cap_type": "History",
+        "canonical_concept": "diabetes",
+        "category": "History",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "past",
+        "claim_type_tags": [
+          "history"
+        ],
+        "proposition_text": "The patient reports a past medical history of diabetes type 2."
+      },
+      {
+        "prop_id": "P3",
+        "cap_type": "History",
+        "canonical_concept": "hypertension",
+        "category": "History",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "past",
+        "claim_type_tags": [
+          "history"
+        ],
+        "proposition_text": "The patient reports a past medical history of hypertension."
+      },
+      {
+        "prop_id": "P4",
+        "cap_type": "History",
+        "canonical_concept": "past medical history osteoarthritis",
+        "category": "History",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "past",
+        "claim_type_tags": [
+          "history"
+        ],
+        "proposition_text": "The patient reports a past medical history of osteoarthritis."
+      },
+      {
+        "prop_id": "P5",
+        "cap_type": "Symptom",
+        "canonical_concept": "pain:back",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports some back pain."
+      },
+      {
+        "prop_id": "P6",
+        "cap_type": "Symptom",
+        "canonical_concept": "stiff back",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports a stiff back."
+      },
+      {
+        "prop_id": "P7",
+        "cap_type": "Symptom",
+        "canonical_concept": "pain:back",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports pain in the lower back."
+      },
+      {
+        "prop_id": "P8",
+        "cap_type": "MedicationPlan",
+        "canonical_concept": "took some tylenol",
+        "category": "MedicationPlan",
+        "speaker": "patient",
+        "predicate": "took",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "past",
+        "claim_type_tags": [
+          "medication"
+        ],
+        "proposition_text": "The patient took some tylenol."
+      },
+      {
+        "prop_id": "P9",
+        "cap_type": "MedicationPlan",
+        "canonical_concept": "took some ibuprofen",
+        "category": "MedicationPlan",
+        "speaker": "patient",
+        "predicate": "took",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "past",
+        "claim_type_tags": [
+          "medication"
+        ],
+        "proposition_text": "The patient took some ibuprofen."
+      },
+      {
+        "prop_id": "P10",
+        "cap_type": "Symptom",
+        "canonical_concept": "sensory change",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports tingling in their toes."
+      },
+      {
+        "prop_id": "P11",
+        "cap_type": "Symptom",
+        "canonical_concept": "sensory change",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "past",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports tingling in their toes on their right foot."
+      },
+      {
+        "prop_id": "P12",
+        "cap_type": "Finding",
+        "canonical_concept": "lying right side helps",
+        "category": "Finding",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "exam"
+        ],
+        "proposition_text": "The patient reports lying on their right side helps."
+      },
+      {
+        "prop_id": "P13",
+        "cap_type": "Symptom",
+        "canonical_concept": "pain:knee",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports pain in the knee."
+      },
+      {
+        "prop_id": "P14",
+        "cap_type": "Symptom",
+        "canonical_concept": "aggravation knee",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports aggravation of the knee."
+      },
+      {
+        "prop_id": "P15",
+        "cap_type": "Symptom",
+        "canonical_concept": "pain:back",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports pain with flexion and extension of the back."
+      },
+      {
+        "prop_id": "P16",
+        "cap_type": "Finding",
+        "canonical_concept": "hears slight out systolic",
+        "category": "Finding",
+        "speaker": "doctor",
+        "predicate": "hears",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "exam"
+        ],
+        "proposition_text": "The doctor hears a slight 2 out of 6 systolic heart murmur."
+      },
+      {
+        "prop_id": "P17",
+        "cap_type": "Finding",
+        "canonical_concept": "pain",
+        "category": "Finding",
+        "speaker": "doctor",
+        "predicate": "finds",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "exam"
+        ],
+        "proposition_text": "The doctor finds pain to palpation of the lumbar spine."
+      },
+      {
+        "prop_id": "P18",
+        "cap_type": "Finding",
+        "canonical_concept": "finds negative straight leg",
+        "category": "Finding",
+        "speaker": "doctor",
+        "predicate": "finds",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "exam"
+        ],
+        "proposition_text": "The doctor finds a negative straight leg raise."
+      },
+      {
+        "prop_id": "P19",
+        "cap_type": "Symptom",
+        "canonical_concept": "elevated hemoglobin a1c",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports elevated hemoglobin a1c."
+      },
+      {
+        "prop_id": "P20",
+        "cap_type": "MedicationPlan",
+        "canonical_concept": "prescribes meloxicam once day",
+        "category": "MedicationPlan",
+        "speaker": "clinician",
+        "predicate": "prescribes",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "medication"
+        ],
+        "proposition_text": "The clinician prescribes meloxicam 15 mg once a day"
+      }
+    ],
+    "filtered_nonverifiable_units": [
+      "Is the pain worse at night?"
+    ]
+  },
+  "event_plan": null,
+  "summary_cap": {
+    "atomic_propositions": [],
+    "filtered_nonverifiable_units": [],
+    "runtime_seconds": 37.698
+  },
+  "cap_alignment": {
+    "cap_precision": 0.0,
+    "cap_recall": 0.0,
+    "cap_f1": 0.0,
+    "matched_count": 0,
+    "summary_prop_count": 0,
+    "source_prop_count": 20,
+    "matched_pairs": [],
+    "unsupported_summary_props": [],
+    "missing_source_props": [
+      {
+        "prop_id": "P1",
+        "cap_type": "Symptom",
+        "canonical_concept": "pain:back",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports back pain."
+      },
+      {
+        "prop_id": "P2",
+        "cap_type": "History",
+        "canonical_concept": "diabetes",
+        "category": "History",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "past",
+        "claim_type_tags": [
+          "history"
+        ],
+        "proposition_text": "The patient reports a past medical history of diabetes type 2."
+      },
+      {
+        "prop_id": "P3",
+        "cap_type": "History",
+        "canonical_concept": "hypertension",
+        "category": "History",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "past",
+        "claim_type_tags": [
+          "history"
+        ],
+        "proposition_text": "The patient reports a past medical history of hypertension."
+      },
+      {
+        "prop_id": "P4",
+        "cap_type": "History",
+        "canonical_concept": "past medical history osteoarthritis",
+        "category": "History",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "past",
+        "claim_type_tags": [
+          "history"
+        ],
+        "proposition_text": "The patient reports a past medical history of osteoarthritis."
+      },
+      {
+        "prop_id": "P5",
+        "cap_type": "Symptom",
+        "canonical_concept": "pain:back",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports some back pain."
+      },
+      {
+        "prop_id": "P6",
+        "cap_type": "Symptom",
+        "canonical_concept": "stiff back",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports a stiff back."
+      },
+      {
+        "prop_id": "P7",
+        "cap_type": "Symptom",
+        "canonical_concept": "pain:back",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports pain in the lower back."
+      },
+      {
+        "prop_id": "P8",
+        "cap_type": "MedicationPlan",
+        "canonical_concept": "took some tylenol",
+        "category": "MedicationPlan",
+        "speaker": "patient",
+        "predicate": "took",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "past",
+        "claim_type_tags": [
+          "medication"
+        ],
+        "proposition_text": "The patient took some tylenol."
+      },
+      {
+        "prop_id": "P9",
+        "cap_type": "MedicationPlan",
+        "canonical_concept": "took some ibuprofen",
+        "category": "MedicationPlan",
+        "speaker": "patient",
+        "predicate": "took",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "past",
+        "claim_type_tags": [
+          "medication"
+        ],
+        "proposition_text": "The patient took some ibuprofen."
+      },
+      {
+        "prop_id": "P10",
+        "cap_type": "Symptom",
+        "canonical_concept": "sensory change",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports tingling in their toes."
+      },
+      {
+        "prop_id": "P11",
+        "cap_type": "Symptom",
+        "canonical_concept": "sensory change",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "past",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports tingling in their toes on their right foot."
+      },
+      {
+        "prop_id": "P12",
+        "cap_type": "Finding",
+        "canonical_concept": "lying right side helps",
+        "category": "Finding",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "exam"
+        ],
+        "proposition_text": "The patient reports lying on their right side helps."
+      },
+      {
+        "prop_id": "P13",
+        "cap_type": "Symptom",
+        "canonical_concept": "pain:knee",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports pain in the knee."
+      },
+      {
+        "prop_id": "P14",
+        "cap_type": "Symptom",
+        "canonical_concept": "aggravation knee",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports aggravation of the knee."
+      },
+      {
+        "prop_id": "P15",
+        "cap_type": "Symptom",
+        "canonical_concept": "pain:back",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports pain with flexion and extension of the back."
+      },
+      {
+        "prop_id": "P16",
+        "cap_type": "Finding",
+        "canonical_concept": "hears slight out systolic",
+        "category": "Finding",
+        "speaker": "doctor",
+        "predicate": "hears",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "exam"
+        ],
+        "proposition_text": "The doctor hears a slight 2 out of 6 systolic heart murmur."
+      },
+      {
+        "prop_id": "P17",
+        "cap_type": "Finding",
+        "canonical_concept": "pain",
+        "category": "Finding",
+        "speaker": "doctor",
+        "predicate": "finds",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "exam"
+        ],
+        "proposition_text": "The doctor finds pain to palpation of the lumbar spine."
+      },
+      {
+        "prop_id": "P18",
+        "cap_type": "Finding",
+        "canonical_concept": "finds negative straight leg",
+        "category": "Finding",
+        "speaker": "doctor",
+        "predicate": "finds",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "exam"
+        ],
+        "proposition_text": "The doctor finds a negative straight leg raise."
+      },
+      {
+        "prop_id": "P19",
+        "cap_type": "Symptom",
+        "canonical_concept": "elevated hemoglobin a1c",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports elevated hemoglobin a1c."
+      },
+      {
+        "prop_id": "P20",
+        "cap_type": "MedicationPlan",
+        "canonical_concept": "prescribes meloxicam once day",
+        "category": "MedicationPlan",
+        "speaker": "clinician",
+        "predicate": "prescribes",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "medication"
+        ],
+        "proposition_text": "The clinician prescribes meloxicam 15 mg once a day"
+      }
+    ]
+  },
+  "reference_gpt_f1_items": {
+    "active_problems_symptoms": [
+      "back pain",
+      "stiffness",
+      "knee pain with exertion",
+      "tingling in toes",
+      "elevated blood pressure"
+    ],
+    "negated_findings": [
+      "fevers",
+      "chills",
+      "chest pain",
+      "tingling today"
+    ],
+    "uncertain_findings": [
+      "2/6 systolic ejection murmur"
+    ],
+    "medication_treatment": [],
+    "plan_followup": [],
+    "_chunk_count": [
+      "4"
+    ]
+  },
+  "summary_gpt_f1_items": {
+    "active_problems_symptoms": [],
+    "negated_findings": [],
+    "uncertain_findings": [],
+    "medication_treatment": [],
+    "plan_followup": [],
+    "_chunk_count": [
+      "1"
+    ]
+  },
+  "gpt_f1_alignment": {
+    "by_category": {
+      "active_problems_symptoms": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "matched_count": 0,
+        "pred_count": 0,
+        "ref_count": 5,
+        "matches": [],
+        "unsupported_pred_items": [],
+        "missing_ref_items": [
+          "back pain",
+          "stiffness",
+          "knee pain with exertion",
+          "tingling in toes",
+          "elevated blood pressure"
+        ]
+      },
+      "negated_findings": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "matched_count": 0,
+        "pred_count": 0,
+        "ref_count": 4,
+        "matches": [],
+        "unsupported_pred_items": [],
+        "missing_ref_items": [
+          "fevers",
+          "chills",
+          "chest pain",
+          "tingling today"
+        ]
+      },
+      "uncertain_findings": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "matched_count": 0,
+        "pred_count": 0,
+        "ref_count": 1,
+        "matches": [],
+        "unsupported_pred_items": [],
+        "missing_ref_items": [
+          "2/6 systolic ejection murmur"
+        ]
+      },
+      "medication_treatment": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "matched_count": 0,
+        "pred_count": 0,
+        "ref_count": 0,
+        "matches": [],
+        "unsupported_pred_items": [],
+        "missing_ref_items": []
+      },
+      "plan_followup": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "matched_count": 0,
+        "pred_count": 0,
+        "ref_count": 0,
+        "matches": [],
+        "unsupported_pred_items": [],
+        "missing_ref_items": []
+      }
+    }
+  },
+  "reference_nair_concepts": {
+    "sections": [
+      {
+        "heading": "Clinical Note",
+        "section_value": "CHIEF COMPLAINT\nBack pain.\nHISTORY OF PRESENT ILLNESS\nMr. Logan Walker is a 58-year-old male with a past medical history significant for diabetes type 2, hypertension, and osteoarthritis, who presents today with back pain.\nMr. Walker reports that he was helping his daughter move some heavy equipment and lifted some heavy boxes a little too quickly on Saturday. He thought he heard a pop when he moved and he had to lie down for about an hour before his pain resolved. He has had stiffness ever since. The pain is located in his lower back. He took Tylenol, ibuprofen, and used Icy Hot on the area, but it did not seem to help. The patient endorses some tingling in his toes on his right foot, which resolved Sunday afternoon. He finds it difficult to find a comfortable position to sleep at night, and he tends to lie on his right side, which seems to help a little bit.\nRegarding his diabetes type 2, Mr. Walker reports that he has not cooked a meal at home in weeks, due to travel. He notes that his diet has not been great, and he thinks he needs to eat clean for a couple of weeks.\nHe monitors his blood pressure at home and it is under control for the most part.\nRegarding his osteoarthritis, Mr. Walker reports occasional aggravation of his knee when he runs too much or lifts boxes that are too heavy.\nThe patient denies chest pain, nausea, vomiting, fevers, and chills.\nREVIEW OF SYSTEMS",
+        "medical_concepts": [
+          "back pain",
+          "stiffness",
+          "lower back pain",
+          "tingling in toes",
+          "sleep difficulty",
+          "diabetes type 2",
+          "hypertension",
+          "osteoarthritis",
+          "knee pain",
+          "chest pain",
+          "nausea",
+          "vomiting",
+          "fevers",
+          "chills",
+          "Tylenol",
+          "ibuprofen",
+          "Icy Hot",
+          "blood pressure"
+        ]
+      },
+      {
+        "heading": "Clinical Note",
+        "section_value": "• Constitutional: Denies fevers, chills.\n• Cardiovascular: Denies chest pain.\n• Musculoskeletal: Endorses back pain and stiffness. Endorses knee pain with exertion.\n• Neurological: Endorsed tingling in toes until Sunday, denies tingling today.\nPHYSICAL EXAMINATION\n• Cardiovascular: Slight 2/6 systolic ejection murmur.\n• Musculoskeletal: Pain to palpation of the lumbar spine. Pain with flexion and extension of the back. Negative straight leg raise.\nVITALS REVIEWED\n• Blood Pressure: Elevated\nRESULTS",
+        "medical_concepts": [
+          "fevers",
+          "chills",
+          "chest pain",
+          "back pain",
+          "back stiffness",
+          "knee pain with exertion",
+          "tingling in toes",
+          "systolic ejection murmur",
+          "lumbar spine pain",
+          "pain with flexion of the back",
+          "pain with extension of the back",
+          "straight leg raise",
+          "elevated blood pressure"
+        ]
+      },
+      {
+        "heading": "Clinical Note",
+        "section_value": "Hemoglobin A1c is elevated at 8.\nX-ray of the back is unremarkable. Normal bony alignment. No fracture present.\nASSESSMENT AND PLAN\nMr. Logan Walker is a 58-year-old male with a past medical history significant for diabetes type 2, hypertension, and osteoarthritis, who presents today with low back pain.\nLumbar strain.\n• Medical Reasoning: He injured his lower back while moving heavy boxes. His recent x-ray was unremarkable.\n• Medical Treatment: Initiate meloxicam 15 mg once a day.\n• Specialist Referrals: Referral to physical therapy.\n• Patient Education and Counseling: He was encouraged to continue icing the area and avoid strenuous activity.\nDiabetes type 2.",
+        "medical_concepts": [
+          "Hemoglobin A1c",
+          "elevated Hemoglobin A1c",
+          "X-ray",
+          "low back pain",
+          "lumbar strain",
+          "diabetes type 2",
+          "hypertension",
+          "osteoarthritis",
+          "meloxicam",
+          "physical therapy"
+        ]
+      },
+      {
+        "heading": "Clinical Note",
+        "section_value": "• Medical Reasoning: His recent hemoglobin A1c was elevated at 8. He does admit to some dietary indiscretion lately.\n• Additional Testing: Repeat hemoglobin A1c in 6 months.\n• Medical Treatment: Increase metformin to 1000 mg twice a day.\nHypertension.\n• Medical Reasoning: His blood pressures have been slightly elevated based on home monitoring and in clinic today.\n• Medical Treatment: Increase lisinopril from 10 mg to 20 mg a day.\nOsteoarthritis.\n• Medical Reasoning: This is mostly well controlled.\n• Medical Treatment: Continue to monitor the knee. No further work up is needed at this time.\nPatient Agreements: The patient understands and agrees with the recommended medical treatment plan.",
+        "medical_concepts": [
+          "hemoglobin A1c",
+          "elevated hemoglobin A1c",
+          "metformin",
+          "hypertension",
+          "elevated blood pressure",
+          "home blood pressure monitoring",
+          "lisinopril",
+          "osteoarthritis",
+          "knee"
+        ]
+      }
+    ],
+    "medical_concepts": [
+      "back pain",
+      "stiffness",
+      "lower back pain",
+      "tingling in toes",
+      "sleep difficulty",
+      "diabetes type 2",
+      "hypertension",
+      "osteoarthritis",
+      "knee pain",
+      "chest pain",
+      "nausea",
+      "vomiting",
+      "fevers",
+      "chills",
+      "Tylenol",
+      "ibuprofen",
+      "Icy Hot",
+      "blood pressure",
+      "back stiffness",
+      "knee pain with exertion",
+      "systolic ejection murmur",
+      "lumbar spine pain",
+      "pain with flexion of the back",
+      "pain with extension of the back",
+      "straight leg raise",
+      "elevated blood pressure",
+      "Hemoglobin A1c",
+      "elevated Hemoglobin A1c",
+      "X-ray",
+      "low back pain",
+      "lumbar strain",
+      "meloxicam",
+      "physical therapy",
+      "metformin",
+      "home blood pressure monitoring",
+      "lisinopril",
+      "knee"
+    ],
+    "section_count": 4
+  },
+  "summary_nair_concepts": {
+    "sections": [
+      {
+        "heading": "S",
+        "section_value": "The patient reports back pain following lifting heavy objects. The patient reports tingling in his toes on the right foot. The patient admits to inconsistent weekend adherence to his diet. The patient reports blood pressure readings are slightly elevated at home on weekends.",
+        "medical_concepts": [
+          "back pain",
+          "tingling in toes",
+          "diet adherence",
+          "elevated blood pressure"
+        ]
+      },
+      {
+        "heading": "O",
+        "section_value": "The clinician hears a systolic heart murmur. The clinician finds pain to palpation of the lumbar spine. The clinician notes pain with flexion and extension of the back. The clinician notes a normal x-ray of the back.",
+        "medical_concepts": [
+          "systolic heart murmur",
+          "lumbar spine pain",
+          "back pain with flexion",
+          "back pain with extension",
+          "back x-ray"
+        ]
+      },
+      {
+        "heading": "A",
+        "section_value": "The patient has lumbar pain and right foot tingling. He has a history of knee osteoarthritis and reports inconsistent diet adherence. The clinician heard a systolic heart murmur.",
+        "medical_concepts": [
+          "lumbar pain",
+          "right foot tingling",
+          "knee osteoarthritis",
+          "diet adherence",
+          "systolic heart murmur"
+        ]
+      },
+      {
+        "heading": "P",
+        "section_value": "The clinician prescribes meloxicam 15 mg once daily for back pain. The clinician plans to increase metformin to 1000 mg twice a day for diabetes. The clinician plans to repeat a hemoglobin a1c in 6 months for diabetes. The clinician plans to increase lisinopril from 10 mg to 20 mg daily for hypertension.",
+        "medical_concepts": [
+          "meloxicam",
+          "back pain",
+          "metformin",
+          "diabetes",
+          "hemoglobin a1c",
+          "lisinopril",
+          "hypertension"
+        ]
+      }
+    ],
+    "medical_concepts": [
+      "back pain",
+      "tingling in toes",
+      "diet adherence",
+      "elevated blood pressure",
+      "systolic heart murmur",
+      "lumbar spine pain",
+      "back pain with flexion",
+      "back pain with extension",
+      "back x-ray",
+      "lumbar pain",
+      "right foot tingling",
+      "knee osteoarthritis",
+      "meloxicam",
+      "metformin",
+      "diabetes",
+      "hemoglobin a1c",
+      "lisinopril",
+      "hypertension"
+    ],
+    "section_count": 4
+  },
+  "nair_alignment": {
+    "pred_concepts": [
+      "back pain",
+      "tingling in toes",
+      "diet adherence",
+      "elevated blood pressure",
+      "systolic heart murmur",
+      "lumbar spine pain",
+      "back pain with flexion",
+      "back pain with extension",
+      "back x-ray",
+      "lumbar pain",
+      "right foot tingling",
+      "knee osteoarthritis",
+      "meloxicam",
+      "metformin",
+      "diabetes",
+      "hemoglobin a1c",
+      "lisinopril",
+      "hypertension"
+    ],
+    "ref_concepts": [
+      "back pain",
+      "stiffness",
+      "lower back pain",
+      "tingling in toes",
+      "sleep difficulty",
+      "diabetes type 2",
+      "hypertension",
+      "osteoarthritis",
+      "knee pain",
+      "chest pain",
+      "nausea",
+      "vomiting",
+      "fevers",
+      "chills",
+      "Tylenol",
+      "ibuprofen",
+      "Icy Hot",
+      "blood pressure",
+      "back stiffness",
+      "knee pain with exertion",
+      "systolic ejection murmur",
+      "lumbar spine pain",
+      "pain with flexion of the back",
+      "pain with extension of the back",
+      "straight leg raise",
+      "elevated blood pressure",
+      "Hemoglobin A1c",
+      "elevated Hemoglobin A1c",
+      "X-ray",
+      "low back pain",
+      "lumbar strain",
+      "meloxicam",
+      "physical therapy",
+      "metformin",
+      "home blood pressure monitoring",
+      "lisinopril",
+      "knee"
+    ],
+    "precision_alignment": {
+      "found_b": [
+        "back pain",
+        "tingling in toes",
+        "elevated blood pressure",
+        "lumbar spine pain",
+        "back pain with flexion",
+        "back pain with extension",
+        "back x-ray",
+        "meloxicam",
+        "metformin",
+        "diabetes",
+        "hemoglobin a1c",
+        "lisinopril",
+        "hypertension"
+      ],
+      "not_found_b": [
+        "diet adherence",
+        "systolic heart murmur",
+        "lumbar pain",
+        "right foot tingling",
+        "knee osteoarthritis"
+      ],
+      "chunk_count": 1,
+      "chunk_results": [
+        {
+          "found_b": [
+            "back pain",
+            "tingling in toes",
+            "elevated blood pressure",
+            "lumbar spine pain",
+            "back pain with flexion",
+            "back pain with extension",
+            "back x-ray",
+            "meloxicam",
+            "metformin",
+            "diabetes",
+            "hemoglobin a1c",
+            "lisinopril",
+            "hypertension"
+          ],
+          "not_found_b": [
+            "diet adherence",
+            "systolic heart murmur",
+            "lumbar pain",
+            "right foot tingling",
+            "knee osteoarthritis"
+          ]
+        }
+      ]
+    },
+    "recall_alignment": {
+      "found_b": [
+        "back pain",
+        "lower back pain",
+        "tingling in toes",
+        "diabetes type 2",
+        "hypertension",
+        "osteoarthritis",
+        "blood pressure",
+        "lumbar spine pain",
+        "pain with flexion of the back",
+        "pain with extension of the back",
+        "elevated blood pressure",
+        "Hemoglobin A1c",
+        "X-ray",
+        "low back pain",
+        "meloxicam",
+        "metformin",
+        "lisinopril",
+        "knee"
+      ],
+      "not_found_b": [
+        "stiffness",
+        "sleep difficulty",
+        "knee pain",
+        "chest pain",
+        "nausea",
+        "vomiting",
+        "fevers",
+        "chills",
+        "Tylenol",
+        "ibuprofen",
+        "Icy Hot",
+        "back stiffness",
+        "knee pain with exertion",
+        "systolic ejection murmur",
+        "straight leg raise",
+        "elevated Hemoglobin A1c",
+        "lumbar strain",
+        "physical therapy",
+        "home blood pressure monitoring"
+      ],
+      "chunk_count": 2,
+      "chunk_results": [
+        {
+          "found_b": [
+            "back pain",
+            "lower back pain",
+            "tingling in toes",
+            "diabetes type 2",
+            "hypertension",
+            "osteoarthritis",
+            "blood pressure",
+            "lumbar spine pain",
+            "pain with flexion of the back",
+            "pain with extension of the back"
+          ],
+          "not_found_b": [
+            "stiffness",
+            "sleep difficulty",
+            "knee pain",
+            "chest pain",
+            "nausea",
+            "vomiting",
+            "fevers",
+            "chills",
+            "Tylenol",
+            "ibuprofen",
+            "Icy Hot",
+            "back stiffness",
+            "knee pain with exertion",
+            "systolic ejection murmur"
+          ]
+        },
+        {
+          "found_b": [
+            "elevated blood pressure",
+            "Hemoglobin A1c",
+            "X-ray",
+            "low back pain",
+            "meloxicam",
+            "metformin",
+            "lisinopril",
+            "knee"
+          ],
+          "not_found_b": [
+            "straight leg raise",
+            "elevated Hemoglobin A1c",
+            "lumbar strain",
+            "physical therapy",
+            "home blood pressure monitoring"
+          ]
+        }
+      ]
+    }
+  },
+  "semantic_cap_audit": {
+    "source_cap_recall": [
+      {
+        "cap_id": "P1",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P2",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P3",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P4",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P5",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P6",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P7",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P8",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P9",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P10",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P11",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P12",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P13",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P14",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P15",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P16",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P1",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P2",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P3",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P4",
+        "judgment": "supported",
+        "reason": null
+      }
+    ],
+    "summary_cap_precision": [],
+    "metrics": {
+      "semantic_cap_precision": 0.0,
+      "semantic_cap_recall": 0.45,
+      "semantic_cap_f1": 0.0,
+      "semantic_cap_precision_supported_count": 0,
+      "semantic_cap_precision_partial_count": 0,
+      "semantic_cap_precision_denominator": 0,
+      "semantic_cap_recall_supported_count": 6,
+      "semantic_cap_recall_partial_count": 6,
+      "semantic_cap_recall_denominator": 20,
+      "semantic_cap_low_value_source_count": 0,
+      "semantic_cap_low_value_summary_count": 0,
+      "semantic_cap_missing_count": 8,
+      "semantic_cap_unsupported_count": 0,
+      "semantic_cap_contradicted_source_count": 0,
+      "semantic_cap_contradicted_summary_count": 0
+    }
+  },
+  "safety_judgment": null,
+  "section_judgment": {
+    "section_miscategorizations": [
+      {
+        "text": "He has a history of knee osteoarthritis and reports inconsistent diet adherence.",
+        "current_section": "A",
+        "expected_section": "S",
+        "severity": "minor",
+        "reason": "The osteoarthritis history and inconsistent diet adherence are patient-reported history/behavior rather than the clinician's diagnostic synthesis; they fit better as subjective history but their placement in A does not substantially mislead."
+      },
+      {
+        "text": "The clinician heard a systolic heart murmur.",
+        "current_section": "A",
+        "expected_section": "O",
+        "severity": "major",
+        "reason": "This is an objective physical exam finding, not an assessment or diagnostic impression; placing it in A could blur the distinction between observed findings and diagnostic conclusions."
+      }
+    ],
+    "summary_statistics": {
+      "section_appropriateness_score": 0.9,
+      "section_miscategorization_count": 2,
+      "major_section_miscategorization_count": 1
+    }
+  },
+  "pdsqi_judgment": {
+    "citation_applicable": 0,
+    "citation": 0,
+    "accurate": 4,
+    "thorough": 3,
+    "useful": 4,
+    "organized": 4,
+    "comprehensible": 5,
+    "succinct": 5,
+    "abstraction": 1,
+    "synthesized": 4,
+    "voice_summ": 0,
+    "voice_note": 0,
+    "pdsqi_core_mean": 4.1429
+  },
+  "llm_checklist_judgment": {
+    "content_preservation_core": 3,
+    "noise_suppression": 5,
+    "lay_expression_preservation": 3,
+    "state_update_fidelity": 3,
+    "temporality_preservation": 4,
+    "problem_evidence_linkage": 3,
+    "state_plan_separation": 4,
+    "section_organization_appropriateness": 3,
+    "overall_clinical_usability": 3,
+    "clinically_meaningful_omission": "Yes",
+    "clinically_concerning_hallucination": "Yes",
+    "checklist_a_mean": 3.6667,
+    "checklist_b_mean": 3.5,
+    "checklist_c_mean": 3.3333,
+    "llm_checklist_abc_mean": 3.5,
+    "llm_checklist_mean_no_usability": 3.5,
+    "llm_checklist_total_score": 31,
+    "llm_checklist_mean": 3.4444,
+    "llm_checklist_meaningful_omission_yes": 1,
+    "llm_checklist_concerning_hallucination_yes": 1
+  },
+  "metrics": {
+    "case_id": "D2N070",
+    "method": "cluster2sent",
+    "template": "soap",
+    "source_cap_count": 20,
+    "event_plan_count": null,
+    "summary_cap_count": 0,
+    "cap_matched_count": 0,
+    "cap_precision": 0.0,
+    "cap_recall": 0.0,
+    "cap_f1": 0.0,
+    "unsupported_summary_cap_count": 0,
+    "missing_source_cap_count": 20,
+    "summary_runtime_seconds": null,
+    "summary_cap_runtime_seconds": 37.698,
+    "event_plan_runtime_seconds": null,
+    "rouge_l_f1_vs_reference": 0.202,
+    "token_f1_vs_reference": 0.3521,
+    "gptf1_macro_f1": 0.0,
+    "nair_gpt_precision": 0.7222,
+    "nair_gpt_recall": 0.4865,
+    "nair_gpt_f1": 0.5814,
+    "semantic_cap_precision": 0.0,
+    "semantic_cap_recall": 0.45,
+    "semantic_cap_f1": 0.0,
+    "hallucination_count": null,
+    "major_hallucination_count": null,
+    "omission_count": null,
+    "major_omission_count": null,
+    "section_appropriateness_score": 0.9,
+    "section_miscategorization_count": 2,
+    "major_section_miscategorization_count": 1,
+    "pdsqi_core_mean": 4.1429,
+    "pdsqi_accurate": 4,
+    "pdsqi_thorough": 3,
+    "llm_checklist_total_score": 31,
+    "llm_checklist_mean": 3.4444,
+    "llm_checklist_mean_no_usability": 3.5,
+    "checklist_a_mean": 3.6667,
+    "checklist_b_mean": 3.5,
+    "checklist_c_mean": 3.3333,
+    "llm_checklist_abc_mean": 3.5,
+    "content_preservation_core": 3,
+    "noise_suppression": 5,
+    "lay_expression_preservation": 3,
+    "state_update_fidelity": 3,
+    "temporality_preservation": 4,
+    "problem_evidence_linkage": 3,
+    "state_plan_separation": 4,
+    "section_organization_appropriateness": 3,
+    "overall_clinical_usability": 3,
+    "llm_checklist_meaningful_omission_yes": 1,
+    "llm_checklist_concerning_hallucination_yes": 1,
+    "gptf1_active_problems_symptoms_precision": 0.0,
+    "gptf1_active_problems_symptoms_recall": 0.0,
+    "gptf1_active_problems_symptoms_f1": 0.0,
+    "gptf1_active_problems_symptoms_pred_count": 0,
+    "gptf1_active_problems_symptoms_ref_count": 5,
+    "gptf1_negated_findings_precision": 0.0,
+    "gptf1_negated_findings_recall": 0.0,
+    "gptf1_negated_findings_f1": 0.0,
+    "gptf1_negated_findings_pred_count": 0,
+    "gptf1_negated_findings_ref_count": 4,
+    "gptf1_uncertain_findings_precision": 0.0,
+    "gptf1_uncertain_findings_recall": 0.0,
+    "gptf1_uncertain_findings_f1": 0.0,
+    "gptf1_uncertain_findings_pred_count": 0,
+    "gptf1_uncertain_findings_ref_count": 1,
+    "gptf1_medication_treatment_precision": 0.0,
+    "gptf1_medication_treatment_recall": 0.0,
+    "gptf1_medication_treatment_f1": 0.0,
+    "gptf1_medication_treatment_pred_count": 0,
+    "gptf1_medication_treatment_ref_count": 0,
+    "gptf1_plan_followup_precision": 0.0,
+    "gptf1_plan_followup_recall": 0.0,
+    "gptf1_plan_followup_f1": 0.0,
+    "gptf1_plan_followup_pred_count": 0,
+    "gptf1_plan_followup_ref_count": 0,
+    "nair_pred_concept_count": 18,
+    "nair_ref_concept_count": 37,
+    "nair_precision_match_count": 13,
+    "nair_recall_match_count": 18,
+    "semantic_cap_precision_supported_count": 0,
+    "semantic_cap_precision_partial_count": 0,
+    "semantic_cap_precision_denominator": 0,
+    "semantic_cap_recall_supported_count": 6,
+    "semantic_cap_recall_partial_count": 6,
+    "semantic_cap_recall_denominator": 20,
+    "semantic_cap_low_value_source_count": 0,
+    "semantic_cap_low_value_summary_count": 0,
+    "semantic_cap_missing_count": 8,
+    "semantic_cap_unsupported_count": 0,
+    "semantic_cap_contradicted_source_count": 0,
+    "semantic_cap_contradicted_summary_count": 0,
+    "pdsqi_useful": 4,
+    "pdsqi_organized": 4,
+    "pdsqi_comprehensible": 5,
+    "pdsqi_succinct": 5,
+    "pdsqi_synthesized": 4
+  }
+}

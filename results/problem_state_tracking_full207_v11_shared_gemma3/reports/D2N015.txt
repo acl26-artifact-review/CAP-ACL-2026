@@ -1,0 +1,179 @@
+Case: D2N015
+
+Problem List and Visit State Tracking
+
+Problem List
+- smoking | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T11,T17,T4
+  Summary: The patient previously smoked two packs of cigarettes per day.
+  ClusterId: CL1
+  TemporalProfile: current, historical, past
+  Updates:
+  - CAP37: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=historical turns=T4 :: The patient is a smoker.
+  - CAP4: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=past turns=T11 :: The patient previously smoked two packs of cigarettes per day.
+  - CAP9: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T17 :: The patient currently smokes approximately once a day.
+- depression | verification_status=confirmed | clinical_status=stable | modalities=assessment,interview | speakers=doctor,patient | evidence=T23,T29,T4,T56
+  Summary: The doctor states the patient's depression is stable.
+  ClusterId: CL2
+  TemporalProfile: current, historical
+  Updates:
+  - CAP36: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=historical turns=T4 :: The patient has a history of depression.
+  - CAP12: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T23 :: The patient reports having moments of depression.
+  - CAP13: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T29 :: The patient reports feeling extremely low.
+  - CAP10: content_source=doctor modality=assessment verification_status=confirmed clinical_status=stable temporality=current turns=T56 :: The doctor states the patient's depression is stable.
+- chronic back pain | verification_status=unconfirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T4
+  Summary: The patient has a history of chronic back pain.
+  ClusterId: CL3
+  TemporalProfile: historical
+  Updates:
+  - CAP35: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=historical turns=T4 :: The patient has a history of chronic back pain.
+- exercise-induced shortness of breath | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T42,T5
+  Summary: The patient experiences shortness of breath during exercise.
+  ClusterId: CL4
+  TemporalProfile: current, recent
+  Updates:
+  - CAP6: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T5 :: The patient experiences shortness of breath during exercise.
+  - CAP11: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=recent turns=T5 :: The patient reports experiencing shortness of breath.
+  - CAP16: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T42 :: The patient reports shortness of breath.
+- palpitations | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T5
+  Summary: The patient reports experiencing palpitations.
+  ClusterId: CL5
+  TemporalProfile: current
+  Updates:
+  - CAP18: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T5 :: The patient reports experiencing palpitations.
+- left hand pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T9
+  Summary: The patient reports pain in the left hand.
+  ClusterId: CL6
+  TemporalProfile: current
+  Updates:
+  - CAP8: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T9 :: The patient reports pain in the left hand.
+- covid 15 | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T11
+  Summary: The patient states they gained weight during the COVID-19 pandemic.
+  ClusterId: CL7
+  TemporalProfile: current, past
+  Updates:
+  - CAP3: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=past turns=T11 :: The patient states they gained weight during the COVID-19 pandemic.
+  - CAP7: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T11 :: The patient has gained weight due to COVID-19.
+- changes | verification_status=unconfirmed | clinical_status=planned | modalities=interview | speakers=patient | evidence=T13
+  Summary: The patient and provider have made changes to the patient's lifestyle.
+  ClusterId: CL8
+  TemporalProfile: future
+  Updates:
+  - CAP2: content_source=patient modality=interview verification_status=unconfirmed clinical_status=planned temporality=future turns=T13 :: The patient and provider have made changes to the patient's lifestyle.
+- weather | verification_status=unconfirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T27
+  Summary: The patient believes the weather may trigger their depression.
+  ClusterId: CL9
+  TemporalProfile: current
+  Updates:
+  - CAP5: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=current turns=T27 :: The patient believes the weather may trigger their depression.
+- pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T27
+  Summary: The patient reports pain.
+  ClusterId: CL10
+  TemporalProfile: current
+  Updates:
+  - CAP22: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T27 :: The patient reports pain.
+- low mood | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T29
+  Summary: The patient reports feeling extremely low.
+  ClusterId: CL11
+  TemporalProfile: current
+  Updates:
+  - CAP14: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T29 :: The patient reports feeling extremely low.
+- back pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T37,T56
+  Summary: The patient reports chronic back pain.
+  ClusterId: CL14
+  TemporalProfile: current
+  Updates:
+  - CAP15: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T37 :: The patient reports chronic back pain.
+  - CAP21: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T56 :: The patient reports back pain.
+- copd | verification_status=confirmed | clinical_status=active | modalities=assessment,interview | speakers=doctor,patient | evidence=T44,T48
+  Summary: The doctor diagnoses the patient with COPD.
+  ClusterId: CL16
+  TemporalProfile: current
+  Updates:
+  - CAP19: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=current turns=T44 :: The patient may have COPD.
+  - CAP1: content_source=doctor modality=assessment verification_status=confirmed clinical_status=active temporality=current turns=T48 :: The doctor diagnoses the patient with COPD.
+- asthma | verification_status=unconfirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T44
+  Summary: The patient may be having asthma.
+  ClusterId: CL17
+  TemporalProfile: current
+  Updates:
+  - CAP17: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=current turns=T44 :: The patient may be having asthma.
+- wheeze | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T48
+  Summary: The patient reports mild wheezes.
+  ClusterId: CL19
+  TemporalProfile: current
+  Updates:
+  - CAP20: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T48 :: The patient reports mild wheezes.
+
+Medication Tracking
+- [MedicationState] gabapentin neurontin | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T33
+  Summary: The patient is taking gabapentin neurontin.
+  ClusterId: CL12
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient is taking gabapentin neurontin. (T33)
+  Updates:
+  - CAP26: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T33 :: The patient is taking gabapentin neurontin.
+- [MedicationState] effexor | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T33
+  Summary: The patient is taking effexor.
+  ClusterId: CL13
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient is taking effexor. (T33)
+  Updates:
+  - CAP29: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T33 :: The patient is taking effexor.
+- [MedicationChange] combivent | verification_status=confirmed | clinical_status=planned | modalities=interview,plan | speakers=doctor | evidence=T50,T56
+  Summary: The doctor prescribes combivent.
+  ClusterId: CL20
+  TemporalProfile: future
+  PlannedChanges:
+  - The doctor prescribes combivent. (T50)
+  - The doctor will order combivent. (T56)
+  Updates:
+  - CAP32: content_source=doctor modality=plan verification_status=confirmed clinical_status=planned temporality=future turns=T50 :: The doctor prescribes combivent.
+  - CAP30: content_source=doctor modality=interview verification_status=confirmed clinical_status=planned temporality=future turns=T56 :: The doctor will order combivent.
+- [MedicationChange] prednisone | verification_status=confirmed | clinical_status=planned | modalities=interview,plan | speakers=doctor | evidence=T54
+  Summary: The doctor prescribes prednisone.
+  ClusterId: CL21
+  TemporalProfile: future
+  PlannedChanges:
+  - The doctor will order a prednisone taper pack. (T54)
+  - The doctor prescribes prednisone. (T54)
+  Updates:
+  - CAP25: content_source=doctor modality=interview verification_status=confirmed clinical_status=planned temporality=future turns=T54 :: The doctor will order a prednisone taper pack.
+  - CAP34: content_source=doctor modality=plan verification_status=confirmed clinical_status=planned temporality=future turns=T54 :: The doctor prescribes prednisone.
+- [MedicationChange] effexor | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=doctor | evidence=T56
+  Summary: The patient will continue taking effexor.
+  ClusterId: CL22
+  TemporalProfile: current
+  PlannedChanges:
+  - The patient will continue taking effexor. (T56)
+  Updates:
+  - CAP27: content_source=doctor modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T56 :: The patient will continue taking effexor.
+- [MedicationChange] neurontin | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=doctor | evidence=T56
+  Summary: The patient will continue taking neurontin.
+  ClusterId: CL23
+  TemporalProfile: current
+  PlannedChanges:
+  - The patient will continue taking neurontin. (T56)
+  Updates:
+  - CAP28: content_source=doctor modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T56 :: The patient will continue taking neurontin.
+- [MedicationChange] albuterol | verification_status=confirmed | clinical_status=planned | modalities=interview,plan | speakers=doctor | evidence=T56
+  Summary: The doctor prescribes albuterol.
+  ClusterId: CL24
+  TemporalProfile: future
+  PlannedChanges:
+  - The doctor will order albuterol. (T56)
+  - The doctor prescribes albuterol. (T56)
+  Updates:
+  - CAP31: content_source=doctor modality=interview verification_status=confirmed clinical_status=planned temporality=future turns=T56 :: The doctor will order albuterol.
+  - CAP33: content_source=doctor modality=plan verification_status=confirmed clinical_status=planned temporality=future turns=T56 :: The doctor prescribes albuterol.
+
+Other Structured States
+- [Plan] pulmonary function tests | verification_status=confirmed | clinical_status=historical | modalities=plan | speakers=doctor | evidence=T42
+  Summary: Pulmonary function tests were ordered.
+  ClusterId: CL15
+  TemporalProfile: current
+- [ExamFinding] diaphragm flatness | verification_status=confirmed | clinical_status=active | modalities=exam | speakers=dragon | evidence=T44
+  Summary: The patient's diaphragm is flattened.
+  ClusterId: CL18
+  TemporalProfile: current

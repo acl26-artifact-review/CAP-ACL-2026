@@ -1,0 +1,98 @@
+Case: D2N119
+
+Problem List and Visit State Tracking
+
+Problem List
+- asthma | verification_status=confirmed | clinical_status=active | modalities=assessment,interview | speakers=doctor,patient | evidence=T1,T18,T33,T44,T9
+  Summary: The patient is diagnosed with moderate to intermediate asthma.
+  ClusterId: CL1
+  TemporalProfile: after visiting aunt's house, childhood, current, monthly or every other month for the past six months, past
+  Updates:
+  - CAP4: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=monthly or every other month for the past six months turns=T1 :: The patient reports experiencing coughing and wheezing.
+  - CAP19: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=after visiting aunt's house turns=T9 :: The patient experienced an asthma flare after visiting his aunt's house.
+  - CAP20: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=childhood turns=T18 :: The patient has a history of asthma.
+  - CAP5: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=past turns=T33 :: The patient has a history of asthma.
+  - CAP1: content_source=doctor modality=assessment verification_status=confirmed clinical_status=active temporality=current turns=T44 :: The patient is diagnosed with moderate to intermediate asthma.
+  - CAP2: content_source=doctor modality=assessment verification_status=confirmed clinical_status=active temporality=current turns=T44 :: The patient is diagnosed with moderate intermittent asthma.
+- coughing | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T1,T11
+  Summary: The patient reports coughing.
+  ClusterId: CL2
+  TemporalProfile: almost everyday, current
+  Updates:
+  - CAP6: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=almost everyday turns=T1 :: The patient reports coughing.
+  - CAP8: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T11 :: The patient reports coughing.
+- wheezing | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T1,T11
+  Summary: The patient reports wheezing.
+  ClusterId: CL3
+  TemporalProfile: almost everyday, current
+  Updates:
+  - CAP7: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=almost everyday turns=T1 :: The patient reports wheezing.
+  - CAP9: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T11 :: The patient reports wheezing.
+- left hand pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T39
+  Summary: The patient reports pain in the left hand.
+  ClusterId: CL9
+  TemporalProfile: current
+  Updates:
+  - CAP3: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T39 :: The patient reports pain in the left hand.
+
+Medication Tracking
+- [MedicationState] albuterol inhaler | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T8
+  Summary: The patient uses an albuterol inhaler.
+  ClusterId: CL4
+  TemporalProfile: currently used
+  CurrentRegimens:
+  - The patient uses an albuterol inhaler. (T8)
+  Updates:
+  - CAP15: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=currently used turns=T8 :: The patient uses an albuterol inhaler.
+- [MedicationState] inhaler | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T11
+  Summary: The patient uses an inhaler.
+  ClusterId: CL5
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient uses an inhaler. (T11)
+  Updates:
+  - CAP16: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T11 :: The patient uses an inhaler.
+- [MedicationState] no smoking | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T31
+  Summary: The patient denies smoking.
+  ClusterId: CL7
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient denies smoking. (T31)
+  Updates:
+  - CAP17: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T31 :: The patient denies smoking.
+- [MedicationState] no vaping | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T36
+  Summary: The patient denies vaping.
+  ClusterId: CL8
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient denies vaping. (T36)
+  Updates:
+  - CAP18: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T36 :: The patient denies vaping.
+- [MedicationChange] inhaled steroid inhaler | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T44
+  Summary: The patient will take an inhaled steroid inhaler as prescribed.
+  ClusterId: CL11
+  TemporalProfile: future
+  PlannedChanges:
+  - The patient will take an inhaled steroid inhaler as prescribed. (T44)
+  - The patient will take an inhaled steroid inhaler. (T44)
+  Updates:
+  - CAP12: content_source=doctor modality=plan verification_status=unconfirmed clinical_status=planned temporality=future turns=T44 :: The patient will take an inhaled steroid inhaler as prescribed.
+  - CAP14: content_source=doctor modality=plan verification_status=unconfirmed clinical_status=planned temporality=future turns=T44 :: The patient will take an inhaled steroid inhaler.
+- [MedicationChange] albuterol inhaler | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T44
+  Summary: The patient will use an albuterol inhaler as needed.
+  ClusterId: CL12
+  TemporalProfile: future
+  PlannedChanges:
+  - The patient will use an albuterol inhaler as needed. (T44)
+  Updates:
+  - CAP13: content_source=doctor modality=plan verification_status=unconfirmed clinical_status=planned temporality=future turns=T44 :: The patient will use an albuterol inhaler as needed.
+
+Other Structured States
+- [TestResult] hospitalization | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T18
+  Summary: The patient was hospitalized once.
+  ClusterId: CL6
+  TemporalProfile: past
+- [Plan] asthma action plan | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T44
+  Summary: The doctor will create an asthma action plan for the patient.
+  ClusterId: CL10
+  TemporalProfile: future

@@ -1,0 +1,102 @@
+Case: D2N137
+
+Problem List and Visit State Tracking
+
+Problem List
+- pain | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T27,T33,T5
+  Summary: The patient reports pain in the left hand.
+  ClusterId: CL1
+  TemporalProfile: current
+  Updates:
+  - CAP3: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T5 :: The patient reports pain in the left hand.
+  - CAP8: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T27 :: The patient reports pain.
+  - CAP12: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T33 :: The patient reports pain.
+- depression | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T5
+  Summary: The patient has a history of depression.
+  ClusterId: CL2
+  TemporalProfile: past
+  Updates:
+  - CAP4: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=past turns=T5 :: The patient has a history of depression.
+- blood pressure | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T13,T17
+  Summary: The patient reports fluctuating blood pressure readings.
+  ClusterId: CL11
+  TemporalProfile: recent
+  Updates:
+  - CAP1: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=recent turns=T17,T13 :: The patient reports fluctuating blood pressure readings.
+- frozen meals | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T19
+  Summary: The patient reports eating frozen meals.
+  ClusterId: CL12
+  TemporalProfile: recent
+  Updates:
+  - CAP5: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=recent turns=T19 :: The patient reports eating frozen meals.
+- stress | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T19
+  Summary: The patient reports feeling stressed.
+  ClusterId: CL13
+  TemporalProfile: current
+  Updates:
+  - CAP7: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T19 :: The patient reports feeling stressed.
+- carpal tunnel release | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T27
+  Summary: The patient reports that their carpal tunnel release has been doing well.
+  ClusterId: CL14
+  TemporalProfile: two years ago
+  Updates:
+  - CAP2: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=two years ago turns=T27 :: The patient reports that their carpal tunnel release has been doing well.
+- numbness | verification_status=refuted | clinical_status=historical | modalities=interview | speakers=patient | evidence=T27
+  Summary: The patient denies numbness.
+  ClusterId: CL15
+  TemporalProfile: none
+  Updates:
+  - CAP9: content_source=patient modality=interview verification_status=refuted clinical_status=historical temporality=none turns=T27 :: The patient denies numbness.
+- tingling | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T27,T33
+  Summary: The patient denies tingling.
+  ClusterId: CL16
+  TemporalProfile: current, none
+  Updates:
+  - CAP10: content_source=patient modality=interview verification_status=refuted clinical_status=historical temporality=none turns=T27 :: The patient denies tingling.
+  - CAP11: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T33 :: The patient reports tingling.
+- carpal tunnel syndrome | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T33
+  Summary: The patient has carpal tunnel syndrome.
+  ClusterId: CL17
+  TemporalProfile: current
+  Updates:
+  - CAP6: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T33 :: The patient has carpal tunnel syndrome.
+
+Medication Tracking
+- [MedicationState] antidepressant | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=clinician | evidence=T5
+  Summary: The patient is taking an antidepressant.
+  ClusterId: CL3
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient is taking an antidepressant. (T5)
+  Updates:
+  - CAP20: content_source=clinician modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T5 :: The patient is taking an antidepressant.
+
+Other Structured States
+- [ExamFinding] adenopathy neck | verification_status=refuted | clinical_status=active | modalities=exam | speakers=doctor | evidence=T12
+  Summary: The doctor does not find any adenopathy in the patient's neck.
+  ClusterId: CL4
+  TemporalProfile: none
+- [ExamFinding] heart regular | verification_status=confirmed | clinical_status=active | modalities=exam | speakers=doctor | evidence=T12
+  Summary: The doctor finds the patient's heart to be regular without murmurs.
+  ClusterId: CL5
+  TemporalProfile: none
+- [ExamFinding] neurologically intact | verification_status=confirmed | clinical_status=active | modalities=exam | speakers=doctor | evidence=T12
+  Summary: The doctor finds the patient's neurological exam to be intact.
+  ClusterId: CL6
+  TemporalProfile: none
+- [ExamFinding] grips equal | verification_status=confirmed | clinical_status=active | modalities=exam | speakers=doctor | evidence=T12
+  Summary: The doctor finds the patient's grips to be equal.
+  ClusterId: CL7
+  TemporalProfile: none
+- [ExamFinding] strength good | verification_status=confirmed | clinical_status=active | modalities=exam | speakers=doctor | evidence=T12
+  Summary: The doctor finds the patient's strength to be good.
+  ClusterId: CL8
+  TemporalProfile: none
+- [ExamFinding] pulses good | verification_status=confirmed | clinical_status=active | modalities=exam | speakers=doctor | evidence=T12
+  Summary: The doctor finds the patient's pulses to be good.
+  ClusterId: CL9
+  TemporalProfile: none
+- [ExamFinding] lungs clear | verification_status=confirmed | clinical_status=active | modalities=exam | speakers=doctor | evidence=T12
+  Summary: The doctor finds the patient's lungs clear.
+  ClusterId: CL10
+  TemporalProfile: none

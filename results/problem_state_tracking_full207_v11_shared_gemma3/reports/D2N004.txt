@@ -1,0 +1,170 @@
+Case: D2N004
+
+Problem List and Visit State Tracking
+
+Problem List
+- back pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T9
+  Summary: The patient reports back pain.
+  ClusterId: CL1
+  TemporalProfile: current
+  Updates:
+  - CAP3: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T9 :: The patient reports pain in the left hand.
+  - CAP9: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T9 :: The patient reports back pain.
+  - CAP11: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T9 :: The patient has back pain.
+- pop sound | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T11
+  Summary: The patient felt a pop.
+  ClusterId: CL2
+  TemporalProfile: immediately
+  Updates:
+  - CAP10: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=immediately turns=T11 :: The patient felt a pop.
+- weakness | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T23,T45
+  Summary: The patient experienced difficulty with their right foot.
+  ClusterId: CL7
+  TemporalProfile: current, past
+  Updates:
+  - CAP4: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=past turns=T23 :: The patient experienced difficulty with their right foot.
+  - CAP5: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T45 :: The patient reports weakness in their right leg.
+- tingling | verification_status=unconfirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T23
+  Summary: The patient experienced tingling.
+  ClusterId: CL8
+  TemporalProfile: past
+  Updates:
+  - CAP13: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=past turns=T23 :: The patient experienced tingling.
+- back surgery | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T29
+  Summary: The patient had surgery on their lower back approximately 10 years ago.
+  ClusterId: CL9
+  TemporalProfile: 10 years ago
+  Updates:
+  - CAP33: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=10 years ago turns=T29 :: The patient had surgery on their lower back approximately 10 years ago.
+- sweet tooth | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T37
+  Summary: The patient has a sweet tooth.
+  ClusterId: CL10
+  TemporalProfile: current
+  Updates:
+  - CAP8: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T37 :: The patient has a sweet tooth.
+- weight gain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T37
+  Summary: The patient reports weight gain.
+  ClusterId: CL11
+  TemporalProfile: current
+  Updates:
+  - CAP12: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T37 :: The patient reports weight gain.
+- diabetes | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T37
+  Summary: The patient has diabetes.
+  ClusterId: CL12
+  TemporalProfile: current
+  Updates:
+  - CAP14: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T37 :: The patient has diabetes.
+- lumbar pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T66
+  Summary: The patient reports pain to palpation of the lumbar spine.
+  ClusterId: CL17
+  TemporalProfile: current
+  Updates:
+  - CAP1: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T66 :: The patient reports pain to palpation of the lumbar spine.
+- positive straight leg raise | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T70
+  Summary: The patient reports a positive straight leg raise.
+  ClusterId: CL18
+  TemporalProfile: current
+  Updates:
+  - CAP6: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T70 :: The patient reports a positive straight leg raise.
+- decreased range of motion | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T70
+  Summary: The patient reports decreased range of motion.
+  ClusterId: CL19
+  TemporalProfile: current
+  Updates:
+  - CAP7: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T70 :: The patient reports decreased range of motion.
+- acute lumbar strain | verification_status=confirmed | clinical_status=active | modalities=assessment | speakers=doctor | evidence=T76
+  Summary: The doctor assesses the patient has an acute lumbar strain.
+  ClusterId: CL21
+  TemporalProfile: current
+  Updates:
+  - CAP2: content_source=doctor modality=assessment verification_status=confirmed clinical_status=active temporality=current turns=T76 :: The doctor assesses the patient has an acute lumbar strain.
+
+Medication Tracking
+- [MedicationState] tylenol | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T17
+  Summary: The patient took Tylenol.
+  ClusterId: CL3
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient took Tylenol. (T17)
+  Updates:
+  - CAP29: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T17 :: The patient took Tylenol.
+- [MedicationState] ibuprofen | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T17
+  Summary: The patient took Ibuprofen.
+  ClusterId: CL4
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient took Ibuprofen. (T17)
+  Updates:
+  - CAP30: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T17 :: The patient took Ibuprofen.
+- [MedicationState] ice | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T19
+  Summary: The patient tried ice.
+  ClusterId: CL5
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient tried ice. (T19)
+  Updates:
+  - CAP31: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T19 :: The patient tried ice.
+- [MedicationState] heat | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T19
+  Summary: The patient tried heat.
+  ClusterId: CL6
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient tried heat. (T19)
+  Updates:
+  - CAP32: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T19 :: The patient tried heat.
+- [MedicationState] metformin | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=doctor | evidence=T37,T50
+  Summary: The patient is currently taking metformin.
+  ClusterId: CL13
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient is taking metformin. (T37)
+  - The patient is currently taking metformin. (T50)
+  Updates:
+  - CAP28: content_source=doctor modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T37 :: The patient is taking metformin.
+  - CAP27: content_source=doctor modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T50 :: The patient is currently taking metformin.
+- [MedicationChange] meloxicam | verification_status=confirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T78
+  Summary: The doctor prescribes meloxicam 15 milligrams once a day.
+  ClusterId: CL24
+  TemporalProfile: current
+  PlannedChanges:
+  - The doctor prescribes meloxicam 15 milligrams once a day. (T78)
+  Updates:
+  - CAP26: content_source=doctor modality=plan verification_status=confirmed clinical_status=planned temporality=current turns=T78 :: The doctor prescribes meloxicam 15 milligrams once a day.
+- [MedicationChange] lisinopril | verification_status=confirmed | clinical_status=planned | modalities=interview | speakers=doctor | evidence=T90
+  Summary: The doctor ordered a refill of lisinopril 20 milligrams once a day.
+  ClusterId: CL25
+  TemporalProfile: daily
+  PlannedChanges:
+  - The doctor ordered a refill of lisinopril 20 milligrams once a day. (T90)
+  Updates:
+  - CAP15: content_source=doctor modality=interview verification_status=confirmed clinical_status=planned temporality=daily turns=T90 :: The doctor ordered a refill of lisinopril 20 milligrams once a day.
+
+Other Structured States
+- [Plan] physical exam | verification_status=confirmed | clinical_status=planned | modalities=interview | speakers=doctor | evidence=T48
+  Summary: The doctor plans to perform a physical exam.
+  ClusterId: CL14
+  TemporalProfile: current
+- [ExamFinding] 2 out of 6 systolic ejection murmur | verification_status=confirmed | clinical_status=stable | modalities=exam | speakers=doctor | evidence=T62
+  Summary: The doctor appreciates a 2 out of 6 systolic ejection murmur.
+  ClusterId: CL15
+  TemporalProfile: past
+- [TestResult] hemoglobin a1c | verification_status=confirmed | clinical_status=active | modalities=test_result | speakers=dragon,test_result | evidence=T64,T76
+  Summary: The patient's hemoglobin a1c is 8.
+  ClusterId: CL16
+  TemporalProfile: current, last, past
+- [ExamFinding] strength | verification_status=confirmed | clinical_status=active | modalities=exam | speakers=doctor | evidence=T70
+  Summary: The patient's right strength is 4 out of 5.
+  ClusterId: CL20
+  TemporalProfile: current
+- [Plan] physical therapy | verification_status=confirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T78
+  Summary: The doctor orders physical therapy.
+  ClusterId: CL22
+  TemporalProfile: current
+- [Plan] mri | verification_status=confirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T78
+  Summary: The doctor orders an MRI.
+  ClusterId: CL23
+  TemporalProfile: current
+- [FollowUp] follow_up | verification_status=confirmed | clinical_status=planned | modalities=interview | speakers=doctor | evidence=T96
+  Summary: The doctor wants to see the patient in a couple weeks.
+  ClusterId: CL26
+  TemporalProfile: in a couple weeks

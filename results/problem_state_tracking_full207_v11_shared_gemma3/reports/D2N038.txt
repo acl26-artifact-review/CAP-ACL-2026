@@ -1,0 +1,75 @@
+Case: D2N038
+
+Problem List and Visit State Tracking
+
+Problem List
+- hepatitis c | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T0,T10
+  Summary: The patient has positive lab work for hepatitis C.
+  ClusterId: CL1
+  TemporalProfile: past
+  Updates:
+  - CAP5: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=past turns=T0 :: The patient has positive lab work for hepatitis C.
+  - CAP7: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=past turns=T10 :: The patient states they have had hepatitis C.
+- left hand pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T2
+  Summary: The patient reports pain in the left hand.
+  ClusterId: CL2
+  TemporalProfile: current
+  Updates:
+  - CAP6: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T2 :: The patient reports pain in the left hand.
+- iv drug use | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T5
+  Summary: The patient used to party and even used intravenous drugs.
+  ClusterId: CL3
+  TemporalProfile: past
+  Updates:
+  - CAP1: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=past turns=T5 :: The patient used to party and even used intravenous drugs.
+- alcohol use | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T8
+  Summary: The patient still has a beer here and there everyday.
+  ClusterId: CL4
+  TemporalProfile: current
+  Updates:
+  - CAP2: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T8 :: The patient still has a beer here and there everyday.
+- smoking | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T10,T12
+  Summary: The patient smokes about one to two cigarettes per day.
+  ClusterId: CL5
+  TemporalProfile: current
+  Updates:
+  - CAP3: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T10 :: The patient smokes about one to two cigarettes per day.
+  - CAP4: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T12 :: The patient reports smoking one to two cigarettes per day.
+- high blood pressure | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T17
+  Summary: The patient reports having high blood pressure.
+  ClusterId: CL6
+  TemporalProfile: current
+  Updates:
+  - CAP8: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T17 :: The patient reports having high blood pressure.
+- depression | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T17
+  Summary: The patient reports having depression.
+  ClusterId: CL7
+  TemporalProfile: current
+  Updates:
+  - CAP9: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T17 :: The patient reports having depression.
+- diabetes | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T17
+  Summary: The patient reports having diabetes.
+  ClusterId: CL8
+  TemporalProfile: current
+  Updates:
+  - CAP10: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T17 :: The patient reports having diabetes.
+
+Medication Tracking
+- [MedicationChange] nurse orders | verification_status=confirmed | clinical_status=planned | modalities=interview | speakers=doctor | evidence=T28
+  Summary: The doctor will have the nurse place the orders.
+  ClusterId: CL11
+  TemporalProfile: now
+  PlannedChanges:
+  - The doctor will have the nurse place the orders. (T28)
+  Updates:
+  - CAP13: content_source=doctor modality=interview verification_status=confirmed clinical_status=planned temporality=now turns=T28 :: The doctor will have the nurse place the orders.
+
+Other Structured States
+- [ExamFinding] murmur | verification_status=confirmed | clinical_status=active | modalities=exam | speakers=doctor | evidence=T20
+  Summary: A grade two out of six systolic ejection murmur is appreciated.
+  ClusterId: CL9
+  TemporalProfile: current
+- [ExamFinding] lungs | verification_status=confirmed | clinical_status=active | modalities=exam | speakers=doctor | evidence=T20
+  Summary: The lungs are clear without wheezes, rales or rhonchi.
+  ClusterId: CL10
+  TemporalProfile: current

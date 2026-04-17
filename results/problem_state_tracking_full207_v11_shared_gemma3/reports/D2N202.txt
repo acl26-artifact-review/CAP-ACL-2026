@@ -1,0 +1,79 @@
+Case: D2N202
+
+Problem List and Visit State Tracking
+
+Problem List
+- shoulder pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T1,T9
+  Summary: The patient reports right shoulder pain.
+  ClusterId: CL1
+  TemporalProfile: current
+  Updates:
+  - CAP1: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T1,T9 :: The patient reports right shoulder pain.
+- fall | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T3
+  Summary: The patient fell while painting.
+  ClusterId: CL2
+  TemporalProfile: 3 weeks ago
+  Updates:
+  - CAP16: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=3 weeks ago turns=T3,T3 :: The patient fell while painting.
+- pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T11,T12,T14,T9
+  Summary: The patient rates their pain as a 4 when taking medication.
+  ClusterId: CL4
+  TemporalProfile: current
+  Updates:
+  - CAP5: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T9 :: The patient is experiencing pain.
+  - CAP9: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T9 :: The patient has pain.
+  - CAP10: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T9 :: The patient reports pain.
+  - CAP6: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T11 :: The patient has intermittent pain.
+  - CAP11: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T11 :: The patient reports pain.
+  - CAP4: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T12 :: The patient rates their pain as a 6.
+  - CAP2: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T14 :: The patient rates their pain as a 4 when taking medication.
+- numbness | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T25
+  Summary: The patient reports experiencing numbness.
+  ClusterId: CL5
+  TemporalProfile: initial
+  Updates:
+  - CAP7: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=initial turns=T25 :: The patient reports experiencing numbness.
+- tingling | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T25
+  Summary: The patient reports experiencing tingling.
+  ClusterId: CL6
+  TemporalProfile: initial
+  Updates:
+  - CAP8: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=initial turns=T25 :: The patient reports experiencing tingling.
+- rotator cuff tendinopathy | verification_status=confirmed | clinical_status=active | modalities=assessment | speakers=doctor | evidence=T26
+  Summary: The doctor assesses the patient's symptoms as rotator cuff tendinopathy.
+  ClusterId: CL7
+  TemporalProfile: current
+  Updates:
+  - CAP3: content_source=doctor modality=assessment verification_status=confirmed clinical_status=active temporality=current turns=T26 :: The doctor assesses the patient's symptoms as rotator cuff tendinopathy.
+
+Medication Tracking
+- [MedicationState] advil | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T5
+  Summary: The patient took advil for the shoulder pain.
+  ClusterId: CL3
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient took advil for the shoulder pain. (T5)
+  Updates:
+  - CAP15: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T5 :: The patient took advil for the shoulder pain.
+- [MedicationChange] nsaid | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T26
+  Summary: The doctor recommends the patient take an nsaid.
+  ClusterId: CL9
+  TemporalProfile: current
+  PlannedChanges:
+  - The doctor recommends the patient take an nsaid. (T26)
+  Updates:
+  - CAP13: content_source=doctor modality=plan verification_status=unconfirmed clinical_status=planned temporality=current turns=T26 :: The doctor recommends the patient take an nsaid.
+- [MedicationChange] tylenol | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T26
+  Summary: The doctor recommends the patient take tylenol.
+  ClusterId: CL10
+  TemporalProfile: current
+  PlannedChanges:
+  - The doctor recommends the patient take tylenol. (T26)
+  Updates:
+  - CAP14: content_source=doctor modality=plan verification_status=unconfirmed clinical_status=planned temporality=current turns=T26 :: The doctor recommends the patient take tylenol.
+
+Other Structured States
+- [Plan] mri | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T26
+  Summary: The doctor orders an MRI of the right shoulder.
+  ClusterId: CL8
+  TemporalProfile: future

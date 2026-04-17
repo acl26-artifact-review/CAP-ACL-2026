@@ -1,0 +1,74 @@
+Case: D2N092
+
+Problem List and Visit State Tracking
+
+Problem List
+- arm pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T3
+  Summary: The patient reports pain in their arm.
+  ClusterId: CL1
+  TemporalProfile: current
+  Updates:
+  - CAP6: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T3 :: The patient reports pain in their arm.
+- tennis injury | verification_status=unconfirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T7
+  Summary: The patient sustained an injury to their arm while playing tennis.
+  ClusterId: CL2
+  TemporalProfile: recent
+  Updates:
+  - CAP9: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=recent turns=T7 :: The patient sustained an injury to their arm while playing tennis.
+- numbness | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T11
+  Summary: The patient reports some numbness in their hand.
+  ClusterId: CL3
+  TemporalProfile: current
+  Updates:
+  - CAP1: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T11 :: The patient reports some numbness in their hand.
+  - CAP7: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T11 :: The patient reports numbness in their hand.
+- pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T11,T36
+  Summary: The patient reports pain in the left hand.
+  ClusterId: CL4
+  TemporalProfile: current
+  Updates:
+  - CAP2: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T11 :: The patient reports pain in the left hand.
+  - CAP3: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T36 :: The patient reports pain when flexing their thumb.
+- flonase | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T13
+  Summary: The patient takes flonase.
+  ClusterId: CL5
+  TemporalProfile: past
+  Updates:
+  - CAP12: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=past turns=T13 :: The patient takes flonase.
+- fall | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T15
+  Summary: The patient reports a trauma from a fall.
+  ClusterId: CL6
+  TemporalProfile: past
+  Updates:
+  - CAP11: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=past turns=T15 :: The patient reports a trauma from a fall.
+- rake | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T17
+  Summary: The patient reports being injured while using a rake.
+  ClusterId: CL7
+  TemporalProfile: past
+  Updates:
+  - CAP10: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=past turns=T17 :: The patient reports being injured while using a rake.
+- strain | verification_status=confirmed | clinical_status=active | modalities=assessment | speakers=doctor | evidence=T36
+  Summary: The doctor believes the patient has a strain.
+  ClusterId: CL8
+  TemporalProfile: current
+  Updates:
+  - CAP4: content_source=doctor modality=assessment verification_status=confirmed clinical_status=active temporality=current turns=T36 :: The doctor believes the patient has a strain.
+- contusion | verification_status=confirmed | clinical_status=active | modalities=assessment | speakers=doctor | evidence=T36
+  Summary: The doctor believes the patient has a contusion.
+  ClusterId: CL9
+  TemporalProfile: current
+  Updates:
+  - CAP5: content_source=doctor modality=assessment verification_status=confirmed clinical_status=active temporality=current turns=T36 :: The doctor believes the patient has a contusion.
+
+Medication Tracking
+- [MedicationChange] motrin | verification_status=confirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T36
+  Summary: The doctor orders motrin.
+  ClusterId: CL10
+  TemporalProfile: current
+  PlannedChanges:
+  - The doctor orders motrin. (T36)
+  Updates:
+  - CAP8: content_source=doctor modality=plan verification_status=confirmed clinical_status=planned temporality=current turns=T36 :: The doctor orders motrin.
+
+Other Structured States
+- None

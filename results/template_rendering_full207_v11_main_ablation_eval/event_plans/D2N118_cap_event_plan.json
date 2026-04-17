@@ -1,0 +1,142 @@
+{
+  "events": [
+    {
+      "event_id": "CL7",
+      "event_type": "ProblemOrientedNoteBundle",
+      "canonical_concept": "kidney stones",
+      "visit_state": "historical",
+      "status": "affirmed",
+      "temporality": "future",
+      "speaker_source": "doctor,patient",
+      "clinical_priority": "high",
+      "title": "kidney stones",
+      "event_summary": "Problem-oriented bundle for kidney stones.",
+      "supporting_cap_ids": [
+        "CAP11",
+        "CAP15",
+        "CAP4",
+        "CAP18",
+        "CAP19",
+        "CAP35",
+        "CAP29",
+        "CAP41",
+        "CAP46",
+        "CAP43",
+        "CAP49"
+      ],
+      "anchor_problem_cap_id": "CAP11",
+      "anchor_problem": "kidney stones",
+      "P_cap_ids": [
+        "CAP35",
+        "CAP29"
+      ],
+      "global_cap_ids": [
+        "CAP4",
+        "CAP18",
+        "CAP19",
+        "CAP41",
+        "CAP46",
+        "CAP43"
+      ],
+      "planned_actions": [
+        "The doctor orders a urinalysis.",
+        "The doctor orders a urine culture."
+      ],
+      "care_context": [
+        "The patient is experiencing recurrent kidney stones.",
+        "The patient previously had kidney stones.",
+        "The patient has a past medical history of kidney stones.",
+        "The patient does not regularly check their blood sugar.",
+        "The patient denies chest pain.",
+        "The patient denies belly pain."
+      ],
+      "key_slots": {
+        "source_modalities": "assessment, interview",
+        "temporal_profile": "past, recurrent, daily, current, future",
+        "anchor_cluster_type": "ProblemState",
+        "anchor_primary_cap_type": "Problem",
+        "bundle_concepts": "kidney stones; blood sugar; chest pain; belly pain; urinalysis; urine culture; norvasc; kidney stone",
+        "history_context": "The patient is experiencing recurrent kidney stones.; The patient previously had kidney stones.; The patient has a past medical history of kidney stones.",
+        "related_factors": "",
+        "visit_primary": "true",
+        "render_in_note": "true",
+        "assessment_fallback": "Findings are consistent with kidney stones.",
+        "bundle_design": "problem_oriented_note_bundle"
+      },
+      "render_sections": [
+        "S",
+        "O",
+        "A",
+        "P",
+        "History of Present Illness",
+        "Findings",
+        "Assessment",
+        "Plan"
+      ]
+    },
+    {
+      "event_id": "CL2",
+      "event_type": "ProblemOrientedNoteBundle",
+      "canonical_concept": "diabetes",
+      "visit_state": "active",
+      "status": "affirmed",
+      "temporality": "historical",
+      "speaker_source": "patient,doctor",
+      "clinical_priority": "high",
+      "title": "diabetes",
+      "event_summary": "Problem-oriented bundle for diabetes.",
+      "supporting_cap_ids": [
+        "CAP22",
+        "CAP21",
+        "CAP3",
+        "CAP2",
+        "CAP14",
+        "CAP34"
+      ],
+      "anchor_problem_cap_id": "CAP22",
+      "anchor_problem": "diabetes",
+      "S_cap_ids": [
+        "CAP22"
+      ],
+      "O_cap_ids": [
+        "CAP34"
+      ],
+      "supporting_evidence": [
+        "The patient has diabetes.",
+        "The patient's A1C was 6.7%"
+      ],
+      "current_state": [
+        "The patient has diabetes."
+      ],
+      "care_context": [
+        "The patient has hypertension.",
+        "The patient has a past medical history of hypertension.",
+        "The patient is doing well on two and a half milligrams of lisinopril.",
+        "The patient has type 2 diabetes."
+      ],
+      "key_slots": {
+        "source_modalities": "interview, assessment, test_result",
+        "temporal_profile": "current, past, historical",
+        "anchor_cluster_type": "ProblemState",
+        "anchor_primary_cap_type": "Problem",
+        "bundle_concepts": "diabetes; hypertension; type 2 diabetes; a1c",
+        "history_context": "",
+        "related_factors": "The patient has hypertension.; The patient has a past medical history of hypertension.; The patient is doing well on two and a half milligrams of lisinopril.; The patient has type 2 diabetes.",
+        "visit_primary": "true",
+        "render_in_note": "true",
+        "assessment_fallback": "The patient has diabetes.",
+        "bundle_design": "problem_oriented_note_bundle"
+      },
+      "render_sections": [
+        "S",
+        "O",
+        "A",
+        "P",
+        "History of Present Illness",
+        "Findings",
+        "Assessment",
+        "Plan"
+      ]
+    }
+  ]
+}

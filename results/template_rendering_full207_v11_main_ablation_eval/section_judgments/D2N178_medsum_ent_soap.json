@@ -1,0 +1,23 @@
+{
+  "section_miscategorizations": [
+    {
+      "text": "The patient's A1c was above 9.9, indicating poor glycemic control.",
+      "current_section": "A",
+      "expected_section": "O",
+      "severity": "minor",
+      "reason": "The A1c value itself is an objective lab result and belongs in O; however, the interpretive phrase about poor glycemic control is assessment, so this mixed sentence in A is a minor organizational issue rather than clearly misleading."
+    },
+    {
+      "text": "Blood pressure at home is better than the rechecked value.",
+      "current_section": "O",
+      "expected_section": "S",
+      "severity": "minor",
+      "reason": "Home blood pressure values are typically patient-reported home measurements and fit better in S; here they are summarized in O, which is a mild organizational issue but not substantially misleading."
+    }
+  ],
+  "summary_statistics": {
+    "section_appropriateness_score": 0.9,
+    "section_miscategorization_count": 2,
+    "major_section_miscategorization_count": 0
+  }
+}

@@ -1,0 +1,79 @@
+Case: D2N109
+
+Problem List and Visit State Tracking
+
+Problem List
+- ankle pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T9
+  Summary: The patient reports pain in the outside of their ankle.
+  ClusterId: CL1
+  TemporalProfile: current
+  Updates:
+  - CAP1: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T9 :: The patient reports pain in the outside of their ankle.
+- swelling | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T9
+  Summary: The patient reports swelling.
+  ClusterId: CL2
+  TemporalProfile: current
+  Updates:
+  - CAP5: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T9 :: The patient reports swelling.
+- left hand pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T27
+  Summary: The patient reports pain in the left hand.
+  ClusterId: CL9
+  TemporalProfile: current
+  Updates:
+  - CAP3: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T27 :: The patient reports pain in the left hand.
+- high blood pressure | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T36
+  Summary: The patient is taking norvasc for high blood pressure.
+  ClusterId: CL10
+  TemporalProfile: current
+  Updates:
+  - CAP2: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T36 :: The patient is taking norvasc for high blood pressure.
+- diabetes | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T36
+  Summary: The patient continues metformin for diabetes.
+  ClusterId: CL11
+  TemporalProfile: current
+  Updates:
+  - CAP4: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T36 :: The patient continues metformin for diabetes.
+
+Medication Tracking
+- [MedicationState] ibuprofen | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T11
+  Summary: The patient reports taking ibuprofen.
+  ClusterId: CL3
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient reports taking ibuprofen. (T11)
+  Updates:
+  - CAP9: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T11 :: The patient reports taking ibuprofen.
+- [MedicationState] ice | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T11
+  Summary: The patient reports using ice.
+  ClusterId: CL4
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient reports using ice. (T11)
+  Updates:
+  - CAP10: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T11 :: The patient reports using ice.
+- [MedicationState] elevation | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T11
+  Summary: The patient reports using elevation.
+  ClusterId: CL5
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient reports using elevation. (T11)
+  Updates:
+  - CAP11: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T11 :: The patient reports using elevation.
+- [MedicationState] metformin | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T18
+  Summary: The patient is taking metformin.
+  ClusterId: CL6
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient is taking metformin. (T18)
+  Updates:
+  - CAP12: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T18 :: The patient is taking metformin.
+
+Other Structured States
+- [TestResult] hemoglobin a1c | verification_status=unconfirmed | clinical_status=planned | modalities=test_result | speakers=doctor,test_result | evidence=T26,T36
+  Summary: The patient's hemoglobin a1c last time i looked at epic was about six . eight.
+  ClusterId: CL7
+  TemporalProfile: last time i looked at epic, today
+- [FollowUp] eye exam | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T26
+  Summary: The patient is due for an eye exam.
+  ClusterId: CL8
+  TemporalProfile: in the next couple of weeks

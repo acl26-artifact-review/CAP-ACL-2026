@@ -1,0 +1,261 @@
+Case: D2N028
+
+Problem List and Visit State Tracking
+
+Problem List
+- abdominal pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T10,T18,T51,T60
+  Summary: The patient reports abdominal pain located in the mid abdomen, to the right.
+  ClusterId: CL1
+  TemporalProfile: current
+  Updates:
+  - CAP2: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T10 :: The patient reports abdominal pain located in the mid abdomen, to the right.
+  - CAP3: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T10 :: The patient reports pain in the mid abdomen, right below the belly button.
+  - CAP29: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T18 :: The patient reports abdominal pain.
+  - CAP32: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T51 :: The patient reports abdominal pain.
+  - CAP5: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T60 :: The patient reports pain in the left side near the belly button.
+- diarrhea | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T119,T16,T20,T36,T97
+  Summary: The patient reports diarrhea related to eating pasta with a creamy sauce.
+  ClusterId: CL2
+  TemporalProfile: current
+  Updates:
+  - CAP28: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T16 :: The patient reports experiencing diarrhea.
+  - CAP31: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T20 :: The patient reports increased diarrhea.
+  - CAP4: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T36 :: The patient reports diarrhea related to eating pasta with a creamy sauce.
+  - CAP36: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T36 :: The patient reports diarrhea.
+  - CAP41: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T97 :: The patient reports diarrhea.
+  - CAP26: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T119 :: The patient reports bouts of diarrhea.
+- constipation | verification_status=unconfirmed | clinical_status=historical | modalities=assessment,interview | speakers=doctor,patient | evidence=T20,T26,T60
+  Summary: The doctor feels stool in the lower colon, which suggests constipation.
+  ClusterId: CL3
+  TemporalProfile: current, past
+  Updates:
+  - CAP27: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T20 :: The patient reports experiencing constipation.
+  - CAP30: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T26 :: The patient reports increased constipation.
+  - CAP38: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T26 :: The patient reports constipation.
+  - CAP40: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T26 :: The patient reports constipation.
+  - CAP6: content_source=doctor modality=assessment verification_status=unconfirmed clinical_status=historical temporality=past turns=T60 :: The doctor feels stool in the lower colon, which suggests constipation.
+- difficulty passing stool | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T20
+  Summary: The patient reports difficulty passing stool.
+  ClusterId: CL4
+  TemporalProfile: current
+  Updates:
+  - CAP20: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T20 :: The patient reports difficulty passing stool.
+- sensitive stomach | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T36
+  Summary: The patient reports a sensitive stomach.
+  ClusterId: CL6
+  TemporalProfile: current
+  Updates:
+  - CAP21: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T36 :: The patient reports a sensitive stomach.
+- weight loss | verification_status=unconfirmed | clinical_status=planned | modalities=interview | speakers=patient | evidence=T40
+  Summary: The patient wants to lose about 25 pounds.
+  ClusterId: CL7
+  TemporalProfile: future
+  Updates:
+  - CAP12: content_source=patient modality=interview verification_status=unconfirmed clinical_status=planned temporality=future turns=T40 :: The patient wants to lose about 25 pounds.
+- abdominal issues | verification_status=unconfirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T42
+  Summary: The patient has had problems with their stomach.
+  ClusterId: CL8
+  TemporalProfile: past
+  Updates:
+  - CAP11: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=past turns=T42 :: The patient has had problems with their stomach.
+- bowel changes | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T51
+  Summary: The patient reports changes in bowel habits.
+  ClusterId: CL9
+  TemporalProfile: current
+  Updates:
+  - CAP15: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T51 :: The patient reports changes in bowel habits.
+- stomach pain | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T52
+  Summary: The patient reports stomach pain.
+  ClusterId: CL10
+  TemporalProfile: current
+  Updates:
+  - CAP34: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T52 :: The patient reports stomach pain.
+- enlarged liver | verification_status=unconfirmed | clinical_status=active | modalities=assessment,interview | speakers=doctor,patient | evidence=T60,T99
+  Summary: The doctor feels a slight enlargement of the liver on the upper right side.
+  ClusterId: CL12
+  TemporalProfile: current
+  Updates:
+  - CAP1: content_source=doctor modality=assessment verification_status=unconfirmed clinical_status=historical temporality=current turns=T60 :: The doctor feels a slight enlargement of the liver on the upper right side.
+  - CAP25: content_source=doctor modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T99 :: The doctor reports an enlarged liver.
+  - CAP35: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T99 :: The patient's liver is enlarged.
+- liver enzymes | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T64
+  Summary: The patient's liver enzymes are slightly elevated.
+  ClusterId: CL14
+  TemporalProfile: current
+  Updates:
+  - CAP16: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T64 :: The patient's liver enzymes are slightly elevated.
+- pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T68
+  Summary: The patient reports pain.
+  ClusterId: CL16
+  TemporalProfile: current
+  Updates:
+  - CAP37: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T68 :: The patient reports pain.
+- alcohol use | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T72
+  Summary: The patient denies previous history of heavy alcohol use.
+  ClusterId: CL18
+  TemporalProfile: past
+  Updates:
+  - CAP8: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=past turns=T72 :: The patient denies previous history of heavy alcohol use.
+- swelling | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T72
+  Summary: The patient denies issues with ankle or foot swelling.
+  ClusterId: CL19
+  TemporalProfile: past
+  Updates:
+  - CAP9: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=past turns=T72 :: The patient denies issues with ankle or foot swelling.
+- left hand pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T72
+  Summary: The patient reports pain in the left hand.
+  ClusterId: CL20
+  TemporalProfile: current
+  Updates:
+  - CAP13: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T72 :: The patient reports pain in the left hand.
+- bruising | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T72
+  Summary: The patient denies recent issues with excessive bruising.
+  ClusterId: CL21
+  TemporalProfile: past
+  Updates:
+  - CAP14: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=past turns=T72 :: The patient denies recent issues with excessive bruising.
+- liver issues | verification_status=unconfirmed | clinical_status=active | modalities=assessment | speakers=doctor | evidence=T81
+  Summary: The doctor suspects liver issues.
+  ClusterId: CL23
+  TemporalProfile: current
+  Updates:
+  - CAP33: content_source=doctor modality=assessment verification_status=unconfirmed clinical_status=active temporality=current turns=T81 :: The doctor suspects liver issues.
+- increased stool burden | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T87
+  Summary: The patient reports an increased stool burden.
+  ClusterId: CL26
+  TemporalProfile: current
+  Updates:
+  - CAP17: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T87 :: The patient reports an increased stool burden.
+- hepatomegaly | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T89,T95
+  Summary: The patient reports an enlarged liver.
+  ClusterId: CL27
+  TemporalProfile: current
+  Updates:
+  - CAP39: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T89 :: The patient reports hepatomegaly.
+  - CAP22: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T95 :: The patient reports an enlarged liver.
+- liver enzymes elevated | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T99
+  Summary: The patient's liver enzymes are elevated.
+  ClusterId: CL29
+  TemporalProfile: current
+  Updates:
+  - CAP23: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T99 :: The patient's liver enzymes are elevated.
+- elevated liver enzymes | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T99
+  Summary: The patient has elevated liver enzymes.
+  ClusterId: CL30
+  TemporalProfile: current
+  Updates:
+  - CAP24: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T99 :: The patient has elevated liver enzymes.
+- liver toxicity | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=doctor | evidence=T107
+  Summary: The doctor suggests a potential risk of liver toxicity.
+  ClusterId: CL32
+  TemporalProfile: potential
+  Updates:
+  - CAP10: content_source=doctor modality=interview verification_status=unconfirmed clinical_status=active temporality=potential turns=T107 :: The doctor suggests a potential risk of liver toxicity.
+- alcohol avoidance | verification_status=unconfirmed | clinical_status=planned | modalities=assessment | speakers=doctor | evidence=T119
+  Summary: The patient should refrain from drinking alcohol.
+  ClusterId: CL36
+  TemporalProfile: to avoid diarrhea
+  Updates:
+  - CAP18: content_source=doctor modality=assessment verification_status=unconfirmed clinical_status=planned temporality=to avoid diarrhea turns=T119 :: The patient should refrain from drinking alcohol.
+
+Medication Tracking
+- [MedicationState] liver enzymes | verification_status=unconfirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T62
+  Summary: The patient had blood drawn four months ago.
+  ClusterId: CL13
+  TemporalProfile: past
+  CurrentRegimens:
+  - The patient had blood drawn four months ago. (T62)
+  Updates:
+  - CAP61: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=past turns=T62 :: The patient had blood drawn four months ago.
+- [MedicationState] crestor | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=doctor,patient | evidence=T107,T120,T68
+  Summary: The doctor recommends discussing Crestor with the primary care physician.
+  ClusterId: CL17
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient takes crestor daily. (T68)
+  - The doctor mentions the patient is taking crestor. (T107)
+  - The doctor recommends discussing Crestor with the primary care physician. (T120)
+  Updates:
+  - CAP64: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T68 :: The patient takes crestor daily.
+  - CAP62: content_source=doctor modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T107 :: The doctor mentions the patient is taking crestor.
+  - CAP59: content_source=doctor modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T120 :: The doctor recommends discussing Crestor with the primary care physician.
+- [MedicationChange] fiber supplement | verification_status=unconfirmed | clinical_status=planned | modalities=assessment,plan | speakers=doctor | evidence=T117,T97
+  Summary: The patient should take a fiber supplement.
+  ClusterId: CL28
+  TemporalProfile: current, to help with constipation
+  PlannedChanges:
+  - The doctor recommends a fiber supplement. (T97)
+  - The patient should take a fiber supplement. (T117)
+  Updates:
+  - CAP51: content_source=doctor modality=plan verification_status=unconfirmed clinical_status=planned temporality=current turns=T97 :: The doctor recommends a fiber supplement.
+  - CAP49: content_source=doctor modality=assessment verification_status=unconfirmed clinical_status=planned temporality=to help with constipation turns=T117 :: The patient should take a fiber supplement.
+- [MedicationState] fiber supplement | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=doctor | evidence=T119
+  Summary: The doctor recommends taking a fiber supplement.
+  ClusterId: CL41
+  TemporalProfile: current
+  CurrentRegimens:
+  - The doctor recommends taking a fiber supplement. (T119)
+  Updates:
+  - CAP63: content_source=doctor modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T119 :: The doctor recommends taking a fiber supplement.
+
+Other Structured States
+- [TestResult] bowel sounds | verification_status=confirmed | clinical_status=historical | modalities=exam | speakers=doctor | evidence=T55
+  Summary: The doctor heard bowel sounds in all four quadrants.
+  ClusterId: CL11
+  TemporalProfile: current
+- [TestResult] elevated liver enzymes | verification_status=unconfirmed | clinical_status=historical | modalities=test_result | speakers=patient | evidence=T64
+  Summary: The patient had slightly elevated liver enzymes in a previous physical exam four months ago.
+  ClusterId: CL15
+  TemporalProfile: past
+- [ExamFinding] jaundice | verification_status=unconfirmed | clinical_status=historical | modalities=exam | speakers=doctor | evidence=T79
+  Summary: The doctor does not see any jaundice.
+  ClusterId: CL22
+  TemporalProfile: none
+- [ExamFinding] heart sounds | verification_status=confirmed | clinical_status=active | modalities=exam | speakers=doctor | evidence=T81,T83
+  Summary: The doctor listened to the heart and lungs.
+  ClusterId: CL24
+  TemporalProfile: current
+- [ExamFinding] lung sounds | verification_status=confirmed | clinical_status=active | modalities=exam | speakers=doctor | evidence=T83
+  Summary: The lung sounds are clear.
+  ClusterId: CL25
+  TemporalProfile: current
+- [Plan] ultrasound of liver | verification_status=unconfirmed | clinical_status=planned | modalities=interview | speakers=doctor | evidence=T103
+  Summary: The doctor orders an ultrasound of the liver.
+  ClusterId: CL31
+  TemporalProfile: future
+- [Plan] liver enzyme testing | verification_status=unconfirmed | clinical_status=planned | modalities=interview | speakers=doctor | evidence=T107
+  Summary: The doctor orders liver enzyme testing.
+  ClusterId: CL33
+  TemporalProfile: future
+- [Plan] liver ultrasound | verification_status=unconfirmed | clinical_status=planned | modalities=assessment | speakers=doctor | evidence=T111
+  Summary: A liver ultrasound is planned.
+  ClusterId: CL34
+  TemporalProfile: within the next two weeks
+- [FollowUp] liver | verification_status=unconfirmed | clinical_status=historical | modalities=assessment | speakers=doctor | evidence=T117
+  Summary: The patient should return for a follow-up appointment in four weeks.
+  ClusterId: CL35
+  TemporalProfile: in four weeks
+- [Plan] increase water intake | verification_status=confirmed | clinical_status=planned | modalities=interview | speakers=doctor | evidence=T119
+  Summary: The doctor recommends increasing water intake to at least 48 ounces a day.
+  ClusterId: CL38
+  TemporalProfile: current
+- [Plan] avoid foods that cause diarrhea | verification_status=confirmed | clinical_status=planned | modalities=interview | speakers=doctor | evidence=T119
+  Summary: The doctor recommends being mindful of eating foods that cause diarrhea.
+  ClusterId: CL39
+  TemporalProfile: current
+- [Plan] refrain from drinking alcohol | verification_status=confirmed | clinical_status=planned | modalities=interview | speakers=doctor | evidence=T119
+  Summary: The doctor recommends refraining from drinking alcohol.
+  ClusterId: CL40
+  TemporalProfile: current
+- [TestResult] blood work | verification_status=unconfirmed | clinical_status=planned | modalities=interview | speakers=doctor | evidence=T123
+  Summary: The doctor orders blood work.
+  ClusterId: CL42
+  TemporalProfile: current
+- [FollowUp] follow-up appointment | verification_status=confirmed | clinical_status=planned | modalities=interview | speakers=doctor | evidence=T123
+  Summary: The doctor schedules a follow-up appointment in four weeks.
+  ClusterId: CL43
+  TemporalProfile: four weeks
+- [Plan] ultrasound | verification_status=unconfirmed | clinical_status=planned | modalities=interview | speakers=doctor | evidence=T125
+  Summary: The doctor schedules an ultrasound.
+  ClusterId: CL44
+  TemporalProfile: current

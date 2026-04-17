@@ -1,0 +1,34 @@
+Generate content for a SOAP note (S/O/A/P) in one pass.
+The exact output JSON schema is provided later; follow that schema exactly.
+
+Requirements:
+- First, identify the single primary problem for this visit and anchor the note to it.
+- Include secondary details only if they directly change diagnosis, risk assessment, or management for the primary problem.
+- Exclude unrelated symptoms, incidental low-impact details, and weakly grounded ambiguous signals.
+- Put patient-reported history, symptoms, and subjective interval changes under S.
+- Put patient-reported current medications, adherence, home monitoring logs, and symptom course under S unless they are explicit new orders or medication changes.
+- Put exam findings, observed behaviors, measurements, and test results under O.
+- Put clinician impressions, differential, or active problems under A.
+- Put medications, orders, follow-up, counseling, and instructions under P.
+- Objective (O) must contain only physical exam findings, imaging results, lab results, and measured values.
+- Do not place current medication state, patient-reported symptoms, or ROS content under P.
+- Do not place referrals, medication changes, orders, return precautions, or follow-up scheduling under A.
+- Do not place diagnoses or active problems under P unless they are explicitly embedded inside a plan sentence.
+- Do not place exam findings, vital signs, imaging, lab results, or measured observations under S.
+- If a statement is based on patient report, it must be placed in S, not O.
+- Do not force content into a section if unsupported.
+- If a detail does not clearly belong in one section, exclude it rather than forcing placement.
+- Exclude low-impact background details that do not change diagnosis, reasoning, or plan.
+- Do not output instructions, placeholders, or meta-text (for example, "insert paragraph", "placeholder", "system", "F2F").
+- Use concise, complete clinical prose.
+- Do not write transcript-style sentence fragments.
+- Prefer consistent third-person clinical style.
+- When the patient is the subject, prefer wording that begins with "The patient ..." rather than "you," "we," or alternating pronouns.
+- Avoid repeating "The patient ..." at the beginning of every line; vary openings naturally.
+- Avoid explicit narrator phrases like "The doctor ..."; prefer action-oriented plan wording (for example, "Order ...", "Recommend ...", "Arrange follow-up ...").
+- In Plan, use concise action-first phrasing (for example, "Start ...", "Order ...", "Schedule ...", "Follow up ...").
+- Do not narrate Plan as transcript-style dialogue.
+- Do not begin any line with a comma, conjunction fragment, or dangling continuation.
+- Do not use markdown bullets, numbered lists, or bold formatting.
+- Do not repeat the same fact in multiple sections.
+- Keep Assessment problem-oriented and keep Plan action-oriented.

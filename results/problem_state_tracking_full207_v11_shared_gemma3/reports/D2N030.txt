@@ -1,0 +1,202 @@
+Case: D2N030
+
+Problem List and Visit State Tracking
+
+Problem List
+- anxiety | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T16,T28,T6
+  Summary: The patient experienced anxiety spiking at random times.
+  ClusterId: CL1
+  TemporalProfile: current, random times
+  Updates:
+  - CAP25: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T6 :: The patient reports anxiety.
+  - CAP6: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=random times turns=T16 :: The patient experienced anxiety spiking at random times.
+  - CAP18: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T28 :: The patient reports experiencing anxiety.
+  - CAP26: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T28 :: The patient reports anxiety.
+- hormonal factors | verification_status=unconfirmed | clinical_status=planned | modalities=interview | speakers=patient | evidence=T8
+  Summary: The patient wonders if hormonal factors may be involved.
+  ClusterId: CL3
+  TemporalProfile: future
+  Updates:
+  - CAP3: content_source=patient modality=interview verification_status=unconfirmed clinical_status=planned temporality=future turns=T8 :: The patient wonders if hormonal factors may be involved.
+- buspar | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T8
+  Summary: The patient is taking buspar.
+  ClusterId: CL4
+  TemporalProfile: current
+  Updates:
+  - CAP16: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T8 :: The patient is taking buspar.
+- irritability | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T11
+  Summary: The patient experienced irritability in November and December.
+  ClusterId: CL5
+  TemporalProfile: November and December, before progesterone
+  Updates:
+  - CAP5: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=November and December turns=T11 :: The patient experienced irritability in November and December.
+  - CAP10: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=before progesterone turns=T11 :: The patient experienced irritability before starting progesterone.
+- periods | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T15
+  Summary: The patient's periods were being regulated.
+  ClusterId: CL6
+  TemporalProfile: regulation
+  Updates:
+  - CAP12: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=regulation turns=T15 :: The patient's periods were being regulated.
+- hormonal imbalance | verification_status=unconfirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T16
+  Summary: The patient suspects a hormonal imbalance.
+  ClusterId: CL7
+  TemporalProfile: back then
+  Updates:
+  - CAP13: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=back then turns=T16 :: The patient suspects a hormonal imbalance.
+- hand pain | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T18
+  Summary: The patient reports pain in the left hand.
+  ClusterId: CL8
+  TemporalProfile: current
+  Updates:
+  - CAP7: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T18 :: The patient reports pain in the left hand.
+- pandemic | verification_status=unconfirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T26
+  Summary: The patient describes the impact of the pandemic.
+  ClusterId: CL9
+  TemporalProfile: past
+  Updates:
+  - CAP8: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=past turns=T26 :: The patient describes the impact of the pandemic.
+- guilt | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T28
+  Summary: The patient reports feeling guilty.
+  ClusterId: CL10
+  TemporalProfile: current
+  Updates:
+  - CAP17: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T28 :: The patient reports feeling guilty.
+- weight loss | verification_status=unconfirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T36
+  Summary: The patient reports weight loss over the past six months.
+  ClusterId: CL12
+  TemporalProfile: current, past six months
+  Updates:
+  - CAP2: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T36 :: The patient reports weight loss over the past six months.
+  - CAP19: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=past six months turns=T36 :: The patient reports weight loss.
+- abnormal pap | verification_status=unconfirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T40
+  Summary: The patient had an abnormal pap in 2009.
+  ClusterId: CL13
+  TemporalProfile: past
+  Updates:
+  - CAP9: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=past turns=T40 :: The patient had an abnormal pap in 2009.
+- immunocompromising | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T43
+  Summary: The patient's husband has immunocompromising conditions.
+  ClusterId: CL14
+  TemporalProfile: current
+  Updates:
+  - CAP14: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T43 :: The patient's husband has immunocompromising conditions.
+- left hand pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T54
+  Summary: The patient reports pain in the left hand.
+  ClusterId: CL16
+  TemporalProfile: current
+  Updates:
+  - CAP1: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T54,T54 :: The patient reports pain in the left hand.
+- lump | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T56
+  Summary: The patient's breast lumps feel smaller now.
+  ClusterId: CL17
+  TemporalProfile: current, past
+  Updates:
+  - CAP11: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=past turns=T56 :: The patient's breast lumps feel smaller now.
+  - CAP37: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T56 :: The patient mentions lumps.
+- breast tenderness | verification_status=unconfirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T56
+  Summary: The patient experienced breast tenderness.
+  ClusterId: CL18
+  TemporalProfile: past
+  Updates:
+  - CAP20: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=past turns=T56 :: The patient experienced breast tenderness.
+  - CAP21: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=past turns=T56 :: The patient reports breast tenderness.
+- clog | verification_status=unconfirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T56
+  Summary: The patient mentions a clog.
+  ClusterId: CL20
+  TemporalProfile: past
+  Updates:
+  - CAP35: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=past turns=T56 :: The patient mentions a clog.
+- breastfeeding | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T56
+  Summary: The patient mentions breastfeeding.
+  ClusterId: CL21
+  TemporalProfile: past
+  Updates:
+  - CAP36: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=past turns=T56 :: The patient mentions breastfeeding.
+- breast cancer risk | verification_status=unconfirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T70
+  Summary: The patient is concerned about increased breast cancer risk.
+  ClusterId: CL24
+  TemporalProfile: current
+  Updates:
+  - CAP4: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=current turns=T70 :: The patient is concerned about increased breast cancer risk.
+- mother's breast cancer | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T70
+  Summary: The patient's mother had breast cancer.
+  ClusterId: CL25
+  TemporalProfile: past
+  Updates:
+  - CAP15: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=past turns=T70 :: The patient's mother had breast cancer.
+- breast lump | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T70
+  Summary: The patient reports breast lumps.
+  ClusterId: CL26
+  TemporalProfile: current
+  Updates:
+  - CAP22: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T70 :: The patient reports breast lumps.
+- breast pain | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T70
+  Summary: The patient reports breast pain.
+  ClusterId: CL27
+  TemporalProfile: current
+  Updates:
+  - CAP23: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T70 :: The patient reports breast pain.
+- worried | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T81
+  Summary: The patient is feeling worried.
+  ClusterId: CL28
+  TemporalProfile: current
+  Updates:
+  - CAP24: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T81 :: The patient is feeling worried.
+
+Medication Tracking
+- [MedicationState] singulair | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=doctor | evidence=T6
+  Summary: Dr. Ward prescribed singulair.
+  ClusterId: CL2
+  TemporalProfile: current
+  CurrentRegimens:
+  - Dr. Ward prescribed singulair. (T6)
+  Updates:
+  - CAP33: content_source=doctor modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T6 :: Dr. Ward prescribed singulair.
+- [MedicationChange] camila birth control | verification_status=refuted | clinical_status=historical | modalities=interview | speakers=patient | evidence=T32
+  Summary: The patient stopped taking camila birth control.
+  ClusterId: CL11
+  TemporalProfile: past
+  PlannedChanges:
+  - The patient stopped taking camila birth control. (T32)
+  Updates:
+  - CAP29: content_source=patient modality=interview verification_status=refuted clinical_status=historical temporality=past turns=T32 :: The patient stopped taking camila birth control.
+- [MedicationState] vaccine | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T44
+  Summary: The patient's son has received the vaccine.
+  ClusterId: CL15
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient's son has received the vaccine. (T44)
+  - The patient has received the vaccine. (T44)
+  Updates:
+  - CAP30: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T44 :: The patient's son has received the vaccine.
+  - CAP31: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T44 :: The patient has received the vaccine.
+- [MedicationState] cream | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T56
+  Summary: The patient uses a cream.
+  ClusterId: CL19
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient uses a cream. (T56)
+  Updates:
+  - CAP32: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T56 :: The patient uses a cream.
+- [MedicationState] progesterone | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T57
+  Summary: The patient mentions progesterone.
+  ClusterId: CL22
+  TemporalProfile: past
+  CurrentRegimens:
+  - The patient mentions progesterone. (T57)
+  Updates:
+  - CAP34: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=past turns=T57 :: The patient mentions progesterone.
+- [MedicationChange] refill | verification_status=unconfirmed | clinical_status=planned | modalities=interview | speakers=patient | evidence=T60
+  Summary: The patient needs to get the cream refilled.
+  ClusterId: CL23
+  TemporalProfile: future
+  PlannedChanges:
+  - The patient needs to get the cream refilled. (T60)
+  Updates:
+  - CAP28: content_source=patient modality=interview verification_status=unconfirmed clinical_status=planned temporality=future turns=T60 :: The patient needs to get the cream refilled.
+
+Other Structured States
+- [Plan] referral | verification_status=confirmed | clinical_status=planned | modalities=plan | speakers=clinician | evidence=T81
+  Summary: A referral will be sent to the patient.
+  ClusterId: CL29
+  TemporalProfile: within the next couple of business days

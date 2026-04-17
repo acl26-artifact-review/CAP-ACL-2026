@@ -1,0 +1,23 @@
+{
+  "section_miscategorizations": [
+    {
+      "text": "An A1C was drawn.",
+      "current_section": "O",
+      "expected_section": "P",
+      "severity": "major",
+      "reason": "This is an order for a test/procedure rather than a completed result; per template semantics, orders belong in the Plan section."
+    },
+    {
+      "text": "Order Zoloft 50mg daily.",
+      "current_section": "P",
+      "expected_section": "A",
+      "severity": "major",
+      "reason": "The same Zoloft 50mg daily is already documented as the patient's current medication in the Subjective section; repeating it here as an order implies a new or changed prescription, which is misleading. There is no indication of a change in dose or initiation, so this should be reflected as part of the ongoing treatment in the Assessment rather than a new Plan action."
+    }
+  ],
+  "summary_statistics": {
+    "section_appropriateness_score": 0.7,
+    "section_miscategorization_count": 2,
+    "major_section_miscategorization_count": 2
+  }
+}

@@ -1,0 +1,160 @@
+Case: D2N181
+
+Problem List and Visit State Tracking
+
+Problem List
+- acid reflux | verification_status=unconfirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T42,T8
+  Summary: The patient reports experiencing acid reflux.
+  ClusterId: CL1
+  TemporalProfile: current, mom
+  Updates:
+  - CAP5: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T8 :: The patient reports experiencing acid reflux.
+  - CAP7: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=mom turns=T42 :: The patient's mother had acid reflux.
+- difficulty swallowing | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T10
+  Summary: The patient reports difficulty swallowing.
+  ClusterId: CL2
+  TemporalProfile: current
+  Updates:
+  - CAP10: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T10 :: The patient reports difficulty swallowing.
+- burning sensation | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T12
+  Summary: The patient feels a burning sensation in their throat and chest.
+  ClusterId: CL4
+  TemporalProfile: current
+  Updates:
+  - CAP2: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T12 :: The patient feels a burning sensation in their throat and chest.
+- spicy foods | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T32
+  Summary: The patient eats spicy foods.
+  ClusterId: CL5
+  TemporalProfile: current
+  Updates:
+  - CAP11: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T32 :: The patient eats spicy foods.
+- left hand pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T36,T54
+  Summary: The patient reports pain in the left hand.
+  ClusterId: CL7
+  TemporalProfile: current
+  Updates:
+  - CAP3: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T36 :: The patient reports pain in the left hand.
+  - CAP4: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T54 :: The patient reports pain in the left hand.
+- work stress | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=doctor,patient | evidence=T36,T57
+  Summary: The patient experiences work stress.
+  ClusterId: CL8
+  TemporalProfile: current
+  Updates:
+  - CAP6: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T36 :: The patient reports experiencing work stress.
+  - CAP14: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T36 :: The patient experiences work stress.
+  - CAP8: content_source=doctor modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T57 :: The patient experiences high stress levels.
+- tomato-based products | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T36
+  Summary: The patient eats tomato-based products.
+  ClusterId: CL9
+  TemporalProfile: current
+  Updates:
+  - CAP12: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T36 :: The patient eats tomato-based products.
+- citrus products | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T36
+  Summary: The patient eats citrus products.
+  ClusterId: CL10
+  TemporalProfile: current
+  Updates:
+  - CAP13: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T36 :: The patient eats citrus products.
+- appetite loss | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T36
+  Summary: The patient reports decreased appetite.
+  ClusterId: CL11
+  TemporalProfile: current, past two months
+  Updates:
+  - CAP15: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T36 :: The patient has reduced appetite.
+  - CAP17: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=past two months turns=T36 :: The patient reports decreased appetite.
+- weight | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T36
+  Summary: The patient's weight is stable.
+  ClusterId: CL12
+  TemporalProfile: current
+  Updates:
+  - CAP16: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T36 :: The patient's weight is stable.
+- carbonation | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T36
+  Summary: The patient experiences carbonation.
+  ClusterId: CL13
+  TemporalProfile: current
+  Updates:
+  - CAP19: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T36 :: The patient experiences carbonation.
+- esophageal cancer | verification_status=unconfirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T40
+  Summary: The patient's grandmother had esophageal cancer.
+  ClusterId: CL14
+  TemporalProfile: grandmother
+  Updates:
+  - CAP35: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=grandmother turns=T40 :: The patient's grandmother had esophageal cancer.
+- gerd | verification_status=unconfirmed | clinical_status=active | modalities=assessment,interview | speakers=doctor,patient | evidence=T55,T66
+  Summary: The doctor suspects that she likely has Gerd with underlying functional etiology.
+  ClusterId: CL17
+  TemporalProfile: current, persistent, suspected
+  Updates:
+  - CAP20: content_source=doctor modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T55 :: The patient has GERD.
+  - CAP1: content_source=doctor modality=assessment verification_status=unconfirmed clinical_status=active temporality=suspected turns=T66 :: The doctor suspects that she likely has Gerd with underlying functional etiology.
+  - CAP9: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=persistent turns=T66 :: The patient denies unintentional weight loss.
+- dysphagia | verification_status=unconfirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T66
+  Summary: The patient denies dysphagia.
+  ClusterId: CL21
+  TemporalProfile: denied
+  Updates:
+  - CAP21: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=denied turns=T66 :: The patient denies dysphagia.
+
+Medication Tracking
+- [MedicationState] omeprazole | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=doctor,patient | evidence=T10,T42,T59
+  Summary: The patient takes 40 milligrams of omeprazole twice a day.
+  ClusterId: CL3
+  TemporalProfile: current, twice daily
+  CurrentRegimens:
+  - The patient takes 40 milligrams of omeprazole twice a day. (T10)
+  - The patient takes 40 milligrams of omeprazole twice a day. (T10)
+  - The patient is taking omeprazole. (T42)
+  - The patient is currently taking omeprazole. (T59)
+  Updates:
+  - CAP28: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T10 :: The patient takes 40 milligrams of omeprazole twice a day.
+  - CAP29: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=twice daily turns=T10 :: The patient takes 40 milligrams of omeprazole twice a day.
+  - CAP34: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T42 :: The patient is taking omeprazole.
+  - CAP32: content_source=doctor modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T59 :: The patient is currently taking omeprazole.
+- [MedicationState] medication that coats the lining of your stomach | verification_status=unconfirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T42
+  Summary: The patient previously took medication that coats the lining of their stomach.
+  ClusterId: CL15
+  TemporalProfile: past
+  CurrentRegimens:
+  - The patient previously took medication that coats the lining of their stomach. (T42)
+  Updates:
+  - CAP27: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=past turns=T42 :: The patient previously took medication that coats the lining of their stomach.
+- [MedicationChange] nexium | verification_status=unconfirmed | clinical_status=planned | modalities=interview,plan | speakers=doctor | evidence=T59,T66
+  Summary: A trial of nexium will be considered.
+  ClusterId: CL18
+  TemporalProfile: future, trial
+  PlannedChanges:
+  - The patient will start taking nexium. (T59)
+  - A trial of nexium will be considered. (T66)
+  Updates:
+  - CAP33: content_source=doctor modality=interview verification_status=unconfirmed clinical_status=planned temporality=future turns=T59 :: The patient will start taking nexium.
+  - CAP30: content_source=doctor modality=plan verification_status=unconfirmed clinical_status=planned temporality=trial turns=T66 :: A trial of nexium will be considered.
+- [MedicationChange] protonix | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T66
+  Summary: A trial of protonix may be considered.
+  ClusterId: CL24
+  TemporalProfile: trial
+  PlannedChanges:
+  - A trial of protonix may be considered. (T66)
+  Updates:
+  - CAP31: content_source=doctor modality=plan verification_status=unconfirmed clinical_status=planned temporality=trial turns=T66 :: A trial of protonix may be considered.
+
+Other Structured States
+- [ExamFinding] upper endoscopy | verification_status=unconfirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T43
+  Summary: The patient had an upper endoscopy in the past.
+  ClusterId: CL16
+  TemporalProfile: younger
+- [Plan] prescription | verification_status=unconfirmed | clinical_status=planned | modalities=interview | speakers=doctor | evidence=T61
+  Summary: A prescription for nexium will be sent to the patient's pharmacy.
+  ClusterId: CL19
+  TemporalProfile: future
+- [Plan] endoscopy | verification_status=unconfirmed | clinical_status=planned | modalities=interview | speakers=doctor | evidence=T61
+  Summary: An upper endoscopy (egd) is recommended.
+  ClusterId: CL20
+  TemporalProfile: future
+- [TestResult] ph-impedance study | verification_status=unconfirmed | clinical_status=planned | modalities=assessment | speakers=doctor | evidence=T66
+  Summary: A pH-impedance study will be obtained.
+  ClusterId: CL22
+  TemporalProfile: future
+- [Plan] egd | verification_status=unconfirmed | clinical_status=active | modalities=plan | speakers=doctor | evidence=T66
+  Summary: An EGD is scheduled.
+  ClusterId: CL23
+  TemporalProfile: future

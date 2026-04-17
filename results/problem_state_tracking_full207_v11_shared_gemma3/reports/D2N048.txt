@@ -1,0 +1,144 @@
+Case: D2N048
+
+Problem List and Visit State Tracking
+
+Problem List
+- right foot pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T0,T3,T5
+  Summary: The patient reports right foot pain.
+  ClusterId: CL1
+  TemporalProfile: current
+  Updates:
+  - CAP1: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T0,T3,T5 :: The patient reports right foot pain.
+- left leg injury | verification_status=unconfirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T7
+  Summary: The patient has a prior injury to their left leg.
+  ClusterId: CL2
+  TemporalProfile: prior
+  Updates:
+  - CAP3: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=prior turns=T7 :: The patient has a prior injury to their left leg.
+- tennis injury | verification_status=unconfirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T7
+  Summary: The patient has a prior injury to their foot.
+  ClusterId: CL3
+  TemporalProfile: prior
+  Updates:
+  - CAP5: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=prior turns=T7 :: The patient has a prior injury to their foot.
+- foot pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T11,T21
+  Summary: The patient reports pain in their foot.
+  ClusterId: CL4
+  TemporalProfile: current
+  Updates:
+  - CAP10: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T11 :: The patient reports pain in their foot.
+  - CAP15: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T21 :: The patient reports foot pain.
+- foot injury | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T11
+  Summary: The patient has a foot injury.
+  ClusterId: CL5
+  TemporalProfile: current
+  Updates:
+  - CAP13: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T11 :: The patient has a foot injury.
+- numbness | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T19
+  Summary: The patient denies numbness.
+  ClusterId: CL7
+  TemporalProfile: current
+  Updates:
+  - CAP16: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T19 :: The patient denies numbness.
+- bruising | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T28
+  Summary: The patient has bruising.
+  ClusterId: CL8
+  TemporalProfile: current
+  Updates:
+  - CAP17: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T28 :: The patient has bruising.
+- stridor | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T28
+  Summary: The patient reports stridor.
+  ClusterId: CL9
+  TemporalProfile: current
+  Updates:
+  - CAP18: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T28 :: The patient reports stridor.
+- lisfranc fracture | verification_status=confirmed | clinical_status=active | modalities=exam | speakers=doctor | evidence=T30
+  Summary: The patient has a Lisfranc fracture.
+  ClusterId: CL10
+  TemporalProfile: current
+  Updates:
+  - CAP14: content_source=doctor modality=exam verification_status=confirmed clinical_status=active temporality=current turns=T30 :: The patient has a Lisfranc fracture.
+- foot instability | verification_status=confirmed | clinical_status=active | modalities=unknown | speakers=doctor | evidence=T31
+  Summary: The doctor believes the patient has foot instability.
+  ClusterId: CL13
+  TemporalProfile: current
+  Updates:
+  - CAP8: content_source=doctor modality=unknown verification_status=confirmed clinical_status=active temporality=current turns=T31 :: The doctor believes the patient has foot instability.
+- driving | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T35
+  Summary: The patient is concerned about being unable to drive.
+  ClusterId: CL14
+  TemporalProfile: current
+  Updates:
+  - CAP6: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T35 :: The patient is concerned about being unable to drive.
+- pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T41
+  Summary: The patient reports pain in the left hand.
+  ClusterId: CL18
+  TemporalProfile: current
+  Updates:
+  - CAP9: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T41 :: The patient reports pain in the left hand.
+- injury | verification_status=unconfirmed | clinical_status=planned | modalities=unknown | speakers=doctor | evidence=T41
+  Summary: The doctor recommends physical therapy after surgery.
+  ClusterId: CL19
+  TemporalProfile: future
+  Updates:
+  - CAP11: content_source=doctor modality=unknown verification_status=unconfirmed clinical_status=planned temporality=future turns=T41 :: The doctor recommends physical therapy after surgery.
+- loss of sensation | verification_status=unconfirmed | clinical_status=active | modalities=unknown | speakers=doctor | evidence=T52
+  Summary: The doctor mentions risks of loss of sensation associated with surgery.
+  ClusterId: CL20
+  TemporalProfile: future
+  Updates:
+  - CAP2: content_source=doctor modality=unknown verification_status=unconfirmed clinical_status=active temporality=future turns=T52 :: The doctor mentions risks of loss of sensation associated with surgery.
+- nerve damage | verification_status=unconfirmed | clinical_status=active | modalities=unknown | speakers=doctor | evidence=T52
+  Summary: The doctor mentions risks of nerve damage associated with surgery.
+  ClusterId: CL21
+  TemporalProfile: future
+  Updates:
+  - CAP4: content_source=doctor modality=unknown verification_status=unconfirmed clinical_status=active temporality=future turns=T52 :: The doctor mentions risks of nerve damage associated with surgery.
+- bleeding | verification_status=unconfirmed | clinical_status=active | modalities=unknown | speakers=doctor | evidence=T52
+  Summary: The doctor mentions risks of bleeding associated with surgery.
+  ClusterId: CL22
+  TemporalProfile: future
+  Updates:
+  - CAP7: content_source=doctor modality=unknown verification_status=unconfirmed clinical_status=active temporality=future turns=T52 :: The doctor mentions risks of bleeding associated with surgery.
+- surgical procedure risks | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T55
+  Summary: There are risks associated with surgical procedures.
+  ClusterId: CL23
+  TemporalProfile: associated with
+  Updates:
+  - CAP12: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=associated with turns=T55 :: There are risks associated with surgical procedures.
+
+Medication Tracking
+- [MedicationState] ibuprofen | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T13
+  Summary: The patient took ibuprofen.
+  ClusterId: CL6
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient took ibuprofen. (T13)
+  Updates:
+  - CAP24: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T13 :: The patient took ibuprofen.
+- [MedicationChange] mri | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T30
+  Summary: An MRI is ordered.
+  ClusterId: CL12
+  TemporalProfile: future
+  PlannedChanges:
+  - An MRI is ordered. (T30)
+  Updates:
+  - CAP23: content_source=doctor modality=plan verification_status=unconfirmed clinical_status=planned temporality=future turns=T30 :: An MRI is ordered.
+
+Other Structured States
+- [Plan] mri | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T30
+  Summary: An MRI is ordered.
+  ClusterId: CL11
+  TemporalProfile: future
+- [Plan] cast | verification_status=confirmed | clinical_status=planned | modalities=assessment | speakers=doctor | evidence=T38
+  Summary: The patient will wear a cast for six to eight weeks.
+  ClusterId: CL15
+  TemporalProfile: within 6-8 weeks
+- [Plan] follow-up | verification_status=confirmed | clinical_status=planned | modalities=assessment | speakers=doctor | evidence=T38
+  Summary: The patient will follow up with the doctor in a week.
+  ClusterId: CL16
+  TemporalProfile: within a week
+- [Plan] crutches | verification_status=confirmed | clinical_status=planned | modalities=assessment | speakers=doctor | evidence=T38
+  Summary: The patient will use crutches for six to eight weeks.
+  ClusterId: CL17
+  TemporalProfile: within 6-8 weeks

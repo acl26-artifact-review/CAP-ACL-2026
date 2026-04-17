@@ -1,0 +1,79 @@
+Case: D2N135
+
+Problem List and Visit State Tracking
+
+Problem List
+- high blood sugar | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T0
+  Summary: The patient reports high blood sugar.
+  ClusterId: CL1
+  TemporalProfile: current
+  Updates:
+  - CAP2: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T0 :: The patient reports high blood sugar.
+- seeing spots | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T6
+  Summary: The patient reports seeing spots.
+  ClusterId: CL2
+  TemporalProfile: current
+  Updates:
+  - CAP3: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T6 :: The patient reports seeing spots.
+- holiday treats | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T6
+  Summary: The patient reports being surrounded by holiday treats.
+  ClusterId: CL3
+  TemporalProfile: recent
+  Updates:
+  - CAP11: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=recent turns=T6 :: The patient reports being surrounded by holiday treats.
+- dizziness | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T8
+  Summary: The patient reports dizziness.
+  ClusterId: CL4
+  TemporalProfile: current
+  Updates:
+  - CAP6: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T8 :: The patient reports dizziness.
+- eating sweets | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T8
+  Summary: The patient reports eating a lot of sweets recently.
+  ClusterId: CL5
+  TemporalProfile: recent
+  Updates:
+  - CAP10: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=recent turns=T8 :: The patient reports eating a lot of sweets recently.
+- joint pain | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T17
+  Summary: The patient reports joint pain.
+  ClusterId: CL6
+  TemporalProfile: current
+  Updates:
+  - CAP5: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T17 :: The patient reports joint pain.
+- osteoarthritis | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T20
+  Summary: The patient reports having osteoarthritis.
+  ClusterId: CL7
+  TemporalProfile: past
+  Updates:
+  - CAP4: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=past turns=T20 :: The patient reports having osteoarthritis.
+- diabetes | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=doctor | evidence=T28
+  Summary: The patient has been diagnosed with diabetes.
+  ClusterId: CL11
+  TemporalProfile: current
+  Updates:
+  - CAP1: content_source=doctor modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T28 :: The patient has been diagnosed with diabetes.
+- pain | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T32
+  Summary: The patient reports pain.
+  ClusterId: CL12
+  TemporalProfile: current
+  Updates:
+  - CAP7: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T32 :: The patient reports pain.
+
+Medication Tracking
+- [MedicationChange] metformin | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T27
+  Summary: The patient will be started on metformin, 500 milligrams, twice a day.
+  ClusterId: CL8
+  TemporalProfile: current
+  PlannedChanges:
+  - The patient will be started on metformin, 500 milligrams, twice a day. (T27)
+  Updates:
+  - CAP8: content_source=doctor modality=plan verification_status=unconfirmed clinical_status=planned temporality=current turns=T27 :: The patient will be started on metformin, 500 milligrams, twice a day.
+
+Other Structured States
+- [Plan] complete metabolic panel | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T27
+  Summary: A complete metabolic panel has been ordered.
+  ClusterId: CL9
+  TemporalProfile: current
+- [Plan] glucometer | verification_status=unconfirmed | clinical_status=planned | modalities=interview | speakers=doctor | evidence=T27
+  Summary: The nurse will teach the patient how to do blood sugar testing using a glucometer.
+  ClusterId: CL10
+  TemporalProfile: current

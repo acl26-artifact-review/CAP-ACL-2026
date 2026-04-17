@@ -1,0 +1,2431 @@
+{
+  "case_id": "D2N067",
+  "method": "cluster2sent",
+  "template": "soap",
+  "summary_text": "S:\nThe patient reports a history of a skiing injury two weeks ago, resulting in pain and instability in his left knee. He describes persistent pain, stiffness, and swelling, particularly in the morning. He also reports radiating pain down his ankle. The patient reports using a brace and THC cream for pain relief and taking THC gummies. He has had previous knee surgery related to a back injury and a pop sensation.\n\nO:\nPhysical examination reveals mild swelling and bruising in both knees. Range of motion is limited due to pain. Dorsiflexion causes pain in the right knee, but not plantar flexion. X-rays demonstrate the development of arthritis and no fracture.\n\nA:\nThe patient has a probable posterior cruciate ligament strain in the right knee and mild pain in the left knee. The patient's history of prior knee surgery and the reported pop sensation suggest a possible history of instability.\n\nP:\nRescribe meloxicam 15 mg daily for right knee pain and ibuprofen 800 mg twice daily as needed for left knee pain. Recommend physical therapy three times per week to improve strength and stability in the right knee. Advise against skiing or gymnastics for now. Schedule follow-up in two weeks to assess progress.",
+  "reference_summary": "CHIEF COMPLAINT\n\nRight knee injury.\n\nHISTORY OF PRESENT ILLNESS\n\nElizabeth Ross is a pleasant 91-year-old female who presents to the clinic today for the evaluation of a right knee injury. The onset of her pain began 2 weeks ago, when she was downhill skiing. She states she ran into a tree and twisted her right knee. At the time of the injury, she also heard a pop in her left knee, however she denies left knee pain. The patient locates her pain to the medial aspect of her right knee. Currently, her pain level is 7 out of 10, however she notes this can reach an 11 out of 10 at times with prolonged ambulation. The patient states that her pain has been slowly increasing over the last few days. She experiences limping with ambulation. The patient states that her pain lasts for as long as she is ambulating. She denies radiating pain. She also reports constant swelling and stiffness in the morning. Her stiffness will resolve with ambulation. The patient has been wearing a brace and using THC cream, which has been helpful. She denies taking any medications for pain, however she has been utilizing THC gummies, which have been beneficial.\n\nThe patient has a history of a right knee reconstruction when she was 14 years old. She states that she was a good gymnast at that time. The patient adds that she has had problems with her right knee since that time. She denies any other exercises outside of intense gym and ski events. The patient states that she normally skis 3 times per week.\n\nSURGICAL HISTORY\n\nThe patient reports a history of total right knee reconstruction at the age of 14.\n\nMEDICATIONS\n\nShe denies needing medications.\n\nREVIEW OF SYSTEMS\n\nMusculoskeletal: Reports right knee pain, swelling, and stiffness. Denies left knee pain.\n\nPHYSICAL EXAM\n\nMSK: Examination of the right knee: Mild effusion. The patient ambulated with an antalgic gait. Pain with dorsiflexion, but not with plantarflexion.\n\nRESULTS\n\n4 views of the right knee were taken. These reveal no evidence of any fractures. There is development of mild arthritis.\n\nASSESSMENT\n\n1. Right knee posterior cruciate ligament strain.\n\nPLAN\n\nAfter reviewing the patient's examination and radiographic findings today, I have had a lengthy discussion with the patient in regard to her current symptoms. I have explained to her that her x-rays did not reveal any signs of a fracture. I have recommended that we treat the patient conservatively with continued bracing. We will initiate formal physical therapy 3 times per week to strengthen her right knee. Additionally, I have prescribed the patient meloxicam 15 mg and ibuprofen 800 mg twice daily as needed. She should discontinue the use of her THC gummies while taking these medications.\n\nRegarding her left knee, I do not believe she will need any further medications to treat this. I have advised her to avoid skiing or gymnastics at this time.",
+  "source_cap": {
+    "atomic_propositions": [
+      {
+        "prop_id": "CAP1",
+        "cap_type": "Symptom",
+        "canonical_concept": "pain",
+        "category": "Symptom",
+        "speaker": "doctor",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports left-sided pain lasting as long as their walk."
+      },
+      {
+        "prop_id": "CAP2",
+        "cap_type": "Symptom",
+        "canonical_concept": "skiing",
+        "category": "Symptom",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient regularly skis."
+      },
+      {
+        "prop_id": "CAP3",
+        "cap_type": "Problem",
+        "canonical_concept": "strain",
+        "category": "Problem",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The doctor believes the patient has a strain of the posterior cruciate ligament."
+      },
+      {
+        "prop_id": "CAP4",
+        "cap_type": "Symptom",
+        "canonical_concept": "knee pain",
+        "category": "Symptom",
+        "speaker": "doctor",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "quantitative",
+          "symptom"
+        ],
+        "proposition_text": "The patient reports knee pain with a severity of 7."
+      },
+      {
+        "prop_id": "CAP5",
+        "cap_type": "Symptom",
+        "canonical_concept": "knee pain",
+        "category": "Symptom",
+        "speaker": "doctor",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "quantitative",
+          "symptom"
+        ],
+        "proposition_text": "The patient reports knee pain with a severity of 11."
+      },
+      {
+        "prop_id": "CAP6",
+        "cap_type": "Symptom",
+        "canonical_concept": "knee pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports left knee pain is not present."
+      },
+      {
+        "prop_id": "CAP7",
+        "cap_type": "Problem",
+        "canonical_concept": "knee injury",
+        "category": "Problem",
+        "speaker": "patient",
+        "status": "uncertain",
+        "visit_state": "historical",
+        "temporality": "past",
+        "proposition_text": "The patient has a history of a knee injury."
+      },
+      {
+        "prop_id": "CAP8",
+        "cap_type": "Symptom",
+        "canonical_concept": "pain",
+        "category": "Symptom",
+        "speaker": "doctor",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "quantitative",
+          "symptom"
+        ],
+        "proposition_text": "The patient reports pain at a severity of 11."
+      },
+      {
+        "prop_id": "CAP9",
+        "cap_type": "Problem",
+        "canonical_concept": "knee pain",
+        "category": "Problem",
+        "speaker": "doctor",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient reports pain in the right inside knee."
+      },
+      {
+        "prop_id": "CAP10",
+        "cap_type": "Symptom",
+        "canonical_concept": "knee pain",
+        "category": "Symptom",
+        "speaker": "doctor",
+        "predicate": "denies",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient denies pain in the right outside knee."
+      },
+      {
+        "prop_id": "CAP11",
+        "cap_type": "Symptom",
+        "canonical_concept": "knee pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports pain in the right knee."
+      },
+      {
+        "prop_id": "CAP12",
+        "cap_type": "Symptom",
+        "canonical_concept": "left hand pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports pain in the left hand."
+      },
+      {
+        "prop_id": "CAP13",
+        "cap_type": "Symptom",
+        "canonical_concept": "knee pain",
+        "category": "Symptom",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient is experiencing bilateral knee pain."
+      },
+      {
+        "prop_id": "CAP14",
+        "cap_type": "Symptom",
+        "canonical_concept": "knee pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports high right knee pain."
+      },
+      {
+        "prop_id": "CAP15",
+        "cap_type": "Symptom",
+        "canonical_concept": "pain tolerance",
+        "category": "Symptom",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient has a high pain tolerance."
+      },
+      {
+        "prop_id": "CAP16",
+        "cap_type": "Symptom",
+        "canonical_concept": "shooting pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient describes a shooting pain."
+      },
+      {
+        "prop_id": "CAP17",
+        "cap_type": "Symptom",
+        "canonical_concept": "pop",
+        "category": "Symptom",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient heard a pop."
+      },
+      {
+        "prop_id": "CAP18",
+        "cap_type": "Symptom",
+        "canonical_concept": "knee instability",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports knee instability."
+      },
+      {
+        "prop_id": "CAP19",
+        "cap_type": "Problem",
+        "canonical_concept": "hand pain",
+        "category": "Problem",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient has hand pain."
+      },
+      {
+        "prop_id": "CAP20",
+        "cap_type": "Symptom",
+        "canonical_concept": "swelling",
+        "category": "Symptom",
+        "speaker": "doctor",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports mild swelling."
+      },
+      {
+        "prop_id": "CAP21",
+        "cap_type": "Problem",
+        "canonical_concept": "knee pain",
+        "category": "Problem",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient reports knee pain."
+      },
+      {
+        "prop_id": "CAP22",
+        "cap_type": "Problem",
+        "canonical_concept": "knee swelling",
+        "category": "Problem",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient reports knee swelling."
+      },
+      {
+        "prop_id": "CAP23",
+        "cap_type": "Symptom",
+        "canonical_concept": "pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports pain."
+      },
+      {
+        "prop_id": "CAP24",
+        "cap_type": "Problem",
+        "canonical_concept": "pain",
+        "category": "Problem",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient has pain."
+      },
+      {
+        "prop_id": "CAP25",
+        "cap_type": "Symptom",
+        "canonical_concept": "swelling",
+        "category": "Symptom",
+        "speaker": "doctor",
+        "predicate": "reports",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports swelling."
+      },
+      {
+        "prop_id": "CAP26",
+        "cap_type": "Symptom",
+        "canonical_concept": "stiffness",
+        "category": "Symptom",
+        "speaker": "doctor",
+        "predicate": "reports",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports stiffness."
+      },
+      {
+        "prop_id": "CAP27",
+        "cap_type": "Symptom",
+        "canonical_concept": "tenderness",
+        "category": "Symptom",
+        "speaker": "doctor",
+        "predicate": "reports",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports tenderness."
+      },
+      {
+        "prop_id": "CAP28",
+        "cap_type": "Symptom",
+        "canonical_concept": "bruising",
+        "category": "Symptom",
+        "speaker": "doctor",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports bruising."
+      },
+      {
+        "prop_id": "CAP29",
+        "cap_type": "MedicationRequest",
+        "canonical_concept": "ibuprofen",
+        "category": "MedicationRequest",
+        "speaker": "doctor",
+        "predicate": "prescribes",
+        "status": "uncertain",
+        "visit_state": "planned",
+        "temporality": "future",
+        "proposition_text": "The doctor prescribes ibuprofen eight hundred milligrams to be taken twice a day as needed."
+      },
+      {
+        "prop_id": "CAP30",
+        "cap_type": "MedicationRequest",
+        "canonical_concept": "meloxicam",
+        "category": "MedicationRequest",
+        "speaker": "doctor",
+        "predicate": "prescribes",
+        "status": "uncertain",
+        "visit_state": "planned",
+        "temporality": "future",
+        "proposition_text": "The doctor prescribes meloxicam fifteen milligrams to be taken once a day."
+      },
+      {
+        "prop_id": "CAP31",
+        "cap_type": "Order",
+        "canonical_concept": "brace",
+        "category": "Order",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "planned",
+        "temporality": "current",
+        "proposition_text": "The patient wears a brace."
+      },
+      {
+        "prop_id": "CAP32",
+        "cap_type": "ExamFinding",
+        "canonical_concept": "mild swelling",
+        "category": "ExamFinding",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "There is mild swelling."
+      },
+      {
+        "prop_id": "CAP33",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "THC gummies",
+        "category": "MedicationStatement",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient takes THC gummies."
+      },
+      {
+        "prop_id": "CAP34",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "THC",
+        "category": "MedicationStatement",
+        "speaker": "doctor",
+        "predicate": "denies",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient denies taking THC."
+      },
+      {
+        "prop_id": "CAP35",
+        "cap_type": "ProblemHistory",
+        "canonical_concept": "knee injury",
+        "category": "ProblemHistory",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "two weeks ago",
+        "proposition_text": "The patient injured their knee two weeks ago while skiing."
+      },
+      {
+        "prop_id": "CAP36",
+        "cap_type": "ProblemHistory",
+        "canonical_concept": "knee injury",
+        "category": "ProblemHistory",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "past",
+        "proposition_text": "The patient had a knee injury fourteen years ago."
+      },
+      {
+        "prop_id": "CAP37",
+        "cap_type": "ProblemHistory",
+        "canonical_concept": "knee twisting",
+        "category": "ProblemHistory",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "two weeks ago",
+        "proposition_text": "The patient twisted their knee two weeks ago."
+      },
+      {
+        "prop_id": "CAP38",
+        "cap_type": "ProblemHistory",
+        "canonical_concept": "reconstructive surgery",
+        "category": "ProblemHistory",
+        "speaker": "patient",
+        "status": "uncertain",
+        "visit_state": "historical",
+        "temporality": "past",
+        "proposition_text": "The patient's knee surgery involved reconstructive surgery."
+      },
+      {
+        "prop_id": "CAP39",
+        "cap_type": "ProblemHistory",
+        "canonical_concept": "back surgery",
+        "category": "ProblemHistory",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "past",
+        "proposition_text": "The patient had surgery on their back."
+      },
+      {
+        "prop_id": "CAP40",
+        "cap_type": "ProblemHistory",
+        "canonical_concept": "gymnastics",
+        "category": "ProblemHistory",
+        "speaker": "patient",
+        "status": "uncertain",
+        "visit_state": "historical",
+        "temporality": "past",
+        "proposition_text": "The patient was a good gymnast."
+      },
+      {
+        "prop_id": "CAP41",
+        "cap_type": "ProblemHistory",
+        "canonical_concept": "knee surgery",
+        "category": "ProblemHistory",
+        "speaker": "patient",
+        "status": "uncertain",
+        "visit_state": "historical",
+        "temporality": "past",
+        "proposition_text": "The patient had knee surgery."
+      }
+    ],
+    "filtered_nonverifiable_units": []
+  },
+  "event_plan": null,
+  "summary_cap": {
+    "atomic_propositions": [
+      {
+        "prop_id": "P1",
+        "cap_type": "History",
+        "canonical_concept": "history skiing injury two",
+        "category": "History",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "past",
+        "claim_type_tags": [
+          "temporal"
+        ],
+        "proposition_text": "The patient reports a history of a skiing injury two weeks ago"
+      },
+      {
+        "prop_id": "P2",
+        "cap_type": "Symptom",
+        "canonical_concept": "pain:knee",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports pain in his left knee"
+      },
+      {
+        "prop_id": "P3",
+        "cap_type": "Symptom",
+        "canonical_concept": "instability his left knee",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports instability in his left knee"
+      },
+      {
+        "prop_id": "P4",
+        "cap_type": "Symptom",
+        "canonical_concept": "pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports persistent pain"
+      },
+      {
+        "prop_id": "P5",
+        "cap_type": "Symptom",
+        "canonical_concept": "stiffness",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports stiffness"
+      },
+      {
+        "prop_id": "P6",
+        "cap_type": "Symptom",
+        "canonical_concept": "swelling his left knee",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports swelling in his left knee"
+      },
+      {
+        "prop_id": "P7",
+        "cap_type": "Symptom",
+        "canonical_concept": "pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports radiating pain down his ankle"
+      },
+      {
+        "prop_id": "P8",
+        "cap_type": "MedicationPlan",
+        "canonical_concept": "pain",
+        "category": "MedicationPlan",
+        "speaker": "patient",
+        "predicate": "takes",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "medication"
+        ],
+        "proposition_text": "The patient takes a brace for pain relief"
+      },
+      {
+        "prop_id": "P9",
+        "cap_type": "MedicationPlan",
+        "canonical_concept": "pain",
+        "category": "MedicationPlan",
+        "speaker": "patient",
+        "predicate": "takes",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "medication"
+        ],
+        "proposition_text": "The patient takes THC cream for pain relief"
+      },
+      {
+        "prop_id": "P10",
+        "cap_type": "MedicationPlan",
+        "canonical_concept": "takes thc gummies",
+        "category": "MedicationPlan",
+        "speaker": "patient",
+        "predicate": "takes",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "medication"
+        ],
+        "proposition_text": "The patient takes THC gummies"
+      },
+      {
+        "prop_id": "P11",
+        "cap_type": "History",
+        "canonical_concept": "previous knee surgery related",
+        "category": "History",
+        "speaker": "patient",
+        "predicate": "has",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "past",
+        "claim_type_tags": [
+          "diagnostic"
+        ],
+        "proposition_text": "The patient has had previous knee surgery related to a back injury"
+      },
+      {
+        "prop_id": "P12",
+        "cap_type": "History",
+        "canonical_concept": "sensory change",
+        "category": "History",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "past",
+        "claim_type_tags": [
+          "temporal"
+        ],
+        "proposition_text": "The patient reports a pop sensation"
+      },
+      {
+        "prop_id": "P13",
+        "cap_type": "MedicationPlan",
+        "canonical_concept": "pain:knee",
+        "category": "MedicationPlan",
+        "speaker": "clinician",
+        "predicate": "prescribes",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "medication"
+        ],
+        "proposition_text": "The clinician prescribes meloxicam 15 mg daily for right knee pain."
+      },
+      {
+        "prop_id": "P14",
+        "cap_type": "MedicationPlan",
+        "canonical_concept": "pain:knee",
+        "category": "MedicationPlan",
+        "speaker": "clinician",
+        "predicate": "prescribes",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "medication"
+        ],
+        "proposition_text": "The clinician prescribes ibuprofen 800 mg twice daily as needed for left knee pain."
+      },
+      {
+        "prop_id": "P15",
+        "cap_type": "Plan",
+        "canonical_concept": "recommends physical therapy three",
+        "category": "Plan",
+        "speaker": "clinician",
+        "predicate": "recommends",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "plan"
+        ],
+        "proposition_text": "The clinician recommends physical therapy three times per week."
+      },
+      {
+        "prop_id": "P16",
+        "cap_type": "Plan",
+        "canonical_concept": "advises against skiing gymnastics",
+        "category": "Plan",
+        "speaker": "clinician",
+        "predicate": "instructs",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "plan"
+        ],
+        "proposition_text": "The clinician advises against skiing or gymnastics."
+      },
+      {
+        "prop_id": "P17",
+        "cap_type": "FollowUpPlan",
+        "canonical_concept": "plans follow-up two weeks",
+        "category": "FollowUpPlan",
+        "speaker": "clinician",
+        "predicate": "plans",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "future",
+        "claim_type_tags": [
+          "plan"
+        ],
+        "proposition_text": "The clinician plans a follow-up in two weeks."
+      }
+    ],
+    "filtered_nonverifiable_units": [],
+    "runtime_seconds": 26.92
+  },
+  "cap_alignment": {
+    "cap_precision": 0.7647058823529411,
+    "cap_recall": 0.3170731707317073,
+    "cap_f1": 0.4482758620689655,
+    "matched_count": 13,
+    "summary_prop_count": 17,
+    "source_prop_count": 41,
+    "matched_pairs": [
+      {
+        "score": 1.0,
+        "summary_prop_id": "P14",
+        "source_prop_id": "CAP21",
+        "summary_text": "The clinician prescribes ibuprofen 800 mg twice daily as needed for left knee pain.",
+        "source_text": "The patient reports knee pain."
+      },
+      {
+        "score": 1.0,
+        "summary_prop_id": "P13",
+        "source_prop_id": "CAP14",
+        "summary_text": "The clinician prescribes meloxicam 15 mg daily for right knee pain.",
+        "source_text": "The patient reports high right knee pain."
+      },
+      {
+        "score": 1.0,
+        "summary_prop_id": "P10",
+        "source_prop_id": "CAP33",
+        "summary_text": "The patient takes THC gummies",
+        "source_text": "The patient takes THC gummies."
+      },
+      {
+        "score": 1.0,
+        "summary_prop_id": "P9",
+        "source_prop_id": "CAP24",
+        "summary_text": "The patient takes THC cream for pain relief",
+        "source_text": "The patient has pain."
+      },
+      {
+        "score": 1.0,
+        "summary_prop_id": "P8",
+        "source_prop_id": "CAP23",
+        "summary_text": "The patient takes a brace for pain relief",
+        "source_text": "The patient reports pain."
+      },
+      {
+        "score": 1.0,
+        "summary_prop_id": "P7",
+        "source_prop_id": "CAP8",
+        "summary_text": "The patient reports radiating pain down his ankle",
+        "source_text": "The patient reports pain at a severity of 11."
+      },
+      {
+        "score": 1.0,
+        "summary_prop_id": "P5",
+        "source_prop_id": "CAP26",
+        "summary_text": "The patient reports stiffness",
+        "source_text": "The patient reports stiffness."
+      },
+      {
+        "score": 1.0,
+        "summary_prop_id": "P4",
+        "source_prop_id": "CAP1",
+        "summary_text": "The patient reports persistent pain",
+        "source_text": "The patient reports left-sided pain lasting as long as their walk."
+      },
+      {
+        "score": 1.0,
+        "summary_prop_id": "P2",
+        "source_prop_id": "CAP13",
+        "summary_text": "The patient reports pain in his left knee",
+        "source_text": "The patient is experiencing bilateral knee pain."
+      },
+      {
+        "score": 0.8195,
+        "summary_prop_id": "P3",
+        "source_prop_id": "CAP18",
+        "summary_text": "The patient reports instability in his left knee",
+        "source_text": "The patient reports knee instability."
+      },
+      {
+        "score": 0.7692,
+        "summary_prop_id": "P6",
+        "source_prop_id": "CAP22",
+        "summary_text": "The patient reports swelling in his left knee",
+        "source_text": "The patient reports knee swelling."
+      },
+      {
+        "score": 0.748,
+        "summary_prop_id": "P11",
+        "source_prop_id": "CAP41",
+        "summary_text": "The patient has had previous knee surgery related to a back injury",
+        "source_text": "The patient had knee surgery."
+      },
+      {
+        "score": 0.7273,
+        "summary_prop_id": "P12",
+        "source_prop_id": "CAP17",
+        "summary_text": "The patient reports a pop sensation",
+        "source_text": "The patient heard a pop."
+      }
+    ],
+    "unsupported_summary_props": [
+      {
+        "prop_id": "P1",
+        "cap_type": "History",
+        "canonical_concept": "history skiing injury two",
+        "category": "History",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "past",
+        "claim_type_tags": [
+          "temporal"
+        ],
+        "proposition_text": "The patient reports a history of a skiing injury two weeks ago"
+      },
+      {
+        "prop_id": "P15",
+        "cap_type": "Plan",
+        "canonical_concept": "recommends physical therapy three",
+        "category": "Plan",
+        "speaker": "clinician",
+        "predicate": "recommends",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "plan"
+        ],
+        "proposition_text": "The clinician recommends physical therapy three times per week."
+      },
+      {
+        "prop_id": "P16",
+        "cap_type": "Plan",
+        "canonical_concept": "advises against skiing gymnastics",
+        "category": "Plan",
+        "speaker": "clinician",
+        "predicate": "instructs",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "plan"
+        ],
+        "proposition_text": "The clinician advises against skiing or gymnastics."
+      },
+      {
+        "prop_id": "P17",
+        "cap_type": "FollowUpPlan",
+        "canonical_concept": "plans follow-up two weeks",
+        "category": "FollowUpPlan",
+        "speaker": "clinician",
+        "predicate": "plans",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "future",
+        "claim_type_tags": [
+          "plan"
+        ],
+        "proposition_text": "The clinician plans a follow-up in two weeks."
+      }
+    ],
+    "missing_source_props": [
+      {
+        "prop_id": "CAP2",
+        "cap_type": "Symptom",
+        "canonical_concept": "skiing",
+        "category": "Symptom",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient regularly skis."
+      },
+      {
+        "prop_id": "CAP3",
+        "cap_type": "Problem",
+        "canonical_concept": "strain",
+        "category": "Problem",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The doctor believes the patient has a strain of the posterior cruciate ligament."
+      },
+      {
+        "prop_id": "CAP4",
+        "cap_type": "Symptom",
+        "canonical_concept": "knee pain",
+        "category": "Symptom",
+        "speaker": "doctor",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "quantitative",
+          "symptom"
+        ],
+        "proposition_text": "The patient reports knee pain with a severity of 7."
+      },
+      {
+        "prop_id": "CAP5",
+        "cap_type": "Symptom",
+        "canonical_concept": "knee pain",
+        "category": "Symptom",
+        "speaker": "doctor",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "quantitative",
+          "symptom"
+        ],
+        "proposition_text": "The patient reports knee pain with a severity of 11."
+      },
+      {
+        "prop_id": "CAP6",
+        "cap_type": "Symptom",
+        "canonical_concept": "knee pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports left knee pain is not present."
+      },
+      {
+        "prop_id": "CAP7",
+        "cap_type": "Problem",
+        "canonical_concept": "knee injury",
+        "category": "Problem",
+        "speaker": "patient",
+        "status": "uncertain",
+        "visit_state": "historical",
+        "temporality": "past",
+        "proposition_text": "The patient has a history of a knee injury."
+      },
+      {
+        "prop_id": "CAP9",
+        "cap_type": "Problem",
+        "canonical_concept": "knee pain",
+        "category": "Problem",
+        "speaker": "doctor",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient reports pain in the right inside knee."
+      },
+      {
+        "prop_id": "CAP10",
+        "cap_type": "Symptom",
+        "canonical_concept": "knee pain",
+        "category": "Symptom",
+        "speaker": "doctor",
+        "predicate": "denies",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient denies pain in the right outside knee."
+      },
+      {
+        "prop_id": "CAP11",
+        "cap_type": "Symptom",
+        "canonical_concept": "knee pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports pain in the right knee."
+      },
+      {
+        "prop_id": "CAP12",
+        "cap_type": "Symptom",
+        "canonical_concept": "left hand pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports pain in the left hand."
+      },
+      {
+        "prop_id": "CAP15",
+        "cap_type": "Symptom",
+        "canonical_concept": "pain tolerance",
+        "category": "Symptom",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient has a high pain tolerance."
+      },
+      {
+        "prop_id": "CAP16",
+        "cap_type": "Symptom",
+        "canonical_concept": "shooting pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient describes a shooting pain."
+      },
+      {
+        "prop_id": "CAP19",
+        "cap_type": "Problem",
+        "canonical_concept": "hand pain",
+        "category": "Problem",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient has hand pain."
+      },
+      {
+        "prop_id": "CAP20",
+        "cap_type": "Symptom",
+        "canonical_concept": "swelling",
+        "category": "Symptom",
+        "speaker": "doctor",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports mild swelling."
+      },
+      {
+        "prop_id": "CAP25",
+        "cap_type": "Symptom",
+        "canonical_concept": "swelling",
+        "category": "Symptom",
+        "speaker": "doctor",
+        "predicate": "reports",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports swelling."
+      },
+      {
+        "prop_id": "CAP27",
+        "cap_type": "Symptom",
+        "canonical_concept": "tenderness",
+        "category": "Symptom",
+        "speaker": "doctor",
+        "predicate": "reports",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports tenderness."
+      },
+      {
+        "prop_id": "CAP28",
+        "cap_type": "Symptom",
+        "canonical_concept": "bruising",
+        "category": "Symptom",
+        "speaker": "doctor",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports bruising."
+      },
+      {
+        "prop_id": "CAP29",
+        "cap_type": "MedicationRequest",
+        "canonical_concept": "ibuprofen",
+        "category": "MedicationRequest",
+        "speaker": "doctor",
+        "predicate": "prescribes",
+        "status": "uncertain",
+        "visit_state": "planned",
+        "temporality": "future",
+        "proposition_text": "The doctor prescribes ibuprofen eight hundred milligrams to be taken twice a day as needed."
+      },
+      {
+        "prop_id": "CAP30",
+        "cap_type": "MedicationRequest",
+        "canonical_concept": "meloxicam",
+        "category": "MedicationRequest",
+        "speaker": "doctor",
+        "predicate": "prescribes",
+        "status": "uncertain",
+        "visit_state": "planned",
+        "temporality": "future",
+        "proposition_text": "The doctor prescribes meloxicam fifteen milligrams to be taken once a day."
+      },
+      {
+        "prop_id": "CAP31",
+        "cap_type": "Order",
+        "canonical_concept": "brace",
+        "category": "Order",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "planned",
+        "temporality": "current",
+        "proposition_text": "The patient wears a brace."
+      },
+      {
+        "prop_id": "CAP32",
+        "cap_type": "ExamFinding",
+        "canonical_concept": "mild swelling",
+        "category": "ExamFinding",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "There is mild swelling."
+      },
+      {
+        "prop_id": "CAP34",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "THC",
+        "category": "MedicationStatement",
+        "speaker": "doctor",
+        "predicate": "denies",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient denies taking THC."
+      },
+      {
+        "prop_id": "CAP35",
+        "cap_type": "ProblemHistory",
+        "canonical_concept": "knee injury",
+        "category": "ProblemHistory",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "two weeks ago",
+        "proposition_text": "The patient injured their knee two weeks ago while skiing."
+      },
+      {
+        "prop_id": "CAP36",
+        "cap_type": "ProblemHistory",
+        "canonical_concept": "knee injury",
+        "category": "ProblemHistory",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "past",
+        "proposition_text": "The patient had a knee injury fourteen years ago."
+      },
+      {
+        "prop_id": "CAP37",
+        "cap_type": "ProblemHistory",
+        "canonical_concept": "knee twisting",
+        "category": "ProblemHistory",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "two weeks ago",
+        "proposition_text": "The patient twisted their knee two weeks ago."
+      },
+      {
+        "prop_id": "CAP38",
+        "cap_type": "ProblemHistory",
+        "canonical_concept": "reconstructive surgery",
+        "category": "ProblemHistory",
+        "speaker": "patient",
+        "status": "uncertain",
+        "visit_state": "historical",
+        "temporality": "past",
+        "proposition_text": "The patient's knee surgery involved reconstructive surgery."
+      },
+      {
+        "prop_id": "CAP39",
+        "cap_type": "ProblemHistory",
+        "canonical_concept": "back surgery",
+        "category": "ProblemHistory",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "past",
+        "proposition_text": "The patient had surgery on their back."
+      },
+      {
+        "prop_id": "CAP40",
+        "cap_type": "ProblemHistory",
+        "canonical_concept": "gymnastics",
+        "category": "ProblemHistory",
+        "speaker": "patient",
+        "status": "uncertain",
+        "visit_state": "historical",
+        "temporality": "past",
+        "proposition_text": "The patient was a good gymnast."
+      }
+    ]
+  },
+  "reference_gpt_f1_items": {
+    "active_problems_symptoms": [
+      "Right knee injury",
+      "Pain (7/10-11/10)",
+      "Limping",
+      "Swelling",
+      "Stiffness in the morning",
+      "Constant swelling",
+      "right knee pain",
+      "right knee swelling",
+      "right knee stiffness",
+      "mild effusion",
+      "antalgic gait",
+      "pain with dorsiflexion",
+      "development of mild arthritis",
+      "current symptoms"
+    ],
+    "negated_findings": [
+      "Denies left knee pain",
+      "Denies radiating pain",
+      "Denies taking any medications for pain",
+      "left knee pain",
+      "no signs of a fracture"
+    ],
+    "uncertain_findings": [
+      "History of right knee reconstruction",
+      "Right knee posterior cruciate ligament strain"
+    ],
+    "medication_treatment": [
+      "Wearing a brace",
+      "THC cream",
+      "THC gummies",
+      "meloxicam 15 mg",
+      "ibuprofen 800 mg twice daily",
+      "discontinue THC gummies"
+    ],
+    "plan_followup": [
+      "continued bracing",
+      "physical therapy 3 times per week",
+      "avoid skiing or gymnastics"
+    ],
+    "_chunk_count": [
+      "3"
+    ]
+  },
+  "summary_gpt_f1_items": {
+    "active_problems_symptoms": [],
+    "negated_findings": [],
+    "uncertain_findings": [],
+    "medication_treatment": [],
+    "plan_followup": [],
+    "_chunk_count": [
+      "1"
+    ]
+  },
+  "gpt_f1_alignment": {
+    "by_category": {
+      "active_problems_symptoms": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "matched_count": 0,
+        "pred_count": 0,
+        "ref_count": 14,
+        "matches": [],
+        "unsupported_pred_items": [],
+        "missing_ref_items": [
+          "Right knee injury",
+          "Pain (7/10-11/10)",
+          "Limping",
+          "Swelling",
+          "Stiffness in the morning",
+          "Constant swelling",
+          "right knee pain",
+          "right knee swelling",
+          "right knee stiffness",
+          "mild effusion",
+          "antalgic gait",
+          "pain with dorsiflexion",
+          "development of mild arthritis",
+          "current symptoms"
+        ]
+      },
+      "negated_findings": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "matched_count": 0,
+        "pred_count": 0,
+        "ref_count": 5,
+        "matches": [],
+        "unsupported_pred_items": [],
+        "missing_ref_items": [
+          "Denies left knee pain",
+          "Denies radiating pain",
+          "Denies taking any medications for pain",
+          "left knee pain",
+          "no signs of a fracture"
+        ]
+      },
+      "uncertain_findings": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "matched_count": 0,
+        "pred_count": 0,
+        "ref_count": 2,
+        "matches": [],
+        "unsupported_pred_items": [],
+        "missing_ref_items": [
+          "History of right knee reconstruction",
+          "Right knee posterior cruciate ligament strain"
+        ]
+      },
+      "medication_treatment": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "matched_count": 0,
+        "pred_count": 0,
+        "ref_count": 6,
+        "matches": [],
+        "unsupported_pred_items": [],
+        "missing_ref_items": [
+          "Wearing a brace",
+          "THC cream",
+          "THC gummies",
+          "meloxicam 15 mg",
+          "ibuprofen 800 mg twice daily",
+          "discontinue THC gummies"
+        ]
+      },
+      "plan_followup": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "matched_count": 0,
+        "pred_count": 0,
+        "ref_count": 3,
+        "matches": [],
+        "unsupported_pred_items": [],
+        "missing_ref_items": [
+          "continued bracing",
+          "physical therapy 3 times per week",
+          "avoid skiing or gymnastics"
+        ]
+      }
+    }
+  },
+  "reference_nair_concepts": {
+    "sections": [
+      {
+        "heading": "Clinical Note",
+        "section_value": "CHIEF COMPLAINT\nRight knee injury.\nHISTORY OF PRESENT ILLNESS\nElizabeth Ross is a pleasant 91-year-old female who presents to the clinic today for the evaluation of a right knee injury. The onset of her pain began 2 weeks ago, when she was downhill skiing. She states she ran into a tree and twisted her right knee. At the time of the injury, she also heard a pop in her left knee, however she denies left knee pain. The patient locates her pain to the medial aspect of her right knee. Currently, her pain level is 7 out of 10, however she notes this can reach an 11 out of 10 at times with prolonged ambulation. The patient states that her pain has been slowly increasing over the last few days. She experiences limping with ambulation. The patient states that her pain lasts for as long as she is ambulating. She denies radiating pain. She also reports constant swelling and stiffness in the morning. Her stiffness will resolve with ambulation. The patient has been wearing a brace and using THC cream, which has been helpful. She denies taking any medications for pain, however she has been utilizing THC gummies, which have been beneficial.",
+        "medical_concepts": [
+          "right knee injury",
+          "knee pain",
+          "right knee pain",
+          "left knee pain",
+          "medial knee pain",
+          "pain severity 7 out of 10",
+          "pain severity 11 out of 10",
+          "prolonged ambulation",
+          "limping",
+          "radiating pain",
+          "swelling",
+          "joint swelling",
+          "stiffness",
+          "morning stiffness",
+          "brace",
+          "THC cream",
+          "THC gummies"
+        ]
+      },
+      {
+        "heading": "Clinical Note",
+        "section_value": "The patient has a history of a right knee reconstruction when she was 14 years old. She states that she was a good gymnast at that time. The patient adds that she has had problems with her right knee since that time. She denies any other exercises outside of intense gym and ski events. The patient states that she normally skis 3 times per week.\nSURGICAL HISTORY\nThe patient reports a history of total right knee reconstruction at the age of 14.\nMEDICATIONS\nShe denies needing medications.\nREVIEW OF SYSTEMS\nMusculoskeletal: Reports right knee pain, swelling, and stiffness. Denies left knee pain.\nPHYSICAL EXAM\nMSK: Examination of the right knee: Mild effusion. The patient ambulated with an antalgic gait. Pain with dorsiflexion, but not with plantarflexion.\nRESULTS",
+        "medical_concepts": [
+          "right knee reconstruction",
+          "total right knee reconstruction",
+          "right knee problems",
+          "medications",
+          "right knee pain",
+          "right knee swelling",
+          "right knee stiffness",
+          "left knee pain",
+          "mild effusion",
+          "antalgic gait",
+          "pain with dorsiflexion",
+          "plantarflexion"
+        ]
+      },
+      {
+        "heading": "Clinical Note",
+        "section_value": "4 views of the right knee were taken. These reveal no evidence of any fractures. There is development of mild arthritis.\nASSESSMENT\n1. Right knee posterior cruciate ligament strain.\nPLAN\nAfter reviewing the patient's examination and radiographic findings today, I have had a lengthy discussion with the patient in regard to her current symptoms. I have explained to her that her x-rays did not reveal any signs of a fracture. I have recommended that we treat the patient conservatively with continued bracing. We will initiate formal physical therapy 3 times per week to strengthen her right knee. Additionally, I have prescribed the patient meloxicam 15 mg and ibuprofen 800 mg twice daily as needed. She should discontinue the use of her THC gummies while taking these medications.\nRegarding her left knee, I do not believe she will need any further medications to treat this. I have advised her to avoid skiing or gymnastics at this time.",
+        "medical_concepts": [
+          "right knee",
+          "left knee",
+          "fracture",
+          "mild arthritis",
+          "right knee posterior cruciate ligament strain",
+          "posterior cruciate ligament strain",
+          "x-ray",
+          "bracing",
+          "physical therapy",
+          "meloxicam 15 mg",
+          "meloxicam",
+          "ibuprofen 800 mg",
+          "ibuprofen",
+          "THC gummies",
+          "skiing",
+          "gymnastics"
+        ]
+      }
+    ],
+    "medical_concepts": [
+      "right knee injury",
+      "knee pain",
+      "right knee pain",
+      "left knee pain",
+      "medial knee pain",
+      "pain severity 7 out of 10",
+      "pain severity 11 out of 10",
+      "prolonged ambulation",
+      "limping",
+      "radiating pain",
+      "swelling",
+      "joint swelling",
+      "stiffness",
+      "morning stiffness",
+      "brace",
+      "THC cream",
+      "THC gummies",
+      "right knee reconstruction",
+      "total right knee reconstruction",
+      "right knee problems",
+      "medications",
+      "right knee swelling",
+      "right knee stiffness",
+      "mild effusion",
+      "antalgic gait",
+      "pain with dorsiflexion",
+      "plantarflexion",
+      "right knee",
+      "left knee",
+      "fracture",
+      "mild arthritis",
+      "right knee posterior cruciate ligament strain",
+      "posterior cruciate ligament strain",
+      "x-ray",
+      "bracing",
+      "physical therapy",
+      "meloxicam 15 mg",
+      "meloxicam",
+      "ibuprofen 800 mg",
+      "ibuprofen",
+      "skiing",
+      "gymnastics"
+    ],
+    "section_count": 3
+  },
+  "summary_nair_concepts": {
+    "sections": [
+      {
+        "heading": "S",
+        "section_value": "The patient reports a history of a skiing injury two weeks ago, resulting in pain and instability in his left knee. He describes persistent pain, stiffness, and swelling, particularly in the morning. He also reports radiating pain down his ankle. The patient reports using a brace and THC cream for pain relief and taking THC gummies. He has had previous knee surgery related to a back injury and a pop sensation.",
+        "medical_concepts": [
+          "skiing injury",
+          "left knee pain",
+          "knee instability",
+          "persistent pain",
+          "morning stiffness",
+          "knee swelling",
+          "radiating pain to ankle",
+          "brace use",
+          "THC cream",
+          "THC gummies",
+          "previous knee surgery",
+          "back injury",
+          "popping sensation in knee"
+        ]
+      },
+      {
+        "heading": "O",
+        "section_value": "Physical examination reveals mild swelling and bruising in both knees. Range of motion is limited due to pain. Dorsiflexion causes pain in the right knee, but not plantar flexion. X-rays demonstrate the development of arthritis and no fracture.",
+        "medical_concepts": [
+          "physical examination",
+          "swelling of knee",
+          "bruising of knee",
+          "limited range of motion",
+          "knee pain",
+          "dorsiflexion",
+          "plantar flexion",
+          "X-ray",
+          "arthritis",
+          "fracture"
+        ]
+      },
+      {
+        "heading": "A",
+        "section_value": "The patient has a probable posterior cruciate ligament strain in the right knee and mild pain in the left knee. The patient's history of prior knee surgery and the reported pop sensation suggest a possible history of instability.",
+        "medical_concepts": [
+          "posterior cruciate ligament strain",
+          "right knee",
+          "knee pain",
+          "left knee",
+          "history of knee surgery",
+          "knee instability"
+        ]
+      },
+      {
+        "heading": "P",
+        "section_value": "Rescribe meloxicam 15 mg daily for right knee pain and ibuprofen 800 mg twice daily as needed for left knee pain. Recommend physical therapy three times per week to improve strength and stability in the right knee. Advise against skiing or gymnastics for now. Schedule follow-up in two weeks to assess progress.",
+        "medical_concepts": [
+          "meloxicam",
+          "ibuprofen",
+          "right knee pain",
+          "left knee pain",
+          "physical therapy"
+        ]
+      }
+    ],
+    "medical_concepts": [
+      "skiing injury",
+      "left knee pain",
+      "knee instability",
+      "persistent pain",
+      "morning stiffness",
+      "knee swelling",
+      "radiating pain to ankle",
+      "brace use",
+      "THC cream",
+      "THC gummies",
+      "previous knee surgery",
+      "back injury",
+      "popping sensation in knee",
+      "physical examination",
+      "swelling of knee",
+      "bruising of knee",
+      "limited range of motion",
+      "knee pain",
+      "dorsiflexion",
+      "plantar flexion",
+      "X-ray",
+      "arthritis",
+      "fracture",
+      "posterior cruciate ligament strain",
+      "right knee",
+      "left knee",
+      "history of knee surgery",
+      "meloxicam",
+      "ibuprofen",
+      "right knee pain",
+      "physical therapy"
+    ],
+    "section_count": 4
+  },
+  "nair_alignment": {
+    "pred_concepts": [
+      "skiing injury",
+      "left knee pain",
+      "knee instability",
+      "persistent pain",
+      "morning stiffness",
+      "knee swelling",
+      "radiating pain to ankle",
+      "brace use",
+      "THC cream",
+      "THC gummies",
+      "previous knee surgery",
+      "back injury",
+      "popping sensation in knee",
+      "physical examination",
+      "swelling of knee",
+      "bruising of knee",
+      "limited range of motion",
+      "knee pain",
+      "dorsiflexion",
+      "plantar flexion",
+      "X-ray",
+      "arthritis",
+      "fracture",
+      "posterior cruciate ligament strain",
+      "right knee",
+      "left knee",
+      "history of knee surgery",
+      "meloxicam",
+      "ibuprofen",
+      "right knee pain",
+      "physical therapy"
+    ],
+    "ref_concepts": [
+      "right knee injury",
+      "knee pain",
+      "right knee pain",
+      "left knee pain",
+      "medial knee pain",
+      "pain severity 7 out of 10",
+      "pain severity 11 out of 10",
+      "prolonged ambulation",
+      "limping",
+      "radiating pain",
+      "swelling",
+      "joint swelling",
+      "stiffness",
+      "morning stiffness",
+      "brace",
+      "THC cream",
+      "THC gummies",
+      "right knee reconstruction",
+      "total right knee reconstruction",
+      "right knee problems",
+      "medications",
+      "right knee swelling",
+      "right knee stiffness",
+      "mild effusion",
+      "antalgic gait",
+      "pain with dorsiflexion",
+      "plantarflexion",
+      "right knee",
+      "left knee",
+      "fracture",
+      "mild arthritis",
+      "right knee posterior cruciate ligament strain",
+      "posterior cruciate ligament strain",
+      "x-ray",
+      "bracing",
+      "physical therapy",
+      "meloxicam 15 mg",
+      "meloxicam",
+      "ibuprofen 800 mg",
+      "ibuprofen",
+      "skiing",
+      "gymnastics"
+    ],
+    "precision_alignment": {
+      "found_b": [
+        "skiing injury",
+        "left knee pain",
+        "persistent pain",
+        "morning stiffness",
+        "knee swelling",
+        "brace use",
+        "THC cream",
+        "THC gummies",
+        "previous knee surgery",
+        "popping sensation in knee",
+        "physical examination",
+        "swelling of knee",
+        "knee pain",
+        "dorsiflexion",
+        "plantar flexion",
+        "X-ray",
+        "arthritis",
+        "fracture",
+        "posterior cruciate ligament strain",
+        "right knee",
+        "left knee",
+        "history of knee surgery",
+        "meloxicam",
+        "ibuprofen",
+        "right knee pain",
+        "physical therapy"
+      ],
+      "not_found_b": [
+        "knee instability",
+        "radiating pain to ankle",
+        "back injury",
+        "bruising of knee",
+        "limited range of motion"
+      ],
+      "chunk_count": 2,
+      "chunk_results": [
+        {
+          "found_b": [
+            "skiing injury",
+            "left knee pain",
+            "persistent pain",
+            "morning stiffness",
+            "knee swelling",
+            "brace use",
+            "THC cream",
+            "THC gummies",
+            "previous knee surgery",
+            "popping sensation in knee",
+            "physical examination",
+            "swelling of knee",
+            "knee pain",
+            "dorsiflexion",
+            "plantar flexion",
+            "X-ray",
+            "arthritis",
+            "fracture",
+            "posterior cruciate ligament strain"
+          ],
+          "not_found_b": [
+            "knee instability",
+            "radiating pain to ankle",
+            "back injury",
+            "bruising of knee",
+            "limited range of motion"
+          ]
+        },
+        {
+          "found_b": [
+            "right knee",
+            "left knee",
+            "history of knee surgery",
+            "meloxicam",
+            "ibuprofen",
+            "right knee pain",
+            "physical therapy"
+          ],
+          "not_found_b": []
+        }
+      ]
+    },
+    "recall_alignment": {
+      "found_b": [
+        "knee pain",
+        "right knee pain",
+        "left knee pain",
+        "radiating pain",
+        "swelling",
+        "joint swelling",
+        "stiffness",
+        "morning stiffness",
+        "brace",
+        "THC cream",
+        "THC gummies",
+        "medications",
+        "pain with dorsiflexion",
+        "plantarflexion",
+        "right knee",
+        "left knee",
+        "fracture",
+        "mild arthritis",
+        "right knee posterior cruciate ligament strain",
+        "posterior cruciate ligament strain",
+        "x-ray",
+        "bracing",
+        "physical therapy",
+        "meloxicam 15 mg",
+        "meloxicam",
+        "ibuprofen 800 mg",
+        "ibuprofen",
+        "skiing",
+        "gymnastics"
+      ],
+      "not_found_b": [
+        "right knee injury",
+        "medial knee pain",
+        "pain severity 7 out of 10",
+        "pain severity 11 out of 10",
+        "prolonged ambulation",
+        "limping",
+        "right knee reconstruction",
+        "total right knee reconstruction",
+        "right knee problems",
+        "right knee swelling",
+        "right knee stiffness",
+        "mild effusion",
+        "antalgic gait"
+      ],
+      "chunk_count": 2,
+      "chunk_results": [
+        {
+          "found_b": [
+            "knee pain",
+            "right knee pain",
+            "left knee pain",
+            "radiating pain",
+            "swelling",
+            "joint swelling",
+            "stiffness",
+            "morning stiffness",
+            "brace",
+            "THC cream",
+            "THC gummies",
+            "medications"
+          ],
+          "not_found_b": [
+            "right knee injury",
+            "medial knee pain",
+            "pain severity 7 out of 10",
+            "pain severity 11 out of 10",
+            "prolonged ambulation",
+            "limping",
+            "right knee reconstruction",
+            "total right knee reconstruction",
+            "right knee problems",
+            "right knee swelling",
+            "right knee stiffness",
+            "mild effusion"
+          ]
+        },
+        {
+          "found_b": [
+            "pain with dorsiflexion",
+            "plantarflexion",
+            "right knee",
+            "left knee",
+            "fracture",
+            "mild arthritis",
+            "right knee posterior cruciate ligament strain",
+            "posterior cruciate ligament strain",
+            "x-ray",
+            "bracing",
+            "physical therapy",
+            "meloxicam 15 mg",
+            "meloxicam",
+            "ibuprofen 800 mg",
+            "ibuprofen",
+            "skiing",
+            "gymnastics"
+          ],
+          "not_found_b": [
+            "antalgic gait"
+          ]
+        }
+      ]
+    }
+  },
+  "semantic_cap_audit": {
+    "source_cap_recall": [
+      {
+        "cap_id": "P1",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P2",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P3",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P4",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P5",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P6",
+        "judgment": "contradicted",
+        "reason": null
+      },
+      {
+        "cap_id": "P7",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P8",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P9",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P10",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P11",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P12",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P13",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P14",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P15",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P16",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P1",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P2",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P3",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P4",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P5",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P6",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P7",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P8",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P9",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P10",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P11",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P12",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P13",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P14",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P15",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P16",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P1",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P2",
+        "judgment": "contradicted",
+        "reason": null
+      },
+      {
+        "cap_id": "P3",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P4",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P5",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P6",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P7",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P8",
+        "judgment": "low_value",
+        "reason": null
+      },
+      {
+        "cap_id": "P9",
+        "judgment": "supported",
+        "reason": null
+      }
+    ],
+    "summary_cap_precision": [
+      {
+        "cap_id": "P1",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P2",
+        "judgment": "contradicted",
+        "reason": null
+      },
+      {
+        "cap_id": "P3",
+        "judgment": "unsupported",
+        "reason": null
+      },
+      {
+        "cap_id": "P4",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P5",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P6",
+        "judgment": "unsupported",
+        "reason": null
+      },
+      {
+        "cap_id": "P7",
+        "judgment": "unsupported",
+        "reason": null
+      },
+      {
+        "cap_id": "P8",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P9",
+        "judgment": "unsupported",
+        "reason": null
+      },
+      {
+        "cap_id": "P10",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P11",
+        "judgment": "unsupported",
+        "reason": null
+      },
+      {
+        "cap_id": "P12",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P13",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P14",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P15",
+        "judgment": "unsupported",
+        "reason": null
+      },
+      {
+        "cap_id": "P16",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P1",
+        "judgment": "unsupported",
+        "reason": null
+      }
+    ],
+    "metrics": {
+      "semantic_cap_precision": 0.2941,
+      "semantic_cap_recall": 0.5,
+      "semantic_cap_f1": 0.3704,
+      "semantic_cap_precision_supported_count": 1,
+      "semantic_cap_precision_partial_count": 8,
+      "semantic_cap_precision_denominator": 17,
+      "semantic_cap_recall_supported_count": 14,
+      "semantic_cap_recall_partial_count": 12,
+      "semantic_cap_recall_denominator": 40,
+      "semantic_cap_low_value_source_count": 1,
+      "semantic_cap_low_value_summary_count": 0,
+      "semantic_cap_missing_count": 12,
+      "semantic_cap_unsupported_count": 7,
+      "semantic_cap_contradicted_source_count": 2,
+      "semantic_cap_contradicted_summary_count": 1
+    }
+  },
+  "safety_judgment": null,
+  "section_judgment": {
+    "section_miscategorizations": [
+      {
+        "text": "Rescribe meloxicam 15 mg daily for right knee pain and ibuprofen 800 mg twice daily as needed for left knee pain.",
+        "current_section": "P",
+        "expected_section": "P",
+        "severity": "minor",
+        "reason": "The word 'Rescribe' implies continuation of an existing medication rather than a new or changed order; if this is intended to document that the patient is already taking these medications without change, it would belong in S. If it is a new or adjusted prescription, P is correct. The ambiguous wording is a minor organizational issue but does not clearly constitute a major miscategorization."
+      }
+    ],
+    "summary_statistics": {
+      "section_appropriateness_score": 0.9,
+      "section_miscategorization_count": 1,
+      "major_section_miscategorization_count": 0
+    }
+  },
+  "pdsqi_judgment": {
+    "citation_applicable": 0,
+    "citation": 0,
+    "accurate": 2,
+    "thorough": 2,
+    "useful": 2,
+    "organized": 3,
+    "comprehensible": 3,
+    "succinct": 4,
+    "abstraction": 1,
+    "synthesized": 2,
+    "voice_summ": 0,
+    "voice_note": 0,
+    "pdsqi_core_mean": 2.5714
+  },
+  "llm_checklist_judgment": {
+    "content_preservation_core": 3,
+    "noise_suppression": 5,
+    "lay_expression_preservation": 3,
+    "state_update_fidelity": 2,
+    "temporality_preservation": 4,
+    "problem_evidence_linkage": 3,
+    "state_plan_separation": 4,
+    "section_organization_appropriateness": 3,
+    "overall_clinical_usability": 3,
+    "clinically_meaningful_omission": "Yes",
+    "clinically_concerning_hallucination": "Yes",
+    "checklist_a_mean": 3.6667,
+    "checklist_b_mean": 3.0,
+    "checklist_c_mean": 3.3333,
+    "llm_checklist_abc_mean": 3.375,
+    "llm_checklist_mean_no_usability": 3.375,
+    "llm_checklist_total_score": 30,
+    "llm_checklist_mean": 3.3333,
+    "llm_checklist_meaningful_omission_yes": 1,
+    "llm_checklist_concerning_hallucination_yes": 1
+  },
+  "metrics": {
+    "case_id": "D2N067",
+    "method": "cluster2sent",
+    "template": "soap",
+    "source_cap_count": 41,
+    "event_plan_count": null,
+    "summary_cap_count": 17,
+    "cap_matched_count": 13,
+    "cap_precision": 0.7647,
+    "cap_recall": 0.3171,
+    "cap_f1": 0.4483,
+    "unsupported_summary_cap_count": 4,
+    "missing_source_cap_count": 28,
+    "summary_runtime_seconds": null,
+    "summary_cap_runtime_seconds": 26.92,
+    "event_plan_runtime_seconds": null,
+    "rouge_l_f1_vs_reference": 0.2043,
+    "token_f1_vs_reference": 0.3885,
+    "gptf1_macro_f1": 0.0,
+    "nair_gpt_precision": 0.8387,
+    "nair_gpt_recall": 0.6905,
+    "nair_gpt_f1": 0.7574,
+    "semantic_cap_precision": 0.2941,
+    "semantic_cap_recall": 0.5,
+    "semantic_cap_f1": 0.3704,
+    "hallucination_count": null,
+    "major_hallucination_count": null,
+    "omission_count": null,
+    "major_omission_count": null,
+    "section_appropriateness_score": 0.9,
+    "section_miscategorization_count": 1,
+    "major_section_miscategorization_count": 0,
+    "pdsqi_core_mean": 2.5714,
+    "pdsqi_accurate": 2,
+    "pdsqi_thorough": 2,
+    "llm_checklist_total_score": 30,
+    "llm_checklist_mean": 3.3333,
+    "llm_checklist_mean_no_usability": 3.375,
+    "checklist_a_mean": 3.6667,
+    "checklist_b_mean": 3.0,
+    "checklist_c_mean": 3.3333,
+    "llm_checklist_abc_mean": 3.375,
+    "content_preservation_core": 3,
+    "noise_suppression": 5,
+    "lay_expression_preservation": 3,
+    "state_update_fidelity": 2,
+    "temporality_preservation": 4,
+    "problem_evidence_linkage": 3,
+    "state_plan_separation": 4,
+    "section_organization_appropriateness": 3,
+    "overall_clinical_usability": 3,
+    "llm_checklist_meaningful_omission_yes": 1,
+    "llm_checklist_concerning_hallucination_yes": 1,
+    "gptf1_active_problems_symptoms_precision": 0.0,
+    "gptf1_active_problems_symptoms_recall": 0.0,
+    "gptf1_active_problems_symptoms_f1": 0.0,
+    "gptf1_active_problems_symptoms_pred_count": 0,
+    "gptf1_active_problems_symptoms_ref_count": 14,
+    "gptf1_negated_findings_precision": 0.0,
+    "gptf1_negated_findings_recall": 0.0,
+    "gptf1_negated_findings_f1": 0.0,
+    "gptf1_negated_findings_pred_count": 0,
+    "gptf1_negated_findings_ref_count": 5,
+    "gptf1_uncertain_findings_precision": 0.0,
+    "gptf1_uncertain_findings_recall": 0.0,
+    "gptf1_uncertain_findings_f1": 0.0,
+    "gptf1_uncertain_findings_pred_count": 0,
+    "gptf1_uncertain_findings_ref_count": 2,
+    "gptf1_medication_treatment_precision": 0.0,
+    "gptf1_medication_treatment_recall": 0.0,
+    "gptf1_medication_treatment_f1": 0.0,
+    "gptf1_medication_treatment_pred_count": 0,
+    "gptf1_medication_treatment_ref_count": 6,
+    "gptf1_plan_followup_precision": 0.0,
+    "gptf1_plan_followup_recall": 0.0,
+    "gptf1_plan_followup_f1": 0.0,
+    "gptf1_plan_followup_pred_count": 0,
+    "gptf1_plan_followup_ref_count": 3,
+    "nair_pred_concept_count": 31,
+    "nair_ref_concept_count": 42,
+    "nair_precision_match_count": 26,
+    "nair_recall_match_count": 29,
+    "semantic_cap_precision_supported_count": 1,
+    "semantic_cap_precision_partial_count": 8,
+    "semantic_cap_precision_denominator": 17,
+    "semantic_cap_recall_supported_count": 14,
+    "semantic_cap_recall_partial_count": 12,
+    "semantic_cap_recall_denominator": 40,
+    "semantic_cap_low_value_source_count": 1,
+    "semantic_cap_low_value_summary_count": 0,
+    "semantic_cap_missing_count": 12,
+    "semantic_cap_unsupported_count": 7,
+    "semantic_cap_contradicted_source_count": 2,
+    "semantic_cap_contradicted_summary_count": 1,
+    "pdsqi_useful": 2,
+    "pdsqi_organized": 3,
+    "pdsqi_comprehensible": 3,
+    "pdsqi_succinct": 4,
+    "pdsqi_synthesized": 2
+  }
+}

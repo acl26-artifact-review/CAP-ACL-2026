@@ -1,0 +1,73 @@
+Case: D2N083
+
+Problem List and Visit State Tracking
+
+Problem List
+- pottery | verification_status=unconfirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T3
+  Summary: The patient has been doing a lot of pottery and ceramics.
+  ClusterId: CL1
+  TemporalProfile: past week
+  Updates:
+  - CAP15: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=past week turns=T3 :: The patient has been doing a lot of pottery and ceramics.
+- elbow pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T5
+  Summary: The patient reports pain in the inside of their right elbow.
+  ClusterId: CL2
+  TemporalProfile: current
+  Updates:
+  - CAP3: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T5 :: The patient reports pain in the inside of their right elbow.
+- forearm pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T14,T18,T19,T26,T9
+  Summary: The patient reports pain radiating down into their forearm.
+  ClusterId: CL3
+  TemporalProfile: current
+  Updates:
+  - CAP4: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T9 :: The patient reports pain that extends down into the forearm.
+  - CAP6: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T9 :: The patient reports pain radiating down into their forearm.
+  - CAP9: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T14 :: The patient is experiencing pain.
+  - CAP8: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T18 :: The patient reports pain in the left hand.
+  - CAP2: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T19 :: The patient reports pain at a 6 on a scale of 0 to 10.
+  - CAP7: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T19 :: The patient reports pain in the left elbow.
+  - CAP10: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T26 :: The patient reports pain.
+- left wrist pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T28
+  Summary: The patient reports pain in the left wrist.
+  ClusterId: CL5
+  TemporalProfile: current
+  Updates:
+  - CAP1: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T28,T28,T28 :: The patient reports pain in the left wrist.
+- medial epicondylitis | verification_status=confirmed | clinical_status=active | modalities=assessment | speakers=doctor | evidence=T32
+  Summary: The doctor assesses the patient's elbow pain as medial epicondylitis.
+  ClusterId: CL6
+  TemporalProfile: current
+  Updates:
+  - CAP5: content_source=doctor modality=assessment verification_status=confirmed clinical_status=active temporality=current turns=T32 :: The doctor assesses the patient's elbow pain as medial epicondylitis.
+
+Medication Tracking
+- [MedicationState] ibuprofen | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T23
+  Summary: The patient reports taking ibuprofen.
+  ClusterId: CL4
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient reports taking ibuprofen. (T23)
+  Updates:
+  - CAP14: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T23 :: The patient reports taking ibuprofen.
+- [MedicationChange] ibuprofen | verification_status=confirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T33
+  Summary: The doctor orders the patient to take ibuprofen.
+  ClusterId: CL7
+  TemporalProfile: within 7 days
+  PlannedChanges:
+  - The doctor orders the patient to take ibuprofen. (T33)
+  Updates:
+  - CAP11: content_source=doctor modality=plan verification_status=confirmed clinical_status=planned temporality=within 7 days turns=T33 :: The doctor orders the patient to take ibuprofen.
+
+Other Structured States
+- [Plan] sling | verification_status=confirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T33
+  Summary: The doctor orders a sling for the patient.
+  ClusterId: CL8
+  TemporalProfile: during wakefulness
+- [FollowUp] follow-up appointment | verification_status=confirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T33
+  Summary: The doctor schedules a follow-up appointment for the patient.
+  ClusterId: CL9
+  TemporalProfile: in one week
+- [Plan] ice application | verification_status=confirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T33
+  Summary: The doctor instructs the patient to apply ice to the elbow.
+  ClusterId: CL10
+  TemporalProfile: three times daily

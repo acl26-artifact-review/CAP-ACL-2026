@@ -1,0 +1,23 @@
+{
+  "section_miscategorizations": [
+    {
+      "text": "The patient's diabetes is currently under control, but requires ongoing management.",
+      "current_section": "A",
+      "expected_section": "O",
+      "severity": "minor",
+      "reason": "This is framed as a current disease control status rather than an interpretive synthesis or new diagnostic impression; it reads more like an observed/known condition status. However, it does not substantially mislead the reader, as diabetes control status is often summarized in Assessment."
+    },
+    {
+      "text": "The doctor recommends monitoring blood sugar levels daily and continuing metformin twice daily.",
+      "current_section": "P",
+      "expected_section": "P",
+      "severity": "minor",
+      "reason": "This line mixes a new/explicit management action (monitoring daily) with a statement about an existing medication regimen (continuing metformin). Per the template, current medications belong in S unless framed as a treatment change or order; here, the 'continuing metformin' portion is borderline but acceptable as part of the plan. The overall placement in P is acceptable, so this is only a minor organizational issue."
+    }
+  ],
+  "summary_statistics": {
+    "section_appropriateness_score": 0.9,
+    "section_miscategorization_count": 2,
+    "major_section_miscategorization_count": 0
+  }
+}

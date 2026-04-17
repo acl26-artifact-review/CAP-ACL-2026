@@ -1,0 +1,110 @@
+Case: D2N168
+
+Problem List and Visit State Tracking
+
+Problem List
+- depression | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=doctor,patient | evidence=T4,T50
+  Summary: The doctor does not plan to start the patient on medication for depression.
+  ClusterId: CL1
+  TemporalProfile: current, past
+  Updates:
+  - CAP20: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=past turns=T4 :: The patient has a past medical history of depression.
+  - CAP2: content_source=doctor modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T50 :: The doctor does not plan to start the patient on medication for depression.
+- hypertension | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=doctor,patient | evidence=T4,T50
+  Summary: The patient's high blood pressure is not controlled.
+  ClusterId: CL2
+  TemporalProfile: current, past
+  Updates:
+  - CAP21: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=past turns=T4 :: The patient has a past medical history of hypertension.
+  - CAP5: content_source=doctor modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T50 :: The patient's high blood pressure is not controlled.
+- headache | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T12,T6
+  Summary: The patient reports having a headache.
+  ClusterId: CL3
+  TemporalProfile: current
+  Updates:
+  - CAP6: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T6 :: The patient reports having a headache.
+  - CAP9: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T12 :: The patient reports a headache.
+- lightheadedness | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T6
+  Summary: The patient reports feeling light-headed.
+  ClusterId: CL4
+  TemporalProfile: current
+  Updates:
+  - CAP8: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T6 :: The patient reports feeling light-headed.
+- high blood pressure | verification_status=confirmed | clinical_status=active | modalities=assessment,interview | speakers=doctor,patient | evidence=T12,T33,T37
+  Summary: The patient's blood pressure is elevated.
+  ClusterId: CL6
+  TemporalProfile: current, past
+  Updates:
+  - CAP3: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=past turns=T12 :: The patient's blood pressures have been running high.
+  - CAP7: content_source=doctor modality=assessment verification_status=unconfirmed clinical_status=active temporality=current turns=T33 :: The patient's blood pressure is elevated.
+  - CAP1: content_source=doctor modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T37 :: The doctor wants to increase the lisinopril to 40 milligrams once a day to control the patient's high blood pressure.
+- travel | verification_status=unconfirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T14
+  Summary: The patient is traveling frequently.
+  ClusterId: CL7
+  TemporalProfile: past
+  Updates:
+  - CAP10: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=past turns=T14 :: The patient is traveling frequently.
+- chest pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T18
+  Summary: The patient reports chest pain.
+  ClusterId: CL9
+  TemporalProfile: current
+  Updates:
+  - CAP11: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T18 :: The patient reports chest pain.
+- nasal congestion | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T30
+  Summary: The patient reports nasal congestion.
+  ClusterId: CL12
+  TemporalProfile: current
+  Updates:
+  - CAP12: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T30 :: The patient reports nasal congestion.
+- pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T37
+  Summary: The patient reports pain in the left hand.
+  ClusterId: CL15
+  TemporalProfile: current
+  Updates:
+  - CAP4: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T37 :: The patient reports pain in the left hand.
+
+Medication Tracking
+- [MedicationState] blood pressure cuff | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T15
+  Summary: The patient purchased a blood pressure cuff.
+  ClusterId: CL8
+  TemporalProfile: past
+  CurrentRegimens:
+  - The patient purchased a blood pressure cuff. (T15)
+  Updates:
+  - CAP18: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=past turns=T15 :: The patient purchased a blood pressure cuff.
+- [MedicationState] lisinopril | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T21
+  Summary: The patient is taking lisinopril.
+  ClusterId: CL10
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient is taking lisinopril. (T21)
+  Updates:
+  - CAP19: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T21 :: The patient is taking lisinopril.
+- [MedicationChange] lisinopril | verification_status=confirmed | clinical_status=planned | modalities=interview,plan | speakers=doctor | evidence=T45,T53
+  Summary: The doctor wants to increase the lisinopril dosage to 40 milligrams once a day.
+  ClusterId: CL16
+  TemporalProfile: current
+  PlannedChanges:
+  - The doctor plans to increase the lisinopril dose to 40 milligrams once a day. (T45)
+  - The doctor wants to increase the lisinopril dosage to 40 milligrams once a day. (T53)
+  Updates:
+  - CAP16: content_source=doctor modality=plan verification_status=unconfirmed clinical_status=planned temporality=current turns=T45 :: The doctor plans to increase the lisinopril dose to 40 milligrams once a day.
+  - CAP17: content_source=doctor modality=interview verification_status=confirmed clinical_status=planned temporality=current turns=T53 :: The doctor wants to increase the lisinopril dosage to 40 milligrams once a day.
+
+Other Structured States
+- [TestResult] blood pressure | verification_status=confirmed | clinical_status=active | modalities=exam | speakers=doctor | evidence=T7
+  Summary: The doctor observed blood pressure readings of almost 200.
+  ClusterId: CL5
+  TemporalProfile: current
+- [Plan] therapy | verification_status=confirmed | clinical_status=planned | modalities=interview | speakers=doctor | evidence=T26
+  Summary: The patient is starting therapy.
+  ClusterId: CL11
+  TemporalProfile: future
+- [ExamFinding] pitting edema | verification_status=confirmed | clinical_status=active | modalities=exam | speakers=doctor | evidence=T33
+  Summary: The patient has trace pitting edema to the lower extremities.
+  ClusterId: CL13
+  TemporalProfile: current
+- [ExamFinding] systolic ejection murmur | verification_status=confirmed | clinical_status=active | modalities=exam | speakers=doctor | evidence=T33
+  Summary: The patient has a systolic ejection murmur.
+  ClusterId: CL14
+  TemporalProfile: current

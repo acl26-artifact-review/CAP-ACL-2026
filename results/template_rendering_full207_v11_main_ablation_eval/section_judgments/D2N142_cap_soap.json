@@ -1,0 +1,44 @@
+{
+  "section_miscategorizations": [
+    {
+      "text": "The patient is taking lisinopril 10 milligrams daily and hydrochlorothiazide 12.5 milligrams daily.",
+      "current_section": "P",
+      "expected_section": "S",
+      "severity": "major",
+      "reason": "This describes the patient's current medication regimen, not a new order or change. Per template rules, current medications belong in the Subjective section unless framed as a treatment change."
+    },
+    {
+      "text": "The patient is taking half of the lisinopril dose.",
+      "current_section": "P",
+      "expected_section": "S",
+      "severity": "major",
+      "reason": "This is the patient's current self-reported medication use, not a new plan or order. It should be documented in the Subjective section."
+    },
+    {
+      "text": "The primary problem is alcohol use disorder and hypertension.",
+      "current_section": "A",
+      "expected_section": "A",
+      "severity": "minor",
+      "reason": "This is an appropriate diagnostic assessment statement and is correctly placed in the Assessment section."
+    },
+    {
+      "text": "The patient's blood pressure is elevated.",
+      "current_section": "A",
+      "expected_section": "A",
+      "severity": "minor",
+      "reason": "This is a synthesized clinical impression about blood pressure control and is appropriate for the Assessment section."
+    },
+    {
+      "text": "The patient's current medications are not optimally managing his hypertension.",
+      "current_section": "A",
+      "expected_section": "A",
+      "severity": "minor",
+      "reason": "This is an evaluative statement about treatment effectiveness and belongs in the Assessment section."
+    }
+  ],
+  "summary_statistics": {
+    "section_appropriateness_score": 0.7,
+    "section_miscategorization_count": 5,
+    "major_section_miscategorization_count": 2
+  }
+}

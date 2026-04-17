@@ -1,0 +1,1682 @@
+{
+  "case_id": "D2N014",
+  "method": "cluster2sent",
+  "template": "soap",
+  "summary_text": "S:\nThe patient reports shortness of breath after a half hour, struggling to breathe and feeling like he was having a heart attack. He also reports lightheadedness and dizziness six hours after arriving home, followed by feeling fine on Sunday. He denies vision problems. He reports taking all of his medications for heart failure. He has had skin cancer removed five months ago with no problems since. He denies fibular venous distention and reports lungs have some fine crackles bilaterally with trace lower extremity edema.\n\nO:\nBlood pressure is slightly elevated. Heart rate is regular and stable. ECG shows left ventricular hypertrophy. Echocardiogram reveals slightly reduced pumping function but stable. Skin biopsy results are pending.\n\nA:\nThe patient's shortness of breath is likely an exacerbation of heart failure due to left ventricular hypertrophy. The patient's edema suggests fluid retention related to heart failure.\n\nP:\nRescribe lasix 80 milligrams once daily. Order carvedilol 25 milligrams twice daily. Dragon, order lasix 80 milligrams, once daily. Dragon, order carvedilol 25 milligrams, twice daily.",
+  "reference_summary": "CHIEF COMPLAINT\n\nFollow-up from an emergency room visit.\n\nHISTORY OF PRESENT ILLNESS\n\nLouis Williams is a 58-year-old male presenting for a follow-up from an emergency room visit.\n\nThe patient states that he was playing tennis on Saturday, that he was really hot and that after approximately 30 minutes he was struggling to breathe. He states that he thought he was having a heart attack at that time. His wife took him to the emergency room and at that time, he states that he had been feeling very lightheaded and dizzy. He notes that on Sunday he felt fine.\n\nThe patient reports that he has been very diligent with his medications for his congestive heart failure. He notes that he has been avoiding salt for the most part but there has been some dietary indiscretion more recently.\n\nHe is status post cataract extraction approximately 3 months ago, and notes that everything has been fine since then. He denies any vision problems at this time.\n\nThe patient had a skin cancer removed approximately 5 months ago. He reports this is well healed.\n\nREVIEW OF SYSTEMS\n\n• Cardiovascular: Endorse dyspnea on exertion.\n• Respiratory: Endorses shortness of breath.\n• Neurological: Endorses lightheadedness and dizziness.\n\nPHYSICAL EXAMINATION\n\n• Neck: Supple. No jugular venous distention.\n• Respiratory: Fine crackles bilaterally.\n• Cardiovascular: Regular rate and rhythm. No murmurs. Bilateral lower extremity edema.\n\nRESULTS\n\nECG revealed left ventricular hypertrophy consistent with congestive heart failure.\nEchocardiogram demonstrates stable diminished ejection fraction.\nSkin cancer pathology demonstrates clear margins.\n\nASSESSMENT AND PLAN\n\nThe patient is a 58-year-old male who presents for follow-up after emergency room visit.\n\nED follow-up and congestive heart failure.\n• Medical Reasoning: I believe his symptoms which led to his ED visit were due to an exacerbation of his heart failure. He admits to some dietary indiscretion, which likely resulted in fluid retention.\n• Medical Treatment: I will prescribe Lasix 80 mg once a day. I will also place him on carvedilol 25 mg twice a day.\n\nStatus post basal cell carcinoma removal.\n• Medical Reasoning: He seems to be doing well and the removal site is well-healed. No change in treatment is necessary at this time.\n\nStatus post cataract surgery.\n• Medical Reasoning: He seems to be doing well. We will continue to observe, but no treatment changes are needed today.\n\nPatient Agreements: The patient understands and agrees with the recommended medical treatment.",
+  "source_cap": {
+    "atomic_propositions": [
+      {
+        "prop_id": "CAP1",
+        "cap_type": "Problem",
+        "canonical_concept": "heart failure",
+        "category": "Problem",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The doctor believes the patient's shortness of breath is an exacerbation of heart failure."
+      },
+      {
+        "prop_id": "CAP2",
+        "cap_type": "Problem",
+        "canonical_concept": "heart attack",
+        "category": "Problem",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "uncertain",
+        "visit_state": "historical",
+        "temporality": "past",
+        "proposition_text": "The patient reports a previous concern about a possible heart attack."
+      },
+      {
+        "prop_id": "CAP3",
+        "cap_type": "Problem",
+        "canonical_concept": "skin cancer",
+        "category": "Problem",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "5 months ago",
+        "proposition_text": "The patient had a skin cancer removed five months ago."
+      },
+      {
+        "prop_id": "CAP4",
+        "cap_type": "Problem",
+        "canonical_concept": "high blood pressure",
+        "category": "Problem",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "emergency room report",
+        "proposition_text": "A report in the emergency room indicated high blood pressure."
+      },
+      {
+        "prop_id": "CAP5",
+        "cap_type": "Symptom",
+        "canonical_concept": "salty foods",
+        "category": "Symptom",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient admits to occasionally consuming salty foods."
+      },
+      {
+        "prop_id": "CAP6",
+        "cap_type": "Symptom",
+        "canonical_concept": "pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports pain in the left hand."
+      },
+      {
+        "prop_id": "CAP7",
+        "cap_type": "Symptom",
+        "canonical_concept": "shortness of breath",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports shortness of breath."
+      },
+      {
+        "prop_id": "CAP8",
+        "cap_type": "Problem",
+        "canonical_concept": "skin cancer",
+        "category": "Problem",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "resolved",
+        "temporality": "past",
+        "proposition_text": "The patient had skin cancer removed."
+      },
+      {
+        "prop_id": "CAP9",
+        "cap_type": "Problem",
+        "canonical_concept": "cataract",
+        "category": "Problem",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "resolved",
+        "temporality": "past",
+        "proposition_text": "The patient had a cataract removed."
+      },
+      {
+        "prop_id": "CAP10",
+        "cap_type": "Symptom",
+        "canonical_concept": "vision problems",
+        "category": "Symptom",
+        "speaker": "doctor",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "resolved",
+        "temporality": "past",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports no vision problems."
+      },
+      {
+        "prop_id": "CAP11",
+        "cap_type": "Problem",
+        "canonical_concept": "skin cancer",
+        "category": "Problem",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient has skin cancer."
+      },
+      {
+        "prop_id": "CAP12",
+        "cap_type": "Symptom",
+        "canonical_concept": "dizziness",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports dizziness."
+      },
+      {
+        "prop_id": "CAP13",
+        "cap_type": "Symptom",
+        "canonical_concept": "pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports pain."
+      },
+      {
+        "prop_id": "CAP14",
+        "cap_type": "ExamFinding",
+        "canonical_concept": "high blood pressure",
+        "category": "ExamFinding",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "now",
+        "proposition_text": "The doctor observed high blood pressure."
+      },
+      {
+        "prop_id": "CAP15",
+        "cap_type": "TestResult",
+        "canonical_concept": "left ventricular hypertrophy",
+        "category": "TestResult",
+        "speaker": "doctor",
+        "predicate": "shows",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "current",
+        "proposition_text": "The echocardiogram shows left ventricular hypertrophy."
+      },
+      {
+        "prop_id": "CAP16",
+        "cap_type": "TestResult",
+        "canonical_concept": "stable echocardiogram",
+        "category": "TestResult",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "current",
+        "claim_type_tags": [
+          "temporal"
+        ],
+        "proposition_text": "The echocardiogram pumping function is stable."
+      },
+      {
+        "prop_id": "CAP17",
+        "cap_type": "TestResult",
+        "canonical_concept": "stable ecg",
+        "category": "TestResult",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "current",
+        "claim_type_tags": [
+          "temporal"
+        ],
+        "proposition_text": "The ECG is stable."
+      },
+      {
+        "prop_id": "CAP18",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "heart failure medications",
+        "category": "MedicationStatement",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "medication"
+        ],
+        "proposition_text": "The patient reports taking heart failure medications."
+      },
+      {
+        "prop_id": "CAP19",
+        "cap_type": "ProblemHistory",
+        "canonical_concept": "heat and humidity",
+        "category": "ProblemHistory",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "past",
+        "proposition_text": "The patient reports playing tennis in hot and humid conditions."
+      },
+      {
+        "prop_id": "CAP20",
+        "cap_type": "ProblemHistory",
+        "canonical_concept": "tennis playing",
+        "category": "ProblemHistory",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "past",
+        "proposition_text": "The patient reports playing tennis."
+      }
+    ],
+    "filtered_nonverifiable_units": []
+  },
+  "event_plan": null,
+  "summary_cap": {
+    "atomic_propositions": [
+      {
+        "prop_id": "P1",
+        "cap_type": "Symptom",
+        "canonical_concept": "shortness breath after half",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports shortness of breath after a half hour."
+      },
+      {
+        "prop_id": "P2",
+        "cap_type": "Symptom",
+        "canonical_concept": "struggling breathe",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports struggling to breathe."
+      },
+      {
+        "prop_id": "P3",
+        "cap_type": "Symptom",
+        "canonical_concept": "feeling like was having",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports feeling like he was having a heart attack."
+      },
+      {
+        "prop_id": "P4",
+        "cap_type": "Symptom",
+        "canonical_concept": "lightheadedness",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports lightheadedness."
+      },
+      {
+        "prop_id": "P5",
+        "cap_type": "Symptom",
+        "canonical_concept": "dizziness",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports dizziness."
+      },
+      {
+        "prop_id": "P6",
+        "cap_type": "Symptom",
+        "canonical_concept": "feeling fine sunday",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "past",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports feeling fine on Sunday."
+      },
+      {
+        "prop_id": "P7",
+        "cap_type": "Allergy",
+        "canonical_concept": "denies vision problems",
+        "category": "Allergy",
+        "speaker": "patient",
+        "predicate": "denies",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "allergy"
+        ],
+        "proposition_text": "The patient denies vision problems."
+      },
+      {
+        "prop_id": "P8",
+        "cap_type": "MedicationPlan",
+        "canonical_concept": "taking all his medications",
+        "category": "MedicationPlan",
+        "speaker": "clinician",
+        "predicate": "prescribes",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "medication"
+        ],
+        "proposition_text": "The patient is taking all of his medications for heart failure."
+      },
+      {
+        "prop_id": "P9",
+        "cap_type": "History",
+        "canonical_concept": "skin cancer removed five",
+        "category": "History",
+        "speaker": "patient",
+        "predicate": "has",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "past",
+        "claim_type_tags": [
+          "history"
+        ],
+        "proposition_text": "The patient has had skin cancer removed five months ago."
+      },
+      {
+        "prop_id": "P10",
+        "cap_type": "Finding",
+        "canonical_concept": "denies fibular venous distention",
+        "category": "Finding",
+        "speaker": "unknown",
+        "predicate": "denies",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "exam"
+        ],
+        "proposition_text": "The patient denies fibular venous distention."
+      },
+      {
+        "prop_id": "P11",
+        "cap_type": "Finding",
+        "canonical_concept": "lungs some fine crackles",
+        "category": "Finding",
+        "speaker": "unknown",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "exam"
+        ],
+        "proposition_text": "The patient's lungs have some fine crackles bilaterally."
+      },
+      {
+        "prop_id": "P12",
+        "cap_type": "Finding",
+        "canonical_concept": "trace lower extremity edema",
+        "category": "Finding",
+        "speaker": "unknown",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "exam"
+        ],
+        "proposition_text": "The patient reports trace lower extremity edema."
+      },
+      {
+        "prop_id": "P13",
+        "cap_type": "Diagnosis",
+        "canonical_concept": "shortness breath likely exacerbation",
+        "category": "Diagnosis",
+        "speaker": "clinician",
+        "predicate": "diagnoses",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "diagnosis"
+        ],
+        "proposition_text": "The patient's shortness of breath is likely an exacerbation of heart failure."
+      },
+      {
+        "prop_id": "P14",
+        "cap_type": "Diagnosis",
+        "canonical_concept": "edema suggests fluid retention",
+        "category": "Diagnosis",
+        "speaker": "clinician",
+        "predicate": "diagnoses",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "diagnosis"
+        ],
+        "proposition_text": "The patient's edema suggests fluid retention related to heart failure."
+      }
+    ],
+    "filtered_nonverifiable_units": [],
+    "runtime_seconds": 22.542
+  },
+  "cap_alignment": {
+    "cap_precision": 0.42857142857142855,
+    "cap_recall": 0.3,
+    "cap_f1": 0.3529411764705882,
+    "matched_count": 6,
+    "summary_prop_count": 14,
+    "source_prop_count": 20,
+    "matched_pairs": [
+      {
+        "score": 1.0,
+        "summary_prop_id": "P5",
+        "source_prop_id": "CAP12",
+        "summary_text": "The patient reports dizziness.",
+        "source_text": "The patient reports dizziness."
+      },
+      {
+        "score": 0.9,
+        "summary_prop_id": "P9",
+        "source_prop_id": "CAP3",
+        "summary_text": "The patient has had skin cancer removed five months ago.",
+        "source_text": "The patient had a skin cancer removed five months ago."
+      },
+      {
+        "score": 0.8571,
+        "summary_prop_id": "P13",
+        "source_prop_id": "CAP1",
+        "summary_text": "The patient's shortness of breath is likely an exacerbation of heart failure.",
+        "source_text": "The doctor believes the patient's shortness of breath is an exacerbation of heart failure."
+      },
+      {
+        "score": 0.8,
+        "summary_prop_id": "P7",
+        "source_prop_id": "CAP10",
+        "summary_text": "The patient denies vision problems.",
+        "source_text": "The patient reports no vision problems."
+      },
+      {
+        "score": 0.7775,
+        "summary_prop_id": "P1",
+        "source_prop_id": "CAP7",
+        "summary_text": "The patient reports shortness of breath after a half hour.",
+        "source_text": "The patient reports shortness of breath."
+      },
+      {
+        "score": 0.75,
+        "summary_prop_id": "P4",
+        "source_prop_id": "CAP13",
+        "summary_text": "The patient reports lightheadedness.",
+        "source_text": "The patient reports pain."
+      }
+    ],
+    "unsupported_summary_props": [
+      {
+        "prop_id": "P2",
+        "cap_type": "Symptom",
+        "canonical_concept": "struggling breathe",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports struggling to breathe."
+      },
+      {
+        "prop_id": "P3",
+        "cap_type": "Symptom",
+        "canonical_concept": "feeling like was having",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports feeling like he was having a heart attack."
+      },
+      {
+        "prop_id": "P6",
+        "cap_type": "Symptom",
+        "canonical_concept": "feeling fine sunday",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "past",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports feeling fine on Sunday."
+      },
+      {
+        "prop_id": "P8",
+        "cap_type": "MedicationPlan",
+        "canonical_concept": "taking all his medications",
+        "category": "MedicationPlan",
+        "speaker": "clinician",
+        "predicate": "prescribes",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "medication"
+        ],
+        "proposition_text": "The patient is taking all of his medications for heart failure."
+      },
+      {
+        "prop_id": "P10",
+        "cap_type": "Finding",
+        "canonical_concept": "denies fibular venous distention",
+        "category": "Finding",
+        "speaker": "unknown",
+        "predicate": "denies",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "exam"
+        ],
+        "proposition_text": "The patient denies fibular venous distention."
+      },
+      {
+        "prop_id": "P11",
+        "cap_type": "Finding",
+        "canonical_concept": "lungs some fine crackles",
+        "category": "Finding",
+        "speaker": "unknown",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "exam"
+        ],
+        "proposition_text": "The patient's lungs have some fine crackles bilaterally."
+      },
+      {
+        "prop_id": "P12",
+        "cap_type": "Finding",
+        "canonical_concept": "trace lower extremity edema",
+        "category": "Finding",
+        "speaker": "unknown",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "exam"
+        ],
+        "proposition_text": "The patient reports trace lower extremity edema."
+      },
+      {
+        "prop_id": "P14",
+        "cap_type": "Diagnosis",
+        "canonical_concept": "edema suggests fluid retention",
+        "category": "Diagnosis",
+        "speaker": "clinician",
+        "predicate": "diagnoses",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "diagnosis"
+        ],
+        "proposition_text": "The patient's edema suggests fluid retention related to heart failure."
+      }
+    ],
+    "missing_source_props": [
+      {
+        "prop_id": "CAP2",
+        "cap_type": "Problem",
+        "canonical_concept": "heart attack",
+        "category": "Problem",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "uncertain",
+        "visit_state": "historical",
+        "temporality": "past",
+        "proposition_text": "The patient reports a previous concern about a possible heart attack."
+      },
+      {
+        "prop_id": "CAP4",
+        "cap_type": "Problem",
+        "canonical_concept": "high blood pressure",
+        "category": "Problem",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "emergency room report",
+        "proposition_text": "A report in the emergency room indicated high blood pressure."
+      },
+      {
+        "prop_id": "CAP5",
+        "cap_type": "Symptom",
+        "canonical_concept": "salty foods",
+        "category": "Symptom",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient admits to occasionally consuming salty foods."
+      },
+      {
+        "prop_id": "CAP6",
+        "cap_type": "Symptom",
+        "canonical_concept": "pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports pain in the left hand."
+      },
+      {
+        "prop_id": "CAP8",
+        "cap_type": "Problem",
+        "canonical_concept": "skin cancer",
+        "category": "Problem",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "resolved",
+        "temporality": "past",
+        "proposition_text": "The patient had skin cancer removed."
+      },
+      {
+        "prop_id": "CAP9",
+        "cap_type": "Problem",
+        "canonical_concept": "cataract",
+        "category": "Problem",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "resolved",
+        "temporality": "past",
+        "proposition_text": "The patient had a cataract removed."
+      },
+      {
+        "prop_id": "CAP11",
+        "cap_type": "Problem",
+        "canonical_concept": "skin cancer",
+        "category": "Problem",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient has skin cancer."
+      },
+      {
+        "prop_id": "CAP14",
+        "cap_type": "ExamFinding",
+        "canonical_concept": "high blood pressure",
+        "category": "ExamFinding",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "now",
+        "proposition_text": "The doctor observed high blood pressure."
+      },
+      {
+        "prop_id": "CAP15",
+        "cap_type": "TestResult",
+        "canonical_concept": "left ventricular hypertrophy",
+        "category": "TestResult",
+        "speaker": "doctor",
+        "predicate": "shows",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "current",
+        "proposition_text": "The echocardiogram shows left ventricular hypertrophy."
+      },
+      {
+        "prop_id": "CAP16",
+        "cap_type": "TestResult",
+        "canonical_concept": "stable echocardiogram",
+        "category": "TestResult",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "current",
+        "claim_type_tags": [
+          "temporal"
+        ],
+        "proposition_text": "The echocardiogram pumping function is stable."
+      },
+      {
+        "prop_id": "CAP17",
+        "cap_type": "TestResult",
+        "canonical_concept": "stable ecg",
+        "category": "TestResult",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "current",
+        "claim_type_tags": [
+          "temporal"
+        ],
+        "proposition_text": "The ECG is stable."
+      },
+      {
+        "prop_id": "CAP18",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "heart failure medications",
+        "category": "MedicationStatement",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "medication"
+        ],
+        "proposition_text": "The patient reports taking heart failure medications."
+      },
+      {
+        "prop_id": "CAP19",
+        "cap_type": "ProblemHistory",
+        "canonical_concept": "heat and humidity",
+        "category": "ProblemHistory",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "past",
+        "proposition_text": "The patient reports playing tennis in hot and humid conditions."
+      },
+      {
+        "prop_id": "CAP20",
+        "cap_type": "ProblemHistory",
+        "canonical_concept": "tennis playing",
+        "category": "ProblemHistory",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "past",
+        "proposition_text": "The patient reports playing tennis."
+      }
+    ]
+  },
+  "reference_gpt_f1_items": {
+    "active_problems_symptoms": [
+      "shortness of breath",
+      "lightheadedness",
+      "dizziness",
+      "bilateral lower extremity edema",
+      "fine crackles"
+    ],
+    "negated_findings": [],
+    "uncertain_findings": [
+      "left ventricular hypertrophy",
+      "congestive heart failure",
+      "stable diminished ejection fraction"
+    ],
+    "medication_treatment": [],
+    "plan_followup": [],
+    "_chunk_count": [
+      "3"
+    ]
+  },
+  "summary_gpt_f1_items": {
+    "active_problems_symptoms": [],
+    "negated_findings": [],
+    "uncertain_findings": [],
+    "medication_treatment": [],
+    "plan_followup": [],
+    "_chunk_count": [
+      "1"
+    ]
+  },
+  "gpt_f1_alignment": {
+    "by_category": {
+      "active_problems_symptoms": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "matched_count": 0,
+        "pred_count": 0,
+        "ref_count": 5,
+        "matches": [],
+        "unsupported_pred_items": [],
+        "missing_ref_items": [
+          "shortness of breath",
+          "lightheadedness",
+          "dizziness",
+          "bilateral lower extremity edema",
+          "fine crackles"
+        ]
+      },
+      "negated_findings": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "matched_count": 0,
+        "pred_count": 0,
+        "ref_count": 0,
+        "matches": [],
+        "unsupported_pred_items": [],
+        "missing_ref_items": []
+      },
+      "uncertain_findings": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "matched_count": 0,
+        "pred_count": 0,
+        "ref_count": 3,
+        "matches": [],
+        "unsupported_pred_items": [],
+        "missing_ref_items": [
+          "left ventricular hypertrophy",
+          "congestive heart failure",
+          "stable diminished ejection fraction"
+        ]
+      },
+      "medication_treatment": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "matched_count": 0,
+        "pred_count": 0,
+        "ref_count": 0,
+        "matches": [],
+        "unsupported_pred_items": [],
+        "missing_ref_items": []
+      },
+      "plan_followup": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "matched_count": 0,
+        "pred_count": 0,
+        "ref_count": 0,
+        "matches": [],
+        "unsupported_pred_items": [],
+        "missing_ref_items": []
+      }
+    }
+  },
+  "reference_nair_concepts": {
+    "sections": [
+      {
+        "heading": "Clinical Note",
+        "section_value": "CHIEF COMPLAINT\nFollow-up from an emergency room visit.\nHISTORY OF PRESENT ILLNESS\nLouis Williams is a 58-year-old male presenting for a follow-up from an emergency room visit.\nThe patient states that he was playing tennis on Saturday, that he was really hot and that after approximately 30 minutes he was struggling to breathe. He states that he thought he was having a heart attack at that time. His wife took him to the emergency room and at that time, he states that he had been feeling very lightheaded and dizzy. He notes that on Sunday he felt fine.\nThe patient reports that he has been very diligent with his medications for his congestive heart failure. He notes that he has been avoiding salt for the most part but there has been some dietary indiscretion more recently.\nHe is status post cataract extraction approximately 3 months ago, and notes that everything has been fine since then. He denies any vision problems at this time.\nThe patient had a skin cancer removed approximately 5 months ago. He reports this is well healed.\nREVIEW OF SYSTEMS\n• Cardiovascular: Endorse dyspnea on exertion.",
+        "medical_concepts": [
+          "follow-up visit",
+          "emergency room visit",
+          "shortness of breath",
+          "struggling to breathe",
+          "heart attack",
+          "lightheadedness",
+          "dizziness",
+          "congestive heart failure",
+          "medications",
+          "salt restriction",
+          "dietary indiscretion",
+          "status post cataract extraction",
+          "cataract extraction",
+          "vision problems",
+          "skin cancer",
+          "dyspnea on exertion"
+        ]
+      },
+      {
+        "heading": "Clinical Note",
+        "section_value": "• Respiratory: Endorses shortness of breath.\n• Neurological: Endorses lightheadedness and dizziness.\nPHYSICAL EXAMINATION\n• Neck: Supple. No jugular venous distention.\n• Respiratory: Fine crackles bilaterally.\n• Cardiovascular: Regular rate and rhythm. No murmurs. Bilateral lower extremity edema.\nRESULTS\nECG revealed left ventricular hypertrophy consistent with congestive heart failure.\nEchocardiogram demonstrates stable diminished ejection fraction.\nSkin cancer pathology demonstrates clear margins.",
+        "medical_concepts": [
+          "shortness of breath",
+          "lightheadedness",
+          "dizziness",
+          "jugular venous distention",
+          "fine crackles",
+          "bilateral fine crackles",
+          "murmurs",
+          "bilateral lower extremity edema",
+          "lower extremity edema",
+          "ECG",
+          "left ventricular hypertrophy",
+          "congestive heart failure",
+          "echocardiogram",
+          "diminished ejection fraction",
+          "skin cancer",
+          "pathology",
+          "clear margins"
+        ]
+      },
+      {
+        "heading": "Clinical Note",
+        "section_value": "ASSESSMENT AND PLAN\nThe patient is a 58-year-old male who presents for follow-up after emergency room visit.\nED follow-up and congestive heart failure.\n• Medical Reasoning: I believe his symptoms which led to his ED visit were due to an exacerbation of his heart failure. He admits to some dietary indiscretion, which likely resulted in fluid retention.\n• Medical Treatment: I will prescribe Lasix 80 mg once a day. I will also place him on carvedilol 25 mg twice a day.\nStatus post basal cell carcinoma removal.\n• Medical Reasoning: He seems to be doing well and the removal site is well-healed. No change in treatment is necessary at this time.\nStatus post cataract surgery.\n• Medical Reasoning: He seems to be doing well. We will continue to observe, but no treatment changes are needed today.\nPatient Agreements: The patient understands and agrees with the recommended medical treatment.",
+        "medical_concepts": [
+          "emergency room visit",
+          "congestive heart failure",
+          "heart failure exacerbation",
+          "dietary indiscretion",
+          "fluid retention",
+          "Lasix",
+          "carvedilol",
+          "basal cell carcinoma",
+          "basal cell carcinoma removal",
+          "cataract surgery"
+        ]
+      }
+    ],
+    "medical_concepts": [
+      "follow-up visit",
+      "emergency room visit",
+      "shortness of breath",
+      "struggling to breathe",
+      "heart attack",
+      "lightheadedness",
+      "dizziness",
+      "congestive heart failure",
+      "medications",
+      "salt restriction",
+      "dietary indiscretion",
+      "status post cataract extraction",
+      "cataract extraction",
+      "vision problems",
+      "skin cancer",
+      "dyspnea on exertion",
+      "jugular venous distention",
+      "fine crackles",
+      "bilateral fine crackles",
+      "murmurs",
+      "bilateral lower extremity edema",
+      "lower extremity edema",
+      "ECG",
+      "left ventricular hypertrophy",
+      "echocardiogram",
+      "diminished ejection fraction",
+      "pathology",
+      "clear margins",
+      "heart failure exacerbation",
+      "fluid retention",
+      "Lasix",
+      "carvedilol",
+      "basal cell carcinoma",
+      "basal cell carcinoma removal",
+      "cataract surgery"
+    ],
+    "section_count": 3
+  },
+  "summary_nair_concepts": {
+    "sections": [
+      {
+        "heading": "S",
+        "section_value": "The patient reports shortness of breath after a half hour, struggling to breathe and feeling like he was having a heart attack. He also reports lightheadedness and dizziness six hours after arriving home, followed by feeling fine on Sunday. He denies vision problems. He reports taking all of his medications for heart failure. He has had skin cancer removed five months ago with no problems since. He denies fibular venous distention and reports lungs have some fine crackles bilaterally with trace lower extremity edema.",
+        "medical_concepts": [
+          "shortness of breath",
+          "struggling to breathe",
+          "heart attack",
+          "lightheadedness",
+          "dizziness",
+          "vision problems",
+          "heart failure",
+          "skin cancer",
+          "fibular venous distention",
+          "fine crackles in lungs",
+          "lower extremity edema"
+        ]
+      },
+      {
+        "heading": "O",
+        "section_value": "Blood pressure is slightly elevated. Heart rate is regular and stable. ECG shows left ventricular hypertrophy. Echocardiogram reveals slightly reduced pumping function but stable. Skin biopsy results are pending.",
+        "medical_concepts": [
+          "elevated blood pressure",
+          "heart rate",
+          "electrocardiogram",
+          "left ventricular hypertrophy",
+          "echocardiogram",
+          "reduced cardiac pumping function",
+          "skin biopsy"
+        ]
+      },
+      {
+        "heading": "A",
+        "section_value": "The patient's shortness of breath is likely an exacerbation of heart failure due to left ventricular hypertrophy. The patient's edema suggests fluid retention related to heart failure.",
+        "medical_concepts": [
+          "shortness of breath",
+          "exacerbation of heart failure",
+          "heart failure",
+          "left ventricular hypertrophy",
+          "edema",
+          "fluid retention"
+        ]
+      },
+      {
+        "heading": "P",
+        "section_value": "Rescribe lasix 80 milligrams once daily. Order carvedilol 25 milligrams twice daily. Dragon, order lasix 80 milligrams, once daily. Dragon, order carvedilol 25 milligrams, twice daily.",
+        "medical_concepts": [
+          "lasix",
+          "carvedilol"
+        ]
+      }
+    ],
+    "medical_concepts": [
+      "shortness of breath",
+      "struggling to breathe",
+      "heart attack",
+      "lightheadedness",
+      "dizziness",
+      "vision problems",
+      "heart failure",
+      "skin cancer",
+      "fibular venous distention",
+      "fine crackles in lungs",
+      "lower extremity edema",
+      "elevated blood pressure",
+      "heart rate",
+      "electrocardiogram",
+      "left ventricular hypertrophy",
+      "echocardiogram",
+      "reduced cardiac pumping function",
+      "skin biopsy",
+      "exacerbation of heart failure",
+      "edema",
+      "fluid retention",
+      "lasix",
+      "carvedilol"
+    ],
+    "section_count": 4
+  },
+  "nair_alignment": {
+    "pred_concepts": [
+      "shortness of breath",
+      "struggling to breathe",
+      "heart attack",
+      "lightheadedness",
+      "dizziness",
+      "vision problems",
+      "heart failure",
+      "skin cancer",
+      "fibular venous distention",
+      "fine crackles in lungs",
+      "lower extremity edema",
+      "elevated blood pressure",
+      "heart rate",
+      "electrocardiogram",
+      "left ventricular hypertrophy",
+      "echocardiogram",
+      "reduced cardiac pumping function",
+      "skin biopsy",
+      "exacerbation of heart failure",
+      "edema",
+      "fluid retention",
+      "lasix",
+      "carvedilol"
+    ],
+    "ref_concepts": [
+      "follow-up visit",
+      "emergency room visit",
+      "shortness of breath",
+      "struggling to breathe",
+      "heart attack",
+      "lightheadedness",
+      "dizziness",
+      "congestive heart failure",
+      "medications",
+      "salt restriction",
+      "dietary indiscretion",
+      "status post cataract extraction",
+      "cataract extraction",
+      "vision problems",
+      "skin cancer",
+      "dyspnea on exertion",
+      "jugular venous distention",
+      "fine crackles",
+      "bilateral fine crackles",
+      "murmurs",
+      "bilateral lower extremity edema",
+      "lower extremity edema",
+      "ECG",
+      "left ventricular hypertrophy",
+      "echocardiogram",
+      "diminished ejection fraction",
+      "pathology",
+      "clear margins",
+      "heart failure exacerbation",
+      "fluid retention",
+      "Lasix",
+      "carvedilol",
+      "basal cell carcinoma",
+      "basal cell carcinoma removal",
+      "cataract surgery"
+    ],
+    "precision_alignment": {
+      "found_b": [
+        "shortness of breath",
+        "struggling to breathe",
+        "heart attack",
+        "lightheadedness",
+        "dizziness",
+        "vision problems",
+        "heart failure",
+        "skin cancer",
+        "fine crackles in lungs",
+        "lower extremity edema",
+        "electrocardiogram",
+        "left ventricular hypertrophy",
+        "echocardiogram",
+        "reduced cardiac pumping function",
+        "exacerbation of heart failure",
+        "edema",
+        "fluid retention",
+        "lasix",
+        "carvedilol"
+      ],
+      "not_found_b": [
+        "fibular venous distention",
+        "elevated blood pressure",
+        "heart rate",
+        "skin biopsy"
+      ],
+      "chunk_count": 1,
+      "chunk_results": [
+        {
+          "found_b": [
+            "shortness of breath",
+            "struggling to breathe",
+            "heart attack",
+            "lightheadedness",
+            "dizziness",
+            "vision problems",
+            "heart failure",
+            "skin cancer",
+            "fine crackles in lungs",
+            "lower extremity edema",
+            "electrocardiogram",
+            "left ventricular hypertrophy",
+            "echocardiogram",
+            "reduced cardiac pumping function",
+            "exacerbation of heart failure",
+            "edema",
+            "fluid retention",
+            "lasix",
+            "carvedilol"
+          ],
+          "not_found_b": [
+            "fibular venous distention",
+            "elevated blood pressure",
+            "heart rate",
+            "skin biopsy"
+          ]
+        }
+      ]
+    },
+    "recall_alignment": {
+      "found_b": [
+        "shortness of breath",
+        "struggling to breathe",
+        "heart attack",
+        "lightheadedness",
+        "dizziness",
+        "congestive heart failure",
+        "medications",
+        "vision problems",
+        "skin cancer",
+        "fine crackles",
+        "bilateral fine crackles",
+        "bilateral lower extremity edema",
+        "lower extremity edema",
+        "ECG",
+        "left ventricular hypertrophy",
+        "echocardiogram",
+        "diminished ejection fraction",
+        "heart failure exacerbation",
+        "fluid retention",
+        "Lasix",
+        "carvedilol"
+      ],
+      "not_found_b": [
+        "follow-up visit",
+        "emergency room visit",
+        "salt restriction",
+        "dietary indiscretion",
+        "status post cataract extraction",
+        "cataract extraction",
+        "dyspnea on exertion",
+        "jugular venous distention",
+        "murmurs",
+        "pathology",
+        "clear margins",
+        "basal cell carcinoma",
+        "basal cell carcinoma removal",
+        "cataract surgery"
+      ],
+      "chunk_count": 2,
+      "chunk_results": [
+        {
+          "found_b": [
+            "shortness of breath",
+            "struggling to breathe",
+            "heart attack",
+            "lightheadedness",
+            "dizziness",
+            "congestive heart failure",
+            "medications",
+            "vision problems",
+            "skin cancer",
+            "fine crackles",
+            "bilateral fine crackles",
+            "bilateral lower extremity edema",
+            "lower extremity edema",
+            "ECG",
+            "left ventricular hypertrophy"
+          ],
+          "not_found_b": [
+            "follow-up visit",
+            "emergency room visit",
+            "salt restriction",
+            "dietary indiscretion",
+            "status post cataract extraction",
+            "cataract extraction",
+            "dyspnea on exertion",
+            "jugular venous distention",
+            "murmurs"
+          ]
+        },
+        {
+          "found_b": [
+            "echocardiogram",
+            "diminished ejection fraction",
+            "heart failure exacerbation",
+            "fluid retention",
+            "Lasix",
+            "carvedilol"
+          ],
+          "not_found_b": [
+            "pathology",
+            "clear margins",
+            "basal cell carcinoma",
+            "basal cell carcinoma removal",
+            "cataract surgery"
+          ]
+        }
+      ]
+    }
+  },
+  "semantic_cap_audit": {
+    "source_cap_recall": [
+      {
+        "cap_id": "P1",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P2",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P3",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P4",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P5",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P6",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P7",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P8",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P9",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P10",
+        "judgment": "contradicted",
+        "reason": null
+      },
+      {
+        "cap_id": "P11",
+        "judgment": "contradicted",
+        "reason": null
+      },
+      {
+        "cap_id": "P12",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P13",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P14",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P15",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P16",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P1",
+        "judgment": "contradicted",
+        "reason": null
+      },
+      {
+        "cap_id": "P2",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P3",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P4",
+        "judgment": "missing",
+        "reason": null
+      }
+    ],
+    "summary_cap_precision": [
+      {
+        "cap_id": "P1",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P2",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P3",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P4",
+        "judgment": "unsupported",
+        "reason": null
+      },
+      {
+        "cap_id": "P5",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P6",
+        "judgment": "unsupported",
+        "reason": null
+      },
+      {
+        "cap_id": "P7",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P8",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P9",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P10",
+        "judgment": "unsupported",
+        "reason": null
+      },
+      {
+        "cap_id": "P11",
+        "judgment": "unsupported",
+        "reason": null
+      },
+      {
+        "cap_id": "P12",
+        "judgment": "unsupported",
+        "reason": null
+      },
+      {
+        "cap_id": "P13",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P14",
+        "judgment": "unsupported",
+        "reason": null
+      }
+    ],
+    "metrics": {
+      "semantic_cap_precision": 0.3929,
+      "semantic_cap_recall": 0.475,
+      "semantic_cap_f1": 0.43,
+      "semantic_cap_precision_supported_count": 3,
+      "semantic_cap_precision_partial_count": 5,
+      "semantic_cap_precision_denominator": 14,
+      "semantic_cap_recall_supported_count": 7,
+      "semantic_cap_recall_partial_count": 5,
+      "semantic_cap_recall_denominator": 20,
+      "semantic_cap_low_value_source_count": 0,
+      "semantic_cap_low_value_summary_count": 0,
+      "semantic_cap_missing_count": 5,
+      "semantic_cap_unsupported_count": 6,
+      "semantic_cap_contradicted_source_count": 3,
+      "semantic_cap_contradicted_summary_count": 0
+    }
+  },
+  "safety_judgment": null,
+  "section_judgment": {
+    "section_miscategorizations": [
+      {
+        "text": "He denies fibular venous distention and reports lungs have some fine crackles bilaterally with trace lower extremity edema.",
+        "current_section": "S",
+        "expected_section": "O",
+        "severity": "major",
+        "reason": "Denial of jugular venous distention and presence of crackles and edema are framed as exam-style objective findings, not typical patient-reported symptoms; placing them in S could mislead a reader about whether these were clinician findings."
+      }
+    ],
+    "summary_statistics": {
+      "section_appropriateness_score": 0.7,
+      "section_miscategorization_count": 1,
+      "major_section_miscategorization_count": 1
+    }
+  },
+  "pdsqi_judgment": {
+    "citation_applicable": 0,
+    "citation": 0,
+    "accurate": 2,
+    "thorough": 2,
+    "useful": 2,
+    "organized": 3,
+    "comprehensible": 3,
+    "succinct": 3,
+    "abstraction": 1,
+    "synthesized": 2,
+    "voice_summ": 0,
+    "voice_note": 0,
+    "pdsqi_core_mean": 2.4286
+  },
+  "llm_checklist_judgment": {
+    "content_preservation_core": 3,
+    "noise_suppression": 4,
+    "lay_expression_preservation": 3,
+    "state_update_fidelity": 2,
+    "temporality_preservation": 3,
+    "problem_evidence_linkage": 4,
+    "state_plan_separation": 3,
+    "section_organization_appropriateness": 2,
+    "overall_clinical_usability": 3,
+    "clinically_meaningful_omission": "Yes",
+    "clinically_concerning_hallucination": "Yes",
+    "checklist_a_mean": 3.3333,
+    "checklist_b_mean": 2.5,
+    "checklist_c_mean": 3.0,
+    "llm_checklist_abc_mean": 3.0,
+    "llm_checklist_mean_no_usability": 3.0,
+    "llm_checklist_total_score": 27,
+    "llm_checklist_mean": 3.0,
+    "llm_checklist_meaningful_omission_yes": 1,
+    "llm_checklist_concerning_hallucination_yes": 1
+  },
+  "metrics": {
+    "case_id": "D2N014",
+    "method": "cluster2sent",
+    "template": "soap",
+    "source_cap_count": 20,
+    "event_plan_count": null,
+    "summary_cap_count": 14,
+    "cap_matched_count": 6,
+    "cap_precision": 0.4286,
+    "cap_recall": 0.3,
+    "cap_f1": 0.3529,
+    "unsupported_summary_cap_count": 8,
+    "missing_source_cap_count": 14,
+    "summary_runtime_seconds": null,
+    "summary_cap_runtime_seconds": 22.542,
+    "event_plan_runtime_seconds": null,
+    "rouge_l_f1_vs_reference": 0.225,
+    "token_f1_vs_reference": 0.3691,
+    "gptf1_macro_f1": 0.0,
+    "nair_gpt_precision": 0.8261,
+    "nair_gpt_recall": 0.6,
+    "nair_gpt_f1": 0.6951,
+    "semantic_cap_precision": 0.3929,
+    "semantic_cap_recall": 0.475,
+    "semantic_cap_f1": 0.43,
+    "hallucination_count": null,
+    "major_hallucination_count": null,
+    "omission_count": null,
+    "major_omission_count": null,
+    "section_appropriateness_score": 0.7,
+    "section_miscategorization_count": 1,
+    "major_section_miscategorization_count": 1,
+    "pdsqi_core_mean": 2.4286,
+    "pdsqi_accurate": 2,
+    "pdsqi_thorough": 2,
+    "llm_checklist_total_score": 27,
+    "llm_checklist_mean": 3.0,
+    "llm_checklist_mean_no_usability": 3.0,
+    "checklist_a_mean": 3.3333,
+    "checklist_b_mean": 2.5,
+    "checklist_c_mean": 3.0,
+    "llm_checklist_abc_mean": 3.0,
+    "content_preservation_core": 3,
+    "noise_suppression": 4,
+    "lay_expression_preservation": 3,
+    "state_update_fidelity": 2,
+    "temporality_preservation": 3,
+    "problem_evidence_linkage": 4,
+    "state_plan_separation": 3,
+    "section_organization_appropriateness": 2,
+    "overall_clinical_usability": 3,
+    "llm_checklist_meaningful_omission_yes": 1,
+    "llm_checklist_concerning_hallucination_yes": 1,
+    "gptf1_active_problems_symptoms_precision": 0.0,
+    "gptf1_active_problems_symptoms_recall": 0.0,
+    "gptf1_active_problems_symptoms_f1": 0.0,
+    "gptf1_active_problems_symptoms_pred_count": 0,
+    "gptf1_active_problems_symptoms_ref_count": 5,
+    "gptf1_negated_findings_precision": 0.0,
+    "gptf1_negated_findings_recall": 0.0,
+    "gptf1_negated_findings_f1": 0.0,
+    "gptf1_negated_findings_pred_count": 0,
+    "gptf1_negated_findings_ref_count": 0,
+    "gptf1_uncertain_findings_precision": 0.0,
+    "gptf1_uncertain_findings_recall": 0.0,
+    "gptf1_uncertain_findings_f1": 0.0,
+    "gptf1_uncertain_findings_pred_count": 0,
+    "gptf1_uncertain_findings_ref_count": 3,
+    "gptf1_medication_treatment_precision": 0.0,
+    "gptf1_medication_treatment_recall": 0.0,
+    "gptf1_medication_treatment_f1": 0.0,
+    "gptf1_medication_treatment_pred_count": 0,
+    "gptf1_medication_treatment_ref_count": 0,
+    "gptf1_plan_followup_precision": 0.0,
+    "gptf1_plan_followup_recall": 0.0,
+    "gptf1_plan_followup_f1": 0.0,
+    "gptf1_plan_followup_pred_count": 0,
+    "gptf1_plan_followup_ref_count": 0,
+    "nair_pred_concept_count": 23,
+    "nair_ref_concept_count": 35,
+    "nair_precision_match_count": 19,
+    "nair_recall_match_count": 21,
+    "semantic_cap_precision_supported_count": 3,
+    "semantic_cap_precision_partial_count": 5,
+    "semantic_cap_precision_denominator": 14,
+    "semantic_cap_recall_supported_count": 7,
+    "semantic_cap_recall_partial_count": 5,
+    "semantic_cap_recall_denominator": 20,
+    "semantic_cap_low_value_source_count": 0,
+    "semantic_cap_low_value_summary_count": 0,
+    "semantic_cap_missing_count": 5,
+    "semantic_cap_unsupported_count": 6,
+    "semantic_cap_contradicted_source_count": 3,
+    "semantic_cap_contradicted_summary_count": 0,
+    "pdsqi_useful": 2,
+    "pdsqi_organized": 3,
+    "pdsqi_comprehensible": 3,
+    "pdsqi_succinct": 3,
+    "pdsqi_synthesized": 2
+  }
+}

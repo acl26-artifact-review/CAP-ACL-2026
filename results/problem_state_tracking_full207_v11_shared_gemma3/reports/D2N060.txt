@@ -1,0 +1,61 @@
+Case: D2N060
+
+Problem List and Visit State Tracking
+
+Problem List
+- foot pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T1
+  Summary: The patient reports foot pain.
+  ClusterId: CL1
+  TemporalProfile: current
+  Updates:
+  - CAP4: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T1 :: The patient reports foot pain.
+- soccer injury | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T3
+  Summary: The patient sustained a soccer injury.
+  ClusterId: CL2
+  TemporalProfile: yesterday
+  Updates:
+  - CAP3: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=yesterday turns=T3 :: The patient sustained a soccer injury.
+- left hand pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T11,T12
+  Summary: The patient reports pain in the left hand.
+  ClusterId: CL4
+  TemporalProfile: current
+  Updates:
+  - CAP1: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T11 :: The patient reports pain in the left hand.
+  - CAP2: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T12 :: The patient reports pain level of 7-8.
+- soccer | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T15
+  Summary: The patient has played soccer for a long time.
+  ClusterId: CL5
+  TemporalProfile: long-term
+  Updates:
+  - CAP8: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=long-term turns=T15 :: The patient has played soccer for a long time.
+- local town | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T17
+  Summary: The patient started playing soccer in a local town.
+  ClusterId: CL6
+  TemporalProfile: long-term
+  Updates:
+  - CAP9: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=long-term turns=T17 :: The patient started playing soccer in a local town.
+- numbness | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T20
+  Summary: The patient reports numbness.
+  ClusterId: CL7
+  TemporalProfile: current
+  Updates:
+  - CAP5: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T20 :: The patient reports numbness.
+- tingling | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T20
+  Summary: The patient reports tingling.
+  ClusterId: CL8
+  TemporalProfile: current
+  Updates:
+  - CAP6: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T20 :: The patient reports tingling.
+
+Medication Tracking
+- [MedicationState] ibuprofen | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T9
+  Summary: The patient is taking ibuprofen.
+  ClusterId: CL3
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient is taking ibuprofen. (T9)
+  Updates:
+  - CAP7: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T9 :: The patient is taking ibuprofen.
+
+Other Structured States
+- None

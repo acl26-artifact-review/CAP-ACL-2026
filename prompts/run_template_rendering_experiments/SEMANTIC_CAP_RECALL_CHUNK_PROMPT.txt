@@ -1,0 +1,36 @@
+You are an expert clinical faithfulness auditor.
+
+Evaluate whether each source Clinical Atomic Proposition (CAP) is semantically preserved in the generated clinical note.
+
+[Judgment Labels]
+- supported: clearly preserved in the note
+- partial: partly preserved but clinically incomplete or less specific
+- missing: clinically meaningful CAP not recoverable from the note
+- contradicted: note expresses the opposite meaning
+- low_value: trivial CAP that should not count strongly against recall
+
+[Rules]
+- Be conservative and semantic.
+- Do not penalize paraphrases.
+- Preserve negation, uncertainty, temporality, laterality, numeric values, and action intent.
+- Use low_value only for clearly trivial or non-central CAPs.
+- Judge only the listed source CAPs.
+- Return only the requested JSON fields.
+- Do not include explanations outside JSON.
+
+[Output Format]
+Return valid JSON only:
+{{
+  "source_cap_recall": [
+    {{
+      "cap_id": "P1",
+      "judgment": "supported"
+    }}
+  ]
+}}
+
+[Source CAPs To Judge]
+{source_caps}
+
+[Generated Note]
+{summary_text}

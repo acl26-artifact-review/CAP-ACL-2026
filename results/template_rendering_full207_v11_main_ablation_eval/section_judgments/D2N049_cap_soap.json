@@ -1,0 +1,58 @@
+{
+  "section_miscategorizations": [
+    {
+      "text": "The patient reports hematuria.",
+      "current_section": "O",
+      "expected_section": "S",
+      "severity": "major",
+      "reason": "This is explicitly a patient-reported symptom and should be in the Subjective section, not Objective."
+    },
+    {
+      "text": "The patient's blood pressure readings were in the one forties.",
+      "current_section": "O",
+      "expected_section": "S",
+      "severity": "major",
+      "reason": "This is phrased as a trend in blood pressure readings rather than a single clinician-measured vital; it appears to summarize prior/home readings and belongs in Subjective per template rules."
+    },
+    {
+      "text": "The patient's blood pressure readings went to like one fifty.",
+      "current_section": "O",
+      "expected_section": "S",
+      "severity": "major",
+      "reason": "Colloquial phrasing indicates this is a reported history of prior readings rather than an in-clinic measurement; such home/trend data belong in Subjective."
+    },
+    {
+      "text": "The patient reports pain in his left hand.",
+      "current_section": "O",
+      "expected_section": "S",
+      "severity": "major",
+      "reason": "This is a patient-reported symptom and should be documented in the Subjective section, not Objective."
+    },
+    {
+      "text": "The patient has a history of hypertension and diabetes.",
+      "current_section": "A",
+      "expected_section": "S",
+      "severity": "minor",
+      "reason": "Past medical history is typically documented in Subjective; while listing comorbidities in Assessment is common, strictly by the provided semantics this history belongs in S."
+    },
+    {
+      "text": "The patient's blood pressure is elevated.",
+      "current_section": "A",
+      "expected_section": "O",
+      "severity": "minor",
+      "reason": "This is a characterization of an objective vital sign rather than a diagnostic synthesis; it would more strictly fit in Objective, though its presence in Assessment is not highly misleading."
+    },
+    {
+      "text": "Continue metformin 500 mg twice daily.",
+      "current_section": "P",
+      "expected_section": "S",
+      "severity": "minor",
+      "reason": "Per template rules, current medications the patient is already taking belong in Subjective unless framed as a treatment change or new order; this line does not clearly indicate a change, though in practice many clinicians place such instructions in Plan."
+    }
+  ],
+  "summary_statistics": {
+    "section_appropriateness_score": 0.7,
+    "section_miscategorization_count": 7,
+    "major_section_miscategorization_count": 4
+  }
+}

@@ -1,0 +1,89 @@
+Case: D2N164
+
+Problem List and Visit State Tracking
+
+Problem List
+- high blood pressure | verification_status=unconfirmed | clinical_status=historical | modalities=assessment,interview | speakers=doctor,patient | evidence=T0,T21,T9
+  Summary: The doctor suspects the patient may have high blood pressure.
+  ClusterId: CL1
+  TemporalProfile: past
+  Updates:
+  - CAP16: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=past turns=T0 :: The patient has a past medical history of high blood pressure.
+  - CAP3: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=past turns=T9 :: The patient has a history of high blood pressure.
+  - CAP1: content_source=doctor modality=assessment verification_status=unconfirmed clinical_status=historical temporality=past turns=T21 :: The doctor suspects the patient may have high blood pressure.
+  - CAP2: content_source=doctor modality=assessment verification_status=unconfirmed clinical_status=historical temporality=past turns=T21 :: The doctor noted a trend of elevated blood pressure readings.
+- diabetes | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T0
+  Summary: The patient has a past medical history of diabetes.
+  ClusterId: CL2
+  TemporalProfile: past
+  Updates:
+  - CAP17: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=past turns=T0 :: The patient has a past medical history of diabetes.
+- chest pain | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T1,T23
+  Summary: The patient reports chest pain.
+  ClusterId: CL3
+  TemporalProfile: current
+  Updates:
+  - CAP4: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T1 :: The patient reports chest pain.
+  - CAP5: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T23 :: The patient reports chest pain.
+- three months | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T5
+  Summary: The patient reports the pain has been present for approximately three months.
+  ClusterId: CL4
+  TemporalProfile: current
+  Updates:
+  - CAP15: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=current turns=T5 :: The patient reports the pain has been present for approximately three months.
+- walking | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T7
+  Summary: The patient reports walking.
+  ClusterId: CL5
+  TemporalProfile: current
+  Updates:
+  - CAP7: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T7 :: The patient reports walking.
+- nausea | verification_status=unconfirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T18
+  Summary: The patient reports nausea.
+  ClusterId: CL8
+  TemporalProfile: past
+  Updates:
+  - CAP8: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=past turns=T18 :: The patient reports nausea.
+- diarrhea | verification_status=unconfirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T18
+  Summary: The patient reports diarrhea.
+  ClusterId: CL9
+  TemporalProfile: past
+  Updates:
+  - CAP9: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=past turns=T18 :: The patient reports diarrhea.
+- bowel changes | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T39
+  Summary: The patient reports bowel changes.
+  ClusterId: CL13
+  TemporalProfile: current
+  Updates:
+  - CAP6: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T39 :: The patient reports bowel changes.
+
+Medication Tracking
+- [MedicationState] metformin | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=doctor | evidence=T14
+  Summary: The patient is taking metformin.
+  ClusterId: CL6
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient is taking metformin. (T14)
+  Updates:
+  - CAP14: content_source=doctor modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T14 :: The patient is taking metformin.
+- [MedicationChange] blood pressure medication | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T26
+  Summary: The doctor recommends starting blood pressure medication.
+  ClusterId: CL10
+  TemporalProfile: future
+  PlannedChanges:
+  - The doctor recommends starting blood pressure medication. (T26)
+  Updates:
+  - CAP10: content_source=doctor modality=plan verification_status=unconfirmed clinical_status=planned temporality=future turns=T26 :: The doctor recommends starting blood pressure medication.
+
+Other Structured States
+- [TestResult] hemoglobin a1c | verification_status=confirmed | clinical_status=historical | modalities=test_result | speakers=test_result | evidence=T16
+  Summary: The patient's hemoglobin a1c was 7.
+  ClusterId: CL7
+  TemporalProfile: past
+- [Plan] monitoring devices | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T26
+  Summary: The doctor recommends starting monitoring devices.
+  ClusterId: CL11
+  TemporalProfile: future
+- [Plan] diet control | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T26
+  Summary: The doctor recommends starting diet control.
+  ClusterId: CL12
+  TemporalProfile: future

@@ -1,0 +1,595 @@
+{
+  "case_id": "D2N198",
+  "annotator": "B",
+  "seed_gold_caps": [
+    {
+      "gold_id": "G1",
+      "fact_text": "The patient is named Michael",
+      "category": "Demographics",
+      "speaker": "clinician",
+      "temporality": "current",
+      "certainty": "high",
+      "provenance_sentence": "0"
+    },
+    {
+      "gold_id": "G2",
+      "fact_text": "The patient presented because of symptoms that concerned his primary care provider",
+      "category": "Chief Complaint",
+      "speaker": "clinician",
+      "temporality": "current",
+      "certainty": "high",
+      "provenance_sentence": "0"
+    },
+    {
+      "gold_id": "G3",
+      "fact_text": "The patient's primary care provider ordered a CT scan before this visit",
+      "category": "Test Result",
+      "speaker": "clinician",
+      "temporality": "past",
+      "certainty": "high",
+      "provenance_sentence": "0"
+    },
+    {
+      "gold_id": "G4",
+      "fact_text": "The patient went in for a regular visit with his primary care provider",
+      "category": "Past Medical History",
+      "speaker": "patient",
+      "temporality": "past",
+      "certainty": "high",
+      "provenance_sentence": "3"
+    },
+    {
+      "gold_id": "G5",
+      "fact_text": "During the regular visit the patient reported having back pain",
+      "category": "Symptom",
+      "speaker": "patient",
+      "temporality": "unknown",
+      "certainty": "high",
+      "provenance_sentence": "3"
+    },
+    {
+      "gold_id": "G6",
+      "fact_text": "The patient's back pain is usually on the left side",
+      "category": "Symptom",
+      "speaker": "patient",
+      "temporality": "unknown",
+      "certainty": "high",
+      "provenance_sentence": "3"
+    },
+    {
+      "gold_id": "G7",
+      "fact_text": "The primary care provider advised the patient to see this clinician for the back pain",
+      "category": "Plan",
+      "speaker": "patient",
+      "temporality": "past",
+      "certainty": "high",
+      "provenance_sentence": "3"
+    },
+    {
+      "gold_id": "G8",
+      "fact_text": "The patient's back pain is sometimes sharp",
+      "category": "Symptom",
+      "speaker": "patient",
+      "temporality": "unknown",
+      "certainty": "high",
+      "provenance_sentence": "5"
+    },
+    {
+      "gold_id": "G9",
+      "fact_text": "The patient's back pain is sometimes not sharp",
+      "category": "Symptom",
+      "speaker": "patient",
+      "temporality": "unknown",
+      "certainty": "high",
+      "provenance_sentence": "5"
+    },
+    {
+      "gold_id": "G10",
+      "fact_text": "The location of the patient's back pain sometimes moves",
+      "category": "Symptom",
+      "speaker": "patient",
+      "temporality": "unknown",
+      "certainty": "high",
+      "provenance_sentence": "5"
+    },
+    {
+      "gold_id": "G11",
+      "fact_text": "The location of the patient's back pain sometimes does not move",
+      "category": "Symptom",
+      "speaker": "patient",
+      "temporality": "unknown",
+      "certainty": "high",
+      "provenance_sentence": "5"
+    },
+    {
+      "gold_id": "G12",
+      "fact_text": "The patient's back pain is mostly on the left side",
+      "category": "Symptom",
+      "speaker": "patient",
+      "temporality": "unknown",
+      "certainty": "high",
+      "provenance_sentence": "5"
+    },
+    {
+      "gold_id": "G13",
+      "fact_text": "The patient has not been more tired than usual recently",
+      "category": "Review of Systems",
+      "speaker": "patient",
+      "temporality": "unknown",
+      "certainty": "high",
+      "provenance_sentence": "10-11"
+    },
+    {
+      "gold_id": "G14",
+      "fact_text": "The patient's appetite is unchanged",
+      "category": "Review of Systems",
+      "speaker": "patient",
+      "temporality": "unknown",
+      "certainty": "high",
+      "provenance_sentence": "12-13"
+    },
+    {
+      "gold_id": "G15",
+      "fact_text": "The patient has been drinking a lot more water than usual",
+      "category": "Symptom",
+      "speaker": "patient",
+      "temporality": "unknown",
+      "certainty": "high",
+      "provenance_sentence": "16-17"
+    },
+    {
+      "gold_id": "G16",
+      "fact_text": "The patient wakes up at night to urinate more than he normally does",
+      "category": "Symptom",
+      "speaker": "patient",
+      "temporality": "unknown",
+      "certainty": "high",
+      "provenance_sentence": "17"
+    },
+    {
+      "gold_id": "G17",
+      "fact_text": "The clinician notes that the patient has increased urine output",
+      "category": "Assessment",
+      "speaker": "clinician",
+      "temporality": "current",
+      "certainty": "high",
+      "provenance_sentence": "18"
+    },
+    {
+      "gold_id": "G18",
+      "fact_text": "The patient rides a bike every so often",
+      "category": "Lifestyle",
+      "speaker": "patient",
+      "temporality": "unknown",
+      "certainty": "high",
+      "provenance_sentence": "19"
+    },
+    {
+      "gold_id": "G19",
+      "fact_text": "The patient did not watch March Madness",
+      "category": "Lifestyle",
+      "speaker": "patient",
+      "temporality": "past",
+      "certainty": "high",
+      "provenance_sentence": "22-23"
+    },
+    {
+      "gold_id": "G20",
+      "fact_text": "The patient reports that school is going well",
+      "category": "Social History",
+      "speaker": "patient",
+      "temporality": "current",
+      "certainty": "high",
+      "provenance_sentence": "26-27"
+    },
+    {
+      "gold_id": "G21",
+      "fact_text": "The patient reports getting good grades in school",
+      "category": "Social History",
+      "speaker": "patient",
+      "temporality": "current",
+      "certainty": "high",
+      "provenance_sentence": "27"
+    },
+    {
+      "gold_id": "G22",
+      "fact_text": "The patient reports that many people around him are sick these days",
+      "category": "Social History",
+      "speaker": "patient",
+      "temporality": "current",
+      "certainty": "high",
+      "provenance_sentence": "30-31"
+    },
+    {
+      "gold_id": "G23",
+      "fact_text": "Most of the patient's siblings are healthy",
+      "category": "Social History",
+      "speaker": "patient",
+      "temporality": "current",
+      "certainty": "high",
+      "provenance_sentence": "34-35"
+    },
+    {
+      "gold_id": "G24",
+      "fact_text": "The patient has a brother who smokes",
+      "category": "Social History",
+      "speaker": "patient",
+      "temporality": "current",
+      "certainty": "high",
+      "provenance_sentence": "35"
+    },
+    {
+      "gold_id": "G25",
+      "fact_text": "The patient has told his brother not to smoke",
+      "category": "Social History",
+      "speaker": "patient",
+      "temporality": "unknown",
+      "certainty": "high",
+      "provenance_sentence": "35"
+    },
+    {
+      "gold_id": "G26",
+      "fact_text": "The patient has told his brother not to smoke in the house",
+      "category": "Social History",
+      "speaker": "patient",
+      "temporality": "unknown",
+      "certainty": "high",
+      "provenance_sentence": "37"
+    },
+    {
+      "gold_id": "G27",
+      "fact_text": "There is a smoker in the patient's home",
+      "category": "Social History",
+      "speaker": "clinician",
+      "temporality": "current",
+      "certainty": "high",
+      "provenance_sentence": "35,38"
+    },
+    {
+      "gold_id": "G28",
+      "fact_text": "The clinician states that having a smoker at home can affect the patient",
+      "category": "Counseling",
+      "speaker": "clinician",
+      "temporality": "current",
+      "certainty": "high",
+      "provenance_sentence": "38"
+    },
+    {
+      "gold_id": "G29",
+      "fact_text": "The clinician notes a history of recurrent strep throat in the patient",
+      "category": "Past Medical History",
+      "speaker": "clinician",
+      "temporality": "unknown",
+      "certainty": "high",
+      "provenance_sentence": "38"
+    },
+    {
+      "gold_id": "G30",
+      "fact_text": "The clinician states the patient has had about four strep throat episodes in the last five months",
+      "category": "Past Medical History",
+      "speaker": "clinician",
+      "temporality": "past",
+      "certainty": "high",
+      "provenance_sentence": "38"
+    },
+    {
+      "gold_id": "G31",
+      "fact_text": "The patient confirms having recurrent strep infections",
+      "category": "Past Medical History",
+      "speaker": "patient",
+      "temporality": "unknown",
+      "certainty": "high",
+      "provenance_sentence": "39,41"
+    },
+    {
+      "gold_id": "G32",
+      "fact_text": "The patient reports episodes of sore throat associated with being told he has strep",
+      "category": "Symptom",
+      "speaker": "patient",
+      "temporality": "unknown",
+      "certainty": "high",
+      "provenance_sentence": "39"
+    },
+    {
+      "gold_id": "G33",
+      "fact_text": "The patient expresses trust in his primary care doctor's diagnosis of strep",
+      "category": "Counseling",
+      "speaker": "patient",
+      "temporality": "current",
+      "certainty": "high",
+      "provenance_sentence": "41"
+    },
+    {
+      "gold_id": "G34",
+      "fact_text": "On exam the patient's throat shows no erythema",
+      "category": "Physical Exam",
+      "speaker": "clinician",
+      "temporality": "current",
+      "certainty": "high",
+      "provenance_sentence": "44"
+    },
+    {
+      "gold_id": "G35",
+      "fact_text": "On exam the patient's throat shows no swelling",
+      "category": "Physical Exam",
+      "speaker": "clinician",
+      "temporality": "current",
+      "certainty": "high",
+      "provenance_sentence": "44"
+    },
+    {
+      "gold_id": "G36",
+      "fact_text": "On exam the patient's tonsils are midline",
+      "category": "Physical Exam",
+      "speaker": "clinician",
+      "temporality": "current",
+      "certainty": "high",
+      "provenance_sentence": "44"
+    },
+    {
+      "gold_id": "G37",
+      "fact_text": "On exam the clinician finds no cervical lymphadenopathy",
+      "category": "Physical Exam",
+      "speaker": "clinician",
+      "temporality": "current",
+      "certainty": "high",
+      "provenance_sentence": "44"
+    },
+    {
+      "gold_id": "G38",
+      "fact_text": "The clinician states there are no physical signs of strep infection at this visit",
+      "category": "Assessment",
+      "speaker": "clinician",
+      "temporality": "current",
+      "certainty": "high",
+      "provenance_sentence": "44"
+    },
+    {
+      "gold_id": "G39",
+      "fact_text": "On lung auscultation the clinician hears no wheezes",
+      "category": "Physical Exam",
+      "speaker": "clinician",
+      "temporality": "current",
+      "certainty": "high",
+      "provenance_sentence": "44"
+    },
+    {
+      "gold_id": "G40",
+      "fact_text": "On lung auscultation the clinician hears no rales",
+      "category": "Physical Exam",
+      "speaker": "clinician",
+      "temporality": "current",
+      "certainty": "high",
+      "provenance_sentence": "44"
+    },
+    {
+      "gold_id": "G41",
+      "fact_text": "On lung auscultation the clinician hears no rhonchi",
+      "category": "Physical Exam",
+      "speaker": "clinician",
+      "temporality": "current",
+      "certainty": "high",
+      "provenance_sentence": "44"
+    },
+    {
+      "gold_id": "G42",
+      "fact_text": "On cardiac exam the clinician hears no murmur",
+      "category": "Physical Exam",
+      "speaker": "clinician",
+      "temporality": "current",
+      "certainty": "high",
+      "provenance_sentence": "44"
+    },
+    {
+      "gold_id": "G43",
+      "fact_text": "On cardiac exam the clinician hears no rub",
+      "category": "Physical Exam",
+      "speaker": "clinician",
+      "temporality": "current",
+      "certainty": "high",
+      "provenance_sentence": "44"
+    },
+    {
+      "gold_id": "G44",
+      "fact_text": "On cardiac exam the clinician hears no gallop",
+      "category": "Physical Exam",
+      "speaker": "clinician",
+      "temporality": "current",
+      "certainty": "high",
+      "provenance_sentence": "44"
+    },
+    {
+      "gold_id": "G45",
+      "fact_text": "The patient has no tenderness on palpation of the area of left back pain",
+      "category": "Physical Exam",
+      "speaker": "patient",
+      "temporality": "current",
+      "certainty": "high",
+      "provenance_sentence": "44-45"
+    },
+    {
+      "gold_id": "G46",
+      "fact_text": "The patient has no abdominal pain on palpation",
+      "category": "Physical Exam",
+      "speaker": "patient",
+      "temporality": "current",
+      "certainty": "high",
+      "provenance_sentence": "46-47"
+    },
+    {
+      "gold_id": "G47",
+      "fact_text": "On abdominal exam there is no rebound tenderness",
+      "category": "Physical Exam",
+      "speaker": "clinician",
+      "temporality": "current",
+      "certainty": "high",
+      "provenance_sentence": "48"
+    },
+    {
+      "gold_id": "G48",
+      "fact_text": "On abdominal exam there is no guarding",
+      "category": "Physical Exam",
+      "speaker": "clinician",
+      "temporality": "current",
+      "certainty": "high",
+      "provenance_sentence": "48"
+    },
+    {
+      "gold_id": "G49",
+      "fact_text": "The CT scan shows findings concerning for glomerulonephritis",
+      "category": "Test Result",
+      "speaker": "clinician",
+      "temporality": "past",
+      "certainty": "medium",
+      "provenance_sentence": "48"
+    },
+    {
+      "gold_id": "G50",
+      "fact_text": "The clinician suspects that the patient's recurrent strep episodes may have caused glomerulonephritis",
+      "category": "Assessment",
+      "speaker": "clinician",
+      "temporality": "unknown",
+      "certainty": "medium",
+      "provenance_sentence": "48"
+    },
+    {
+      "gold_id": "G51",
+      "fact_text": "The clinician is concerned that glomerulonephritis could lead to chronic kidney disease",
+      "category": "Assessment",
+      "speaker": "clinician",
+      "temporality": "future",
+      "certainty": "medium",
+      "provenance_sentence": "48"
+    },
+    {
+      "gold_id": "G52",
+      "fact_text": "The clinician plans to refer the patient to ENT for evaluation of glomerulonephritis-related problems",
+      "category": "Plan",
+      "speaker": "clinician",
+      "temporality": "future",
+      "certainty": "high",
+      "provenance_sentence": "48"
+    },
+    {
+      "gold_id": "G53",
+      "fact_text": "The clinician wants ENT to consider tonsillectomy to help with the patient's recurrent strep",
+      "category": "Plan",
+      "speaker": "clinician",
+      "temporality": "future",
+      "certainty": "medium",
+      "provenance_sentence": "48"
+    },
+    {
+      "gold_id": "G54",
+      "fact_text": "The clinician plans to order a lipid panel",
+      "category": "MedicationPlan",
+      "speaker": "clinician",
+      "temporality": "future",
+      "certainty": "high",
+      "provenance_sentence": "48"
+    },
+    {
+      "gold_id": "G55",
+      "fact_text": "The clinician plans to order a urinalysis",
+      "category": "MedicationPlan",
+      "speaker": "clinician",
+      "temporality": "future",
+      "certainty": "high",
+      "provenance_sentence": "48"
+    },
+    {
+      "gold_id": "G56",
+      "fact_text": "The clinician plans to order a comprehensive metabolic panel",
+      "category": "MedicationPlan",
+      "speaker": "clinician",
+      "temporality": "future",
+      "certainty": "high",
+      "provenance_sentence": "48"
+    },
+    {
+      "gold_id": "G57",
+      "fact_text": "The clinician plans to order a complete blood count",
+      "category": "MedicationPlan",
+      "speaker": "clinician",
+      "temporality": "future",
+      "certainty": "high",
+      "provenance_sentence": "48"
+    },
+    {
+      "gold_id": "G58",
+      "fact_text": "The clinician plans to order a vitamin D level",
+      "category": "MedicationPlan",
+      "speaker": "clinician",
+      "temporality": "future",
+      "certainty": "high",
+      "provenance_sentence": "48"
+    },
+    {
+      "gold_id": "G59",
+      "fact_text": "The clinician plans to order a TSH test",
+      "category": "MedicationPlan",
+      "speaker": "clinician",
+      "temporality": "future",
+      "certainty": "high",
+      "provenance_sentence": "48"
+    },
+    {
+      "gold_id": "G60",
+      "fact_text": "The clinician states that these labs will provide information about the patient's hormones, iron levels, nutrition, and body function",
+      "category": "Education",
+      "speaker": "clinician",
+      "temporality": "future",
+      "certainty": "high",
+      "provenance_sentence": "48"
+    },
+    {
+      "gold_id": "G61",
+      "fact_text": "The patient is concerned about the cost of the ordered tests",
+      "category": "Counseling",
+      "speaker": "patient",
+      "temporality": "current",
+      "certainty": "high",
+      "provenance_sentence": "49"
+    },
+    {
+      "gold_id": "G62",
+      "fact_text": "The clinician tells the patient that his mother will pay for the tests",
+      "category": "Counseling",
+      "speaker": "clinician",
+      "temporality": "future",
+      "certainty": "high",
+      "provenance_sentence": "50"
+    },
+    {
+      "gold_id": "G63",
+      "fact_text": "The clinician prefers the patient to get the labs done as soon as possible",
+      "category": "Plan",
+      "speaker": "clinician",
+      "temporality": "future",
+      "certainty": "high",
+      "provenance_sentence": "54"
+    },
+    {
+      "gold_id": "G64",
+      "fact_text": "There is a blood lab next door where the patient can get blood drawn after the visit",
+      "category": "Plan",
+      "speaker": "clinician",
+      "temporality": "future",
+      "certainty": "high",
+      "provenance_sentence": "54"
+    },
+    {
+      "gold_id": "G65",
+      "fact_text": "Some of the planned tests require the patient to be fasting",
+      "category": "Education",
+      "speaker": "clinician",
+      "temporality": "future",
+      "certainty": "high",
+      "provenance_sentence": "54"
+    }
+  ],
+  "generator_model": "gpt-5.1",
+  "min_caps_target": 30,
+  "attempts_used": 1,
+  "generated_at": "2026-04-11T09:07:52.661350+00:00"
+}

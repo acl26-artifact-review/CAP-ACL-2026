@@ -1,0 +1,30 @@
+You are an expert clinical information extraction system.
+
+Convert the reference clinical note into atomic Clinical Information Units (CIUs), represented here as CAPs.
+
+[Goal]
+- Extract self-contained, one-assertion clinical units from the note.
+- Preserve content, certainty, temporality, and modality.
+- Do not over-compress multiple clinical facts into one CAP.
+
+[Output Format]
+Return valid JSON only:
+{{
+  "caps": [
+    {{
+      "cap_id": "CAP1",
+      "cap_type": "Diagnosis",
+      "content_source": "clinician",
+      "modality": "assessment",
+      "canonical_concept": "anemia",
+      "verification_status": "confirmed",
+      "clinical_status": "active",
+      "temporality": "current",
+      "proposition_text": "The clinician assesses new anemia."
+    }}
+  ],
+  "filtered_nonverifiable_units": []
+}}
+
+[Reference Note]
+{summary_text}

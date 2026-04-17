@@ -1,0 +1,125 @@
+Case: D2N154
+
+Problem List and Visit State Tracking
+
+Problem List
+- heel pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T3
+  Summary: The patient reports pain in the back of his heel.
+  ClusterId: CL1
+  TemporalProfile: current
+  Updates:
+  - CAP2: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T3 :: The patient reports pain in the back of his heel.
+- calf pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T3
+  Summary: The patient reports pain in his calf.
+  ClusterId: CL2
+  TemporalProfile: current
+  Updates:
+  - CAP13: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T3 :: The patient reports pain in his calf.
+- training | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T3
+  Summary: The patient is training for a triathlon.
+  ClusterId: CL3
+  TemporalProfile: current
+  Updates:
+  - CAP14: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T3 :: The patient is training for a triathlon.
+- running | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T4
+  Summary: The patient runs approximately 10 kilometers.
+  ClusterId: CL4
+  TemporalProfile: current
+  Updates:
+  - CAP16: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T4 :: The patient runs approximately 10 kilometers.
+- cycling | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T7
+  Summary: The patient cycles for approximately 45 minutes to an hour.
+  ClusterId: CL5
+  TemporalProfile: current
+  Updates:
+  - CAP3: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T7 :: The patient cycles for approximately 45 minutes to an hour.
+- pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T20,T27,T38,T9
+  Summary: The patient has pain.
+  ClusterId: CL6
+  TemporalProfile: current, morning
+  Updates:
+  - CAP7: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T9 :: The patient reports pain in the left hand.
+  - CAP6: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=morning turns=T20 :: The patient reports pain upon waking in the morning.
+  - CAP1: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T27,T38,T38 :: The patient has pain.
+  - CAP8: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T27 :: The patient reports pain in the right leg.
+  - CAP10: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T27 :: The patient reports pain on the right side.
+  - CAP11: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T27 :: The patient reports pain in the right side.
+  - CAP12: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T38 :: The patient reports pain in the left side.
+- swimming | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T9
+  Summary: The patient swims for approximately 30 minutes to an hour.
+  ClusterId: CL7
+  TemporalProfile: current
+  Updates:
+  - CAP4: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T9 :: The patient swims for approximately 30 minutes to an hour.
+- tearing | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T21
+  Summary: The patient describes a sensation of tearing in their leg.
+  ClusterId: CL12
+  TemporalProfile: current
+  Updates:
+  - CAP5: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T21 :: The patient describes a sensation of tearing in their leg.
+- tightness | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T21
+  Summary: The patient reports feeling tightness in their leg.
+  ClusterId: CL13
+  TemporalProfile: current
+  Updates:
+  - CAP9: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T21 :: The patient reports feeling tightness in their leg.
+- soreness | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T25
+  Summary: The patient reports soreness in their leg.
+  ClusterId: CL14
+  TemporalProfile: current
+  Updates:
+  - CAP15: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T25 :: The patient reports soreness in their leg.
+- achilles tendinitis | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=doctor | evidence=T41
+  Summary: The doctor diagnoses Achilles tendinitis.
+  ClusterId: CL16
+  TemporalProfile: current
+  Updates:
+  - CAP17: content_source=doctor modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T41 :: The doctor diagnoses Achilles tendinitis.
+
+Medication Tracking
+- [MedicationState] stretching | verification_status=unconfirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T14
+  Summary: The patient does not stretch.
+  ClusterId: CL11
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient does not stretch. (T14)
+  Updates:
+  - CAP25: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=current turns=T14 :: The patient does not stretch.
+- [MedicationChange] ibuprofen | verification_status=confirmed | clinical_status=planned | modalities=interview | speakers=doctor | evidence=T42
+  Summary: The doctor recommends taking ibuprofen.
+  ClusterId: CL18
+  TemporalProfile: future
+  PlannedChanges:
+  - The doctor recommends taking ibuprofen. (T42)
+  Updates:
+  - CAP26: content_source=doctor modality=interview verification_status=confirmed clinical_status=planned temporality=future turns=T42 :: The doctor recommends taking ibuprofen.
+
+Other Structured States
+- [Plan] swimming | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=doctor | evidence=T13
+  Summary: The doctor asks about the patient's swimming routine.
+  ClusterId: CL8
+  TemporalProfile: current
+- [Plan] running | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=doctor | evidence=T14
+  Summary: The doctor asks about the patient's running routine.
+  ClusterId: CL9
+  TemporalProfile: current
+- [Plan] stretching | verification_status=unconfirmed | clinical_status=planned | modalities=interview | speakers=doctor | evidence=T14
+  Summary: The doctor asks about the patient's stretching routine.
+  ClusterId: CL10
+  TemporalProfile: current
+- [FollowUp] follow-up | verification_status=confirmed | clinical_status=planned | modalities=interview | speakers=doctor | evidence=T40
+  Summary: The doctor wants a follow-up within one week to ten days.
+  ClusterId: CL15
+  TemporalProfile: within one week to ten days
+- [Plan] physical therapy | verification_status=confirmed | clinical_status=planned | modalities=interview,plan | speakers=doctor | evidence=T42,T50
+  Summary: The doctor will schedule a physical therapy appointment for the patient after discharge.
+  ClusterId: CL17
+  TemporalProfile: after discharge, future
+- [Plan] activity modification | verification_status=confirmed | clinical_status=planned | modalities=interview | speakers=doctor | evidence=T45
+  Summary: The doctor recommends stopping training for two weeks.
+  ClusterId: CL19
+  TemporalProfile: future
+- [Plan] discharge | verification_status=confirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T50
+  Summary: The doctor will discharge the patient and schedule a follow-up appointment in 7 to 10 days.
+  ClusterId: CL20
+  TemporalProfile: 7-10 days

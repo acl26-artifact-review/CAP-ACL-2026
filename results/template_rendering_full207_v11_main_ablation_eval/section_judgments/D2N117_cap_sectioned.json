@@ -1,0 +1,23 @@
+{
+  "section_miscategorizations": [
+    {
+      "text": "Hemoglobin A1c and CBC blood tests ordered. Chem-12 blood test ordered.",
+      "current_section": "Findings",
+      "expected_section": "Plan",
+      "severity": "major",
+      "reason": "These are orders being placed, not existing lab results; they represent planned diagnostic workup and belong in the Plan section."
+    },
+    {
+      "text": "Order a right elbow x-ray.",
+      "current_section": "Plan",
+      "expected_section": "Findings",
+      "severity": "major",
+      "reason": "The Findings section already documents a completed right elbow x-ray result; placing a new order for the same x-ray in the Plan conflicts with that and suggests the imaging has not yet been done, which is misleading."
+    }
+  ],
+  "summary_statistics": {
+    "section_appropriateness_score": 0.7,
+    "section_miscategorization_count": 2,
+    "major_section_miscategorization_count": 2
+  }
+}

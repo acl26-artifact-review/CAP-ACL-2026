@@ -1,0 +1,1557 @@
+{
+  "case_id": "D2N061",
+  "method": "cap_event_only",
+  "template": "soap",
+  "summary_text": "S:\nThe patient reports experiencing persistent, sharp chest pain radiating to his left arm, which began approximately 2 hours ago. He states the pain is rated 8/10 and is not relieved by over-the-counter analgesics. He also reports shortness of breath and nausea. The patient denies any recent trauma or fever.\n\nO:\nBlood pressure is 140/90 mmHg. Heart rate is 92 bpm and regular. Oxygen saturation is 98% on room air. Auscultation reveals no murmurs or rubs. Lung sounds are clear bilaterally.\n\nA:\nThe patient's symptoms are concerning for acute myocardial infarction.\n\nP:\nActivate EMS and transport to the nearest hospital for immediate evaluation and treatment. Administer oxygen at 2L via nasal cannula. Start aspirin 325 mg.",
+  "reference_summary": "CHIEF COMPLAINT\n\nRight knee pain.\n\nHISTORY OF PRESENT ILLNESS\n\nVirginia Phillips is a pleasant 53-year-old female who presents to the clinic today for the evaluation of right knee pain. The onset of her pain began 7 days ago, when she was playing basketball and another player ran into her. She states that she fell to the ground and landed on her side. She denies hearing or feeling a pop at the time of the injury. The patient localizes her pain to the medial aspect of her knee. She used ice and an ACE wrap right after the injury. Today, she notes that she has been doing exercises, ice, and Mobic for pain control.\n\nMEDICAL HISTORY\n\nThe patient reports she is a diabetic who takes her blood sugar every morning.\n\nSOCIAL HISTORY\n\nPatient reports that she plays basketball at the Y for fun.\n\nMEDICATIONS\n\nPatient reports that she takes metformin 500 mg twice a day.\n\nREVIEW OF SYSTEMS\n\nMusculoskeletal: Reports right knee pain.\n\nPHYSICAL EXAM\n\nMSK: Examination of the right knee: No pain to palpation of the lateral aspect of the right knee. Pain with palpation on the medial aspect of the knee. Ecchymosis and swelling on the medial aspect of the knee. Effusion is appreciated. Decreased ROM. Negative varus and valgus stress test.\n\nRESULTS\n\nX-rays of the right knee taken in office today reveal the bony alignment in good position. There is no evidence of any fractures. There is effusion present.\n\nASSESSMENT\n\nRight knee pain, possible medial collateral ligament strain.\n\nPLAN\n\nAfter reviewing the patient's examination and radiographic findings today, I have had a lengthy discussion with the patient in regard to her current symptoms. I have prescribed the patient meloxicam 15 mg once a day to treat the pain and swelling. She was advised to stop taking any anti-inflammatory such as Motrin or Advil. I have also recommended that the patient attend formal physical therapy to strengthen her right knee. I have also advised her to continue to use the ACE wrap and wear a right knee brace for a few days. She should continue light walking with her brace on. The patient was advised to stop basketball until she follows up in 7 days.\n\nRegarding her diabetes, she should continue to monitor her blood sugars daily. She should reach out to her primary care physician if she sees an increase in her blood sugars due to loss of activity.\n\nINSTRUCTIONS\n\nThe patient will follow up with me in 7 days to check on her progress. If her swelling has not improved, we will consider obtaining a CT or MRI of the right knee to evaluate for a possible medial collateral ligament strain.",
+  "source_cap": {
+    "atomic_propositions": [
+      {
+        "prop_id": "CAP1",
+        "cap_type": "Problem",
+        "canonical_concept": "knee injury",
+        "category": "Problem",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "7 days ago",
+        "claim_type_tags": [
+          "quantitative"
+        ],
+        "proposition_text": "The patient sustained a knee injury 7 days ago."
+      },
+      {
+        "prop_id": "CAP2",
+        "cap_type": "Symptom",
+        "canonical_concept": "swelling",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports swelling in the right knee."
+      },
+      {
+        "prop_id": "CAP3",
+        "cap_type": "Symptom",
+        "canonical_concept": "pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports pain in the left hand."
+      },
+      {
+        "prop_id": "CAP4",
+        "cap_type": "Symptom",
+        "canonical_concept": "knee pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports pain in the knee."
+      },
+      {
+        "prop_id": "CAP5",
+        "cap_type": "Symptom",
+        "canonical_concept": "pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports pain on the inside."
+      },
+      {
+        "prop_id": "CAP6",
+        "cap_type": "Symptom",
+        "canonical_concept": "fall",
+        "category": "Symptom",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "past",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient fell to the ground."
+      },
+      {
+        "prop_id": "CAP7",
+        "cap_type": "Problem",
+        "canonical_concept": "knee injury",
+        "category": "Problem",
+        "speaker": "patient",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient has a knee injury."
+      },
+      {
+        "prop_id": "CAP8",
+        "cap_type": "Symptom",
+        "canonical_concept": "knee pain",
+        "category": "Symptom",
+        "speaker": "doctor",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports knee pain."
+      },
+      {
+        "prop_id": "CAP9",
+        "cap_type": "Problem",
+        "canonical_concept": "diabetes",
+        "category": "Problem",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient is diabetic."
+      },
+      {
+        "prop_id": "CAP10",
+        "cap_type": "Order",
+        "canonical_concept": "imaging",
+        "category": "Order",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "planned",
+        "temporality": "in 7 days",
+        "proposition_text": "The doctor will consider ordering a CT scan or MRI of the knee if needed."
+      },
+      {
+        "prop_id": "CAP11",
+        "cap_type": "Order",
+        "canonical_concept": "knee examination",
+        "category": "Order",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "planned",
+        "temporality": "in 7 days",
+        "claim_type_tags": [
+          "quantitative",
+          "temporal"
+        ],
+        "proposition_text": "The doctor will schedule a follow-up appointment in 7 days."
+      },
+      {
+        "prop_id": "CAP12",
+        "cap_type": "MedicationRequest",
+        "canonical_concept": "discharge",
+        "category": "MedicationRequest",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "planned",
+        "temporality": "discharge",
+        "proposition_text": "The doctor will discharge the patient."
+      },
+      {
+        "prop_id": "CAP13",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "metformin",
+        "category": "MedicationStatement",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "medication",
+          "quantitative"
+        ],
+        "proposition_text": "The patient takes metformin 500 milligrams twice a day."
+      }
+    ],
+    "filtered_nonverifiable_units": []
+  },
+  "event_plan": {
+    "events": [
+      {
+        "event_id": "CL4",
+        "event_type": "ProblemOrientedNoteBundle",
+        "canonical_concept": "diabetes",
+        "visit_state": "active",
+        "status": "affirmed",
+        "temporality": "current",
+        "speaker_source": "patient",
+        "clinical_priority": "high",
+        "title": "diabetes",
+        "event_summary": "Problem-oriented bundle for diabetes.",
+        "supporting_cap_ids": [
+          "CAP9",
+          "CAP4",
+          "CAP5",
+          "CAP8",
+          "CAP3"
+        ],
+        "anchor_problem_cap_id": "CAP9",
+        "anchor_problem": "diabetes",
+        "S_cap_ids": [
+          "CAP9"
+        ],
+        "global_cap_ids": [
+          "CAP4",
+          "CAP5",
+          "CAP8",
+          "CAP3"
+        ],
+        "supporting_evidence": [
+          "The patient is diabetic."
+        ],
+        "current_state": [
+          "The patient is diabetic."
+        ],
+        "care_context": [
+          "The patient reports pain in the knee.",
+          "The patient reports pain on the inside.",
+          "The patient reports knee pain.",
+          "The patient reports pain in the left hand."
+        ],
+        "key_slots": {
+          "source_modalities": "interview",
+          "temporal_profile": "current",
+          "anchor_cluster_type": "ProblemState",
+          "anchor_primary_cap_type": "Problem",
+          "bundle_concepts": "diabetes; knee pain",
+          "history_context": "",
+          "related_factors": "",
+          "visit_primary": "true",
+          "render_in_note": "false",
+          "assessment_fallback": "The patient has diabetes.",
+          "bundle_design": "problem_oriented_note_bundle"
+        },
+        "render_sections": [
+          "S",
+          "O",
+          "A",
+          "P",
+          "History of Present Illness",
+          "Findings",
+          "Assessment",
+          "Plan"
+        ]
+      }
+    ]
+  },
+  "summary_cap": {
+    "atomic_propositions": [
+      {
+        "prop_id": "P1",
+        "cap_type": "Symptom",
+        "canonical_concept": "pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports persistent, sharp chest pain radiating to his left arm"
+      },
+      {
+        "prop_id": "P2",
+        "cap_type": "Symptom",
+        "canonical_concept": "pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports the pain is rated 8/10"
+      },
+      {
+        "prop_id": "P3",
+        "cap_type": "Symptom",
+        "canonical_concept": "pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports the pain is not relieved by over-the-counter analgesics"
+      },
+      {
+        "prop_id": "P4",
+        "cap_type": "Symptom",
+        "canonical_concept": "shortness breath",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports shortness of breath"
+      },
+      {
+        "prop_id": "P5",
+        "cap_type": "Symptom",
+        "canonical_concept": "nausea",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports nausea"
+      },
+      {
+        "prop_id": "P6",
+        "cap_type": "Finding",
+        "canonical_concept": "denies any recent trauma",
+        "category": "Finding",
+        "speaker": "unknown",
+        "predicate": "denies",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "past",
+        "claim_type_tags": [
+          "safety_relevant"
+        ],
+        "proposition_text": "The patient denies any recent trauma"
+      },
+      {
+        "prop_id": "P7",
+        "cap_type": "Finding",
+        "canonical_concept": "denies fever",
+        "category": "Finding",
+        "speaker": "unknown",
+        "predicate": "denies",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "past",
+        "claim_type_tags": [
+          "safety_relevant"
+        ],
+        "proposition_text": "The patient denies fever"
+      },
+      {
+        "prop_id": "P8",
+        "cap_type": "Finding",
+        "canonical_concept": "blood pressure",
+        "category": "Finding",
+        "speaker": "unknown",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "exam"
+        ],
+        "proposition_text": "Blood pressure is 140/90 mmHg"
+      },
+      {
+        "prop_id": "P9",
+        "cap_type": "Finding",
+        "canonical_concept": "heart rate bpm and",
+        "category": "Finding",
+        "speaker": "unknown",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "exam"
+        ],
+        "proposition_text": "Heart rate is 92 bpm and regular"
+      },
+      {
+        "prop_id": "P10",
+        "cap_type": "Finding",
+        "canonical_concept": "oxygen saturation room air",
+        "category": "Finding",
+        "speaker": "unknown",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "exam"
+        ],
+        "proposition_text": "Oxygen saturation is 98% on room air"
+      },
+      {
+        "prop_id": "P11",
+        "cap_type": "Finding",
+        "canonical_concept": "auscultation reveals murmurs rubs",
+        "category": "Finding",
+        "speaker": "unknown",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "exam"
+        ],
+        "proposition_text": "Auscultation reveals no murmurs or rubs"
+      },
+      {
+        "prop_id": "P12",
+        "cap_type": "Finding",
+        "canonical_concept": "lung sounds are clear",
+        "category": "Finding",
+        "speaker": "unknown",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "exam"
+        ],
+        "proposition_text": "Lung sounds are clear bilaterally"
+      },
+      {
+        "prop_id": "P13",
+        "cap_type": "Diagnosis",
+        "canonical_concept": "symptoms are concerning for",
+        "category": "Diagnosis",
+        "speaker": "unknown",
+        "predicate": "suspects",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "diagnostic"
+        ],
+        "proposition_text": "The patient's symptoms are concerning for acute myocardial infarction"
+      }
+    ],
+    "filtered_nonverifiable_units": [],
+    "runtime_seconds": 23.837
+  },
+  "cap_alignment": {
+    "cap_precision": 0.23076923076923078,
+    "cap_recall": 0.23076923076923078,
+    "cap_f1": 0.23076923076923078,
+    "matched_count": 3,
+    "summary_prop_count": 13,
+    "source_prop_count": 13,
+    "matched_pairs": [
+      {
+        "score": 1.0,
+        "summary_prop_id": "P3",
+        "source_prop_id": "CAP5",
+        "summary_text": "The patient reports the pain is not relieved by over-the-counter analgesics",
+        "source_text": "The patient reports pain on the inside."
+      },
+      {
+        "score": 1.0,
+        "summary_prop_id": "P2",
+        "source_prop_id": "CAP3",
+        "summary_text": "The patient reports the pain is rated 8/10",
+        "source_text": "The patient reports pain in the left hand."
+      },
+      {
+        "score": 0.8028,
+        "summary_prop_id": "P1",
+        "source_prop_id": "CAP4",
+        "summary_text": "The patient reports persistent, sharp chest pain radiating to his left arm",
+        "source_text": "The patient reports pain in the knee."
+      }
+    ],
+    "unsupported_summary_props": [
+      {
+        "prop_id": "P4",
+        "cap_type": "Symptom",
+        "canonical_concept": "shortness breath",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports shortness of breath"
+      },
+      {
+        "prop_id": "P5",
+        "cap_type": "Symptom",
+        "canonical_concept": "nausea",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports nausea"
+      },
+      {
+        "prop_id": "P6",
+        "cap_type": "Finding",
+        "canonical_concept": "denies any recent trauma",
+        "category": "Finding",
+        "speaker": "unknown",
+        "predicate": "denies",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "past",
+        "claim_type_tags": [
+          "safety_relevant"
+        ],
+        "proposition_text": "The patient denies any recent trauma"
+      },
+      {
+        "prop_id": "P7",
+        "cap_type": "Finding",
+        "canonical_concept": "denies fever",
+        "category": "Finding",
+        "speaker": "unknown",
+        "predicate": "denies",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "past",
+        "claim_type_tags": [
+          "safety_relevant"
+        ],
+        "proposition_text": "The patient denies fever"
+      },
+      {
+        "prop_id": "P8",
+        "cap_type": "Finding",
+        "canonical_concept": "blood pressure",
+        "category": "Finding",
+        "speaker": "unknown",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "exam"
+        ],
+        "proposition_text": "Blood pressure is 140/90 mmHg"
+      },
+      {
+        "prop_id": "P9",
+        "cap_type": "Finding",
+        "canonical_concept": "heart rate bpm and",
+        "category": "Finding",
+        "speaker": "unknown",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "exam"
+        ],
+        "proposition_text": "Heart rate is 92 bpm and regular"
+      },
+      {
+        "prop_id": "P10",
+        "cap_type": "Finding",
+        "canonical_concept": "oxygen saturation room air",
+        "category": "Finding",
+        "speaker": "unknown",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "exam"
+        ],
+        "proposition_text": "Oxygen saturation is 98% on room air"
+      },
+      {
+        "prop_id": "P11",
+        "cap_type": "Finding",
+        "canonical_concept": "auscultation reveals murmurs rubs",
+        "category": "Finding",
+        "speaker": "unknown",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "exam"
+        ],
+        "proposition_text": "Auscultation reveals no murmurs or rubs"
+      },
+      {
+        "prop_id": "P12",
+        "cap_type": "Finding",
+        "canonical_concept": "lung sounds are clear",
+        "category": "Finding",
+        "speaker": "unknown",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "exam"
+        ],
+        "proposition_text": "Lung sounds are clear bilaterally"
+      },
+      {
+        "prop_id": "P13",
+        "cap_type": "Diagnosis",
+        "canonical_concept": "symptoms are concerning for",
+        "category": "Diagnosis",
+        "speaker": "unknown",
+        "predicate": "suspects",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "diagnostic"
+        ],
+        "proposition_text": "The patient's symptoms are concerning for acute myocardial infarction"
+      }
+    ],
+    "missing_source_props": [
+      {
+        "prop_id": "CAP1",
+        "cap_type": "Problem",
+        "canonical_concept": "knee injury",
+        "category": "Problem",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "7 days ago",
+        "claim_type_tags": [
+          "quantitative"
+        ],
+        "proposition_text": "The patient sustained a knee injury 7 days ago."
+      },
+      {
+        "prop_id": "CAP2",
+        "cap_type": "Symptom",
+        "canonical_concept": "swelling",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports swelling in the right knee."
+      },
+      {
+        "prop_id": "CAP6",
+        "cap_type": "Symptom",
+        "canonical_concept": "fall",
+        "category": "Symptom",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "past",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient fell to the ground."
+      },
+      {
+        "prop_id": "CAP7",
+        "cap_type": "Problem",
+        "canonical_concept": "knee injury",
+        "category": "Problem",
+        "speaker": "patient",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient has a knee injury."
+      },
+      {
+        "prop_id": "CAP8",
+        "cap_type": "Symptom",
+        "canonical_concept": "knee pain",
+        "category": "Symptom",
+        "speaker": "doctor",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports knee pain."
+      },
+      {
+        "prop_id": "CAP9",
+        "cap_type": "Problem",
+        "canonical_concept": "diabetes",
+        "category": "Problem",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient is diabetic."
+      },
+      {
+        "prop_id": "CAP10",
+        "cap_type": "Order",
+        "canonical_concept": "imaging",
+        "category": "Order",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "planned",
+        "temporality": "in 7 days",
+        "proposition_text": "The doctor will consider ordering a CT scan or MRI of the knee if needed."
+      },
+      {
+        "prop_id": "CAP11",
+        "cap_type": "Order",
+        "canonical_concept": "knee examination",
+        "category": "Order",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "planned",
+        "temporality": "in 7 days",
+        "claim_type_tags": [
+          "quantitative",
+          "temporal"
+        ],
+        "proposition_text": "The doctor will schedule a follow-up appointment in 7 days."
+      },
+      {
+        "prop_id": "CAP12",
+        "cap_type": "MedicationRequest",
+        "canonical_concept": "discharge",
+        "category": "MedicationRequest",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "planned",
+        "temporality": "discharge",
+        "proposition_text": "The doctor will discharge the patient."
+      },
+      {
+        "prop_id": "CAP13",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "metformin",
+        "category": "MedicationStatement",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "medication",
+          "quantitative"
+        ],
+        "proposition_text": "The patient takes metformin 500 milligrams twice a day."
+      }
+    ]
+  },
+  "reference_gpt_f1_items": {
+    "active_problems_symptoms": [
+      "diabetes",
+      "increase in blood sugars",
+      "swelling"
+    ],
+    "negated_findings": [],
+    "uncertain_findings": [
+      "medial collateral ligament strain"
+    ],
+    "medication_treatment": [],
+    "plan_followup": [
+      "follow up in 7 days",
+      "CT or MRI of the right knee"
+    ],
+    "_chunk_count": [
+      "3"
+    ]
+  },
+  "summary_gpt_f1_items": {
+    "active_problems_symptoms": [
+      "persistent, sharp chest pain radiating to left arm",
+      "shortness of breath",
+      "nausea",
+      "blood pressure 140/90 mmHg",
+      "heart rate 92 bpm",
+      "oxygen saturation 98%"
+    ],
+    "negated_findings": [
+      "recent trauma",
+      "fever"
+    ],
+    "uncertain_findings": [],
+    "medication_treatment": [
+      "aspirin 325 mg",
+      "oxygen at 2L via nasal cannula"
+    ],
+    "plan_followup": [
+      "activate EMS",
+      "transport to nearest hospital"
+    ],
+    "_chunk_count": [
+      "1"
+    ]
+  },
+  "gpt_f1_alignment": {
+    "by_category": {
+      "active_problems_symptoms": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "matched_count": 0,
+        "pred_count": 6,
+        "ref_count": 3,
+        "matches": [],
+        "unsupported_pred_items": [
+          "persistent, sharp chest pain radiating to left arm",
+          "shortness of breath",
+          "nausea",
+          "blood pressure 140/90 mmHg",
+          "heart rate 92 bpm",
+          "oxygen saturation 98%"
+        ],
+        "missing_ref_items": [
+          "diabetes",
+          "increase in blood sugars",
+          "swelling"
+        ]
+      },
+      "negated_findings": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "matched_count": 0,
+        "pred_count": 2,
+        "ref_count": 0,
+        "matches": [],
+        "unsupported_pred_items": [
+          "recent trauma",
+          "fever"
+        ],
+        "missing_ref_items": []
+      },
+      "uncertain_findings": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "matched_count": 0,
+        "pred_count": 0,
+        "ref_count": 1,
+        "matches": [],
+        "unsupported_pred_items": [],
+        "missing_ref_items": [
+          "medial collateral ligament strain"
+        ]
+      },
+      "medication_treatment": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "matched_count": 0,
+        "pred_count": 2,
+        "ref_count": 0,
+        "matches": [],
+        "unsupported_pred_items": [
+          "aspirin 325 mg",
+          "oxygen at 2L via nasal cannula"
+        ],
+        "missing_ref_items": []
+      },
+      "plan_followup": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "matched_count": 0,
+        "pred_count": 2,
+        "ref_count": 2,
+        "matches": [],
+        "unsupported_pred_items": [
+          "activate EMS",
+          "transport to nearest hospital"
+        ],
+        "missing_ref_items": [
+          "follow up in 7 days",
+          "CT or MRI of the right knee"
+        ]
+      }
+    }
+  },
+  "reference_nair_concepts": {
+    "sections": [
+      {
+        "heading": "Clinical Note",
+        "section_value": "CHIEF COMPLAINT\nRight knee pain.\nHISTORY OF PRESENT ILLNESS\nVirginia Phillips is a pleasant 53-year-old female who presents to the clinic today for the evaluation of right knee pain. The onset of her pain began 7 days ago, when she was playing basketball and another player ran into her. She states that she fell to the ground and landed on her side. She denies hearing or feeling a pop at the time of the injury. The patient localizes her pain to the medial aspect of her knee. She used ice and an ACE wrap right after the injury. Today, she notes that she has been doing exercises, ice, and Mobic for pain control.\nMEDICAL HISTORY\nThe patient reports she is a diabetic who takes her blood sugar every morning.\nSOCIAL HISTORY\nPatient reports that she plays basketball at the Y for fun.\nMEDICATIONS\nPatient reports that she takes metformin 500 mg twice a day.",
+        "medical_concepts": [
+          "right knee pain",
+          "knee injury",
+          "medial knee pain",
+          "diabetic",
+          "diabetes",
+          "blood sugar",
+          "metformin",
+          "Mobic",
+          "ACE wrap",
+          "ice"
+        ]
+      },
+      {
+        "heading": "Clinical Note",
+        "section_value": "REVIEW OF SYSTEMS\nMusculoskeletal: Reports right knee pain.\nPHYSICAL EXAM\nMSK: Examination of the right knee: No pain to palpation of the lateral aspect of the right knee. Pain with palpation on the medial aspect of the knee. Ecchymosis and swelling on the medial aspect of the knee. Effusion is appreciated. Decreased ROM. Negative varus and valgus stress test.\nRESULTS\nX-rays of the right knee taken in office today reveal the bony alignment in good position. There is no evidence of any fractures. There is effusion present.\nASSESSMENT\nRight knee pain, possible medial collateral ligament strain.\nPLAN\nAfter reviewing the patient's examination and radiographic findings today, I have had a lengthy discussion with the patient in regard to her current symptoms. I have prescribed the patient meloxicam 15 mg once a day to treat the pain and swelling. She was advised to stop taking any anti-inflammatory such as Motrin or Advil. I have also recommended that the patient attend formal physical therapy to strengthen her right knee. I have also advised her to continue to use the ACE wrap and wear a right knee brace for a few days. She should continue light walking with her brace on. The patient was advised to stop basketball until she follows up in 7 days.",
+        "medical_concepts": [
+          "right knee pain",
+          "knee pain",
+          "pain to palpation",
+          "medial knee pain",
+          "ecchymosis",
+          "knee swelling",
+          "knee effusion",
+          "decreased range of motion",
+          "varus stress test",
+          "valgus stress test",
+          "X-ray",
+          "bony alignment",
+          "fracture",
+          "medial collateral ligament strain",
+          "meloxicam",
+          "anti-inflammatory",
+          "Motrin",
+          "Advil",
+          "physical therapy",
+          "ACE wrap"
+        ]
+      },
+      {
+        "heading": "Clinical Note",
+        "section_value": "Regarding her diabetes, she should continue to monitor her blood sugars daily. She should reach out to her primary care physician if she sees an increase in her blood sugars due to loss of activity.\nINSTRUCTIONS\nThe patient will follow up with me in 7 days to check on her progress. If her swelling has not improved, we will consider obtaining a CT or MRI of the right knee to evaluate for a possible medial collateral ligament strain.",
+        "medical_concepts": [
+          "diabetes",
+          "blood sugar",
+          "swelling",
+          "CT",
+          "MRI",
+          "medial collateral ligament strain"
+        ]
+      }
+    ],
+    "medical_concepts": [
+      "right knee pain",
+      "knee injury",
+      "medial knee pain",
+      "diabetic",
+      "diabetes",
+      "blood sugar",
+      "metformin",
+      "Mobic",
+      "ACE wrap",
+      "ice",
+      "knee pain",
+      "pain to palpation",
+      "ecchymosis",
+      "knee swelling",
+      "knee effusion",
+      "decreased range of motion",
+      "varus stress test",
+      "valgus stress test",
+      "X-ray",
+      "bony alignment",
+      "fracture",
+      "medial collateral ligament strain",
+      "meloxicam",
+      "anti-inflammatory",
+      "Motrin",
+      "Advil",
+      "physical therapy",
+      "swelling",
+      "CT",
+      "MRI"
+    ],
+    "section_count": 3
+  },
+  "summary_nair_concepts": {
+    "sections": [
+      {
+        "heading": "S",
+        "section_value": "The patient reports experiencing persistent, sharp chest pain radiating to his left arm, which began approximately 2 hours ago. He states the pain is rated 8/10 and is not relieved by over-the-counter analgesics. He also reports shortness of breath and nausea. The patient denies any recent trauma or fever.",
+        "medical_concepts": [
+          "chest pain",
+          "left arm pain",
+          "shortness of breath",
+          "nausea",
+          "trauma",
+          "fever",
+          "over-the-counter analgesics"
+        ]
+      },
+      {
+        "heading": "O",
+        "section_value": "Blood pressure is 140/90 mmHg. Heart rate is 92 bpm and regular. Oxygen saturation is 98% on room air. Auscultation reveals no murmurs or rubs. Lung sounds are clear bilaterally.",
+        "medical_concepts": [
+          "blood pressure",
+          "heart rate",
+          "oxygen saturation",
+          "room air",
+          "murmurs",
+          "rubs",
+          "lung sounds"
+        ]
+      },
+      {
+        "heading": "A",
+        "section_value": "The patient's symptoms are concerning for acute myocardial infarction.",
+        "medical_concepts": [
+          "acute myocardial infarction"
+        ]
+      },
+      {
+        "heading": "P",
+        "section_value": "Activate EMS and transport to the nearest hospital for immediate evaluation and treatment. Administer oxygen at 2L via nasal cannula. Start aspirin 325 mg.",
+        "medical_concepts": [
+          "EMS activation",
+          "hospital transport",
+          "oxygen",
+          "nasal cannula",
+          "aspirin 325 mg"
+        ]
+      }
+    ],
+    "medical_concepts": [
+      "chest pain",
+      "left arm pain",
+      "shortness of breath",
+      "nausea",
+      "trauma",
+      "fever",
+      "over-the-counter analgesics",
+      "blood pressure",
+      "heart rate",
+      "oxygen saturation",
+      "room air",
+      "murmurs",
+      "rubs",
+      "lung sounds",
+      "acute myocardial infarction",
+      "EMS activation",
+      "hospital transport",
+      "oxygen",
+      "nasal cannula",
+      "aspirin 325 mg"
+    ],
+    "section_count": 4
+  },
+  "nair_alignment": {
+    "pred_concepts": [
+      "chest pain",
+      "left arm pain",
+      "shortness of breath",
+      "nausea",
+      "trauma",
+      "fever",
+      "over-the-counter analgesics",
+      "blood pressure",
+      "heart rate",
+      "oxygen saturation",
+      "room air",
+      "murmurs",
+      "rubs",
+      "lung sounds",
+      "acute myocardial infarction",
+      "EMS activation",
+      "hospital transport",
+      "oxygen",
+      "nasal cannula",
+      "aspirin 325 mg"
+    ],
+    "ref_concepts": [
+      "right knee pain",
+      "knee injury",
+      "medial knee pain",
+      "diabetic",
+      "diabetes",
+      "blood sugar",
+      "metformin",
+      "Mobic",
+      "ACE wrap",
+      "ice",
+      "knee pain",
+      "pain to palpation",
+      "ecchymosis",
+      "knee swelling",
+      "knee effusion",
+      "decreased range of motion",
+      "varus stress test",
+      "valgus stress test",
+      "X-ray",
+      "bony alignment",
+      "fracture",
+      "medial collateral ligament strain",
+      "meloxicam",
+      "anti-inflammatory",
+      "Motrin",
+      "Advil",
+      "physical therapy",
+      "swelling",
+      "CT",
+      "MRI"
+    ],
+    "precision_alignment": {
+      "found_b": [
+        "trauma"
+      ],
+      "not_found_b": [
+        "chest pain",
+        "left arm pain",
+        "shortness of breath",
+        "nausea",
+        "fever",
+        "over-the-counter analgesics",
+        "blood pressure",
+        "heart rate",
+        "oxygen saturation",
+        "room air",
+        "murmurs",
+        "rubs",
+        "lung sounds",
+        "acute myocardial infarction",
+        "EMS activation",
+        "hospital transport",
+        "oxygen",
+        "nasal cannula",
+        "aspirin 325 mg"
+      ],
+      "chunk_count": 1,
+      "chunk_results": [
+        {
+          "found_b": [
+            "trauma"
+          ],
+          "not_found_b": [
+            "chest pain",
+            "left arm pain",
+            "shortness of breath",
+            "nausea",
+            "fever",
+            "over-the-counter analgesics",
+            "blood pressure",
+            "heart rate",
+            "oxygen saturation",
+            "room air",
+            "murmurs",
+            "rubs",
+            "lung sounds",
+            "acute myocardial infarction",
+            "EMS activation",
+            "hospital transport",
+            "oxygen",
+            "nasal cannula",
+            "aspirin 325 mg"
+          ]
+        }
+      ]
+    },
+    "recall_alignment": {
+      "found_b": [
+        "Motrin",
+        "Advil"
+      ],
+      "not_found_b": [
+        "right knee pain",
+        "knee injury",
+        "medial knee pain",
+        "diabetic",
+        "diabetes",
+        "blood sugar",
+        "metformin",
+        "Mobic",
+        "ACE wrap",
+        "ice",
+        "knee pain",
+        "pain to palpation",
+        "ecchymosis",
+        "knee swelling",
+        "knee effusion",
+        "decreased range of motion",
+        "varus stress test",
+        "valgus stress test",
+        "X-ray",
+        "bony alignment",
+        "fracture",
+        "medial collateral ligament strain",
+        "meloxicam",
+        "anti-inflammatory",
+        "physical therapy",
+        "swelling",
+        "CT",
+        "MRI"
+      ],
+      "chunk_count": 2,
+      "chunk_results": [
+        {
+          "found_b": [],
+          "not_found_b": [
+            "right knee pain",
+            "knee injury",
+            "medial knee pain",
+            "diabetic",
+            "diabetes",
+            "blood sugar",
+            "metformin",
+            "Mobic",
+            "ACE wrap",
+            "ice",
+            "knee pain",
+            "pain to palpation",
+            "ecchymosis",
+            "knee swelling",
+            "knee effusion",
+            "decreased range of motion",
+            "varus stress test",
+            "valgus stress test",
+            "X-ray",
+            "bony alignment",
+            "fracture",
+            "medial collateral ligament strain",
+            "meloxicam",
+            "anti-inflammatory"
+          ]
+        },
+        {
+          "found_b": [
+            "Motrin",
+            "Advil"
+          ],
+          "not_found_b": [
+            "physical therapy",
+            "swelling",
+            "CT",
+            "MRI"
+          ]
+        }
+      ]
+    }
+  },
+  "semantic_cap_audit": {
+    "source_cap_recall": [
+      {
+        "cap_id": "P1",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P2",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P3",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P4",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P5",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P6",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P7",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P8",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P9",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P10",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P11",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P12",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P13",
+        "judgment": "missing",
+        "reason": null
+      }
+    ],
+    "summary_cap_precision": [
+      {
+        "cap_id": "P1",
+        "judgment": "unsupported",
+        "reason": null
+      },
+      {
+        "cap_id": "P2",
+        "judgment": "unsupported",
+        "reason": null
+      },
+      {
+        "cap_id": "P3",
+        "judgment": "unsupported",
+        "reason": null
+      },
+      {
+        "cap_id": "P4",
+        "judgment": "unsupported",
+        "reason": null
+      },
+      {
+        "cap_id": "P5",
+        "judgment": "unsupported",
+        "reason": null
+      },
+      {
+        "cap_id": "P6",
+        "judgment": "contradicted",
+        "reason": null
+      },
+      {
+        "cap_id": "P7",
+        "judgment": "unsupported",
+        "reason": null
+      },
+      {
+        "cap_id": "P8",
+        "judgment": "unsupported",
+        "reason": null
+      },
+      {
+        "cap_id": "P9",
+        "judgment": "unsupported",
+        "reason": null
+      },
+      {
+        "cap_id": "P10",
+        "judgment": "unsupported",
+        "reason": null
+      },
+      {
+        "cap_id": "P11",
+        "judgment": "unsupported",
+        "reason": null
+      },
+      {
+        "cap_id": "P12",
+        "judgment": "unsupported",
+        "reason": null
+      },
+      {
+        "cap_id": "P13",
+        "judgment": "unsupported",
+        "reason": null
+      }
+    ],
+    "metrics": {
+      "semantic_cap_precision": 0.0,
+      "semantic_cap_recall": 0.0,
+      "semantic_cap_f1": 0.0,
+      "semantic_cap_precision_supported_count": 0,
+      "semantic_cap_precision_partial_count": 0,
+      "semantic_cap_precision_denominator": 13,
+      "semantic_cap_recall_supported_count": 0,
+      "semantic_cap_recall_partial_count": 0,
+      "semantic_cap_recall_denominator": 13,
+      "semantic_cap_low_value_source_count": 0,
+      "semantic_cap_low_value_summary_count": 0,
+      "semantic_cap_missing_count": 13,
+      "semantic_cap_unsupported_count": 12,
+      "semantic_cap_contradicted_source_count": 0,
+      "semantic_cap_contradicted_summary_count": 1
+    }
+  },
+  "safety_judgment": null,
+  "section_judgment": {
+    "section_miscategorizations": [],
+    "summary_statistics": {
+      "section_appropriateness_score": 1.0,
+      "section_miscategorization_count": 0,
+      "major_section_miscategorization_count": 0
+    }
+  },
+  "pdsqi_judgment": {
+    "citation_applicable": 0,
+    "citation": 0,
+    "accurate": 1,
+    "thorough": 1,
+    "useful": 1,
+    "organized": 2,
+    "comprehensible": 3,
+    "succinct": 3,
+    "abstraction": 1,
+    "synthesized": 1,
+    "voice_summ": 0,
+    "voice_note": 0,
+    "pdsqi_core_mean": 1.7143
+  },
+  "llm_checklist_judgment": {
+    "content_preservation_core": 1,
+    "noise_suppression": 3,
+    "lay_expression_preservation": 1,
+    "state_update_fidelity": 1,
+    "temporality_preservation": 1,
+    "problem_evidence_linkage": 1,
+    "state_plan_separation": 1,
+    "section_organization_appropriateness": 2,
+    "overall_clinical_usability": 1,
+    "clinically_meaningful_omission": "Yes",
+    "clinically_concerning_hallucination": "Yes",
+    "checklist_a_mean": 1.6667,
+    "checklist_b_mean": 1.0,
+    "checklist_c_mean": 1.3333,
+    "llm_checklist_abc_mean": 1.375,
+    "llm_checklist_mean_no_usability": 1.375,
+    "llm_checklist_total_score": 12,
+    "llm_checklist_mean": 1.3333,
+    "llm_checklist_meaningful_omission_yes": 1,
+    "llm_checklist_concerning_hallucination_yes": 1
+  },
+  "metrics": {
+    "case_id": "D2N061",
+    "method": "cap_event_only",
+    "template": "soap",
+    "source_cap_count": 13,
+    "event_plan_count": 1,
+    "summary_cap_count": 13,
+    "cap_matched_count": 3,
+    "cap_precision": 0.2308,
+    "cap_recall": 0.2308,
+    "cap_f1": 0.2308,
+    "unsupported_summary_cap_count": 10,
+    "missing_source_cap_count": 10,
+    "summary_runtime_seconds": null,
+    "summary_cap_runtime_seconds": 23.837,
+    "event_plan_runtime_seconds": null,
+    "rouge_l_f1_vs_reference": 0.0912,
+    "token_f1_vs_reference": 0.1614,
+    "gptf1_macro_f1": 0.0,
+    "nair_gpt_precision": 0.05,
+    "nair_gpt_recall": 0.0667,
+    "nair_gpt_f1": 0.0571,
+    "semantic_cap_precision": 0.0,
+    "semantic_cap_recall": 0.0,
+    "semantic_cap_f1": 0.0,
+    "hallucination_count": null,
+    "major_hallucination_count": null,
+    "omission_count": null,
+    "major_omission_count": null,
+    "section_appropriateness_score": 1.0,
+    "section_miscategorization_count": 0,
+    "major_section_miscategorization_count": 0,
+    "pdsqi_core_mean": 1.7143,
+    "pdsqi_accurate": 1,
+    "pdsqi_thorough": 1,
+    "llm_checklist_total_score": 12,
+    "llm_checklist_mean": 1.3333,
+    "llm_checklist_mean_no_usability": 1.375,
+    "checklist_a_mean": 1.6667,
+    "checklist_b_mean": 1.0,
+    "checklist_c_mean": 1.3333,
+    "llm_checklist_abc_mean": 1.375,
+    "content_preservation_core": 1,
+    "noise_suppression": 3,
+    "lay_expression_preservation": 1,
+    "state_update_fidelity": 1,
+    "temporality_preservation": 1,
+    "problem_evidence_linkage": 1,
+    "state_plan_separation": 1,
+    "section_organization_appropriateness": 2,
+    "overall_clinical_usability": 1,
+    "llm_checklist_meaningful_omission_yes": 1,
+    "llm_checklist_concerning_hallucination_yes": 1,
+    "gptf1_active_problems_symptoms_precision": 0.0,
+    "gptf1_active_problems_symptoms_recall": 0.0,
+    "gptf1_active_problems_symptoms_f1": 0.0,
+    "gptf1_active_problems_symptoms_pred_count": 6,
+    "gptf1_active_problems_symptoms_ref_count": 3,
+    "gptf1_negated_findings_precision": 0.0,
+    "gptf1_negated_findings_recall": 0.0,
+    "gptf1_negated_findings_f1": 0.0,
+    "gptf1_negated_findings_pred_count": 2,
+    "gptf1_negated_findings_ref_count": 0,
+    "gptf1_uncertain_findings_precision": 0.0,
+    "gptf1_uncertain_findings_recall": 0.0,
+    "gptf1_uncertain_findings_f1": 0.0,
+    "gptf1_uncertain_findings_pred_count": 0,
+    "gptf1_uncertain_findings_ref_count": 1,
+    "gptf1_medication_treatment_precision": 0.0,
+    "gptf1_medication_treatment_recall": 0.0,
+    "gptf1_medication_treatment_f1": 0.0,
+    "gptf1_medication_treatment_pred_count": 2,
+    "gptf1_medication_treatment_ref_count": 0,
+    "gptf1_plan_followup_precision": 0.0,
+    "gptf1_plan_followup_recall": 0.0,
+    "gptf1_plan_followup_f1": 0.0,
+    "gptf1_plan_followup_pred_count": 2,
+    "gptf1_plan_followup_ref_count": 2,
+    "nair_pred_concept_count": 20,
+    "nair_ref_concept_count": 30,
+    "nair_precision_match_count": 1,
+    "nair_recall_match_count": 2,
+    "semantic_cap_precision_supported_count": 0,
+    "semantic_cap_precision_partial_count": 0,
+    "semantic_cap_precision_denominator": 13,
+    "semantic_cap_recall_supported_count": 0,
+    "semantic_cap_recall_partial_count": 0,
+    "semantic_cap_recall_denominator": 13,
+    "semantic_cap_low_value_source_count": 0,
+    "semantic_cap_low_value_summary_count": 0,
+    "semantic_cap_missing_count": 13,
+    "semantic_cap_unsupported_count": 12,
+    "semantic_cap_contradicted_source_count": 0,
+    "semantic_cap_contradicted_summary_count": 1,
+    "pdsqi_useful": 1,
+    "pdsqi_organized": 2,
+    "pdsqi_comprehensible": 3,
+    "pdsqi_succinct": 3,
+    "pdsqi_synthesized": 1
+  }
+}

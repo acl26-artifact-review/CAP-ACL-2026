@@ -1,0 +1,213 @@
+Case: D2N142
+
+Problem List and Visit State Tracking
+
+Problem List
+- difficulty controlling alcohol consumption | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T6
+  Summary: The patient reports struggling with not drinking.
+  ClusterId: CL3
+  TemporalProfile: current
+  Updates:
+  - CAP11: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T6 :: The patient reports struggling with not drinking.
+- chest tightness | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T18
+  Summary: The patient denies chest tightness or pressure.
+  ClusterId: CL4
+  TemporalProfile: current
+  Updates:
+  - CAP12: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T18 :: The patient denies chest tightness or pressure.
+- shortness of breath | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T18
+  Summary: The patient denies shortness of breath.
+  ClusterId: CL5
+  TemporalProfile: current
+  Updates:
+  - CAP15: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T18 :: The patient denies shortness of breath.
+- swooshing | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T20
+  Summary: The patient reported experiencing swooshing sounds in their left ear after the first time taking lisinopril.
+  ClusterId: CL7
+  TemporalProfile: first time taking lisinopril
+  Updates:
+  - CAP2: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=first time taking lisinopril turns=T20 :: The patient reported experiencing swooshing sounds in their left ear after the first time taking lisinopril.
+- lethargy | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T20
+  Summary: The patient reported feeling lethargic and tired after the first time taking lisinopril.
+  ClusterId: CL8
+  TemporalProfile: first time taking lisinopril
+  Updates:
+  - CAP5: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=first time taking lisinopril turns=T20 :: The patient reported feeling lethargic and tired after the first time taking lisinopril.
+- headache | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T20,T61
+  Summary: The patient reported experiencing headaches after the first time taking lisinopril.
+  ClusterId: CL9
+  TemporalProfile: current, first time taking lisinopril
+  Updates:
+  - CAP7: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=first time taking lisinopril turns=T20 :: The patient reported experiencing headaches after the first time taking lisinopril.
+  - CAP16: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T61 :: The patient reports experiencing a headache.
+- blood pressure readings | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T25,T28,T45
+  Summary: The patient's morning blood pressure readings are between 130 and 145 or 150 mmHg, and the evening readings are between 95 and 100 mmHg.
+  ClusterId: CL11
+  TemporalProfile: current, evening, morning, morning and evening
+  Updates:
+  - CAP9: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T25 :: The patient is checking their blood pressure at home.
+  - CAP3: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=morning and evening turns=T28 :: The patient reports blood pressure readings between 130 and 145 mmHg in the morning and evening.
+  - CAP4: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=morning turns=T28 :: The patient reports blood pressure readings between 95 and 100 mmHg in the morning.
+  - CAP6: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=evening turns=T28 :: The patient reports blood pressure readings of 150 mmHg in the evening.
+  - CAP1: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=morning and evening turns=T28 :: The patient's morning blood pressure readings are between 130 and 145 or 150 mmHg, and the evening readings are between 95 and 100 mmHg.
+  - CAP8: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T45 :: The patient states that their blood pressure is an issue.
+- left hand pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T56
+  Summary: The patient reports pain in the left hand.
+  ClusterId: CL17
+  TemporalProfile: current
+  Updates:
+  - CAP10: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T56 :: The patient reports pain in the left hand.
+- alcohol urges | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T56
+  Summary: The patient reports experiencing urges to drink.
+  ClusterId: CL18
+  TemporalProfile: current
+  Updates:
+  - CAP13: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T56 :: The patient reports experiencing urges to drink.
+- trouble sleeping | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T61
+  Summary: The patient reports experiencing trouble sleeping.
+  ClusterId: CL19
+  TemporalProfile: current
+  Updates:
+  - CAP17: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T61 :: The patient reports experiencing trouble sleeping.
+- nausea | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T61
+  Summary: The patient reports experiencing nausea.
+  ClusterId: CL20
+  TemporalProfile: current
+  Updates:
+  - CAP19: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T61 :: The patient reports experiencing nausea.
+- dizziness | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T61
+  Summary: The patient reports experiencing dizziness.
+  ClusterId: CL21
+  TemporalProfile: current
+  Updates:
+  - CAP20: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T61 :: The patient reports experiencing dizziness.
+- anxiety | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T61
+  Summary: The patient reports experiencing anxiety.
+  ClusterId: CL22
+  TemporalProfile: current
+  Updates:
+  - CAP21: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T61 :: The patient reports experiencing anxiety.
+- tiredness | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T61
+  Summary: The patient reports experiencing tiredness.
+  ClusterId: CL23
+  TemporalProfile: current
+  Updates:
+  - CAP22: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T61 :: The patient reports experiencing tiredness.
+- alcohol | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T65
+  Summary: The patient is currently using alcohol.
+  ClusterId: CL27
+  TemporalProfile: current
+  Updates:
+  - CAP18: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T65 :: The patient is currently using alcohol.
+- alcohol use disorder | verification_status=confirmed | clinical_status=active | modalities=unknown | speakers=doctor | evidence=T69
+  Summary: The doctor's impression is alcohol use disorder.
+  ClusterId: CL28
+  TemporalProfile: ongoing
+  Updates:
+  - CAP14: content_source=doctor modality=unknown verification_status=confirmed clinical_status=active temporality=ongoing turns=T69 :: The doctor's impression is alcohol use disorder.
+
+Medication Tracking
+- [MedicationChange] hydrochlorothiazide | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=clinician | evidence=T0
+  Summary: Hydrochlorothiazide will be started.
+  ClusterId: CL1
+  TemporalProfile: current
+  PlannedChanges:
+  - Hydrochlorothiazide will be started. (T0)
+  Updates:
+  - CAP40: content_source=clinician modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T0 :: Hydrochlorothiazide will be started.
+- [MedicationChange] lisinopril | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=clinician | evidence=T0
+  Summary: Lisinopril will be started.
+  ClusterId: CL2
+  TemporalProfile: current
+  PlannedChanges:
+  - Lisinopril will be started. (T0)
+  Updates:
+  - CAP41: content_source=clinician modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T0 :: Lisinopril will be started.
+- [MedicationState] lisinopril | verification_status=unconfirmed | clinical_status=active | modalities=interview,plan | speakers=doctor,patient | evidence=T18,T69
+  Summary: The patient is taking lisinopril 10 milligrams daily.
+  ClusterId: CL6
+  TemporalProfile: current, daily
+  CurrentRegimens:
+  - The patient is currently taking half of the lisinopril dose. (T18)
+  - The patient is taking lisinopril 10 milligrams daily. (T69)
+  Updates:
+  - CAP27: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T18 :: The patient is currently taking half of the lisinopril dose.
+  - CAP36: content_source=doctor modality=plan verification_status=unconfirmed clinical_status=active temporality=daily turns=T69 :: The patient is taking lisinopril 10 milligrams daily.
+- [MedicationState] hydrochlorothiazide | verification_status=unconfirmed | clinical_status=active | modalities=interview,plan | speakers=doctor,patient | evidence=T22,T69
+  Summary: The patient is taking hydrochlorothiazide 12.5 milligrams daily.
+  ClusterId: CL10
+  TemporalProfile: current, daily
+  CurrentRegimens:
+  - The patient is currently taking the full dose of hydrochlorothiazide. (T22)
+  - The patient is taking hydrochlorothiazide 12.5 milligrams daily. (T69)
+  Updates:
+  - CAP28: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T22 :: The patient is currently taking the full dose of hydrochlorothiazide.
+  - CAP37: content_source=doctor modality=plan verification_status=unconfirmed clinical_status=active temporality=daily turns=T69 :: The patient is taking hydrochlorothiazide 12.5 milligrams daily.
+- [MedicationState] blood pressure medication | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T32
+  Summary: The patient takes blood pressure medication in the morning.
+  ClusterId: CL12
+  TemporalProfile: morning
+  CurrentRegimens:
+  - The patient takes blood pressure medication in the morning. (T32)
+  Updates:
+  - CAP30: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=morning turns=T32 :: The patient takes blood pressure medication in the morning.
+- [MedicationChange] alcohol blocking medicine | verification_status=confirmed | clinical_status=planned | modalities=interview | speakers=doctor | evidence=T47
+  Summary: The doctor plans to discuss medicine to help with alcohol urges.
+  ClusterId: CL13
+  TemporalProfile: future
+  PlannedChanges:
+  - The doctor plans to discuss medicine to help with alcohol urges. (T47)
+  Updates:
+  - CAP26: content_source=doctor modality=interview verification_status=confirmed clinical_status=planned temporality=future turns=T47 :: The doctor plans to discuss medicine to help with alcohol urges.
+- [MedicationChange] alcohol receptor blocker | verification_status=confirmed | clinical_status=planned | modalities=interview | speakers=doctor | evidence=T47
+  Summary: The medicine blocks alcohol receptors.
+  ClusterId: CL14
+  TemporalProfile: future
+  PlannedChanges:
+  - The medicine blocks alcohol receptors. (T47)
+  Updates:
+  - CAP39: content_source=doctor modality=interview verification_status=confirmed clinical_status=planned temporality=future turns=T47 :: The medicine blocks alcohol receptors.
+- [MedicationChange] vivitrol | verification_status=confirmed | clinical_status=planned | modalities=interview | speakers=doctor | evidence=T55
+  Summary: Vivitrol may be administered as an alternative to naltrexone.
+  ClusterId: CL15
+  TemporalProfile: future, monthly
+  PlannedChanges:
+  - Vivitrol may be administered as an alternative to naltrexone. (T55)
+  - The doctor mentioned vivitrol as a possible alternative name. (T55)
+  Updates:
+  - CAP31: content_source=doctor modality=interview verification_status=confirmed clinical_status=planned temporality=monthly turns=T55 :: Vivitrol may be administered as an alternative to naltrexone.
+  - CAP32: content_source=doctor modality=interview verification_status=confirmed clinical_status=planned temporality=future turns=T55 :: The doctor mentioned vivitrol as a possible alternative name.
+- [MedicationChange] naltrexone | verification_status=unconfirmed | clinical_status=planned | modalities=interview,plan | speakers=doctor | evidence=T55,T69
+  Summary: Naltrexone will be started on May 17th.
+  ClusterId: CL16
+  TemporalProfile: May 17th, future, monthly
+  PlannedChanges:
+  - Naltrexone will be administered approximately once a month. (T55)
+  - The doctor will start the patient with naltrexone. (T55)
+  - Naltrexone will be started on May 17th. (T69)
+  Updates:
+  - CAP33: content_source=doctor modality=interview verification_status=confirmed clinical_status=planned temporality=monthly turns=T55 :: Naltrexone will be administered approximately once a month.
+  - CAP34: content_source=doctor modality=interview verification_status=confirmed clinical_status=planned temporality=future turns=T55 :: The doctor will start the patient with naltrexone.
+  - CAP38: content_source=doctor modality=plan verification_status=unconfirmed clinical_status=planned temporality=May 17th turns=T69 :: Naltrexone will be started on May 17th.
+
+Other Structured States
+- [Plan] shot | verification_status=confirmed | clinical_status=planned | modalities=interview | speakers=doctor | evidence=T61
+  Summary: The doctor will administer a shot to the patient.
+  ClusterId: CL24
+  TemporalProfile: future
+- [FollowUp] may 17th | verification_status=confirmed | clinical_status=planned | modalities=interview | speakers=doctor | evidence=T61
+  Summary: The patient will receive a first shot on May 17th.
+  ClusterId: CL25
+  TemporalProfile: future
+- [FollowUp] june | verification_status=confirmed | clinical_status=planned | modalities=interview | speakers=doctor | evidence=T63
+  Summary: The patient will have a follow-up in June.
+  ClusterId: CL26
+  TemporalProfile: future
+- [Plan] influenza vaccination | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T69
+  Summary: The doctor recommends upgrading influenza vaccination.
+  ClusterId: CL29
+  TemporalProfile: upcoming
+- [Plan] shingrix | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T69
+  Summary: The doctor recommends shingrix.
+  ClusterId: CL30
+  TemporalProfile: upcoming

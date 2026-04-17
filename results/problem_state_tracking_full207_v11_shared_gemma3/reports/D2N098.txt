@@ -1,0 +1,114 @@
+Case: D2N098
+
+Problem List and Visit State Tracking
+
+Problem List
+- left shoulder pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T18,T4
+  Summary: The patient reports constant pain in his left shoulder.
+  ClusterId: CL1
+  TemporalProfile: current
+  Updates:
+  - CAP1: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T4 :: The patient reports constant pain in his left shoulder.
+  - CAP7: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T4 :: The patient reports bad pain.
+  - CAP10: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T4 :: The patient reports pain.
+  - CAP5: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T18 :: The patient reports pain in the left shoulder.
+- left elbow pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T18,T4
+  Summary: The patient reports constant pain in his left elbow.
+  ClusterId: CL2
+  TemporalProfile: current
+  Updates:
+  - CAP2: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T4 :: The patient reports constant pain in his left elbow.
+  - CAP4: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T18 :: The patient reports pain in the left elbow.
+- left side fall | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T6
+  Summary: The patient fell on his left side.
+  ClusterId: CL3
+  TemporalProfile: 5 months ago
+  Updates:
+  - CAP17: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=5 months ago turns=T6 :: The patient fell five months ago going up a stairs.
+  - CAP21: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=5 months ago turns=T6 :: The patient fell on his left side.
+- icy stairs | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T6
+  Summary: The patient fell on icy stairs.
+  ClusterId: CL4
+  TemporalProfile: 5 months ago
+  Updates:
+  - CAP24: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=5 months ago turns=T6 :: The patient fell on icy stairs.
+- weight lifting routine | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T8
+  Summary: The patient has a weight lifting routine.
+  ClusterId: CL5
+  TemporalProfile: current
+  Updates:
+  - CAP16: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T8 :: The patient has been unable to lift more than 15 or 20 pounds.
+  - CAP18: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T8 :: The patient has been lifting 15 or 20 pounds.
+  - CAP25: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T8 :: The patient has been lifting weights.
+  - CAP22: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T8 :: The patient has a weight lifting routine.
+- walking | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T10
+  Summary: The patient walks about 30 minutes almost every day.
+  ClusterId: CL6
+  TemporalProfile: current
+  Updates:
+  - CAP19: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T10 :: The patient walks about 30 minutes almost every day.
+  - CAP26: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T10 :: The patient keeps up with walking.
+- retirement | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T10
+  Summary: The patient retired from his office job last year.
+  ClusterId: CL7
+  TemporalProfile: last year
+  Updates:
+  - CAP20: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=last year turns=T10 :: The patient retired from his office job last year.
+- gym | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T10
+  Summary: The patient has stopped hitting the gym.
+  ClusterId: CL8
+  TemporalProfile: current
+  Updates:
+  - CAP23: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T10 :: The patient has stopped hitting the gym.
+- numbness | verification_status=refuted | clinical_status=historical | modalities=interview | speakers=patient | evidence=T14
+  Summary: The patient denies numbness.
+  ClusterId: CL9
+  TemporalProfile: past
+  Updates:
+  - CAP11: content_source=patient modality=interview verification_status=refuted clinical_status=historical temporality=past turns=T14 :: The patient denies numbness.
+- impingement syndrome | verification_status=confirmed | clinical_status=planned | modalities=assessment,interview | speakers=doctor,patient | evidence=T19,T31
+  Summary: The doctor suspects impingement syndrome.
+  ClusterId: CL10
+  TemporalProfile: current, future
+  Updates:
+  - CAP8: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T19 :: The doctor diagnoses impingement syndrome.
+  - CAP9: content_source=doctor modality=assessment verification_status=unconfirmed clinical_status=planned temporality=future turns=T19 :: The doctor suspects impingement syndrome.
+  - CAP3: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T31 :: The doctor assessed impingement syndrome of the left shoulder.
+- worsening symptoms | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T26
+  Summary: The patient will report worsening symptoms.
+  ClusterId: CL15
+  TemporalProfile: future
+  Updates:
+  - CAP6: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=future turns=T26 :: The patient will report worsening symptoms.
+
+Medication Tracking
+- [MedicationChange] cortisone injection | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T21
+  Summary: The doctor suggests a cortisone injection.
+  ClusterId: CL11
+  TemporalProfile: future
+  PlannedChanges:
+  - The doctor suggests a cortisone injection. (T21)
+  Updates:
+  - CAP13: content_source=doctor modality=plan verification_status=unconfirmed clinical_status=planned temporality=future turns=T21 :: The doctor suggests a cortisone injection.
+- [MedicationChange] physical therapy | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T21
+  Summary: The doctor recommends physical therapy.
+  ClusterId: CL12
+  TemporalProfile: future
+  PlannedChanges:
+  - The doctor recommends physical therapy. (T21)
+  Updates:
+  - CAP14: content_source=doctor modality=plan verification_status=unconfirmed clinical_status=planned temporality=future turns=T21 :: The doctor recommends physical therapy.
+
+Other Structured States
+- [Plan] referral order | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T23
+  Summary: The doctor orders a referral.
+  ClusterId: CL13
+  TemporalProfile: future
+- [Plan] ice and rest | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T25
+  Summary: The doctor advises the patient to ice and rest.
+  ClusterId: CL14
+  TemporalProfile: future
+- [Plan] physical therapy referral | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T31
+  Summary: A referral is requested for dr. martha rivera to be in physical therapy two days per week.
+  ClusterId: CL16
+  TemporalProfile: two days per week

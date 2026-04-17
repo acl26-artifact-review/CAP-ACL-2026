@@ -1,0 +1,44 @@
+{
+  "section_miscategorizations": [
+    {
+      "text": "The patient reports chills.",
+      "current_section": "O",
+      "expected_section": "S",
+      "severity": "major",
+      "reason": "Chills are a patient-reported symptom and should be documented in the subjective section, not under objective findings."
+    },
+    {
+      "text": "The patient has had recent migraines.",
+      "current_section": "A",
+      "expected_section": "S",
+      "severity": "major",
+      "reason": "This is a piece of subjective history about recent symptoms, not a diagnostic impression or problem synthesis."
+    },
+    {
+      "text": "The patient reports rare migraines.",
+      "current_section": "A",
+      "expected_section": "S",
+      "severity": "major",
+      "reason": "This is a patient-reported symptom frequency and belongs in the subjective history rather than the assessment."
+    },
+    {
+      "text": "The patient is using excedrin migraine when needed.",
+      "current_section": "P",
+      "expected_section": "S",
+      "severity": "major",
+      "reason": "This describes an existing medication the patient is already taking, not a new order or change in treatment, so it belongs in the subjective medication history."
+    },
+    {
+      "text": "The patient takes sumatriptan occasionally.",
+      "current_section": "P",
+      "expected_section": "S",
+      "severity": "major",
+      "reason": "This is current medication use reported by the patient, not a new prescription or change, and should be in the subjective section."
+    }
+  ],
+  "summary_statistics": {
+    "section_appropriateness_score": 0.7,
+    "section_miscategorization_count": 5,
+    "major_section_miscategorization_count": 5
+  }
+}

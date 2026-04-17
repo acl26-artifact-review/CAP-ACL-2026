@@ -1,0 +1,76 @@
+Case: D2N115
+
+Problem List and Visit State Tracking
+
+Problem List
+- neck pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T15,T17,T31,T38
+  Summary: The patient reports pain to touch of the ear to the shoulders.
+  ClusterId: CL1
+  TemporalProfile: current
+  Updates:
+  - CAP2: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T15 :: The patient reports neck pain rated 5 out of 10.
+  - CAP3: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T17 :: The patient reports neck pain that worsens with neck movement.
+  - CAP9: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T31 :: The patient reports mild right neck pain.
+  - CAP1: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T38 :: The patient reports pain to touch of the ear to the shoulders.
+  - CAP4: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T38 :: The patient reports pain to palpation of the neck.
+  - CAP5: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T38 :: The patient reports pain with flexion of the neck.
+  - CAP6: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T38 :: The patient reports pain with extension of the neck.
+  - CAP7: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T38 :: The patient reports pain with rotation of the neck.
+  - CAP10: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T38 :: The patient reports neck pain.
+- headache | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T20
+  Summary: The patient reports headaches.
+  ClusterId: CL2
+  TemporalProfile: current, lately
+  Updates:
+  - CAP11: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T20 :: The patient reports headaches.
+  - CAP12: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=lately turns=T20 :: The patient reports headaches.
+- football injury | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T29
+  Summary: The patient played football years ago.
+  ClusterId: CL3
+  TemporalProfile: years ago
+  Updates:
+  - CAP18: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=years ago turns=T29 :: The patient played football years ago.
+- neck injury | verification_status=unconfirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T31
+  Summary: The patient had no issues with his neck from the football injury.
+  ClusterId: CL4
+  TemporalProfile: years ago
+  Updates:
+  - CAP17: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=years ago turns=T31 :: The patient had no issues with his neck from the football injury.
+- left hand pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T49
+  Summary: The patient reports pain in the left hand.
+  ClusterId: CL10
+  TemporalProfile: current
+  Updates:
+  - CAP8: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T49 :: The patient reports pain in the left hand.
+
+Medication Tracking
+- [MedicationChange] motrin | verification_status=confirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T48
+  Summary: The doctor will prescribe motrin.
+  ClusterId: CL7
+  TemporalProfile: every six to eight hours
+  PlannedChanges:
+  - The doctor will prescribe motrin. (T48)
+  Updates:
+  - CAP15: content_source=doctor modality=plan verification_status=confirmed clinical_status=planned temporality=every six to eight hours turns=T48 :: The doctor will prescribe motrin.
+- [MedicationChange] flexeril | verification_status=confirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T48
+  Summary: The doctor will prescribe flexeril.
+  ClusterId: CL8
+  TemporalProfile: every twelve hours as needed
+  PlannedChanges:
+  - The doctor will prescribe flexeril. (T48)
+  Updates:
+  - CAP16: content_source=doctor modality=plan verification_status=confirmed clinical_status=planned temporality=every twelve hours as needed turns=T48 :: The doctor will prescribe flexeril.
+
+Other Structured States
+- [TestResult] neck tenderness | verification_status=confirmed | clinical_status=active | modalities=test_result | speakers=patient | evidence=T36
+  Summary: The patient reports tenderness to palpation of the neck.
+  ClusterId: CL5
+  TemporalProfile: current
+- [Plan] mri | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T48
+  Summary: The doctor will order an MRI.
+  ClusterId: CL6
+  TemporalProfile: soon
+- [Plan] relax neck | verification_status=confirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T48
+  Summary: The doctor recommends relaxing the neck.
+  ClusterId: CL9
+  TemporalProfile: now

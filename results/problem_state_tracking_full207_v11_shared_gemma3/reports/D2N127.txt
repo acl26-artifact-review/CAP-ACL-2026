@@ -1,0 +1,166 @@
+Case: D2N127
+
+Problem List and Visit State Tracking
+
+Problem List
+- pain | verification_status=confirmed | clinical_status=active | modalities=assessment,interview | speakers=doctor,patient | evidence=T0,T11,T29,T43,T5,T63
+  Summary: The doctor is assessing pain.
+  ClusterId: CL1
+  TemporalProfile: current
+  Updates:
+  - CAP6: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T0 :: The patient reports neck pain.
+  - CAP13: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T5 :: The patient's neck hurts.
+  - CAP8: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T11 :: The patient reports neck pain.
+  - CAP10: content_source=doctor modality=assessment verification_status=unconfirmed clinical_status=active temporality=current turns=T11 :: The doctor is assessing pain.
+  - CAP1: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T29 :: The patient reports sharp, incapacitating pain in the neck.
+  - CAP4: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T29 :: The patient reports pain in the left hand.
+  - CAP12: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T43 :: The patient reports body pain.
+  - CAP17: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T63 :: The patient reports pain.
+- car crash | verification_status=unconfirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T1,T12,T14,T18
+  Summary: The patient has experienced car crashes.
+  ClusterId: CL2
+  TemporalProfile: february of this year, recent
+  Updates:
+  - CAP29: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=recent turns=T1 :: The patient was in a car crash.
+  - CAP27: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=february of this year turns=T12,T12,T12,T14,T12,T18,T12 :: The patient has experienced car crashes.
+- lawyer | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T5
+  Summary: The patient's therapist said the patient should see a lawyer.
+  ClusterId: CL3
+  TemporalProfile: past
+  Updates:
+  - CAP28: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=past turns=T5 :: The patient's therapist said the patient should see a lawyer.
+- therapy | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T9
+  Summary: The patient was in therapy.
+  ClusterId: CL4
+  TemporalProfile: past
+  Updates:
+  - CAP30: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=past turns=T9 :: The patient was in therapy.
+- surgery | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T9
+  Summary: The patient had surgery.
+  ClusterId: CL5
+  TemporalProfile: past
+  Updates:
+  - CAP31: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=past turns=T9 :: The patient had surgery.
+- back pain | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T11
+  Summary: The patient reports back pain.
+  ClusterId: CL6
+  TemporalProfile: current
+  Updates:
+  - CAP7: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T11 :: The patient reports back pain.
+  - CAP9: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T11 :: The patient reports back pain.
+- previous car crashes | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T22
+  Summary: The patient has a history of previous car crashes.
+  ClusterId: CL7
+  TemporalProfile: february of this year
+  Updates:
+  - CAP2: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=february of this year turns=T22 :: The patient has a history of previous car crashes.
+- headache | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T30
+  Summary: The patient reports headaches.
+  ClusterId: CL10
+  TemporalProfile: current
+  Updates:
+  - CAP14: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T30 :: The patient reports headaches.
+- dizziness | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T32
+  Summary: The patient reports occasional dizziness.
+  ClusterId: CL11
+  TemporalProfile: occasional
+  Updates:
+  - CAP11: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=occasional turns=T32 :: The patient reports occasional dizziness.
+- numbness | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T36
+  Summary: The patient reports numbness.
+  ClusterId: CL12
+  TemporalProfile: current
+  Updates:
+  - CAP15: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T36 :: The patient reports numbness.
+- limited neck range of motion | verification_status=confirmed | clinical_status=active | modalities=exam | speakers=doctor | evidence=T45
+  Summary: The doctor observes limited neck range of motion.
+  ClusterId: CL14
+  TemporalProfile: current
+  Updates:
+  - CAP5: content_source=doctor modality=exam verification_status=confirmed clinical_status=active temporality=current turns=T45 :: The doctor observes limited neck range of motion.
+- fatigue | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T56
+  Summary: The patient reports fatigue.
+  ClusterId: CL16
+  TemporalProfile: current
+  Updates:
+  - CAP16: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T56 :: The patient reports fatigue.
+- neck sprain | verification_status=confirmed | clinical_status=active | modalities=assessment | speakers=doctor | evidence=T60
+  Summary: The doctor diagnoses the patient with a neck sprain.
+  ClusterId: CL17
+  TemporalProfile: current
+  Updates:
+  - CAP3: content_source=doctor modality=assessment verification_status=confirmed clinical_status=active temporality=current turns=T60 :: The doctor diagnoses the patient with a neck sprain.
+- bruising | verification_status=unconfirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T71
+  Summary: The patient reports bruising.
+  ClusterId: CL22
+  TemporalProfile: current
+  Updates:
+  - CAP18: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=current turns=T71 :: The patient reports bruising.
+- swelling | verification_status=unconfirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T71
+  Summary: The patient reports swelling.
+  ClusterId: CL23
+  TemporalProfile: current
+  Updates:
+  - CAP19: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=current turns=T71 :: The patient reports swelling.
+
+Medication Tracking
+- [MedicationState] fentanyl | verification_status=unconfirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T23,T73
+  Summary: The patient was previously prescribed fentanyl.
+  ClusterId: CL8
+  TemporalProfile: past, recent
+  CurrentRegimens:
+  - The patient was previously prescribed fentanyl. (T23)
+  - The patient was previously taking fentanyl. (T73)
+  Updates:
+  - CAP24: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=recent turns=T23 :: The patient was previously prescribed fentanyl.
+  - CAP25: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=past turns=T73 :: The patient was previously taking fentanyl.
+- [MedicationChange] fentanyl | verification_status=unconfirmed | clinical_status=planned | modalities=interview | speakers=patient | evidence=T25
+  Summary: The patient has not received a fentanyl prescription for several weeks.
+  ClusterId: CL9
+  TemporalProfile: several weeks ago
+  PlannedChanges:
+  - The patient has not received a fentanyl prescription for several weeks. (T25)
+  Updates:
+  - CAP23: content_source=patient modality=interview verification_status=unconfirmed clinical_status=planned temporality=several weeks ago turns=T25 :: The patient has not received a fentanyl prescription for several weeks.
+- [MedicationChange] medication | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=clinician | evidence=T44
+  Summary: The clinician wants to give the patient medication that works like the best for them.
+  ClusterId: CL13
+  TemporalProfile: current
+  PlannedChanges:
+  - The clinician wants to give the patient medication that works like the best for them. (T44)
+  Updates:
+  - CAP20: content_source=clinician modality=plan verification_status=unconfirmed clinical_status=planned temporality=current turns=T44 :: The clinician wants to give the patient medication that works like the best for them.
+- [MedicationChange] pain management | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T64
+  Summary: The doctor plans to address the patient's pain.
+  ClusterId: CL18
+  TemporalProfile: current
+  PlannedChanges:
+  - The doctor plans to address the patient's pain. (T64)
+  Updates:
+  - CAP21: content_source=doctor modality=plan verification_status=unconfirmed clinical_status=planned temporality=current turns=T64 :: The doctor plans to address the patient's pain.
+- [MedicationChange] robaxin | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T74
+  Summary: The doctor prescribed robaxin.
+  ClusterId: CL24
+  TemporalProfile: future
+  PlannedChanges:
+  - The doctor prescribed robaxin. (T74)
+  Updates:
+  - CAP26: content_source=doctor modality=plan verification_status=unconfirmed clinical_status=planned temporality=future turns=T74 :: The doctor prescribed robaxin.
+
+Other Structured States
+- [Plan] referral | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=clinician | evidence=T46
+  Summary: The clinician suggests a referral.
+  ClusterId: CL15
+  TemporalProfile: current
+- [Plan] mri | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T70
+  Summary: An MRI is ordered.
+  ClusterId: CL19
+  TemporalProfile: future
+- [Plan] ice | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T70
+  Summary: The doctor recommends applying ice.
+  ClusterId: CL20
+  TemporalProfile: future
+- [Plan] exercises | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T70
+  Summary: The doctor recommends performing exercises.
+  ClusterId: CL21
+  TemporalProfile: future

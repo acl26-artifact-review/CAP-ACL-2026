@@ -1,0 +1,187 @@
+Case: D2N093
+
+Problem List and Visit State Tracking
+
+Problem List
+- shortness of breath | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T17,T3,T38,T7
+  Summary: The patient experienced shortness of breath once approximately a week ago.
+  ClusterId: CL1
+  TemporalProfile: acute, current, past
+  Updates:
+  - CAP15: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=acute turns=T3 :: The patient reports shortness of breath.
+  - CAP12: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T7 :: The patient reports shortness of breath.
+  - CAP1: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=past turns=T17 :: The patient experienced shortness of breath once approximately a week ago.
+  - CAP14: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T38 :: The patient reports shortness of breath.
+- depression | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=doctor,patient | evidence=T25,T3,T35,T9
+  Summary: The patient reports a difficult year and a half.
+  ClusterId: CL2
+  TemporalProfile: current, past
+  Updates:
+  - CAP20: content_source=doctor modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T3 :: The patient is experiencing depression.
+  - CAP8: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=past turns=T9 :: The patient has a history of depression.
+  - CAP5: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T25 :: The patient reports a difficult year and a half.
+  - CAP23: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T35 :: The patient denies depression.
+- congestive heart failure | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=doctor,patient | evidence=T3,T5
+  Summary: The patient has a history of congestive heart failure.
+  ClusterId: CL3
+  TemporalProfile: acute, past
+  Updates:
+  - CAP6: content_source=doctor modality=interview verification_status=confirmed clinical_status=active temporality=acute turns=T3 :: The patient is experiencing an acute heart failure exacerbation.
+  - CAP3: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=past turns=T5 :: The patient has a history of congestive heart failure.
+- type 2 diabetes | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=doctor | evidence=T3
+  Summary: The patient has type 2 diabetes.
+  ClusterId: CL4
+  TemporalProfile: current
+  Updates:
+  - CAP16: content_source=doctor modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T3 :: The patient has type 2 diabetes.
+- type 1 diabetes | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T5
+  Summary: The patient has a history of type 1 diabetes.
+  ClusterId: CL5
+  TemporalProfile: past
+  Updates:
+  - CAP2: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=past turns=T5 :: The patient has a history of type 1 diabetes.
+- lethargy | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T7
+  Summary: The patient reports feeling lethargic.
+  ClusterId: CL6
+  TemporalProfile: current
+  Updates:
+  - CAP17: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T7 :: The patient reports feeling lethargic.
+- swelling | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T7
+  Summary: The patient reports swelling.
+  ClusterId: CL7
+  TemporalProfile: current
+  Updates:
+  - CAP21: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T7 :: The patient reports swelling.
+- pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T9
+  Summary: The patient reports pain in the left hand.
+  ClusterId: CL8
+  TemporalProfile: current
+  Updates:
+  - CAP7: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T9 :: The patient reports pain in the left hand.
+- reflux | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T35,T9
+  Summary: The patient has a history of reflux.
+  ClusterId: CL9
+  TemporalProfile: current, past
+  Updates:
+  - CAP9: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=past turns=T9 :: The patient has a history of reflux.
+  - CAP37: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T35 :: The patient has reflux.
+- leg swelling | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T13
+  Summary: The patient reports some swelling in their legs.
+  ClusterId: CL10
+  TemporalProfile: current
+  Updates:
+  - CAP36: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T13 :: The patient reports some swelling in their legs.
+- stiffness | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T15
+  Summary: The patient reports stiffness.
+  ClusterId: CL11
+  TemporalProfile: current
+  Updates:
+  - CAP22: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T15 :: The patient reports stiffness.
+- negated_symptom | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T21
+  Summary: The patient has not seen any blood sugar spikes.
+  ClusterId: CL13
+  TemporalProfile: current
+  Updates:
+  - CAP4: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T21 :: The patient has not seen any blood sugar spikes.
+- red bull | verification_status=unconfirmed | clinical_status=historical | modalities=interview | speakers=doctor | evidence=T32
+  Summary: The patient cut back on red bull.
+  ClusterId: CL15
+  TemporalProfile: holiday season
+  Updates:
+  - CAP10: content_source=doctor modality=interview verification_status=unconfirmed clinical_status=historical temporality=holiday season turns=T32 :: The patient cut back on red bull.
+- caffeine | verification_status=unconfirmed | clinical_status=historical | modalities=interview | speakers=doctor | evidence=T32
+  Summary: The patient cut back on caffeine.
+  ClusterId: CL16
+  TemporalProfile: holiday season
+  Updates:
+  - CAP13: content_source=doctor modality=interview verification_status=unconfirmed clinical_status=historical temporality=holiday season turns=T32 :: The patient cut back on caffeine.
+- fever | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T37
+  Summary: The patient reports fever.
+  ClusterId: CL18
+  TemporalProfile: current
+  Updates:
+  - CAP24: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T37 :: The patient reports fever.
+- chills | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T37
+  Summary: The patient reports chills.
+  ClusterId: CL19
+  TemporalProfile: current
+  Updates:
+  - CAP25: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T37 :: The patient reports chills.
+- cough | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T37
+  Summary: The patient reports cough.
+  ClusterId: CL20
+  TemporalProfile: current
+  Updates:
+  - CAP26: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T37 :: The patient reports cough.
+- chest pain | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T40
+  Summary: The patient reports chest pain.
+  ClusterId: CL21
+  TemporalProfile: current
+  Updates:
+  - CAP18: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T40 :: The patient reports chest pain.
+- belly pain | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T42
+  Summary: The patient reports belly pain.
+  ClusterId: CL22
+  TemporalProfile: current
+  Updates:
+  - CAP19: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T42 :: The patient reports belly pain.
+- breathing problems | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T63
+  Summary: The patient reports problems with their breathing.
+  ClusterId: CL26
+  TemporalProfile: current
+  Updates:
+  - CAP11: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T63 :: The patient reports problems with their breathing.
+
+Medication Tracking
+- [MedicationState] insulin pump | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T15
+  Summary: The patient is on an insulin pump.
+  ClusterId: CL12
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient is on an insulin pump. (T15)
+  Updates:
+  - CAP34: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T15 :: The patient is on an insulin pump.
+- [MedicationState] medication | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T27
+  Summary: The patient is open to suggestions regarding medication.
+  ClusterId: CL14
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient is open to suggestions regarding medication. (T27)
+  Updates:
+  - CAP33: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T27 :: The patient is open to suggestions regarding medication.
+- [MedicationState] omeprazole | verification_status=confirmed | clinical_status=active | modalities=interview,plan | speakers=doctor | evidence=T35,T62
+  Summary: The patient was making omeprazole.
+  ClusterId: CL17
+  TemporalProfile: current, daily
+  CurrentRegimens:
+  - The patient was making omeprazole. (T35)
+  - The patient will take omeprazole at a dose of 20 milligrams per day. (T62)
+  Updates:
+  - CAP35: content_source=doctor modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T35 :: The patient was making omeprazole.
+  - CAP32: content_source=doctor modality=plan verification_status=confirmed clinical_status=active temporality=daily turns=T62 :: The patient will take omeprazole at a dose of 20 milligrams per day.
+- [MedicationState] lasix | verification_status=confirmed | clinical_status=active | modalities=plan | speakers=doctor | evidence=T63
+  Summary: The patient will take lasix at a dose of 40 milligrams per day.
+  ClusterId: CL27
+  TemporalProfile: daily
+  CurrentRegimens:
+  - The patient will take lasix at a dose of 40 milligrams per day. (T63)
+  Updates:
+  - CAP31: content_source=doctor modality=plan verification_status=confirmed clinical_status=active temporality=daily turns=T63 :: The patient will take lasix at a dose of 40 milligrams per day.
+
+Other Structured States
+- [Plan] hemoglobin a1c | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T56
+  Summary: A hemoglobin a1c test will be ordered.
+  ClusterId: CL23
+  TemporalProfile: 1 month
+- [Plan] eye exam | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T56
+  Summary: A recent eye exam is ordered.
+  ClusterId: CL24
+  TemporalProfile: recent
+- [Plan] referral | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T56
+  Summary: A referral to psychiatry is ordered.
+  ClusterId: CL25
+  TemporalProfile: future
+- [Plan] call | verification_status=unconfirmed | clinical_status=planned | modalities=assessment | speakers=doctor | evidence=T64
+  Summary: The doctor wants the patient to call if they have any problems with their breathing.
+  ClusterId: CL28
+  TemporalProfile: current

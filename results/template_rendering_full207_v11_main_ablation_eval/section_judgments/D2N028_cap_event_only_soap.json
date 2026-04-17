@@ -1,0 +1,44 @@
+{
+  "section_miscategorizations": [
+    {
+      "text": "The patient reports hepatomegaly.",
+      "current_section": "S",
+      "expected_section": "A",
+      "severity": "major",
+      "reason": "Hepatomegaly is a clinical diagnosis/assessment term; a patient would not typically report this. It represents a clinician assessment of liver enlargement rather than a subjective symptom."
+    },
+    {
+      "text": "The patient reports an enlarged liver.",
+      "current_section": "S",
+      "expected_section": "A",
+      "severity": "major",
+      "reason": "An enlarged liver is an objective clinical finding/diagnosis, not a typical patient-reported symptom. It aligns better with assessment of hepatomegaly rather than subjective history."
+    },
+    {
+      "text": "The doctor feels a slight enlargement of the liver on the upper right side.",
+      "current_section": "A",
+      "expected_section": "O",
+      "severity": "major",
+      "reason": "This is a physical exam finding (palpation of liver edge) and should be documented as an objective observation, not in the assessment section."
+    },
+    {
+      "text": "The patient's liver is enlarged.",
+      "current_section": "A",
+      "expected_section": "O",
+      "severity": "minor",
+      "reason": "This could be interpreted as either an exam finding (objective) or a diagnostic statement (assessment). Given the context of palpation, it more closely reflects an exam finding and would fit better in O, but its presence in A is not strongly misleading."
+    },
+    {
+      "text": "The patient takes crestor daily.",
+      "current_section": "O",
+      "expected_section": "S",
+      "severity": "major",
+      "reason": "This is an existing medication the patient is taking, which belongs in the subjective/history section unless framed as a new order or change."
+    }
+  ],
+  "summary_statistics": {
+    "section_appropriateness_score": 0.7,
+    "section_miscategorization_count": 5,
+    "major_section_miscategorization_count": 4
+  }
+}

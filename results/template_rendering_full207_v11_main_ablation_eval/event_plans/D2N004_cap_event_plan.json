@@ -1,0 +1,86 @@
+{
+  "events": [
+    {
+      "event_id": "CL12",
+      "event_type": "ProblemOrientedNoteBundle",
+      "canonical_concept": "diabetes",
+      "visit_state": "active",
+      "status": "affirmed",
+      "temporality": "last",
+      "speaker_source": "patient,dragon,test_result,doctor",
+      "clinical_priority": "high",
+      "title": "diabetes",
+      "event_summary": "Problem-oriented bundle for diabetes.",
+      "supporting_cap_ids": [
+        "CAP14",
+        "CAP4",
+        "CAP5",
+        "CAP8",
+        "CAP12",
+        "CAP20",
+        "CAP21",
+        "CAP22",
+        "CAP28",
+        "CAP27"
+      ],
+      "anchor_problem_cap_id": "CAP14",
+      "anchor_problem": "diabetes",
+      "S_cap_ids": [
+        "CAP14",
+        "CAP28"
+      ],
+      "O_cap_ids": [
+        "CAP20",
+        "CAP21",
+        "CAP22"
+      ],
+      "global_cap_ids": [
+        "CAP4",
+        "CAP5",
+        "CAP8",
+        "CAP12",
+        "CAP27"
+      ],
+      "supporting_evidence": [
+        "The patient has diabetes.",
+        "The patient is taking metformin.",
+        "The patient's hemoglobin a1c is 8.",
+        "The patient's hemoglobin a1c was 8."
+      ],
+      "current_state": [
+        "The patient has diabetes.",
+        "The patient is taking metformin."
+      ],
+      "care_context": [
+        "The patient experienced difficulty with their right foot.",
+        "The patient reports weakness in their right leg.",
+        "The patient has a sweet tooth.",
+        "The patient reports weight gain.",
+        "The patient is currently taking metformin."
+      ],
+      "key_slots": {
+        "source_modalities": "interview, test_result",
+        "temporal_profile": "current, past, last",
+        "anchor_cluster_type": "ProblemState",
+        "anchor_primary_cap_type": "Problem",
+        "bundle_concepts": "diabetes; weakness; sweet tooth; weight gain; hemoglobin a1c; metformin",
+        "history_context": "",
+        "related_factors": "",
+        "visit_primary": "true",
+        "render_in_note": "true",
+        "assessment_fallback": "The patient has diabetes.",
+        "bundle_design": "problem_oriented_note_bundle"
+      },
+      "render_sections": [
+        "S",
+        "O",
+        "A",
+        "P",
+        "History of Present Illness",
+        "Findings",
+        "Assessment",
+        "Plan"
+      ]
+    }
+  ]
+}

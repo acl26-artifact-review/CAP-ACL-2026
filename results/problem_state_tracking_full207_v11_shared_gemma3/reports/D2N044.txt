@@ -1,0 +1,67 @@
+Case: D2N044
+
+Problem List and Visit State Tracking
+
+Problem List
+- knee pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T1,T25,T31,T33,T7,T9
+  Summary: The patient reports deep aching pain in both knees.
+  ClusterId: CL1
+  TemporalProfile: 6 months, current
+  Updates:
+  - CAP1: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=6 months turns=T1,T9 :: The patient reports deep aching pain in both knees.
+  - CAP11: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=6 months turns=T1 :: The patient has knee pain.
+  - CAP6: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T7 :: The patient describes pain located behind their kneecaps.
+  - CAP4: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T9,T9 :: The patient experiences pain.
+  - CAP9: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T9 :: The patient describes the pain as achy.
+  - CAP10: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T9 :: The patient reports a deep achy pain.
+  - CAP7: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T25 :: The patient reports pain in the left hand.
+  - CAP2: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T33,T31 :: The patient reports pain in their knees.
+  - CAP5: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T31 :: The patient states that pain is not relieved by rest.
+  - CAP8: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T31 :: The patient reports pain in their left hand.
+  - CAP12: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T31 :: The patient is experiencing pain.
+  - CAP13: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T31 :: The patient reports pain.
+  - CAP3: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T33,T33 :: The patient has knee pain.
+
+Medication Tracking
+- [MedicationState] ibuprofen | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T27
+  Summary: The patient has tried ibuprofen.
+  ClusterId: CL5
+  TemporalProfile: past
+  CurrentRegimens:
+  - The patient has tried ibuprofen. (T27)
+  Updates:
+  - CAP18: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=past turns=T27 :: The patient has tried ibuprofen.
+- [MedicationState] aleve | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T27
+  Summary: The patient has tried aleve.
+  ClusterId: CL6
+  TemporalProfile: past
+  CurrentRegimens:
+  - The patient has tried aleve. (T27)
+  Updates:
+  - CAP19: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=past turns=T27 :: The patient has tried aleve.
+- [MedicationState] tylenol | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T27
+  Summary: The patient has tried tylonol.
+  ClusterId: CL7
+  TemporalProfile: past
+  CurrentRegimens:
+  - The patient has tried tylonol. (T27)
+  Updates:
+  - CAP20: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=past turns=T27 :: The patient has tried tylonol.
+
+Other Structured States
+- [Plan] ibuprofen | verification_status=confirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T27
+  Summary: The doctor recommends ibuprofen.
+  ClusterId: CL2
+  TemporalProfile: current
+- [Plan] aleve | verification_status=confirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T27
+  Summary: The doctor recommends aleve.
+  ClusterId: CL3
+  TemporalProfile: current
+- [Plan] tylenol | verification_status=confirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T27
+  Summary: The doctor recommends tylonol.
+  ClusterId: CL4
+  TemporalProfile: current
+- [Plan] bike trail | verification_status=confirmed | clinical_status=planned | modalities=assessment | speakers=clinician | evidence=T46
+  Summary: The doctor's goal is to get the patient out on the bike trail.
+  ClusterId: CL8
+  TemporalProfile: future

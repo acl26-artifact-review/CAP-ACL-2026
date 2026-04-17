@@ -1,0 +1,138 @@
+{
+  "events": [
+    {
+      "event_id": "CL13",
+      "event_type": "ProblemOrientedNoteBundle",
+      "canonical_concept": "diabetes",
+      "visit_state": "active",
+      "status": "affirmed",
+      "temporality": "last visit",
+      "speaker_source": "patient,doctor",
+      "clinical_priority": "high",
+      "title": "diabetes",
+      "event_summary": "Problem-oriented bundle for diabetes.",
+      "supporting_cap_ids": [
+        "CAP18",
+        "CAP34",
+        "CAP8",
+        "CAP9",
+        "CAP16",
+        "CAP22",
+        "CAP32"
+      ],
+      "anchor_problem_cap_id": "CAP18",
+      "anchor_problem": "diabetes",
+      "S_cap_ids": [
+        "CAP18"
+      ],
+      "O_cap_ids": [
+        "CAP22"
+      ],
+      "global_cap_ids": [
+        "CAP34",
+        "CAP8",
+        "CAP9",
+        "CAP16",
+        "CAP32"
+      ],
+      "supporting_evidence": [
+        "The patient has diabetes.",
+        "The patient's last A1C result was 7.2."
+      ],
+      "current_state": [
+        "The patient has diabetes."
+      ],
+      "care_context": [
+        "The patient reports pain along their arm.",
+        "The patient reports pain in their left arm.",
+        "The patient reports pain in the left arm.",
+        "The patient reports arm pain.",
+        "The patient is taking metformin."
+      ],
+      "key_slots": {
+        "source_modalities": "interview, test_result",
+        "temporal_profile": "current, last visit",
+        "anchor_cluster_type": "ProblemState",
+        "anchor_primary_cap_type": "Problem",
+        "bundle_concepts": "diabetes; left arm pain; a1c; metformin",
+        "history_context": "",
+        "related_factors": "",
+        "visit_primary": "true",
+        "render_in_note": "true",
+        "assessment_fallback": "The patient has diabetes.",
+        "bundle_design": "problem_oriented_note_bundle"
+      },
+      "render_sections": [
+        "S",
+        "O",
+        "A",
+        "P",
+        "History of Present Illness",
+        "Findings",
+        "Assessment",
+        "Plan"
+      ]
+    },
+    {
+      "event_id": "CL1",
+      "event_type": "ProblemOrientedNoteBundle",
+      "canonical_concept": "history of hypertension",
+      "visit_state": "historical",
+      "status": "affirmed",
+      "temporality": "current",
+      "speaker_source": "patient,doctor",
+      "clinical_priority": "high",
+      "title": "history of hypertension",
+      "event_summary": "Problem-oriented bundle for history of hypertension.",
+      "supporting_cap_ids": [
+        "CAP4",
+        "CAP12",
+        "CAP13",
+        "CAP5",
+        "CAP29",
+        "CAP31"
+      ],
+      "anchor_problem_cap_id": "CAP4",
+      "anchor_problem": "history of hypertension",
+      "P_cap_ids": [
+        "CAP29"
+      ],
+      "global_cap_ids": [
+        "CAP31"
+      ],
+      "planned_actions": [
+        "The patient will continue norvasc at a dose of 2.5 mg."
+      ],
+      "care_context": [
+        "The patient has a past medical history of hypertension.",
+        "The patient has a past medical history of diabetes.",
+        "The patient's blood pressure was elevated.",
+        "The patient's blood pressure is elevated.",
+        "The patient is taking norvasc."
+      ],
+      "key_slots": {
+        "source_modalities": "interview, plan",
+        "temporal_profile": "past, current",
+        "anchor_cluster_type": "ProblemState",
+        "anchor_primary_cap_type": "Problem",
+        "bundle_concepts": "history of hypertension; hypertension; history of diabetes; norvasc",
+        "history_context": "The patient has a past medical history of hypertension.; The patient has a past medical history of diabetes.",
+        "related_factors": "The patient's blood pressure was elevated.; The patient's blood pressure is elevated.",
+        "visit_primary": "true",
+        "render_in_note": "true",
+        "assessment_fallback": "The patient has history of hypertension.",
+        "bundle_design": "problem_oriented_note_bundle"
+      },
+      "render_sections": [
+        "S",
+        "O",
+        "A",
+        "P",
+        "History of Present Illness",
+        "Findings",
+        "Assessment",
+        "Plan"
+      ]
+    }
+  ]
+}

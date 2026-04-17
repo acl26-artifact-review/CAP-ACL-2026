@@ -1,0 +1,44 @@
+{
+  "section_miscategorizations": [
+    {
+      "text": "The doctor is concerned about the patient's blood pressure and orders an echo.",
+      "current_section": "A",
+      "expected_section": "P",
+      "severity": "major",
+      "reason": "The concern about blood pressure is assessment, but the explicit action 'orders an echo' is a management step that belongs in the Plan section."
+    },
+    {
+      "text": "The doctor orders an a1c test and a lipid panel.",
+      "current_section": "A",
+      "expected_section": "P",
+      "severity": "major",
+      "reason": "Laboratory orders are explicit management actions and should be documented in the Plan, not in the Assessment."
+    },
+    {
+      "text": "The doctor continues lisinopril at 20mg.",
+      "current_section": "P",
+      "expected_section": "A",
+      "severity": "minor",
+      "reason": "Continuation of an existing medication is often documented in the Assessment as part of ongoing management of a problem; however, many clinicians also place this in the Plan, so this is a softer organizational issue rather than clearly wrong."
+    },
+    {
+      "text": "The doctor orders a blood pressure cuff.",
+      "current_section": "P",
+      "expected_section": "A",
+      "severity": "minor",
+      "reason": "Ordering home monitoring equipment is a management decision that some templates place in the Plan, but it is closely tied to the assessment of hypertension control; placement in A or P can be acceptable, so this is a minor categorization issue."
+    },
+    {
+      "text": "The doctor orders an x-ray of the right knee.",
+      "current_section": "P",
+      "expected_section": "O",
+      "severity": "major",
+      "reason": "The Objective section already contains results of an x-ray, implying it has been performed. New imaging orders belong in the Plan, while completed imaging and results belong in Objective; mixing an order here with completed results can mislead about what has already been done."
+    }
+  ],
+  "summary_statistics": {
+    "section_appropriateness_score": 0.6,
+    "section_miscategorization_count": 5,
+    "major_section_miscategorization_count": 3
+  }
+}

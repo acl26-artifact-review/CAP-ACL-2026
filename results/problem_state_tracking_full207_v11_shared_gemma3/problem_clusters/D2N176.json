@@ -1,0 +1,1091 @@
+{
+  "clusters": [
+    {
+      "cluster_id": "CL1",
+      "cluster_type": "ProblemState",
+      "canonical_concept": "reflux",
+      "primary_cap_type": "Problem",
+      "source_cap_types": [
+        "Problem"
+      ],
+      "final_verification_status": "confirmed",
+      "clinical_status": "active",
+      "final_assertion": "present",
+      "visit_state": "active",
+      "source_speakers": [
+        "patient"
+      ],
+      "source_modalities": [
+        "interview"
+      ],
+      "temporal_profile": [
+        "current"
+      ],
+      "evidence_turn_ids": [
+        "T16",
+        "T4"
+      ],
+      "supporting_cap_ids": [
+        "CAP4",
+        "CAP10"
+      ],
+      "cluster_summary": "The patient has a history of reflux.",
+      "salience_score": 10,
+      "is_low_value": false,
+      "updates": [
+        {
+          "cap_id": "CAP4",
+          "content_source": "patient",
+          "modality": "interview",
+          "verification_status": "confirmed",
+          "clinical_status": "active",
+          "assertion": "present",
+          "visit_state": "active",
+          "temporality": "current",
+          "turn_ids": [
+            "T4"
+          ],
+          "proposition_text": "The patient has a history of reflux."
+        },
+        {
+          "cap_id": "CAP10",
+          "content_source": "patient",
+          "modality": "interview",
+          "verification_status": "confirmed",
+          "clinical_status": "active",
+          "assertion": "present",
+          "visit_state": "active",
+          "temporality": "current",
+          "turn_ids": [
+            "T16"
+          ],
+          "proposition_text": "The patient's reflux was managed."
+        }
+      ]
+    },
+    {
+      "cluster_id": "CL2",
+      "cluster_type": "MedicationState",
+      "canonical_concept": "protonix 40 mg a day",
+      "primary_cap_type": "MedicationStatement",
+      "source_cap_types": [
+        "MedicationStatement"
+      ],
+      "final_verification_status": "confirmed",
+      "clinical_status": "active",
+      "final_assertion": "present",
+      "visit_state": "active",
+      "source_speakers": [
+        "clinician",
+        "doctor"
+      ],
+      "source_modalities": [
+        "interview",
+        "plan"
+      ],
+      "temporal_profile": [
+        "current",
+        "daily"
+      ],
+      "evidence_turn_ids": [
+        "T46",
+        "T47",
+        "T7"
+      ],
+      "supporting_cap_ids": [
+        "CAP28",
+        "CAP27",
+        "CAP24",
+        "CAP25"
+      ],
+      "cluster_summary": "The doctor wants the patient to take protonix 40 mg a day.",
+      "salience_score": 8,
+      "is_low_value": false,
+      "updates": [
+        {
+          "cap_id": "CAP28",
+          "content_source": "doctor",
+          "modality": "interview",
+          "verification_status": "confirmed",
+          "clinical_status": "active",
+          "assertion": "present",
+          "visit_state": "active",
+          "temporality": "current",
+          "turn_ids": [
+            "T7"
+          ],
+          "proposition_text": "The doctor prescribed protonix."
+        },
+        {
+          "cap_id": "CAP27",
+          "content_source": "doctor",
+          "modality": "plan",
+          "verification_status": "confirmed",
+          "clinical_status": "active",
+          "assertion": "present",
+          "visit_state": "active",
+          "temporality": "current",
+          "turn_ids": [
+            "T46"
+          ],
+          "proposition_text": "The doctor wants the patient to continue protonix."
+        },
+        {
+          "cap_id": "CAP24",
+          "content_source": "doctor",
+          "modality": "plan",
+          "verification_status": "confirmed",
+          "clinical_status": "active",
+          "assertion": "present",
+          "visit_state": "active",
+          "temporality": "current",
+          "turn_ids": [
+            "T46"
+          ],
+          "proposition_text": "The doctor wants the patient to take protonix 40 mg a day."
+        },
+        {
+          "cap_id": "CAP25",
+          "content_source": "clinician",
+          "modality": "interview",
+          "verification_status": "confirmed",
+          "clinical_status": "active",
+          "assertion": "present",
+          "visit_state": "active",
+          "temporality": "daily",
+          "turn_ids": [
+            "T47"
+          ],
+          "proposition_text": "The patient should continue taking protonix 40 mg a day."
+        }
+      ],
+      "current_regimens": [
+        {
+          "proposition_text": "The doctor prescribed protonix.",
+          "turn_ids": [
+            "T7"
+          ],
+          "attributes": {}
+        },
+        {
+          "proposition_text": "The doctor wants the patient to continue protonix.",
+          "turn_ids": [
+            "T46"
+          ],
+          "attributes": {}
+        },
+        {
+          "proposition_text": "The doctor wants the patient to take protonix 40 mg a day.",
+          "turn_ids": [
+            "T46"
+          ],
+          "attributes": {}
+        },
+        {
+          "proposition_text": "The patient should continue taking protonix 40 mg a day.",
+          "turn_ids": [
+            "T47"
+          ],
+          "attributes": {
+            "dosage": "40 mg"
+          }
+        }
+      ]
+    },
+    {
+      "cluster_id": "CL3",
+      "cluster_type": "ProblemState",
+      "canonical_concept": "caffeine",
+      "primary_cap_type": "Problem",
+      "source_cap_types": [
+        "Problem"
+      ],
+      "final_verification_status": "confirmed",
+      "clinical_status": "historical",
+      "final_assertion": "historical",
+      "visit_state": "historical",
+      "source_speakers": [
+        "doctor",
+        "patient"
+      ],
+      "source_modalities": [
+        "interview"
+      ],
+      "temporal_profile": [
+        "current",
+        "past"
+      ],
+      "evidence_turn_ids": [
+        "T12",
+        "T8"
+      ],
+      "supporting_cap_ids": [
+        "CAP5",
+        "CAP1"
+      ],
+      "cluster_summary": "The patient was drinking so many energy drinks a day.",
+      "salience_score": 10,
+      "is_low_value": false,
+      "updates": [
+        {
+          "cap_id": "CAP5",
+          "content_source": "doctor",
+          "modality": "interview",
+          "verification_status": "confirmed",
+          "clinical_status": "active",
+          "assertion": "present",
+          "visit_state": "active",
+          "temporality": "current",
+          "turn_ids": [
+            "T8"
+          ],
+          "proposition_text": "The doctor recommends cutting back on caffeine."
+        },
+        {
+          "cap_id": "CAP1",
+          "content_source": "patient",
+          "modality": "interview",
+          "verification_status": "confirmed",
+          "clinical_status": "historical",
+          "assertion": "historical",
+          "visit_state": "historical",
+          "temporality": "past",
+          "turn_ids": [
+            "T12"
+          ],
+          "proposition_text": "The patient was drinking so many energy drinks a day."
+        }
+      ]
+    },
+    {
+      "cluster_id": "CL4",
+      "cluster_type": "ProblemState",
+      "canonical_concept": "left hand pain",
+      "primary_cap_type": "Symptom",
+      "source_cap_types": [
+        "Symptom"
+      ],
+      "final_verification_status": "confirmed",
+      "clinical_status": "active",
+      "final_assertion": "present",
+      "visit_state": "active",
+      "source_speakers": [
+        "patient"
+      ],
+      "source_modalities": [
+        "interview"
+      ],
+      "temporal_profile": [
+        "current"
+      ],
+      "evidence_turn_ids": [
+        "T8"
+      ],
+      "supporting_cap_ids": [
+        "CAP2"
+      ],
+      "cluster_summary": "The patient reports pain in the left hand.",
+      "salience_score": 10,
+      "is_low_value": false,
+      "updates": [
+        {
+          "cap_id": "CAP2",
+          "content_source": "patient",
+          "modality": "interview",
+          "verification_status": "confirmed",
+          "clinical_status": "active",
+          "assertion": "present",
+          "visit_state": "active",
+          "temporality": "current",
+          "turn_ids": [
+            "T8"
+          ],
+          "proposition_text": "The patient reports pain in the left hand."
+        }
+      ]
+    },
+    {
+      "cluster_id": "CL5",
+      "cluster_type": "ProblemState",
+      "canonical_concept": "spicy foods",
+      "primary_cap_type": "Problem",
+      "source_cap_types": [
+        "Problem"
+      ],
+      "final_verification_status": "confirmed",
+      "clinical_status": "historical",
+      "final_assertion": "historical",
+      "visit_state": "historical",
+      "source_speakers": [
+        "doctor",
+        "patient"
+      ],
+      "source_modalities": [
+        "interview"
+      ],
+      "temporal_profile": [
+        "current",
+        "past"
+      ],
+      "evidence_turn_ids": [
+        "T14",
+        "T8"
+      ],
+      "supporting_cap_ids": [
+        "CAP3",
+        "CAP8"
+      ],
+      "cluster_summary": "The doctor recommends cutting back on spicy foods.",
+      "salience_score": 10,
+      "is_low_value": false,
+      "updates": [
+        {
+          "cap_id": "CAP3",
+          "content_source": "doctor",
+          "modality": "interview",
+          "verification_status": "confirmed",
+          "clinical_status": "active",
+          "assertion": "present",
+          "visit_state": "active",
+          "temporality": "current",
+          "turn_ids": [
+            "T8"
+          ],
+          "proposition_text": "The doctor recommends cutting back on spicy foods."
+        },
+        {
+          "cap_id": "CAP8",
+          "content_source": "patient",
+          "modality": "interview",
+          "verification_status": "confirmed",
+          "clinical_status": "historical",
+          "assertion": "historical",
+          "visit_state": "historical",
+          "temporality": "past",
+          "turn_ids": [
+            "T14"
+          ],
+          "proposition_text": "The patient was consuming spicy foods."
+        }
+      ]
+    },
+    {
+      "cluster_id": "CL6",
+      "cluster_type": "ProblemState",
+      "canonical_concept": "alcohol",
+      "primary_cap_type": "Problem",
+      "source_cap_types": [
+        "Problem"
+      ],
+      "final_verification_status": "confirmed",
+      "clinical_status": "historical",
+      "final_assertion": "historical",
+      "visit_state": "historical",
+      "source_speakers": [
+        "doctor",
+        "patient"
+      ],
+      "source_modalities": [
+        "interview"
+      ],
+      "temporal_profile": [
+        "current",
+        "past"
+      ],
+      "evidence_turn_ids": [
+        "T14",
+        "T8"
+      ],
+      "supporting_cap_ids": [
+        "CAP6",
+        "CAP11"
+      ],
+      "cluster_summary": "The doctor recommends cutting back on alcohol.",
+      "salience_score": 10,
+      "is_low_value": false,
+      "updates": [
+        {
+          "cap_id": "CAP6",
+          "content_source": "doctor",
+          "modality": "interview",
+          "verification_status": "confirmed",
+          "clinical_status": "active",
+          "assertion": "present",
+          "visit_state": "active",
+          "temporality": "current",
+          "turn_ids": [
+            "T8"
+          ],
+          "proposition_text": "The doctor recommends cutting back on alcohol."
+        },
+        {
+          "cap_id": "CAP11",
+          "content_source": "patient",
+          "modality": "interview",
+          "verification_status": "confirmed",
+          "clinical_status": "historical",
+          "assertion": "historical",
+          "visit_state": "historical",
+          "temporality": "past",
+          "turn_ids": [
+            "T14"
+          ],
+          "proposition_text": "The patient was consuming alcohol."
+        }
+      ]
+    },
+    {
+      "cluster_id": "CL7",
+      "cluster_type": "ProblemState",
+      "canonical_concept": "comfortable",
+      "primary_cap_type": "Symptom",
+      "source_cap_types": [
+        "Symptom"
+      ],
+      "final_verification_status": "confirmed",
+      "clinical_status": "stable",
+      "final_assertion": "present",
+      "visit_state": "stable",
+      "source_speakers": [
+        "patient"
+      ],
+      "source_modalities": [
+        "interview"
+      ],
+      "temporal_profile": [
+        "current"
+      ],
+      "evidence_turn_ids": [
+        "T10"
+      ],
+      "supporting_cap_ids": [
+        "CAP15"
+      ],
+      "cluster_summary": "The patient feels comfortable.",
+      "salience_score": 10,
+      "is_low_value": false,
+      "updates": [
+        {
+          "cap_id": "CAP15",
+          "content_source": "patient",
+          "modality": "interview",
+          "verification_status": "confirmed",
+          "clinical_status": "stable",
+          "assertion": "present",
+          "visit_state": "stable",
+          "temporality": "current",
+          "turn_ids": [
+            "T10"
+          ],
+          "proposition_text": "The patient feels comfortable."
+        }
+      ]
+    },
+    {
+      "cluster_id": "CL8",
+      "cluster_type": "MedicationState",
+      "canonical_concept": "green tea",
+      "primary_cap_type": "MedicationStatement",
+      "source_cap_types": [
+        "MedicationStatement"
+      ],
+      "final_verification_status": "confirmed",
+      "clinical_status": "active",
+      "final_assertion": "present",
+      "visit_state": "active",
+      "source_speakers": [
+        "patient"
+      ],
+      "source_modalities": [
+        "interview"
+      ],
+      "temporal_profile": [
+        "current"
+      ],
+      "evidence_turn_ids": [
+        "T12"
+      ],
+      "supporting_cap_ids": [
+        "CAP26"
+      ],
+      "cluster_summary": "The patient moved over from caffeine to green tea.",
+      "salience_score": 8,
+      "is_low_value": false,
+      "updates": [
+        {
+          "cap_id": "CAP26",
+          "content_source": "patient",
+          "modality": "interview",
+          "verification_status": "confirmed",
+          "clinical_status": "active",
+          "assertion": "present",
+          "visit_state": "active",
+          "temporality": "current",
+          "turn_ids": [
+            "T12"
+          ],
+          "proposition_text": "The patient moved over from caffeine to green tea."
+        }
+      ],
+      "current_regimens": [
+        {
+          "proposition_text": "The patient moved over from caffeine to green tea.",
+          "turn_ids": [
+            "T12"
+          ],
+          "attributes": {}
+        }
+      ]
+    },
+    {
+      "cluster_id": "CL9",
+      "cluster_type": "ProblemState",
+      "canonical_concept": "attitude",
+      "primary_cap_type": "Problem",
+      "source_cap_types": [
+        "Problem"
+      ],
+      "final_verification_status": "confirmed",
+      "clinical_status": "active",
+      "final_assertion": "present",
+      "visit_state": "active",
+      "source_speakers": [
+        "patient"
+      ],
+      "source_modalities": [
+        "interview"
+      ],
+      "temporal_profile": [
+        "current"
+      ],
+      "evidence_turn_ids": [
+        "T16"
+      ],
+      "supporting_cap_ids": [
+        "CAP16"
+      ],
+      "cluster_summary": "The patient's attitude improved.",
+      "salience_score": 10,
+      "is_low_value": false,
+      "updates": [
+        {
+          "cap_id": "CAP16",
+          "content_source": "patient",
+          "modality": "interview",
+          "verification_status": "confirmed",
+          "clinical_status": "active",
+          "assertion": "present",
+          "visit_state": "active",
+          "temporality": "current",
+          "turn_ids": [
+            "T16"
+          ],
+          "proposition_text": "The patient's attitude improved."
+        }
+      ]
+    },
+    {
+      "cluster_id": "CL10",
+      "cluster_type": "ProblemState",
+      "canonical_concept": "shortness of breath",
+      "primary_cap_type": "Symptom",
+      "source_cap_types": [
+        "Symptom"
+      ],
+      "final_verification_status": "unconfirmed",
+      "clinical_status": "active",
+      "final_assertion": "uncertain",
+      "visit_state": "active",
+      "source_speakers": [
+        "patient"
+      ],
+      "source_modalities": [
+        "interview"
+      ],
+      "temporal_profile": [
+        "current"
+      ],
+      "evidence_turn_ids": [
+        "T18"
+      ],
+      "supporting_cap_ids": [
+        "CAP9"
+      ],
+      "cluster_summary": "The patient denies shortness of breath.",
+      "salience_score": 10,
+      "is_low_value": false,
+      "updates": [
+        {
+          "cap_id": "CAP9",
+          "content_source": "patient",
+          "modality": "interview",
+          "verification_status": "unconfirmed",
+          "clinical_status": "active",
+          "assertion": "uncertain",
+          "visit_state": "active",
+          "temporality": "current",
+          "turn_ids": [
+            "T18"
+          ],
+          "proposition_text": "The patient denies shortness of breath."
+        }
+      ]
+    },
+    {
+      "cluster_id": "CL11",
+      "cluster_type": "ProblemState",
+      "canonical_concept": "chest pain",
+      "primary_cap_type": "Symptom",
+      "source_cap_types": [
+        "Symptom"
+      ],
+      "final_verification_status": "unconfirmed",
+      "clinical_status": "active",
+      "final_assertion": "uncertain",
+      "visit_state": "active",
+      "source_speakers": [
+        "patient"
+      ],
+      "source_modalities": [
+        "interview"
+      ],
+      "temporal_profile": [
+        "current"
+      ],
+      "evidence_turn_ids": [
+        "T18"
+      ],
+      "supporting_cap_ids": [
+        "CAP12"
+      ],
+      "cluster_summary": "The patient denies chest pain.",
+      "salience_score": 10,
+      "is_low_value": false,
+      "updates": [
+        {
+          "cap_id": "CAP12",
+          "content_source": "patient",
+          "modality": "interview",
+          "verification_status": "unconfirmed",
+          "clinical_status": "active",
+          "assertion": "uncertain",
+          "visit_state": "active",
+          "temporality": "current",
+          "turn_ids": [
+            "T18"
+          ],
+          "proposition_text": "The patient denies chest pain."
+        }
+      ]
+    },
+    {
+      "cluster_id": "CL12",
+      "cluster_type": "ProblemState",
+      "canonical_concept": "belly pain",
+      "primary_cap_type": "Symptom",
+      "source_cap_types": [
+        "Symptom"
+      ],
+      "final_verification_status": "unconfirmed",
+      "clinical_status": "active",
+      "final_assertion": "uncertain",
+      "visit_state": "active",
+      "source_speakers": [
+        "patient"
+      ],
+      "source_modalities": [
+        "interview"
+      ],
+      "temporal_profile": [
+        "current"
+      ],
+      "evidence_turn_ids": [
+        "T18"
+      ],
+      "supporting_cap_ids": [
+        "CAP13"
+      ],
+      "cluster_summary": "The patient denies belly pain.",
+      "salience_score": 10,
+      "is_low_value": false,
+      "updates": [
+        {
+          "cap_id": "CAP13",
+          "content_source": "patient",
+          "modality": "interview",
+          "verification_status": "unconfirmed",
+          "clinical_status": "active",
+          "assertion": "uncertain",
+          "visit_state": "active",
+          "temporality": "current",
+          "turn_ids": [
+            "T18"
+          ],
+          "proposition_text": "The patient denies belly pain."
+        }
+      ]
+    },
+    {
+      "cluster_id": "CL13",
+      "cluster_type": "ProblemState",
+      "canonical_concept": "nausea",
+      "primary_cap_type": "Symptom",
+      "source_cap_types": [
+        "Symptom"
+      ],
+      "final_verification_status": "unconfirmed",
+      "clinical_status": "active",
+      "final_assertion": "uncertain",
+      "visit_state": "active",
+      "source_speakers": [
+        "patient"
+      ],
+      "source_modalities": [
+        "interview"
+      ],
+      "temporal_profile": [
+        "current"
+      ],
+      "evidence_turn_ids": [
+        "T18"
+      ],
+      "supporting_cap_ids": [
+        "CAP17"
+      ],
+      "cluster_summary": "The patient denies nausea.",
+      "salience_score": 10,
+      "is_low_value": false,
+      "updates": [
+        {
+          "cap_id": "CAP17",
+          "content_source": "patient",
+          "modality": "interview",
+          "verification_status": "unconfirmed",
+          "clinical_status": "active",
+          "assertion": "uncertain",
+          "visit_state": "active",
+          "temporality": "current",
+          "turn_ids": [
+            "T18"
+          ],
+          "proposition_text": "The patient denies nausea."
+        }
+      ]
+    },
+    {
+      "cluster_id": "CL14",
+      "cluster_type": "ProblemState",
+      "canonical_concept": "no symptoms",
+      "primary_cap_type": "Symptom",
+      "source_cap_types": [
+        "Symptom"
+      ],
+      "final_verification_status": "confirmed",
+      "clinical_status": "active",
+      "final_assertion": "present",
+      "visit_state": "active",
+      "source_speakers": [
+        "patient"
+      ],
+      "source_modalities": [
+        "interview"
+      ],
+      "temporal_profile": [
+        "current"
+      ],
+      "evidence_turn_ids": [
+        "T29"
+      ],
+      "supporting_cap_ids": [
+        "CAP14"
+      ],
+      "cluster_summary": "The patient reports no symptoms.",
+      "salience_score": 10,
+      "is_low_value": false,
+      "updates": [
+        {
+          "cap_id": "CAP14",
+          "content_source": "patient",
+          "modality": "interview",
+          "verification_status": "confirmed",
+          "clinical_status": "active",
+          "assertion": "present",
+          "visit_state": "active",
+          "temporality": "current",
+          "turn_ids": [
+            "T29"
+          ],
+          "proposition_text": "The patient reports no symptoms."
+        }
+      ]
+    },
+    {
+      "cluster_id": "CL15",
+      "cluster_type": "ProblemState",
+      "canonical_concept": "gastritis",
+      "primary_cap_type": "Symptom",
+      "source_cap_types": [
+        "Symptom"
+      ],
+      "final_verification_status": "confirmed",
+      "clinical_status": "historical",
+      "final_assertion": "historical",
+      "visit_state": "historical",
+      "source_speakers": [
+        "patient"
+      ],
+      "source_modalities": [
+        "interview"
+      ],
+      "temporal_profile": [
+        "past"
+      ],
+      "evidence_turn_ids": [
+        "T33"
+      ],
+      "supporting_cap_ids": [
+        "CAP18"
+      ],
+      "cluster_summary": "The patient had gastritis.",
+      "salience_score": 10,
+      "is_low_value": false,
+      "updates": [
+        {
+          "cap_id": "CAP18",
+          "content_source": "patient",
+          "modality": "interview",
+          "verification_status": "confirmed",
+          "clinical_status": "historical",
+          "assertion": "historical",
+          "visit_state": "historical",
+          "temporality": "past",
+          "turn_ids": [
+            "T33"
+          ],
+          "proposition_text": "The patient had gastritis."
+        }
+      ]
+    },
+    {
+      "cluster_id": "CL16",
+      "cluster_type": "ExamFinding",
+      "canonical_concept": "1+ pitting edema",
+      "primary_cap_type": "ExamFinding",
+      "source_cap_types": [
+        "ExamFinding"
+      ],
+      "final_verification_status": "confirmed",
+      "clinical_status": "active",
+      "final_assertion": "present",
+      "visit_state": "active",
+      "source_speakers": [
+        "doctor",
+        "exam"
+      ],
+      "source_modalities": [
+        "exam"
+      ],
+      "temporal_profile": [
+        "bilaterally",
+        "current"
+      ],
+      "evidence_turn_ids": [
+        "T36"
+      ],
+      "supporting_cap_ids": [
+        "CAP19",
+        "CAP22"
+      ],
+      "cluster_summary": "The patient has 1+ pitting edema bilaterally in the lower extremities.",
+      "salience_score": 9,
+      "is_low_value": false,
+      "updates": [
+        {
+          "cap_id": "CAP19",
+          "content_source": "doctor",
+          "modality": "exam",
+          "verification_status": "confirmed",
+          "clinical_status": "active",
+          "assertion": "present",
+          "visit_state": "active",
+          "temporality": "bilaterally",
+          "turn_ids": [
+            "T36"
+          ],
+          "proposition_text": "The patient has 1+ pitting edema bilaterally in the lower extremities."
+        },
+        {
+          "cap_id": "CAP22",
+          "content_source": "exam",
+          "modality": "exam",
+          "verification_status": "confirmed",
+          "clinical_status": "active",
+          "assertion": "present",
+          "visit_state": "active",
+          "temporality": "current",
+          "turn_ids": [
+            "T36"
+          ],
+          "proposition_text": "The patient has 1+ pitting edema bilaterally."
+        }
+      ]
+    },
+    {
+      "cluster_id": "CL17",
+      "cluster_type": "ExamFinding",
+      "canonical_concept": "slight 2/6 systolic ejection murmur",
+      "primary_cap_type": "ExamFinding",
+      "source_cap_types": [
+        "ExamFinding"
+      ],
+      "final_verification_status": "confirmed",
+      "clinical_status": "stable",
+      "final_assertion": "present",
+      "visit_state": "stable",
+      "source_speakers": [
+        "doctor",
+        "exam"
+      ],
+      "source_modalities": [
+        "exam"
+      ],
+      "temporal_profile": [
+        "past"
+      ],
+      "evidence_turn_ids": [
+        "T36"
+      ],
+      "supporting_cap_ids": [
+        "CAP20",
+        "CAP21"
+      ],
+      "cluster_summary": "The patient has a slight 2/6 systolic ejection murmur.",
+      "salience_score": 9,
+      "is_low_value": false,
+      "updates": [
+        {
+          "cap_id": "CAP20",
+          "content_source": "doctor",
+          "modality": "exam",
+          "verification_status": "confirmed",
+          "clinical_status": "stable",
+          "assertion": "present",
+          "visit_state": "stable",
+          "temporality": "past",
+          "turn_ids": [
+            "T36"
+          ],
+          "proposition_text": "The patient has a slight 2/6 systolic ejection murmur."
+        },
+        {
+          "cap_id": "CAP21",
+          "content_source": "exam",
+          "modality": "exam",
+          "verification_status": "confirmed",
+          "clinical_status": "stable",
+          "assertion": "present",
+          "visit_state": "stable",
+          "temporality": "past",
+          "turn_ids": [
+            "T36"
+          ],
+          "proposition_text": "The patient has a 2/6 systolic ejection murmur."
+        }
+      ]
+    },
+    {
+      "cluster_id": "CL18",
+      "cluster_type": "ProblemState",
+      "canonical_concept": "dietary modifications",
+      "primary_cap_type": "Problem",
+      "source_cap_types": [
+        "Problem"
+      ],
+      "final_verification_status": "confirmed",
+      "clinical_status": "historical",
+      "final_assertion": "historical",
+      "visit_state": "historical",
+      "source_speakers": [
+        "clinician"
+      ],
+      "source_modalities": [
+        "interview"
+      ],
+      "temporal_profile": [
+        "ongoing"
+      ],
+      "evidence_turn_ids": [
+        "T47"
+      ],
+      "supporting_cap_ids": [
+        "CAP7"
+      ],
+      "cluster_summary": "The patient should continue with dietary modifications.",
+      "salience_score": 10,
+      "is_low_value": false,
+      "updates": [
+        {
+          "cap_id": "CAP7",
+          "content_source": "clinician",
+          "modality": "interview",
+          "verification_status": "confirmed",
+          "clinical_status": "historical",
+          "assertion": "historical",
+          "visit_state": "historical",
+          "temporality": "ongoing",
+          "turn_ids": [
+            "T47"
+          ],
+          "proposition_text": "The patient should continue with dietary modifications."
+        }
+      ]
+    },
+    {
+      "cluster_id": "CL19",
+      "cluster_type": "Plan",
+      "canonical_concept": "lifestyle modifications",
+      "primary_cap_type": "Order",
+      "source_cap_types": [
+        "Order"
+      ],
+      "final_verification_status": "confirmed",
+      "clinical_status": "planned",
+      "final_assertion": "hypothetical",
+      "visit_state": "planned",
+      "source_speakers": [
+        "doctor"
+      ],
+      "source_modalities": [
+        "plan"
+      ],
+      "temporal_profile": [
+        "current"
+      ],
+      "evidence_turn_ids": [
+        "T47"
+      ],
+      "supporting_cap_ids": [
+        "CAP23"
+      ],
+      "cluster_summary": "The doctor recommends lifestyle modifications.",
+      "salience_score": 9,
+      "is_low_value": false,
+      "updates": [
+        {
+          "cap_id": "CAP23",
+          "content_source": "doctor",
+          "modality": "plan",
+          "verification_status": "confirmed",
+          "clinical_status": "planned",
+          "assertion": "hypothetical",
+          "visit_state": "planned",
+          "temporality": "current",
+          "turn_ids": [
+            "T47"
+          ],
+          "proposition_text": "The doctor recommends lifestyle modifications."
+        }
+      ]
+    }
+  ]
+}

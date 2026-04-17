@@ -1,0 +1,146 @@
+{
+  "caps": [
+    {
+      "cap_id": "CAP1",
+      "cap_type": "Symptom",
+      "content_source": "clinician",
+      "modality": "assessment",
+      "canonical_concept": "lower back pain",
+      "verification_status": "confirmed",
+      "clinical_status": "active",
+      "temporality": "current",
+      "proposition_text": "The clinician reports lower back pain.",
+      "evidence": [
+        {
+          "turn_id": "S8",
+          "turn_speaker": "note",
+          "span_text": "Musculoskeletal: Reports lower back pain.",
+          "char_start": 0,
+          "char_end": 41
+        }
+      ],
+      "assertion": "present",
+      "visit_state": "active",
+      "linked_problem": null
+    },
+    {
+      "cap_id": "CAP2",
+      "cap_type": "Problem",
+      "content_source": "clinician",
+      "modality": "assessment",
+      "canonical_concept": "low back pain",
+      "verification_status": "confirmed",
+      "clinical_status": "active",
+      "temporality": "current",
+      "proposition_text": "The clinician assesses low back pain.",
+      "evidence": [
+        {
+          "turn_id": "S20",
+          "turn_speaker": "note",
+          "span_text": "Low back pain, possible acute disc herniation.",
+          "char_start": 0,
+          "char_end": 46
+        }
+      ],
+      "assertion": "present",
+      "visit_state": "active",
+      "linked_problem": null
+    },
+    {
+      "cap_id": "CAP3",
+      "cap_type": "Problem",
+      "content_source": "clinician",
+      "modality": "assessment",
+      "canonical_concept": "acute disc herniation",
+      "verification_status": "unconfirmed",
+      "clinical_status": "active",
+      "temporality": "current",
+      "proposition_text": "The clinician suspects acute disc herniation.",
+      "evidence": [
+        {
+          "turn_id": "S20",
+          "turn_speaker": "note",
+          "span_text": "Low back pain, possible acute disc herniation.",
+          "char_start": 0,
+          "char_end": 46
+        }
+      ],
+      "assertion": "uncertain",
+      "visit_state": "active",
+      "linked_problem": null
+    },
+    {
+      "cap_id": "CAP4",
+      "cap_type": "Order",
+      "content_source": "clinician",
+      "modality": "plan",
+      "canonical_concept": "MRI",
+      "verification_status": "confirmed",
+      "clinical_status": "active",
+      "temporality": "future",
+      "proposition_text": "The clinician ordered an MRI of the lumbar spine.",
+      "evidence": [
+        {
+          "turn_id": "S22",
+          "turn_speaker": "note",
+          "span_text": "After reviewing the patient's examination and radiographic findings today, I have had a lengthy discussion with the patient in regards to his current symptoms. His x-rays did not reveal any signs of a fracture. I would like to obtain an MRI of the lumbar spine to evaluate for a possible acute disc herniation. I have prescribed the patient meloxicam 15 mg to treat his pain. He will continue with physical therapy and a referral was provided for this today.",
+          "char_start": 0,
+          "char_end": 458
+        }
+      ],
+      "assertion": "present",
+      "visit_state": "active",
+      "linked_problem": null
+    },
+    {
+      "cap_id": "CAP5",
+      "cap_type": "Order",
+      "content_source": "clinician",
+      "modality": "plan",
+      "canonical_concept": "physical therapy",
+      "verification_status": "confirmed",
+      "clinical_status": "active",
+      "temporality": "future",
+      "proposition_text": "The clinician recommends physical therapy.",
+      "evidence": [
+        {
+          "turn_id": "S22",
+          "turn_speaker": "note",
+          "span_text": "After reviewing the patient's examination and radiographic findings today, I have had a lengthy discussion with the patient in regards to his current symptoms. His x-rays did not reveal any signs of a fracture. I would like to obtain an MRI of the lumbar spine to evaluate for a possible acute disc herniation. I have prescribed the patient meloxicam 15 mg to treat his pain. He will continue with physical therapy and a referral was provided for this today.",
+          "char_start": 0,
+          "char_end": 458
+        }
+      ],
+      "assertion": "present",
+      "visit_state": "active",
+      "linked_problem": null
+    },
+    {
+      "cap_id": "CAP6",
+      "cap_type": "MedicationStatement",
+      "content_source": "clinician",
+      "modality": "unknown",
+      "canonical_concept": "meloxicam",
+      "verification_status": "confirmed",
+      "clinical_status": "active",
+      "temporality": "current",
+      "proposition_text": "The clinician prescribed meloxicam 15 mg.",
+      "evidence": [
+        {
+          "turn_id": "S22",
+          "turn_speaker": "note",
+          "span_text": "After reviewing the patient's examination and radiographic findings today, I have had a lengthy discussion with the patient in regards to his current symptoms. His x-rays did not reveal any signs of a fracture. I would like to obtain an MRI of the lumbar spine to evaluate for a possible acute disc herniation. I have prescribed the patient meloxicam 15 mg to treat his pain. He will continue with physical therapy and a referral was provided for this today.",
+          "char_start": 0,
+          "char_end": 458
+        }
+      ],
+      "assertion": "present",
+      "visit_state": "active",
+      "linked_problem": null
+    }
+  ],
+  "filtered_nonverifiable_units": [],
+  "chunk_count": 3,
+  "extraction_mode": "single_call",
+  "runtime_seconds": 20.343
+}

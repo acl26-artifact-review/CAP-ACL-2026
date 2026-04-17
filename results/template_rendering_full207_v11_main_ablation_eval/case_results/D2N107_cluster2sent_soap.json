@@ -1,0 +1,1126 @@
+{
+  "case_id": "D2N107",
+  "method": "cluster2sent",
+  "template": "soap",
+  "summary_text": "S:\nThe patient reports a low back pain following raking leaves yesterday, accompanied by pins and needles in his right foot. He describes the pain as tightening up approximately two hours after the activity. He denies prior pain and reports no pain on extension but some on flexion. His partner reports similar pain when standing.\n\nO:\nPhysical examination reveals normal dorsiflexion and equal pulses bilaterally. Palpation of the L5 region elicits tenderness. The patient's previous X-ray showed no abnormalities.\n\nA:\nThe patient's symptoms are consistent with a low back sprain. He is concerned about a potential long-term injury.\n\nP:\nI will prescribe meloxicam and physical therapy. I recommend an MRI if symptoms do not improve after two weeks. Please contact the office if you have any concerns.",
+  "reference_summary": "CHIEF COMPLAINT\n\nLow back pain.\n\nHISTORY OF PRESENT ILLNESS\n\nBryan Brooks is a pleasant 39-year-old male who presents to the clinic today for the evaluation of low back pain. He is accompanied today by his partner.\n\nApproximately 2 hours after he finished raking leaves yesterday, the patient began to feel a tightening sensation in his low back and tingling in his right foot. Prior to this, he recalls a similar episode approximately 3 years ago in which his symptoms resolved after 1 day. Ice and Advil provided no relief, but his pain is less severe when he is in a seated position and taking a hot shower helped alleviate his pain. The patient's partner reports that his pain seems to worsen when he stands up.\n\nREVIEW OF SYSTEMS\n\nMusculoskeletal: Reports low back pain.\nNeurological: Reports tingling in the right foot.\n\nPHYSICAL EXAM\n\nNEURO: Normal strength and sensation.\nMSK: Examination of the lumbar spine: No pain on extension. Some pain with flexion. Pain with palpation around L5. Dorsiflexion is normal. Pulses are equal in all extremities.\n\nRESULTS\n\nX-rays obtained and reviewed in office today were normal.\n\nASSESSMENT\n\nLow back sprain.\n\nPLAN\n\nThe examination findings and x-ray results were discussed with the patient and his partner today. I recommend we treat this conservatively with rest, meloxicam, and formal physical therapy. If he fails to improve, we can consider obtaining an MRI for further evaluation.\n\nINSTRUCTIONS\n\nThe patient will follow up in 2 weeks.",
+  "source_cap": {
+    "atomic_propositions": [
+      {
+        "prop_id": "CAP1",
+        "cap_type": "Problem",
+        "canonical_concept": "low back pain",
+        "category": "Problem",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient has low back pain."
+      },
+      {
+        "prop_id": "CAP2",
+        "cap_type": "Symptom",
+        "canonical_concept": "pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports pain when bending over."
+      },
+      {
+        "prop_id": "CAP3",
+        "cap_type": "Symptom",
+        "canonical_concept": "pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports the pain has been hurting for six hours."
+      },
+      {
+        "prop_id": "CAP4",
+        "cap_type": "Symptom",
+        "canonical_concept": "pins and needles",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports pins and needles in their right foot."
+      },
+      {
+        "prop_id": "CAP5",
+        "cap_type": "Symptom",
+        "canonical_concept": "low back pain",
+        "category": "Symptom",
+        "speaker": "doctor",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "quantitative",
+          "symptom"
+        ],
+        "proposition_text": "The patient reports pain to palpation around the L5 vertebra."
+      },
+      {
+        "prop_id": "CAP6",
+        "cap_type": "Symptom",
+        "canonical_concept": "pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports pain when his partner stands up."
+      },
+      {
+        "prop_id": "CAP7",
+        "cap_type": "Symptom",
+        "canonical_concept": "pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports high pain in his right hand."
+      },
+      {
+        "prop_id": "CAP8",
+        "cap_type": "Symptom",
+        "canonical_concept": "pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "safety_relevant",
+          "symptom"
+        ],
+        "proposition_text": "The patient reports severe pain in his back."
+      },
+      {
+        "prop_id": "CAP9",
+        "cap_type": "Problem",
+        "canonical_concept": "surgery",
+        "category": "Problem",
+        "speaker": "patient",
+        "status": "uncertain",
+        "visit_state": "historical",
+        "temporality": "yesterday",
+        "proposition_text": "The patient states he had surgery yesterday."
+      },
+      {
+        "prop_id": "CAP10",
+        "cap_type": "Symptom",
+        "canonical_concept": "back pain",
+        "category": "Symptom",
+        "speaker": "doctor",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports back pain."
+      },
+      {
+        "prop_id": "CAP11",
+        "cap_type": "Problem",
+        "canonical_concept": "injury",
+        "category": "Problem",
+        "speaker": "doctor",
+        "predicate": "suspects",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient suspects an injury."
+      },
+      {
+        "prop_id": "CAP12",
+        "cap_type": "Problem",
+        "canonical_concept": "pain",
+        "category": "Problem",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient reports pain."
+      },
+      {
+        "prop_id": "CAP13",
+        "cap_type": "TestResult",
+        "canonical_concept": "MRI",
+        "category": "TestResult",
+        "speaker": "doctor",
+        "status": "uncertain",
+        "visit_state": "planned",
+        "temporality": "future",
+        "proposition_text": "The patient requests an MRI."
+      },
+      {
+        "prop_id": "CAP14",
+        "cap_type": "Order",
+        "canonical_concept": "physical therapy",
+        "category": "Order",
+        "speaker": "doctor",
+        "predicate": "prescribes",
+        "status": "uncertain",
+        "visit_state": "planned",
+        "temporality": "future",
+        "proposition_text": "The doctor prescribes physical therapy."
+      },
+      {
+        "prop_id": "CAP15",
+        "cap_type": "Order",
+        "canonical_concept": "MRI",
+        "category": "Order",
+        "speaker": "doctor",
+        "predicate": "orders",
+        "status": "uncertain",
+        "visit_state": "planned",
+        "temporality": "future",
+        "claim_type_tags": [
+          "plan"
+        ],
+        "proposition_text": "The doctor orders an MRI."
+      },
+      {
+        "prop_id": "CAP16",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "Ibuprofen",
+        "category": "MedicationStatement",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient took two Advils."
+      },
+      {
+        "prop_id": "CAP17",
+        "cap_type": "ProblemHistory",
+        "canonical_concept": "back pain",
+        "category": "ProblemHistory",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "three years ago",
+        "proposition_text": "The patient had back pain three years ago."
+      },
+      {
+        "prop_id": "CAP18",
+        "cap_type": "ProblemHistory",
+        "canonical_concept": "back pain",
+        "category": "ProblemHistory",
+        "speaker": "doctor",
+        "status": "uncertain",
+        "visit_state": "historical",
+        "temporality": "long term",
+        "proposition_text": "The patient has a history of back pain."
+      }
+    ],
+    "filtered_nonverifiable_units": []
+  },
+  "event_plan": null,
+  "summary_cap": {
+    "atomic_propositions": [],
+    "filtered_nonverifiable_units": [],
+    "runtime_seconds": 0.549
+  },
+  "cap_alignment": {
+    "cap_precision": 0.0,
+    "cap_recall": 0.0,
+    "cap_f1": 0.0,
+    "matched_count": 0,
+    "summary_prop_count": 0,
+    "source_prop_count": 18,
+    "matched_pairs": [],
+    "unsupported_summary_props": [],
+    "missing_source_props": [
+      {
+        "prop_id": "CAP1",
+        "cap_type": "Problem",
+        "canonical_concept": "low back pain",
+        "category": "Problem",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient has low back pain."
+      },
+      {
+        "prop_id": "CAP2",
+        "cap_type": "Symptom",
+        "canonical_concept": "pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports pain when bending over."
+      },
+      {
+        "prop_id": "CAP3",
+        "cap_type": "Symptom",
+        "canonical_concept": "pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports the pain has been hurting for six hours."
+      },
+      {
+        "prop_id": "CAP4",
+        "cap_type": "Symptom",
+        "canonical_concept": "pins and needles",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports pins and needles in their right foot."
+      },
+      {
+        "prop_id": "CAP5",
+        "cap_type": "Symptom",
+        "canonical_concept": "low back pain",
+        "category": "Symptom",
+        "speaker": "doctor",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "quantitative",
+          "symptom"
+        ],
+        "proposition_text": "The patient reports pain to palpation around the L5 vertebra."
+      },
+      {
+        "prop_id": "CAP6",
+        "cap_type": "Symptom",
+        "canonical_concept": "pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports pain when his partner stands up."
+      },
+      {
+        "prop_id": "CAP7",
+        "cap_type": "Symptom",
+        "canonical_concept": "pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports high pain in his right hand."
+      },
+      {
+        "prop_id": "CAP8",
+        "cap_type": "Symptom",
+        "canonical_concept": "pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "safety_relevant",
+          "symptom"
+        ],
+        "proposition_text": "The patient reports severe pain in his back."
+      },
+      {
+        "prop_id": "CAP9",
+        "cap_type": "Problem",
+        "canonical_concept": "surgery",
+        "category": "Problem",
+        "speaker": "patient",
+        "status": "uncertain",
+        "visit_state": "historical",
+        "temporality": "yesterday",
+        "proposition_text": "The patient states he had surgery yesterday."
+      },
+      {
+        "prop_id": "CAP10",
+        "cap_type": "Symptom",
+        "canonical_concept": "back pain",
+        "category": "Symptom",
+        "speaker": "doctor",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports back pain."
+      },
+      {
+        "prop_id": "CAP11",
+        "cap_type": "Problem",
+        "canonical_concept": "injury",
+        "category": "Problem",
+        "speaker": "doctor",
+        "predicate": "suspects",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient suspects an injury."
+      },
+      {
+        "prop_id": "CAP12",
+        "cap_type": "Problem",
+        "canonical_concept": "pain",
+        "category": "Problem",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient reports pain."
+      },
+      {
+        "prop_id": "CAP13",
+        "cap_type": "TestResult",
+        "canonical_concept": "MRI",
+        "category": "TestResult",
+        "speaker": "doctor",
+        "status": "uncertain",
+        "visit_state": "planned",
+        "temporality": "future",
+        "proposition_text": "The patient requests an MRI."
+      },
+      {
+        "prop_id": "CAP14",
+        "cap_type": "Order",
+        "canonical_concept": "physical therapy",
+        "category": "Order",
+        "speaker": "doctor",
+        "predicate": "prescribes",
+        "status": "uncertain",
+        "visit_state": "planned",
+        "temporality": "future",
+        "proposition_text": "The doctor prescribes physical therapy."
+      },
+      {
+        "prop_id": "CAP15",
+        "cap_type": "Order",
+        "canonical_concept": "MRI",
+        "category": "Order",
+        "speaker": "doctor",
+        "predicate": "orders",
+        "status": "uncertain",
+        "visit_state": "planned",
+        "temporality": "future",
+        "claim_type_tags": [
+          "plan"
+        ],
+        "proposition_text": "The doctor orders an MRI."
+      },
+      {
+        "prop_id": "CAP16",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "Ibuprofen",
+        "category": "MedicationStatement",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient took two Advils."
+      },
+      {
+        "prop_id": "CAP17",
+        "cap_type": "ProblemHistory",
+        "canonical_concept": "back pain",
+        "category": "ProblemHistory",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "three years ago",
+        "proposition_text": "The patient had back pain three years ago."
+      },
+      {
+        "prop_id": "CAP18",
+        "cap_type": "ProblemHistory",
+        "canonical_concept": "back pain",
+        "category": "ProblemHistory",
+        "speaker": "doctor",
+        "status": "uncertain",
+        "visit_state": "historical",
+        "temporality": "long term",
+        "proposition_text": "The patient has a history of back pain."
+      }
+    ]
+  },
+  "reference_gpt_f1_items": {
+    "active_problems_symptoms": [],
+    "negated_findings": [],
+    "uncertain_findings": [],
+    "medication_treatment": [],
+    "plan_followup": [],
+    "_chunk_count": [
+      "2"
+    ],
+    "_parse_failures": [
+      "{\"chunk_index\": 1, \"stage\": \"call_llm\", \"error\": \"LLM call failed after retries: Error code: 404\"}",
+      "{\"chunk_index\": 2, \"stage\": \"call_llm\", \"error\": \"LLM call failed after retries: Error code: 404\"}"
+    ]
+  },
+  "summary_gpt_f1_items": {
+    "active_problems_symptoms": [],
+    "negated_findings": [],
+    "uncertain_findings": [],
+    "medication_treatment": [],
+    "plan_followup": [],
+    "_chunk_count": [
+      "1"
+    ],
+    "_parse_failures": [
+      "{\"chunk_index\": 1, \"stage\": \"call_llm\", \"error\": \"LLM call failed after retries: Error code: 404\"}"
+    ]
+  },
+  "gpt_f1_alignment": {
+    "by_category": {
+      "active_problems_symptoms": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "matched_count": 0,
+        "pred_count": 0,
+        "ref_count": 0,
+        "matches": [],
+        "unsupported_pred_items": [],
+        "missing_ref_items": []
+      },
+      "negated_findings": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "matched_count": 0,
+        "pred_count": 0,
+        "ref_count": 0,
+        "matches": [],
+        "unsupported_pred_items": [],
+        "missing_ref_items": []
+      },
+      "uncertain_findings": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "matched_count": 0,
+        "pred_count": 0,
+        "ref_count": 0,
+        "matches": [],
+        "unsupported_pred_items": [],
+        "missing_ref_items": []
+      },
+      "medication_treatment": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "matched_count": 0,
+        "pred_count": 0,
+        "ref_count": 0,
+        "matches": [],
+        "unsupported_pred_items": [],
+        "missing_ref_items": []
+      },
+      "plan_followup": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "matched_count": 0,
+        "pred_count": 0,
+        "ref_count": 0,
+        "matches": [],
+        "unsupported_pred_items": [],
+        "missing_ref_items": []
+      }
+    }
+  },
+  "reference_nair_concepts": {
+    "sections": [
+      {
+        "heading": "Clinical Note",
+        "section_value": "CHIEF COMPLAINT\nLow back pain.\nHISTORY OF PRESENT ILLNESS\nBryan Brooks is a pleasant 39-year-old male who presents to the clinic today for the evaluation of low back pain. He is accompanied today by his partner.\nApproximately 2 hours after he finished raking leaves yesterday, the patient began to feel a tightening sensation in his low back and tingling in his right foot. Prior to this, he recalls a similar episode approximately 3 years ago in which his symptoms resolved after 1 day. Ice and Advil provided no relief, but his pain is less severe when he is in a seated position and taking a hot shower helped alleviate his pain. The patient's partner reports that his pain seems to worsen when he stands up.\nREVIEW OF SYSTEMS\nMusculoskeletal: Reports low back pain.\nNeurological: Reports tingling in the right foot.\nPHYSICAL EXAM\nNEURO: Normal strength and sensation.",
+        "medical_concepts": [
+          "low back pain",
+          "back pain",
+          "tingling in right foot",
+          "tingling",
+          "pain worsened by standing",
+          "pain relieved by sitting",
+          "pain relieved by hot shower",
+          "normal strength",
+          "normal sensation"
+        ]
+      },
+      {
+        "heading": "Clinical Note",
+        "section_value": "MSK: Examination of the lumbar spine: No pain on extension. Some pain with flexion. Pain with palpation around L5. Dorsiflexion is normal. Pulses are equal in all extremities.\nRESULTS\nX-rays obtained and reviewed in office today were normal.\nASSESSMENT\nLow back sprain.\nPLAN\nThe examination findings and x-ray results were discussed with the patient and his partner today. I recommend we treat this conservatively with rest, meloxicam, and formal physical therapy. If he fails to improve, we can consider obtaining an MRI for further evaluation.\nINSTRUCTIONS\nThe patient will follow up in 2 weeks.",
+        "medical_concepts": [
+          "lumbar spine pain",
+          "low back sprain",
+          "pain with flexion",
+          "pain with palpation around L5",
+          "dorsiflexion",
+          "pulses",
+          "x-ray",
+          "MRI",
+          "rest",
+          "meloxicam",
+          "physical therapy",
+          "follow-up"
+        ]
+      }
+    ],
+    "medical_concepts": [
+      "low back pain",
+      "back pain",
+      "tingling in right foot",
+      "tingling",
+      "pain worsened by standing",
+      "pain relieved by sitting",
+      "pain relieved by hot shower",
+      "normal strength",
+      "normal sensation",
+      "lumbar spine pain",
+      "low back sprain",
+      "pain with flexion",
+      "pain with palpation around L5",
+      "dorsiflexion",
+      "pulses",
+      "x-ray",
+      "MRI",
+      "rest",
+      "meloxicam",
+      "physical therapy",
+      "follow-up"
+    ],
+    "section_count": 2
+  },
+  "summary_nair_concepts": {
+    "sections": [
+      {
+        "heading": "S",
+        "section_value": "The patient reports a low back pain following raking leaves yesterday, accompanied by pins and needles in his right foot. He describes the pain as tightening up approximately two hours after the activity. He denies prior pain and reports no pain on extension but some on flexion. His partner reports similar pain when standing.",
+        "medical_concepts": [
+          "low back pain",
+          "pins and needles in right foot",
+          "pain on flexion",
+          "pain on extension",
+          "back pain"
+        ]
+      },
+      {
+        "heading": "O",
+        "section_value": "Physical examination reveals normal dorsiflexion and equal pulses bilaterally. Palpation of the L5 region elicits tenderness. The patient's previous X-ray showed no abnormalities.",
+        "medical_concepts": [
+          "dorsiflexion",
+          "pulses",
+          "L5 region tenderness",
+          "X-ray",
+          "abnormalities on X-ray"
+        ]
+      },
+      {
+        "heading": "A",
+        "section_value": "The patient's symptoms are consistent with a low back sprain. He is concerned about a potential long-term injury.",
+        "medical_concepts": [
+          "low back sprain",
+          "long-term injury"
+        ]
+      },
+      {
+        "heading": "P",
+        "section_value": "I will prescribe meloxicam and physical therapy. I recommend an MRI if symptoms do not improve after two weeks. Please contact the office if you have any concerns.",
+        "medical_concepts": [
+          "meloxicam",
+          "physical therapy",
+          "MRI"
+        ]
+      }
+    ],
+    "medical_concepts": [
+      "low back pain",
+      "pins and needles in right foot",
+      "pain on flexion",
+      "pain on extension",
+      "back pain",
+      "dorsiflexion",
+      "pulses",
+      "L5 region tenderness",
+      "X-ray",
+      "abnormalities on X-ray",
+      "low back sprain",
+      "long-term injury",
+      "meloxicam",
+      "physical therapy",
+      "MRI"
+    ],
+    "section_count": 4
+  },
+  "nair_alignment": {
+    "pred_concepts": [
+      "low back pain",
+      "pins and needles in right foot",
+      "pain on flexion",
+      "pain on extension",
+      "back pain",
+      "dorsiflexion",
+      "pulses",
+      "L5 region tenderness",
+      "X-ray",
+      "abnormalities on X-ray",
+      "low back sprain",
+      "long-term injury",
+      "meloxicam",
+      "physical therapy",
+      "MRI"
+    ],
+    "ref_concepts": [
+      "low back pain",
+      "back pain",
+      "tingling in right foot",
+      "tingling",
+      "pain worsened by standing",
+      "pain relieved by sitting",
+      "pain relieved by hot shower",
+      "normal strength",
+      "normal sensation",
+      "lumbar spine pain",
+      "low back sprain",
+      "pain with flexion",
+      "pain with palpation around L5",
+      "dorsiflexion",
+      "pulses",
+      "x-ray",
+      "MRI",
+      "rest",
+      "meloxicam",
+      "physical therapy",
+      "follow-up"
+    ],
+    "precision_alignment": {
+      "found_b": [
+        "low back pain",
+        "pins and needles in right foot",
+        "pain on flexion",
+        "back pain",
+        "dorsiflexion",
+        "pulses",
+        "L5 region tenderness",
+        "X-ray",
+        "low back sprain",
+        "meloxicam",
+        "physical therapy",
+        "MRI"
+      ],
+      "not_found_b": [
+        "pain on extension",
+        "abnormalities on X-ray",
+        "long-term injury"
+      ],
+      "chunk_count": 1,
+      "chunk_results": [
+        {
+          "found_b": [
+            "low back pain",
+            "pins and needles in right foot",
+            "pain on flexion",
+            "back pain",
+            "dorsiflexion",
+            "pulses",
+            "L5 region tenderness",
+            "X-ray",
+            "low back sprain",
+            "meloxicam",
+            "physical therapy",
+            "MRI"
+          ],
+          "not_found_b": [
+            "pain on extension",
+            "abnormalities on X-ray",
+            "long-term injury"
+          ]
+        }
+      ]
+    },
+    "recall_alignment": {
+      "found_b": [
+        "low back pain",
+        "back pain",
+        "tingling in right foot",
+        "tingling",
+        "lumbar spine pain",
+        "low back sprain",
+        "pain with flexion",
+        "pain with palpation around L5",
+        "dorsiflexion",
+        "pulses",
+        "x-ray",
+        "MRI",
+        "meloxicam",
+        "physical therapy"
+      ],
+      "not_found_b": [
+        "pain worsened by standing",
+        "pain relieved by sitting",
+        "pain relieved by hot shower",
+        "normal strength",
+        "normal sensation",
+        "rest",
+        "follow-up"
+      ],
+      "chunk_count": 1,
+      "chunk_results": [
+        {
+          "found_b": [
+            "low back pain",
+            "back pain",
+            "tingling in right foot",
+            "tingling",
+            "lumbar spine pain",
+            "low back sprain",
+            "pain with flexion",
+            "pain with palpation around L5",
+            "dorsiflexion",
+            "pulses",
+            "x-ray",
+            "MRI",
+            "meloxicam",
+            "physical therapy"
+          ],
+          "not_found_b": [
+            "pain worsened by standing",
+            "pain relieved by sitting",
+            "pain relieved by hot shower",
+            "normal strength",
+            "normal sensation",
+            "rest",
+            "follow-up"
+          ]
+        }
+      ]
+    }
+  },
+  "semantic_cap_audit": {
+    "source_cap_recall": [
+      {
+        "cap_id": "P1",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P2",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P3",
+        "judgment": "contradicted",
+        "reason": null
+      },
+      {
+        "cap_id": "P4",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P5",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P6",
+        "judgment": "contradicted",
+        "reason": null
+      },
+      {
+        "cap_id": "P7",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P8",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P9",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P10",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P11",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P12",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P13",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P14",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P15",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P16",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P1",
+        "judgment": "contradicted",
+        "reason": null
+      },
+      {
+        "cap_id": "P2",
+        "judgment": "missing",
+        "reason": null
+      }
+    ],
+    "summary_cap_precision": [],
+    "metrics": {
+      "semantic_cap_precision": 0.0,
+      "semantic_cap_recall": 0.4444,
+      "semantic_cap_f1": 0.0,
+      "semantic_cap_precision_supported_count": 0,
+      "semantic_cap_precision_partial_count": 0,
+      "semantic_cap_precision_denominator": 0,
+      "semantic_cap_recall_supported_count": 6,
+      "semantic_cap_recall_partial_count": 4,
+      "semantic_cap_recall_denominator": 18,
+      "semantic_cap_low_value_source_count": 0,
+      "semantic_cap_low_value_summary_count": 0,
+      "semantic_cap_missing_count": 5,
+      "semantic_cap_unsupported_count": 0,
+      "semantic_cap_contradicted_source_count": 3,
+      "semantic_cap_contradicted_summary_count": 0
+    }
+  },
+  "safety_judgment": null,
+  "section_judgment": {
+    "section_miscategorizations": [
+      {
+        "text": "He is concerned about a potential long-term injury.",
+        "current_section": "A",
+        "expected_section": "S",
+        "severity": "minor",
+        "reason": "This sentence reflects the patient's concern (subjective report), not the clinician's diagnostic assessment or problem synthesis."
+      }
+    ],
+    "summary_statistics": {
+      "section_appropriateness_score": 0.9,
+      "section_miscategorization_count": 1,
+      "major_section_miscategorization_count": 0
+    }
+  },
+  "pdsqi_judgment": {
+    "citation_applicable": 0,
+    "citation": 0,
+    "accurate": 3,
+    "thorough": 3,
+    "useful": 3,
+    "organized": 5,
+    "comprehensible": 5,
+    "succinct": 5,
+    "abstraction": 1,
+    "synthesized": 4,
+    "voice_summ": 0,
+    "voice_note": 0,
+    "pdsqi_core_mean": 4.0
+  },
+  "llm_checklist_judgment": {
+    "content_preservation_core": 4,
+    "noise_suppression": 5,
+    "lay_expression_preservation": 3,
+    "state_update_fidelity": 3,
+    "temporality_preservation": 4,
+    "problem_evidence_linkage": 4,
+    "state_plan_separation": 4,
+    "section_organization_appropriateness": 4,
+    "overall_clinical_usability": 4,
+    "clinically_meaningful_omission": "Yes",
+    "clinically_concerning_hallucination": "Yes",
+    "checklist_a_mean": 4.0,
+    "checklist_b_mean": 3.5,
+    "checklist_c_mean": 4.0,
+    "llm_checklist_abc_mean": 3.875,
+    "llm_checklist_mean_no_usability": 3.875,
+    "llm_checklist_total_score": 35,
+    "llm_checklist_mean": 3.8889,
+    "llm_checklist_meaningful_omission_yes": 1,
+    "llm_checklist_concerning_hallucination_yes": 1
+  },
+  "metrics": {
+    "case_id": "D2N107",
+    "method": "cluster2sent",
+    "template": "soap",
+    "source_cap_count": 18,
+    "event_plan_count": null,
+    "summary_cap_count": 0,
+    "cap_matched_count": 0,
+    "cap_precision": 0.0,
+    "cap_recall": 0.0,
+    "cap_f1": 0.0,
+    "unsupported_summary_cap_count": 0,
+    "missing_source_cap_count": 18,
+    "summary_runtime_seconds": null,
+    "summary_cap_runtime_seconds": 0.549,
+    "event_plan_runtime_seconds": null,
+    "rouge_l_f1_vs_reference": 0.2228,
+    "token_f1_vs_reference": 0.4721,
+    "gptf1_macro_f1": 0.0,
+    "nair_gpt_precision": 0.8,
+    "nair_gpt_recall": 0.6667,
+    "nair_gpt_f1": 0.7273,
+    "semantic_cap_precision": 0.0,
+    "semantic_cap_recall": 0.4444,
+    "semantic_cap_f1": 0.0,
+    "hallucination_count": null,
+    "major_hallucination_count": null,
+    "omission_count": null,
+    "major_omission_count": null,
+    "section_appropriateness_score": 0.9,
+    "section_miscategorization_count": 1,
+    "major_section_miscategorization_count": 0,
+    "pdsqi_core_mean": 4.0,
+    "pdsqi_accurate": 3,
+    "pdsqi_thorough": 3,
+    "llm_checklist_total_score": 35,
+    "llm_checklist_mean": 3.8889,
+    "llm_checklist_mean_no_usability": 3.875,
+    "checklist_a_mean": 4.0,
+    "checklist_b_mean": 3.5,
+    "checklist_c_mean": 4.0,
+    "llm_checklist_abc_mean": 3.875,
+    "content_preservation_core": 4,
+    "noise_suppression": 5,
+    "lay_expression_preservation": 3,
+    "state_update_fidelity": 3,
+    "temporality_preservation": 4,
+    "problem_evidence_linkage": 4,
+    "state_plan_separation": 4,
+    "section_organization_appropriateness": 4,
+    "overall_clinical_usability": 4,
+    "llm_checklist_meaningful_omission_yes": 1,
+    "llm_checklist_concerning_hallucination_yes": 1,
+    "gptf1_active_problems_symptoms_precision": 0.0,
+    "gptf1_active_problems_symptoms_recall": 0.0,
+    "gptf1_active_problems_symptoms_f1": 0.0,
+    "gptf1_active_problems_symptoms_pred_count": 0,
+    "gptf1_active_problems_symptoms_ref_count": 0,
+    "gptf1_negated_findings_precision": 0.0,
+    "gptf1_negated_findings_recall": 0.0,
+    "gptf1_negated_findings_f1": 0.0,
+    "gptf1_negated_findings_pred_count": 0,
+    "gptf1_negated_findings_ref_count": 0,
+    "gptf1_uncertain_findings_precision": 0.0,
+    "gptf1_uncertain_findings_recall": 0.0,
+    "gptf1_uncertain_findings_f1": 0.0,
+    "gptf1_uncertain_findings_pred_count": 0,
+    "gptf1_uncertain_findings_ref_count": 0,
+    "gptf1_medication_treatment_precision": 0.0,
+    "gptf1_medication_treatment_recall": 0.0,
+    "gptf1_medication_treatment_f1": 0.0,
+    "gptf1_medication_treatment_pred_count": 0,
+    "gptf1_medication_treatment_ref_count": 0,
+    "gptf1_plan_followup_precision": 0.0,
+    "gptf1_plan_followup_recall": 0.0,
+    "gptf1_plan_followup_f1": 0.0,
+    "gptf1_plan_followup_pred_count": 0,
+    "gptf1_plan_followup_ref_count": 0,
+    "nair_pred_concept_count": 15,
+    "nair_ref_concept_count": 21,
+    "nair_precision_match_count": 12,
+    "nair_recall_match_count": 14,
+    "semantic_cap_precision_supported_count": 0,
+    "semantic_cap_precision_partial_count": 0,
+    "semantic_cap_precision_denominator": 0,
+    "semantic_cap_recall_supported_count": 6,
+    "semantic_cap_recall_partial_count": 4,
+    "semantic_cap_recall_denominator": 18,
+    "semantic_cap_low_value_source_count": 0,
+    "semantic_cap_low_value_summary_count": 0,
+    "semantic_cap_missing_count": 5,
+    "semantic_cap_unsupported_count": 0,
+    "semantic_cap_contradicted_source_count": 3,
+    "semantic_cap_contradicted_summary_count": 0,
+    "pdsqi_useful": 3,
+    "pdsqi_organized": 5,
+    "pdsqi_comprehensible": 5,
+    "pdsqi_succinct": 5,
+    "pdsqi_synthesized": 4
+  }
+}

@@ -1,0 +1,152 @@
+Case: D2N101
+
+Problem List and Visit State Tracking
+
+Problem List
+- six or seven years | verification_status=unconfirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T7
+  Summary: The patient has been considering a breast reduction for six or seven years.
+  ClusterId: CL1
+  TemporalProfile: past
+  Updates:
+  - CAP1: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=past turns=T7 :: The patient has been considering a breast reduction for six or seven years.
+- breast pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T19,T27,T7
+  Summary: The patient reports breast pain.
+  ClusterId: CL2
+  TemporalProfile: current
+  Updates:
+  - CAP16: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T7 :: The patient reports breast pain.
+  - CAP18: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T19 :: The patient reports breast pain.
+  - CAP2: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T19 :: The patient attributes the pain to working at their desk all day.
+  - CAP6: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T19 :: The patient reports pain in their neck and upper back.
+  - CAP12: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T19 :: The patient reports pain that builds up.
+  - CAP24: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T19 :: The patient reports pain.
+  - CAP9: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T27 :: The patient reports pain in the left hand.
+- breast reduction | verification_status=confirmed | clinical_status=planned | modalities=interview | speakers=doctor,patient | evidence=T58,T8
+  Summary: The patient is considering a breast reduction.
+  ClusterId: CL3
+  TemporalProfile: future
+  Updates:
+  - CAP11: content_source=patient modality=interview verification_status=unconfirmed clinical_status=planned temporality=future turns=T8 :: The patient is considering a breast reduction.
+  - CAP13: content_source=doctor modality=interview verification_status=confirmed clinical_status=planned temporality=future turns=T58 :: The patient will undergo a breast reduction.
+- back pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T19
+  Summary: The patient reports back pain.
+  ClusterId: CL4
+  TemporalProfile: current
+  Updates:
+  - CAP17: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T19 :: The patient reports back pain.
+  - CAP22: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T19 :: The patient reports back pain.
+- nipple pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T19
+  Summary: The patient reports nipple pain.
+  ClusterId: CL5
+  TemporalProfile: current
+  Updates:
+  - CAP19: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T19 :: The patient reports nipple pain.
+- shoulder pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T19
+  Summary: The patient reports shoulder pain.
+  ClusterId: CL6
+  TemporalProfile: current
+  Updates:
+  - CAP21: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T19 :: The patient reports shoulder pain.
+- hand pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T19
+  Summary: The patient reports hand pain.
+  ClusterId: CL7
+  TemporalProfile: current
+  Updates:
+  - CAP23: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T19 :: The patient reports hand pain.
+- numbness | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T25
+  Summary: The patient reports numbness.
+  ClusterId: CL8
+  TemporalProfile: current
+  Updates:
+  - CAP25: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T25 :: The patient reports numbness.
+- sweating | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T29
+  Summary: The patient reports excessive sweating.
+  ClusterId: CL9
+  TemporalProfile: current
+  Updates:
+  - CAP20: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T29 :: The patient reports excessive sweating.
+- breast cancer family history | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T33
+  Summary: The patient has a family history of breast cancer.
+  ClusterId: CL11
+  TemporalProfile: historical
+  Updates:
+  - CAP36: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=historical turns=T33 :: The patient has a family history of breast cancer.
+- mammogram recommendation | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T35
+  Summary: The patient was recommended to start mammograms at age 30.
+  ClusterId: CL12
+  TemporalProfile: historical
+  Updates:
+  - CAP35: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=historical turns=T35 :: The patient was recommended to start mammograms at age 30.
+- weight loss goal | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T37
+  Summary: The patient aims to lose 20 more pounds.
+  ClusterId: CL13
+  TemporalProfile: current, past few months
+  Updates:
+  - CAP3: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=past few months turns=T37 :: The patient reports losing approximately 10 pounds over the past few months.
+  - CAP8: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=past few months turns=T37 :: The patient desires to lose approximately 20 more pounds.
+  - CAP14: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T37 :: The patient has experienced weight loss.
+  - CAP10: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T37 :: The patient aims to lose 20 more pounds.
+- scarring | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=doctor | evidence=T55
+  Summary: Scars may be red at first and take a year to mature.
+  ClusterId: CL15
+  TemporalProfile: future
+  Updates:
+  - CAP5: content_source=doctor modality=interview verification_status=confirmed clinical_status=historical temporality=future turns=T55 :: Scars may be red at first and take a year to mature.
+- breast changes | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=doctor | evidence=T55
+  Summary: Breasts will change over time with weight gain or loss.
+  ClusterId: CL16
+  TemporalProfile: future
+  Updates:
+  - CAP7: content_source=doctor modality=interview verification_status=confirmed clinical_status=historical temporality=future turns=T55 :: Breasts will change over time with weight gain or loss.
+- breastfeeding | verification_status=unconfirmed | clinical_status=historical | modalities=interview | speakers=doctor | evidence=T63
+  Summary: 30% of patients may be unable to breastfeed after a breast reduction.
+  ClusterId: CL17
+  TemporalProfile: future
+  Updates:
+  - CAP4: content_source=doctor modality=interview verification_status=unconfirmed clinical_status=historical temporality=future turns=T63 :: 30% of patients may be unable to breastfeed after a breast reduction.
+- hormones | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=doctor | evidence=T64
+  Summary: Pregnancy hormones will change the breasts.
+  ClusterId: CL18
+  TemporalProfile: future
+  Updates:
+  - CAP15: content_source=doctor modality=interview verification_status=confirmed clinical_status=historical temporality=future turns=T64 :: Pregnancy hormones will change the breasts.
+
+Medication Tracking
+- [MedicationState] propranolol | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T33
+  Summary: The patient takes propranolol.
+  ClusterId: CL10
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient takes propranolol. (T33)
+  Updates:
+  - CAP34: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T33 :: The patient takes propranolol.
+- [MedicationChange] breast reduction | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T46
+  Summary: The doctor believes the patient is a good candidate for a breast reduction.
+  ClusterId: CL14
+  TemporalProfile: future
+  PlannedChanges:
+  - The doctor believes the patient is a good candidate for a breast reduction. (T46)
+  Updates:
+  - CAP33: content_source=doctor modality=plan verification_status=unconfirmed clinical_status=planned temporality=future turns=T46 :: The doctor believes the patient is a good candidate for a breast reduction.
+
+Other Structured States
+- [Plan] instructions reviewed | verification_status=unconfirmed | clinical_status=planned | modalities=assessment | speakers=doctor | evidence=T64
+  Summary: The doctor will review instructions with the patient before surgery.
+  ClusterId: CL19
+  TemporalProfile: future
+- [Plan] photos taken | verification_status=unconfirmed | clinical_status=planned | modalities=assessment | speakers=doctor | evidence=T64
+  Summary: The doctor will take photos of the patient.
+  ClusterId: CL20
+  TemporalProfile: future
+- [Plan] insurance switch | verification_status=unconfirmed | clinical_status=planned | modalities=assessment | speakers=doctor | evidence=T73,T75
+  Summary: The patient will notify the office as soon as they have the insurance information.
+  ClusterId: CL21
+  TemporalProfile: future
+- [Plan] surgery date | verification_status=unconfirmed | clinical_status=planned | modalities=assessment | speakers=doctor | evidence=T74
+  Summary: The doctor will work with the patient to determine a surgery date.
+  ClusterId: CL22
+  TemporalProfile: future
+- [Plan] photos | verification_status=unconfirmed | clinical_status=planned | modalities=assessment | speakers=doctor | evidence=T74
+  Summary: The doctor will take photos of the patient today.
+  ClusterId: CL23
+  TemporalProfile: future

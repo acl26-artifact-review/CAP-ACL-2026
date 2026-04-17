@@ -1,0 +1,160 @@
+Case: D2N018
+
+Problem List and Visit State Tracking
+
+Problem List
+- right upper arm pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T7
+  Summary: The patient reports severe right upper arm pain.
+  ClusterId: CL1
+  TemporalProfile: current
+  Updates:
+  - CAP5: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T7 :: The patient reports severe right upper arm pain.
+- dirty ball | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T11
+  Summary: The patient states the ball was dirty.
+  ClusterId: CL2
+  TemporalProfile: last night, yesterday
+  Updates:
+  - CAP28: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=yesterday turns=T11 :: The patient states the ball was dirty.
+  - CAP29: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=last night turns=T11 :: The patient states the ball was dirty.
+- fall | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T11
+  Summary: The patient fell while playing volleyball.
+  ClusterId: CL3
+  TemporalProfile: last night, yesterday
+  Updates:
+  - CAP30: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=yesterday turns=T11 :: The patient fell while playing volleyball.
+  - CAP31: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=last night turns=T11 :: The patient fell while playing volleyball.
+- arm | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T11
+  Summary: The patient landed on their arm.
+  ClusterId: CL4
+  TemporalProfile: last night
+  Updates:
+  - CAP32: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=last night turns=T11 :: The patient landed on their arm.
+- volleyball | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T11
+  Summary: The patient was playing volleyball.
+  ClusterId: CL5
+  TemporalProfile: last night, yesterday
+  Updates:
+  - CAP33: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=yesterday turns=T11 :: The patient was playing volleyball.
+  - CAP35: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=last night turns=T11 :: The patient was playing volleyball.
+- kicked legs | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T11
+  Summary: Someone kicked the patient's legs.
+  ClusterId: CL6
+  TemporalProfile: last night, yesterday
+  Updates:
+  - CAP34: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=yesterday turns=T11 :: Someone kicked the patient's legs.
+  - CAP36: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=last night turns=T11 :: Someone kicked the patient's legs.
+- numbness | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T13
+  Summary: The patient denies numbness.
+  ClusterId: CL7
+  TemporalProfile: current
+  Updates:
+  - CAP13: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T13 :: The patient denies numbness.
+- pain relief | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T17,T24,T27,T29
+  Summary: The patient reports that ibuprofen is not helping.
+  ClusterId: CL8
+  TemporalProfile: current
+  Updates:
+  - CAP6: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T17 :: The patient reports pain in the left hand.
+  - CAP11: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T24 :: The patient reports pain.
+  - CAP7: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T27 :: The patient reports that ibuprofen is not helping.
+  - CAP1: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T29,T29 :: The patient rates their pain as nine out of ten.
+- ibuprofen | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T27
+  Summary: The patient has been taking ibuprofen every six hours.
+  ClusterId: CL9
+  TemporalProfile: current, every 6 hours
+  Updates:
+  - CAP3: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=every 6 hours turns=T27 :: The patient has been taking ibuprofen every six hours.
+  - CAP9: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T27 :: The patient has been taking ibuprofen.
+- not helping | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T27
+  Summary: The patient states that the ibuprofen is not helping.
+  ClusterId: CL10
+  TemporalProfile: current
+  Updates:
+  - CAP4: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T27 :: The patient states that the ibuprofen is not helping.
+- gallstones | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T37
+  Summary: The patient reports having gallstones.
+  ClusterId: CL11
+  TemporalProfile: past
+  Updates:
+  - CAP10: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=past turns=T37 :: The patient reports having gallstones.
+  - CAP12: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=past turns=T37 :: The patient has gallstones.
+- lumbar fusion | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T41
+  Summary: The patient had a lumbar fusion approximately six years ago.
+  ClusterId: CL13
+  TemporalProfile: 6 years ago
+  Updates:
+  - CAP2: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=6 years ago turns=T41 :: The patient had a lumbar fusion approximately six years ago.
+- shoulder pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T66
+  Summary: The patient reports tenderness over the right shoulder.
+  ClusterId: CL23
+  TemporalProfile: current
+  Updates:
+  - CAP8: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T66 :: The patient reports tenderness over the right shoulder.
+
+Medication Tracking
+- [MedicationState] pepcid | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T39
+  Summary: The patient takes Pepcid.
+  ClusterId: CL12
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient takes Pepcid. (T39)
+  Updates:
+  - CAP27: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T39 :: The patient takes Pepcid.
+- [MedicationState] lortab | verification_status=confirmed | clinical_status=active | modalities=interview,unknown | speakers=doctor | evidence=T63
+  Summary: The doctor prescribed lortab 500-5 mg tablets.
+  ClusterId: CL21
+  TemporalProfile: current, future
+  CurrentRegimens:
+  - The doctor prescribed lortab 500 mg. (T63)
+  - The doctor prescribed 20 tablets of lortab 5 mg. (T63)
+  - The doctor prescribed lortab 500-5 mg tablets. (T63)
+  Updates:
+  - CAP23: content_source=doctor modality=unknown verification_status=confirmed clinical_status=active temporality=future turns=T63 :: The doctor prescribed lortab 500 mg.
+  - CAP24: content_source=doctor modality=unknown verification_status=confirmed clinical_status=active temporality=future turns=T63 :: The doctor prescribed 20 tablets of lortab 5 mg.
+  - CAP25: content_source=doctor modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T63 :: The doctor prescribed lortab 500-5 mg tablets.
+- [MedicationState] 20 | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=doctor | evidence=T65
+  Summary: The doctor prescribed 20 lortab tablets.
+  ClusterId: CL22
+  TemporalProfile: current
+  CurrentRegimens:
+  - The doctor prescribed 20 lortab tablets. (T65)
+  Updates:
+  - CAP26: content_source=doctor modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T65 :: The doctor prescribed 20 lortab tablets.
+- [MedicationChange] cast | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T71
+  Summary: The doctor ordered a cast.
+  ClusterId: CL24
+  TemporalProfile: current
+  PlannedChanges:
+  - The doctor ordered a cast. (T71)
+  Updates:
+  - CAP22: content_source=doctor modality=plan verification_status=unconfirmed clinical_status=planned temporality=current turns=T71 :: The doctor ordered a cast.
+
+Other Structured States
+- [ExamFinding] proximal humerus fracture | verification_status=confirmed | clinical_status=active | modalities=exam | speakers=doctor | evidence=T45
+  Summary: The doctor observes a proximal humerus fracture.
+  ClusterId: CL14
+  TemporalProfile: current, present
+- [ExamFinding] elbow as long as i do not move up here | verification_status=confirmed | clinical_status=active | modalities=exam | speakers=patient | evidence=T52
+  Summary: The patient can straighten their elbow as long as they do not move their shoulder.
+  ClusterId: CL15
+  TemporalProfile: current
+- [ExamFinding] straighten arm | verification_status=confirmed | clinical_status=active | modalities=exam | speakers=doctor | evidence=T52
+  Summary: The patient can straighten their arm.
+  ClusterId: CL16
+  TemporalProfile: current
+- [ExamFinding] normal exam | verification_status=confirmed | clinical_status=active | modalities=exam | speakers=doctor | evidence=T55
+  Summary: The rest of the patient's body is normal.
+  ClusterId: CL17
+  TemporalProfile: current
+- [Plan] long arm cast | verification_status=confirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T61
+  Summary: The doctor will put the patient in a long arm cast.
+  ClusterId: CL18
+  TemporalProfile: future
+- [Plan] sling | verification_status=confirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T61
+  Summary: The doctor will put the patient in a sling.
+  ClusterId: CL19
+  TemporalProfile: future
+- [Plan] check in two weeks | verification_status=confirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T61
+  Summary: The doctor will check the patient in two weeks.
+  ClusterId: CL20
+  TemporalProfile: future

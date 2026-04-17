@@ -1,0 +1,121 @@
+Case: D2N200
+
+Problem List and Visit State Tracking
+
+Problem List
+- headache | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T0,T1,T2
+  Summary: The patient reports headaches.
+  ClusterId: CL1
+  TemporalProfile: current
+  Updates:
+  - CAP1: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T0,T1,T2 :: The patient reports headaches.
+- high blood pressure | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T1,T19
+  Summary: The patient has high blood pressure.
+  ClusterId: CL2
+  TemporalProfile: current
+  Updates:
+  - CAP6: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T1 :: The patient has high blood pressure.
+  - CAP7: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T19 :: The patient's blood pressure is elevated.
+- dizziness | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T4
+  Summary: The patient reports dizziness.
+  ClusterId: CL5
+  TemporalProfile: current
+  Updates:
+  - CAP11: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T4 :: The patient reports dizziness.
+- blurred vision | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T5
+  Summary: The patient reports blurred vision.
+  ClusterId: CL6
+  TemporalProfile: current
+  Updates:
+  - CAP9: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T5 :: The patient reports blurred vision.
+- left hand pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T9
+  Summary: The patient reports pain in the left hand.
+  ClusterId: CL7
+  TemporalProfile: current
+  Updates:
+  - CAP5: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T9 :: The patient reports pain in the left hand.
+- low sodium diet | verification_status=unconfirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T14
+  Summary: The patient does not follow a low sodium diet.
+  ClusterId: CL9
+  TemporalProfile: past
+  Updates:
+  - CAP2: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=past turns=T14 :: The patient eats a lot of McDonald's and their favorite treat is a Big Mac with large fries.
+  - CAP4: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=past turns=T14 :: The patient does not follow a low sodium diet.
+- high blood sugar | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T19
+  Summary: The patient's blood sugar is elevated.
+  ClusterId: CL10
+  TemporalProfile: current
+  Updates:
+  - CAP8: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T19 :: The patient's blood sugar is elevated.
+- edema | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T22
+  Summary: The patient has mild edema in the bilateral upper extremities.
+  ClusterId: CL11
+  TemporalProfile: current
+  Updates:
+  - CAP3: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T22 :: The patient has mild edema in the bilateral upper extremities.
+- hypertension | verification_status=confirmed | clinical_status=active | modalities=assessment | speakers=doctor | evidence=T22
+  Summary: The patient has uncontrolled hypertension.
+  ClusterId: CL12
+  TemporalProfile: current
+  Updates:
+  - CAP10: content_source=doctor modality=assessment verification_status=confirmed clinical_status=active temporality=current turns=T22 :: The patient has uncontrolled hypertension.
+
+Medication Tracking
+- [MedicationState] chlorthalidone | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T1
+  Summary: The patient was prescribed chlorthalidone.
+  ClusterId: CL3
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient was prescribed chlorthalidone. (T1)
+  Updates:
+  - CAP18: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T1 :: The patient was prescribed chlorthalidone.
+- [MedicationState] tylenol | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T1
+  Summary: The patient takes tylenol.
+  ClusterId: CL4
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient takes tylenol. (T1)
+  Updates:
+  - CAP19: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T1 :: The patient takes tylenol.
+- [MedicationState] metformin | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T11
+  Summary: The patient takes metformin irregularly, approximately every other day.
+  ClusterId: CL8
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient takes metformin irregularly, approximately every other day. (T11)
+  Updates:
+  - CAP15: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T11 :: The patient takes metformin irregularly, approximately every other day.
+- [MedicationChange] lisinopril | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T22
+  Summary: The doctor will continue the patient's current medication regimen.
+  ClusterId: CL14
+  TemporalProfile: ongoing
+  PlannedChanges:
+  - The doctor will continue the patient's current medication regimen. (T22)
+  Updates:
+  - CAP16: content_source=doctor modality=plan verification_status=unconfirmed clinical_status=planned temporality=ongoing turns=T22 :: The doctor will continue the patient's current medication regimen.
+- [MedicationChange] metformin | verification_status=confirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T26
+  Summary: The doctor plans to increase the patient's metformin dosage to 1500 mg.
+  ClusterId: CL15
+  TemporalProfile: future
+  PlannedChanges:
+  - The doctor plans to increase the patient's metformin dosage to 1500 mg. (T26)
+  Updates:
+  - CAP13: content_source=doctor modality=plan verification_status=confirmed clinical_status=planned temporality=future turns=T26 :: The doctor plans to increase the patient's metformin dosage to 1500 mg.
+- [MedicationChange] blood sugar monitoring | verification_status=confirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T26
+  Summary: The doctor instructs the patient to continue monitoring blood sugars.
+  ClusterId: CL16
+  TemporalProfile: future
+  PlannedChanges:
+  - The doctor instructs the patient to continue monitoring blood sugars. (T26)
+  Updates:
+  - CAP14: content_source=doctor modality=plan verification_status=confirmed clinical_status=planned temporality=future turns=T26 :: The doctor instructs the patient to continue monitoring blood sugars.
+
+Other Structured States
+- [Plan] blood pressure monitoring | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T22
+  Summary: The doctor will monitor the patient's blood pressure three times a week.
+  ClusterId: CL13
+  TemporalProfile: ongoing
+- [FollowUp] follow-up appointment | verification_status=confirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T28
+  Summary: The doctor schedules a one-month follow-up appointment.
+  ClusterId: CL17
+  TemporalProfile: one month

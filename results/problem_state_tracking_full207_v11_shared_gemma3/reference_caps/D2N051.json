@@ -1,0 +1,307 @@
+{
+  "caps": [
+    {
+      "cap_id": "CAP1",
+      "cap_type": "Symptom",
+      "content_source": "clinician",
+      "modality": "assessment",
+      "canonical_concept": "high hemoglobin a1c",
+      "verification_status": "confirmed",
+      "clinical_status": "active",
+      "temporality": "current",
+      "proposition_text": "The patient reports a hemoglobin a1c greater than 9.",
+      "evidence": [
+        {
+          "turn_id": "S35",
+          "turn_speaker": "note",
+          "span_text": "Regarding his diabetes, this appears to be unstable as the patient reports his last hemoglobin a1c was greater than 9 and is now experiencing a non-healing right foot ulcer. We discussed the importance of blood sugar control as this will impact his wound healing. At this time, I have recommended that he follow-up with his primary care physician for further care.",
+          "char_start": 0,
+          "char_end": 364
+        }
+      ],
+      "assertion": "present",
+      "visit_state": "active",
+      "linked_problem": null
+    },
+    {
+      "cap_id": "CAP2",
+      "cap_type": "Problem",
+      "content_source": "clinician",
+      "modality": "assessment",
+      "canonical_concept": "non-healing right foot ulcer",
+      "verification_status": "confirmed",
+      "clinical_status": "active",
+      "temporality": "current",
+      "proposition_text": "The clinician assesses a non-healing right foot ulcer.",
+      "evidence": [
+        {
+          "turn_id": "S36",
+          "turn_speaker": "note",
+          "span_text": "The patient's coronary artery disease is currently stable. It is recommended that he continue to take his statin as prescribed. I will contact his cardiologist for medical clearance should surgical intervention be required for his non-healing right foot ulcer.",
+          "char_start": 0,
+          "char_end": 260
+        }
+      ],
+      "assertion": "present",
+      "visit_state": "active",
+      "linked_problem": null
+    },
+    {
+      "cap_id": "CAP3",
+      "cap_type": "Problem",
+      "content_source": "clinician",
+      "modality": "unknown",
+      "canonical_concept": "podiatry consult",
+      "verification_status": "unconfirmed",
+      "clinical_status": "active",
+      "temporality": "future",
+      "proposition_text": "The clinician refers the patient to podiatry.",
+      "evidence": [
+        {
+          "turn_id": "S36",
+          "turn_speaker": "note",
+          "span_text": "The patient's coronary artery disease is currently stable. It is recommended that he continue to take his statin as prescribed. I will contact his cardiologist for medical clearance should surgical intervention be required for his non-healing right foot ulcer.",
+          "char_start": 0,
+          "char_end": 260
+        }
+      ],
+      "assertion": "uncertain",
+      "visit_state": "active",
+      "linked_problem": null
+    },
+    {
+      "cap_id": "CAP4",
+      "cap_type": "Problem",
+      "content_source": "clinician",
+      "modality": "assessment",
+      "canonical_concept": "stent placement",
+      "verification_status": "confirmed",
+      "clinical_status": "resolved",
+      "temporality": "past",
+      "proposition_text": "The patient reports undergoing stent placement.",
+      "evidence": [
+        {
+          "turn_id": "S9",
+          "turn_speaker": "note",
+          "span_text": "Patient reports undergoing stent placement at the right coronary artery.",
+          "char_start": 0,
+          "char_end": 72
+        }
+      ],
+      "assertion": "present",
+      "visit_state": "resolved",
+      "linked_problem": null
+    },
+    {
+      "cap_id": "CAP5",
+      "cap_type": "Problem",
+      "content_source": "clinician",
+      "modality": "assessment",
+      "canonical_concept": "non-healing ulcer",
+      "verification_status": "confirmed",
+      "clinical_status": "active",
+      "temporality": "current",
+      "proposition_text": "The patient has a non-healing ulcer.",
+      "evidence": [
+        {
+          "turn_id": "S30",
+          "turn_speaker": "note",
+          "span_text": "1. Non-healing ulcer, right foot",
+          "char_start": 0,
+          "char_end": 32
+        }
+      ],
+      "assertion": "present",
+      "visit_state": "active",
+      "linked_problem": null
+    },
+    {
+      "cap_id": "CAP6",
+      "cap_type": "Problem",
+      "content_source": "clinician",
+      "modality": "assessment",
+      "canonical_concept": "diabetes",
+      "verification_status": "confirmed",
+      "clinical_status": "active",
+      "temporality": "current",
+      "proposition_text": "The clinician assesses unstable diabetes.",
+      "evidence": [
+        {
+          "turn_id": "S35",
+          "turn_speaker": "note",
+          "span_text": "Regarding his diabetes, this appears to be unstable as the patient reports his last hemoglobin a1c was greater than 9 and is now experiencing a non-healing right foot ulcer. We discussed the importance of blood sugar control as this will impact his wound healing. At this time, I have recommended that he follow-up with his primary care physician for further care.",
+          "char_start": 0,
+          "char_end": 364
+        }
+      ],
+      "assertion": "present",
+      "visit_state": "active",
+      "linked_problem": null
+    },
+    {
+      "cap_id": "CAP7",
+      "cap_type": "Problem",
+      "content_source": "clinician",
+      "modality": "assessment",
+      "canonical_concept": "diabetes",
+      "verification_status": "confirmed",
+      "clinical_status": "active",
+      "temporality": "current",
+      "proposition_text": "The patient has diabetes.",
+      "evidence": [
+        {
+          "turn_id": "S31",
+          "turn_speaker": "note",
+          "span_text": "2. Diabetes",
+          "char_start": 0,
+          "char_end": 11
+        }
+      ],
+      "assertion": "present",
+      "visit_state": "active",
+      "linked_problem": null
+    },
+    {
+      "cap_id": "CAP8",
+      "cap_type": "ExamFinding",
+      "content_source": "examiner",
+      "modality": "assessment",
+      "canonical_concept": "ulcer",
+      "verification_status": "confirmed",
+      "clinical_status": "active",
+      "temporality": "current",
+      "proposition_text": "There is an ulcerated lesion on the right foot.",
+      "evidence": [
+        {
+          "turn_id": "S30",
+          "turn_speaker": "note",
+          "span_text": "1. Non-healing ulcer, right foot",
+          "char_start": 0,
+          "char_end": 32
+        }
+      ],
+      "assertion": "present",
+      "visit_state": "active",
+      "linked_problem": null
+    },
+    {
+      "cap_id": "CAP9",
+      "cap_type": "ExamFinding",
+      "content_source": "examiner",
+      "modality": "assessment",
+      "canonical_concept": "murmur",
+      "verification_status": "confirmed",
+      "clinical_status": "active",
+      "temporality": "current",
+      "proposition_text": "The clinician hears a systolic murmur.",
+      "evidence": [
+        {
+          "turn_id": "S25",
+          "turn_speaker": "note",
+          "span_text": "CV: 2/6 systolic ejection murmur heard at the left base.",
+          "char_start": 0,
+          "char_end": 56
+        }
+      ],
+      "assertion": "present",
+      "visit_state": "active",
+      "linked_problem": null
+    },
+    {
+      "cap_id": "CAP10",
+      "cap_type": "Order",
+      "content_source": "clinician",
+      "modality": "plan",
+      "canonical_concept": "arterial ultrasound",
+      "verification_status": "unconfirmed",
+      "clinical_status": "active",
+      "temporality": "future",
+      "proposition_text": "The clinician orders an arterial ultrasound.",
+      "evidence": [
+        {
+          "turn_id": "S34",
+          "turn_speaker": "note",
+          "span_text": "After reviewing the patient's examination findings today, I have had a lengthy discussion with the patient in regards to his current symptoms. We discussed that his right foot ulcer is fairly sizable and will require wound care. I advised him that the ulcer does not appear to be healing and that further studies will be needed to assess if he has adequate blood supply to heal his foot wound. He was advised that due to his diabetes it is possible surgical intervention such as stent placement or bypass surgery may be required to improve his blood supply. I also advised him that I believe we will be able to heal his wound. At this time, I have recommended continued wound care and for him to also continue taking aspirin 81 mg daily. We will order an arterial ultrasound of the lower extremities. He will also be referred to podiatry for a consult.",
+          "char_start": 0,
+          "char_end": 852
+        }
+      ],
+      "assertion": "uncertain",
+      "visit_state": "active",
+      "linked_problem": null
+    },
+    {
+      "cap_id": "CAP11",
+      "cap_type": "ExamFinding",
+      "content_source": "examiner",
+      "modality": "assessment",
+      "canonical_concept": "granulation tissue",
+      "verification_status": "confirmed",
+      "clinical_status": "active",
+      "temporality": "current",
+      "proposition_text": "There is granulation tissue.",
+      "evidence": [
+        {
+          "turn_id": "S28",
+          "turn_speaker": "note",
+          "span_text": "MSK: Examination of the right lower extremity: No palpable dorsalis pedis or posterior tibial pulses. There is a 2 x 3 cm ulcerated lesion on the right lateral foot near the 5th metacarpal metatarsophalangeal joint. No associated cellulitis. No pain to palpation of the right foot. There is associated granulation tissue and some slight purulent discharge from the wound.",
+          "char_start": 0,
+          "char_end": 371
+        }
+      ],
+      "assertion": "present",
+      "visit_state": "active",
+      "linked_problem": null
+    },
+    {
+      "cap_id": "CAP12",
+      "cap_type": "ExamFinding",
+      "content_source": "examiner",
+      "modality": "assessment",
+      "canonical_concept": "purulent discharge",
+      "verification_status": "confirmed",
+      "clinical_status": "active",
+      "temporality": "current",
+      "proposition_text": "There is purulent discharge.",
+      "evidence": [
+        {
+          "turn_id": "S28",
+          "turn_speaker": "note",
+          "span_text": "MSK: Examination of the right lower extremity: No palpable dorsalis pedis or posterior tibial pulses. There is a 2 x 3 cm ulcerated lesion on the right lateral foot near the 5th metacarpal metatarsophalangeal joint. No associated cellulitis. No pain to palpation of the right foot. There is associated granulation tissue and some slight purulent discharge from the wound.",
+          "char_start": 0,
+          "char_end": 371
+        }
+      ],
+      "assertion": "present",
+      "visit_state": "active",
+      "linked_problem": null
+    },
+    {
+      "cap_id": "CAP13",
+      "cap_type": "MedicationStatement",
+      "content_source": "clinician",
+      "modality": "unknown",
+      "canonical_concept": "aspirin",
+      "verification_status": "unconfirmed",
+      "clinical_status": "active",
+      "temporality": "future",
+      "proposition_text": "The clinician recommends daily aspirin 81 mg.",
+      "evidence": [
+        {
+          "turn_id": "S34",
+          "turn_speaker": "note",
+          "span_text": "After reviewing the patient's examination findings today, I have had a lengthy discussion with the patient in regards to his current symptoms. We discussed that his right foot ulcer is fairly sizable and will require wound care. I advised him that the ulcer does not appear to be healing and that further studies will be needed to assess if he has adequate blood supply to heal his foot wound. He was advised that due to his diabetes it is possible surgical intervention such as stent placement or bypass surgery may be required to improve his blood supply. I also advised him that I believe we will be able to heal his wound. At this time, I have recommended continued wound care and for him to also continue taking aspirin 81 mg daily. We will order an arterial ultrasound of the lower extremities. He will also be referred to podiatry for a consult.",
+          "char_start": 0,
+          "char_end": 852
+        }
+      ],
+      "assertion": "uncertain",
+      "visit_state": "active",
+      "linked_problem": null
+    }
+  ],
+  "filtered_nonverifiable_units": [],
+  "chunk_count": 5,
+  "extraction_mode": "single_call",
+  "runtime_seconds": 48.23
+}

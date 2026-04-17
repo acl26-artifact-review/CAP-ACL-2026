@@ -1,0 +1,108 @@
+Case: D2N121
+
+Problem List and Visit State Tracking
+
+Problem List
+- knee pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T0
+  Summary: The patient reports pain in the right knee.
+  ClusterId: CL1
+  TemporalProfile: current
+  Updates:
+  - CAP5: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T0 :: The patient reports pain in the right knee.
+- knee injury | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T10,T3,T4
+  Summary: The patient has a knee injury.
+  ClusterId: CL2
+  TemporalProfile: current, first time, last weekend
+  Updates:
+  - CAP23: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=last weekend turns=T3 :: The patient sustained a knee injury last weekend.
+  - CAP8: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T4 :: The patient has a knee injury.
+  - CAP22: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=first time turns=T10 :: The patient states this was the first time they injured their knee.
+- left hand pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T10
+  Summary: The patient reports pain in the left hand.
+  ClusterId: CL4
+  TemporalProfile: current
+  Updates:
+  - CAP6: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T10 :: The patient reports pain in the left hand.
+- high blood pressure | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T17
+  Summary: The patient is taking medication for high blood pressure.
+  ClusterId: CL6
+  TemporalProfile: current
+  Updates:
+  - CAP4: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T17 :: The patient is taking medication for high blood pressure.
+- pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T22
+  Summary: The patient reports pain in the knee.
+  ClusterId: CL9
+  TemporalProfile: current
+  Updates:
+  - CAP7: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T22 :: The patient reports pain in the knee.
+- medial collateral ligament strain | verification_status=confirmed | clinical_status=active | modalities=assessment,interview | speakers=doctor | evidence=T35
+  Summary: The doctor diagnoses a medial collateral ligament strain.
+  ClusterId: CL12
+  TemporalProfile: current
+  Updates:
+  - CAP1: content_source=doctor modality=assessment verification_status=confirmed clinical_status=active temporality=current turns=T35 :: The doctor diagnoses a medial collateral ligament strain.
+  - CAP3: content_source=doctor modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T35 :: The doctor believes the patient has a medial collateral ligament strain.
+
+Medication Tracking
+- [MedicationChange] evaluation | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T3
+  Summary: A cervical MRI is planned.
+  ClusterId: CL3
+  TemporalProfile: future
+  PlannedChanges:
+  - A cervical MRI is planned. (T3)
+  Updates:
+  - CAP15: content_source=doctor modality=plan verification_status=unconfirmed clinical_status=planned temporality=future turns=T3 :: A cervical MRI is planned.
+- [MedicationState] lisinopril | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=doctor,patient | evidence=T19,T37
+  Summary: The patient is taking lisinopril 20 milligrams a day.
+  ClusterId: CL8
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient is taking lisinopril 20 milligrams a day. (T19)
+  - The doctor continues lisinopril. (T37)
+  Updates:
+  - CAP17: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T19 :: The patient is taking lisinopril 20 milligrams a day.
+  - CAP21: content_source=doctor modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T37 :: The doctor continues lisinopril.
+- [MedicationState] aleve | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T24
+  Summary: The patient took Aleve twice a day.
+  ClusterId: CL10
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient took Aleve twice a day. (T24)
+  Updates:
+  - CAP18: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T24 :: The patient took Aleve twice a day.
+- [MedicationChange] meloxicam | verification_status=confirmed | clinical_status=planned | modalities=interview,plan | speakers=doctor | evidence=T35
+  Summary: The doctor prescribes meloxicam.
+  ClusterId: CL14
+  TemporalProfile: current, today
+  PlannedChanges:
+  - The doctor prescribes meloxicam. (T35)
+  - The doctor prescribes meloxicam. (T35)
+  Updates:
+  - CAP16: content_source=doctor modality=plan verification_status=unconfirmed clinical_status=planned temporality=today turns=T35 :: The doctor prescribes meloxicam.
+  - CAP20: content_source=doctor modality=interview verification_status=confirmed clinical_status=planned temporality=current turns=T35 :: The doctor prescribes meloxicam.
+
+Other Structured States
+- [TestResult] blood pressure | verification_status=confirmed | clinical_status=active | modalities=test_result | speakers=patient | evidence=T18
+  Summary: The patient's blood pressure is approximately 120/80 mmHg.
+  ClusterId: CL7
+  TemporalProfile: current
+- [Plan] cold pack | verification_status=confirmed | clinical_status=planned | modalities=interview | speakers=patient | evidence=T26
+  Summary: The patient put a cold pack on the knee.
+  ClusterId: CL11
+  TemporalProfile: current
+- [Plan] x-ray | verification_status=unconfirmed | clinical_status=planned | modalities=interview,plan | speakers=doctor | evidence=T35
+  Summary: The doctor orders an x-ray of the right knee.
+  ClusterId: CL13
+  TemporalProfile: current, soon
+- [FollowUp] physical therapy | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T35
+  Summary: The doctor recommends physical therapy.
+  ClusterId: CL15
+  TemporalProfile: soon
+- [Plan] lipid panel | verification_status=confirmed | clinical_status=planned | modalities=interview | speakers=doctor | evidence=T37
+  Summary: The doctor orders a lipid panel.
+  ClusterId: CL16
+  TemporalProfile: current
+- [Plan] tetanus shot | verification_status=confirmed | clinical_status=planned | modalities=interview | speakers=doctor | evidence=T37
+  Summary: The doctor orders a tetanus shot.
+  ClusterId: CL17
+  TemporalProfile: current

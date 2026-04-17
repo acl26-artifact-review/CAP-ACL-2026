@@ -1,0 +1,33 @@
+You are an expert clinical content annotator.
+
+Extract clinically salient checklist items from the note for GPT-F1 style evaluation.
+
+[Categories]
+- `active_problems_symptoms`: current active diseases, symptoms, abnormal findings, or clinically active complaints
+- `negated_findings`: explicitly denied symptoms or ruled-out findings
+- `uncertain_findings`: suspected, possible, unclear, or uncertain diagnoses/findings
+- `medication_treatment`: medication states, medication changes, ongoing treatments, or treatment recommendations
+- `plan_followup`: orders, labs, referrals, follow-up timing, monitoring, counseling, patient instructions, and return precautions
+
+[Rules]
+- Use only information explicitly present in the note.
+- Extract short standalone items, not full paragraphs.
+- Deduplicate near-duplicates.
+- Keep each item in the single best category.
+- If a category is not present, return an empty list for it.
+- Do not invent items.
+
+[Output Format]
+Return valid JSON only:
+{{
+  "categories": {{
+    "active_problems_symptoms": [],
+    "negated_findings": [],
+    "uncertain_findings": [],
+    "medication_treatment": [],
+    "plan_followup": []
+  }}
+}}
+
+[Clinical Note]
+{note_text}

@@ -1,0 +1,31 @@
+Generate content for a sectioned clinical note in one pass.
+The exact output JSON schema is provided later; follow that schema exactly.
+
+Requirements:
+- Keep the note concise but clinically complete, in polished ACI-BENCH-like style.
+- First, identify the single primary problem for this visit and anchor the note to it.
+- Include secondary details only if they directly change diagnosis, risk assessment, or management for the primary problem.
+- Exclude unrelated symptoms, incidental low-impact details, and weakly grounded ambiguous signals.
+- Put the main visit reason under Chief Complaint.
+- Put patient-reported symptoms, chronology, relevant history, and current medication state under History of Present Illness.
+- Put exam findings, vitals, imaging, lab results, and observed findings under Findings.
+- Findings must contain only physical exam findings, imaging results, lab results, and measured values.
+- Put diagnoses, impressions, and active problems under Assessment.
+- Put medication changes, orders, referrals, follow-up, counseling, and instructions under Plan.
+- Do not place referrals or treatment recommendations under Assessment.
+- Do not place diagnoses or active problems under Plan unless they are part of a management sentence.
+- Do not place any patient-reported statement (for example, lines beginning with "The patient reports ...") in Findings; place those in History of Present Illness.
+- Use concise complete clinical prose; do not emit sentence fragments.
+- Prefer consistent third-person clinical style.
+- When the patient is the subject, prefer wording that begins with "The patient ..." rather than "you," "we," or alternating pronouns.
+- Avoid repeating "The patient ..." at the beginning of every line; vary openings naturally.
+- Avoid explicit narrator phrases like "The doctor ..."; prefer action-oriented plan wording (for example, "Order ...", "Recommend ...", "Arrange follow-up ...").
+- Do not begin any line with a comma, conjunction fragment, or dangling continuation.
+- Preserve medical meaning without adding unsupported detail.
+- If a detail does not clearly belong in one section, exclude it rather than forcing placement.
+- Exclude low-impact background details that do not change diagnosis, reasoning, or plan.
+- Exclude social chatter or anecdotal conversation unless clinically consequential.
+- Do not output instructions, placeholders, or meta-text (for example, "insert paragraph", "placeholder", "system", "F2F").
+- In Plan, use concise action-first phrasing (for example, "Start ...", "Order ...", "Schedule ...", "Follow up ...").
+- Do not narrate Plan as transcript-style dialogue.
+- Do not add markdown bold or a prefatory sentence.

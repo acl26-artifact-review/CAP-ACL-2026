@@ -1,0 +1,1502 @@
+{
+  "case_id": "D2N104",
+  "method": "cap_event",
+  "template": "soap",
+  "summary_text": "S:\nThe patient reports ongoing management of psoriatic arthritis, experiencing occasional extra prednisone doses due to foot pain when engaging in active jobs. He also reports bruising, attributing it to the prednisone, and mentions experiencing the bruising without feeling it initially. The patient reports that his nails have ridges from psoriasis.\n\nO:\nPhysical exam reveals good range of motion in the toes and knees. Examination of the nails reveals ridges consistent with psoriasis.\n\nA:\nThe patient's primary problem is psoriatic arthritis, with secondary concerns including medication-related side effects and bruising.\n\nP:\nThe plan is to discontinue the prednisone and continue with methotrexate. An appointment for blood work is scheduled, and a follow-up visit is arranged in three months.",
+  "reference_summary": "CHIEF COMPLAINT\n\nPsoriatic arthritis management.\n\nHISTORY OF PRESENT ILLNESS\n\nJudy Gomez is a 61-year-old female who presents to the clinic today for ongoing management of psoriatic arthritis.\n\nMs. Gomez is currently taking methotrexate and prednisone 1 mg daily. She believes methotrexate has been relieving her joint pain.\n\nThe patient reports she has been doing well since her last visit. She has been able to decrease her prednisone dose to 1 mg daily; however, she took 2 mg for a couple of days due to increased pain in her bilateral feet.\n\nThe patient states when she received her first COVID-19 vaccine she held her methotrexate and felt \"horrible\" all week until the next Wednesday when she took it. She felt better by the end of the week. She did not hold methotrexate for her second COVID-19 vaccine.\n\nPHYSICAL EXAM\n\nMusculoskeletal: Full range of motion. Dystrophy of all the nails of the toes.\n\nASSESSMENT\n\n• Psoriatic arthritis.\n• High risk medication use.\n\nPLAN\n\nPsoriatic arthritis.\nStable on methotrexate and prednisone 1 mg daily. The patient will discontinue prednisone and continue methotrexate.\n\nINSTRUCTIONS\n\nThe patient will follow up in 3 months.",
+  "source_cap": {
+    "atomic_propositions": [
+      {
+        "prop_id": "CAP1",
+        "cap_type": "Symptom",
+        "canonical_concept": "pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports pain in the left hand."
+      },
+      {
+        "prop_id": "CAP2",
+        "cap_type": "Symptom",
+        "canonical_concept": "joint pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports pain in their feet."
+      },
+      {
+        "prop_id": "CAP3",
+        "cap_type": "Symptom",
+        "canonical_concept": "bruising",
+        "category": "Symptom",
+        "speaker": "doctor",
+        "predicate": "reports",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports experiencing bruising."
+      },
+      {
+        "prop_id": "CAP4",
+        "cap_type": "Problem",
+        "canonical_concept": "prednisone",
+        "category": "Problem",
+        "speaker": "doctor",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient is taking prednisone."
+      },
+      {
+        "prop_id": "CAP5",
+        "cap_type": "Symptom",
+        "canonical_concept": "joint pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports joint pain."
+      },
+      {
+        "prop_id": "CAP6",
+        "cap_type": "Symptom",
+        "canonical_concept": "nail ridges",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports nail ridges."
+      },
+      {
+        "prop_id": "CAP7",
+        "cap_type": "Symptom",
+        "canonical_concept": "pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports pain."
+      },
+      {
+        "prop_id": "CAP8",
+        "cap_type": "Problem",
+        "canonical_concept": "psoriasis",
+        "category": "Problem",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient has psoriasis."
+      },
+      {
+        "prop_id": "CAP9",
+        "cap_type": "Order",
+        "canonical_concept": "blood work",
+        "category": "Order",
+        "speaker": "doctor",
+        "status": "uncertain",
+        "visit_state": "planned",
+        "temporality": "future",
+        "proposition_text": "An appointment for blood work is to be made."
+      },
+      {
+        "prop_id": "CAP10",
+        "cap_type": "MedicationRequest",
+        "canonical_concept": "prednisone",
+        "category": "MedicationRequest",
+        "speaker": "doctor",
+        "predicate": "has",
+        "status": "uncertain",
+        "visit_state": "planned",
+        "temporality": "future",
+        "proposition_text": "The doctor will discontinue prednisone."
+      },
+      {
+        "prop_id": "CAP11",
+        "cap_type": "FollowUp",
+        "canonical_concept": "blood draw",
+        "category": "FollowUp",
+        "speaker": "doctor",
+        "status": "uncertain",
+        "visit_state": "planned",
+        "temporality": "future",
+        "proposition_text": "The doctor will schedule a blood draw."
+      },
+      {
+        "prop_id": "CAP12",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "prednisone",
+        "category": "MedicationStatement",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "temporal"
+        ],
+        "proposition_text": "The patient is currently taking prednisone."
+      },
+      {
+        "prop_id": "CAP13",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "methotrexate",
+        "category": "MedicationStatement",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient is taking methotrexate."
+      },
+      {
+        "prop_id": "CAP14",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "methotrexate",
+        "category": "MedicationStatement",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "Methotrexate is being taken."
+      },
+      {
+        "prop_id": "CAP15",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "prednisone",
+        "category": "MedicationStatement",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "planned",
+        "temporality": "future",
+        "proposition_text": "Prednisone will be stopped."
+      },
+      {
+        "prop_id": "CAP16",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "methotrexate",
+        "category": "MedicationStatement",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "future",
+        "proposition_text": "Methotrexate will be continued."
+      },
+      {
+        "prop_id": "CAP17",
+        "cap_type": "ProblemHistory",
+        "canonical_concept": "psoriasis",
+        "category": "ProblemHistory",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "long time",
+        "proposition_text": "The patient's nail ridges have been present for a long time."
+      },
+      {
+        "prop_id": "CAP18",
+        "cap_type": "ProblemHistory",
+        "canonical_concept": "psoriatic arthritis",
+        "category": "ProblemHistory",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "ongoing",
+        "proposition_text": "The patient has ongoing management of psoriatic arthritis."
+      }
+    ],
+    "filtered_nonverifiable_units": []
+  },
+  "event_plan": {
+    "events": [
+      {
+        "event_id": "CL10",
+        "event_type": "ProblemOrientedNoteBundle",
+        "canonical_concept": "psoriasis",
+        "visit_state": "historical",
+        "status": "affirmed",
+        "temporality": "future",
+        "speaker_source": "patient,doctor",
+        "clinical_priority": "high",
+        "title": "psoriasis",
+        "event_summary": "Problem-oriented bundle for psoriasis.",
+        "supporting_cap_ids": [
+          "CAP8",
+          "CAP17",
+          "CAP1",
+          "CAP2",
+          "CAP5",
+          "CAP7",
+          "CAP6",
+          "CAP13",
+          "CAP14",
+          "CAP16"
+        ],
+        "anchor_problem_cap_id": "CAP8",
+        "anchor_problem": "psoriasis",
+        "S_cap_ids": [
+          "CAP8",
+          "CAP13",
+          "CAP14"
+        ],
+        "global_cap_ids": [
+          "CAP17",
+          "CAP1",
+          "CAP2",
+          "CAP5",
+          "CAP7",
+          "CAP6",
+          "CAP16"
+        ],
+        "supporting_evidence": [
+          "The patient has psoriasis.",
+          "The patient is taking methotrexate.",
+          "Methotrexate is being taken."
+        ],
+        "current_state": [
+          "The patient has psoriasis.",
+          "The patient is taking methotrexate.",
+          "Methotrexate is being taken."
+        ],
+        "planned_actions": [
+          "Methotrexate will be continued."
+        ],
+        "care_context": [
+          "The patient's nail ridges have been present for a long time.",
+          "The patient reports pain in the left hand.",
+          "The patient reports pain in their feet.",
+          "The patient reports joint pain.",
+          "The patient reports pain.",
+          "The patient reports nail ridges."
+        ],
+        "key_slots": {
+          "source_modalities": "interview",
+          "temporal_profile": "current, long time, future",
+          "anchor_cluster_type": "ProblemState",
+          "anchor_primary_cap_type": "Problem",
+          "bundle_concepts": "psoriasis; joint pain; nail ridges; methotrexate",
+          "history_context": "",
+          "related_factors": "",
+          "visit_primary": "false",
+          "render_in_note": "false",
+          "assessment_fallback": "",
+          "bundle_design": "problem_oriented_note_bundle"
+        },
+        "render_sections": [
+          "S",
+          "O",
+          "A",
+          "P",
+          "History of Present Illness",
+          "Findings",
+          "Assessment",
+          "Plan"
+        ]
+      }
+    ]
+  },
+  "summary_cap": {
+    "atomic_propositions": [
+      {
+        "prop_id": "P1",
+        "cap_type": "Problem",
+        "canonical_concept": "ongoing management psoriatic arthritis",
+        "category": "Problem",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "diagnostic"
+        ],
+        "proposition_text": "The patient reports ongoing management of psoriatic arthritis"
+      },
+      {
+        "prop_id": "P2",
+        "cap_type": "Symptom",
+        "canonical_concept": "pain:foot",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports occasional extra prednisone doses due to foot pain"
+      },
+      {
+        "prop_id": "P3",
+        "cap_type": "Symptom",
+        "canonical_concept": "bruising",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports bruising"
+      },
+      {
+        "prop_id": "P4",
+        "cap_type": "Symptom",
+        "canonical_concept": "attributing bruising prednisone",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports attributing the bruising to the prednisone"
+      },
+      {
+        "prop_id": "P5",
+        "cap_type": "Symptom",
+        "canonical_concept": "experiencing bruising without feeling",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports experiencing the bruising without feeling it initially"
+      },
+      {
+        "prop_id": "P6",
+        "cap_type": "Finding",
+        "canonical_concept": "physical exam reveals good",
+        "category": "Finding",
+        "speaker": "clinician",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "exam"
+        ],
+        "proposition_text": "Physical exam reveals good range of motion in the toes"
+      },
+      {
+        "prop_id": "P7",
+        "cap_type": "Finding",
+        "canonical_concept": "physical exam reveals good",
+        "category": "Finding",
+        "speaker": "clinician",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "exam"
+        ],
+        "proposition_text": "Physical exam reveals good range of motion in the knees"
+      },
+      {
+        "prop_id": "P8",
+        "cap_type": "Finding",
+        "canonical_concept": "examination nails reveals ridges",
+        "category": "Finding",
+        "speaker": "clinician",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "exam"
+        ],
+        "proposition_text": "Examination of the nails reveals ridges"
+      },
+      {
+        "prop_id": "P9",
+        "cap_type": "Problem",
+        "canonical_concept": "primary problem psoriatic arthritis",
+        "category": "Problem",
+        "speaker": "clinician",
+        "predicate": "diagnoses",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "diagnostic"
+        ],
+        "proposition_text": "The patient's primary problem is psoriatic arthritis"
+      },
+      {
+        "prop_id": "P10",
+        "cap_type": "Problem",
+        "canonical_concept": "secondary concerns including medication-related",
+        "category": "Problem",
+        "speaker": "clinician",
+        "predicate": "diagnoses",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "diagnostic"
+        ],
+        "proposition_text": "The patient has secondary concerns including medication-related side effects"
+      },
+      {
+        "prop_id": "P11",
+        "cap_type": "Problem",
+        "canonical_concept": "secondary concerns including bruising",
+        "category": "Problem",
+        "speaker": "clinician",
+        "predicate": "diagnoses",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "diagnostic"
+        ],
+        "proposition_text": "The patient has secondary concerns including bruising"
+      },
+      {
+        "prop_id": "P12",
+        "cap_type": "Plan",
+        "canonical_concept": "plan discontinue prednisone",
+        "category": "Plan",
+        "speaker": "clinician",
+        "predicate": "plans",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "future",
+        "claim_type_tags": [
+          "plan"
+        ],
+        "proposition_text": "The plan is to discontinue the prednisone"
+      },
+      {
+        "prop_id": "P13",
+        "cap_type": "Plan",
+        "canonical_concept": "plan continue methotrexate",
+        "category": "Plan",
+        "speaker": "clinician",
+        "predicate": "plans",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "future",
+        "claim_type_tags": [
+          "plan"
+        ],
+        "proposition_text": "The plan is to continue with methotrexate"
+      },
+      {
+        "prop_id": "P14",
+        "cap_type": "FollowUp",
+        "canonical_concept": "blood work",
+        "category": "FollowUp",
+        "speaker": "clinician",
+        "predicate": "plans",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "future",
+        "claim_type_tags": [
+          "plan"
+        ],
+        "proposition_text": "An appointment for blood work is scheduled"
+      }
+    ],
+    "filtered_nonverifiable_units": [],
+    "runtime_seconds": 22.254
+  },
+  "cap_alignment": {
+    "cap_precision": 0.5,
+    "cap_recall": 0.3888888888888889,
+    "cap_f1": 0.43750000000000006,
+    "matched_count": 7,
+    "summary_prop_count": 14,
+    "source_prop_count": 18,
+    "matched_pairs": [
+      {
+        "score": 1.0,
+        "summary_prop_id": "P14",
+        "source_prop_id": "CAP9",
+        "summary_text": "An appointment for blood work is scheduled",
+        "source_text": "An appointment for blood work is to be made."
+      },
+      {
+        "score": 1.0,
+        "summary_prop_id": "P3",
+        "source_prop_id": "CAP3",
+        "summary_text": "The patient reports bruising",
+        "source_text": "The patient reports experiencing bruising."
+      },
+      {
+        "score": 0.875,
+        "summary_prop_id": "P1",
+        "source_prop_id": "CAP18",
+        "summary_text": "The patient reports ongoing management of psoriatic arthritis",
+        "source_text": "The patient has ongoing management of psoriatic arthritis."
+      },
+      {
+        "score": 0.8533,
+        "summary_prop_id": "P2",
+        "source_prop_id": "CAP7",
+        "summary_text": "The patient reports occasional extra prednisone doses due to foot pain",
+        "source_text": "The patient reports pain."
+      },
+      {
+        "score": 0.655,
+        "summary_prop_id": "P4",
+        "source_prop_id": "CAP12",
+        "summary_text": "The patient reports attributing the bruising to the prednisone",
+        "source_text": "The patient is currently taking prednisone."
+      },
+      {
+        "score": 0.64,
+        "summary_prop_id": "P13",
+        "source_prop_id": "CAP13",
+        "summary_text": "The plan is to continue with methotrexate",
+        "source_text": "The patient is taking methotrexate."
+      },
+      {
+        "score": 0.59,
+        "summary_prop_id": "P12",
+        "source_prop_id": "CAP4",
+        "summary_text": "The plan is to discontinue the prednisone",
+        "source_text": "The patient is taking prednisone."
+      }
+    ],
+    "unsupported_summary_props": [
+      {
+        "prop_id": "P5",
+        "cap_type": "Symptom",
+        "canonical_concept": "experiencing bruising without feeling",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports experiencing the bruising without feeling it initially"
+      },
+      {
+        "prop_id": "P6",
+        "cap_type": "Finding",
+        "canonical_concept": "physical exam reveals good",
+        "category": "Finding",
+        "speaker": "clinician",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "exam"
+        ],
+        "proposition_text": "Physical exam reveals good range of motion in the toes"
+      },
+      {
+        "prop_id": "P7",
+        "cap_type": "Finding",
+        "canonical_concept": "physical exam reveals good",
+        "category": "Finding",
+        "speaker": "clinician",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "exam"
+        ],
+        "proposition_text": "Physical exam reveals good range of motion in the knees"
+      },
+      {
+        "prop_id": "P8",
+        "cap_type": "Finding",
+        "canonical_concept": "examination nails reveals ridges",
+        "category": "Finding",
+        "speaker": "clinician",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "exam"
+        ],
+        "proposition_text": "Examination of the nails reveals ridges"
+      },
+      {
+        "prop_id": "P9",
+        "cap_type": "Problem",
+        "canonical_concept": "primary problem psoriatic arthritis",
+        "category": "Problem",
+        "speaker": "clinician",
+        "predicate": "diagnoses",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "diagnostic"
+        ],
+        "proposition_text": "The patient's primary problem is psoriatic arthritis"
+      },
+      {
+        "prop_id": "P10",
+        "cap_type": "Problem",
+        "canonical_concept": "secondary concerns including medication-related",
+        "category": "Problem",
+        "speaker": "clinician",
+        "predicate": "diagnoses",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "diagnostic"
+        ],
+        "proposition_text": "The patient has secondary concerns including medication-related side effects"
+      },
+      {
+        "prop_id": "P11",
+        "cap_type": "Problem",
+        "canonical_concept": "secondary concerns including bruising",
+        "category": "Problem",
+        "speaker": "clinician",
+        "predicate": "diagnoses",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "diagnostic"
+        ],
+        "proposition_text": "The patient has secondary concerns including bruising"
+      }
+    ],
+    "missing_source_props": [
+      {
+        "prop_id": "CAP1",
+        "cap_type": "Symptom",
+        "canonical_concept": "pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports pain in the left hand."
+      },
+      {
+        "prop_id": "CAP2",
+        "cap_type": "Symptom",
+        "canonical_concept": "joint pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports pain in their feet."
+      },
+      {
+        "prop_id": "CAP5",
+        "cap_type": "Symptom",
+        "canonical_concept": "joint pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports joint pain."
+      },
+      {
+        "prop_id": "CAP6",
+        "cap_type": "Symptom",
+        "canonical_concept": "nail ridges",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports nail ridges."
+      },
+      {
+        "prop_id": "CAP8",
+        "cap_type": "Problem",
+        "canonical_concept": "psoriasis",
+        "category": "Problem",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient has psoriasis."
+      },
+      {
+        "prop_id": "CAP10",
+        "cap_type": "MedicationRequest",
+        "canonical_concept": "prednisone",
+        "category": "MedicationRequest",
+        "speaker": "doctor",
+        "predicate": "has",
+        "status": "uncertain",
+        "visit_state": "planned",
+        "temporality": "future",
+        "proposition_text": "The doctor will discontinue prednisone."
+      },
+      {
+        "prop_id": "CAP11",
+        "cap_type": "FollowUp",
+        "canonical_concept": "blood draw",
+        "category": "FollowUp",
+        "speaker": "doctor",
+        "status": "uncertain",
+        "visit_state": "planned",
+        "temporality": "future",
+        "proposition_text": "The doctor will schedule a blood draw."
+      },
+      {
+        "prop_id": "CAP14",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "methotrexate",
+        "category": "MedicationStatement",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "Methotrexate is being taken."
+      },
+      {
+        "prop_id": "CAP15",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "prednisone",
+        "category": "MedicationStatement",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "planned",
+        "temporality": "future",
+        "proposition_text": "Prednisone will be stopped."
+      },
+      {
+        "prop_id": "CAP16",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "methotrexate",
+        "category": "MedicationStatement",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "future",
+        "proposition_text": "Methotrexate will be continued."
+      },
+      {
+        "prop_id": "CAP17",
+        "cap_type": "ProblemHistory",
+        "canonical_concept": "psoriasis",
+        "category": "ProblemHistory",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "long time",
+        "proposition_text": "The patient's nail ridges have been present for a long time."
+      }
+    ]
+  },
+  "reference_gpt_f1_items": {
+    "active_problems_symptoms": [
+      "Psoriatic arthritis"
+    ],
+    "negated_findings": [],
+    "uncertain_findings": [],
+    "medication_treatment": [
+      "Methotrexate 1 mg daily",
+      "Prednisone 1 mg daily"
+    ],
+    "plan_followup": [
+      "Follow up in 3 months"
+    ],
+    "_chunk_count": [
+      "2"
+    ]
+  },
+  "summary_gpt_f1_items": {
+    "active_problems_symptoms": [
+      "psoriatic arthritis",
+      "foot pain",
+      "bruising",
+      "nail ridges"
+    ],
+    "negated_findings": [],
+    "uncertain_findings": [],
+    "medication_treatment": [
+      "discontinue the prednisone",
+      "continue with methotrexate"
+    ],
+    "plan_followup": [
+      "blood work",
+      "follow-up visit in three months"
+    ],
+    "_chunk_count": [
+      "1"
+    ]
+  },
+  "gpt_f1_alignment": {
+    "by_category": {
+      "active_problems_symptoms": {
+        "precision": 0.25,
+        "recall": 1.0,
+        "f1": 0.4,
+        "matched_count": 1,
+        "pred_count": 4,
+        "ref_count": 1,
+        "matches": [
+          {
+            "score": 1.0,
+            "pred_text": "psoriatic arthritis",
+            "ref_text": "Psoriatic arthritis"
+          }
+        ],
+        "unsupported_pred_items": [
+          "foot pain",
+          "bruising",
+          "nail ridges"
+        ],
+        "missing_ref_items": []
+      },
+      "negated_findings": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "matched_count": 0,
+        "pred_count": 0,
+        "ref_count": 0,
+        "matches": [],
+        "unsupported_pred_items": [],
+        "missing_ref_items": []
+      },
+      "uncertain_findings": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "matched_count": 0,
+        "pred_count": 0,
+        "ref_count": 0,
+        "matches": [],
+        "unsupported_pred_items": [],
+        "missing_ref_items": []
+      },
+      "medication_treatment": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "matched_count": 0,
+        "pred_count": 2,
+        "ref_count": 2,
+        "matches": [],
+        "unsupported_pred_items": [
+          "discontinue the prednisone",
+          "continue with methotrexate"
+        ],
+        "missing_ref_items": [
+          "Methotrexate 1 mg daily",
+          "Prednisone 1 mg daily"
+        ]
+      },
+      "plan_followup": {
+        "precision": 0.5,
+        "recall": 1.0,
+        "f1": 0.6666666666666666,
+        "matched_count": 1,
+        "pred_count": 2,
+        "ref_count": 1,
+        "matches": [
+          {
+            "score": 0.7273,
+            "pred_text": "follow-up visit in three months",
+            "ref_text": "Follow up in 3 months"
+          }
+        ],
+        "unsupported_pred_items": [
+          "blood work"
+        ],
+        "missing_ref_items": []
+      }
+    }
+  },
+  "reference_nair_concepts": {
+    "sections": [
+      {
+        "heading": "Clinical Note",
+        "section_value": "CHIEF COMPLAINT\nPsoriatic arthritis management.\nHISTORY OF PRESENT ILLNESS\nJudy Gomez is a 61-year-old female who presents to the clinic today for ongoing management of psoriatic arthritis.\nMs. Gomez is currently taking methotrexate and prednisone 1 mg daily. She believes methotrexate has been relieving her joint pain.\nThe patient reports she has been doing well since her last visit. She has been able to decrease her prednisone dose to 1 mg daily; however, she took 2 mg for a couple of days due to increased pain in her bilateral feet.\nThe patient states when she received her first COVID-19 vaccine she held her methotrexate and felt \"horrible\" all week until the next Wednesday when she took it. She felt better by the end of the week. She did not hold methotrexate for her second COVID-19 vaccine.\nPHYSICAL EXAM\nMusculoskeletal: Full range of motion. Dystrophy of all the nails of the toes.\nASSESSMENT",
+        "medical_concepts": [
+          "psoriatic arthritis",
+          "methotrexate",
+          "prednisone",
+          "joint pain",
+          "bilateral foot pain",
+          "COVID-19 vaccine",
+          "full range of motion",
+          "nail dystrophy of toes"
+        ]
+      },
+      {
+        "heading": "Clinical Note",
+        "section_value": "• Psoriatic arthritis.\n• High risk medication use.\nPLAN\nPsoriatic arthritis.\nStable on methotrexate and prednisone 1 mg daily. The patient will discontinue prednisone and continue methotrexate.\nINSTRUCTIONS\nThe patient will follow up in 3 months.",
+        "medical_concepts": [
+          "psoriatic arthritis",
+          "high risk medication use",
+          "methotrexate",
+          "prednisone"
+        ]
+      }
+    ],
+    "medical_concepts": [
+      "psoriatic arthritis",
+      "methotrexate",
+      "prednisone",
+      "joint pain",
+      "bilateral foot pain",
+      "COVID-19 vaccine",
+      "full range of motion",
+      "nail dystrophy of toes",
+      "high risk medication use"
+    ],
+    "section_count": 2
+  },
+  "summary_nair_concepts": {
+    "sections": [
+      {
+        "heading": "S",
+        "section_value": "The patient reports ongoing management of psoriatic arthritis, experiencing occasional extra prednisone doses due to foot pain when engaging in active jobs. He also reports bruising, attributing it to the prednisone, and mentions experiencing the bruising without feeling it initially. The patient reports that his nails have ridges from psoriasis.",
+        "medical_concepts": [
+          "psoriatic arthritis",
+          "prednisone",
+          "foot pain",
+          "bruising",
+          "psoriasis",
+          "nail ridges"
+        ]
+      },
+      {
+        "heading": "O",
+        "section_value": "Physical exam reveals good range of motion in the toes and knees. Examination of the nails reveals ridges consistent with psoriasis.",
+        "medical_concepts": [
+          "range of motion",
+          "toes",
+          "knees",
+          "nail ridges",
+          "psoriasis"
+        ]
+      },
+      {
+        "heading": "A",
+        "section_value": "The patient's primary problem is psoriatic arthritis, with secondary concerns including medication-related side effects and bruising.",
+        "medical_concepts": [
+          "psoriatic arthritis",
+          "medication-related side effects",
+          "bruising"
+        ]
+      },
+      {
+        "heading": "P",
+        "section_value": "The plan is to discontinue the prednisone and continue with methotrexate. An appointment for blood work is scheduled, and a follow-up visit is arranged in three months.",
+        "medical_concepts": [
+          "prednisone",
+          "methotrexate",
+          "blood work",
+          "follow-up visit"
+        ]
+      }
+    ],
+    "medical_concepts": [
+      "psoriatic arthritis",
+      "prednisone",
+      "foot pain",
+      "bruising",
+      "psoriasis",
+      "nail ridges",
+      "range of motion",
+      "toes",
+      "knees",
+      "medication-related side effects",
+      "methotrexate",
+      "blood work",
+      "follow-up visit"
+    ],
+    "section_count": 4
+  },
+  "nair_alignment": {
+    "pred_concepts": [
+      "psoriatic arthritis",
+      "prednisone",
+      "foot pain",
+      "bruising",
+      "psoriasis",
+      "nail ridges",
+      "range of motion",
+      "toes",
+      "knees",
+      "medication-related side effects",
+      "methotrexate",
+      "blood work",
+      "follow-up visit"
+    ],
+    "ref_concepts": [
+      "psoriatic arthritis",
+      "methotrexate",
+      "prednisone",
+      "joint pain",
+      "bilateral foot pain",
+      "COVID-19 vaccine",
+      "full range of motion",
+      "nail dystrophy of toes",
+      "high risk medication use"
+    ],
+    "precision_alignment": {
+      "found_b": [
+        "psoriatic arthritis",
+        "prednisone",
+        "foot pain",
+        "range of motion",
+        "toes",
+        "medication-related side effects",
+        "methotrexate",
+        "follow-up visit"
+      ],
+      "not_found_b": [
+        "bruising",
+        "psoriasis",
+        "nail ridges",
+        "knees",
+        "blood work"
+      ],
+      "chunk_count": 1,
+      "chunk_results": [
+        {
+          "found_b": [
+            "psoriatic arthritis",
+            "prednisone",
+            "foot pain",
+            "range of motion",
+            "toes",
+            "medication-related side effects",
+            "methotrexate",
+            "follow-up visit"
+          ],
+          "not_found_b": [
+            "bruising",
+            "psoriasis",
+            "nail ridges",
+            "knees",
+            "blood work"
+          ]
+        }
+      ]
+    },
+    "recall_alignment": {
+      "found_b": [
+        "psoriatic arthritis",
+        "methotrexate",
+        "prednisone",
+        "joint pain",
+        "full range of motion",
+        "nail dystrophy of toes",
+        "high risk medication use"
+      ],
+      "not_found_b": [
+        "bilateral foot pain",
+        "COVID-19 vaccine"
+      ],
+      "chunk_count": 1,
+      "chunk_results": [
+        {
+          "found_b": [
+            "psoriatic arthritis",
+            "methotrexate",
+            "prednisone",
+            "joint pain",
+            "full range of motion",
+            "nail dystrophy of toes",
+            "high risk medication use"
+          ],
+          "not_found_b": [
+            "bilateral foot pain",
+            "COVID-19 vaccine"
+          ]
+        }
+      ]
+    }
+  },
+  "semantic_cap_audit": {
+    "source_cap_recall": [
+      {
+        "cap_id": "P1",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P2",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P3",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P4",
+        "judgment": "contradicted",
+        "reason": null
+      },
+      {
+        "cap_id": "P5",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P6",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P7",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P8",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P9",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P10",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P11",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P12",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P13",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P14",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P15",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P16",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P1",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P2",
+        "judgment": "supported",
+        "reason": null
+      }
+    ],
+    "summary_cap_precision": [
+      {
+        "cap_id": "P1",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P2",
+        "judgment": "unsupported",
+        "reason": null
+      },
+      {
+        "cap_id": "P3",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P4",
+        "judgment": "unsupported",
+        "reason": null
+      },
+      {
+        "cap_id": "P5",
+        "judgment": "unsupported",
+        "reason": null
+      },
+      {
+        "cap_id": "P6",
+        "judgment": "unsupported",
+        "reason": null
+      },
+      {
+        "cap_id": "P7",
+        "judgment": "unsupported",
+        "reason": null
+      },
+      {
+        "cap_id": "P8",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P9",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P10",
+        "judgment": "unsupported",
+        "reason": null
+      },
+      {
+        "cap_id": "P11",
+        "judgment": "unsupported",
+        "reason": null
+      },
+      {
+        "cap_id": "P12",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P13",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P14",
+        "judgment": "partial",
+        "reason": null
+      }
+    ],
+    "metrics": {
+      "semantic_cap_precision": 0.3214,
+      "semantic_cap_recall": 0.6667,
+      "semantic_cap_f1": 0.4337,
+      "semantic_cap_precision_supported_count": 2,
+      "semantic_cap_precision_partial_count": 5,
+      "semantic_cap_precision_denominator": 14,
+      "semantic_cap_recall_supported_count": 9,
+      "semantic_cap_recall_partial_count": 6,
+      "semantic_cap_recall_denominator": 18,
+      "semantic_cap_low_value_source_count": 0,
+      "semantic_cap_low_value_summary_count": 0,
+      "semantic_cap_missing_count": 2,
+      "semantic_cap_unsupported_count": 7,
+      "semantic_cap_contradicted_source_count": 1,
+      "semantic_cap_contradicted_summary_count": 0
+    }
+  },
+  "safety_judgment": null,
+  "section_judgment": {
+    "section_miscategorizations": [],
+    "summary_statistics": {
+      "section_appropriateness_score": 1.0,
+      "section_miscategorization_count": 0,
+      "major_section_miscategorization_count": 0
+    }
+  },
+  "pdsqi_judgment": {
+    "citation_applicable": 0,
+    "citation": 0,
+    "accurate": 3,
+    "thorough": 2,
+    "useful": 3,
+    "organized": 4,
+    "comprehensible": 5,
+    "succinct": 5,
+    "abstraction": 1,
+    "synthesized": 3,
+    "voice_summ": 0,
+    "voice_note": 0,
+    "pdsqi_core_mean": 3.5714
+  },
+  "llm_checklist_judgment": {
+    "content_preservation_core": 4,
+    "noise_suppression": 5,
+    "lay_expression_preservation": 3,
+    "state_update_fidelity": 4,
+    "temporality_preservation": 4,
+    "problem_evidence_linkage": 4,
+    "state_plan_separation": 4,
+    "section_organization_appropriateness": 4,
+    "overall_clinical_usability": 4,
+    "clinically_meaningful_omission": "Yes",
+    "clinically_concerning_hallucination": "Yes",
+    "checklist_a_mean": 4.0,
+    "checklist_b_mean": 4.0,
+    "checklist_c_mean": 4.0,
+    "llm_checklist_abc_mean": 4.0,
+    "llm_checklist_mean_no_usability": 4.0,
+    "llm_checklist_total_score": 36,
+    "llm_checklist_mean": 4.0,
+    "llm_checklist_meaningful_omission_yes": 1,
+    "llm_checklist_concerning_hallucination_yes": 1
+  },
+  "metrics": {
+    "case_id": "D2N104",
+    "method": "cap_event",
+    "template": "soap",
+    "source_cap_count": 18,
+    "event_plan_count": 1,
+    "summary_cap_count": 14,
+    "cap_matched_count": 7,
+    "cap_precision": 0.5,
+    "cap_recall": 0.3889,
+    "cap_f1": 0.4375,
+    "unsupported_summary_cap_count": 7,
+    "missing_source_cap_count": 11,
+    "summary_runtime_seconds": null,
+    "summary_cap_runtime_seconds": 22.254,
+    "event_plan_runtime_seconds": null,
+    "rouge_l_f1_vs_reference": 0.2508,
+    "token_f1_vs_reference": 0.373,
+    "gptf1_macro_f1": 0.3556,
+    "nair_gpt_precision": 0.6154,
+    "nair_gpt_recall": 0.7778,
+    "nair_gpt_f1": 0.6871,
+    "semantic_cap_precision": 0.3214,
+    "semantic_cap_recall": 0.6667,
+    "semantic_cap_f1": 0.4337,
+    "hallucination_count": null,
+    "major_hallucination_count": null,
+    "omission_count": null,
+    "major_omission_count": null,
+    "section_appropriateness_score": 1.0,
+    "section_miscategorization_count": 0,
+    "major_section_miscategorization_count": 0,
+    "pdsqi_core_mean": 3.5714,
+    "pdsqi_accurate": 3,
+    "pdsqi_thorough": 2,
+    "llm_checklist_total_score": 36,
+    "llm_checklist_mean": 4.0,
+    "llm_checklist_mean_no_usability": 4.0,
+    "checklist_a_mean": 4.0,
+    "checklist_b_mean": 4.0,
+    "checklist_c_mean": 4.0,
+    "llm_checklist_abc_mean": 4.0,
+    "content_preservation_core": 4,
+    "noise_suppression": 5,
+    "lay_expression_preservation": 3,
+    "state_update_fidelity": 4,
+    "temporality_preservation": 4,
+    "problem_evidence_linkage": 4,
+    "state_plan_separation": 4,
+    "section_organization_appropriateness": 4,
+    "overall_clinical_usability": 4,
+    "llm_checklist_meaningful_omission_yes": 1,
+    "llm_checklist_concerning_hallucination_yes": 1,
+    "gptf1_active_problems_symptoms_precision": 0.25,
+    "gptf1_active_problems_symptoms_recall": 1.0,
+    "gptf1_active_problems_symptoms_f1": 0.4,
+    "gptf1_active_problems_symptoms_pred_count": 4,
+    "gptf1_active_problems_symptoms_ref_count": 1,
+    "gptf1_negated_findings_precision": 0.0,
+    "gptf1_negated_findings_recall": 0.0,
+    "gptf1_negated_findings_f1": 0.0,
+    "gptf1_negated_findings_pred_count": 0,
+    "gptf1_negated_findings_ref_count": 0,
+    "gptf1_uncertain_findings_precision": 0.0,
+    "gptf1_uncertain_findings_recall": 0.0,
+    "gptf1_uncertain_findings_f1": 0.0,
+    "gptf1_uncertain_findings_pred_count": 0,
+    "gptf1_uncertain_findings_ref_count": 0,
+    "gptf1_medication_treatment_precision": 0.0,
+    "gptf1_medication_treatment_recall": 0.0,
+    "gptf1_medication_treatment_f1": 0.0,
+    "gptf1_medication_treatment_pred_count": 2,
+    "gptf1_medication_treatment_ref_count": 2,
+    "gptf1_plan_followup_precision": 0.5,
+    "gptf1_plan_followup_recall": 1.0,
+    "gptf1_plan_followup_f1": 0.6667,
+    "gptf1_plan_followup_pred_count": 2,
+    "gptf1_plan_followup_ref_count": 1,
+    "nair_pred_concept_count": 13,
+    "nair_ref_concept_count": 9,
+    "nair_precision_match_count": 8,
+    "nair_recall_match_count": 7,
+    "semantic_cap_precision_supported_count": 2,
+    "semantic_cap_precision_partial_count": 5,
+    "semantic_cap_precision_denominator": 14,
+    "semantic_cap_recall_supported_count": 9,
+    "semantic_cap_recall_partial_count": 6,
+    "semantic_cap_recall_denominator": 18,
+    "semantic_cap_low_value_source_count": 0,
+    "semantic_cap_low_value_summary_count": 0,
+    "semantic_cap_missing_count": 2,
+    "semantic_cap_unsupported_count": 7,
+    "semantic_cap_contradicted_source_count": 1,
+    "semantic_cap_contradicted_summary_count": 0,
+    "pdsqi_useful": 3,
+    "pdsqi_organized": 4,
+    "pdsqi_comprehensible": 5,
+    "pdsqi_succinct": 5,
+    "pdsqi_synthesized": 3
+  }
+}

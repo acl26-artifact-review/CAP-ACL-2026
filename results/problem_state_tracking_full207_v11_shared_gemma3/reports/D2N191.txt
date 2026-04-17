@@ -1,0 +1,174 @@
+Case: D2N191
+
+Problem List and Visit State Tracking
+
+Problem List
+- history of hypertension | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T0
+  Summary: The patient has a past medical history of hypertension.
+  ClusterId: CL1
+  TemporalProfile: past
+  Updates:
+  - CAP4: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=past turns=T0 :: The patient has a past medical history of hypertension.
+- history of diabetes | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T0
+  Summary: The patient has a past medical history of diabetes.
+  ClusterId: CL2
+  TemporalProfile: past
+  Updates:
+  - CAP5: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=past turns=T0 :: The patient has a past medical history of diabetes.
+- left elbow pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T5
+  Summary: The patient reports pain in their left elbow.
+  ClusterId: CL3
+  TemporalProfile: current
+  Updates:
+  - CAP7: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T5 :: The patient reports pain in their left elbow.
+- elbow pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T13,T20,T41,T54
+  Summary: The patient reports elbow pain.
+  ClusterId: CL5
+  TemporalProfile: current
+  Updates:
+  - CAP33: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T13 :: The patient reports pain from their elbow all the way up to the neck.
+  - CAP17: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T20 :: The patient reports pain.
+  - CAP15: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T41 :: The patient reports elbow pain.
+  - CAP2: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T54,T54 :: The patient reports pain radiating to their neck.
+- ache | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T17
+  Summary: The patient describes the pain as achiness.
+  ClusterId: CL6
+  TemporalProfile: current
+  Updates:
+  - CAP10: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T17 :: The patient describes the pain as achiness.
+- left arm pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T17,T21,T27,T41
+  Summary: The patient reports pain in their left arm.
+  ClusterId: CL7
+  TemporalProfile: current
+  Updates:
+  - CAP34: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T17 :: The patient reports pain along their arm.
+  - CAP8: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T21 :: The patient reports pain in their left arm.
+  - CAP9: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T27 :: The patient reports pain in the left arm.
+  - CAP16: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T41 :: The patient reports arm pain.
+- heaviness | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T19
+  Summary: The patient reports a feeling of heaviness.
+  ClusterId: CL8
+  TemporalProfile: current
+  Updates:
+  - CAP11: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T19 :: The patient reports a feeling of heaviness.
+- hypertension | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T28
+  Summary: The patient's blood pressure was elevated.
+  ClusterId: CL10
+  TemporalProfile: current
+  Updates:
+  - CAP12: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T28 :: The patient's blood pressure was elevated.
+  - CAP13: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T28 :: The patient's blood pressure is elevated.
+- diabetes | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T38
+  Summary: The patient has diabetes.
+  ClusterId: CL13
+  TemporalProfile: current
+  Updates:
+  - CAP18: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T38 :: The patient has diabetes.
+- aches | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T47
+  Summary: The patient reports aches.
+  ClusterId: CL16
+  TemporalProfile: current
+  Updates:
+  - CAP19: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T47 :: The patient reports aches.
+- chest pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T48,T54
+  Summary: The patient reports chest pain.
+  ClusterId: CL17
+  TemporalProfile: current
+  Updates:
+  - CAP1: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T48,T54,T54 :: The patient reports chest pain.
+- shortness of breath | verification_status=unconfirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T52
+  Summary: The patient denies shortness of breath.
+  ClusterId: CL18
+  TemporalProfile: past
+  Updates:
+  - CAP14: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=past turns=T52 :: The patient denies shortness of breath.
+- heart attack | verification_status=unconfirmed | clinical_status=active | modalities=assessment | speakers=doctor | evidence=T56
+  Summary: The doctor is concerned about a possible heart attack.
+  ClusterId: CL19
+  TemporalProfile: current
+  Updates:
+  - CAP6: content_source=doctor modality=assessment verification_status=unconfirmed clinical_status=active temporality=current turns=T56 :: The doctor is concerned about a possible heart attack.
+- diarrhea | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T65,T66
+  Summary: The patient reports difficulty stopping pooping.
+  ClusterId: CL25
+  TemporalProfile: current
+  Updates:
+  - CAP3: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T65,T66 :: The patient reports difficulty stopping pooping.
+- anxiety | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T70
+  Summary: The patient reports anxiety.
+  ClusterId: CL26
+  TemporalProfile: current
+  Updates:
+  - CAP20: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T70 :: The patient reports anxiety.
+
+Medication Tracking
+- [MedicationState] motrin | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T25
+  Summary: The patient took motrin for the pain.
+  ClusterId: CL9
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient took motrin for the pain. (T25)
+  Updates:
+  - CAP30: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T25 :: The patient took motrin for the pain.
+- [MedicationState] norvasc | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=doctor | evidence=T32
+  Summary: The patient is taking norvasc.
+  ClusterId: CL12
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient is taking norvasc. (T32)
+  Updates:
+  - CAP31: content_source=doctor modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T32 :: The patient is taking norvasc.
+- [MedicationState] metformin | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=doctor | evidence=T38
+  Summary: The patient is taking metformin.
+  ClusterId: CL15
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient is taking metformin. (T38)
+  Updates:
+  - CAP32: content_source=doctor modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T38 :: The patient is taking metformin.
+- [MedicationChange] metformin | verification_status=confirmed | clinical_status=active | modalities=plan | speakers=doctor | evidence=T56
+  Summary: The patient will continue metformin at a dose of 500 mg.
+  ClusterId: CL23
+  TemporalProfile: current
+  PlannedChanges:
+  - The patient will continue metformin at a dose of 500 mg. (T56)
+  Updates:
+  - CAP28: content_source=doctor modality=plan verification_status=confirmed clinical_status=active temporality=current turns=T56 :: The patient will continue metformin at a dose of 500 mg.
+- [MedicationChange] norvasc | verification_status=confirmed | clinical_status=active | modalities=plan | speakers=doctor | evidence=T56
+  Summary: The patient will continue norvasc at a dose of 2.5 mg.
+  ClusterId: CL24
+  TemporalProfile: current
+  PlannedChanges:
+  - The patient will continue norvasc at a dose of 2.5 mg. (T56)
+  Updates:
+  - CAP29: content_source=doctor modality=plan verification_status=confirmed clinical_status=active temporality=current turns=T56 :: The patient will continue norvasc at a dose of 2.5 mg.
+
+Other Structured States
+- [Demographics] right handed | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T6
+  Summary: The patient is right-handed.
+  ClusterId: CL4
+  TemporalProfile: current
+- [Plan] blood pressure cuff | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T28
+  Summary: The doctor ordered a blood pressure cuff for the patient.
+  ClusterId: CL11
+  TemporalProfile: future
+- [TestResult] a1c | verification_status=confirmed | clinical_status=historical | modalities=test_result | speakers=doctor | evidence=T38
+  Summary: The patient's last A1C result was 7.2.
+  ClusterId: CL14
+  TemporalProfile: last visit
+- [Plan] ekg | verification_status=confirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T56,T70
+  Summary: An EKG will be ordered.
+  ClusterId: CL20
+  TemporalProfile: current, soon
+- [Plan] aspirin | verification_status=confirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T56
+  Summary: Aspirin will be administered.
+  ClusterId: CL21
+  TemporalProfile: current
+- [Plan] nitroglycerin | verification_status=confirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T56
+  Summary: Nitroglycerin will be administered.
+  ClusterId: CL22
+  TemporalProfile: current
+- [Plan] tests | verification_status=unconfirmed | clinical_status=planned | modalities=interview | speakers=doctor | evidence=T72
+  Summary: The doctor will get tests.
+  ClusterId: CL27
+  TemporalProfile: current

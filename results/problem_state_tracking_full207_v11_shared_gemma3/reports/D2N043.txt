@@ -1,0 +1,129 @@
+Case: D2N043
+
+Problem List and Visit State Tracking
+
+Problem List
+- pack-a-day | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T3
+  Summary: The patient smokes a pack-a-half a day.
+  ClusterId: CL1
+  TemporalProfile: current
+  Updates:
+  - CAP8: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T3 :: The patient smokes a pack-a-half a day.
+- smoking | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T3
+  Summary: The patient smokes.
+  ClusterId: CL2
+  TemporalProfile: current
+  Updates:
+  - CAP14: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T3 :: The patient smokes.
+- type 2 diabetes | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T27,T4
+  Summary: The patient continues to maintain type 2 diabetes with diet and exercise.
+  ClusterId: CL3
+  TemporalProfile: current, past
+  Updates:
+  - CAP2: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=past turns=T4 :: The patient has a history of type 2 diabetes.
+  - CAP1: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T27 :: The patient continues to maintain type 2 diabetes with diet and exercise.
+- pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T7
+  Summary: The patient reports pain in the left hand.
+  ClusterId: CL4
+  TemporalProfile: current
+  Updates:
+  - CAP4: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T7 :: The patient reports pain in the left hand.
+- gout | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T8
+  Summary: The patient has a history of gout.
+  ClusterId: CL5
+  TemporalProfile: past
+  Updates:
+  - CAP7: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=past turns=T8 :: The patient has a history of gout.
+- smoking cessation | verification_status=unconfirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T17
+  Summary: The patient previously attempted to quit smoking.
+  ClusterId: CL6
+  TemporalProfile: past
+  Updates:
+  - CAP9: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=past turns=T17 :: The patient previously attempted to quit smoking.
+- stress | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T17,T26
+  Summary: The patient reports increased stress levels.
+  ClusterId: CL7
+  TemporalProfile: current
+  Updates:
+  - CAP10: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T17 :: The patient reports increased stress levels.
+  - CAP12: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T26 :: The patient is experiencing stress.
+  - CAP13: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T26 :: The patient is experiencing stress.
+- type two diabetes | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T20
+  Summary: The patient has type two diabetes.
+  ClusterId: CL11
+  TemporalProfile: current
+  Updates:
+  - CAP11: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T20 :: The patient has type two diabetes.
+- new fatherhood | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T23
+  Summary: The patient is going to be a new father.
+  ClusterId: CL13
+  TemporalProfile: current
+  Updates:
+  - CAP3: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T23 :: The patient is going to be a new father.
+- nicotine dependence | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T26
+  Summary: The doctor wants the patient to stop smoking.
+  ClusterId: CL14
+  TemporalProfile: current
+  Updates:
+  - CAP5: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T26 :: The doctor wants the patient to stop smoking.
+  - CAP6: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T26 :: The provider wants the patient to stop smoking.
+
+Medication Tracking
+- [MedicationChange] gym | verification_status=unconfirmed | clinical_status=planned | modalities=interview | speakers=patient | evidence=T19
+  Summary: The patient is planning to join a gym.
+  ClusterId: CL9
+  TemporalProfile: future
+  PlannedChanges:
+  - The patient is planning to join a gym. (T19)
+  Updates:
+  - CAP20: content_source=patient modality=interview verification_status=unconfirmed clinical_status=planned temporality=future turns=T19 :: The patient is planning to join a gym.
+- [MedicationChange] meditation | verification_status=unconfirmed | clinical_status=planned | modalities=interview | speakers=patient | evidence=T19
+  Summary: The patient is planning to start meditation.
+  ClusterId: CL10
+  TemporalProfile: future
+  PlannedChanges:
+  - The patient is planning to start meditation. (T19)
+  Updates:
+  - CAP21: content_source=patient modality=interview verification_status=unconfirmed clinical_status=planned temporality=future turns=T19 :: The patient is planning to start meditation.
+- [MedicationChange] smoking cessation aid | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T20
+  Summary: The doctor suggests using a smoking cessation aid.
+  ClusterId: CL12
+  TemporalProfile: future
+  PlannedChanges:
+  - The doctor suggests using a smoking cessation aid. (T20)
+  Updates:
+  - CAP16: content_source=doctor modality=plan verification_status=unconfirmed clinical_status=planned temporality=future turns=T20 :: The doctor suggests using a smoking cessation aid.
+- [MedicationChange] nicotine patch | verification_status=confirmed | clinical_status=planned | modalities=plan | speakers=clinician | evidence=T26
+  Summary: The patient will start with a 21 milligram nicotine patch.
+  ClusterId: CL16
+  TemporalProfile: future
+  PlannedChanges:
+  - The patient will start with a 21 milligram nicotine patch. (T26)
+  Updates:
+  - CAP18: content_source=clinician modality=plan verification_status=confirmed clinical_status=planned temporality=future turns=T26 :: The patient will start with a 21 milligram nicotine patch.
+
+Other Structured States
+- [Plan] quit date | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T19
+  Summary: The doctor recommends setting a quit date.
+  ClusterId: CL8
+  TemporalProfile: next monday
+- [Plan] decrease nicotine patch dosage | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=clinician | evidence=T26
+  Summary: The nicotine patch dosage will be decreased over time.
+  ClusterId: CL15
+  TemporalProfile: future
+- [FollowUp] follow-up appointment | verification_status=confirmed | clinical_status=planned | modalities=plan | speakers=clinician | evidence=T26
+  Summary: The patient will have a follow-up appointment in two weeks.
+  ClusterId: CL17
+  TemporalProfile: in two weeks
+- [Plan] support for smoking cessation | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=clinician | evidence=T26
+  Summary: The doctor will be with the patient every step of the way to help them quit smoking.
+  ClusterId: CL18
+  TemporalProfile: future
+- [Plan] stress management | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=clinician | evidence=T26
+  Summary: The doctor wants the patient to consider meditation or yoga to help manage stress.
+  ClusterId: CL19
+  TemporalProfile: future
+- [Plan] medication review | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=clinician | evidence=T26
+  Summary: The clinician wants to discuss any handouts received today.
+  ClusterId: CL20
+  TemporalProfile: future

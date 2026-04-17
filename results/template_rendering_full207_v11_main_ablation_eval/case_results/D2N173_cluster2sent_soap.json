@@ -1,0 +1,1372 @@
+{
+  "case_id": "D2N173",
+  "method": "cluster2sent",
+  "template": "soap",
+  "summary_text": "S:\nThe patient reports a cold onset approximately one week ago, with associated post-nasal drip and congestion. He denies fever, shortness of breath, or chest pain. He reports receiving both COVID-19 vaccines and is unsure if anyone else in his household is sick. He reports no muscle aches related to his statin medication.\n\nO:\nThe patient's oxygenation is 96%. Cervical lymphadenopathy is present. Lipid panel shows cholesterol is generally good. The COVID-19 test result is positive. Lung auscultation reveals bilateral rhonchi and some wheezing.\n\nA:\nThe patient has a positive COVID-19 test and is experiencing upper respiratory symptoms. He has a history of coronary artery bypass grafting and controlled coronary artery disease.\n\nP:\nContinue Crestor 20 mg daily. Order a repeat lipid panel in six months. Follow up if symptoms worsen.",
+  "reference_summary": "CHIEF COMPLAINT\n\nUpper respiratory infection.\n\nHISTORY OF PRESENT ILLNESS\n\nLogan Harris is a 57-year-old male with a past medical history significant for coronary artery bypass grafting, hyperlipidemia, and OCD, who presents with an upper respiratory infection.\n\nThe patient reports that about a week ago he started to get a cold, which has worsened in the last 2 or 3 days. He endorses some postnasal drip for the beginning of the week, however, it has seemed to move into his chest. He denies chest pain other than his chest congestion. He was able to exercise prior to getting sick. He denies anyone else being sick in his house. He denies fever and shortness of breath.\n\nRegarding his high cholesterol, he states he has been pretty good for the most part. He did a little travel over the last week or so and his diet was not great but for the most part it is pretty good. He is on Crestor 20 mg a day and is tolerating it well. He denies any muscle aches. He had his bypass grafting last year and is doing great.\n\nThe patient is fully vaccinated for COVID-19.\n\nREVIEW OF SYSTEMS\n\n• Constitutional: Denies fevers.\n• Ears, Nose, Mouth and Throat: Endorses post nasal drip.\n• Cardiovascular: Endorses chest congestion.\n• Respiratory: Denies shortness of breath.\n• Psychiatric: Endorses obsessive compulsive disorder.\n\nPHYSICAL EXAMINATION\n\n• Neck: Positive cervical lymphadenopathy\n• Respiratory: Rhonchi and wheezing bilaterally.\n\nVITALS REVIEWED\n\n• Oxygen Saturation: 96%.\n\nRESULTS\n\nLipid panel: Within normal limits.\n\nCOVID-19 test: Positive\n\nASSESSMENT AND PLAN\n\nLogan Harris is a 57-year-old male with a past medical history significant for coronary artery bypass grafting, hyperlipidemia, and OCD who presents today for upper respiratory symptoms.\n\nCOVID-19 Positive.\n• Medical Reasoning: The patient presents with upper respiratory symptoms and his COVID-19 test was positive today. He has received both doses of the vaccination. His symptoms seem to be very mild at this time. His oxygenation is good at 96%.\n• Patient Education and Counseling: I advised him to quarantine for 10 days and we discussed that he should try to avoid family members. I asked him to call me if his symptoms worsen.\n\nHypercholesterolemia.\n• Medical Reasoning: He is doing well on Crestor 20 mg once a day. His cholesterol looked good on his most recent lipid panel.\n• Patient Education and Counseling: I encouraged him to continue to watch his diet.\n• Additional Testing: We will go ahead and order another lipid panel for 6 months.\n• Medical Treatment: He can continue Crestor 20 mg once a day.\n\nHistory of coronary artery bypass grafting.\n• Medical Reasoning: He underwent coronary artery bypass grafting approximately 1 year ago. His coronary artery disease seems to be under control currently. He denies chest pain.\n• Additional Testing: We will do a stress test in 6 months.\n\nPatient Agreements: The patient understands and agrees with the recommended medical treatment plan.",
+  "source_cap": {
+    "atomic_propositions": [
+      {
+        "prop_id": "CAP1",
+        "cap_type": "Diagnosis",
+        "canonical_concept": "covid infection",
+        "category": "Diagnosis",
+        "speaker": "doctor",
+        "predicate": "diagnoses",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "diagnostic"
+        ],
+        "proposition_text": "The doctor diagnoses the patient with a covid infection."
+      },
+      {
+        "prop_id": "CAP2",
+        "cap_type": "Diagnosis",
+        "canonical_concept": "cold",
+        "category": "Diagnosis",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "diagnostic"
+        ],
+        "proposition_text": "The patient has a cold."
+      },
+      {
+        "prop_id": "CAP3",
+        "cap_type": "Diagnosis",
+        "canonical_concept": "infection",
+        "category": "Diagnosis",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "diagnostic"
+        ],
+        "proposition_text": "The patient has an infection."
+      },
+      {
+        "prop_id": "CAP4",
+        "cap_type": "Symptom",
+        "canonical_concept": "diet",
+        "category": "Symptom",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient has been doing pretty good with the diet."
+      },
+      {
+        "prop_id": "CAP5",
+        "cap_type": "Problem",
+        "canonical_concept": "high cholesterol",
+        "category": "Problem",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "quantitative"
+        ],
+        "proposition_text": "The patient is on Crestor 20 milligrams a day."
+      },
+      {
+        "prop_id": "CAP6",
+        "cap_type": "Symptom",
+        "canonical_concept": "travel",
+        "category": "Symptom",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "last week or so",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient traveled over the last week or so."
+      },
+      {
+        "prop_id": "CAP7",
+        "cap_type": "Symptom",
+        "canonical_concept": "fever",
+        "category": "Symptom",
+        "speaker": "patient",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "recent",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient thought they had a slight fever."
+      },
+      {
+        "prop_id": "CAP8",
+        "cap_type": "Symptom",
+        "canonical_concept": "pain",
+        "category": "Symptom",
+        "speaker": "doctor",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports pain in the left hand."
+      },
+      {
+        "prop_id": "CAP9",
+        "cap_type": "Symptom",
+        "canonical_concept": "left hand pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports left hand pain."
+      },
+      {
+        "prop_id": "CAP10",
+        "cap_type": "Symptom",
+        "canonical_concept": "cold",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports a cold."
+      },
+      {
+        "prop_id": "CAP11",
+        "cap_type": "Symptom",
+        "canonical_concept": "chest pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports chest pain."
+      },
+      {
+        "prop_id": "CAP12",
+        "cap_type": "Symptom",
+        "canonical_concept": "cervical lymphadenopathy",
+        "category": "Symptom",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "on exam",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient has cervical lymphadenopathy."
+      },
+      {
+        "prop_id": "CAP13",
+        "cap_type": "Symptom",
+        "canonical_concept": "ronchi",
+        "category": "Symptom",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "on exam",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient has bilateral ronchi."
+      },
+      {
+        "prop_id": "CAP14",
+        "cap_type": "Symptom",
+        "canonical_concept": "wheezing",
+        "category": "Symptom",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "on exam",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient has wheezing."
+      },
+      {
+        "prop_id": "CAP15",
+        "cap_type": "Problem",
+        "canonical_concept": "pain",
+        "category": "Problem",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient reports pain."
+      },
+      {
+        "prop_id": "CAP16",
+        "cap_type": "Order",
+        "canonical_concept": "lipid panel",
+        "category": "Order",
+        "speaker": "doctor",
+        "predicate": "orders",
+        "status": "affirmed",
+        "visit_state": "planned",
+        "temporality": "six months",
+        "claim_type_tags": [
+          "plan"
+        ],
+        "proposition_text": "The doctor orders a lipid panel in six months."
+      },
+      {
+        "prop_id": "CAP17",
+        "cap_type": "Order",
+        "canonical_concept": "stress test",
+        "category": "Order",
+        "speaker": "doctor",
+        "predicate": "orders",
+        "status": "affirmed",
+        "visit_state": "planned",
+        "temporality": "six months",
+        "claim_type_tags": [
+          "plan"
+        ],
+        "proposition_text": "The doctor orders a stress test in six months."
+      },
+      {
+        "prop_id": "CAP18",
+        "cap_type": "TestResult",
+        "canonical_concept": "covid positive",
+        "category": "TestResult",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient is positive for covid."
+      },
+      {
+        "prop_id": "CAP19",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "covid vaccine",
+        "category": "MedicationStatement",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "past",
+        "proposition_text": "The patient has received both stages of the covid vaccine."
+      },
+      {
+        "prop_id": "CAP20",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "crestor",
+        "category": "MedicationStatement",
+        "speaker": "doctor",
+        "predicate": "has",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "quantitative"
+        ],
+        "proposition_text": "The patient should continue taking crestor 20 milligrams a day."
+      },
+      {
+        "prop_id": "CAP21",
+        "cap_type": "ProblemHistory",
+        "canonical_concept": "upper respiratory infection",
+        "category": "ProblemHistory",
+        "speaker": "patient",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient has an upper respiratory infection."
+      },
+      {
+        "prop_id": "CAP22",
+        "cap_type": "Counseling",
+        "canonical_concept": "quarantine",
+        "category": "Counseling",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "planned",
+        "temporality": "10 days",
+        "claim_type_tags": [
+          "quantitative"
+        ],
+        "proposition_text": "The doctor advises the patient to quarantine for 10 days."
+      }
+    ],
+    "filtered_nonverifiable_units": []
+  },
+  "event_plan": null,
+  "summary_cap": {
+    "atomic_propositions": [],
+    "filtered_nonverifiable_units": [],
+    "runtime_seconds": 0.517
+  },
+  "cap_alignment": {
+    "cap_precision": 0.0,
+    "cap_recall": 0.0,
+    "cap_f1": 0.0,
+    "matched_count": 0,
+    "summary_prop_count": 0,
+    "source_prop_count": 22,
+    "matched_pairs": [],
+    "unsupported_summary_props": [],
+    "missing_source_props": [
+      {
+        "prop_id": "CAP1",
+        "cap_type": "Diagnosis",
+        "canonical_concept": "covid infection",
+        "category": "Diagnosis",
+        "speaker": "doctor",
+        "predicate": "diagnoses",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "diagnostic"
+        ],
+        "proposition_text": "The doctor diagnoses the patient with a covid infection."
+      },
+      {
+        "prop_id": "CAP2",
+        "cap_type": "Diagnosis",
+        "canonical_concept": "cold",
+        "category": "Diagnosis",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "diagnostic"
+        ],
+        "proposition_text": "The patient has a cold."
+      },
+      {
+        "prop_id": "CAP3",
+        "cap_type": "Diagnosis",
+        "canonical_concept": "infection",
+        "category": "Diagnosis",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "diagnostic"
+        ],
+        "proposition_text": "The patient has an infection."
+      },
+      {
+        "prop_id": "CAP4",
+        "cap_type": "Symptom",
+        "canonical_concept": "diet",
+        "category": "Symptom",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient has been doing pretty good with the diet."
+      },
+      {
+        "prop_id": "CAP5",
+        "cap_type": "Problem",
+        "canonical_concept": "high cholesterol",
+        "category": "Problem",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "quantitative"
+        ],
+        "proposition_text": "The patient is on Crestor 20 milligrams a day."
+      },
+      {
+        "prop_id": "CAP6",
+        "cap_type": "Symptom",
+        "canonical_concept": "travel",
+        "category": "Symptom",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "last week or so",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient traveled over the last week or so."
+      },
+      {
+        "prop_id": "CAP7",
+        "cap_type": "Symptom",
+        "canonical_concept": "fever",
+        "category": "Symptom",
+        "speaker": "patient",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "recent",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient thought they had a slight fever."
+      },
+      {
+        "prop_id": "CAP8",
+        "cap_type": "Symptom",
+        "canonical_concept": "pain",
+        "category": "Symptom",
+        "speaker": "doctor",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports pain in the left hand."
+      },
+      {
+        "prop_id": "CAP9",
+        "cap_type": "Symptom",
+        "canonical_concept": "left hand pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports left hand pain."
+      },
+      {
+        "prop_id": "CAP10",
+        "cap_type": "Symptom",
+        "canonical_concept": "cold",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports a cold."
+      },
+      {
+        "prop_id": "CAP11",
+        "cap_type": "Symptom",
+        "canonical_concept": "chest pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports chest pain."
+      },
+      {
+        "prop_id": "CAP12",
+        "cap_type": "Symptom",
+        "canonical_concept": "cervical lymphadenopathy",
+        "category": "Symptom",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "on exam",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient has cervical lymphadenopathy."
+      },
+      {
+        "prop_id": "CAP13",
+        "cap_type": "Symptom",
+        "canonical_concept": "ronchi",
+        "category": "Symptom",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "on exam",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient has bilateral ronchi."
+      },
+      {
+        "prop_id": "CAP14",
+        "cap_type": "Symptom",
+        "canonical_concept": "wheezing",
+        "category": "Symptom",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "on exam",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient has wheezing."
+      },
+      {
+        "prop_id": "CAP15",
+        "cap_type": "Problem",
+        "canonical_concept": "pain",
+        "category": "Problem",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient reports pain."
+      },
+      {
+        "prop_id": "CAP16",
+        "cap_type": "Order",
+        "canonical_concept": "lipid panel",
+        "category": "Order",
+        "speaker": "doctor",
+        "predicate": "orders",
+        "status": "affirmed",
+        "visit_state": "planned",
+        "temporality": "six months",
+        "claim_type_tags": [
+          "plan"
+        ],
+        "proposition_text": "The doctor orders a lipid panel in six months."
+      },
+      {
+        "prop_id": "CAP17",
+        "cap_type": "Order",
+        "canonical_concept": "stress test",
+        "category": "Order",
+        "speaker": "doctor",
+        "predicate": "orders",
+        "status": "affirmed",
+        "visit_state": "planned",
+        "temporality": "six months",
+        "claim_type_tags": [
+          "plan"
+        ],
+        "proposition_text": "The doctor orders a stress test in six months."
+      },
+      {
+        "prop_id": "CAP18",
+        "cap_type": "TestResult",
+        "canonical_concept": "covid positive",
+        "category": "TestResult",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient is positive for covid."
+      },
+      {
+        "prop_id": "CAP19",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "covid vaccine",
+        "category": "MedicationStatement",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "past",
+        "proposition_text": "The patient has received both stages of the covid vaccine."
+      },
+      {
+        "prop_id": "CAP20",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "crestor",
+        "category": "MedicationStatement",
+        "speaker": "doctor",
+        "predicate": "has",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "quantitative"
+        ],
+        "proposition_text": "The patient should continue taking crestor 20 milligrams a day."
+      },
+      {
+        "prop_id": "CAP21",
+        "cap_type": "ProblemHistory",
+        "canonical_concept": "upper respiratory infection",
+        "category": "ProblemHistory",
+        "speaker": "patient",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient has an upper respiratory infection."
+      },
+      {
+        "prop_id": "CAP22",
+        "cap_type": "Counseling",
+        "canonical_concept": "quarantine",
+        "category": "Counseling",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "planned",
+        "temporality": "10 days",
+        "claim_type_tags": [
+          "quantitative"
+        ],
+        "proposition_text": "The doctor advises the patient to quarantine for 10 days."
+      }
+    ]
+  },
+  "reference_gpt_f1_items": {
+    "active_problems_symptoms": [],
+    "negated_findings": [],
+    "uncertain_findings": [],
+    "medication_treatment": [],
+    "plan_followup": [],
+    "_chunk_count": [
+      "4"
+    ],
+    "_parse_failures": [
+      "{\"chunk_index\": 1, \"stage\": \"call_llm\", \"error\": \"LLM call failed after retries: Error code: 404\"}",
+      "{\"chunk_index\": 2, \"stage\": \"call_llm\", \"error\": \"LLM call failed after retries: Error code: 404\"}",
+      "{\"chunk_index\": 3, \"stage\": \"call_llm\", \"error\": \"LLM call failed after retries: Error code: 404\"}",
+      "{\"chunk_index\": 4, \"stage\": \"call_llm\", \"error\": \"LLM call failed after retries: Error code: 404\"}"
+    ]
+  },
+  "summary_gpt_f1_items": {
+    "active_problems_symptoms": [],
+    "negated_findings": [],
+    "uncertain_findings": [],
+    "medication_treatment": [],
+    "plan_followup": [],
+    "_chunk_count": [
+      "1"
+    ],
+    "_parse_failures": [
+      "{\"chunk_index\": 1, \"stage\": \"call_llm\", \"error\": \"LLM call failed after retries: Error code: 404\"}"
+    ]
+  },
+  "gpt_f1_alignment": {
+    "by_category": {
+      "active_problems_symptoms": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "matched_count": 0,
+        "pred_count": 0,
+        "ref_count": 0,
+        "matches": [],
+        "unsupported_pred_items": [],
+        "missing_ref_items": []
+      },
+      "negated_findings": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "matched_count": 0,
+        "pred_count": 0,
+        "ref_count": 0,
+        "matches": [],
+        "unsupported_pred_items": [],
+        "missing_ref_items": []
+      },
+      "uncertain_findings": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "matched_count": 0,
+        "pred_count": 0,
+        "ref_count": 0,
+        "matches": [],
+        "unsupported_pred_items": [],
+        "missing_ref_items": []
+      },
+      "medication_treatment": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "matched_count": 0,
+        "pred_count": 0,
+        "ref_count": 0,
+        "matches": [],
+        "unsupported_pred_items": [],
+        "missing_ref_items": []
+      },
+      "plan_followup": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "matched_count": 0,
+        "pred_count": 0,
+        "ref_count": 0,
+        "matches": [],
+        "unsupported_pred_items": [],
+        "missing_ref_items": []
+      }
+    }
+  },
+  "reference_nair_concepts": {
+    "sections": [
+      {
+        "heading": "Clinical Note",
+        "section_value": "CHIEF COMPLAINT\nUpper respiratory infection.\nHISTORY OF PRESENT ILLNESS\nLogan Harris is a 57-year-old male with a past medical history significant for coronary artery bypass grafting, hyperlipidemia, and OCD, who presents with an upper respiratory infection.\nThe patient reports that about a week ago he started to get a cold, which has worsened in the last 2 or 3 days. He endorses some postnasal drip for the beginning of the week, however, it has seemed to move into his chest. He denies chest pain other than his chest congestion. He was able to exercise prior to getting sick. He denies anyone else being sick in his house. He denies fever and shortness of breath.\nRegarding his high cholesterol, he states he has been pretty good for the most part. He did a little travel over the last week or so and his diet was not great but for the most part it is pretty good. He is on Crestor 20 mg a day and is tolerating it well. He denies any muscle aches. He had his bypass grafting last year and is doing great.\nThe patient is fully vaccinated for COVID-19.\nREVIEW OF SYSTEMS\n• Constitutional: Denies fevers.\n• Ears, Nose, Mouth and Throat: Endorses post nasal drip.",
+        "medical_concepts": [
+          "upper respiratory infection",
+          "coronary artery bypass grafting",
+          "hyperlipidemia",
+          "obsessive-compulsive disorder",
+          "cold",
+          "postnasal drip",
+          "chest congestion",
+          "chest pain",
+          "fever",
+          "shortness of breath",
+          "high cholesterol",
+          "Crestor",
+          "COVID-19 vaccination",
+          "muscle aches"
+        ]
+      },
+      {
+        "heading": "Clinical Note",
+        "section_value": "• Cardiovascular: Endorses chest congestion.\n• Respiratory: Denies shortness of breath.\n• Psychiatric: Endorses obsessive compulsive disorder.\nPHYSICAL EXAMINATION\n• Neck: Positive cervical lymphadenopathy\n• Respiratory: Rhonchi and wheezing bilaterally.\nVITALS REVIEWED\n• Oxygen Saturation: 96%.\nRESULTS\nLipid panel: Within normal limits.",
+        "medical_concepts": [
+          "chest congestion",
+          "shortness of breath",
+          "obsessive compulsive disorder",
+          "cervical lymphadenopathy",
+          "rhonchi",
+          "wheezing",
+          "oxygen saturation",
+          "lipid panel"
+        ]
+      },
+      {
+        "heading": "Clinical Note",
+        "section_value": "COVID-19 test: Positive\nASSESSMENT AND PLAN\nLogan Harris is a 57-year-old male with a past medical history significant for coronary artery bypass grafting, hyperlipidemia, and OCD who presents today for upper respiratory symptoms.\nCOVID-19 Positive.\n• Medical Reasoning: The patient presents with upper respiratory symptoms and his COVID-19 test was positive today. He has received both doses of the vaccination. His symptoms seem to be very mild at this time. His oxygenation is good at 96%.\n• Patient Education and Counseling: I advised him to quarantine for 10 days and we discussed that he should try to avoid family members. I asked him to call me if his symptoms worsen.\nHypercholesterolemia.\n• Medical Reasoning: He is doing well on Crestor 20 mg once a day. His cholesterol looked good on his most recent lipid panel.\n• Patient Education and Counseling: I encouraged him to continue to watch his diet.\n• Additional Testing: We will go ahead and order another lipid panel for 6 months.",
+        "medical_concepts": [
+          "COVID-19 test",
+          "COVID-19",
+          "upper respiratory symptoms",
+          "oxygenation",
+          "hyperlipidemia",
+          "OCD",
+          "coronary artery bypass grafting",
+          "hypercholesterolemia",
+          "Crestor",
+          "lipid panel",
+          "cholesterol"
+        ]
+      },
+      {
+        "heading": "Clinical Note",
+        "section_value": "• Medical Treatment: He can continue Crestor 20 mg once a day.\nHistory of coronary artery bypass grafting.\n• Medical Reasoning: He underwent coronary artery bypass grafting approximately 1 year ago. His coronary artery disease seems to be under control currently. He denies chest pain.\n• Additional Testing: We will do a stress test in 6 months.\nPatient Agreements: The patient understands and agrees with the recommended medical treatment plan.",
+        "medical_concepts": [
+          "Crestor",
+          "coronary artery bypass grafting",
+          "coronary artery disease",
+          "chest pain",
+          "stress test"
+        ]
+      }
+    ],
+    "medical_concepts": [
+      "upper respiratory infection",
+      "coronary artery bypass grafting",
+      "hyperlipidemia",
+      "obsessive-compulsive disorder",
+      "cold",
+      "postnasal drip",
+      "chest congestion",
+      "chest pain",
+      "fever",
+      "shortness of breath",
+      "high cholesterol",
+      "Crestor",
+      "COVID-19 vaccination",
+      "muscle aches",
+      "cervical lymphadenopathy",
+      "rhonchi",
+      "wheezing",
+      "oxygen saturation",
+      "lipid panel",
+      "COVID-19 test",
+      "COVID-19",
+      "upper respiratory symptoms",
+      "oxygenation",
+      "OCD",
+      "hypercholesterolemia",
+      "cholesterol",
+      "coronary artery disease",
+      "stress test"
+    ],
+    "section_count": 4
+  },
+  "summary_nair_concepts": {
+    "sections": [
+      {
+        "heading": "S",
+        "section_value": "The patient reports a cold onset approximately one week ago, with associated post-nasal drip and congestion. He denies fever, shortness of breath, or chest pain. He reports receiving both COVID-19 vaccines and is unsure if anyone else in his household is sick. He reports no muscle aches related to his statin medication.",
+        "medical_concepts": [
+          "cold",
+          "post-nasal drip",
+          "congestion",
+          "fever",
+          "shortness of breath",
+          "chest pain",
+          "COVID-19 vaccines",
+          "muscle aches",
+          "statin medication"
+        ]
+      },
+      {
+        "heading": "O",
+        "section_value": "The patient's oxygenation is 96%. Cervical lymphadenopathy is present. Lipid panel shows cholesterol is generally good. The COVID-19 test result is positive. Lung auscultation reveals bilateral rhonchi and some wheezing.",
+        "medical_concepts": [
+          "oxygenation",
+          "cervical lymphadenopathy",
+          "lipid panel",
+          "cholesterol",
+          "COVID-19 test",
+          "COVID-19",
+          "lung auscultation",
+          "bilateral rhonchi",
+          "wheezing"
+        ]
+      },
+      {
+        "heading": "A",
+        "section_value": "The patient has a positive COVID-19 test and is experiencing upper respiratory symptoms. He has a history of coronary artery bypass grafting and controlled coronary artery disease.",
+        "medical_concepts": [
+          "COVID-19",
+          "upper respiratory symptoms",
+          "coronary artery bypass grafting",
+          "coronary artery disease"
+        ]
+      },
+      {
+        "heading": "P",
+        "section_value": "Continue Crestor 20 mg daily. Order a repeat lipid panel in six months. Follow up if symptoms worsen.",
+        "medical_concepts": [
+          "Crestor",
+          "lipid panel"
+        ]
+      }
+    ],
+    "medical_concepts": [
+      "cold",
+      "post-nasal drip",
+      "congestion",
+      "fever",
+      "shortness of breath",
+      "chest pain",
+      "COVID-19 vaccines",
+      "muscle aches",
+      "statin medication",
+      "oxygenation",
+      "cervical lymphadenopathy",
+      "lipid panel",
+      "cholesterol",
+      "COVID-19 test",
+      "COVID-19",
+      "lung auscultation",
+      "bilateral rhonchi",
+      "wheezing",
+      "upper respiratory symptoms",
+      "coronary artery bypass grafting",
+      "coronary artery disease",
+      "Crestor"
+    ],
+    "section_count": 4
+  },
+  "nair_alignment": {
+    "pred_concepts": [
+      "cold",
+      "post-nasal drip",
+      "congestion",
+      "fever",
+      "shortness of breath",
+      "chest pain",
+      "COVID-19 vaccines",
+      "muscle aches",
+      "statin medication",
+      "oxygenation",
+      "cervical lymphadenopathy",
+      "lipid panel",
+      "cholesterol",
+      "COVID-19 test",
+      "COVID-19",
+      "lung auscultation",
+      "bilateral rhonchi",
+      "wheezing",
+      "upper respiratory symptoms",
+      "coronary artery bypass grafting",
+      "coronary artery disease",
+      "Crestor"
+    ],
+    "ref_concepts": [
+      "upper respiratory infection",
+      "coronary artery bypass grafting",
+      "hyperlipidemia",
+      "obsessive-compulsive disorder",
+      "cold",
+      "postnasal drip",
+      "chest congestion",
+      "chest pain",
+      "fever",
+      "shortness of breath",
+      "high cholesterol",
+      "Crestor",
+      "COVID-19 vaccination",
+      "muscle aches",
+      "cervical lymphadenopathy",
+      "rhonchi",
+      "wheezing",
+      "oxygen saturation",
+      "lipid panel",
+      "COVID-19 test",
+      "COVID-19",
+      "upper respiratory symptoms",
+      "oxygenation",
+      "OCD",
+      "hypercholesterolemia",
+      "cholesterol",
+      "coronary artery disease",
+      "stress test"
+    ],
+    "precision_alignment": {
+      "found_b": [
+        "cold",
+        "post-nasal drip",
+        "congestion",
+        "fever",
+        "shortness of breath",
+        "chest pain",
+        "COVID-19 vaccines",
+        "muscle aches",
+        "statin medication",
+        "oxygenation",
+        "cervical lymphadenopathy",
+        "lipid panel",
+        "cholesterol",
+        "COVID-19 test",
+        "COVID-19",
+        "bilateral rhonchi",
+        "wheezing",
+        "upper respiratory symptoms",
+        "coronary artery bypass grafting",
+        "coronary artery disease",
+        "Crestor"
+      ],
+      "not_found_b": [
+        "lung auscultation"
+      ],
+      "chunk_count": 1,
+      "chunk_results": [
+        {
+          "found_b": [
+            "cold",
+            "post-nasal drip",
+            "congestion",
+            "fever",
+            "shortness of breath",
+            "chest pain",
+            "COVID-19 vaccines",
+            "muscle aches",
+            "statin medication",
+            "oxygenation",
+            "cervical lymphadenopathy",
+            "lipid panel",
+            "cholesterol",
+            "COVID-19 test",
+            "COVID-19",
+            "bilateral rhonchi",
+            "wheezing",
+            "upper respiratory symptoms",
+            "coronary artery bypass grafting",
+            "coronary artery disease",
+            "Crestor"
+          ],
+          "not_found_b": [
+            "lung auscultation"
+          ]
+        }
+      ]
+    },
+    "recall_alignment": {
+      "found_b": [
+        "coronary artery bypass grafting",
+        "cold",
+        "postnasal drip",
+        "chest congestion",
+        "chest pain",
+        "fever",
+        "shortness of breath",
+        "Crestor",
+        "COVID-19 vaccination",
+        "muscle aches",
+        "cervical lymphadenopathy",
+        "rhonchi",
+        "wheezing",
+        "lipid panel",
+        "COVID-19 test",
+        "COVID-19",
+        "upper respiratory symptoms",
+        "oxygenation",
+        "cholesterol",
+        "coronary artery disease"
+      ],
+      "not_found_b": [
+        "upper respiratory infection",
+        "hyperlipidemia",
+        "obsessive-compulsive disorder",
+        "high cholesterol",
+        "oxygen saturation",
+        "OCD",
+        "hypercholesterolemia",
+        "stress test"
+      ],
+      "chunk_count": 2,
+      "chunk_results": [
+        {
+          "found_b": [
+            "coronary artery bypass grafting",
+            "cold",
+            "postnasal drip",
+            "chest congestion",
+            "chest pain",
+            "fever",
+            "shortness of breath",
+            "Crestor",
+            "COVID-19 vaccination",
+            "muscle aches",
+            "cervical lymphadenopathy",
+            "rhonchi",
+            "wheezing",
+            "lipid panel",
+            "COVID-19 test",
+            "COVID-19",
+            "upper respiratory symptoms",
+            "oxygenation"
+          ],
+          "not_found_b": [
+            "upper respiratory infection",
+            "hyperlipidemia",
+            "obsessive-compulsive disorder",
+            "high cholesterol",
+            "oxygen saturation",
+            "OCD"
+          ]
+        },
+        {
+          "found_b": [
+            "cholesterol",
+            "coronary artery disease"
+          ],
+          "not_found_b": [
+            "hypercholesterolemia",
+            "stress test"
+          ]
+        }
+      ]
+    }
+  },
+  "semantic_cap_audit": {
+    "source_cap_recall": [
+      {
+        "cap_id": "P1",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P2",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P3",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P4",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P5",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P6",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P7",
+        "judgment": "contradicted",
+        "reason": null
+      },
+      {
+        "cap_id": "P8",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P9",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P10",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P11",
+        "judgment": "contradicted",
+        "reason": null
+      },
+      {
+        "cap_id": "P12",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P13",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P14",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P15",
+        "judgment": "contradicted",
+        "reason": null
+      },
+      {
+        "cap_id": "P16",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P1",
+        "judgment": "contradicted",
+        "reason": null
+      },
+      {
+        "cap_id": "P2",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P3",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P4",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P5",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P6",
+        "judgment": "missing",
+        "reason": null
+      }
+    ],
+    "summary_cap_precision": [],
+    "metrics": {
+      "semantic_cap_precision": 0.0,
+      "semantic_cap_recall": 0.4545,
+      "semantic_cap_f1": 0.0,
+      "semantic_cap_precision_supported_count": 0,
+      "semantic_cap_precision_partial_count": 0,
+      "semantic_cap_precision_denominator": 0,
+      "semantic_cap_recall_supported_count": 6,
+      "semantic_cap_recall_partial_count": 8,
+      "semantic_cap_recall_denominator": 22,
+      "semantic_cap_low_value_source_count": 0,
+      "semantic_cap_low_value_summary_count": 0,
+      "semantic_cap_missing_count": 4,
+      "semantic_cap_unsupported_count": 0,
+      "semantic_cap_contradicted_source_count": 4,
+      "semantic_cap_contradicted_summary_count": 0
+    }
+  },
+  "safety_judgment": null,
+  "section_judgment": {
+    "section_miscategorizations": [],
+    "summary_statistics": {
+      "section_appropriateness_score": 1.0,
+      "section_miscategorization_count": 0,
+      "major_section_miscategorization_count": 0
+    }
+  },
+  "pdsqi_judgment": {
+    "citation_applicable": 0,
+    "citation": 0,
+    "accurate": 4,
+    "thorough": 3,
+    "useful": 3,
+    "organized": 4,
+    "comprehensible": 5,
+    "succinct": 5,
+    "abstraction": 1,
+    "synthesized": 4,
+    "voice_summ": 0,
+    "voice_note": 0,
+    "pdsqi_core_mean": 4.0
+  },
+  "llm_checklist_judgment": {
+    "content_preservation_core": 3,
+    "noise_suppression": 5,
+    "lay_expression_preservation": 3,
+    "state_update_fidelity": 3,
+    "temporality_preservation": 4,
+    "problem_evidence_linkage": 3,
+    "state_plan_separation": 3,
+    "section_organization_appropriateness": 4,
+    "overall_clinical_usability": 3,
+    "clinically_meaningful_omission": "Yes",
+    "clinically_concerning_hallucination": "No",
+    "checklist_a_mean": 3.6667,
+    "checklist_b_mean": 3.5,
+    "checklist_c_mean": 3.3333,
+    "llm_checklist_abc_mean": 3.5,
+    "llm_checklist_mean_no_usability": 3.5,
+    "llm_checklist_total_score": 31,
+    "llm_checklist_mean": 3.4444,
+    "llm_checklist_meaningful_omission_yes": 1,
+    "llm_checklist_concerning_hallucination_yes": 0
+  },
+  "metrics": {
+    "case_id": "D2N173",
+    "method": "cluster2sent",
+    "template": "soap",
+    "source_cap_count": 22,
+    "event_plan_count": null,
+    "summary_cap_count": 0,
+    "cap_matched_count": 0,
+    "cap_precision": 0.0,
+    "cap_recall": 0.0,
+    "cap_f1": 0.0,
+    "unsupported_summary_cap_count": 0,
+    "missing_source_cap_count": 22,
+    "summary_runtime_seconds": null,
+    "summary_cap_runtime_seconds": 0.517,
+    "event_plan_runtime_seconds": null,
+    "rouge_l_f1_vs_reference": 0.183,
+    "token_f1_vs_reference": 0.3399,
+    "gptf1_macro_f1": 0.0,
+    "nair_gpt_precision": 0.9545,
+    "nair_gpt_recall": 0.7143,
+    "nair_gpt_f1": 0.8171,
+    "semantic_cap_precision": 0.0,
+    "semantic_cap_recall": 0.4545,
+    "semantic_cap_f1": 0.0,
+    "hallucination_count": null,
+    "major_hallucination_count": null,
+    "omission_count": null,
+    "major_omission_count": null,
+    "section_appropriateness_score": 1.0,
+    "section_miscategorization_count": 0,
+    "major_section_miscategorization_count": 0,
+    "pdsqi_core_mean": 4.0,
+    "pdsqi_accurate": 4,
+    "pdsqi_thorough": 3,
+    "llm_checklist_total_score": 31,
+    "llm_checklist_mean": 3.4444,
+    "llm_checklist_mean_no_usability": 3.5,
+    "checklist_a_mean": 3.6667,
+    "checklist_b_mean": 3.5,
+    "checklist_c_mean": 3.3333,
+    "llm_checklist_abc_mean": 3.5,
+    "content_preservation_core": 3,
+    "noise_suppression": 5,
+    "lay_expression_preservation": 3,
+    "state_update_fidelity": 3,
+    "temporality_preservation": 4,
+    "problem_evidence_linkage": 3,
+    "state_plan_separation": 3,
+    "section_organization_appropriateness": 4,
+    "overall_clinical_usability": 3,
+    "llm_checklist_meaningful_omission_yes": 1,
+    "llm_checklist_concerning_hallucination_yes": 0,
+    "gptf1_active_problems_symptoms_precision": 0.0,
+    "gptf1_active_problems_symptoms_recall": 0.0,
+    "gptf1_active_problems_symptoms_f1": 0.0,
+    "gptf1_active_problems_symptoms_pred_count": 0,
+    "gptf1_active_problems_symptoms_ref_count": 0,
+    "gptf1_negated_findings_precision": 0.0,
+    "gptf1_negated_findings_recall": 0.0,
+    "gptf1_negated_findings_f1": 0.0,
+    "gptf1_negated_findings_pred_count": 0,
+    "gptf1_negated_findings_ref_count": 0,
+    "gptf1_uncertain_findings_precision": 0.0,
+    "gptf1_uncertain_findings_recall": 0.0,
+    "gptf1_uncertain_findings_f1": 0.0,
+    "gptf1_uncertain_findings_pred_count": 0,
+    "gptf1_uncertain_findings_ref_count": 0,
+    "gptf1_medication_treatment_precision": 0.0,
+    "gptf1_medication_treatment_recall": 0.0,
+    "gptf1_medication_treatment_f1": 0.0,
+    "gptf1_medication_treatment_pred_count": 0,
+    "gptf1_medication_treatment_ref_count": 0,
+    "gptf1_plan_followup_precision": 0.0,
+    "gptf1_plan_followup_recall": 0.0,
+    "gptf1_plan_followup_f1": 0.0,
+    "gptf1_plan_followup_pred_count": 0,
+    "gptf1_plan_followup_ref_count": 0,
+    "nair_pred_concept_count": 22,
+    "nair_ref_concept_count": 28,
+    "nair_precision_match_count": 21,
+    "nair_recall_match_count": 20,
+    "semantic_cap_precision_supported_count": 0,
+    "semantic_cap_precision_partial_count": 0,
+    "semantic_cap_precision_denominator": 0,
+    "semantic_cap_recall_supported_count": 6,
+    "semantic_cap_recall_partial_count": 8,
+    "semantic_cap_recall_denominator": 22,
+    "semantic_cap_low_value_source_count": 0,
+    "semantic_cap_low_value_summary_count": 0,
+    "semantic_cap_missing_count": 4,
+    "semantic_cap_unsupported_count": 0,
+    "semantic_cap_contradicted_source_count": 4,
+    "semantic_cap_contradicted_summary_count": 0,
+    "pdsqi_useful": 3,
+    "pdsqi_organized": 4,
+    "pdsqi_comprehensible": 5,
+    "pdsqi_succinct": 5,
+    "pdsqi_synthesized": 4
+  }
+}

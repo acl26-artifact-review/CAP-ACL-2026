@@ -1,0 +1,161 @@
+Case: D2N151
+
+Problem List and Visit State Tracking
+
+Problem List
+- pain severity | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T1
+  Summary: The patient rates the pain as 7 on a 1-10 scale.
+  ClusterId: CL1
+  TemporalProfile: current
+  Updates:
+  - CAP2: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T1 :: The patient rates the pain as 7 on a 1-10 scale.
+- elbow pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T1
+  Summary: The patient reports pain in the inside of their elbow.
+  ClusterId: CL2
+  TemporalProfile: current
+  Updates:
+  - CAP3: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T1 :: The patient reports pain in the inside of their elbow.
+- pain radiation | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T5
+  Summary: The patient reports pain radiating down their arm.
+  ClusterId: CL3
+  TemporalProfile: current
+  Updates:
+  - CAP4: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T5 :: The patient reports pain radiating down their arm.
+- pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T10,T11,T13,T14
+  Summary: The patient reports pain.
+  ClusterId: CL4
+  TemporalProfile: current
+  Updates:
+  - CAP1: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T10,T14 :: The patient reports pain.
+  - CAP5: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T11 :: The patient rates the pain as a seven.
+  - CAP6: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T13 :: The patient's pain wakes him up at night.
+- ice | verification_status=unconfirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T17
+  Summary: The patient tried ice.
+  ClusterId: CL6
+  TemporalProfile: current
+  Updates:
+  - CAP17: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=current turns=T17 :: The patient tried ice.
+- hand pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T19
+  Summary: The patient reports pain in the left hand.
+  ClusterId: CL7
+  TemporalProfile: current
+  Updates:
+  - CAP7: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T19 :: The patient reports pain in the left hand.
+- hypertension | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T24
+  Summary: The patient has a history of hypertension.
+  ClusterId: CL8
+  TemporalProfile: current
+  Updates:
+  - CAP9: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T24 :: The patient has a history of hypertension.
+- diabetes | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T28
+  Summary: The patient is being treated for diabetes.
+  ClusterId: CL10
+  TemporalProfile: current
+  Updates:
+  - CAP10: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T28 :: The patient is being treated for diabetes.
+- sweet tooth | verification_status=unconfirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T31
+  Summary: The patient has a sweet tooth.
+  ClusterId: CL12
+  TemporalProfile: past
+  Updates:
+  - CAP15: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=past turns=T31 :: The patient has a sweet tooth.
+- cake baking | verification_status=unconfirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T33
+  Summary: The patient bakes cakes.
+  ClusterId: CL13
+  TemporalProfile: past
+  Updates:
+  - CAP18: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=past turns=T33 :: The patient bakes cakes.
+- senna rolls | verification_status=unconfirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T37
+  Summary: The patient makes senna rolls.
+  ClusterId: CL14
+  TemporalProfile: past
+  Updates:
+  - CAP16: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=past turns=T37 :: The patient makes senna rolls.
+- dietary management | verification_status=confirmed | clinical_status=planned | modalities=interview | speakers=patient | evidence=T47
+  Summary: The patient needs to improve dietary management.
+  ClusterId: CL17
+  TemporalProfile: future
+  Updates:
+  - CAP11: content_source=patient modality=interview verification_status=confirmed clinical_status=planned temporality=future turns=T47 :: The patient needs to improve dietary management.
+- right elbow pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T63
+  Summary: The patient reports pain in the right elbow.
+  ClusterId: CL18
+  TemporalProfile: current
+  Updates:
+  - CAP8: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T63 :: The patient reports pain in the right elbow.
+- pain with resisted pronation | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T70
+  Summary: The patient experiences pain with resisted pronation.
+  ClusterId: CL19
+  TemporalProfile: current
+  Updates:
+  - CAP12: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T70 :: The patient experiences pain with resisted pronation.
+- pain with wrist extension | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T72
+  Summary: The patient experiences pain with wrist extension.
+  ClusterId: CL20
+  TemporalProfile: current
+  Updates:
+  - CAP14: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T72 :: The patient experiences pain with wrist extension.
+- pain with flexion | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T74
+  Summary: The patient experiences pain with wrist flexion.
+  ClusterId: CL21
+  TemporalProfile: current
+  Updates:
+  - CAP13: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T74 :: The patient experiences pain with wrist flexion.
+
+Medication Tracking
+- [MedicationState] ibuprofen | verification_status=unconfirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T15
+  Summary: The patient is taking ibuprofen.
+  ClusterId: CL5
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient is taking ibuprofen. (T15)
+  - The patient has tried ibuprofen. (T15)
+  Updates:
+  - CAP24: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T15 :: The patient is taking ibuprofen.
+  - CAP25: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=current turns=T15 :: The patient has tried ibuprofen.
+- [MedicationState] lisinopril | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=doctor | evidence=T24
+  Summary: The patient is taking 10 milligrams of lisinopril.
+  ClusterId: CL9
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient is taking 10 milligrams of lisinopril. (T24)
+  Updates:
+  - CAP23: content_source=doctor modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T24 :: The patient is taking 10 milligrams of lisinopril.
+- [MedicationState] metformin | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=doctor | evidence=T28
+  Summary: The patient is taking 500 milligrams of metformin twice a day.
+  ClusterId: CL11
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient is taking 500 milligrams of metformin twice a day. (T28)
+  Updates:
+  - CAP22: content_source=doctor modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T28 :: The patient is taking 500 milligrams of metformin twice a day.
+- [MedicationChange] dietitian consultation | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T42
+  Summary: The doctor recommends contacting a dietitian.
+  ClusterId: CL15
+  TemporalProfile: future
+  PlannedChanges:
+  - The doctor recommends contacting a dietitian. (T42)
+  Updates:
+  - CAP20: content_source=doctor modality=plan verification_status=unconfirmed clinical_status=planned temporality=future turns=T42 :: The doctor recommends contacting a dietitian.
+- [MedicationChange] ibuprofen | verification_status=confirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T74
+  Summary: The doctor orders ibuprofen at 600 milligrams every six hours with food for one week.
+  ClusterId: CL23
+  TemporalProfile: within one week
+  PlannedChanges:
+  - The doctor orders ibuprofen at 600 milligrams every six hours with food for one week. (T74)
+  Updates:
+  - CAP21: content_source=doctor modality=plan verification_status=confirmed clinical_status=planned temporality=within one week turns=T74 :: The doctor orders ibuprofen at 600 milligrams every six hours with food for one week.
+
+Other Structured States
+- [FollowUp] refresher | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T42
+  Summary: The doctor suggests a refresher.
+  ClusterId: CL16
+  TemporalProfile: future
+- [Plan] sling | verification_status=confirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T74
+  Summary: The doctor orders a sling to be worn during waking hours.
+  ClusterId: CL22
+  TemporalProfile: during waking hours
+- [Plan] ice packs | verification_status=confirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T74
+  Summary: The doctor advises the patient to apply ice packs to the elbow for twenty minutes three times a day.
+  ClusterId: CL24
+  TemporalProfile: three times daily

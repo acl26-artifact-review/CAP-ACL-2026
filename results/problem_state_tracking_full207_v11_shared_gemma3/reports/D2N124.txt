@@ -1,0 +1,50 @@
+Case: D2N124
+
+Problem List and Visit State Tracking
+
+Problem List
+- pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T9
+  Summary: The patient reports pain.
+  ClusterId: CL1
+  TemporalProfile: current
+  Updates:
+  - CAP4: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T9 :: The patient reports pain.
+- difficulty walking | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T13
+  Summary: The patient reports difficulty walking.
+  ClusterId: CL2
+  TemporalProfile: current
+  Updates:
+  - CAP3: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T13 :: The patient reports difficulty walking.
+- lateral malleolar fracture | verification_status=confirmed | clinical_status=active | modalities=assessment | speakers=doctor | evidence=T16
+  Summary: The doctor diagnoses a lateral malleolar fracture.
+  ClusterId: CL3
+  TemporalProfile: current
+  Updates:
+  - CAP2: content_source=doctor modality=assessment verification_status=confirmed clinical_status=active temporality=current turns=T16 :: The doctor diagnoses a lateral malleolar fracture.
+- left hand pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T27
+  Summary: The patient reports pain in the left hand.
+  ClusterId: CL6
+  TemporalProfile: current
+  Updates:
+  - CAP1: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T27 :: The patient reports pain in the left hand.
+
+Medication Tracking
+- [MedicationChange] surgery | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T16
+  Summary: The doctor recommends surgery.
+  ClusterId: CL4
+  TemporalProfile: future
+  PlannedChanges:
+  - The doctor recommends surgery. (T16)
+  Updates:
+  - CAP5: content_source=doctor modality=plan verification_status=unconfirmed clinical_status=planned temporality=future turns=T16 :: The doctor recommends surgery.
+- [MedicationChange] crutches | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T16
+  Summary: The doctor recommends crutches.
+  ClusterId: CL5
+  TemporalProfile: future
+  PlannedChanges:
+  - The doctor recommends crutches. (T16)
+  Updates:
+  - CAP6: content_source=doctor modality=plan verification_status=unconfirmed clinical_status=planned temporality=future turns=T16 :: The doctor recommends crutches.
+
+Other Structured States
+- None

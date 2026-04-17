@@ -1,0 +1,23 @@
+{
+  "section_miscategorizations": [
+    {
+      "text": "The doctor will perform a physical exam on the patient's eyes.",
+      "current_section": "Findings",
+      "expected_section": "Plan",
+      "severity": "major",
+      "reason": "This is a future intended action (an order/plan to perform an exam), not an actual exam finding, result, or observed behavior."
+    },
+    {
+      "text": "The doctor orders a physical exam on the patient's eyes.",
+      "current_section": "Plan",
+      "expected_section": "Findings",
+      "severity": "minor",
+      "reason": "Ordering an exam belongs in the plan, but this duplicates the earlier statement that the doctor will perform the exam; the true exam belongs in Findings, while the order itself is correctly in Plan. The confusion arises because the earlier Findings sentence is actually the plan, not a result."
+    }
+  ],
+  "summary_statistics": {
+    "section_appropriateness_score": 0.7,
+    "section_miscategorization_count": 2,
+    "major_section_miscategorization_count": 1
+  }
+}

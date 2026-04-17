@@ -1,0 +1,1557 @@
+{
+  "case_id": "D2N134",
+  "method": "cluster2sent",
+  "template": "soap",
+  "summary_text": "S:\nThe patient reports fatigue for the past two months, joint pain in her elbows, nausea, loss of appetite, and body aches. The patient also reports a bull's-eye rash and fever.\n\nO:\nThe patient's temperature is 100.8°F. A rash is present on the patient's arms and trunk.\n\nA:\nThe patient's symptoms and physical exam findings are consistent with a possible infection and cellulitis. The clinician suspects cervical radiculopathy.\n\nP:\nThe clinician plans a cervical MRI. The clinician prescribes doxycycline. The clinician orders a hemoglobin A1c and a lipid panel.",
+  "reference_summary": "CHIEF COMPLAINT\n\nAbnormal labs.\n\nHISTORY OF PRESENT ILLNESS\n\nThe patient is a 31-year-old female with a past medical history significant for type 2 diabetes, and hypertension who presents with abnormal labs. She had an insect bite at her last visit after hiking in the woods. We drew a Lyme titer which came back positive.\n\nThe patient reports she has been feeling tired and lacking a lot of energy. She also notes swollen elbow joints, body aches, bullseye rash, and nausea. She states she has not been able to eat much. What she does eat has been bland foods such as crackers. She denies any high fevers.\n\nRegarding her type 2 diabetes, she states her blood sugars have been okay. She notes they are sometimes a little high or low, but nothing too far out of range. She is still taking metformin.\n\nRegarding her hypertension, she is monitoring her blood pressure at home and it has been good. She is avoiding salty foods and is still taking lisinopril.\n\nThe patient denies abdominal pain and diarrhea.\n\nREVIEW OF SYSTEMS\n\n• Constitutional: Denies fevers. Endorses fatigue.\n• Gastrointestinal: Denies abdominal pain and diarrhea. Endorses nausea.\n• Musculoskeletal: Endorses bilateral elbow joint swelling, pain. Endorses body aches.\n• Integumentary: Endorses a rash.\n\nPHYSICAL EXAMINATION\n\n• Gastrointestinal: Examination of her abdomen reveals warmth to palpation. Nontender to palpation. No evidence of cellulitis.\n• Musculoskeletal: Swelling and pain to palpation of elbow joints bilaterally.\n• Integumentary: Small bullseye rash on the left abdominal quadrant.\n\nRESULTS\n\nLyme titer: elevated.\n\nLabs: WBC is within normal limits. All other labs are normal as well.\n\nASSESSMENT AND PLAN\n\nThe patient is a 31-year-old female with a past medical history significant for type 2 diabetes, and hypertension who presents with abnormal labs.\n\nNewly diagnosed Lyme disease.\n• Medical Reasoning: This is a new issue for her. She presented with an insect bite at her last visit, and her subsequent lyme titer was elevated.\n• Medical Treatment: I am going to prescribe doxycycline 100 mg twice a day for 3 weeks. I am going to touch base with an infectious disease doctor to ensure nothing else that needs to be done. I want to see her again next week for follow-up for this.\n\nHypertension.\n• Medical Reasoning: This has been well-controlled based on home monitoring. She has been compliant with dietary modifications including limiting her sodium intake.\n• Additional Testing: I am going to order a lipid panel.\n• Medical Treatment: She will continue lisinopril 10 mg a day. This was refilled today.\n• Patient Education and Counseling: I advised the patient to continue to regularly monitor her blood pressures at home.\n\nDiabetes type 2.\n• Medical Reasoning: She has noticed intermittent elevations of her blood glucose levels but has been compliant with the use of metformin. Her diet has been limited due to nausea in the setting of Lyme disease.\n• Additional Testing: I am going to order a hemoglobin A1c to ensure no medication changes are needed.\n\nPatient Agreements: The patient understands and agrees with the recommended medical treatment plan.",
+  "source_cap": {
+    "atomic_propositions": [
+      {
+        "prop_id": "CAP1",
+        "cap_type": "Symptom",
+        "canonical_concept": "pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports pain to palpation of the elbow joints."
+      },
+      {
+        "prop_id": "CAP2",
+        "cap_type": "Symptom",
+        "canonical_concept": "joint pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports swollen, painful joints in their elbows."
+      },
+      {
+        "prop_id": "CAP3",
+        "cap_type": "Symptom",
+        "canonical_concept": "bull's-eye rash",
+        "category": "Symptom",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient describes the rash as resembling a bull's-eye."
+      },
+      {
+        "prop_id": "CAP4",
+        "cap_type": "Problem",
+        "canonical_concept": "swelling",
+        "category": "Problem",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient has swelling of the elbow joints bilaterally."
+      },
+      {
+        "prop_id": "CAP5",
+        "cap_type": "Symptom",
+        "canonical_concept": "pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports pain in the left hand."
+      },
+      {
+        "prop_id": "CAP6",
+        "cap_type": "Symptom",
+        "canonical_concept": "high fever",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "uncertain",
+        "visit_state": "historical",
+        "temporality": "noticed",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports having noticed high fevers."
+      },
+      {
+        "prop_id": "CAP7",
+        "cap_type": "Problem",
+        "canonical_concept": "Lyme disease",
+        "category": "Problem",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "newly diagnosed",
+        "proposition_text": "The patient has newly diagnosed Lyme disease."
+      },
+      {
+        "prop_id": "CAP8",
+        "cap_type": "Symptom",
+        "canonical_concept": "loss of appetite",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports a decreased appetite."
+      },
+      {
+        "prop_id": "CAP9",
+        "cap_type": "Symptom",
+        "canonical_concept": "fever",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "denies",
+        "status": "uncertain",
+        "visit_state": "historical",
+        "temporality": "past",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient denies experiencing high fevers."
+      },
+      {
+        "prop_id": "CAP10",
+        "cap_type": "Symptom",
+        "canonical_concept": "joint pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient is endorsing joint pain."
+      },
+      {
+        "prop_id": "CAP11",
+        "cap_type": "Symptom",
+        "canonical_concept": "body aches",
+        "category": "Symptom",
+        "speaker": "patient",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient is endorsing body aches."
+      },
+      {
+        "prop_id": "CAP12",
+        "cap_type": "Problem",
+        "canonical_concept": "Type 2 diabetes",
+        "category": "Problem",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "existing",
+        "claim_type_tags": [
+          "quantitative"
+        ],
+        "proposition_text": "The patient has type 2 diabetes."
+      },
+      {
+        "prop_id": "CAP13",
+        "cap_type": "Symptom",
+        "canonical_concept": "fatigue",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports feeling tired."
+      },
+      {
+        "prop_id": "CAP14",
+        "cap_type": "Symptom",
+        "canonical_concept": "nausea",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports experiencing nausea."
+      },
+      {
+        "prop_id": "CAP15",
+        "cap_type": "Symptom",
+        "canonical_concept": "appetite loss",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports difficulty eating."
+      },
+      {
+        "prop_id": "CAP16",
+        "cap_type": "Symptom",
+        "canonical_concept": "rash",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports a rash."
+      },
+      {
+        "prop_id": "CAP17",
+        "cap_type": "Symptom",
+        "canonical_concept": "nausea",
+        "category": "Symptom",
+        "speaker": "patient",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient is endorsing nausea."
+      },
+      {
+        "prop_id": "CAP18",
+        "cap_type": "Problem",
+        "canonical_concept": "Hypertension",
+        "category": "Problem",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "stable",
+        "temporality": "current",
+        "claim_type_tags": [
+          "temporal"
+        ],
+        "proposition_text": "The patient's hypertension is stable."
+      },
+      {
+        "prop_id": "CAP19",
+        "cap_type": "Symptom",
+        "canonical_concept": "nausea",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports nausea."
+      },
+      {
+        "prop_id": "CAP20",
+        "cap_type": "MedicationRequest",
+        "canonical_concept": "lisinopril",
+        "category": "MedicationRequest",
+        "speaker": "doctor",
+        "status": "uncertain",
+        "visit_state": "planned",
+        "temporality": "daily",
+        "claim_type_tags": [
+          "quantitative"
+        ],
+        "proposition_text": "Order lisinopril 10 milligrams daily."
+      },
+      {
+        "prop_id": "CAP21",
+        "cap_type": "TestResult",
+        "canonical_concept": "Hemoglobin A1c",
+        "category": "TestResult",
+        "speaker": "doctor",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "future",
+        "claim_type_tags": [
+          "quantitative"
+        ],
+        "proposition_text": "A hemoglobin A1c test will be ordered."
+      },
+      {
+        "prop_id": "CAP22",
+        "cap_type": "TestResult",
+        "canonical_concept": "Lipid Panel",
+        "category": "TestResult",
+        "speaker": "doctor",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "future",
+        "proposition_text": "A lipid panel will be ordered."
+      },
+      {
+        "prop_id": "CAP23",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "Metformin",
+        "category": "MedicationStatement",
+        "speaker": "unknown",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "ongoing",
+        "claim_type_tags": [
+          "medication"
+        ],
+        "proposition_text": "Metformin will be continued."
+      },
+      {
+        "prop_id": "CAP24",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "Doxycycline",
+        "category": "MedicationStatement",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "planned",
+        "temporality": "for three weeks",
+        "proposition_text": "Doxycycline will be prescribed."
+      },
+      {
+        "prop_id": "CAP25",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "Lisinopril",
+        "category": "MedicationStatement",
+        "speaker": "dragon",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "future",
+        "proposition_text": "Lisinopril will be ordered."
+      },
+      {
+        "prop_id": "CAP26",
+        "cap_type": "Counseling",
+        "canonical_concept": "follow-up appointment",
+        "category": "Counseling",
+        "speaker": "patient",
+        "status": "uncertain",
+        "visit_state": "planned",
+        "temporality": "future",
+        "claim_type_tags": [
+          "temporal"
+        ],
+        "proposition_text": "Make a follow-up appointment for you."
+      }
+    ],
+    "filtered_nonverifiable_units": []
+  },
+  "event_plan": null,
+  "summary_cap": {
+    "atomic_propositions": [],
+    "filtered_nonverifiable_units": [],
+    "runtime_seconds": 0.55
+  },
+  "cap_alignment": {
+    "cap_precision": 0.0,
+    "cap_recall": 0.0,
+    "cap_f1": 0.0,
+    "matched_count": 0,
+    "summary_prop_count": 0,
+    "source_prop_count": 26,
+    "matched_pairs": [],
+    "unsupported_summary_props": [],
+    "missing_source_props": [
+      {
+        "prop_id": "CAP1",
+        "cap_type": "Symptom",
+        "canonical_concept": "pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports pain to palpation of the elbow joints."
+      },
+      {
+        "prop_id": "CAP2",
+        "cap_type": "Symptom",
+        "canonical_concept": "joint pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports swollen, painful joints in their elbows."
+      },
+      {
+        "prop_id": "CAP3",
+        "cap_type": "Symptom",
+        "canonical_concept": "bull's-eye rash",
+        "category": "Symptom",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient describes the rash as resembling a bull's-eye."
+      },
+      {
+        "prop_id": "CAP4",
+        "cap_type": "Problem",
+        "canonical_concept": "swelling",
+        "category": "Problem",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient has swelling of the elbow joints bilaterally."
+      },
+      {
+        "prop_id": "CAP5",
+        "cap_type": "Symptom",
+        "canonical_concept": "pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports pain in the left hand."
+      },
+      {
+        "prop_id": "CAP6",
+        "cap_type": "Symptom",
+        "canonical_concept": "high fever",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "uncertain",
+        "visit_state": "historical",
+        "temporality": "noticed",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports having noticed high fevers."
+      },
+      {
+        "prop_id": "CAP7",
+        "cap_type": "Problem",
+        "canonical_concept": "Lyme disease",
+        "category": "Problem",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "newly diagnosed",
+        "proposition_text": "The patient has newly diagnosed Lyme disease."
+      },
+      {
+        "prop_id": "CAP8",
+        "cap_type": "Symptom",
+        "canonical_concept": "loss of appetite",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports a decreased appetite."
+      },
+      {
+        "prop_id": "CAP9",
+        "cap_type": "Symptom",
+        "canonical_concept": "fever",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "denies",
+        "status": "uncertain",
+        "visit_state": "historical",
+        "temporality": "past",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient denies experiencing high fevers."
+      },
+      {
+        "prop_id": "CAP10",
+        "cap_type": "Symptom",
+        "canonical_concept": "joint pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient is endorsing joint pain."
+      },
+      {
+        "prop_id": "CAP11",
+        "cap_type": "Symptom",
+        "canonical_concept": "body aches",
+        "category": "Symptom",
+        "speaker": "patient",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient is endorsing body aches."
+      },
+      {
+        "prop_id": "CAP12",
+        "cap_type": "Problem",
+        "canonical_concept": "Type 2 diabetes",
+        "category": "Problem",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "existing",
+        "claim_type_tags": [
+          "quantitative"
+        ],
+        "proposition_text": "The patient has type 2 diabetes."
+      },
+      {
+        "prop_id": "CAP13",
+        "cap_type": "Symptom",
+        "canonical_concept": "fatigue",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports feeling tired."
+      },
+      {
+        "prop_id": "CAP14",
+        "cap_type": "Symptom",
+        "canonical_concept": "nausea",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports experiencing nausea."
+      },
+      {
+        "prop_id": "CAP15",
+        "cap_type": "Symptom",
+        "canonical_concept": "appetite loss",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports difficulty eating."
+      },
+      {
+        "prop_id": "CAP16",
+        "cap_type": "Symptom",
+        "canonical_concept": "rash",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports a rash."
+      },
+      {
+        "prop_id": "CAP17",
+        "cap_type": "Symptom",
+        "canonical_concept": "nausea",
+        "category": "Symptom",
+        "speaker": "patient",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient is endorsing nausea."
+      },
+      {
+        "prop_id": "CAP18",
+        "cap_type": "Problem",
+        "canonical_concept": "Hypertension",
+        "category": "Problem",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "stable",
+        "temporality": "current",
+        "claim_type_tags": [
+          "temporal"
+        ],
+        "proposition_text": "The patient's hypertension is stable."
+      },
+      {
+        "prop_id": "CAP19",
+        "cap_type": "Symptom",
+        "canonical_concept": "nausea",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports nausea."
+      },
+      {
+        "prop_id": "CAP20",
+        "cap_type": "MedicationRequest",
+        "canonical_concept": "lisinopril",
+        "category": "MedicationRequest",
+        "speaker": "doctor",
+        "status": "uncertain",
+        "visit_state": "planned",
+        "temporality": "daily",
+        "claim_type_tags": [
+          "quantitative"
+        ],
+        "proposition_text": "Order lisinopril 10 milligrams daily."
+      },
+      {
+        "prop_id": "CAP21",
+        "cap_type": "TestResult",
+        "canonical_concept": "Hemoglobin A1c",
+        "category": "TestResult",
+        "speaker": "doctor",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "future",
+        "claim_type_tags": [
+          "quantitative"
+        ],
+        "proposition_text": "A hemoglobin A1c test will be ordered."
+      },
+      {
+        "prop_id": "CAP22",
+        "cap_type": "TestResult",
+        "canonical_concept": "Lipid Panel",
+        "category": "TestResult",
+        "speaker": "doctor",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "future",
+        "proposition_text": "A lipid panel will be ordered."
+      },
+      {
+        "prop_id": "CAP23",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "Metformin",
+        "category": "MedicationStatement",
+        "speaker": "unknown",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "ongoing",
+        "claim_type_tags": [
+          "medication"
+        ],
+        "proposition_text": "Metformin will be continued."
+      },
+      {
+        "prop_id": "CAP24",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "Doxycycline",
+        "category": "MedicationStatement",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "planned",
+        "temporality": "for three weeks",
+        "proposition_text": "Doxycycline will be prescribed."
+      },
+      {
+        "prop_id": "CAP25",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "Lisinopril",
+        "category": "MedicationStatement",
+        "speaker": "dragon",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "future",
+        "proposition_text": "Lisinopril will be ordered."
+      },
+      {
+        "prop_id": "CAP26",
+        "cap_type": "Counseling",
+        "canonical_concept": "follow-up appointment",
+        "category": "Counseling",
+        "speaker": "patient",
+        "status": "uncertain",
+        "visit_state": "planned",
+        "temporality": "future",
+        "claim_type_tags": [
+          "temporal"
+        ],
+        "proposition_text": "Make a follow-up appointment for you."
+      }
+    ]
+  },
+  "reference_gpt_f1_items": {
+    "active_problems_symptoms": [],
+    "negated_findings": [],
+    "uncertain_findings": [],
+    "medication_treatment": [],
+    "plan_followup": [],
+    "_chunk_count": [
+      "4"
+    ],
+    "_parse_failures": [
+      "{\"chunk_index\": 1, \"stage\": \"call_llm\", \"error\": \"LLM call failed after retries: Error code: 404\"}",
+      "{\"chunk_index\": 2, \"stage\": \"call_llm\", \"error\": \"LLM call failed after retries: Error code: 404\"}",
+      "{\"chunk_index\": 3, \"stage\": \"call_llm\", \"error\": \"LLM call failed after retries: Error code: 404\"}",
+      "{\"chunk_index\": 4, \"stage\": \"call_llm\", \"error\": \"LLM call failed after retries: Error code: 404\"}"
+    ]
+  },
+  "summary_gpt_f1_items": {
+    "active_problems_symptoms": [],
+    "negated_findings": [],
+    "uncertain_findings": [],
+    "medication_treatment": [],
+    "plan_followup": [],
+    "_chunk_count": [
+      "1"
+    ],
+    "_parse_failures": [
+      "{\"chunk_index\": 1, \"stage\": \"call_llm\", \"error\": \"LLM call failed after retries: Error code: 404\"}"
+    ]
+  },
+  "gpt_f1_alignment": {
+    "by_category": {
+      "active_problems_symptoms": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "matched_count": 0,
+        "pred_count": 0,
+        "ref_count": 0,
+        "matches": [],
+        "unsupported_pred_items": [],
+        "missing_ref_items": []
+      },
+      "negated_findings": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "matched_count": 0,
+        "pred_count": 0,
+        "ref_count": 0,
+        "matches": [],
+        "unsupported_pred_items": [],
+        "missing_ref_items": []
+      },
+      "uncertain_findings": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "matched_count": 0,
+        "pred_count": 0,
+        "ref_count": 0,
+        "matches": [],
+        "unsupported_pred_items": [],
+        "missing_ref_items": []
+      },
+      "medication_treatment": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "matched_count": 0,
+        "pred_count": 0,
+        "ref_count": 0,
+        "matches": [],
+        "unsupported_pred_items": [],
+        "missing_ref_items": []
+      },
+      "plan_followup": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "matched_count": 0,
+        "pred_count": 0,
+        "ref_count": 0,
+        "matches": [],
+        "unsupported_pred_items": [],
+        "missing_ref_items": []
+      }
+    }
+  },
+  "reference_nair_concepts": {
+    "sections": [
+      {
+        "heading": "Clinical Note",
+        "section_value": "CHIEF COMPLAINT\nAbnormal labs.\nHISTORY OF PRESENT ILLNESS\nThe patient is a 31-year-old female with a past medical history significant for type 2 diabetes, and hypertension who presents with abnormal labs. She had an insect bite at her last visit after hiking in the woods. We drew a Lyme titer which came back positive.\nThe patient reports she has been feeling tired and lacking a lot of energy. She also notes swollen elbow joints, body aches, bullseye rash, and nausea. She states she has not been able to eat much. What she does eat has been bland foods such as crackers. She denies any high fevers.\nRegarding her type 2 diabetes, she states her blood sugars have been okay. She notes they are sometimes a little high or low, but nothing too far out of range. She is still taking metformin.\nRegarding her hypertension, she is monitoring her blood pressure at home and it has been good. She is avoiding salty foods and is still taking lisinopril.\nThe patient denies abdominal pain and diarrhea.\nREVIEW OF SYSTEMS\n• Constitutional: Denies fevers. Endorses fatigue.",
+        "medical_concepts": [
+          "abnormal labs",
+          "type 2 diabetes",
+          "hypertension",
+          "insect bite",
+          "Lyme titer",
+          "positive Lyme titer",
+          "tiredness",
+          "fatigue",
+          "low energy",
+          "swollen elbow joints",
+          "joint swelling",
+          "body aches",
+          "bullseye rash",
+          "nausea",
+          "decreased oral intake",
+          "metformin",
+          "blood sugar",
+          "high blood sugar",
+          "low blood sugar",
+          "blood pressure"
+        ]
+      },
+      {
+        "heading": "Clinical Note",
+        "section_value": "• Gastrointestinal: Denies abdominal pain and diarrhea. Endorses nausea.\n• Musculoskeletal: Endorses bilateral elbow joint swelling, pain. Endorses body aches.\n• Integumentary: Endorses a rash.\nPHYSICAL EXAMINATION\n• Gastrointestinal: Examination of her abdomen reveals warmth to palpation. Nontender to palpation. No evidence of cellulitis.\n• Musculoskeletal: Swelling and pain to palpation of elbow joints bilaterally.\n• Integumentary: Small bullseye rash on the left abdominal quadrant.\nRESULTS\nLyme titer: elevated.\nLabs: WBC is within normal limits. All other labs are normal as well.",
+        "medical_concepts": [
+          "abdominal pain",
+          "diarrhea",
+          "nausea",
+          "bilateral elbow joint swelling",
+          "elbow joint pain",
+          "body aches",
+          "rash",
+          "abdominal warmth to palpation",
+          "cellulitis",
+          "small bullseye rash",
+          "Lyme titer",
+          "elevated Lyme titer",
+          "WBC",
+          "normal WBC",
+          "normal labs"
+        ]
+      },
+      {
+        "heading": "Clinical Note",
+        "section_value": "ASSESSMENT AND PLAN\nThe patient is a 31-year-old female with a past medical history significant for type 2 diabetes, and hypertension who presents with abnormal labs.\nNewly diagnosed Lyme disease.\n• Medical Reasoning: This is a new issue for her. She presented with an insect bite at her last visit, and her subsequent lyme titer was elevated.\n• Medical Treatment: I am going to prescribe doxycycline 100 mg twice a day for 3 weeks. I am going to touch base with an infectious disease doctor to ensure nothing else that needs to be done. I want to see her again next week for follow-up for this.\nHypertension.\n• Medical Reasoning: This has been well-controlled based on home monitoring. She has been compliant with dietary modifications including limiting her sodium intake.\n• Additional Testing: I am going to order a lipid panel.\n• Medical Treatment: She will continue lisinopril 10 mg a day. This was refilled today.\n• Patient Education and Counseling: I advised the patient to continue to regularly monitor her blood pressures at home.",
+        "medical_concepts": [
+          "type 2 diabetes",
+          "hypertension",
+          "abnormal labs",
+          "Lyme disease",
+          "insect bite",
+          "elevated Lyme titer",
+          "doxycycline",
+          "infectious disease doctor",
+          "dietary modifications",
+          "limiting sodium intake",
+          "lipid panel",
+          "lisinopril",
+          "blood pressure monitoring"
+        ]
+      },
+      {
+        "heading": "Clinical Note",
+        "section_value": "Diabetes type 2.\n• Medical Reasoning: She has noticed intermittent elevations of her blood glucose levels but has been compliant with the use of metformin. Her diet has been limited due to nausea in the setting of Lyme disease.\n• Additional Testing: I am going to order a hemoglobin A1c to ensure no medication changes are needed.\nPatient Agreements: The patient understands and agrees with the recommended medical treatment plan.",
+        "medical_concepts": [
+          "diabetes type 2",
+          "intermittent elevations of blood glucose levels",
+          "metformin",
+          "nausea",
+          "Lyme disease",
+          "hemoglobin A1c"
+        ]
+      }
+    ],
+    "medical_concepts": [
+      "abnormal labs",
+      "type 2 diabetes",
+      "hypertension",
+      "insect bite",
+      "Lyme titer",
+      "positive Lyme titer",
+      "tiredness",
+      "fatigue",
+      "low energy",
+      "swollen elbow joints",
+      "joint swelling",
+      "body aches",
+      "bullseye rash",
+      "nausea",
+      "decreased oral intake",
+      "metformin",
+      "blood sugar",
+      "high blood sugar",
+      "low blood sugar",
+      "blood pressure",
+      "abdominal pain",
+      "diarrhea",
+      "bilateral elbow joint swelling",
+      "elbow joint pain",
+      "rash",
+      "abdominal warmth to palpation",
+      "cellulitis",
+      "small bullseye rash",
+      "elevated Lyme titer",
+      "WBC",
+      "normal WBC",
+      "normal labs",
+      "Lyme disease",
+      "doxycycline",
+      "infectious disease doctor",
+      "dietary modifications",
+      "limiting sodium intake",
+      "lipid panel",
+      "lisinopril",
+      "blood pressure monitoring",
+      "diabetes type 2",
+      "intermittent elevations of blood glucose levels",
+      "hemoglobin A1c"
+    ],
+    "section_count": 4
+  },
+  "summary_nair_concepts": {
+    "sections": [
+      {
+        "heading": "S",
+        "section_value": "The patient reports fatigue for the past two months, joint pain in her elbows, nausea, loss of appetite, and body aches. The patient also reports a bull's-eye rash and fever.",
+        "medical_concepts": [
+          "fatigue",
+          "joint pain",
+          "elbow pain",
+          "nausea",
+          "loss of appetite",
+          "anorexia",
+          "body aches",
+          "bull's-eye rash",
+          "fever"
+        ]
+      },
+      {
+        "heading": "O",
+        "section_value": "The patient's temperature is 100.8°F. A rash is present on the patient's arms and trunk.",
+        "medical_concepts": [
+          "elevated temperature",
+          "fever",
+          "rash"
+        ]
+      },
+      {
+        "heading": "A",
+        "section_value": "The patient's symptoms and physical exam findings are consistent with a possible infection and cellulitis. The clinician suspects cervical radiculopathy.",
+        "medical_concepts": [
+          "infection",
+          "cellulitis",
+          "cervical radiculopathy"
+        ]
+      },
+      {
+        "heading": "P",
+        "section_value": "The clinician plans a cervical MRI. The clinician prescribes doxycycline. The clinician orders a hemoglobin A1c and a lipid panel.",
+        "medical_concepts": [
+          "cervical MRI",
+          "doxycycline",
+          "hemoglobin A1c",
+          "lipid panel"
+        ]
+      }
+    ],
+    "medical_concepts": [
+      "fatigue",
+      "joint pain",
+      "elbow pain",
+      "nausea",
+      "loss of appetite",
+      "anorexia",
+      "body aches",
+      "bull's-eye rash",
+      "fever",
+      "elevated temperature",
+      "rash",
+      "infection",
+      "cellulitis",
+      "cervical radiculopathy",
+      "cervical MRI",
+      "doxycycline",
+      "hemoglobin A1c",
+      "lipid panel"
+    ],
+    "section_count": 4
+  },
+  "nair_alignment": {
+    "pred_concepts": [
+      "fatigue",
+      "joint pain",
+      "elbow pain",
+      "nausea",
+      "loss of appetite",
+      "anorexia",
+      "body aches",
+      "bull's-eye rash",
+      "fever",
+      "elevated temperature",
+      "rash",
+      "infection",
+      "cellulitis",
+      "cervical radiculopathy",
+      "cervical MRI",
+      "doxycycline",
+      "hemoglobin A1c",
+      "lipid panel"
+    ],
+    "ref_concepts": [
+      "abnormal labs",
+      "type 2 diabetes",
+      "hypertension",
+      "insect bite",
+      "Lyme titer",
+      "positive Lyme titer",
+      "tiredness",
+      "fatigue",
+      "low energy",
+      "swollen elbow joints",
+      "joint swelling",
+      "body aches",
+      "bullseye rash",
+      "nausea",
+      "decreased oral intake",
+      "metformin",
+      "blood sugar",
+      "high blood sugar",
+      "low blood sugar",
+      "blood pressure",
+      "abdominal pain",
+      "diarrhea",
+      "bilateral elbow joint swelling",
+      "elbow joint pain",
+      "rash",
+      "abdominal warmth to palpation",
+      "cellulitis",
+      "small bullseye rash",
+      "elevated Lyme titer",
+      "WBC",
+      "normal WBC",
+      "normal labs",
+      "Lyme disease",
+      "doxycycline",
+      "infectious disease doctor",
+      "dietary modifications",
+      "limiting sodium intake",
+      "lipid panel",
+      "lisinopril",
+      "blood pressure monitoring",
+      "diabetes type 2",
+      "intermittent elevations of blood glucose levels",
+      "hemoglobin A1c"
+    ],
+    "precision_alignment": {
+      "found_b": [
+        "fatigue",
+        "elbow pain",
+        "nausea",
+        "loss of appetite",
+        "body aches",
+        "bull's-eye rash",
+        "rash",
+        "cellulitis",
+        "doxycycline",
+        "hemoglobin A1c",
+        "lipid panel"
+      ],
+      "not_found_b": [
+        "joint pain",
+        "anorexia",
+        "fever",
+        "elevated temperature",
+        "infection",
+        "cervical radiculopathy",
+        "cervical MRI"
+      ],
+      "chunk_count": 1,
+      "chunk_results": [
+        {
+          "found_b": [
+            "fatigue",
+            "elbow pain",
+            "nausea",
+            "loss of appetite",
+            "body aches",
+            "bull's-eye rash",
+            "rash",
+            "cellulitis",
+            "doxycycline",
+            "hemoglobin A1c",
+            "lipid panel"
+          ],
+          "not_found_b": [
+            "joint pain",
+            "anorexia",
+            "fever",
+            "elevated temperature",
+            "infection",
+            "cervical radiculopathy",
+            "cervical MRI"
+          ]
+        }
+      ]
+    },
+    "recall_alignment": {
+      "found_b": [
+        "tiredness",
+        "fatigue",
+        "low energy",
+        "body aches",
+        "bullseye rash",
+        "nausea",
+        "decreased oral intake",
+        "elbow joint pain",
+        "rash",
+        "cellulitis",
+        "small bullseye rash",
+        "doxycycline",
+        "lipid panel",
+        "hemoglobin A1c"
+      ],
+      "not_found_b": [
+        "abnormal labs",
+        "type 2 diabetes",
+        "hypertension",
+        "insect bite",
+        "Lyme titer",
+        "positive Lyme titer",
+        "swollen elbow joints",
+        "joint swelling",
+        "metformin",
+        "blood sugar",
+        "high blood sugar",
+        "low blood sugar",
+        "blood pressure",
+        "abdominal pain",
+        "diarrhea",
+        "bilateral elbow joint swelling",
+        "abdominal warmth to palpation",
+        "elevated Lyme titer",
+        "WBC",
+        "normal WBC",
+        "normal labs",
+        "Lyme disease",
+        "infectious disease doctor",
+        "dietary modifications",
+        "limiting sodium intake",
+        "lisinopril",
+        "blood pressure monitoring",
+        "diabetes type 2",
+        "intermittent elevations of blood glucose levels"
+      ],
+      "chunk_count": 2,
+      "chunk_results": [
+        {
+          "found_b": [
+            "tiredness",
+            "fatigue",
+            "low energy",
+            "body aches",
+            "bullseye rash",
+            "nausea",
+            "decreased oral intake",
+            "elbow joint pain"
+          ],
+          "not_found_b": [
+            "abnormal labs",
+            "type 2 diabetes",
+            "hypertension",
+            "insect bite",
+            "Lyme titer",
+            "positive Lyme titer",
+            "swollen elbow joints",
+            "joint swelling",
+            "metformin",
+            "blood sugar",
+            "high blood sugar",
+            "low blood sugar",
+            "blood pressure",
+            "abdominal pain",
+            "diarrhea",
+            "bilateral elbow joint swelling"
+          ]
+        },
+        {
+          "found_b": [
+            "rash",
+            "cellulitis",
+            "small bullseye rash",
+            "doxycycline",
+            "lipid panel",
+            "hemoglobin A1c"
+          ],
+          "not_found_b": [
+            "abdominal warmth to palpation",
+            "elevated Lyme titer",
+            "WBC",
+            "normal WBC",
+            "normal labs",
+            "Lyme disease",
+            "infectious disease doctor",
+            "dietary modifications",
+            "limiting sodium intake",
+            "lisinopril",
+            "blood pressure monitoring",
+            "diabetes type 2",
+            "intermittent elevations of blood glucose levels"
+          ]
+        }
+      ]
+    }
+  },
+  "semantic_cap_audit": {
+    "source_cap_recall": [
+      {
+        "cap_id": "P1",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P2",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P3",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P4",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P5",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P6",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P7",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P8",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P9",
+        "judgment": "contradicted",
+        "reason": null
+      },
+      {
+        "cap_id": "P10",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P11",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P12",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P13",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P14",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P15",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P16",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P1",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P2",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P3",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P4",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P5",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P6",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P7",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P8",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P9",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P10",
+        "judgment": "missing",
+        "reason": null
+      }
+    ],
+    "summary_cap_precision": [],
+    "metrics": {
+      "semantic_cap_precision": 0.0,
+      "semantic_cap_recall": 0.4423,
+      "semantic_cap_f1": 0.0,
+      "semantic_cap_precision_supported_count": 0,
+      "semantic_cap_precision_partial_count": 0,
+      "semantic_cap_precision_denominator": 0,
+      "semantic_cap_recall_supported_count": 9,
+      "semantic_cap_recall_partial_count": 5,
+      "semantic_cap_recall_denominator": 26,
+      "semantic_cap_low_value_source_count": 0,
+      "semantic_cap_low_value_summary_count": 0,
+      "semantic_cap_missing_count": 11,
+      "semantic_cap_unsupported_count": 0,
+      "semantic_cap_contradicted_source_count": 1,
+      "semantic_cap_contradicted_summary_count": 0
+    }
+  },
+  "safety_judgment": null,
+  "section_judgment": {
+    "section_miscategorizations": [],
+    "summary_statistics": {
+      "section_appropriateness_score": 1.0,
+      "section_miscategorization_count": 0,
+      "major_section_miscategorization_count": 0
+    }
+  },
+  "pdsqi_judgment": {
+    "citation_applicable": 0,
+    "citation": 0,
+    "accurate": 1,
+    "thorough": 2,
+    "useful": 1,
+    "organized": 2,
+    "comprehensible": 3,
+    "succinct": 4,
+    "abstraction": 1,
+    "synthesized": 1,
+    "voice_summ": 0,
+    "voice_note": 0,
+    "pdsqi_core_mean": 2.0
+  },
+  "llm_checklist_judgment": {
+    "content_preservation_core": 1,
+    "noise_suppression": 4,
+    "lay_expression_preservation": 2,
+    "state_update_fidelity": 1,
+    "temporality_preservation": 2,
+    "problem_evidence_linkage": 1,
+    "state_plan_separation": 2,
+    "section_organization_appropriateness": 2,
+    "overall_clinical_usability": 1,
+    "clinically_meaningful_omission": "Yes",
+    "clinically_concerning_hallucination": "Yes",
+    "checklist_a_mean": 2.3333,
+    "checklist_b_mean": 1.5,
+    "checklist_c_mean": 1.6667,
+    "llm_checklist_abc_mean": 1.875,
+    "llm_checklist_mean_no_usability": 1.875,
+    "llm_checklist_total_score": 16,
+    "llm_checklist_mean": 1.7778,
+    "llm_checklist_meaningful_omission_yes": 1,
+    "llm_checklist_concerning_hallucination_yes": 1
+  },
+  "metrics": {
+    "case_id": "D2N134",
+    "method": "cluster2sent",
+    "template": "soap",
+    "source_cap_count": 26,
+    "event_plan_count": null,
+    "summary_cap_count": 0,
+    "cap_matched_count": 0,
+    "cap_precision": 0.0,
+    "cap_recall": 0.0,
+    "cap_f1": 0.0,
+    "unsupported_summary_cap_count": 0,
+    "missing_source_cap_count": 26,
+    "summary_runtime_seconds": null,
+    "summary_cap_runtime_seconds": 0.55,
+    "event_plan_runtime_seconds": null,
+    "rouge_l_f1_vs_reference": 0.1005,
+    "token_f1_vs_reference": 0.191,
+    "gptf1_macro_f1": 0.0,
+    "nair_gpt_precision": 0.6111,
+    "nair_gpt_recall": 0.3256,
+    "nair_gpt_f1": 0.4248,
+    "semantic_cap_precision": 0.0,
+    "semantic_cap_recall": 0.4423,
+    "semantic_cap_f1": 0.0,
+    "hallucination_count": null,
+    "major_hallucination_count": null,
+    "omission_count": null,
+    "major_omission_count": null,
+    "section_appropriateness_score": 1.0,
+    "section_miscategorization_count": 0,
+    "major_section_miscategorization_count": 0,
+    "pdsqi_core_mean": 2.0,
+    "pdsqi_accurate": 1,
+    "pdsqi_thorough": 2,
+    "llm_checklist_total_score": 16,
+    "llm_checklist_mean": 1.7778,
+    "llm_checklist_mean_no_usability": 1.875,
+    "checklist_a_mean": 2.3333,
+    "checklist_b_mean": 1.5,
+    "checklist_c_mean": 1.6667,
+    "llm_checklist_abc_mean": 1.875,
+    "content_preservation_core": 1,
+    "noise_suppression": 4,
+    "lay_expression_preservation": 2,
+    "state_update_fidelity": 1,
+    "temporality_preservation": 2,
+    "problem_evidence_linkage": 1,
+    "state_plan_separation": 2,
+    "section_organization_appropriateness": 2,
+    "overall_clinical_usability": 1,
+    "llm_checklist_meaningful_omission_yes": 1,
+    "llm_checklist_concerning_hallucination_yes": 1,
+    "gptf1_active_problems_symptoms_precision": 0.0,
+    "gptf1_active_problems_symptoms_recall": 0.0,
+    "gptf1_active_problems_symptoms_f1": 0.0,
+    "gptf1_active_problems_symptoms_pred_count": 0,
+    "gptf1_active_problems_symptoms_ref_count": 0,
+    "gptf1_negated_findings_precision": 0.0,
+    "gptf1_negated_findings_recall": 0.0,
+    "gptf1_negated_findings_f1": 0.0,
+    "gptf1_negated_findings_pred_count": 0,
+    "gptf1_negated_findings_ref_count": 0,
+    "gptf1_uncertain_findings_precision": 0.0,
+    "gptf1_uncertain_findings_recall": 0.0,
+    "gptf1_uncertain_findings_f1": 0.0,
+    "gptf1_uncertain_findings_pred_count": 0,
+    "gptf1_uncertain_findings_ref_count": 0,
+    "gptf1_medication_treatment_precision": 0.0,
+    "gptf1_medication_treatment_recall": 0.0,
+    "gptf1_medication_treatment_f1": 0.0,
+    "gptf1_medication_treatment_pred_count": 0,
+    "gptf1_medication_treatment_ref_count": 0,
+    "gptf1_plan_followup_precision": 0.0,
+    "gptf1_plan_followup_recall": 0.0,
+    "gptf1_plan_followup_f1": 0.0,
+    "gptf1_plan_followup_pred_count": 0,
+    "gptf1_plan_followup_ref_count": 0,
+    "nair_pred_concept_count": 18,
+    "nair_ref_concept_count": 43,
+    "nair_precision_match_count": 11,
+    "nair_recall_match_count": 14,
+    "semantic_cap_precision_supported_count": 0,
+    "semantic_cap_precision_partial_count": 0,
+    "semantic_cap_precision_denominator": 0,
+    "semantic_cap_recall_supported_count": 9,
+    "semantic_cap_recall_partial_count": 5,
+    "semantic_cap_recall_denominator": 26,
+    "semantic_cap_low_value_source_count": 0,
+    "semantic_cap_low_value_summary_count": 0,
+    "semantic_cap_missing_count": 11,
+    "semantic_cap_unsupported_count": 0,
+    "semantic_cap_contradicted_source_count": 1,
+    "semantic_cap_contradicted_summary_count": 0,
+    "pdsqi_useful": 1,
+    "pdsqi_organized": 2,
+    "pdsqi_comprehensible": 3,
+    "pdsqi_succinct": 4,
+    "pdsqi_synthesized": 1
+  }
+}

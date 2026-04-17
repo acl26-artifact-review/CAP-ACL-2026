@@ -1,0 +1,85 @@
+Case: D2N086
+
+Problem List and Visit State Tracking
+
+Problem List
+- blood sugar | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T9
+  Summary: The patient's blood sugars have been trending in the three to four hundreds.
+  ClusterId: CL1
+  TemporalProfile: last two weeks, recent
+  Updates:
+  - CAP1: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=last two weeks turns=T9 :: The patient's blood sugars have been trending in the three to four hundreds.
+  - CAP2: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=recent turns=T9 :: The patient checked his sugars two or three times a day.
+- bone exposure | verification_status=refuted | clinical_status=historical | modalities=exam | speakers=doctor | evidence=T9
+  Summary: The doctor does not recognize any bony exposure.
+  ClusterId: CL2
+  TemporalProfile: historical
+  Updates:
+  - CAP6: content_source=doctor modality=exam verification_status=refuted clinical_status=historical temporality=historical turns=T9 :: The doctor does not recognize any bony exposure.
+- erythema | verification_status=confirmed | clinical_status=active | modalities=exam | speakers=doctor | evidence=T9
+  Summary: The doctor recognizes erythema around the wound.
+  ClusterId: CL3
+  TemporalProfile: present
+  Updates:
+  - CAP9: content_source=doctor modality=exam verification_status=confirmed clinical_status=active temporality=present turns=T9 :: The doctor recognizes erythema around the wound.
+- new trails | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T11
+  Summary: The patient hiked to Charlie's Bunion about a week before this.
+  ClusterId: CL4
+  TemporalProfile: recent
+  Updates:
+  - CAP3: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=recent turns=T11 :: The patient hiked to Charlie's Bunion about a week before this.
+- diabetic inserts | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T11
+  Summary: The patient changes the inserts every three or four months.
+  ClusterId: CL5
+  TemporalProfile: recent
+  Updates:
+  - CAP4: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=recent turns=T11 :: The patient changes the inserts every three or four months.
+- diabetic shoes | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T11
+  Summary: The patient has new diabetic shoes and inserts.
+  ClusterId: CL6
+  TemporalProfile: recent
+  Updates:
+  - CAP7: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=recent turns=T11 :: The patient has new diabetic shoes and inserts.
+- hiking | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T11
+  Summary: The patient has been hiking.
+  ClusterId: CL7
+  TemporalProfile: recent
+  Updates:
+  - CAP11: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=recent turns=T11 :: The patient has been hiking.
+- necrotic wound | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T12
+  Summary: The patient has a necrotic wound on his heel.
+  ClusterId: CL8
+  TemporalProfile: present
+  Updates:
+  - CAP5: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=present turns=T12 :: The patient has a necrotic wound on his heel.
+- cellulitis | verification_status=confirmed | clinical_status=active | modalities=exam | speakers=doctor | evidence=T12
+  Summary: The doctor recognizes cellulitis around the wound.
+  ClusterId: CL9
+  TemporalProfile: present
+  Updates:
+  - CAP8: content_source=doctor modality=exam verification_status=confirmed clinical_status=active temporality=present turns=T12 :: The doctor recognizes cellulitis around the wound.
+- odor | verification_status=confirmed | clinical_status=active | modalities=exam | speakers=doctor | evidence=T12
+  Summary: The doctor smells an odor.
+  ClusterId: CL10
+  TemporalProfile: present
+  Updates:
+  - CAP10: content_source=doctor modality=exam verification_status=confirmed clinical_status=active temporality=present turns=T12 :: The doctor smells an odor.
+- pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T12
+  Summary: The patient reports pain.
+  ClusterId: CL11
+  TemporalProfile: current
+  Updates:
+  - CAP12: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T12 :: The patient reports pain.
+
+Medication Tracking
+- None
+
+Other Structured States
+- [ExamFinding] pulses | verification_status=confirmed | clinical_status=active | modalities=exam | speakers=doctor | evidence=T12
+  Summary: The doctor palpates bilateral palpable pulses femorally and popliteal pulses are present.
+  ClusterId: CL12
+  TemporalProfile: present
+- [ExamFinding] vascular exam | verification_status=confirmed | clinical_status=active | modalities=exam | speakers=doctor | evidence=T12
+  Summary: The doctor uses the doppler and they are present via doppler.
+  ClusterId: CL13
+  TemporalProfile: present

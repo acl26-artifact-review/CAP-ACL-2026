@@ -1,0 +1,205 @@
+Case: D2N006
+
+Problem List and Visit State Tracking
+
+Problem List
+- right first big toe | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T3
+  Summary: The patient's right first big toe had an episode of gout.
+  ClusterId: CL1
+  TemporalProfile: past
+  Updates:
+  - CAP4: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=past turns=T3 :: The patient's right first big toe had an episode of gout.
+- right knee pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T3
+  Summary: The patient reports right knee pain.
+  ClusterId: CL2
+  TemporalProfile: current
+  Updates:
+  - CAP18: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T3 :: The patient reports right knee pain.
+- arthritis | verification_status=confirmed | clinical_status=active | modalities=interview,unknown | speakers=doctor,patient | evidence=T6,T64
+  Summary: The patient reports that her arthritis is starting to get better.
+  ClusterId: CL3
+  TemporalProfile: current
+  Updates:
+  - CAP3: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T6 :: The patient reports that her arthritis is starting to get better.
+  - CAP17: content_source=doctor modality=unknown verification_status=confirmed clinical_status=active temporality=current turns=T64 :: The patient's right knee is doing well.
+- joint pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T6
+  Summary: The patient reports joint pain.
+  ClusterId: CL4
+  TemporalProfile: current
+  Updates:
+  - CAP19: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T6 :: The patient reports joint pain.
+- muscle pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T6
+  Summary: The patient reports muscle pain.
+  ClusterId: CL5
+  TemporalProfile: current
+  Updates:
+  - CAP20: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T6 :: The patient reports muscle pain.
+- walking | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T10
+  Summary: The patient reports walking about a mile and a half a day.
+  ClusterId: CL6
+  TemporalProfile: current
+  Updates:
+  - CAP1: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T10 :: The patient reports walking about a mile and a half a day.
+  - CAP5: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T10 :: The patient is able to walk a little further now.
+- mile | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T10
+  Summary: The patient is walking about a mile and a half a day.
+  ClusterId: CL7
+  TemporalProfile: current
+  Updates:
+  - CAP2: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T10 :: The patient is walking about a mile and a half a day.
+- gout | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T13,T64
+  Summary: The patient had an episode of gout.
+  ClusterId: CL8
+  TemporalProfile: current, past
+  Updates:
+  - CAP12: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=past turns=T13 :: The patient had an episode of gout.
+  - CAP24: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T64 :: The patient's gout is controlled.
+- medication | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T13
+  Summary: The patient is taking the allopurinol medication.
+  ClusterId: CL9
+  TemporalProfile: current
+  Updates:
+  - CAP13: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T13 :: The patient is taking the allopurinol medication.
+- pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T13
+  Summary: The patient reports pain.
+  ClusterId: CL10
+  TemporalProfile: current
+  Updates:
+  - CAP25: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T13 :: The patient reports pain.
+- normal bowel movement | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T15
+  Summary: The patient's last bowel movement was normal.
+  ClusterId: CL11
+  TemporalProfile: prior
+  Updates:
+  - CAP16: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=prior turns=T15 :: The patient's last bowel movement was normal.
+- no issues | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T16
+  Summary: The patient reports no issues with the allopurinol medication.
+  ClusterId: CL12
+  TemporalProfile: current
+  Updates:
+  - CAP7: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T16 :: The patient reports no issues with the allopurinol medication.
+- flare ups | verification_status=confirmed | clinical_status=resolved | modalities=interview | speakers=patient | evidence=T18
+  Summary: The patient reports no further flare ups.
+  ClusterId: CL13
+  TemporalProfile: past
+  Updates:
+  - CAP14: content_source=patient modality=interview verification_status=confirmed clinical_status=resolved temporality=past turns=T18 :: The patient reports no further flare ups.
+- abdominal pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T19,T30
+  Summary: The patient reports abdominal pain in the right upper quadrant.
+  ClusterId: CL14
+  TemporalProfile: current
+  Updates:
+  - CAP6: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T19 :: The patient reports abdominal pain in the right upper quadrant.
+  - CAP21: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T30 :: The patient reports abdominal pain.
+  - CAP22: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T30 :: The patient reports abdominal pain.
+- gallbladder disease | verification_status=unconfirmed | clinical_status=planned | modalities=unknown | speakers=doctor | evidence=T19
+  Summary: The doctor suspects gallbladder disease.
+  ClusterId: CL15
+  TemporalProfile: future
+  Updates:
+  - CAP23: content_source=doctor modality=unknown verification_status=unconfirmed clinical_status=planned temporality=future turns=T19 :: The doctor suspects gallbladder disease.
+- belly bigger than usual | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T22
+  Summary: The patient reports their belly is bigger than usual.
+  ClusterId: CL16
+  TemporalProfile: current
+  Updates:
+  - CAP8: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T22 :: The patient reports their belly is bigger than usual.
+- reflux | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T22,T45
+  Summary: The patient reports reflux and nausea and vomiting.
+  ClusterId: CL17
+  TemporalProfile: current
+  Updates:
+  - CAP27: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T22 :: The patient reports reflux.
+  - CAP28: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T22 :: The patient has reflux.
+  - CAP11: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T45 :: The patient reports reflux and nausea and vomiting.
+- diarrhea | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T22
+  Summary: The patient reports diarrhea.
+  ClusterId: CL18
+  TemporalProfile: current
+  Updates:
+  - CAP29: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T22 :: The patient reports diarrhea.
+- vomiting | verification_status=confirmed | clinical_status=active | modalities=assessment,interview | speakers=doctor,patient | evidence=T26
+  Summary: The patient is vomiting.
+  ClusterId: CL20
+  TemporalProfile: current
+  Updates:
+  - CAP26: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T26 :: The patient reports vomiting.
+  - CAP31: content_source=doctor modality=assessment verification_status=confirmed clinical_status=active temporality=current turns=T26 :: The patient is vomiting.
+- bloating | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T30
+  Summary: The patient feels bloated all the time.
+  ClusterId: CL21
+  TemporalProfile: current
+  Updates:
+  - CAP15: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T30 :: The patient feels bloated all the time.
+- bowel movement | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T32
+  Summary: The patient's last bowel movement was two days ago.
+  ClusterId: CL22
+  TemporalProfile: two days ago
+  Updates:
+  - CAP9: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=two days ago turns=T32 :: The patient's last bowel movement was two days ago.
+- nausea | verification_status=confirmed | clinical_status=active | modalities=assessment | speakers=doctor | evidence=T45
+  Summary: The patient experiences nausea.
+  ClusterId: CL23
+  TemporalProfile: current
+  Updates:
+  - CAP30: content_source=doctor modality=assessment verification_status=confirmed clinical_status=active temporality=current turns=T45 :: The patient experiences nausea.
+- right upper quadrant pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T52
+  Summary: The patient reports pain to the right upper quadrant.
+  ClusterId: CL27
+  TemporalProfile: current
+  Updates:
+  - CAP10: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T52 :: The patient reports pain to the right upper quadrant.
+
+Medication Tracking
+- [MedicationState] omeprazole | verification_status=confirmed | clinical_status=active | modalities=interview,plan | speakers=doctor | evidence=T22,T57
+  Summary: The patient should continue on omeprazole.
+  ClusterId: CL19
+  TemporalProfile: current, daily
+  CurrentRegimens:
+  - The patient is taking omeprazole. (T22)
+  - The patient should continue on omeprazole. (T57)
+  Updates:
+  - CAP43: content_source=doctor modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T22 :: The patient is taking omeprazole.
+  - CAP42: content_source=doctor modality=plan verification_status=confirmed clinical_status=active temporality=daily turns=T57 :: The patient should continue on omeprazole.
+- [MedicationState] allopurinol | verification_status=confirmed | clinical_status=active | modalities=plan | speakers=doctor | evidence=T60
+  Summary: Dragon should order allopurinol.
+  ClusterId: CL33
+  TemporalProfile: daily
+  CurrentRegimens:
+  - Dragon should order allopurinol. (T60)
+  Updates:
+  - CAP41: content_source=doctor modality=plan verification_status=confirmed clinical_status=active temporality=daily turns=T60 :: Dragon should order allopurinol.
+
+Other Structured States
+- [ExamFinding] right knee effusion | verification_status=confirmed | clinical_status=active | modalities=exam | speakers=doctor | evidence=T46,T52
+  Summary: The doctor observed slight effusion and pain on palpation of the patient's right knee.
+  ClusterId: CL24
+  TemporalProfile: current
+- [TestResult] autoimmune panel | verification_status=confirmed | clinical_status=historical | modalities=test_result | speakers=dragon | evidence=T49
+  Summary: An autoimmune panel was sent.
+  ClusterId: CL25
+  TemporalProfile: past
+- [ExamFinding] arthritis | verification_status=confirmed | clinical_status=active | modalities=exam | speakers=doctor | evidence=T50
+  Summary: The patient has arthritis in their right knee.
+  ClusterId: CL26
+  TemporalProfile: current
+- [Plan] right upper quadrant ultrasound | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T52
+  Summary: A right upper quadrant ultrasound is planned.
+  ClusterId: CL28
+  TemporalProfile: future
+- [TestResult] right knee x-ray | verification_status=confirmed | clinical_status=historical | modalities=test_result | speakers=dragon | evidence=T52
+  Summary: A right knee x-ray was reviewed.
+  ClusterId: CL29
+  TemporalProfile: past
+- [TestResult] right upper quadrant ultrasound | verification_status=confirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T57
+  Summary: A right upper quadrant ultrasound is ordered.
+  ClusterId: CL30
+  TemporalProfile: soon
+- [Plan] imaging | verification_status=unconfirmed | clinical_status=active | modalities=plan | speakers=doctor | evidence=T57
+  Summary: Further imaging or intervention may be considered.
+  ClusterId: CL31
+  TemporalProfile: as needed
+- [Plan] pilates | verification_status=confirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T57
+  Summary: The patient should continue pilates.
+  ClusterId: CL32
+  TemporalProfile: ongoing

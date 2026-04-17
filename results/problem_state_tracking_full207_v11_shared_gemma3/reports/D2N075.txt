@@ -1,0 +1,148 @@
+Case: D2N075
+
+Problem List and Visit State Tracking
+
+Problem List
+- chest pain | verification_status=unconfirmed | clinical_status=resolved | modalities=interview | speakers=patient | evidence=T25,T5
+  Summary: The patient reports that the chest pain stopped after four days.
+  ClusterId: CL1
+  TemporalProfile: current, past, three months ago
+  Updates:
+  - CAP1: content_source=patient modality=interview verification_status=confirmed clinical_status=resolved temporality=past turns=T5 :: The patient reports that the chest pain stopped after four days.
+  - CAP14: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T5 :: The patient reports chest pain.
+  - CAP17: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T25 :: The patient reports chest pain.
+  - CAP32: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=three months ago turns=T25 :: The patient's chest pain resolved three months ago.
+- esophagitis | verification_status=unconfirmed | clinical_status=historical | modalities=assessment,interview | speakers=doctor,patient | evidence=T48,T5,T58
+  Summary: The doctor suspects esophagitis.
+  ClusterId: CL2
+  TemporalProfile: past
+  Updates:
+  - CAP7: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=past turns=T5 :: The patient previously sought care for esophagitis.
+  - CAP5: content_source=doctor modality=interview verification_status=unconfirmed clinical_status=historical temporality=past turns=T48 :: Esophagitis is a possible cause of the patient's symptoms.
+  - CAP23: content_source=doctor modality=assessment verification_status=unconfirmed clinical_status=historical temporality=past turns=T58 :: The doctor suspects esophagitis.
+- abdominal pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T11,T41
+  Summary: The patient reports mild abdominal pain in the upper abdomen.
+  ClusterId: CL3
+  TemporalProfile: current, past
+  Updates:
+  - CAP31: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=past turns=T11 :: The patient experienced abdominal pain for four days.
+  - CAP3: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T41 :: The patient reports mild abdominal pain in the upper abdomen.
+- heart attack | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T13
+  Summary: The patient felt like they were having a heart attack.
+  ClusterId: CL4
+  TemporalProfile: past
+  Updates:
+  - CAP2: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=past turns=T13 :: The patient felt like they were having a heart attack.
+- gastrointestinal disorder | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T17
+  Summary: The patient was referred for a gastrointestinal disorder.
+  ClusterId: CL7
+  TemporalProfile: current
+  Updates:
+  - CAP6: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T17 :: The patient was referred for a gastrointestinal disorder.
+- heartburn | verification_status=unconfirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T19
+  Summary: The patient reports possible heartburn.
+  ClusterId: CL8
+  TemporalProfile: past
+  Updates:
+  - CAP15: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=past turns=T19 :: The patient reports possible heartburn.
+  - CAP33: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=past turns=T19 :: The patient may have experienced heartburn.
+- something wrong | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T25
+  Summary: The patient feels like there's something wrong.
+  ClusterId: CL9
+  TemporalProfile: current
+  Updates:
+  - CAP8: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T25 :: The patient feels like there's something wrong.
+- swallowing difficulty | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T25
+  Summary: The patient reports difficulty swallowing.
+  ClusterId: CL10
+  TemporalProfile: past
+  Updates:
+  - CAP16: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=past turns=T25 :: The patient reports difficulty swallowing.
+- weight loss | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T27
+  Summary: The patient is trying to lose weight.
+  ClusterId: CL11
+  TemporalProfile: current
+  Updates:
+  - CAP9: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T27 :: The patient is trying to lose weight.
+  - CAP10: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T27 :: The patient reports attempting to lose weight.
+- musculoskeletal etiology | verification_status=unconfirmed | clinical_status=historical | modalities=assessment | speakers=doctor | evidence=T37
+  Summary: The doctor suspects a musculoskeletal etiology.
+  ClusterId: CL12
+  TemporalProfile: past
+  Updates:
+  - CAP11: content_source=doctor modality=assessment verification_status=unconfirmed clinical_status=historical temporality=past turns=T37 :: The doctor suspects a musculoskeletal etiology.
+- anxiety attack | verification_status=unconfirmed | clinical_status=historical | modalities=assessment,interview | speakers=doctor | evidence=T48,T58
+  Summary: The doctor suspects an anxiety attack.
+  ClusterId: CL15
+  TemporalProfile: past
+  Updates:
+  - CAP4: content_source=doctor modality=interview verification_status=unconfirmed clinical_status=historical temporality=past turns=T48 :: Anxiety is a potential cause of the patient's condition.
+  - CAP24: content_source=doctor modality=assessment verification_status=unconfirmed clinical_status=historical temporality=past turns=T58 :: The doctor suspects anxiety.
+  - CAP12: content_source=doctor modality=assessment verification_status=unconfirmed clinical_status=historical temporality=past turns=T58 :: The doctor suspects an anxiety attack.
+- chest discomfort | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T48
+  Summary: The patient reports chest discomfort.
+  ClusterId: CL16
+  TemporalProfile: current
+  Updates:
+  - CAP18: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T48 :: The patient reports chest discomfort.
+- pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T54
+  Summary: The patient reports pain.
+  ClusterId: CL18
+  TemporalProfile: current
+  Updates:
+  - CAP19: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T54 :: The patient reports pain.
+  - CAP20: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T54 :: The patient reports pain.
+- job transition | verification_status=unconfirmed | clinical_status=historical | modalities=assessment | speakers=doctor | evidence=T58
+  Summary: The doctor suspects a job transition.
+  ClusterId: CL20
+  TemporalProfile: past
+  Updates:
+  - CAP13: content_source=doctor modality=assessment verification_status=unconfirmed clinical_status=historical temporality=past turns=T58 :: The doctor suspects a job transition.
+- gerd | verification_status=unconfirmed | clinical_status=historical | modalities=assessment | speakers=doctor | evidence=T58
+  Summary: The doctor suspects GERD.
+  ClusterId: CL21
+  TemporalProfile: past
+  Updates:
+  - CAP21: content_source=doctor modality=assessment verification_status=unconfirmed clinical_status=historical temporality=past turns=T58 :: The doctor suspects GERD.
+- dyspepsia | verification_status=unconfirmed | clinical_status=historical | modalities=assessment | speakers=doctor | evidence=T58
+  Summary: The doctor suspects dyspepsia.
+  ClusterId: CL22
+  TemporalProfile: past
+  Updates:
+  - CAP22: content_source=doctor modality=assessment verification_status=unconfirmed clinical_status=historical temporality=past turns=T58 :: The doctor suspects dyspepsia.
+
+Medication Tracking
+- [MedicationState] ekg | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T15
+  Summary: An EKG was performed.
+  ClusterId: CL5
+  TemporalProfile: past
+  CurrentRegimens:
+  - An EKG was performed. (T15)
+  Updates:
+  - CAP29: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=past turns=T15 :: An EKG was performed.
+- [MedicationState] blood tests | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T15
+  Summary: Blood tests were performed.
+  ClusterId: CL6
+  TemporalProfile: past
+  CurrentRegimens:
+  - Blood tests were performed. (T15)
+  Updates:
+  - CAP30: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=past turns=T15 :: Blood tests were performed.
+
+Other Structured States
+- [ExamFinding] tenderness | verification_status=confirmed | clinical_status=active | modalities=exam | speakers=doctor | evidence=T46
+  Summary: The doctor observed mild tenderness to light palpation in the upper abdominal quadrants.
+  ClusterId: CL13
+  TemporalProfile: current
+- [ExamFinding] normal exam findings | verification_status=confirmed | clinical_status=historical | modalities=exam | speakers=doctor | evidence=T46
+  Summary: The doctor reported normal exam findings.
+  ClusterId: CL14
+  TemporalProfile: current
+- [Plan] egd | verification_status=unconfirmed | clinical_status=planned | modalities=interview | speakers=doctor | evidence=T53
+  Summary: The doctor recommends an egd.
+  ClusterId: CL17
+  TemporalProfile: future
+- [Plan] follow-up | verification_status=unconfirmed | clinical_status=planned | modalities=interview | speakers=doctor | evidence=T54
+  Summary: The doctor recommends follow-up.
+  ClusterId: CL19
+  TemporalProfile: future

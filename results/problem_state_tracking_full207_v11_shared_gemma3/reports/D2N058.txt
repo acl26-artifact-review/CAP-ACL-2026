@@ -1,0 +1,153 @@
+Case: D2N058
+
+Problem List and Visit State Tracking
+
+Problem List
+- reduced ejection fraction | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T0
+  Summary: The patient's ejection fraction is reduced.
+  ClusterId: CL1
+  TemporalProfile: current
+  Updates:
+  - CAP3: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T0 :: The patient's ejection fraction is reduced.
+- mitral regurgitation | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T0
+  Summary: The patient has moderate mitral regurgitation.
+  ClusterId: CL2
+  TemporalProfile: current
+  Updates:
+  - CAP4: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T0 :: The patient has moderate mitral regurgitation.
+- diabetes mellitus | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T0
+  Summary: The patient has diabetes mellitus.
+  ClusterId: CL3
+  TemporalProfile: current
+  Updates:
+  - CAP10: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T0 :: The patient has diabetes mellitus.
+- hypertension | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T0
+  Summary: The patient has hypertension.
+  ClusterId: CL4
+  TemporalProfile: current
+  Updates:
+  - CAP13: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T0 :: The patient has hypertension.
+- heart attack | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T5
+  Summary: The patient has had a previous heart attack.
+  ClusterId: CL5
+  TemporalProfile: past
+  Updates:
+  - CAP1: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=past turns=T5 :: The patient has had a previous heart attack.
+- tiredness | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T5
+  Summary: The patient reports feeling tired.
+  ClusterId: CL6
+  TemporalProfile: current
+  Updates:
+  - CAP9: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T5 :: The patient reports feeling tired.
+- nature pictures | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T11
+  Summary: The patient enjoys taking nature pictures.
+  ClusterId: CL7
+  TemporalProfile: current
+  Updates:
+  - CAP7: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=current turns=T11 :: The patient enjoys taking nature pictures.
+- chest pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T15,T29
+  Summary: The patient denies chest pain.
+  ClusterId: CL8
+  TemporalProfile: current
+  Updates:
+  - CAP14: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T15 :: The patient reports pain.
+  - CAP11: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T15 :: The patient denies chest pain.
+  - CAP2: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T29 :: The patient reports pain in the left hand.
+- shortness of breath | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T15
+  Summary: The patient denies shortness of breath.
+  ClusterId: CL9
+  TemporalProfile: current
+  Updates:
+  - CAP5: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T15 :: The patient denies shortness of breath.
+- light housekeeping | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T17
+  Summary: The patient is doing light housekeeping.
+  ClusterId: CL10
+  TemporalProfile: current
+  Updates:
+  - CAP6: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=current turns=T17 :: The patient is doing light housekeeping.
+- swelling | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T22
+  Summary: The patient denies leg swelling.
+  ClusterId: CL12
+  TemporalProfile: current
+  Updates:
+  - CAP12: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T22 :: The patient denies leg swelling.
+- coronary artery disease | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T36
+  Summary: The patient has coronary artery disease.
+  ClusterId: CL14
+  TemporalProfile: current
+  Updates:
+  - CAP8: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T36 :: The patient has coronary artery disease.
+
+Medication Tracking
+- [MedicationState] two pillows | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T19
+  Summary: The patient sleeps with two pillows.
+  ClusterId: CL11
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient sleeps with two pillows. (T19)
+  Updates:
+  - CAP23: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T19 :: The patient sleeps with two pillows.
+- [MedicationState] medication | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T24
+  Summary: The patient is taking medication to prevent his sense from closing up.
+  ClusterId: CL13
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient is taking medication to prevent his sense from closing up. (T24)
+  - The patient is taking medication as prescribed. (T24)
+  Updates:
+  - CAP17: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T24 :: The patient is taking medication to prevent his sense from closing up.
+  - CAP22: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T24 :: The patient is taking medication as prescribed.
+- [MedicationState] brilinta | verification_status=confirmed | clinical_status=active | modalities=interview,plan | speakers=clinician,doctor | evidence=T36
+  Summary: The patient should continue taking brilinta.
+  ClusterId: CL16
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient should take brilinta 90 milligrams twice daily. (T36)
+  - The patient should continue taking brilinta. (T36)
+  Updates:
+  - CAP18: content_source=doctor modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T36 :: The patient should take brilinta 90 milligrams twice daily.
+  - CAP25: content_source=clinician modality=plan verification_status=confirmed clinical_status=active temporality=current turns=T36 :: The patient should continue taking brilinta.
+- [MedicationState] aspirin | verification_status=confirmed | clinical_status=active | modalities=interview,plan | speakers=clinician,doctor | evidence=T36
+  Summary: The patient should continue taking aspirin.
+  ClusterId: CL17
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient should take aspirin 81 milligrams daily. (T36)
+  - The patient should continue taking aspirin. (T36)
+  Updates:
+  - CAP19: content_source=doctor modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T36 :: The patient should take aspirin 81 milligrams daily.
+  - CAP24: content_source=clinician modality=plan verification_status=confirmed clinical_status=active temporality=current turns=T36 :: The patient should continue taking aspirin.
+- [MedicationState] atorvastatin | verification_status=confirmed | clinical_status=active | modalities=interview,plan | speakers=clinician,doctor | evidence=T36
+  Summary: The patient should continue taking atorvastatin.
+  ClusterId: CL18
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient should take atorvastatin 80 milligrams daily. (T36)
+  - The patient should continue taking atorvastatin. (T36)
+  Updates:
+  - CAP20: content_source=doctor modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T36 :: The patient should take atorvastatin 80 milligrams daily.
+  - CAP26: content_source=clinician modality=plan verification_status=confirmed clinical_status=active temporality=current turns=T36 :: The patient should continue taking atorvastatin.
+- [MedicationState] toprol | verification_status=confirmed | clinical_status=active | modalities=interview,plan | speakers=clinician,doctor | evidence=T36
+  Summary: The patient should continue taking toprol.
+  ClusterId: CL19
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient should take toprol 50 milligrams daily. (T36)
+  - The patient should continue taking toprol. (T36)
+  Updates:
+  - CAP21: content_source=doctor modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T36 :: The patient should take toprol 50 milligrams daily.
+  - CAP27: content_source=clinician modality=plan verification_status=confirmed clinical_status=active temporality=current turns=T36 :: The patient should continue taking toprol.
+- [MedicationState] aldactone | verification_status=confirmed | clinical_status=active | modalities=plan | speakers=clinician | evidence=T36
+  Summary: The patient should continue taking aldactone.
+  ClusterId: CL20
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient should continue taking aldactone. (T36)
+  Updates:
+  - CAP28: content_source=clinician modality=plan verification_status=confirmed clinical_status=active temporality=current turns=T36 :: The patient should continue taking aldactone.
+
+Other Structured States
+- [Plan] cardiac rehab | verification_status=confirmed | clinical_status=planned | modalities=plan | speakers=clinician,doctor | evidence=T36
+  Summary: The patient should be referred to cardiac rehab.
+  ClusterId: CL15
+  TemporalProfile: future

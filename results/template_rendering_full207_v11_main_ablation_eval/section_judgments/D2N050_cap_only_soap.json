@@ -1,0 +1,30 @@
+{
+  "section_miscategorizations": [
+    {
+      "text": "The patient reports tenderness over the kidney.",
+      "current_section": "O",
+      "expected_section": "S",
+      "severity": "major",
+      "reason": "This is explicitly framed as a patient-reported symptom rather than an examiner-observed physical finding."
+    },
+    {
+      "text": "The patient reports inflammation over the kidney.",
+      "current_section": "O",
+      "expected_section": "S",
+      "severity": "major",
+      "reason": "This is described as a patient report; unless documented as an observed exam finding, it belongs in the subjective history."
+    },
+    {
+      "text": "The patient's father had kidney stones.",
+      "current_section": "A",
+      "expected_section": "S",
+      "severity": "minor",
+      "reason": "Family history is typically part of the subjective history rather than the assessment, though its presence in A is not highly misleading."
+    }
+  ],
+  "summary_statistics": {
+    "section_appropriateness_score": 0.7,
+    "section_miscategorization_count": 3,
+    "major_section_miscategorization_count": 2
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "section_miscategorizations": [
+    {
+      "text": "Rule out cardiac etiology given chest pain and associated arm pain.",
+      "current_section": "A",
+      "expected_section": "H",
+      "severity": "major",
+      "reason": "The note never documents chest pain in the History of Present Illness, yet this sentence introduces 'chest pain and associated arm pain' as if it were part of the clinical picture. In the Assessment, this appears as a new symptom rather than a diagnostic synthesis of previously documented history, which could mislead the reader about what the patient actually reported."
+    },
+    {
+      "text": "Glucose level is pending.",
+      "current_section": "F",
+      "expected_section": "P",
+      "severity": "minor",
+      "reason": "A pending lab is more appropriately documented as an ordered test in the Plan. Listing it under Findings implies a result is already available, though this is a modest organizational issue rather than substantially misleading."
+    },
+    {
+      "text": "EKG is ordered.",
+      "current_section": "F",
+      "expected_section": "P",
+      "severity": "major",
+      "reason": "Test orders belong in the Plan. Placing the EKG order in Findings blurs the distinction between what has been found versus what is being done, which can mislead a reader about whether an EKG result is available."
+    }
+  ],
+  "summary_statistics": {
+    "section_appropriateness_score": 0.7,
+    "section_miscategorization_count": 3,
+    "major_section_miscategorization_count": 2
+  }
+}

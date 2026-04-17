@@ -1,0 +1,30 @@
+{
+  "section_miscategorizations": [
+    {
+      "text": "The patient's blood sugar is between eighty and one hundred.",
+      "current_section": "O",
+      "expected_section": "S",
+      "severity": "major",
+      "reason": "This appears to be a home blood sugar range rather than an in-clinic measured lab value; as such it is patient-reported home measurement and belongs in the subjective section."
+    },
+    {
+      "text": "The patient is taking twenty mg of lisinopril daily.",
+      "current_section": "O",
+      "expected_section": "S",
+      "severity": "major",
+      "reason": "This is an existing medication regimen, not an observed exam or lab finding; per instructions, current medications the patient is already taking belong in the subjective section unless framed as a treatment change."
+    },
+    {
+      "text": "The patient has a grade 2 murmur.",
+      "current_section": "A",
+      "expected_section": "O",
+      "severity": "minor",
+      "reason": "A grade 2 murmur is a physical exam finding and belongs in the objective section; repeating it in the assessment is common, but its primary placement should be under objective findings."
+    }
+  ],
+  "summary_statistics": {
+    "section_appropriateness_score": 0.6,
+    "section_miscategorization_count": 3,
+    "major_section_miscategorization_count": 2
+  }
+}

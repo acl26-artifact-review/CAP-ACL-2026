@@ -1,0 +1,166 @@
+Case: D2N073
+
+Problem List and Visit State Tracking
+
+Problem List
+- fatigue | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T6
+  Summary: The patient reports feeling fatigued.
+  ClusterId: CL1
+  TemporalProfile: current
+  Updates:
+  - CAP8: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T6 :: The patient reports feeling fatigued.
+- fever | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T6
+  Summary: The patient reports experiencing feverishness.
+  ClusterId: CL2
+  TemporalProfile: current
+  Updates:
+  - CAP9: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T6 :: The patient reports experiencing feverishness.
+- chills | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T6
+  Summary: The patient reports experiencing chills.
+  ClusterId: CL3
+  TemporalProfile: current
+  Updates:
+  - CAP10: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T6 :: The patient reports experiencing chills.
+- headache | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T6
+  Summary: The patient reports experiencing headaches.
+  ClusterId: CL4
+  TemporalProfile: current
+  Updates:
+  - CAP11: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T6 :: The patient reports experiencing headaches.
+- wheezing | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T6
+  Summary: The patient reports experiencing wheezing.
+  ClusterId: CL5
+  TemporalProfile: current
+  Updates:
+  - CAP12: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T6 :: The patient reports experiencing wheezing.
+- cold intolerance | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T8
+  Summary: The patient reports feeling cold easily.
+  ClusterId: CL6
+  TemporalProfile: current
+  Updates:
+  - CAP6: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T8 :: The patient reports feeling cold easily.
+- anemia | verification_status=unconfirmed | clinical_status=historical | modalities=interview | speakers=doctor,patient | evidence=T10,T41
+  Summary: The patient has been anemic since age 13.
+  ClusterId: CL7
+  TemporalProfile: initial presentation, long-standing
+  Updates:
+  - CAP1: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=long-standing turns=T10 :: The patient has been anemic since age 13.
+  - CAP14: content_source=doctor modality=interview verification_status=unconfirmed clinical_status=historical temporality=initial presentation turns=T41 :: The doctor suspects internal bleeding.
+- left hand pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T28
+  Summary: The patient reports pain in the left hand.
+  ClusterId: CL8
+  TemporalProfile: current
+  Updates:
+  - CAP2: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T28 :: The patient reports pain in the left hand.
+- iron deficiency | verification_status=unconfirmed | clinical_status=planned | modalities=interview | speakers=doctor | evidence=T34
+  Summary: The doctor may recommend iron supplementation.
+  ClusterId: CL9
+  TemporalProfile: future
+  Updates:
+  - CAP7: content_source=doctor modality=interview verification_status=unconfirmed clinical_status=planned temporality=future turns=T34 :: The doctor may recommend iron supplementation.
+- abdominal pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T34
+  Summary: The patient reports abdominal pain.
+  ClusterId: CL10
+  TemporalProfile: current
+  Updates:
+  - CAP15: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T34 :: The patient reports abdominal pain.
+- pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T40
+  Summary: The patient reports no tenderness.
+  ClusterId: CL11
+  TemporalProfile: current
+  Updates:
+  - CAP13: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T40 :: The patient reports no tenderness.
+- sedation history | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T54
+  Summary: The patient has a history of sedation issues.
+  ClusterId: CL17
+  TemporalProfile: past
+  Updates:
+  - CAP3: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=past turns=T54 :: The patient has a history of sedation issues.
+- hematologist | verification_status=confirmed | clinical_status=planned | modalities=unknown | speakers=doctor | evidence=T57
+  Summary: A referral to a hematologist has been sent.
+  ClusterId: CL23
+  TemporalProfile: future
+  Updates:
+  - CAP5: content_source=doctor modality=unknown verification_status=confirmed clinical_status=planned temporality=future turns=T57 :: A referral to a hematologist has been sent.
+- iron deficiency anemia | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T61
+  Summary: The patient was diagnosed with iron deficiency anemia.
+  ClusterId: CL24
+  TemporalProfile: historical
+  Updates:
+  - CAP4: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=historical turns=T61 :: The patient was diagnosed with iron deficiency anemia.
+
+Medication Tracking
+- [MedicationChange] orange juice | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T55
+  Summary: The doctor wants the patient to take iron pills with orange juice.
+  ClusterId: CL18
+  TemporalProfile: future
+  PlannedChanges:
+  - The doctor wants the patient to take iron pills with orange juice. (T55)
+  Updates:
+  - CAP16: content_source=doctor modality=plan verification_status=unconfirmed clinical_status=planned temporality=future turns=T55 :: The doctor wants the patient to take iron pills with orange juice.
+- [MedicationChange] iron supplement | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T55
+  Summary: The doctor wants the patient to start taking iron pills.
+  ClusterId: CL19
+  TemporalProfile: future
+  PlannedChanges:
+  - The doctor wants the patient to start taking iron pills. (T55)
+  Updates:
+  - CAP17: content_source=doctor modality=plan verification_status=unconfirmed clinical_status=planned temporality=future turns=T55 :: The doctor wants the patient to start taking iron pills.
+- [MedicationChange] iron pills | verification_status=confirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T55
+  Summary: The patient will start taking iron pills.
+  ClusterId: CL20
+  TemporalProfile: future
+  PlannedChanges:
+  - The patient will start taking iron pills. (T55)
+  Updates:
+  - CAP19: content_source=doctor modality=plan verification_status=confirmed clinical_status=planned temporality=future turns=T55 :: The patient will start taking iron pills.
+- [MedicationState] vitamin c | verification_status=confirmed | clinical_status=active | modalities=unknown | speakers=doctor | evidence=T55
+  Summary: The patient should take vitamin C with ferrous sulfate.
+  ClusterId: CL21
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient should take vitamin C with ferrous sulfate. (T55)
+  Updates:
+  - CAP27: content_source=doctor modality=unknown verification_status=confirmed clinical_status=active temporality=current turns=T55 :: The patient should take vitamin C with ferrous sulfate.
+- [MedicationState] ferrous sulfate | verification_status=confirmed | clinical_status=active | modalities=unknown | speakers=doctor | evidence=T61
+  Summary: The patient should take ferrous sulfate.
+  ClusterId: CL27
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient should take ferrous sulfate. (T61)
+  Updates:
+  - CAP28: content_source=doctor modality=unknown verification_status=confirmed clinical_status=active temporality=current turns=T61 :: The patient should take ferrous sulfate.
+
+Other Structured States
+- [TestResult] upper endoscopy | verification_status=unconfirmed | clinical_status=planned | modalities=interview | speakers=doctor | evidence=T43
+  Summary: The doctor plans an upper endoscopy.
+  ClusterId: CL12
+  TemporalProfile: future
+- [TestResult] colonoscopy | verification_status=unconfirmed | clinical_status=planned | modalities=interview | speakers=doctor | evidence=T43
+  Summary: The doctor plans a colonoscopy.
+  ClusterId: CL13
+  TemporalProfile: future
+- [TestResult] pill camera | verification_status=unconfirmed | clinical_status=planned | modalities=interview | speakers=doctor | evidence=T45
+  Summary: The doctor plans to use a pill camera.
+  ClusterId: CL14
+  TemporalProfile: future
+- [Plan] upper endoscopy | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T49
+  Summary: The doctor orders an upper endoscopy.
+  ClusterId: CL15
+  TemporalProfile: future
+- [Plan] colonoscopy | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T49,T57
+  Summary: The doctor orders a colonoscopy.
+  ClusterId: CL16
+  TemporalProfile: future
+- [FollowUp] recheck cbc, iron, ferritin, b12, and folate | verification_status=confirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T55
+  Summary: Blood work will be repeated.
+  ClusterId: CL22
+  TemporalProfile: future
+- [Plan] egd | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T61
+  Summary: An upper endoscopy will be performed.
+  ClusterId: CL25
+  TemporalProfile: future
+- [Plan] capsule endoscopy | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T61
+  Summary: A capsule endoscopy will be performed.
+  ClusterId: CL26
+  TemporalProfile: future

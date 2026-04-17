@@ -1,0 +1,45 @@
+Case: D2N053
+
+Problem List and Visit State Tracking
+
+Problem List
+- scalp irritation | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T1
+  Summary: The patient has scalp irritation.
+  ClusterId: CL1
+  TemporalProfile: current
+  Updates:
+  - CAP1: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T1 :: The patient has scalp irritation.
+- itching | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T1,T3
+  Summary: The patient reports itching.
+  ClusterId: CL2
+  TemporalProfile: 6 months, current
+  Updates:
+  - CAP2: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T1 :: The patient reports itching.
+  - CAP6: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=6 months turns=T3 :: The patient has experienced scalp itching for approximately six months.
+- dandruff | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T1
+  Summary: The patient reports dandruff.
+  ClusterId: CL3
+  TemporalProfile: current
+  Updates:
+  - CAP3: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T1 :: The patient reports dandruff.
+
+Medication Tracking
+- [MedicationState] head and shoulders | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T9
+  Summary: The patient has tried Head and Shoulders.
+  ClusterId: CL4
+  TemporalProfile: past
+  CurrentRegimens:
+  - The patient has tried Head and Shoulders. (T9)
+  Updates:
+  - CAP4: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=past turns=T9 :: The patient has tried Head and Shoulders.
+- [MedicationState] castor oil | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T9
+  Summary: The patient has tried castor oil.
+  ClusterId: CL5
+  TemporalProfile: past
+  CurrentRegimens:
+  - The patient has tried castor oil. (T9)
+  Updates:
+  - CAP5: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=past turns=T9 :: The patient has tried castor oil.
+
+Other Structured States
+- None

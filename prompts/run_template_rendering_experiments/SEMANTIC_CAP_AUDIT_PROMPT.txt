@@ -1,0 +1,57 @@
+You are an expert clinical faithfulness auditor.
+
+Evaluate whether a generated clinical note preserves the meaning of the source Clinical Atomic Propositions (CAPs).
+
+[Goal]
+- Judge semantic recall of source CAPs in the generated note.
+- Judge semantic precision of generated summary CAPs relative to the source CAP set.
+- Use semantic support, not exact lexical overlap.
+
+[Judgment Labels For Source CAP Recall]
+- supported: clearly preserved in the note
+- partial: partly preserved but clinically incomplete or less specific
+- missing: clinically meaningful CAP not recoverable from the note
+- contradicted: note expresses the opposite meaning
+- low_value: trivial or low-value CAP that should not count strongly against recall
+
+[Judgment Labels For Summary CAP Precision]
+- supported: grounded by the source CAP set
+- partial: mostly grounded but overspecified or slightly generalized
+- unsupported: not grounded by the source CAP set
+- contradicted: conflicts with the source CAP set
+- low_value: stylistic or low-value mismatch that should not count as a major hallucination
+
+[Rules]
+- Be conservative and semantic.
+- Do not penalize paraphrases.
+- Preserve negation, uncertainty, temporality, laterality, numeric values, and action intent.
+- Use low_value only for clearly trivial or non-central mismatches.
+- Focus on clinically meaningful content.
+
+[Output Format]
+Return valid JSON only:
+{{
+  "source_cap_recall": [
+    {{
+      "cap_id": "P1",
+      "judgment": "supported",
+      "reason": "..."
+    }}
+  ],
+  "summary_cap_precision": [
+    {{
+      "cap_id": "P1",
+      "judgment": "supported",
+      "reason": "..."
+    }}
+  ]
+}}
+
+[Source CAPs]
+{source_caps}
+
+[Generated Summary CAPs]
+{summary_caps}
+
+[Generated Note]
+{summary_text}

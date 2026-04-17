@@ -1,0 +1,23 @@
+{
+  "section_miscategorizations": [
+    {
+      "text": "The patient has a history of high blood pressure and reports difficulty quitting smoking.",
+      "current_section": "A",
+      "expected_section": "S",
+      "severity": "major",
+      "reason": "This sentence contains patient-reported history (history of high blood pressure, difficulty quitting smoking) rather than a synthesized diagnostic assessment or problem list. It belongs in the subjective history section."
+    },
+    {
+      "text": "The doctor orders a physical exam on the patient's eyes.",
+      "current_section": "P",
+      "expected_section": "O",
+      "severity": "major",
+      "reason": "A physical exam is a performed/observed finding and should be documented in the Objective section. Stating it as an order in the Plan is misleading, since the exam is typically contemporaneous with the visit and not a future management action."
+    }
+  ],
+  "summary_statistics": {
+    "section_appropriateness_score": 0.7,
+    "section_miscategorization_count": 2,
+    "major_section_miscategorization_count": 2
+  }
+}

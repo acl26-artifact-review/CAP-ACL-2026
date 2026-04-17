@@ -1,0 +1,157 @@
+Case: D2N029
+
+Problem List and Visit State Tracking
+
+Problem List
+- left hand pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T16,T26,T4
+  Summary: The patient reports pain in the left hand.
+  ClusterId: CL1
+  TemporalProfile: current
+  Updates:
+  - CAP4: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T4 :: The patient reports pain in the left hand.
+  - CAP13: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T4 :: The patient reports pain.
+  - CAP14: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T16 :: The patient reports pain.
+  - CAP5: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T26 :: The patient reports pain in the left hand.
+- skin cancer family history | verification_status=unconfirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T10,T12
+  Summary: The patient's mother and sister have had melanoma.
+  ClusterId: CL2
+  TemporalProfile: past
+  Updates:
+  - CAP3: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=past turns=T10 :: The patient's mother and sister have had melanoma.
+  - CAP6: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=past turns=T12 :: The patient's mother and sister had melanoma.
+- intermediate thickness melanoma | verification_status=confirmed | clinical_status=active | modalities=assessment,interview | speakers=doctor,patient | evidence=T10,T18,T46,T47
+  Summary: The biopsy revealed an intermediate thickness melanoma.
+  ClusterId: CL3
+  TemporalProfile: current, past
+  Updates:
+  - CAP9: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=past turns=T10 :: The patient has a biopsy-confirmed melanoma.
+  - CAP36: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=past turns=T18 :: The patient has a history of melanoma.
+  - CAP7: content_source=doctor modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T46 :: The patient has been diagnosed with melanoma.
+  - CAP11: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T46 :: The patient has newly diagnosed melanoma.
+  - CAP8: content_source=doctor modality=assessment verification_status=confirmed clinical_status=active temporality=current turns=T47 :: The biopsy revealed an intermediate thickness melanoma.
+- pancreatic cancer | verification_status=unconfirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T12
+  Summary: The patient's grandfather had pancreatic cancer.
+  ClusterId: CL4
+  TemporalProfile: past
+  Updates:
+  - CAP10: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=past turns=T12 :: The patient's grandfather had pancreatic cancer.
+- skin spots | verification_status=unconfirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T16
+  Summary: The patient had skin spots checked by their primary care doctor.
+  ClusterId: CL5
+  TemporalProfile: past
+  Updates:
+  - CAP2: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=past turns=T16 :: The patient had skin spots checked by their primary care doctor.
+- augmentin | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T16
+  Summary: The patient is allergic to augmentin.
+  ClusterId: CL6
+  TemporalProfile: current
+  Updates:
+  - CAP37: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T16 :: The patient is allergic to augmentin.
+- smoking | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T22
+  Summary: The patient admits to a history of smoking.
+  ClusterId: CL7
+  TemporalProfile: past
+  Updates:
+  - CAP34: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=past turns=T22 :: The patient admits to a history of smoking.
+- surgery | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T24
+  Summary: The patient reports a history of surgery.
+  ClusterId: CL8
+  TemporalProfile: past
+  Updates:
+  - CAP35: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=past turns=T24 :: The patient reports a history of surgery.
+- feeling_good | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T26
+  Summary: The patient reports feeling good.
+  ClusterId: CL9
+  TemporalProfile: current
+  Updates:
+  - CAP12: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T26 :: The patient reports feeling good.
+- lymphadenopathy | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=doctor | evidence=T41
+  Summary: The patient has a right inguinal lymph node with slightly atypical consistency.
+  ClusterId: CL10
+  TemporalProfile: current
+  Updates:
+  - CAP1: content_source=doctor modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T41 :: The patient has a right inguinal lymph node with slightly atypical consistency.
+
+Medication Tracking
+- [MedicationChange] follow-up | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T48
+  Summary: Follow-up is required.
+  ClusterId: CL29
+  TemporalProfile: future
+  PlannedChanges:
+  - Follow-up is required. (T48)
+  Updates:
+  - CAP33: content_source=doctor modality=plan verification_status=unconfirmed clinical_status=planned temporality=future turns=T48 :: Follow-up is required.
+
+Other Structured States
+- [TestResult] pathology report | verification_status=confirmed | clinical_status=historical | modalities=test_result | speakers=doctor | evidence=T46
+  Summary: A pathology shave of right inferior back revealed malignant melanoma.
+  ClusterId: CL11
+  TemporalProfile: today
+- [TestResult] mitotic features | verification_status=confirmed | clinical_status=historical | modalities=test_result | speakers=doctor | evidence=T46
+  Summary: Mitotic features are less than one millimeter squared.
+  ClusterId: CL12
+  TemporalProfile: today
+- [TestResult] thickness | verification_status=confirmed | clinical_status=historical | modalities=test_result | speakers=doctor | evidence=T46
+  Summary: The Breslow thickness was 0.7 millimeters.
+  ClusterId: CL13
+  TemporalProfile: today
+- [TestResult] radial growth phase | verification_status=confirmed | clinical_status=historical | modalities=test_result | speakers=doctor | evidence=T46
+  Summary: The radial growth phase is present.
+  ClusterId: CL14
+  TemporalProfile: today
+- [TestResult] satellite nodules | verification_status=confirmed | clinical_status=historical | modalities=test_result | speakers=doctor | evidence=T46
+  Summary: Microscopic satellite nodules are not identified.
+  ClusterId: CL15
+  TemporalProfile: today
+- [TestResult] nevus | verification_status=confirmed | clinical_status=historical | modalities=test_result | speakers=doctor | evidence=T46
+  Summary: A melanocytic nevus is not identified.
+  ClusterId: CL16
+  TemporalProfile: today
+- [TestResult] lymphatic invasion | verification_status=confirmed | clinical_status=historical | modalities=test_result | speakers=doctor | evidence=T46
+  Summary: Lymphatic invasion is not identified.
+  ClusterId: CL17
+  TemporalProfile: today
+- [TestResult] perineural invasion | verification_status=confirmed | clinical_status=historical | modalities=test_result | speakers=doctor | evidence=T46
+  Summary: Perineural invasion is not identified.
+  ClusterId: CL18
+  TemporalProfile: today
+- [TestResult] margin | verification_status=confirmed | clinical_status=historical | modalities=test_result | speakers=doctor | evidence=T46
+  Summary: The deep margin is negative.
+  ClusterId: CL19
+  TemporalProfile: today
+- [TestResult] ulceration | verification_status=confirmed | clinical_status=historical | modalities=test_result | speakers=doctor | evidence=T46
+  Summary: Ulceration is not identified.
+  ClusterId: CL20
+  TemporalProfile: today
+- [TestResult] lymphocytes | verification_status=confirmed | clinical_status=historical | modalities=test_result | speakers=doctor | evidence=T46
+  Summary: Infiltrating lymphocytes are identified.
+  ClusterId: CL21
+  TemporalProfile: today
+- [TestResult] cytology | verification_status=confirmed | clinical_status=historical | modalities=test_result | speakers=doctor | evidence=T46
+  Summary: Predominant cytology is epithelioid.
+  ClusterId: CL22
+  TemporalProfile: today
+- [TestResult] stage | verification_status=confirmed | clinical_status=historical | modalities=test_result | speakers=doctor | evidence=T46
+  Summary: The stage is 1.
+  ClusterId: CL23
+  TemporalProfile: today
+- [ExamFinding] inguinal lymph node | verification_status=confirmed | clinical_status=active | modalities=exam | speakers=doctor | evidence=T47
+  Summary: There is right inguinal lymph node with slightly atypical consistency.
+  ClusterId: CL24
+  TemporalProfile: current
+- [Plan] ultrasound | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T47
+  Summary: An ultrasound is recommended to rule out metastatic disease.
+  ClusterId: CL25
+  TemporalProfile: future
+- [TestResult] biopsy | verification_status=confirmed | clinical_status=historical | modalities=test_result | speakers=doctor | evidence=T47
+  Summary: The biopsy revealed an intermediate thickness melanoma.
+  ClusterId: CL26
+  TemporalProfile: today
+- [Plan] wide local excision | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T47
+  Summary: A wide local excision may be needed.
+  ClusterId: CL27
+  TemporalProfile: future
+- [Plan] skin graft closure | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T47
+  Summary: Skin graft closure may be needed.
+  ClusterId: CL28
+  TemporalProfile: future

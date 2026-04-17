@@ -1,0 +1,80 @@
+Case: D2N108
+
+Problem List and Visit State Tracking
+
+Problem List
+- foot ulcer | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T0
+  Summary: The patient reports a nonhealing foot ulcer.
+  ClusterId: CL1
+  TemporalProfile: current
+  Updates:
+  - CAP5: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T0 :: The patient reports a nonhealing foot ulcer.
+- redness | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T1,T15
+  Summary: The patient reports the ulcer is red.
+  ClusterId: CL2
+  TemporalProfile: current
+  Updates:
+  - CAP6: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T1 :: The patient reports the ulcer is red.
+  - CAP9: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T15 :: The patient reports redness in their foot.
+- drainage | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T1,T15
+  Summary: The patient reports the ulcer is draining.
+  ClusterId: CL3
+  TemporalProfile: current
+  Updates:
+  - CAP7: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T1 :: The patient reports the ulcer is draining.
+  - CAP8: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T15 :: The patient reports drainage from their foot.
+- foot injury | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T15,T3,T7
+  Summary: The patient has an injury to their foot.
+  ClusterId: CL4
+  TemporalProfile: 2 months ago, current
+  Updates:
+  - CAP16: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=2 months ago turns=T7,T3 :: The patient reports the foot ulcer developed approximately two months ago.
+  - CAP2: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T15 :: The patient has an injury to their foot.
+- throbbing pain | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T15
+  Summary: The patient reports throbbing pain in their foot.
+  ClusterId: CL5
+  TemporalProfile: current
+  Updates:
+  - CAP1: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T15 :: The patient reports throbbing pain in their foot.
+- diabetes | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T18
+  Summary: The patient has diabetes.
+  ClusterId: CL6
+  TemporalProfile: current
+  Updates:
+  - CAP11: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T18 :: The patient has diabetes.
+  - CAP12: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T18 :: The patient has diabetes.
+- sugar levels | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T19
+  Summary: The patient does not check their sugar levels.
+  ClusterId: CL7
+  TemporalProfile: current
+  Updates:
+  - CAP3: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T19 :: The patient does not check their sugar levels.
+- pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T19
+  Summary: The patient reports pain in the left hand.
+  ClusterId: CL8
+  TemporalProfile: current
+  Updates:
+  - CAP4: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T19 :: The patient reports pain in the left hand.
+- infection | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T24
+  Summary: The patient has an infection.
+  ClusterId: CL10
+  TemporalProfile: current
+  Updates:
+  - CAP10: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T24 :: The patient has an infection.
+
+Medication Tracking
+- None
+
+Other Structured States
+- [TestResult] a1c | verification_status=confirmed | clinical_status=historical | modalities=exam | speakers=doctor | evidence=T22
+  Summary: The patient's A1C was around ten.
+  ClusterId: CL9
+  TemporalProfile: past
+- [Plan] antibiotic | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T26
+  Summary: The doctor ordered clindamycin.
+  ClusterId: CL11
+  TemporalProfile: future
+- [Plan] shoe | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T28
+  Summary: The doctor ordered a surgical shoe.
+  ClusterId: CL12
+  TemporalProfile: future

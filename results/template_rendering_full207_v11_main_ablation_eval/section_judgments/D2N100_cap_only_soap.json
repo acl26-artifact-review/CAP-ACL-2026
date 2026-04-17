@@ -1,0 +1,23 @@
+{
+  "section_miscategorizations": [
+    {
+      "text": "He also reports acne on his face and uses Persa-gel.",
+      "current_section": "S",
+      "expected_section": "S",
+      "severity": "minor",
+      "reason": "The phrase 'uses Persa-gel' describes a current medication the patient is already taking, which belongs in S, but in the context of the overall note it conflicts with the Plan statement 'Start Persa-gel daily,' implying it is both an existing and a new medication. This is an organizational/consistency issue rather than a pure section misplacement."
+    },
+    {
+      "text": "Start Persa-gel daily.",
+      "current_section": "P",
+      "expected_section": "P",
+      "severity": "minor",
+      "reason": "As a Plan item this is correctly placed in P, but it contradicts the S section statement that the patient already uses Persa-gel, which could mislead a reader about whether this is a new prescription or continuation. The section is correct; the inconsistency creates a minor documentation quality issue."
+    }
+  ],
+  "summary_statistics": {
+    "section_appropriateness_score": 0.7,
+    "section_miscategorization_count": 2,
+    "major_section_miscategorization_count": 0
+  }
+}

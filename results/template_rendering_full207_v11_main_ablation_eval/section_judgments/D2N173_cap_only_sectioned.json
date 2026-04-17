@@ -1,0 +1,30 @@
+{
+  "section_miscategorizations": [
+    {
+      "text": "The patient reports a cold.",
+      "current_section": "Findings",
+      "expected_section": "History of Present Illness",
+      "severity": "major",
+      "reason": "This is a patient-reported symptom/history item, not an exam or test finding."
+    },
+    {
+      "text": "The patient reports chest pain.",
+      "current_section": "Findings",
+      "expected_section": "History of Present Illness",
+      "severity": "major",
+      "reason": "Chest pain here is described as a patient report, which belongs in the symptom/history narrative rather than the objective findings section."
+    },
+    {
+      "text": "The doctor advises the patient to quarantine for 10 days.",
+      "current_section": "Plan",
+      "expected_section": "Assessment",
+      "severity": "minor",
+      "reason": "Quarantine advice implies an infectious assessment (e.g., suspected viral illness) that is not documented in the Assessment section; while it is an instruction and thus acceptable in Plan, the lack of a corresponding infectious diagnosis or problem in Assessment creates organizational inconsistency."
+    }
+  ],
+  "summary_statistics": {
+    "section_appropriateness_score": 0.7,
+    "section_miscategorization_count": 3,
+    "major_section_miscategorization_count": 2
+  }
+}

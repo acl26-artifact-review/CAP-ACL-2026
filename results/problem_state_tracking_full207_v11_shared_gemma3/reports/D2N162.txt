@@ -1,0 +1,109 @@
+Case: D2N162
+
+Problem List and Visit State Tracking
+
+Problem List
+- ankle pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T10,T3
+  Summary: The patient reports pain in his right ankle.
+  ClusterId: CL1
+  TemporalProfile: current
+  Updates:
+  - CAP6: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T3 :: The patient reports ankle pain.
+  - CAP3: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T10 :: The patient reports pain in his right ankle.
+- swelling | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T3
+  Summary: The patient reports swelling.
+  ClusterId: CL2
+  TemporalProfile: current
+  Updates:
+  - CAP7: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T3 :: The patient reports swelling.
+- fall | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T5
+  Summary: The patient fell on ice.
+  ClusterId: CL3
+  TemporalProfile: yesterday
+  Updates:
+  - CAP19: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=yesterday turns=T5 :: The patient fell on ice.
+- limping | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T8
+  Summary: The patient is limping.
+  ClusterId: CL4
+  TemporalProfile: current
+  Updates:
+  - CAP8: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T8 :: The patient is limping.
+- numbness | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T26
+  Summary: The patient denies numbness.
+  ClusterId: CL6
+  TemporalProfile: current
+  Updates:
+  - CAP9: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T26 :: The patient denies numbness.
+- right ankle sprain | verification_status=confirmed | clinical_status=active | modalities=assessment | speakers=doctor | evidence=T29
+  Summary: The doctor assesses the patient's symptoms as consistent with a right ankle sprain.
+  ClusterId: CL7
+  TemporalProfile: current
+  Updates:
+  - CAP1: content_source=doctor modality=assessment verification_status=confirmed clinical_status=active temporality=current turns=T29 :: The doctor assesses the patient's symptoms as consistent with a right ankle sprain.
+  - CAP2: content_source=doctor modality=assessment verification_status=confirmed clinical_status=active temporality=current turns=T29 :: The doctor assesses the patient's symptoms as consistent with an ankle sprain.
+- right ankle pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T29
+  Summary: The patient reports right ankle pain.
+  ClusterId: CL8
+  TemporalProfile: current
+  Updates:
+  - CAP4: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T29 :: The patient reports right ankle pain.
+- pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T37
+  Summary: The patient reports pain.
+  ClusterId: CL11
+  TemporalProfile: current
+  Updates:
+  - CAP10: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T37 :: The patient reports pain.
+- left hand pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T48
+  Summary: The patient reports left hand pain.
+  ClusterId: CL17
+  TemporalProfile: current
+  Updates:
+  - CAP5: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T48 :: The patient reports left hand pain.
+
+Medication Tracking
+- [MedicationState] ibuprofen | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T8
+  Summary: The patient is taking ibuprofen.
+  ClusterId: CL5
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient is taking ibuprofen. (T8)
+  Updates:
+  - CAP18: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T8 :: The patient is taking ibuprofen.
+- [MedicationChange] air cast | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T31
+  Summary: The doctor orders an air cast for the patient.
+  ClusterId: CL10
+  TemporalProfile: current
+  PlannedChanges:
+  - The doctor orders an air cast for the patient. (T31)
+  Updates:
+  - CAP13: content_source=doctor modality=plan verification_status=unconfirmed clinical_status=planned temporality=current turns=T31 :: The doctor orders an air cast for the patient.
+- [MedicationChange] nsaids | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T37
+  Summary: The doctor orders NSAIDs for pain management.
+  ClusterId: CL13
+  TemporalProfile: current
+  PlannedChanges:
+  - The doctor orders NSAIDs for pain management. (T37)
+  Updates:
+  - CAP16: content_source=doctor modality=plan verification_status=unconfirmed clinical_status=planned temporality=current turns=T37 :: The doctor orders NSAIDs for pain management.
+
+Other Structured States
+- [Plan] ice | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T29
+  Summary: The doctor recommends keeping the leg elevated and icing it.
+  ClusterId: CL9
+  TemporalProfile: current
+- [Plan] nsaids | verification_status=confirmed | clinical_status=planned | modalities=interview | speakers=doctor | evidence=T37
+  Summary: The patient should continue to take NSAIDs as needed.
+  ClusterId: CL12
+  TemporalProfile: future
+- [FollowUp] follow-up visit | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T37
+  Summary: The doctor schedules a follow-up visit in two weeks.
+  ClusterId: CL14
+  TemporalProfile: in two weeks
+- [Plan] nurse check-out | verification_status=confirmed | clinical_status=planned | modalities=interview | speakers=doctor | evidence=T43
+  Summary: The doctor will have the nurse check out the patient.
+  ClusterId: CL15
+  TemporalProfile: future
+- [Plan] follow-up | verification_status=confirmed | clinical_status=planned | modalities=interview | speakers=doctor | evidence=T43
+  Summary: The doctor will follow up with the patient.
+  ClusterId: CL16
+  TemporalProfile: future

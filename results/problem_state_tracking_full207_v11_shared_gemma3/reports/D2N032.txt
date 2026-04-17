@@ -1,0 +1,207 @@
+Case: D2N032
+
+Problem List and Visit State Tracking
+
+Problem List
+- right hip pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T7
+  Summary: The patient reports pain in the right hip.
+  ClusterId: CL1
+  TemporalProfile: current, since February 2020
+  Updates:
+  - CAP4: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T7 :: The patient reports pain in the right hip.
+  - CAP38: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=since February 2020 turns=T7 :: The patient's right hip pain has been present since February 2020.
+- groin pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T7
+  Summary: The patient is hurting in the groin area.
+  ClusterId: CL2
+  TemporalProfile: current
+  Updates:
+  - CAP5: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T7 :: The patient is hurting in the groin area.
+- catching | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T7
+  Summary: The patient reports a catching sensation.
+  ClusterId: CL3
+  TemporalProfile: current
+  Updates:
+  - CAP10: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T7 :: The patient reports a catching sensation.
+- left hand | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T11
+  Summary: The patient reports pain in the left hand.
+  ClusterId: CL4
+  TemporalProfile: current
+  Updates:
+  - CAP6: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T11 :: The patient reports pain in the left hand.
+- pain | verification_status=confirmed | clinical_status=resolved | modalities=interview | speakers=patient | evidence=T15,T19,T21,T47,T57,T65,T73,T77
+  Summary: The patient reports pain.
+  ClusterId: CL5
+  TemporalProfile: current, past
+  Updates:
+  - CAP20: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T15 :: The patient has pain.
+  - CAP21: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T19 :: Pain occurs with pivoting.
+  - CAP8: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T21 :: Pain can occur in multiple instances consecutively.
+  - CAP22: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T21 :: Pain can occur intermittently.
+  - CAP7: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T47 :: The patient reports pain in the cervical spine.
+  - CAP15: content_source=patient modality=interview verification_status=confirmed clinical_status=resolved temporality=past turns=T57 :: The patient reports no current pain.
+  - CAP19: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T65 :: The patient reports decreased pain.
+  - CAP1: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T73,T77,T73,T73 :: The patient reports pain.
+  - CAP2: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T73,T73 :: The patient reports pain in the groin.
+  - CAP3: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T77 :: The patient reports pain in the right hip region.
+- pivot | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T19
+  Summary: The patient reports pain when pivoting.
+  ClusterId: CL6
+  TemporalProfile: current
+  Updates:
+  - CAP11: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T19 :: The patient reports pain when pivoting.
+- fall | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T23
+  Summary: The patient reports falling.
+  ClusterId: CL7
+  TemporalProfile: current
+  Updates:
+  - CAP23: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T23 :: The patient reports falling.
+- percocet | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=doctor,patient | evidence=T33,T44
+  Summary: The patient is allergic to percocet.
+  ClusterId: CL8
+  TemporalProfile: current, past
+  Updates:
+  - CAP41: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=past turns=T33 :: The patient is allergic to percocet.
+  - CAP45: content_source=doctor modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T44 :: The patient is allergic to percocet.
+- vicodin | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=doctor,patient | evidence=T33,T44
+  Summary: The patient is allergic to vicodin.
+  ClusterId: CL9
+  TemporalProfile: current, past
+  Updates:
+  - CAP42: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=past turns=T33 :: The patient is allergic to vicodin.
+  - CAP46: content_source=doctor modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T44 :: The patient is allergic to vicodin.
+- regulun | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=doctor,patient | evidence=T33,T44
+  Summary: The patient is allergic to regulun.
+  ClusterId: CL10
+  TemporalProfile: current, past
+  Updates:
+  - CAP43: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=past turns=T33 :: The patient is allergic to regulun.
+  - CAP47: content_source=doctor modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T44 :: The patient is allergic to regulin.
+- gall bladder removed | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T35
+  Summary: The patient has had a gall bladder removed.
+  ClusterId: CL11
+  TemporalProfile: past
+  Updates:
+  - CAP39: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=past turns=T35 :: The patient has had a gall bladder removed.
+- pcl | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T35
+  Summary: The patient has had a pcl surgery.
+  ClusterId: CL12
+  TemporalProfile: past
+  Updates:
+  - CAP40: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=past turns=T35 :: The patient has had a pcl surgery.
+- infertility | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T35
+  Summary: The patient has had infertility treatment.
+  ClusterId: CL13
+  TemporalProfile: past
+  Updates:
+  - CAP44: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=past turns=T35 :: The patient has had infertility treatment.
+- weight loss | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T37,T65
+  Summary: The patient has lost 110 pounds.
+  ClusterId: CL14
+  TemporalProfile: current
+  Updates:
+  - CAP13: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T37 :: The patient has lost 110 pounds.
+  - CAP12: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T65 :: The patient reports intentional weight loss.
+  - CAP16: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T65 :: The patient's weight loss has decreased.
+  - CAP17: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T65 :: The patient reports decreased weight loss.
+- bulging disc | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T63
+  Summary: The patient has several bulging discs.
+  ClusterId: CL18
+  TemporalProfile: past
+  Updates:
+  - CAP14: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=past turns=T63 :: The patient has several bulging discs.
+- mild discomfort | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T71
+  Summary: The patient reports a little discomfort.
+  ClusterId: CL24
+  TemporalProfile: current
+  Updates:
+  - CAP18: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T71 :: The patient reports a little discomfort.
+- decreased range of motion | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T73
+  Summary: The patient reports decreased range of motion.
+  ClusterId: CL25
+  TemporalProfile: current
+  Updates:
+  - CAP9: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T73 :: The patient reports decreased range of motion.
+- tenderness | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T73
+  Summary: The patient denies tenderness.
+  ClusterId: CL26
+  TemporalProfile: current
+  Updates:
+  - CAP24: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T73 :: The patient denies tenderness.
+
+Medication Tracking
+- [MedicationState] no medications | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=doctor | evidence=T44
+  Summary: The patient is not taking any medications at this time.
+  ClusterId: CL16
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient is not taking any medications at this time. (T44)
+  Updates:
+  - CAP36: content_source=doctor modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T44 :: The patient is not taking any medications at this time.
+- [MedicationChange] nsaids | verification_status=confirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T90
+  Summary: The patient should take NSAIDs as needed to help with the pain and discomfort.
+  ClusterId: CL29
+  TemporalProfile: as needed, future
+  PlannedChanges:
+  - The patient should take NSAIDs as needed to help with the pain and discomfort. (T90)
+  - The patient should take NSAIDs as needed. (T90)
+  Updates:
+  - CAP34: content_source=doctor modality=plan verification_status=confirmed clinical_status=planned temporality=as needed turns=T90 :: The patient should take NSAIDs as needed to help with the pain and discomfort.
+  - CAP37: content_source=doctor modality=plan verification_status=confirmed clinical_status=planned temporality=future turns=T90 :: The patient should take NSAIDs as needed.
+- [MedicationChange] cane | verification_status=confirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T90
+  Summary: The patient should use a cane to help offload the right side.
+  ClusterId: CL30
+  TemporalProfile: as needed
+  PlannedChanges:
+  - The patient should use a cane to help offload the right side. (T90)
+  Updates:
+  - CAP35: content_source=doctor modality=plan verification_status=confirmed clinical_status=planned temporality=as needed turns=T90 :: The patient should use a cane to help offload the right side.
+
+Other Structured States
+- [Demographics] weight | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T39
+  Summary: The patient weighs 169 pounds.
+  ClusterId: CL15
+  TemporalProfile: current
+- [Demographics] height | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T52
+  Summary: The patient is 5 feet 6 inches tall.
+  ClusterId: CL17
+  TemporalProfile: current
+- [ExamFinding] decreased range of motion | verification_status=confirmed | clinical_status=active | modalities=exam | speakers=doctor | evidence=T65
+  Summary: Range of motion is decreased in exertion.
+  ClusterId: CL19
+  TemporalProfile: current
+- [ExamFinding] non-tender trochanteric | verification_status=confirmed | clinical_status=active | modalities=exam | speakers=doctor | evidence=T65
+  Summary: The trochanteric region is non-tender.
+  ClusterId: CL20
+  TemporalProfile: current
+- [ExamFinding] back pain | verification_status=confirmed | clinical_status=active | modalities=exam | speakers=doctor | evidence=T65
+  Summary: The patient reports back pain.
+  ClusterId: CL21
+  TemporalProfile: current
+- [ExamFinding] lateral flexion | verification_status=confirmed | clinical_status=active | modalities=exam | speakers=doctor | evidence=T66
+  Summary: Lateral flexion is not painful.
+  ClusterId: CL22
+  TemporalProfile: current
+- [ExamFinding] negative sacroiliac signs | verification_status=confirmed | clinical_status=active | modalities=exam | speakers=doctor | evidence=T70
+  Summary: Sacroiliac signs are negative.
+  ClusterId: CL23
+  TemporalProfile: current
+- [Demographics] age | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T80
+  Summary: The patient is 56 years old.
+  ClusterId: CL27
+  TemporalProfile: current
+- [Plan] cane | verification_status=confirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T90
+  Summary: A cane will be used.
+  ClusterId: CL28
+  TemporalProfile: future
+- [Plan] cortisone injection | verification_status=confirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T92
+  Summary: The doctor will perform a cortisone injection into the right hip joint.
+  ClusterId: CL31
+  TemporalProfile: today
+- [TestResult] cortisone injection | verification_status=confirmed | clinical_status=planned | modalities=test_result | speakers=doctor | evidence=T92
+  Summary: A cortisone injection into the right hip joint will be considered.
+  ClusterId: CL32
+  TemporalProfile: future
+- [FollowUp] follow-up appointment | verification_status=confirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T94
+  Summary: The patient will follow up with the doctor in three months for another injection if needed.
+  ClusterId: CL33
+  TemporalProfile: in three months

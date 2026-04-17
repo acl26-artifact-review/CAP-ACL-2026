@@ -1,0 +1,65 @@
+{
+  "section_miscategorizations": [
+    {
+      "text": "The patient reports chest pain.",
+      "current_section": "S",
+      "expected_section": "S",
+      "severity": "major",
+      "reason": "This directly contradicts the earlier statement in the same section that he denies chest pain, creating a confusing and misleading subjective history. One of these should be moved, clarified, or removed; as written, the conflicting placement is a major documentation quality issue."
+    },
+    {
+      "text": "The patient has bilateral ronchi.",
+      "current_section": "S",
+      "expected_section": "O",
+      "severity": "major",
+      "reason": "Bilateral rhonchi are an objective lung exam finding, not a typical patient-reported symptom. Placing this in S misrepresents it as subjective rather than a physical exam finding."
+    },
+    {
+      "text": "The patient has wheezing.",
+      "current_section": "S",
+      "expected_section": "O",
+      "severity": "major",
+      "reason": "Wheezing is generally documented as an auscultatory exam finding. In this phrasing it reads as an observed sign, not a patient complaint, so it belongs in the objective section."
+    },
+    {
+      "text": "The patient has cervical lymphadenopathy.",
+      "current_section": "A",
+      "expected_section": "O",
+      "severity": "major",
+      "reason": "Cervical lymphadenopathy is a physical exam finding. It should be documented under objective data; in A it should only appear if explicitly framed as part of the diagnostic impression (e.g., 'consistent with viral URI'). As written, it is just a finding."
+    },
+    {
+      "text": "The patient has bilateral ronchi.",
+      "current_section": "A",
+      "expected_section": "O",
+      "severity": "major",
+      "reason": "This is a lung exam finding and belongs in the objective section. Listing it in the assessment blurs the distinction between data and interpretation."
+    },
+    {
+      "text": "The patient has wheezing.",
+      "current_section": "A",
+      "expected_section": "O",
+      "severity": "major",
+      "reason": "Wheezing is an exam finding. It should be in O; in A it should only appear if clearly synthesized into a diagnostic impression (e.g., 'wheezing consistent with asthma exacerbation'), which is not done here."
+    },
+    {
+      "text": "The patient reports pain.",
+      "current_section": "A",
+      "expected_section": "S",
+      "severity": "major",
+      "reason": "This is a subjective symptom and should be documented in the subjective section, not in the assessment, which should synthesize problems rather than restate raw symptoms."
+    },
+    {
+      "text": "The patient should continue taking crestor 20 milligrams a day.",
+      "current_section": "P",
+      "expected_section": "P",
+      "severity": "minor",
+      "reason": "This is correctly a plan statement (continuation of therapy), but if it were intended purely as a statement of current medication use it would belong in S. As written, it is acceptable in P; no change required, but the dual nature is noted."
+    }
+  ],
+  "summary_statistics": {
+    "section_appropriateness_score": 0.6,
+    "section_miscategorization_count": 8,
+    "major_section_miscategorization_count": 7
+  }
+}

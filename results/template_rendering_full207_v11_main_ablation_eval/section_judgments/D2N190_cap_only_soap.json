@@ -1,0 +1,79 @@
+{
+  "section_miscategorizations": [
+    {
+      "text": "The patient reports no tenderness.",
+      "current_section": "S",
+      "expected_section": "O",
+      "severity": "minor",
+      "reason": "Although phrased as a patient report, absence of tenderness is typically a physical exam finding; however, it could plausibly be patient-reported, so this is a minor issue."
+    },
+    {
+      "text": "The patient reports a one plus posterior drawer and negative anterior drawer.",
+      "current_section": "O",
+      "expected_section": "S",
+      "severity": "major",
+      "reason": "Posterior and anterior drawer tests are clinician-performed exam maneuvers; documenting them as patient-reported is misleading about the source of the finding."
+    },
+    {
+      "text": "The patient reports mild laxity.",
+      "current_section": "O",
+      "expected_section": "S",
+      "severity": "major",
+      "reason": "Joint laxity is an exam finding; attributing it to patient report in the Objective section obscures that it should be a clinician-observed physical exam result."
+    },
+    {
+      "text": "The patient reports abrasions.",
+      "current_section": "O",
+      "expected_section": "S",
+      "severity": "major",
+      "reason": "Abrasions are observable physical findings; phrasing as patient report in the Objective section misrepresents the nature/source of the observation."
+    },
+    {
+      "text": "The patient reports clicking.",
+      "current_section": "O",
+      "expected_section": "S",
+      "severity": "major",
+      "reason": "Joint clicking is typically a symptom the patient experiences; as written, it is a patient-reported symptom and belongs in Subjective, not Objective."
+    },
+    {
+      "text": "The patient reports tenderness.",
+      "current_section": "O",
+      "expected_section": "S",
+      "severity": "major",
+      "reason": "Tenderness here is framed as patient-reported rather than elicited on exam; this makes it a symptom and thus subjective."
+    },
+    {
+      "text": "The patient reports mild pain.",
+      "current_section": "O",
+      "expected_section": "S",
+      "severity": "major",
+      "reason": "Pain intensity is a patient-reported symptom and should be in the Subjective section, not Objective."
+    },
+    {
+      "text": "The patient reports knee pain.",
+      "current_section": "A",
+      "expected_section": "S",
+      "severity": "major",
+      "reason": "This is a symptom statement, not an assessment or diagnostic impression; it belongs in the Subjective history of present illness."
+    },
+    {
+      "text": "The patient reports hand pain.",
+      "current_section": "A",
+      "expected_section": "S",
+      "severity": "major",
+      "reason": "Hand pain is a patient-reported symptom and should be documented in the Subjective section, not in the Assessment."
+    },
+    {
+      "text": "The patient took ibuprofen.",
+      "current_section": "P",
+      "expected_section": "S",
+      "severity": "major",
+      "reason": "This describes prior/current medication use, not a new order or change; it belongs in the Subjective medication history."
+    }
+  ],
+  "summary_statistics": {
+    "section_appropriateness_score": 0.2,
+    "section_miscategorization_count": 10,
+    "major_section_miscategorization_count": 9
+  }
+}

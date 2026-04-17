@@ -1,0 +1,1269 @@
+{
+  "case_id": "D2N200",
+  "method": "cap_event_only",
+  "template": "soap",
+  "summary_text": "S:\nThe patient reports dizziness, particularly when rising quickly. He also states his blood pressure is elevated and that he takes tylenol. The patient reports his blood sugar is elevated.\n\nO:\nBlood pressure is 138/82 mmHg. Heart rate is 88 bpm. Neurological exam is unremarkable.\n\nA:\nThe patient's symptoms and elevated blood pressure suggest hypertension and hyperglycemia.\n\nP:\nOrder a blood pressure monitoring schedule three times a week. Continue the patient's current medication regimen, including chlorthalidone.",
+  "reference_summary": "CHIEF COMPLAINT\n\nHeadache and high blood pressure.\n\nREVIEW OF SYSTEMS\n\nRespiratory: Denies shortness of breath.\nCardiovascular: Denies chest pain.\nNeurological: Reports blurry vision, dizziness, and headaches.\n\nVITALS\n\nBlood pressure today was 172/98. Oxygenation is within normal limits.\n\nPHYSICAL EXAM\n\nNeck\n- General Examination: No jugular venous distention. No carotid bruits.\n\nRespiratory\n- Auscultation of Lungs: Clear bilaterally.\n\nCardiovascular\n- Auscultation of Heart: Regular rate. Slight 2/6 systolic ejection murmur, unchanged from last year.\n\nMusculoskeletal\n- Examination: Slight edema to bilateral upper extremities. 1+ pitting edema noted in the bilateral lower extremities.\n\nASSESSMENT AND PLAN\n\n1. Hypertension, uncontrolled.\n- Medical Reasoning: The patient's blood pressure is is elevated.\n- Patient Education and Counseling: We discussed that this could be multifactorial; for example, her diet, her medications regimen, or the medication she is currently on could be a factor in her elevated blood pressure. I encouraged the patient to take her current medication regimen today. I encouraged her to monitor her blood pressure 3 times a week. We also discussed the patient speaking to our nutritionist to help her diet. I recommended a DASH diet.\n- Medical Treatment: She will continue her current medication regimen.\n\n2. Type 2 diabetes.\n- Medical Reasoning: The patient's diabetes is uncontrolled.\n- Patient Education and Counseling: I advised the patient to continue taking her blood sugars to make sure that the change in medication is effective.\n- Medical Treatment: Increase metformin to 1500 mg.\n\nPatient Agreements: The patient understands and agrees with the recommended medical treatment plan.\n\nINSTRUCTIONS\n\nThe patient will follow up in 4 weeks.",
+  "source_cap": {
+    "atomic_propositions": [
+      {
+        "prop_id": "CAP1",
+        "cap_type": "Symptom",
+        "canonical_concept": "headache",
+        "category": "Symptom",
+        "speaker": "doctor",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports headaches."
+      },
+      {
+        "prop_id": "CAP2",
+        "cap_type": "Problem",
+        "canonical_concept": "diet",
+        "category": "Problem",
+        "speaker": "doctor",
+        "status": "uncertain",
+        "visit_state": "historical",
+        "temporality": "past",
+        "proposition_text": "The patient eats a lot of McDonald's and their favorite treat is a Big Mac with large fries."
+      },
+      {
+        "prop_id": "CAP3",
+        "cap_type": "Symptom",
+        "canonical_concept": "edema",
+        "category": "Symptom",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient has mild edema in the bilateral upper extremities."
+      },
+      {
+        "prop_id": "CAP4",
+        "cap_type": "Symptom",
+        "canonical_concept": "low sodium diet",
+        "category": "Symptom",
+        "speaker": "doctor",
+        "status": "uncertain",
+        "visit_state": "historical",
+        "temporality": "past",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient does not follow a low sodium diet."
+      },
+      {
+        "prop_id": "CAP5",
+        "cap_type": "Symptom",
+        "canonical_concept": "left hand pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports pain in the left hand."
+      },
+      {
+        "prop_id": "CAP6",
+        "cap_type": "Problem",
+        "canonical_concept": "high blood pressure",
+        "category": "Problem",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient has high blood pressure."
+      },
+      {
+        "prop_id": "CAP7",
+        "cap_type": "Symptom",
+        "canonical_concept": "high blood pressure",
+        "category": "Symptom",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient's blood pressure is elevated."
+      },
+      {
+        "prop_id": "CAP8",
+        "cap_type": "Symptom",
+        "canonical_concept": "high blood sugar",
+        "category": "Symptom",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient's blood sugar is elevated."
+      },
+      {
+        "prop_id": "CAP9",
+        "cap_type": "Symptom",
+        "canonical_concept": "blurred vision",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports blurred vision."
+      },
+      {
+        "prop_id": "CAP10",
+        "cap_type": "Problem",
+        "canonical_concept": "hypertension",
+        "category": "Problem",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient has uncontrolled hypertension."
+      },
+      {
+        "prop_id": "CAP11",
+        "cap_type": "Symptom",
+        "canonical_concept": "dizziness",
+        "category": "Symptom",
+        "speaker": "doctor",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports dizziness."
+      },
+      {
+        "prop_id": "CAP12",
+        "cap_type": "Order",
+        "canonical_concept": "blood pressure monitoring",
+        "category": "Order",
+        "speaker": "doctor",
+        "status": "uncertain",
+        "visit_state": "planned",
+        "temporality": "ongoing",
+        "proposition_text": "The doctor will monitor the patient's blood pressure three times a week."
+      },
+      {
+        "prop_id": "CAP13",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "metformin",
+        "category": "MedicationStatement",
+        "speaker": "doctor",
+        "predicate": "plans",
+        "status": "affirmed",
+        "visit_state": "planned",
+        "temporality": "future",
+        "claim_type_tags": [
+          "medication",
+          "plan",
+          "quantitative"
+        ],
+        "proposition_text": "The doctor plans to increase the patient's metformin dosage to 1500 mg."
+      },
+      {
+        "prop_id": "CAP14",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "blood sugar monitoring",
+        "category": "MedicationStatement",
+        "speaker": "doctor",
+        "predicate": "instructs",
+        "status": "affirmed",
+        "visit_state": "planned",
+        "temporality": "future",
+        "claim_type_tags": [
+          "plan"
+        ],
+        "proposition_text": "The doctor instructs the patient to continue monitoring blood sugars."
+      },
+      {
+        "prop_id": "CAP15",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "metformin",
+        "category": "MedicationStatement",
+        "speaker": "patient",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "medication"
+        ],
+        "proposition_text": "The patient takes metformin irregularly, approximately every other day."
+      },
+      {
+        "prop_id": "CAP16",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "lisinopril",
+        "category": "MedicationStatement",
+        "speaker": "doctor",
+        "predicate": "has",
+        "status": "uncertain",
+        "visit_state": "planned",
+        "temporality": "ongoing",
+        "claim_type_tags": [
+          "medication",
+          "temporal"
+        ],
+        "proposition_text": "The doctor will continue the patient's current medication regimen."
+      },
+      {
+        "prop_id": "CAP17",
+        "cap_type": "FollowUp",
+        "canonical_concept": "follow-up appointment",
+        "category": "FollowUp",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "planned",
+        "temporality": "one month",
+        "claim_type_tags": [
+          "temporal"
+        ],
+        "proposition_text": "The doctor schedules a one-month follow-up appointment."
+      },
+      {
+        "prop_id": "CAP18",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "chlorthalidone",
+        "category": "MedicationStatement",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient was prescribed chlorthalidone."
+      },
+      {
+        "prop_id": "CAP19",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "tylenol",
+        "category": "MedicationStatement",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient takes tylenol."
+      }
+    ],
+    "filtered_nonverifiable_units": []
+  },
+  "event_plan": {
+    "events": [
+      {
+        "event_id": "CL2",
+        "event_type": "ProblemOrientedNoteBundle",
+        "canonical_concept": "high blood pressure",
+        "visit_state": "active",
+        "status": "affirmed",
+        "temporality": "ongoing",
+        "speaker_source": "patient,doctor",
+        "clinical_priority": "high",
+        "title": "high blood pressure",
+        "event_summary": "Problem-oriented bundle for high blood pressure.",
+        "supporting_cap_ids": [
+          "CAP6",
+          "CAP7",
+          "CAP11",
+          "CAP8",
+          "CAP12",
+          "CAP16",
+          "CAP18",
+          "CAP19"
+        ],
+        "anchor_problem_cap_id": "CAP6",
+        "anchor_problem": "high blood pressure",
+        "S_cap_ids": [
+          "CAP6",
+          "CAP18",
+          "CAP19"
+        ],
+        "P_cap_ids": [
+          "CAP12",
+          "CAP16"
+        ],
+        "global_cap_ids": [
+          "CAP7",
+          "CAP11",
+          "CAP8"
+        ],
+        "supporting_evidence": [
+          "The patient has high blood pressure.",
+          "The patient was prescribed chlorthalidone.",
+          "The patient takes tylenol."
+        ],
+        "current_state": [
+          "The patient has high blood pressure.",
+          "The patient was prescribed chlorthalidone.",
+          "The patient takes tylenol."
+        ],
+        "planned_actions": [
+          "The doctor will monitor the patient's blood pressure three times a week.",
+          "The doctor will continue the patient's current medication regimen."
+        ],
+        "care_context": [
+          "The patient's blood pressure is elevated.",
+          "The patient reports dizziness.",
+          "The patient's blood sugar is elevated."
+        ],
+        "key_slots": {
+          "source_modalities": "interview, plan",
+          "temporal_profile": "current, ongoing",
+          "anchor_cluster_type": "ProblemState",
+          "anchor_primary_cap_type": "Problem",
+          "bundle_concepts": "high blood pressure; dizziness; high blood sugar; blood pressure monitoring; lisinopril; chlorthalidone; tylenol",
+          "history_context": "",
+          "related_factors": "",
+          "visit_primary": "true",
+          "render_in_note": "true",
+          "assessment_fallback": "",
+          "bundle_design": "problem_oriented_note_bundle"
+        },
+        "render_sections": [
+          "S",
+          "O",
+          "A",
+          "P",
+          "History of Present Illness",
+          "Findings",
+          "Assessment",
+          "Plan"
+        ]
+      }
+    ]
+  },
+  "summary_cap": {
+    "atomic_propositions": [],
+    "filtered_nonverifiable_units": [],
+    "runtime_seconds": 1.329
+  },
+  "cap_alignment": {
+    "cap_precision": 0.0,
+    "cap_recall": 0.0,
+    "cap_f1": 0.0,
+    "matched_count": 0,
+    "summary_prop_count": 0,
+    "source_prop_count": 19,
+    "matched_pairs": [],
+    "unsupported_summary_props": [],
+    "missing_source_props": [
+      {
+        "prop_id": "CAP1",
+        "cap_type": "Symptom",
+        "canonical_concept": "headache",
+        "category": "Symptom",
+        "speaker": "doctor",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports headaches."
+      },
+      {
+        "prop_id": "CAP2",
+        "cap_type": "Problem",
+        "canonical_concept": "diet",
+        "category": "Problem",
+        "speaker": "doctor",
+        "status": "uncertain",
+        "visit_state": "historical",
+        "temporality": "past",
+        "proposition_text": "The patient eats a lot of McDonald's and their favorite treat is a Big Mac with large fries."
+      },
+      {
+        "prop_id": "CAP3",
+        "cap_type": "Symptom",
+        "canonical_concept": "edema",
+        "category": "Symptom",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient has mild edema in the bilateral upper extremities."
+      },
+      {
+        "prop_id": "CAP4",
+        "cap_type": "Symptom",
+        "canonical_concept": "low sodium diet",
+        "category": "Symptom",
+        "speaker": "doctor",
+        "status": "uncertain",
+        "visit_state": "historical",
+        "temporality": "past",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient does not follow a low sodium diet."
+      },
+      {
+        "prop_id": "CAP5",
+        "cap_type": "Symptom",
+        "canonical_concept": "left hand pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports pain in the left hand."
+      },
+      {
+        "prop_id": "CAP6",
+        "cap_type": "Problem",
+        "canonical_concept": "high blood pressure",
+        "category": "Problem",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient has high blood pressure."
+      },
+      {
+        "prop_id": "CAP7",
+        "cap_type": "Symptom",
+        "canonical_concept": "high blood pressure",
+        "category": "Symptom",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient's blood pressure is elevated."
+      },
+      {
+        "prop_id": "CAP8",
+        "cap_type": "Symptom",
+        "canonical_concept": "high blood sugar",
+        "category": "Symptom",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient's blood sugar is elevated."
+      },
+      {
+        "prop_id": "CAP9",
+        "cap_type": "Symptom",
+        "canonical_concept": "blurred vision",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports blurred vision."
+      },
+      {
+        "prop_id": "CAP10",
+        "cap_type": "Problem",
+        "canonical_concept": "hypertension",
+        "category": "Problem",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient has uncontrolled hypertension."
+      },
+      {
+        "prop_id": "CAP11",
+        "cap_type": "Symptom",
+        "canonical_concept": "dizziness",
+        "category": "Symptom",
+        "speaker": "doctor",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports dizziness."
+      },
+      {
+        "prop_id": "CAP12",
+        "cap_type": "Order",
+        "canonical_concept": "blood pressure monitoring",
+        "category": "Order",
+        "speaker": "doctor",
+        "status": "uncertain",
+        "visit_state": "planned",
+        "temporality": "ongoing",
+        "proposition_text": "The doctor will monitor the patient's blood pressure three times a week."
+      },
+      {
+        "prop_id": "CAP13",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "metformin",
+        "category": "MedicationStatement",
+        "speaker": "doctor",
+        "predicate": "plans",
+        "status": "affirmed",
+        "visit_state": "planned",
+        "temporality": "future",
+        "claim_type_tags": [
+          "medication",
+          "plan",
+          "quantitative"
+        ],
+        "proposition_text": "The doctor plans to increase the patient's metformin dosage to 1500 mg."
+      },
+      {
+        "prop_id": "CAP14",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "blood sugar monitoring",
+        "category": "MedicationStatement",
+        "speaker": "doctor",
+        "predicate": "instructs",
+        "status": "affirmed",
+        "visit_state": "planned",
+        "temporality": "future",
+        "claim_type_tags": [
+          "plan"
+        ],
+        "proposition_text": "The doctor instructs the patient to continue monitoring blood sugars."
+      },
+      {
+        "prop_id": "CAP15",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "metformin",
+        "category": "MedicationStatement",
+        "speaker": "patient",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "medication"
+        ],
+        "proposition_text": "The patient takes metformin irregularly, approximately every other day."
+      },
+      {
+        "prop_id": "CAP16",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "lisinopril",
+        "category": "MedicationStatement",
+        "speaker": "doctor",
+        "predicate": "has",
+        "status": "uncertain",
+        "visit_state": "planned",
+        "temporality": "ongoing",
+        "claim_type_tags": [
+          "medication",
+          "temporal"
+        ],
+        "proposition_text": "The doctor will continue the patient's current medication regimen."
+      },
+      {
+        "prop_id": "CAP17",
+        "cap_type": "FollowUp",
+        "canonical_concept": "follow-up appointment",
+        "category": "FollowUp",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "planned",
+        "temporality": "one month",
+        "claim_type_tags": [
+          "temporal"
+        ],
+        "proposition_text": "The doctor schedules a one-month follow-up appointment."
+      },
+      {
+        "prop_id": "CAP18",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "chlorthalidone",
+        "category": "MedicationStatement",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient was prescribed chlorthalidone."
+      },
+      {
+        "prop_id": "CAP19",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "tylenol",
+        "category": "MedicationStatement",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient takes tylenol."
+      }
+    ]
+  },
+  "reference_gpt_f1_items": {
+    "active_problems_symptoms": [],
+    "negated_findings": [],
+    "uncertain_findings": [],
+    "medication_treatment": [],
+    "plan_followup": [],
+    "_chunk_count": [
+      "3"
+    ],
+    "_parse_failures": [
+      "{\"chunk_index\": 1, \"stage\": \"call_llm\", \"error\": \"LLM call failed after retries: Error code: 404\"}",
+      "{\"chunk_index\": 2, \"stage\": \"call_llm\", \"error\": \"LLM call failed after retries: Error code: 404\"}",
+      "{\"chunk_index\": 3, \"stage\": \"call_llm\", \"error\": \"LLM call failed after retries: Error code: 404\"}"
+    ]
+  },
+  "summary_gpt_f1_items": {
+    "active_problems_symptoms": [],
+    "negated_findings": [],
+    "uncertain_findings": [],
+    "medication_treatment": [],
+    "plan_followup": [],
+    "_chunk_count": [
+      "1"
+    ],
+    "_parse_failures": [
+      "{\"chunk_index\": 1, \"stage\": \"call_llm\", \"error\": \"LLM call failed after retries: Error code: 404\"}"
+    ]
+  },
+  "gpt_f1_alignment": {
+    "by_category": {
+      "active_problems_symptoms": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "matched_count": 0,
+        "pred_count": 0,
+        "ref_count": 0,
+        "matches": [],
+        "unsupported_pred_items": [],
+        "missing_ref_items": []
+      },
+      "negated_findings": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "matched_count": 0,
+        "pred_count": 0,
+        "ref_count": 0,
+        "matches": [],
+        "unsupported_pred_items": [],
+        "missing_ref_items": []
+      },
+      "uncertain_findings": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "matched_count": 0,
+        "pred_count": 0,
+        "ref_count": 0,
+        "matches": [],
+        "unsupported_pred_items": [],
+        "missing_ref_items": []
+      },
+      "medication_treatment": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "matched_count": 0,
+        "pred_count": 0,
+        "ref_count": 0,
+        "matches": [],
+        "unsupported_pred_items": [],
+        "missing_ref_items": []
+      },
+      "plan_followup": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "matched_count": 0,
+        "pred_count": 0,
+        "ref_count": 0,
+        "matches": [],
+        "unsupported_pred_items": [],
+        "missing_ref_items": []
+      }
+    }
+  },
+  "reference_nair_concepts": {
+    "sections": [
+      {
+        "heading": "Clinical Note",
+        "section_value": "CHIEF COMPLAINT\nHeadache and high blood pressure.\nREVIEW OF SYSTEMS\nRespiratory: Denies shortness of breath.\nCardiovascular: Denies chest pain.\nNeurological: Reports blurry vision, dizziness, and headaches.\nVITALS\nBlood pressure today was 172/98. Oxygenation is within normal limits.\nPHYSICAL EXAM\nNeck",
+        "medical_concepts": [
+          "headache",
+          "high blood pressure",
+          "shortness of breath",
+          "chest pain",
+          "blurry vision",
+          "dizziness",
+          "headaches",
+          "blood pressure",
+          "oxygenation"
+        ]
+      },
+      {
+        "heading": "Clinical Note",
+        "section_value": "- General Examination: No jugular venous distention. No carotid bruits.\nRespiratory\n- Auscultation of Lungs: Clear bilaterally.\nCardiovascular\n- Auscultation of Heart: Regular rate. Slight 2/6 systolic ejection murmur, unchanged from last year.\nMusculoskeletal\n- Examination: Slight edema to bilateral upper extremities. 1+ pitting edema noted in the bilateral lower extremities.\nASSESSMENT AND PLAN\n1. Hypertension, uncontrolled.\n- Medical Reasoning: The patient's blood pressure is is elevated.",
+        "medical_concepts": [
+          "jugular venous distention",
+          "carotid bruits",
+          "lung auscultation",
+          "heart auscultation",
+          "systolic ejection murmur",
+          "edema",
+          "pitting edema",
+          "hypertension",
+          "elevated blood pressure"
+        ]
+      },
+      {
+        "heading": "Clinical Note",
+        "section_value": "- Patient Education and Counseling: We discussed that this could be multifactorial; for example, her diet, her medications regimen, or the medication she is currently on could be a factor in her elevated blood pressure. I encouraged the patient to take her current medication regimen today. I encouraged her to monitor her blood pressure 3 times a week. We also discussed the patient speaking to our nutritionist to help her diet. I recommended a DASH diet.\n- Medical Treatment: She will continue her current medication regimen.\n2. Type 2 diabetes.\n- Medical Reasoning: The patient's diabetes is uncontrolled.\n- Patient Education and Counseling: I advised the patient to continue taking her blood sugars to make sure that the change in medication is effective.\n- Medical Treatment: Increase metformin to 1500 mg.\nPatient Agreements: The patient understands and agrees with the recommended medical treatment plan.\nINSTRUCTIONS\nThe patient will follow up in 4 weeks.",
+        "medical_concepts": [
+          "elevated blood pressure",
+          "blood pressure",
+          "nutritionist",
+          "DASH diet",
+          "type 2 diabetes",
+          "uncontrolled diabetes",
+          "blood sugars",
+          "metformin"
+        ]
+      }
+    ],
+    "medical_concepts": [
+      "headache",
+      "high blood pressure",
+      "shortness of breath",
+      "chest pain",
+      "blurry vision",
+      "dizziness",
+      "headaches",
+      "blood pressure",
+      "oxygenation",
+      "jugular venous distention",
+      "carotid bruits",
+      "lung auscultation",
+      "heart auscultation",
+      "systolic ejection murmur",
+      "edema",
+      "pitting edema",
+      "hypertension",
+      "elevated blood pressure",
+      "nutritionist",
+      "DASH diet",
+      "type 2 diabetes",
+      "uncontrolled diabetes",
+      "blood sugars",
+      "metformin"
+    ],
+    "section_count": 3
+  },
+  "summary_nair_concepts": {
+    "sections": [
+      {
+        "heading": "S",
+        "section_value": "The patient reports dizziness, particularly when rising quickly. He also states his blood pressure is elevated and that he takes tylenol. The patient reports his blood sugar is elevated.",
+        "medical_concepts": [
+          "dizziness",
+          "elevated blood pressure",
+          "Tylenol",
+          "elevated blood sugar"
+        ]
+      },
+      {
+        "heading": "O",
+        "section_value": "Blood pressure is 138/82 mmHg. Heart rate is 88 bpm. Neurological exam is unremarkable.",
+        "medical_concepts": [
+          "blood pressure",
+          "heart rate",
+          "neurological exam"
+        ]
+      },
+      {
+        "heading": "A",
+        "section_value": "The patient's symptoms and elevated blood pressure suggest hypertension and hyperglycemia.",
+        "medical_concepts": [
+          "elevated blood pressure",
+          "hypertension",
+          "hyperglycemia"
+        ]
+      },
+      {
+        "heading": "P",
+        "section_value": "Order a blood pressure monitoring schedule three times a week. Continue the patient's current medication regimen, including chlorthalidone.",
+        "medical_concepts": [
+          "blood pressure monitoring",
+          "chlorthalidone",
+          "medication regimen"
+        ]
+      }
+    ],
+    "medical_concepts": [
+      "dizziness",
+      "elevated blood pressure",
+      "Tylenol",
+      "elevated blood sugar",
+      "blood pressure",
+      "heart rate",
+      "neurological exam",
+      "hypertension",
+      "hyperglycemia",
+      "blood pressure monitoring",
+      "chlorthalidone",
+      "medication regimen"
+    ],
+    "section_count": 4
+  },
+  "nair_alignment": {
+    "pred_concepts": [
+      "dizziness",
+      "elevated blood pressure",
+      "Tylenol",
+      "elevated blood sugar",
+      "blood pressure",
+      "heart rate",
+      "neurological exam",
+      "hypertension",
+      "hyperglycemia",
+      "blood pressure monitoring",
+      "chlorthalidone",
+      "medication regimen"
+    ],
+    "ref_concepts": [
+      "headache",
+      "high blood pressure",
+      "shortness of breath",
+      "chest pain",
+      "blurry vision",
+      "dizziness",
+      "headaches",
+      "blood pressure",
+      "oxygenation",
+      "jugular venous distention",
+      "carotid bruits",
+      "lung auscultation",
+      "heart auscultation",
+      "systolic ejection murmur",
+      "edema",
+      "pitting edema",
+      "hypertension",
+      "elevated blood pressure",
+      "nutritionist",
+      "DASH diet",
+      "type 2 diabetes",
+      "uncontrolled diabetes",
+      "blood sugars",
+      "metformin"
+    ],
+    "precision_alignment": {
+      "found_b": [
+        "dizziness",
+        "elevated blood pressure",
+        "blood pressure",
+        "hypertension",
+        "medication regimen"
+      ],
+      "not_found_b": [
+        "Tylenol",
+        "elevated blood sugar",
+        "heart rate",
+        "neurological exam",
+        "hyperglycemia",
+        "blood pressure monitoring",
+        "chlorthalidone"
+      ],
+      "chunk_count": 1,
+      "chunk_results": [
+        {
+          "found_b": [
+            "dizziness",
+            "elevated blood pressure",
+            "blood pressure",
+            "hypertension",
+            "medication regimen"
+          ],
+          "not_found_b": [
+            "Tylenol",
+            "elevated blood sugar",
+            "heart rate",
+            "neurological exam",
+            "hyperglycemia",
+            "blood pressure monitoring",
+            "chlorthalidone"
+          ]
+        }
+      ]
+    },
+    "recall_alignment": {
+      "found_b": [
+        "high blood pressure",
+        "dizziness",
+        "blood pressure",
+        "hypertension",
+        "elevated blood pressure",
+        "blood sugars"
+      ],
+      "not_found_b": [
+        "headache",
+        "shortness of breath",
+        "chest pain",
+        "blurry vision",
+        "headaches",
+        "oxygenation",
+        "jugular venous distention",
+        "carotid bruits",
+        "lung auscultation",
+        "heart auscultation",
+        "systolic ejection murmur",
+        "edema",
+        "pitting edema",
+        "nutritionist",
+        "DASH diet",
+        "type 2 diabetes",
+        "uncontrolled diabetes",
+        "metformin"
+      ],
+      "chunk_count": 1,
+      "chunk_results": [
+        {
+          "found_b": [
+            "high blood pressure",
+            "dizziness",
+            "blood pressure",
+            "hypertension",
+            "elevated blood pressure",
+            "blood sugars"
+          ],
+          "not_found_b": [
+            "headache",
+            "shortness of breath",
+            "chest pain",
+            "blurry vision",
+            "headaches",
+            "oxygenation",
+            "jugular venous distention",
+            "carotid bruits",
+            "lung auscultation",
+            "heart auscultation",
+            "systolic ejection murmur",
+            "edema",
+            "pitting edema",
+            "nutritionist",
+            "DASH diet",
+            "type 2 diabetes",
+            "uncontrolled diabetes",
+            "metformin"
+          ]
+        }
+      ]
+    }
+  },
+  "semantic_cap_audit": {
+    "source_cap_recall": [
+      {
+        "cap_id": "P1",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P2",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P3",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P4",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P5",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P6",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P7",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P8",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P9",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P10",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P11",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P12",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P13",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P14",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P15",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P16",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P1",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P2",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P3",
+        "judgment": "supported",
+        "reason": null
+      }
+    ],
+    "summary_cap_precision": [],
+    "metrics": {
+      "semantic_cap_precision": 0.0,
+      "semantic_cap_recall": 0.3684,
+      "semantic_cap_f1": 0.0,
+      "semantic_cap_precision_supported_count": 0,
+      "semantic_cap_precision_partial_count": 0,
+      "semantic_cap_precision_denominator": 0,
+      "semantic_cap_recall_supported_count": 6,
+      "semantic_cap_recall_partial_count": 2,
+      "semantic_cap_recall_denominator": 19,
+      "semantic_cap_low_value_source_count": 0,
+      "semantic_cap_low_value_summary_count": 0,
+      "semantic_cap_missing_count": 11,
+      "semantic_cap_unsupported_count": 0,
+      "semantic_cap_contradicted_source_count": 0,
+      "semantic_cap_contradicted_summary_count": 0
+    }
+  },
+  "safety_judgment": null,
+  "section_judgment": {
+    "section_miscategorizations": [
+      {
+        "text": "He also states his blood pressure is elevated",
+        "current_section": "S",
+        "expected_section": "O",
+        "severity": "major",
+        "reason": "The patient's subjective report of elevated blood pressure is directly contradicted by the objective, normal-range blood pressure documented in O. Leaving this unqualified subjective claim in S without clarification could mislead a reader about the actual blood pressure status."
+      },
+      {
+        "text": "Continue the patient's current medication regimen, including chlorthalidone.",
+        "current_section": "P",
+        "expected_section": "S",
+        "severity": "major",
+        "reason": "The note provides no prior mention of chlorthalidone or any change to it; as written, this reads as a description of the existing regimen rather than a new or modified order. Without explicit framing as a treatment decision, it functions as current medication state, which belongs in S."
+      }
+    ],
+    "summary_statistics": {
+      "section_appropriateness_score": 0.7,
+      "section_miscategorization_count": 2,
+      "major_section_miscategorization_count": 2
+    }
+  },
+  "pdsqi_judgment": {
+    "citation_applicable": 0,
+    "citation": 0,
+    "accurate": 1,
+    "thorough": 1,
+    "useful": 1,
+    "organized": 2,
+    "comprehensible": 3,
+    "succinct": 3,
+    "abstraction": 1,
+    "synthesized": 2,
+    "voice_summ": 0,
+    "voice_note": 0,
+    "pdsqi_core_mean": 1.8571
+  },
+  "llm_checklist_judgment": {
+    "content_preservation_core": 1,
+    "noise_suppression": 4,
+    "lay_expression_preservation": 2,
+    "state_update_fidelity": 1,
+    "temporality_preservation": 2,
+    "problem_evidence_linkage": 2,
+    "state_plan_separation": 2,
+    "section_organization_appropriateness": 2,
+    "overall_clinical_usability": 1,
+    "clinically_meaningful_omission": "Yes",
+    "clinically_concerning_hallucination": "Yes",
+    "checklist_a_mean": 2.3333,
+    "checklist_b_mean": 1.5,
+    "checklist_c_mean": 2.0,
+    "llm_checklist_abc_mean": 2.0,
+    "llm_checklist_mean_no_usability": 2.0,
+    "llm_checklist_total_score": 17,
+    "llm_checklist_mean": 1.8889,
+    "llm_checklist_meaningful_omission_yes": 1,
+    "llm_checklist_concerning_hallucination_yes": 1
+  },
+  "metrics": {
+    "case_id": "D2N200",
+    "method": "cap_event_only",
+    "template": "soap",
+    "source_cap_count": 19,
+    "event_plan_count": 1,
+    "summary_cap_count": 0,
+    "cap_matched_count": 0,
+    "cap_precision": 0.0,
+    "cap_recall": 0.0,
+    "cap_f1": 0.0,
+    "unsupported_summary_cap_count": 0,
+    "missing_source_cap_count": 19,
+    "summary_runtime_seconds": null,
+    "summary_cap_runtime_seconds": 1.329,
+    "event_plan_runtime_seconds": null,
+    "rouge_l_f1_vs_reference": 0.1622,
+    "token_f1_vs_reference": 0.2823,
+    "gptf1_macro_f1": 0.0,
+    "nair_gpt_precision": 0.4167,
+    "nair_gpt_recall": 0.25,
+    "nair_gpt_f1": 0.3125,
+    "semantic_cap_precision": 0.0,
+    "semantic_cap_recall": 0.3684,
+    "semantic_cap_f1": 0.0,
+    "hallucination_count": null,
+    "major_hallucination_count": null,
+    "omission_count": null,
+    "major_omission_count": null,
+    "section_appropriateness_score": 0.7,
+    "section_miscategorization_count": 2,
+    "major_section_miscategorization_count": 2,
+    "pdsqi_core_mean": 1.8571,
+    "pdsqi_accurate": 1,
+    "pdsqi_thorough": 1,
+    "llm_checklist_total_score": 17,
+    "llm_checklist_mean": 1.8889,
+    "llm_checklist_mean_no_usability": 2.0,
+    "checklist_a_mean": 2.3333,
+    "checklist_b_mean": 1.5,
+    "checklist_c_mean": 2.0,
+    "llm_checklist_abc_mean": 2.0,
+    "content_preservation_core": 1,
+    "noise_suppression": 4,
+    "lay_expression_preservation": 2,
+    "state_update_fidelity": 1,
+    "temporality_preservation": 2,
+    "problem_evidence_linkage": 2,
+    "state_plan_separation": 2,
+    "section_organization_appropriateness": 2,
+    "overall_clinical_usability": 1,
+    "llm_checklist_meaningful_omission_yes": 1,
+    "llm_checklist_concerning_hallucination_yes": 1,
+    "gptf1_active_problems_symptoms_precision": 0.0,
+    "gptf1_active_problems_symptoms_recall": 0.0,
+    "gptf1_active_problems_symptoms_f1": 0.0,
+    "gptf1_active_problems_symptoms_pred_count": 0,
+    "gptf1_active_problems_symptoms_ref_count": 0,
+    "gptf1_negated_findings_precision": 0.0,
+    "gptf1_negated_findings_recall": 0.0,
+    "gptf1_negated_findings_f1": 0.0,
+    "gptf1_negated_findings_pred_count": 0,
+    "gptf1_negated_findings_ref_count": 0,
+    "gptf1_uncertain_findings_precision": 0.0,
+    "gptf1_uncertain_findings_recall": 0.0,
+    "gptf1_uncertain_findings_f1": 0.0,
+    "gptf1_uncertain_findings_pred_count": 0,
+    "gptf1_uncertain_findings_ref_count": 0,
+    "gptf1_medication_treatment_precision": 0.0,
+    "gptf1_medication_treatment_recall": 0.0,
+    "gptf1_medication_treatment_f1": 0.0,
+    "gptf1_medication_treatment_pred_count": 0,
+    "gptf1_medication_treatment_ref_count": 0,
+    "gptf1_plan_followup_precision": 0.0,
+    "gptf1_plan_followup_recall": 0.0,
+    "gptf1_plan_followup_f1": 0.0,
+    "gptf1_plan_followup_pred_count": 0,
+    "gptf1_plan_followup_ref_count": 0,
+    "nair_pred_concept_count": 12,
+    "nair_ref_concept_count": 24,
+    "nair_precision_match_count": 5,
+    "nair_recall_match_count": 6,
+    "semantic_cap_precision_supported_count": 0,
+    "semantic_cap_precision_partial_count": 0,
+    "semantic_cap_precision_denominator": 0,
+    "semantic_cap_recall_supported_count": 6,
+    "semantic_cap_recall_partial_count": 2,
+    "semantic_cap_recall_denominator": 19,
+    "semantic_cap_low_value_source_count": 0,
+    "semantic_cap_low_value_summary_count": 0,
+    "semantic_cap_missing_count": 11,
+    "semantic_cap_unsupported_count": 0,
+    "semantic_cap_contradicted_source_count": 0,
+    "semantic_cap_contradicted_summary_count": 0,
+    "pdsqi_useful": 1,
+    "pdsqi_organized": 2,
+    "pdsqi_comprehensible": 3,
+    "pdsqi_succinct": 3,
+    "pdsqi_synthesized": 2
+  }
+}

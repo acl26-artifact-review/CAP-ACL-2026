@@ -1,0 +1,44 @@
+{
+  "section_miscategorizations": [
+    {
+      "text": "The patient reports chest pain.",
+      "current_section": "S",
+      "expected_section": "S",
+      "severity": "major",
+      "reason": "This directly contradicts the earlier statement in the same section that he denies chest pain, creating a clinically misleading inconsistency within the subjective history. One of these should be removed or moved/clarified; as written, the placement of a second, conflicting chest pain statement is a major documentation error."
+    },
+    {
+      "text": "The doctor observed blood pressure readings of almost 200.",
+      "current_section": "O",
+      "expected_section": "O",
+      "severity": "minor",
+      "reason": "As written, this is an observed objective finding and belongs in O, but it conflicts with the earlier statement that blood pressure is mildly low. The issue is internal inconsistency within the section rather than misplacement, so this is a minor organizational/documentation problem rather than a true section miscategorization."
+    },
+    {
+      "text": "The patient is taking lisinopril.",
+      "current_section": "P",
+      "expected_section": "S",
+      "severity": "major",
+      "reason": "This describes an existing medication the patient is already taking, which per instructions belongs in the Subjective section unless framed as a change or order. In the Plan section it can be misread as part of the new management plan."
+    },
+    {
+      "text": "The patient purchased a blood pressure cuff.",
+      "current_section": "P",
+      "expected_section": "S",
+      "severity": "minor",
+      "reason": "This is a past action/state reported by the patient rather than a new order or recommendation. It fits better as subjective history, though its presence in the Plan is unlikely to substantially mislead clinical management."
+    },
+    {
+      "text": "The patient is starting therapy.",
+      "current_section": "P",
+      "expected_section": "S",
+      "severity": "major",
+      "reason": "This reads as the patient's current treatment status (already starting therapy), which is subjective history. In the Plan section it could be misinterpreted as a new referral/order being made at this visit."
+    }
+  ],
+  "summary_statistics": {
+    "section_appropriateness_score": 0.4,
+    "section_miscategorization_count": 5,
+    "major_section_miscategorization_count": 3
+  }
+}

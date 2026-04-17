@@ -1,0 +1,44 @@
+{
+  "section_miscategorizations": [
+    {
+      "text": "The patient's mother had breast cancer.",
+      "current_section": "A",
+      "expected_section": "S",
+      "severity": "major",
+      "reason": "Family history is patient-reported historical information and should be documented in the subjective section, not as the clinician's assessment."
+    },
+    {
+      "text": "The patient reports anxiety.",
+      "current_section": "A",
+      "expected_section": "S",
+      "severity": "major",
+      "reason": "This is a patient-reported symptom and belongs in the subjective section, not in the assessment, where the clinician's diagnostic impression should be recorded."
+    },
+    {
+      "text": "The patient reports anxiety.",
+      "current_section": "P",
+      "expected_section": "S",
+      "severity": "major",
+      "reason": "This is a patient-reported symptom and should be in the subjective section; it is not a management action or plan."
+    },
+    {
+      "text": "The patient reports breast pain.",
+      "current_section": "P",
+      "expected_section": "S",
+      "severity": "major",
+      "reason": "This is a patient-reported symptom and belongs in the subjective section, not in the plan, which should contain management actions."
+    },
+    {
+      "text": "The patient has received the vaccine.",
+      "current_section": "P",
+      "expected_section": "S",
+      "severity": "minor",
+      "reason": "This is past treatment status and could reasonably be documented in the subjective history; it is not a new order or current management action."
+    }
+  ],
+  "summary_statistics": {
+    "section_appropriateness_score": 0.6,
+    "section_miscategorization_count": 5,
+    "major_section_miscategorization_count": 4
+  }
+}

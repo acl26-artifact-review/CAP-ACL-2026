@@ -1,0 +1,23 @@
+{
+  "section_miscategorizations": [
+    {
+      "text": "The doctor will lift the patient's right leg.",
+      "current_section": "P",
+      "expected_section": "O",
+      "severity": "major",
+      "reason": "This is a component of the physical exam (straight leg raise-type maneuver), not a future management plan or order. Documenting it in the plan could mislead a reader about what has already been examined versus what is being recommended."
+    },
+    {
+      "text": "The clinician continues metformin.",
+      "current_section": "P",
+      "expected_section": "P",
+      "severity": "minor",
+      "reason": "Continuing an existing medication is a management decision and belongs in the Plan, but per the template rules, current medications the patient is already taking generally belong in S unless framed clearly as a treatment change. This sentence straddles both; it is acceptable in P but could be clearer as an explicit continuation order."
+    }
+  ],
+  "summary_statistics": {
+    "section_appropriateness_score": 0.7,
+    "section_miscategorization_count": 2,
+    "major_section_miscategorization_count": 1
+  }
+}

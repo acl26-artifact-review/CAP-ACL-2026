@@ -1,0 +1,44 @@
+{
+  "section_miscategorizations": [
+    {
+      "text": "The patient has chronic kidney disease.",
+      "current_section": "A",
+      "expected_section": "O",
+      "severity": "minor",
+      "reason": "This is a statement of an existing, established diagnosis (an observed medical condition) rather than an interpretive assessment specific to this encounter. It functions more as past medical history/known problem list, which aligns better with objective data than with the current diagnostic impression."
+    },
+    {
+      "text": "The patient has diabetes.",
+      "current_section": "A",
+      "expected_section": "O",
+      "severity": "minor",
+      "reason": "Similar to other chronic conditions listed, this is an established diagnosis/past medical history item rather than a new assessment or differential for the current complaint."
+    },
+    {
+      "text": "The patient has hypertension.",
+      "current_section": "A",
+      "expected_section": "O",
+      "severity": "minor",
+      "reason": "This is a known chronic condition/past medical history item, not a synthesized assessment specific to the current visit."
+    },
+    {
+      "text": "The patient's grandfather had obstructive neuropathy.",
+      "current_section": "A",
+      "expected_section": "S",
+      "severity": "major",
+      "reason": "Family history is patient-reported historical information and belongs in the subjective section, not in the assessment where it could be misread as an active problem or diagnostic impression."
+    },
+    {
+      "text": "The patient's mother had breast cancer.",
+      "current_section": "A",
+      "expected_section": "S",
+      "severity": "major",
+      "reason": "This is family history (subjective historical data) and not an assessment of the patient's current condition; placing it in A may confuse it with the patient's own diagnoses."
+    }
+  ],
+  "summary_statistics": {
+    "section_appropriateness_score": 0.7,
+    "section_miscategorization_count": 5,
+    "major_section_miscategorization_count": 2
+  }
+}

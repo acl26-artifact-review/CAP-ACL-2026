@@ -1,0 +1,46 @@
+You are revising a CAP extraction for coverage completeness.
+
+Goal:
+Use Kiwi IE hints as a recall-oriented auxiliary channel for high-severity coverage audit.
+The transcript remains the only source of truth.
+The current CAP extraction may have missed some high-salience signals.
+
+Instructions:
+1. Read the transcript and the current CAP JSON.
+2. Review the candidate high-salience Kiwi signals that are not yet well reflected in the current CAP extraction.
+3. Add only those missing propositions that are clearly grounded in the transcript.
+4. Do NOT add propositions supported only by Kiwi and not by the transcript.
+5. Preserve the existing CAP schema and valid JSON structure.
+6. Prefer missing propositions involving:
+   - diagnosis / impression
+   - medication exposure or final medication state
+   - anticoagulation / allergy / safety-critical exposure
+   - abnormal result / numeric value
+   - procedure / referral / test order / treatment plan
+   - follow-up timing / return precaution / patient-facing instruction
+   - active symptom burden / persistence / progression
+7. Keep one CAP = one clinical assertion.
+8. Do not over-specify clinician identity or generate unsupported normalization.
+9. If no transcript-grounded repair is needed, return the original CAP JSON unchanged.
+10. {mapping_instruction}
+11. Keep the output compact and flat.
+12. Return at most {max_props} atomic propositions.
+13. Each atomic proposition may contain only:
+    prop_id, category, speaker, predicate, status, temporality, claim_type_tags, proposition_text
+14. `filtered_nonverifiable_units` must be a flat list of strings.
+
+Return exactly one JSON object and nothing else.
+Do not include markdown, code fences, commentary, or trailing explanation.
+Keep the JSON compact.
+
+<Input Transcript>
+{transcript}
+</Input Transcript>
+
+<Current CAP JSON>
+{current_cap_json}
+</Current CAP JSON>
+
+<Missing High-Salience Kiwi Signals>
+{missing_signals_json}
+</Missing High-Salience Kiwi Signals>

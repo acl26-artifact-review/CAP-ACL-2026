@@ -1,0 +1,147 @@
+Case: D2N134
+
+Problem List and Visit State Tracking
+
+Problem List
+- lyme disease | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T3
+  Summary: The patient has newly diagnosed Lyme disease.
+  ClusterId: CL1
+  TemporalProfile: newly diagnosed
+  Updates:
+  - CAP7: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=newly diagnosed turns=T3 :: The patient has newly diagnosed Lyme disease.
+- type 2 diabetes | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T3
+  Summary: The patient has type 2 diabetes.
+  ClusterId: CL2
+  TemporalProfile: existing
+  Updates:
+  - CAP12: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=existing turns=T3 :: The patient has type 2 diabetes.
+- hypertension | verification_status=confirmed | clinical_status=stable | modalities=assessment | speakers=doctor | evidence=T3
+  Summary: The patient's hypertension is stable.
+  ClusterId: CL3
+  TemporalProfile: current
+  Updates:
+  - CAP18: content_source=doctor modality=assessment verification_status=confirmed clinical_status=stable temporality=current turns=T3 :: The patient's hypertension is stable.
+- joint pain | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T27,T7
+  Summary: The patient reports swollen, painful joints in their elbows.
+  ClusterId: CL4
+  TemporalProfile: current
+  Updates:
+  - CAP2: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T7 :: The patient reports swollen, painful joints in their elbows.
+  - CAP10: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T27 :: The patient is endorsing joint pain.
+- fatigue | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T7
+  Summary: The patient reports feeling tired.
+  ClusterId: CL5
+  TemporalProfile: current
+  Updates:
+  - CAP13: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T7 :: The patient reports feeling tired.
+- fever | verification_status=unconfirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T9
+  Summary: The patient denies experiencing high fevers.
+  ClusterId: CL6
+  TemporalProfile: past
+  Updates:
+  - CAP9: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=past turns=T9 :: The patient denies experiencing high fevers.
+- rash | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T9
+  Summary: The patient reports a rash.
+  ClusterId: CL7
+  TemporalProfile: current
+  Updates:
+  - CAP16: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T9 :: The patient reports a rash.
+- loss of appetite | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T11
+  Summary: The patient reports a decreased appetite.
+  ClusterId: CL8
+  TemporalProfile: current
+  Updates:
+  - CAP8: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T11 :: The patient reports a decreased appetite.
+- nausea | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T11,T27
+  Summary: The patient reports experiencing nausea.
+  ClusterId: CL9
+  TemporalProfile: current
+  Updates:
+  - CAP14: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T11 :: The patient reports experiencing nausea.
+  - CAP19: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T11 :: The patient reports nausea.
+  - CAP17: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T27 :: The patient is endorsing nausea.
+- appetite loss | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T11
+  Summary: The patient reports difficulty eating.
+  ClusterId: CL10
+  TemporalProfile: current
+  Updates:
+  - CAP15: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T11 :: The patient reports difficulty eating.
+- bull's-eye rash | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T14
+  Summary: The patient describes the rash as resembling a bull's-eye.
+  ClusterId: CL11
+  TemporalProfile: current
+  Updates:
+  - CAP3: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T14 :: The patient describes the rash as resembling a bull's-eye.
+- high fever | verification_status=unconfirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T21
+  Summary: The patient reports having noticed high fevers.
+  ClusterId: CL14
+  TemporalProfile: noticed
+  Updates:
+  - CAP6: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=noticed turns=T21 :: The patient reports having noticed high fevers.
+- swelling | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T27
+  Summary: The patient has swelling of the elbow joints bilaterally.
+  ClusterId: CL15
+  TemporalProfile: current
+  Updates:
+  - CAP4: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T27 :: The patient has swelling of the elbow joints bilaterally.
+- body aches | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T27
+  Summary: The patient is endorsing body aches.
+  ClusterId: CL16
+  TemporalProfile: current
+  Updates:
+  - CAP11: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T27 :: The patient is endorsing body aches.
+- pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T39,T55
+  Summary: The patient reports pain to palpation of the elbow joints.
+  ClusterId: CL17
+  TemporalProfile: current
+  Updates:
+  - CAP1: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T39 :: The patient reports pain to palpation of the elbow joints.
+  - CAP5: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T55 :: The patient reports pain in the left hand.
+
+Medication Tracking
+- [MedicationState] metformin | verification_status=confirmed | clinical_status=active | modalities=plan | speakers=doctor | evidence=T50
+  Summary: Metformin will be continued.
+  ClusterId: CL19
+  TemporalProfile: ongoing
+  CurrentRegimens:
+  - Metformin will be continued. (T50)
+  Updates:
+  - CAP23: content_source=doctor modality=plan verification_status=confirmed clinical_status=active temporality=ongoing turns=T50 :: Metformin will be continued.
+- [MedicationChange] lisinopril | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T56
+  Summary: Order lisinopril 10 milligrams daily.
+  ClusterId: CL20
+  TemporalProfile: daily
+  PlannedChanges:
+  - Order lisinopril 10 milligrams daily. (T56)
+  Updates:
+  - CAP20: content_source=doctor modality=plan verification_status=unconfirmed clinical_status=planned temporality=daily turns=T56 :: Order lisinopril 10 milligrams daily.
+- [MedicationChange] doxycycline | verification_status=confirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=
+  Summary: Doxycycline will be prescribed.
+  ClusterId: CL21
+  TemporalProfile: for three weeks
+  PlannedChanges:
+  - Doxycycline will be prescribed. ()
+  Updates:
+  - CAP24: content_source=doctor modality=plan verification_status=confirmed clinical_status=planned temporality=for three weeks turns= :: Doxycycline will be prescribed.
+- [MedicationState] lisinopril | verification_status=confirmed | clinical_status=active | modalities=unknown | speakers=dragon | evidence=
+  Summary: Lisinopril will be ordered.
+  ClusterId: CL22
+  TemporalProfile: future
+  CurrentRegimens:
+  - Lisinopril will be ordered. ()
+  Updates:
+  - CAP25: content_source=dragon modality=unknown verification_status=confirmed clinical_status=active temporality=future turns= :: Lisinopril will be ordered.
+
+Other Structured States
+- [TestResult] hemoglobin a1c | verification_status=unconfirmed | clinical_status=active | modalities=test_result | speakers=dragon | evidence=T14
+  Summary: A hemoglobin A1c test will be ordered.
+  ClusterId: CL12
+  TemporalProfile: future
+- [TestResult] lipid panel | verification_status=unconfirmed | clinical_status=active | modalities=test_result | speakers=dragon | evidence=T14
+  Summary: A lipid panel will be ordered.
+  ClusterId: CL13
+  TemporalProfile: future
+- [Plan] follow-up appointment | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T39
+  Summary: Make a follow-up appointment for you.
+  ClusterId: CL18
+  TemporalProfile: future

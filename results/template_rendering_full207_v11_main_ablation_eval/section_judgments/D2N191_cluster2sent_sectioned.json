@@ -1,0 +1,23 @@
+{
+  "section_miscategorizations": [
+    {
+      "text": "The patient reports experiencing chest pain, shortness of breath, and a slight murmur heard upon cardiac auscultation.",
+      "current_section": "Findings",
+      "expected_section": "Mixed (HPI for symptoms / Findings for murmur)",
+      "severity": "major",
+      "reason": "Patient-reported symptoms (chest pain, shortness of breath) belong in HPI, while the murmur is an exam finding. Grouping them together in Findings blurs the distinction between subjective symptoms and objective exam, which could mislead a reader about what was actually observed on exam versus reported by the patient."
+    },
+    {
+      "text": "An electrocardiogram is ordered to evaluate for possible cardiac ischemia.",
+      "current_section": "Findings",
+      "expected_section": "Plan",
+      "severity": "major",
+      "reason": "This is an order/diagnostic plan, not an existing result or exam finding. Placing it in Findings misrepresents it as something already performed or resulted rather than a planned test."
+    }
+  ],
+  "summary_statistics": {
+    "section_appropriateness_score": 0.7,
+    "section_miscategorization_count": 2,
+    "major_section_miscategorization_count": 2
+  }
+}

@@ -1,0 +1,137 @@
+Case: D2N023
+
+Problem List and Visit State Tracking
+
+Problem List
+- hypogonadism | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T10
+  Summary: The patient reports hypogonadism.
+  ClusterId: CL1
+  TemporalProfile: current
+  Updates:
+  - CAP11: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T10 :: The patient reports hypogonadism.
+- pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T18,T82
+  Summary: The patient reports pain in the left hand.
+  ClusterId: CL6
+  TemporalProfile: current
+  Updates:
+  - CAP3: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T18 :: The patient reports pain in the left hand.
+  - CAP12: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T82 :: The patient reports pain.
+- cholesterol | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T18
+  Summary: The patient showed a cholesterol test.
+  ClusterId: CL7
+  TemporalProfile: current
+  Updates:
+  - CAP6: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T18 :: The patient showed a cholesterol test.
+- triglycerides | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T30
+  Summary: The patient's triglycerides were 265 milligrams per deciliter.
+  ClusterId: CL8
+  TemporalProfile: past
+  Updates:
+  - CAP4: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=past turns=T30 :: The patient's triglycerides were 265 milligrams per deciliter.
+- hyperlipidemia | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T30
+  Summary: The patient previously had high triglycerides.
+  ClusterId: CL9
+  TemporalProfile: past
+  Updates:
+  - CAP7: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=past turns=T30 :: The patient previously had high triglycerides.
+- high testosterone levels | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T55
+  Summary: The patient's testosterone levels are elevated.
+  ClusterId: CL14
+  TemporalProfile: current
+  Updates:
+  - CAP8: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T55 :: The patient's testosterone levels are elevated.
+- risk of needing to come off | verification_status=confirmed | clinical_status=active | modalities=assessment | speakers=doctor | evidence=T62
+  Summary: The patient is at risk of needing to come off medication.
+  ClusterId: CL15
+  TemporalProfile: future
+  Updates:
+  - CAP1: content_source=doctor modality=assessment verification_status=confirmed clinical_status=active temporality=future turns=T62 :: The patient is at risk of needing to come off medication.
+- blood thickness | verification_status=confirmed | clinical_status=active | modalities=assessment,interview | speakers=doctor,patient | evidence=T64,T65
+  Summary: The patient's blood thickness is at increased risk.
+  ClusterId: CL16
+  TemporalProfile: current, future
+  Updates:
+  - CAP9: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T64 :: The patient's blood thickness is increasing.
+  - CAP5: content_source=doctor modality=assessment verification_status=confirmed clinical_status=active temporality=future turns=T65 :: The patient's blood thickness is at increased risk.
+- high testosterone dose | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=doctor | evidence=T70
+  Summary: The patient is taking a high dose of testosterone.
+  ClusterId: CL17
+  TemporalProfile: current
+  Updates:
+  - CAP2: content_source=doctor modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T70 :: The patient is taking a high dose of testosterone.
+- paper prescription | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T80
+  Summary: The patient prefers paper prescriptions.
+  ClusterId: CL19
+  TemporalProfile: current
+  Updates:
+  - CAP10: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=current turns=T80 :: The patient prefers paper prescriptions.
+
+Medication Tracking
+- [MedicationState] cialis | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=doctor,patient | evidence=T10,T16,T78
+  Summary: The patient is taking cialis at 5 milligrams on days they work out and 2.5 milligrams otherwise.
+  ClusterId: CL3
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient is taking cialis daily. (T10)
+  - The patient is taking cialis at 5 milligrams on days they work out and 2.5 milligrams otherwise. (T16)
+  - The patient needs more cialis. (T78)
+  Updates:
+  - CAP25: content_source=doctor modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T10 :: The patient is taking cialis daily.
+  - CAP20: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T16 :: The patient is taking cialis at 5 milligrams on days they work out and 2.5 milligrams otherwise.
+  - CAP27: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T78 :: The patient needs more cialis.
+- [MedicationState] finasteride | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=doctor,patient | evidence=T10,T14,T78
+  Summary: The patient is taking finasteride at half a pill, which is the 5 milligram version.
+  ClusterId: CL4
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient is taking finasteride. (T10)
+  - The patient is taking finasteride at half a pill, which is the 5 milligram version. (T14)
+  - The patient needs more finasteride. (T78)
+  Updates:
+  - CAP26: content_source=doctor modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T10 :: The patient is taking finasteride.
+  - CAP21: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T14 :: The patient is taking finasteride at half a pill, which is the 5 milligram version.
+  - CAP28: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T78 :: The patient needs more finasteride.
+- [MedicationState] testosterone | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T30,T65
+  Summary: The patient is currently taking testosterone at a dose of 140 milligrams.
+  ClusterId: CL10
+  TemporalProfile: current, past
+  CurrentRegimens:
+  - The patient took his first dose of testosterone on the 28th. (T30)
+  - The patient is currently taking testosterone at a dose of 140 milligrams. (T65)
+  Updates:
+  - CAP23: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=past turns=T30 :: The patient took his first dose of testosterone on the 28th.
+  - CAP22: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T65 :: The patient is currently taking testosterone at a dose of 140 milligrams.
+- [MedicationChange] testosterone | verification_status=unconfirmed | clinical_status=planned | modalities=interview | speakers=patient | evidence=T49
+  Summary: The patient requests to increase his testosterone dosage to 175 milligrams.
+  ClusterId: CL13
+  TemporalProfile: fall
+  PlannedChanges:
+  - The patient requests to increase his testosterone dosage to 175 milligrams. (T49)
+  Updates:
+  - CAP24: content_source=patient modality=interview verification_status=unconfirmed clinical_status=planned temporality=fall turns=T49 :: The patient requests to increase his testosterone dosage to 175 milligrams.
+
+Other Structured States
+- [TestResult] testosterone | verification_status=confirmed | clinical_status=historical | modalities=test_result | speakers=doctor | evidence=T10
+  Summary: The patient's last testosterone level was greater than 1,500.
+  ClusterId: CL2
+  TemporalProfile: past
+- [TestResult] psa | verification_status=confirmed | clinical_status=historical | modalities=test_result | speakers=doctor | evidence=T11
+  Summary: The patient's last PSA level was 0.66.
+  ClusterId: CL5
+  TemporalProfile: past
+- [TestResult] cholesterol | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T37
+  Summary: The patient's cholesterol is 5 months later.
+  ClusterId: CL11
+  TemporalProfile: current
+- [Plan] follow_up | verification_status=unconfirmed | clinical_status=planned | modalities=assessment | speakers=doctor | evidence=T37
+  Summary: We will take it.
+  ClusterId: CL12
+  TemporalProfile: future
+- [Plan] do not change dose | verification_status=confirmed | clinical_status=planned | modalities=interview | speakers=doctor | evidence=T73
+  Summary: The doctor will not change the patient's dose.
+  ClusterId: CL18
+  TemporalProfile: current
+- [Plan] prescription | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T80
+  Summary: The doctor will get the prescriptions.
+  ClusterId: CL20
+  TemporalProfile: current

@@ -1,0 +1,65 @@
+{
+  "section_miscategorizations": [
+    {
+      "text": "The patient has a history of diabetes.",
+      "current_section": "A",
+      "expected_section": "H",
+      "severity": "major",
+      "reason": "Past medical history and chronic conditions belong in the history (HPI) section; placing this as Assessment suggests it is the clinician's new diagnostic impression rather than existing history."
+    },
+    {
+      "text": "The patient reports pain.",
+      "current_section": "A",
+      "expected_section": "H",
+      "severity": "major",
+      "reason": "Subjective symptom reporting belongs in the HPI; including it in Assessment blurs the distinction between patient-reported symptoms and clinician diagnostic synthesis."
+    },
+    {
+      "text": "The patient reports pain.",
+      "current_section": "F",
+      "expected_section": "H",
+      "severity": "major",
+      "reason": "This is a subjective symptom statement, not an objective exam or test finding; it should be in the HPI rather than Findings."
+    },
+    {
+      "text": "The patient's metformin dose is 100 mg daily.",
+      "current_section": "P",
+      "expected_section": "H",
+      "severity": "major",
+      "reason": "This describes the current medication regimen, not a new change or order; per template, current medication state belongs in the HPI, while Plan should contain changes or new instructions."
+    },
+    {
+      "text": "The patient is currently taking metformin.",
+      "current_section": "P",
+      "expected_section": "H",
+      "severity": "major",
+      "reason": "This is current medication state, which the template assigns to the HPI; in Plan it may be misread as a new prescription rather than existing therapy."
+    },
+    {
+      "text": "The patient is taking lisinopril.",
+      "current_section": "P",
+      "expected_section": "H",
+      "severity": "major",
+      "reason": "This is an existing medication, not a new plan or change; it should be documented in the HPI as current medication state."
+    },
+    {
+      "text": "The patient has a history of diabetes.",
+      "current_section": "H",
+      "expected_section": "A",
+      "severity": "minor",
+      "reason": "While past history can appear in HPI, for a chronic active problem it is often clearer to also synthesize it in Assessment; however, its presence in HPI is not misleading."
+    },
+    {
+      "text": "The patient reports an elevated A1c level.",
+      "current_section": "H",
+      "expected_section": "F",
+      "severity": "minor",
+      "reason": "A1c is typically an objective lab finding; however, it is framed as patient-reported here, so inclusion in HPI is acceptable though slightly less organized than placing it under Findings."
+    }
+  ],
+  "summary_statistics": {
+    "section_appropriateness_score": 0.6,
+    "section_miscategorization_count": 8,
+    "major_section_miscategorization_count": 6
+  }
+}

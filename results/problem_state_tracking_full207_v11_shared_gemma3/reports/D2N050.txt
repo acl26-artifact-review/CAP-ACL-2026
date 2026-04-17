@@ -1,0 +1,109 @@
+Case: D2N050
+
+Problem List and Visit State Tracking
+
+Problem List
+- right back pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T1
+  Summary: The patient reports pain in the right back.
+  ClusterId: CL1
+  TemporalProfile: current
+  Updates:
+  - CAP1: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T1 :: The patient reports pain in the right back.
+- kidney stone | verification_status=confirmed | clinical_status=active | modalities=assessment,interview | speakers=doctor,patient | evidence=T1,T13,T17
+  Summary: The patient has a kidney stone.
+  ClusterId: CL2
+  TemporalProfile: current, past, past week
+  Updates:
+  - CAP19: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=past week turns=T1 :: The patient has a history of kidney stones.
+  - CAP20: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=past turns=T13 :: The patient's father had kidney stones.
+  - CAP6: content_source=doctor modality=assessment verification_status=confirmed clinical_status=active temporality=current turns=T17 :: The patient has a kidney stone.
+- nausea | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T1
+  Summary: The patient reports nausea.
+  ClusterId: CL3
+  TemporalProfile: current
+  Updates:
+  - CAP9: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T1 :: The patient reports nausea.
+- sweating | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T1
+  Summary: The patient reports sweating.
+  ClusterId: CL4
+  TemporalProfile: current
+  Updates:
+  - CAP10: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T1 :: The patient reports sweating.
+- hay moving | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T1
+  Summary: The patient was moving hay.
+  ClusterId: CL5
+  TemporalProfile: past
+  Updates:
+  - CAP21: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=past turns=T1 :: The patient was moving hay.
+- pain radiation | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T3
+  Summary: The patient reports pain radiating to the groin.
+  ClusterId: CL6
+  TemporalProfile: current
+  Updates:
+  - CAP2: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T3 :: The patient reports pain radiating to the groin.
+- no blood in urine | verification_status=unconfirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T9
+  Summary: The patient denies seeing blood in their urine.
+  ClusterId: CL7
+  TemporalProfile: current
+  Updates:
+  - CAP3: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=current turns=T9 :: The patient denies seeing blood in their urine.
+- urinary straining | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T9
+  Summary: The patient reports urinary straining.
+  ClusterId: CL8
+  TemporalProfile: current
+  Updates:
+  - CAP7: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T9 :: The patient reports urinary straining.
+- dark urine | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T9
+  Summary: The patient reports dark urine.
+  ClusterId: CL9
+  TemporalProfile: current
+  Updates:
+  - CAP8: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T9 :: The patient reports dark urine.
+- tenderness | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T18
+  Summary: The patient reports tenderness over the kidney.
+  ClusterId: CL10
+  TemporalProfile: current
+  Updates:
+  - CAP4: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T18 :: The patient reports tenderness over the kidney.
+- inflammation | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T18
+  Summary: The patient reports inflammation over the kidney.
+  ClusterId: CL11
+  TemporalProfile: current
+  Updates:
+  - CAP5: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T18 :: The patient reports inflammation over the kidney.
+
+Medication Tracking
+- [MedicationChange] oxycodone | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T18
+  Summary: The doctor prescribed oxycodone.
+  ClusterId: CL14
+  TemporalProfile: current
+  PlannedChanges:
+  - The doctor prescribed oxycodone. (T18)
+  Updates:
+  - CAP14: content_source=doctor modality=plan verification_status=unconfirmed clinical_status=planned temporality=current turns=T18 :: The doctor prescribed oxycodone.
+- [MedicationChange] tylenol | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T18
+  Summary: The doctor prescribed Tylenol.
+  ClusterId: CL15
+  TemporalProfile: current
+  PlannedChanges:
+  - The doctor prescribed Tylenol. (T18)
+  Updates:
+  - CAP15: content_source=doctor modality=plan verification_status=unconfirmed clinical_status=planned temporality=current turns=T18 :: The doctor prescribed Tylenol.
+
+Other Structured States
+- [Plan] urine culture | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T18
+  Summary: The doctor ordered a urine culture.
+  ClusterId: CL12
+  TemporalProfile: current
+- [Plan] bmp | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T18
+  Summary: The doctor ordered a BMP.
+  ClusterId: CL13
+  TemporalProfile: current
+- [Plan] urinalysis | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T18
+  Summary: The doctor ordered urinalysis.
+  ClusterId: CL16
+  TemporalProfile: current
+- [FollowUp] follow-up appointment | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T18
+  Summary: The doctor scheduled a follow-up appointment in one to two weeks.
+  ClusterId: CL17
+  TemporalProfile: 1-2 weeks, in one to two weeks

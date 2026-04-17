@@ -1,0 +1,229 @@
+Case: D2N199
+
+Problem List and Visit State Tracking
+
+Problem List
+- yellow sputum | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T1
+  Summary: The patient reports bringing up yellow sputum.
+  ClusterId: CL1
+  TemporalProfile: current
+  Updates:
+  - CAP12: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T1 :: The patient reports bringing up yellow sputum.
+- cough | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T1
+  Summary: The patient reports a cough.
+  ClusterId: CL2
+  TemporalProfile: current
+  Updates:
+  - CAP19: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T1 :: The patient reports a cough.
+- feeling unwell | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T1
+  Summary: The patient feels unwell.
+  ClusterId: CL3
+  TemporalProfile: current
+  Updates:
+  - CAP26: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T1 :: The patient feels unwell.
+- aches | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T9
+  Summary: The patient reports feeling achy at times.
+  ClusterId: CL4
+  TemporalProfile: current
+  Updates:
+  - CAP13: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T9 :: The patient reports feeling achy at times.
+  - CAP20: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T9 :: The patient reports feeling achy.
+- congestion | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T13
+  Summary: The patient reports congestion and drainage down their throat.
+  ClusterId: CL5
+  TemporalProfile: current
+  Updates:
+  - CAP5: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T13 :: The patient reports congestion and drainage down their throat.
+- sinus pressure | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T13
+  Summary: The patient reports sinus pressure.
+  ClusterId: CL6
+  TemporalProfile: current
+  Updates:
+  - CAP21: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T13 :: The patient reports sinus pressure.
+- hypertension | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T18
+  Summary: The patient has a history of hypertension.
+  ClusterId: CL7
+  TemporalProfile: past year
+  Updates:
+  - CAP14: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=past year turns=T18 :: The patient has a history of hypertension.
+- no check | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T19
+  Summary: The patient does not check their blood pressure.
+  ClusterId: CL10
+  TemporalProfile: current
+  Updates:
+  - CAP7: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T19 :: The patient does not check their blood pressure.
+- knee pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T27,T37,T41,T67,T72
+  Summary: The patient has knee pain.
+  ClusterId: CL12
+  TemporalProfile: current, today
+  Updates:
+  - CAP6: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T27 :: The patient reports pain in the left hand.
+  - CAP1: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T37,T37,T37 :: The patient has knee pain.
+  - CAP22: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=today turns=T37 :: The patient reports knee pain.
+  - CAP9: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T41 :: The patient reports pain in the left hand.
+  - CAP16: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T67 :: The patient reports pain underneath their eyes.
+  - CAP4: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T72 :: The patient reports pain to palpation of the right knee.
+- knee injury | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T31
+  Summary: The patient has a knee injury.
+  ClusterId: CL13
+  TemporalProfile: today
+  Updates:
+  - CAP17: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=today turns=T31 :: The patient has a knee injury.
+- coughing | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T31
+  Summary: The patient reports coughing.
+  ClusterId: CL14
+  TemporalProfile: earlier today
+  Updates:
+  - CAP27: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=earlier today turns=T31 :: The patient reports coughing.
+- twisted knee | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T32
+  Summary: The patient twisted their knee.
+  ClusterId: CL15
+  TemporalProfile: today
+  Updates:
+  - CAP23: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=today turns=T32 :: The patient twisted their knee.
+- stairs fall | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T33
+  Summary: The patient fell down stairs.
+  ClusterId: CL16
+  TemporalProfile: today
+  Updates:
+  - CAP24: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=today turns=T33 :: The patient fell down stairs.
+- four or five stairs | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T35
+  Summary: The patient fell down four or five stairs.
+  ClusterId: CL17
+  TemporalProfile: today
+  Updates:
+  - CAP8: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=today turns=T35 :: The patient fell down four or five stairs.
+- limp | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T45
+  Summary: The patient reports a slight limp.
+  ClusterId: CL18
+  TemporalProfile: current
+  Updates:
+  - CAP18: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T45 :: The patient reports a slight limp.
+  - CAP25: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T45 :: The patient reports a limp.
+- diabetes | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T54
+  Summary: The patient reports not watching their sugar intake.
+  ClusterId: CL20
+  TemporalProfile: current
+  Updates:
+  - CAP10: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T54 :: The patient reports not watching their sugar intake.
+  - CAP11: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T54 :: The patient reports not watching their sugar intake.
+- blood sugars | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T57
+  Summary: The patient denies taking their blood sugars.
+  ClusterId: CL22
+  TemporalProfile: current
+  Updates:
+  - CAP15: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T57 :: The patient denies taking their blood sugars.
+- upper respiratory infection | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=doctor | evidence=T74
+  Summary: The doctor believes the patient has a viral syndrome with mild bronchitis.
+  ClusterId: CL29
+  TemporalProfile: current
+  Updates:
+  - CAP2: content_source=doctor modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T74 :: The doctor believes the patient has a viral syndrome with mild bronchitis.
+- right medial collateral ligament strain | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=doctor | evidence=T76
+  Summary: The doctor believes the patient has a right medial collateral ligament strain.
+  ClusterId: CL32
+  TemporalProfile: current
+  Updates:
+  - CAP3: content_source=doctor modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T76 :: The doctor believes the patient has a right medial collateral ligament strain.
+
+Medication Tracking
+- [MedicationChange] blood pressure cuff | verification_status=unconfirmed | clinical_status=planned | modalities=interview | speakers=patient | evidence=T18
+  Summary: The patient does not have a blood pressure cuff.
+  ClusterId: CL9
+  TemporalProfile: future
+  PlannedChanges:
+  - The patient does not have a blood pressure cuff. (T18)
+  Updates:
+  - CAP40: content_source=patient modality=interview verification_status=unconfirmed clinical_status=planned temporality=future turns=T18 :: The patient does not have a blood pressure cuff.
+- [MedicationState] lisinopril | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=doctor | evidence=T22
+  Summary: The patient is taking lisinopril.
+  ClusterId: CL11
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient is taking lisinopril. (T22)
+  Updates:
+  - CAP42: content_source=doctor modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T22 :: The patient is taking lisinopril.
+- [MedicationState] dayquil | verification_status=unconfirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T49
+  Summary: The patient has taken over-the-counter cough and cold medication, such as Dayquil.
+  ClusterId: CL19
+  TemporalProfile: past
+  CurrentRegimens:
+  - The patient has taken over-the-counter cough and cold medication, such as Dayquil. (T49)
+  Updates:
+  - CAP38: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=past turns=T49 :: The patient has taken over-the-counter cough and cold medication, such as Dayquil.
+- [MedicationState] blood sugars | verification_status=unconfirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T55
+  Summary: The patient reports not taking their blood sugars.
+  ClusterId: CL21
+  TemporalProfile: past
+  CurrentRegimens:
+  - The patient reports not taking their blood sugars. (T55)
+  Updates:
+  - CAP41: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=past turns=T55 :: The patient reports not taking their blood sugars.
+- [MedicationState] metformin | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=doctor | evidence=T58
+  Summary: The patient is taking metformin 1000 milligrams twice a day.
+  ClusterId: CL23
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient is taking metformin 1000 milligrams twice a day. (T58)
+  - The patient is taking metformin. (T58)
+  Updates:
+  - CAP39: content_source=doctor modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T58 :: The patient is taking metformin 1000 milligrams twice a day.
+  - CAP43: content_source=doctor modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T58 :: The patient is taking metformin.
+- [MedicationChange] meloxicam | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T76
+  Summary: The doctor prescribes meloxicam.
+  ClusterId: CL33
+  TemporalProfile: current
+  PlannedChanges:
+  - The doctor prescribes meloxicam. (T76)
+  Updates:
+  - CAP44: content_source=doctor modality=plan verification_status=unconfirmed clinical_status=planned temporality=current turns=T76 :: The doctor prescribes meloxicam.
+- [MedicationChange] lisinopril | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T78
+  Summary: The doctor prescribes lisinopril.
+  ClusterId: CL36
+  TemporalProfile: current
+  PlannedChanges:
+  - The doctor prescribes lisinopril. (T78)
+  Updates:
+  - CAP45: content_source=doctor modality=plan verification_status=unconfirmed clinical_status=planned temporality=current turns=T78 :: The doctor prescribes lisinopril.
+
+Other Structured States
+- [Plan] blood pressure cuff | verification_status=unconfirmed | clinical_status=planned | modalities=interview | speakers=doctor | evidence=T18
+  Summary: The patient should buy a blood pressure cuff.
+  ClusterId: CL8
+  TemporalProfile: future
+- [ExamFinding] decreased extension | verification_status=confirmed | clinical_status=active | modalities=exam | speakers=doctor | evidence=T65
+  Summary: The doctor observes decreased extension of the right knee.
+  ClusterId: CL24
+  TemporalProfile: current
+- [ExamFinding] erythema | verification_status=confirmed | clinical_status=active | modalities=exam | speakers=doctor | evidence=T70
+  Summary: The doctor observes erythema of the nasal turbinates.
+  ClusterId: CL25
+  TemporalProfile: current
+- [ExamFinding] edema | verification_status=confirmed | clinical_status=active | modalities=exam | speakers=doctor | evidence=T70
+  Summary: The doctor observes edema of the nasal turbinates.
+  ClusterId: CL26
+  TemporalProfile: current
+- [ExamFinding] lymphadenopathy | verification_status=confirmed | clinical_status=active | modalities=exam | speakers=doctor | evidence=T70
+  Summary: The doctor observes bilateral cervical lymphadenopathy.
+  ClusterId: CL27
+  TemporalProfile: current
+- [ExamFinding] rhonchi | verification_status=confirmed | clinical_status=active | modalities=exam | speakers=doctor | evidence=T70
+  Summary: The doctor observes coarse rhonchi bilaterally.
+  ClusterId: CL28
+  TemporalProfile: current
+- [ExamFinding] decreased flexion | verification_status=confirmed | clinical_status=active | modalities=exam | speakers=doctor | evidence=T74
+  Summary: The doctor observes decreased flexion and extension of the right knee.
+  ClusterId: CL30
+  TemporalProfile: current
+- [ExamFinding] ecchymosis | verification_status=confirmed | clinical_status=active | modalities=exam | speakers=doctor | evidence=T74
+  Summary: The doctor observes ecchymosis on the right medial knee.
+  ClusterId: CL31
+  TemporalProfile: current
+- [TestResult] lipid panel | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T78
+  Summary: The doctor orders a lipid panel.
+  ClusterId: CL34
+  TemporalProfile: current
+- [TestResult] hemoglobin a1c | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T78
+  Summary: The doctor orders a hemoglobin A1C.
+  ClusterId: CL35
+  TemporalProfile: current

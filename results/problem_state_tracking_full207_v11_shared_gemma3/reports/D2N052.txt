@@ -1,0 +1,75 @@
+Case: D2N052
+
+Problem List and Visit State Tracking
+
+Problem List
+- back pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T1
+  Summary: The patient reports back pain on their right side.
+  ClusterId: CL1
+  TemporalProfile: current
+  Updates:
+  - CAP2: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T1 :: The patient reports back pain on their right side.
+- hematuria | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T3
+  Summary: The patient reports seeing blood in their urine.
+  ClusterId: CL2
+  TemporalProfile: current
+  Updates:
+  - CAP3: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T3 :: The patient reports seeing blood in their urine.
+- pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T5,T6,T9
+  Summary: The patient reports pain that has moved down to their right lower side.
+  ClusterId: CL3
+  TemporalProfile: current
+  Updates:
+  - CAP1: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T5 :: The patient reports pain that has moved down to their right lower side.
+  - CAP4: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T6 :: The patient describes the pain as constant.
+  - CAP5: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T9 :: The patient denies pain when urinating.
+  - CAP6: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T9 :: The patient reports pain.
+  - CAP8: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T9 :: The patient experiences pain.
+- nausea | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T15
+  Summary: The patient feels nauseated.
+  ClusterId: CL5
+  TemporalProfile: current
+  Updates:
+  - CAP7: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T15 :: The patient feels nauseated.
+- kidney stones | verification_status=unconfirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T17
+  Summary: The patient's father had kidney stones.
+  ClusterId: CL6
+  TemporalProfile: past
+  Updates:
+  - CAP15: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=past turns=T17 :: The patient's father had kidney stones.
+
+Medication Tracking
+- [MedicationState] ibuprofen | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T11
+  Summary: The patient took ibuprofen.
+  ClusterId: CL4
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient took ibuprofen. (T11)
+  Updates:
+  - CAP14: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T11 :: The patient took ibuprofen.
+- [MedicationChange] ibuprofen | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T28
+  Summary: The doctor prescribes ibuprofen.
+  ClusterId: CL10
+  TemporalProfile: now
+  PlannedChanges:
+  - The doctor prescribes ibuprofen. (T28)
+  Updates:
+  - CAP12: content_source=doctor modality=plan verification_status=unconfirmed clinical_status=planned temporality=now turns=T28 :: The doctor prescribes ibuprofen.
+
+Other Structured States
+- [Plan] urine culture | verification_status=unconfirmed | clinical_status=active | modalities=plan | speakers=doctor | evidence=T28
+  Summary: The doctor orders a urine culture.
+  ClusterId: CL7
+  TemporalProfile: now
+- [Plan] bmp | verification_status=unconfirmed | clinical_status=active | modalities=plan | speakers=doctor | evidence=T28
+  Summary: The doctor orders a BMP.
+  ClusterId: CL8
+  TemporalProfile: now
+- [Plan] urinalysis | verification_status=unconfirmed | clinical_status=active | modalities=plan | speakers=doctor | evidence=T28
+  Summary: The doctor orders a urinalysis.
+  ClusterId: CL9
+  TemporalProfile: now
+- [Plan] lithotripsy | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T28
+  Summary: The doctor considers lithotripsy.
+  ClusterId: CL11
+  TemporalProfile: future

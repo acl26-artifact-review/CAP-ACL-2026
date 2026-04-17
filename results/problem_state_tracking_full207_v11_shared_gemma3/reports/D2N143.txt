@@ -1,0 +1,114 @@
+Case: D2N143
+
+Problem List and Visit State Tracking
+
+Problem List
+- concern about potential stds | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T10,T6
+  Summary: The patient is concerned about potentially contracting an STD.
+  ClusterId: CL1
+  TemporalProfile: current
+  Updates:
+  - CAP1: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T6,T10 :: The patient is concerned about potentially contracting an STD.
+- vaginal discharge | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T8
+  Summary: The patient reports a change in vaginal discharge.
+  ClusterId: CL2
+  TemporalProfile: last week
+  Updates:
+  - CAP2: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=last week turns=T8,T8 :: The patient reports a change in vaginal discharge.
+- boyfriend's infidelity | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T10
+  Summary: The patient reports that her boyfriend has been cheating on her.
+  ClusterId: CL3
+  TemporalProfile: current
+  Updates:
+  - CAP3: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T10 :: The patient reports that her boyfriend has been cheating on her.
+- vaginal odor | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T10
+  Summary: The patient reports a change in vaginal odor.
+  ClusterId: CL4
+  TemporalProfile: current
+  Updates:
+  - CAP5: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T10 :: The patient reports a change in vaginal odor.
+- vaginal pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T12
+  Summary: The patient reports vaginal pain.
+  ClusterId: CL5
+  TemporalProfile: current
+  Updates:
+  - CAP14: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T12 :: The patient reports vaginal pain.
+- cheating | verification_status=unconfirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T16
+  Summary: The patient suspects infidelity.
+  ClusterId: CL6
+  TemporalProfile: 3 months ago
+  Updates:
+  - CAP16: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=3 months ago turns=T16 :: The patient suspects infidelity.
+- irregular pap smear | verification_status=unconfirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T18
+  Summary: The patient had an irregular pap smear in the past.
+  ClusterId: CL7
+  TemporalProfile: 20 years ago
+  Updates:
+  - CAP4: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=20 years ago turns=T18 :: The patient had an irregular pap smear in the past.
+- hepatitis c | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=doctor | evidence=T27
+  Summary: The patient will be tested for Hepatitis C.
+  ClusterId: CL9
+  TemporalProfile: future
+  Updates:
+  - CAP6: content_source=doctor modality=interview verification_status=unconfirmed clinical_status=active temporality=future turns=T27 :: The patient will be tested for Hepatitis C.
+- gonorrhea | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=doctor | evidence=T27
+  Summary: The patient will be tested for gonorrhea.
+  ClusterId: CL10
+  TemporalProfile: future
+  Updates:
+  - CAP8: content_source=doctor modality=interview verification_status=unconfirmed clinical_status=active temporality=future turns=T27 :: The patient will be tested for gonorrhea.
+- chlamydia | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=doctor | evidence=T27
+  Summary: The patient will be tested for chlamydia.
+  ClusterId: CL11
+  TemporalProfile: future
+  Updates:
+  - CAP9: content_source=doctor modality=interview verification_status=unconfirmed clinical_status=active temporality=future turns=T27 :: The patient will be tested for chlamydia.
+- trichomoniasis | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=doctor | evidence=T27
+  Summary: The patient will be tested for trichomoniasis.
+  ClusterId: CL12
+  TemporalProfile: future
+  Updates:
+  - CAP10: content_source=doctor modality=interview verification_status=unconfirmed clinical_status=active temporality=future turns=T27 :: The patient will be tested for trichomoniasis.
+- syphilis | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=doctor | evidence=T27
+  Summary: The patient will be tested for syphilis.
+  ClusterId: CL13
+  TemporalProfile: future
+  Updates:
+  - CAP11: content_source=doctor modality=interview verification_status=unconfirmed clinical_status=active temporality=future turns=T27 :: The patient will be tested for syphilis.
+- hiv | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=doctor | evidence=T27
+  Summary: The patient will be tested for HIV.
+  ClusterId: CL14
+  TemporalProfile: future
+  Updates:
+  - CAP12: content_source=doctor modality=interview verification_status=unconfirmed clinical_status=active temporality=future turns=T27 :: The patient will be tested for HIV.
+- abnormal pap smear | verification_status=unconfirmed | clinical_status=historical | modalities=assessment | speakers=doctor | evidence=T31
+  Summary: The patient has had an abnormal pap smear.
+  ClusterId: CL15
+  TemporalProfile: past
+  Updates:
+  - CAP7: content_source=doctor modality=assessment verification_status=unconfirmed clinical_status=historical temporality=past turns=T31 :: The patient has had an abnormal pap smear.
+- multiple partners | verification_status=unconfirmed | clinical_status=historical | modalities=assessment | speakers=doctor | evidence=T31
+  Summary: The patient has had multiple partners.
+  ClusterId: CL16
+  TemporalProfile: past
+  Updates:
+  - CAP13: content_source=doctor modality=assessment verification_status=unconfirmed clinical_status=historical temporality=past turns=T31 :: The patient has had multiple partners.
+- high risk | verification_status=unconfirmed | clinical_status=active | modalities=assessment | speakers=doctor | evidence=T31
+  Summary: The patient is high risk.
+  ClusterId: CL17
+  TemporalProfile: current
+  Updates:
+  - CAP15: content_source=doctor modality=assessment verification_status=unconfirmed clinical_status=active temporality=current turns=T31 :: The patient is high risk.
+
+Medication Tracking
+- None
+
+Other Structured States
+- [TestResult] normal pap smear | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T19
+  Summary: The patient's last pap smear was normal.
+  ClusterId: CL8
+  TemporalProfile: 6 months ago
+- [Plan] annual checkup | verification_status=confirmed | clinical_status=historical | modalities=plan | speakers=doctor | evidence=T31
+  Summary: The patient will have an annual checkup.
+  ClusterId: CL18
+  TemporalProfile: future

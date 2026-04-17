@@ -1,0 +1,99 @@
+Case: D2N159
+
+Problem List and Visit State Tracking
+
+Problem List
+- right hand pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T23,T26,T5,T9
+  Summary: The patient reports pain in their right hand.
+  ClusterId: CL1
+  TemporalProfile: current
+  Updates:
+  - CAP11: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T5 :: The patient reports pain.
+  - CAP14: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T9 :: The patient reports pain.
+  - CAP6: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T23 :: The patient reports pain in their right hand.
+  - CAP2: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T26 :: The patient reports pain when wrist is pulled up towards you.
+  - CAP8: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T26 :: The patient reports pain on extension.
+- numbness | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T9
+  Summary: The patient reports numbness in their right hand.
+  ClusterId: CL2
+  TemporalProfile: current
+  Updates:
+  - CAP3: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T9 :: The patient reports numbness in their right hand.
+  - CAP12: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T9 :: The patient reports numbness.
+- tingling | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T9
+  Summary: The patient reports tingling in their right hand.
+  ClusterId: CL3
+  TemporalProfile: current
+  Updates:
+  - CAP4: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T9 :: The patient reports tingling in their right hand.
+  - CAP13: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T9 :: The patient reports tingling.
+- ibuprofen | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T11
+  Summary: The patient is taking ibuprofen.
+  ClusterId: CL4
+  TemporalProfile: current
+  Updates:
+  - CAP10: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T11 :: The patient is taking ibuprofen.
+- mouse | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T13
+  Summary: The patient reports pain related to the mouse.
+  ClusterId: CL6
+  TemporalProfile: current
+  Updates:
+  - CAP5: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T13 :: The patient reports pain related to the mouse.
+- carpal tunnel syndrome | verification_status=confirmed | clinical_status=active | modalities=assessment | speakers=doctor | evidence=T32
+  Summary: The doctor diagnoses carpal tunnel syndrome.
+  ClusterId: CL7
+  TemporalProfile: current
+  Updates:
+  - CAP1: content_source=doctor modality=assessment verification_status=confirmed clinical_status=active temporality=current turns=T32 :: The doctor diagnoses carpal tunnel syndrome.
+- grip strength | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T32
+  Summary: The patient reports decreased grip strength.
+  ClusterId: CL8
+  TemporalProfile: current
+  Updates:
+  - CAP9: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T32 :: The patient reports decreased grip strength.
+- wrist pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T37
+  Summary: The patient reports pain in the wrist.
+  ClusterId: CL14
+  TemporalProfile: current
+  Updates:
+  - CAP7: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T37 :: The patient reports pain in the wrist.
+
+Medication Tracking
+- [MedicationState] ibuprofen | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T11
+  Summary: The patient reports taking ibuprofen.
+  ClusterId: CL5
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient reports taking ibuprofen. (T11)
+  Updates:
+  - CAP21: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T11 :: The patient reports taking ibuprofen.
+- [MedicationChange] ibuprofen | verification_status=confirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T36
+  Summary: The doctor prescribes ibuprofen.
+  ClusterId: CL13
+  TemporalProfile: current
+  PlannedChanges:
+  - The doctor prescribes ibuprofen. (T36)
+  Updates:
+  - CAP22: content_source=doctor modality=plan verification_status=confirmed clinical_status=planned temporality=current turns=T36 :: The doctor prescribes ibuprofen.
+
+Other Structured States
+- [ExamFinding] tinel's sign | verification_status=confirmed | clinical_status=active | modalities=exam | speakers=doctor | evidence=T32
+  Summary: The doctor identifies a positive Tinel's sign.
+  ClusterId: CL9
+  TemporalProfile: current
+- [Plan] emg | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T36
+  Summary: A nerve conduction study will be ordered.
+  ClusterId: CL10
+  TemporalProfile: future
+- [Plan] wrist splint | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T36,T38
+  Summary: The doctor orders a wrist splint.
+  ClusterId: CL11
+  TemporalProfile: future, night
+- [Plan] surgery | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T36
+  Summary: Surgery may be considered.
+  ClusterId: CL12
+  TemporalProfile: future
+- [Plan] physical therapy | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T38
+  Summary: Physical therapy may be considered.
+  ClusterId: CL15
+  TemporalProfile: future

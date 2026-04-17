@@ -1,0 +1,149 @@
+{
+  "events": [
+    {
+      "event_id": "CL29",
+      "event_type": "ProblemOrientedNoteBundle",
+      "canonical_concept": "hypertension",
+      "visit_state": "active",
+      "status": "uncertain",
+      "temporality": "past year",
+      "speaker_source": "doctor,patient",
+      "clinical_priority": "high",
+      "title": "hypertension",
+      "event_summary": "Problem-oriented bundle for hypertension.",
+      "supporting_cap_ids": [
+        "CAP2",
+        "CAP14",
+        "CAP32",
+        "CAP33",
+        "CAP34",
+        "CAP35",
+        "CAP28",
+        "CAP29",
+        "CAP36",
+        "CAP44",
+        "CAP45"
+      ],
+      "anchor_problem_cap_id": "CAP14",
+      "anchor_problem": "hypertension",
+      "S_cap_ids": [
+        "CAP2"
+      ],
+      "O_cap_ids": [
+        "CAP32",
+        "CAP33",
+        "CAP34",
+        "CAP35",
+        "CAP28",
+        "CAP29",
+        "CAP36"
+      ],
+      "P_cap_ids": [
+        "CAP44",
+        "CAP45"
+      ],
+      "supporting_evidence": [
+        "The doctor believes the patient has a viral syndrome with mild bronchitis.",
+        "The doctor observes erythema of the nasal turbinates.",
+        "The doctor observes edema of the nasal turbinates.",
+        "The doctor observes bilateral cervical lymphadenopathy.",
+        "The doctor observes coarse rhonchi bilaterally.",
+        "The doctor observes decreased flexion and extension of the right knee."
+      ],
+      "current_state": [
+        "The doctor believes the patient has a viral syndrome with mild bronchitis."
+      ],
+      "planned_actions": [
+        "The doctor prescribes meloxicam.",
+        "The doctor prescribes lisinopril."
+      ],
+      "care_context": [
+        "The patient has a history of hypertension."
+      ],
+      "key_slots": {
+        "source_modalities": "interview, exam, plan",
+        "temporal_profile": "current, past year",
+        "anchor_cluster_type": "ProblemState",
+        "anchor_primary_cap_type": "Problem",
+        "bundle_concepts": "upper respiratory infection; hypertension; erythema; edema; lymphadenopathy; rhonchi; decreased flexion; ecchymosis; lipid panel; meloxicam; lisinopril",
+        "history_context": "",
+        "related_factors": "The patient has a history of hypertension.",
+        "visit_primary": "true",
+        "render_in_note": "true",
+        "assessment_fallback": "The patient has hypertension.",
+        "bundle_design": "problem_oriented_note_bundle"
+      },
+      "render_sections": [
+        "S",
+        "O",
+        "A",
+        "P",
+        "History of Present Illness",
+        "Findings",
+        "Assessment",
+        "Plan"
+      ]
+    },
+    {
+      "event_id": "CL20",
+      "event_type": "ProblemOrientedNoteBundle",
+      "canonical_concept": "diabetes",
+      "visit_state": "active",
+      "status": "uncertain",
+      "temporality": "current",
+      "speaker_source": "patient,doctor",
+      "clinical_priority": "high",
+      "title": "diabetes",
+      "event_summary": "Problem-oriented bundle for diabetes.",
+      "supporting_cap_ids": [
+        "CAP10",
+        "CAP11",
+        "CAP37"
+      ],
+      "anchor_problem_cap_id": "CAP10",
+      "anchor_problem": "diabetes",
+      "S_cap_ids": [
+        "CAP10"
+      ],
+      "O_cap_ids": [
+        "CAP37"
+      ],
+      "global_cap_ids": [
+        "CAP11"
+      ],
+      "supporting_evidence": [
+        "The patient reports not watching their sugar intake.",
+        "The doctor orders a hemoglobin A1C."
+      ],
+      "current_state": [
+        "The patient reports not watching their sugar intake."
+      ],
+      "care_context": [
+        "The patient reports not watching their sugar intake."
+      ],
+      "key_slots": {
+        "source_modalities": "interview, plan",
+        "temporal_profile": "current",
+        "anchor_cluster_type": "ProblemState",
+        "anchor_primary_cap_type": "Problem",
+        "bundle_concepts": "diabetes; hemoglobin a1c",
+        "history_context": "",
+        "related_factors": "",
+        "visit_primary": "true",
+        "render_in_note": "true",
+        "assessment_fallback": "The patient has diabetes.",
+        "bundle_design": "problem_oriented_note_bundle"
+      },
+      "render_sections": [
+        "S",
+        "O",
+        "A",
+        "P",
+        "History of Present Illness",
+        "Findings",
+        "Assessment",
+        "Plan"
+      ]
+    }
+  ]
+}

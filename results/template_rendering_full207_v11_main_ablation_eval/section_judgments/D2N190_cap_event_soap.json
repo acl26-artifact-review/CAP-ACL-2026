@@ -1,0 +1,51 @@
+{
+  "section_miscategorizations": [
+    {
+      "text": "The patient reports tenderness on the medial joint line of his knee and reports no tenderness to palpation of the pes bursa or popliteal space.",
+      "current_section": "S",
+      "expected_section": "O",
+      "severity": "major",
+      "reason": "Detailed localization of tenderness and absence of tenderness to palpation are typically derived from clinician physical exam, not purely patient report; placing them in S blurs exam vs history and could mislead about objective findings."
+    },
+    {
+      "text": "He also reports a dime-size abrasion over the medial patella and reports abrasions on the back of his knee.",
+      "current_section": "S",
+      "expected_section": "O",
+      "severity": "minor",
+      "reason": "Skin abrasions are observable exam findings; while the patient can describe them, they are more appropriately documented in the objective exam section."
+    },
+    {
+      "text": "The patient reports a dime-size abrasion on the medial patella.",
+      "current_section": "O",
+      "expected_section": "S",
+      "severity": "minor",
+      "reason": "This sentence is explicitly framed as a patient report rather than an observed finding; in the objective section it should be rephrased as an observed abrasion or moved to S."
+    },
+    {
+      "text": "The patient reports mild laxity and a slight posterior drawer test.",
+      "current_section": "O",
+      "expected_section": "S",
+      "severity": "major",
+      "reason": "Laxity and posterior drawer test results are clinician-performed exam maneuvers; attributing them as patient-reported within the objective section is internally inconsistent and could confuse whether these are true exam findings."
+    },
+    {
+      "text": "The patient denies crepitus.",
+      "current_section": "O",
+      "expected_section": "S",
+      "severity": "minor",
+      "reason": "Denials phrased as patient statements belong in the subjective review of systems; in O this should be documented as absence of crepitus on exam rather than a patient denial."
+    },
+    {
+      "text": "The doctor will examine the patient's knee.",
+      "current_section": "P",
+      "expected_section": "O",
+      "severity": "major",
+      "reason": "The knee exam is already described in the objective section; stating that the doctor will examine the knee as a future action in the plan is inappropriate and confusing, as exams performed belong in O and are not typically framed as future orders once completed."
+    }
+  ],
+  "summary_statistics": {
+    "section_appropriateness_score": 0.6,
+    "section_miscategorization_count": 6,
+    "major_section_miscategorization_count": 3
+  }
+}

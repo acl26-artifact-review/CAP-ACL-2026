@@ -1,0 +1,44 @@
+{
+  "section_miscategorizations": [
+    {
+      "text": "The patient reports dizziness.",
+      "current_section": "Findings",
+      "expected_section": "History of Present Illness",
+      "severity": "major",
+      "reason": "Dizziness is a patient-reported symptom and belongs in the history rather than in the objective findings section."
+    },
+    {
+      "text": "Blood sugar is elevated.",
+      "current_section": "Findings",
+      "expected_section": "Findings",
+      "severity": "minor",
+      "reason": "This is appropriate as an objective finding if based on a measured value, but the lack of explicit reference to a lab or measurement could cause slight ambiguity about whether it is a reported symptom versus a lab result."
+    },
+    {
+      "text": "The patient takes metformin irregularly, approximately every other day.",
+      "current_section": "Plan",
+      "expected_section": "History of Present Illness",
+      "severity": "major",
+      "reason": "This describes the patient's current medication-taking behavior, which is part of the medication history, not an intended future intervention or instruction."
+    },
+    {
+      "text": "The patient takes tylenol.",
+      "current_section": "Plan",
+      "expected_section": "History of Present Illness",
+      "severity": "major",
+      "reason": "This is a statement of current medication use, not a new order or recommendation, and should be documented in the history/medication history rather than the plan."
+    },
+    {
+      "text": "The patient has uncontrolled hypertension, high blood pressure, and high blood sugar.",
+      "current_section": "Assessment",
+      "expected_section": "Assessment",
+      "severity": "minor",
+      "reason": "Content is appropriate for Assessment, but listing both 'uncontrolled hypertension' and 'high blood pressure' is redundant and could be better synthesized; however, this is more a documentation quality issue than a true miscategorization."
+    }
+  ],
+  "summary_statistics": {
+    "section_appropriateness_score": 0.7,
+    "section_miscategorization_count": 5,
+    "major_section_miscategorization_count": 3
+  }
+}

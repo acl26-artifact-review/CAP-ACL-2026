@@ -1,0 +1,45 @@
+You are a physician tasked with extracting atomic claims from a text reference source
+to represent the information in the text as a list of atomic claims.
+
+## Atomic claim definition
+An atomic claim is a phrase or sentence that makes a single assertion.
+The assertion may be factual or may be a hypothesis posed by the text.
+Atomic claims are indivisible and cannot be decomposed into more fundamental claims.
+More complex facts and statements can be composed from atomic claims.
+Atomic claims should have a subject, object, and predicate.
+The predicate relates the subject to the object.
+
+## Detailed instructions
+1. Extract a list of clinically meaningful atomic claims from the transcript.
+2. Each claim should have a subject, object, and predicate and conform to the atomic claim definition above.
+3. Claims should be unambiguous if read in isolation:
+   - avoid pronouns
+   - avoid ambiguous references
+   - make the subject explicit
+4. The list of claims should be comprehensive and cover clinically meaningful information in the transcript.
+5. Claims should include the full local context in which the information was presented, not cherry-picked fragments.
+6. Do not include prior knowledge or outside medical inference.
+7. Take the transcript at face value.
+8. Prefer declarative claims.
+9. If a unit is primarily imperative, interrogative, incomplete, or vague and cannot be rewritten into a truth-evaluable declarative claim, omit it.
+10. Preserve uncertainty and hypotheses as claims when they are explicitly stated by the clinician or patient.
+11. Preserve negation, temporality, laterality, and numeric detail when explicitly present.
+
+## Additional clinical adaptation rules
+- Use the patient's name if explicitly available; otherwise use "The patient".
+- Use "The clinician" for clinician findings, assessments, and plans.
+- Keep each claim to one assertion only.
+- Do not output claim labels, verdicts, explanations, or JSON.
+
+## Example style
+- The patient reports fatigue for the past two months.
+- The patient denies blood in stool.
+- The clinician suspects cervical radiculopathy.
+- The clinician plans a cervical MRI.
+
+## Output format
+Return ONLY a bullet list of atomic claims.
+
+<Input Transcript>
+{transcript}
+</Input Transcript>

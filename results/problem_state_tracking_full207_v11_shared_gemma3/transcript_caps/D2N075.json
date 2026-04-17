@@ -1,0 +1,822 @@
+{
+  "caps": [
+    {
+      "cap_id": "CAP1",
+      "cap_type": "Symptom",
+      "content_source": "patient",
+      "modality": "interview",
+      "canonical_concept": "chest pain",
+      "verification_status": "confirmed",
+      "clinical_status": "resolved",
+      "temporality": "past",
+      "proposition_text": "The patient reports that the chest pain stopped after four days.",
+      "evidence": [
+        {
+          "turn_id": "T5",
+          "turn_speaker": "patient",
+          "span_text": "well , i really needed to see you three months ... three months ago , but this was your first available appointment . when i called to make the appointment , i was having chest pains , but it stopped after four days , and i have n't had any since then .",
+          "char_start": 543,
+          "char_end": 796
+        }
+      ],
+      "assertion": "present",
+      "visit_state": "resolved",
+      "linked_problem": null,
+      "event_cluster_id": "CL1"
+    },
+    {
+      "cap_id": "CAP2",
+      "cap_type": "Symptom",
+      "content_source": "patient",
+      "modality": "interview",
+      "canonical_concept": "heart attack",
+      "verification_status": "confirmed",
+      "clinical_status": "historical",
+      "temporality": "past",
+      "proposition_text": "The patient felt like they were having a heart attack.",
+      "evidence": [
+        {
+          "turn_id": "T13",
+          "turn_speaker": "patient",
+          "span_text": "well , it was here in the center of my chest , right behind my breastbone . it felt like i was having a heart attack . the pain was really sharp .",
+          "char_start": 1338,
+          "char_end": 1484
+        }
+      ],
+      "assertion": "historical",
+      "visit_state": "historical",
+      "linked_problem": null,
+      "event_cluster_id": "CL4"
+    },
+    {
+      "cap_id": "CAP3",
+      "cap_type": "Symptom",
+      "content_source": "patient",
+      "modality": "interview",
+      "canonical_concept": "abdominal pain",
+      "verification_status": "confirmed",
+      "clinical_status": "active",
+      "temporality": "current",
+      "attributes": {
+        "location": "upper abdomen",
+        "severity": "mild"
+      },
+      "proposition_text": "The patient reports mild abdominal pain in the upper abdomen.",
+      "evidence": [
+        {
+          "turn_id": "T41",
+          "turn_speaker": "patient",
+          "span_text": "yes . it , it hurts a little .",
+          "char_start": 3204,
+          "char_end": 3234
+        }
+      ],
+      "assertion": "present",
+      "visit_state": "active",
+      "linked_problem": null,
+      "event_cluster_id": "CL3"
+    },
+    {
+      "cap_id": "CAP4",
+      "cap_type": "Problem",
+      "content_source": "doctor",
+      "modality": "interview",
+      "canonical_concept": "anxiety",
+      "verification_status": "unconfirmed",
+      "clinical_status": "historical",
+      "temporality": "past",
+      "proposition_text": "Anxiety is a potential cause of the patient's condition.",
+      "evidence": [
+        {
+          "turn_id": "T48",
+          "turn_speaker": "doctor",
+          "span_text": "so let's talk about your symptoms real quick . obviously , with the chest discomfort , we worry about heart issues , but i'm reassured that those were ruled out with all the testing they did in the er . um , other potential causes could be anxiety , esophagitis , which is irritation of the esophagus . but typically with these , um ... but typically , these cause the pain that would last for a long time rather than that isolated incident like you had . um , it's also possible that you had intense heartburn for a few days .",
+          "char_start": 3711,
+          "char_end": 4238
+        }
+      ],
+      "assertion": "historical",
+      "visit_state": "historical",
+      "linked_problem": null,
+      "event_cluster_id": "CL15"
+    },
+    {
+      "cap_id": "CAP5",
+      "cap_type": "Problem",
+      "content_source": "doctor",
+      "modality": "interview",
+      "canonical_concept": "esophagitis",
+      "verification_status": "unconfirmed",
+      "clinical_status": "historical",
+      "temporality": "past",
+      "proposition_text": "Esophagitis is a possible cause of the patient's symptoms.",
+      "evidence": [
+        {
+          "turn_id": "T48",
+          "turn_speaker": "doctor",
+          "span_text": "so let's talk about your symptoms real quick . obviously , with the chest discomfort , we worry about heart issues , but i'm reassured that those were ruled out with all the testing they did in the er . um , other potential causes could be anxiety , esophagitis , which is irritation of the esophagus . but typically with these , um ... but typically , these cause the pain that would last for a long time rather than that isolated incident like you had . um , it's also possible that you had intense heartburn for a few days .",
+          "char_start": 3711,
+          "char_end": 4238
+        }
+      ],
+      "assertion": "historical",
+      "visit_state": "historical",
+      "linked_problem": null,
+      "event_cluster_id": "CL2"
+    },
+    {
+      "cap_id": "CAP6",
+      "cap_type": "Problem",
+      "content_source": "patient",
+      "modality": "interview",
+      "canonical_concept": "gastrointestinal disorder",
+      "verification_status": "unconfirmed",
+      "clinical_status": "active",
+      "temporality": "current",
+      "proposition_text": "The patient was referred for a gastrointestinal disorder.",
+      "evidence": [
+        {
+          "turn_id": "T17",
+          "turn_speaker": "patient",
+          "span_text": "they thought it was something to do with the gi system , so that's why they referred me here .",
+          "char_start": 1674,
+          "char_end": 1768
+        }
+      ],
+      "assertion": "uncertain",
+      "visit_state": "active",
+      "linked_problem": null,
+      "event_cluster_id": "CL7"
+    },
+    {
+      "cap_id": "CAP7",
+      "cap_type": "Problem",
+      "content_source": "patient",
+      "modality": "interview",
+      "canonical_concept": "esophagitis",
+      "verification_status": "unconfirmed",
+      "clinical_status": "historical",
+      "temporality": "past",
+      "proposition_text": "The patient previously sought care for esophagitis.",
+      "evidence": [
+        {
+          "turn_id": "T5",
+          "turn_speaker": "patient",
+          "span_text": "well , i really needed to see you three months ... three months ago , but this was your first available appointment . when i called to make the appointment , i was having chest pains , but it stopped after four days , and i have n't had any since then .",
+          "char_start": 543,
+          "char_end": 796
+        }
+      ],
+      "assertion": "historical",
+      "visit_state": "historical",
+      "linked_problem": null,
+      "event_cluster_id": "CL2"
+    },
+    {
+      "cap_id": "CAP8",
+      "cap_type": "Problem",
+      "content_source": "patient",
+      "modality": "interview",
+      "canonical_concept": "something wrong",
+      "verification_status": "unconfirmed",
+      "clinical_status": "active",
+      "temporality": "current",
+      "proposition_text": "The patient feels like there's something wrong.",
+      "evidence": [
+        {
+          "turn_id": "T25",
+          "turn_speaker": "patient",
+          "span_text": "yes . thankfully . the chest pain and swallowing problem got better about three days after i went to the er . but i just feel like there's something wrong .",
+          "char_start": 2222,
+          "char_end": 2378
+        }
+      ],
+      "assertion": "uncertain",
+      "visit_state": "active",
+      "linked_problem": null,
+      "event_cluster_id": "CL9"
+    },
+    {
+      "cap_id": "CAP9",
+      "cap_type": "Symptom",
+      "content_source": "patient",
+      "modality": "interview",
+      "canonical_concept": "weight loss",
+      "verification_status": "unconfirmed",
+      "clinical_status": "active",
+      "temporality": "current",
+      "proposition_text": "The patient is trying to lose weight.",
+      "evidence": [
+        {
+          "turn_id": "T27",
+          "turn_speaker": "patient",
+          "span_text": "i've been trying to lose weight .",
+          "char_start": 2435,
+          "char_end": 2468
+        }
+      ],
+      "assertion": "uncertain",
+      "visit_state": "active",
+      "linked_problem": null,
+      "event_cluster_id": "CL11"
+    },
+    {
+      "cap_id": "CAP10",
+      "cap_type": "Symptom",
+      "content_source": "patient",
+      "modality": "interview",
+      "canonical_concept": "weight loss",
+      "verification_status": "confirmed",
+      "clinical_status": "active",
+      "temporality": "current",
+      "proposition_text": "The patient reports attempting to lose weight.",
+      "evidence": [
+        {
+          "turn_id": "T27",
+          "turn_speaker": "patient",
+          "span_text": "i've been trying to lose weight .",
+          "char_start": 2435,
+          "char_end": 2468
+        }
+      ],
+      "assertion": "present",
+      "visit_state": "active",
+      "linked_problem": null,
+      "event_cluster_id": "CL11"
+    },
+    {
+      "cap_id": "CAP11",
+      "cap_type": "Problem",
+      "content_source": "doctor",
+      "modality": "assessment",
+      "canonical_concept": "musculoskeletal etiology",
+      "verification_status": "unconfirmed",
+      "clinical_status": "historical",
+      "temporality": "past",
+      "proposition_text": "The doctor suspects a musculoskeletal etiology.",
+      "evidence": [
+        {
+          "turn_id": "T37",
+          "turn_speaker": "patient",
+          "span_text": "okay .",
+          "char_start": 3020,
+          "char_end": 3026
+        }
+      ],
+      "assertion": "historical",
+      "visit_state": "historical",
+      "linked_problem": null,
+      "event_cluster_id": "CL12"
+    },
+    {
+      "cap_id": "CAP12",
+      "cap_type": "Problem",
+      "content_source": "doctor",
+      "modality": "assessment",
+      "canonical_concept": "anxiety attack",
+      "verification_status": "unconfirmed",
+      "clinical_status": "historical",
+      "temporality": "past",
+      "proposition_text": "The doctor suspects an anxiety attack.",
+      "evidence": [
+        {
+          "turn_id": "T58",
+          "turn_speaker": "doctor",
+          "span_text": "you're welcome . right this way . all right . uh , in assessment , please summarize the patient's history briefly , and let's list her possible etiologies such as , uh , gerd , dyspepsia , esophagitis , musculoskeletal etiologies , and anxiety . uh , suspect she had an anxiety attack related to her job transition , plus or minus a contribution from her musculoskeletal etiologies . um , in the plan , include our discussion of the egd versus monderning ... monitoring for symptom . patient elected to self-monitor her symptoms and will call with any reoccurrence or change . thanks .",
+          "char_start": 5723,
+          "char_end": 6308
+        }
+      ],
+      "assertion": "historical",
+      "visit_state": "historical",
+      "linked_problem": null,
+      "event_cluster_id": "CL15"
+    },
+    {
+      "cap_id": "CAP13",
+      "cap_type": "Problem",
+      "content_source": "doctor",
+      "modality": "assessment",
+      "canonical_concept": "job transition",
+      "verification_status": "unconfirmed",
+      "clinical_status": "historical",
+      "temporality": "past",
+      "proposition_text": "The doctor suspects a job transition.",
+      "evidence": [
+        {
+          "turn_id": "T58",
+          "turn_speaker": "doctor",
+          "span_text": "you're welcome . right this way . all right . uh , in assessment , please summarize the patient's history briefly , and let's list her possible etiologies such as , uh , gerd , dyspepsia , esophagitis , musculoskeletal etiologies , and anxiety . uh , suspect she had an anxiety attack related to her job transition , plus or minus a contribution from her musculoskeletal etiologies . um , in the plan , include our discussion of the egd versus monderning ... monitoring for symptom . patient elected to self-monitor her symptoms and will call with any reoccurrence or change . thanks .",
+          "char_start": 5723,
+          "char_end": 6308
+        }
+      ],
+      "assertion": "historical",
+      "visit_state": "historical",
+      "linked_problem": null,
+      "event_cluster_id": "CL20"
+    },
+    {
+      "cap_id": "CAP14",
+      "cap_type": "Symptom",
+      "content_source": "patient",
+      "modality": "interview",
+      "canonical_concept": "chest pain",
+      "verification_status": "confirmed",
+      "clinical_status": "active",
+      "temporality": "current",
+      "proposition_text": "The patient reports chest pain.",
+      "evidence": [
+        {
+          "turn_id": "T5",
+          "turn_speaker": "patient",
+          "span_text": "well , i really needed to see you three months ... three months ago , but this was your first available appointment . when i called to make the appointment , i was having chest pains , but it stopped after four days , and i have n't had any since then .",
+          "char_start": 543,
+          "char_end": 796
+        }
+      ],
+      "assertion": "present",
+      "visit_state": "active",
+      "linked_problem": null,
+      "event_cluster_id": "CL1"
+    },
+    {
+      "cap_id": "CAP15",
+      "cap_type": "Symptom",
+      "content_source": "patient",
+      "modality": "interview",
+      "canonical_concept": "heartburn",
+      "verification_status": "unconfirmed",
+      "clinical_status": "active",
+      "temporality": "past",
+      "proposition_text": "The patient reports possible heartburn.",
+      "evidence": [
+        {
+          "turn_id": "T19",
+          "turn_speaker": "patient",
+          "span_text": "uh , maybe . i do n't think i've ever had heartburn , so i'm not sure what that feels like .",
+          "char_start": 1878,
+          "char_end": 1970
+        }
+      ],
+      "assertion": "uncertain",
+      "visit_state": "active",
+      "linked_problem": null,
+      "event_cluster_id": "CL8"
+    },
+    {
+      "cap_id": "CAP16",
+      "cap_type": "Symptom",
+      "content_source": "patient",
+      "modality": "interview",
+      "canonical_concept": "swallowing difficulty",
+      "verification_status": "unconfirmed",
+      "clinical_status": "active",
+      "temporality": "past",
+      "proposition_text": "The patient reports difficulty swallowing.",
+      "evidence": [
+        {
+          "turn_id": "T25",
+          "turn_speaker": "patient",
+          "span_text": "yes . thankfully . the chest pain and swallowing problem got better about three days after i went to the er . but i just feel like there's something wrong .",
+          "char_start": 2222,
+          "char_end": 2378
+        }
+      ],
+      "assertion": "uncertain",
+      "visit_state": "active",
+      "linked_problem": null,
+      "event_cluster_id": "CL10"
+    },
+    {
+      "cap_id": "CAP17",
+      "cap_type": "Symptom",
+      "content_source": "patient",
+      "modality": "interview",
+      "canonical_concept": "chest pain",
+      "verification_status": "unconfirmed",
+      "clinical_status": "active",
+      "temporality": "current",
+      "proposition_text": "The patient reports chest pain.",
+      "evidence": [
+        {
+          "turn_id": "T25",
+          "turn_speaker": "patient",
+          "span_text": "yes . thankfully . the chest pain and swallowing problem got better about three days after i went to the er . but i just feel like there's something wrong .",
+          "char_start": 2222,
+          "char_end": 2378
+        }
+      ],
+      "assertion": "uncertain",
+      "visit_state": "active",
+      "linked_problem": null,
+      "event_cluster_id": "CL1"
+    },
+    {
+      "cap_id": "CAP18",
+      "cap_type": "Symptom",
+      "content_source": "patient",
+      "modality": "interview",
+      "canonical_concept": "chest discomfort",
+      "verification_status": "confirmed",
+      "clinical_status": "active",
+      "temporality": "current",
+      "proposition_text": "The patient reports chest discomfort.",
+      "evidence": [
+        {
+          "turn_id": "T48",
+          "turn_speaker": "doctor",
+          "span_text": "so let's talk about your symptoms real quick . obviously , with the chest discomfort , we worry about heart issues , but i'm reassured that those were ruled out with all the testing they did in the er . um , other potential causes could be anxiety , esophagitis , which is irritation of the esophagus . but typically with these , um ... but typically , these cause the pain that would last for a long time rather than that isolated incident like you had . um , it's also possible that you had intense heartburn for a few days .",
+          "char_start": 3711,
+          "char_end": 4238
+        }
+      ],
+      "assertion": "present",
+      "visit_state": "active",
+      "linked_problem": null,
+      "event_cluster_id": "CL16"
+    },
+    {
+      "cap_id": "CAP19",
+      "cap_type": "Symptom",
+      "content_source": "patient",
+      "modality": "interview",
+      "canonical_concept": "pain",
+      "verification_status": "confirmed",
+      "clinical_status": "active",
+      "temporality": "current",
+      "proposition_text": "The patient reports pain.",
+      "evidence": [
+        {
+          "turn_id": "T54",
+          "turn_speaker": "doctor",
+          "span_text": "that sounds good . um , so you can call the office if you have any additional episodes of pain or any other symptoms you're concerned about . if that happens , we'll get you scheduled for an egd to take a look . if not , you can follow up with me ... follow up with me as needed for any other gi complaints .",
+          "char_start": 5244,
+          "char_end": 5552
+        }
+      ],
+      "assertion": "present",
+      "visit_state": "active",
+      "linked_problem": null,
+      "event_cluster_id": "CL18"
+    },
+    {
+      "cap_id": "CAP20",
+      "cap_type": "Problem",
+      "content_source": "patient",
+      "modality": "interview",
+      "canonical_concept": "pain",
+      "verification_status": "confirmed",
+      "clinical_status": "active",
+      "temporality": "current",
+      "proposition_text": "The patient reports pain.",
+      "evidence": [
+        {
+          "turn_id": "T54",
+          "turn_speaker": "doctor",
+          "span_text": "that sounds good . um , so you can call the office if you have any additional episodes of pain or any other symptoms you're concerned about . if that happens , we'll get you scheduled for an egd to take a look . if not , you can follow up with me ... follow up with me as needed for any other gi complaints .",
+          "char_start": 5244,
+          "char_end": 5552
+        }
+      ],
+      "assertion": "present",
+      "visit_state": "active",
+      "linked_problem": null,
+      "event_cluster_id": "CL18"
+    },
+    {
+      "cap_id": "CAP21",
+      "cap_type": "Problem",
+      "content_source": "doctor",
+      "modality": "assessment",
+      "canonical_concept": "GERD",
+      "verification_status": "unconfirmed",
+      "clinical_status": "historical",
+      "temporality": "past",
+      "proposition_text": "The doctor suspects GERD.",
+      "evidence": [
+        {
+          "turn_id": "T58",
+          "turn_speaker": "doctor",
+          "span_text": "you're welcome . right this way . all right . uh , in assessment , please summarize the patient's history briefly , and let's list her possible etiologies such as , uh , gerd , dyspepsia , esophagitis , musculoskeletal etiologies , and anxiety . uh , suspect she had an anxiety attack related to her job transition , plus or minus a contribution from her musculoskeletal etiologies . um , in the plan , include our discussion of the egd versus monderning ... monitoring for symptom . patient elected to self-monitor her symptoms and will call with any reoccurrence or change . thanks .",
+          "char_start": 5723,
+          "char_end": 6308
+        }
+      ],
+      "assertion": "historical",
+      "visit_state": "historical",
+      "linked_problem": null,
+      "event_cluster_id": "CL21"
+    },
+    {
+      "cap_id": "CAP22",
+      "cap_type": "Problem",
+      "content_source": "doctor",
+      "modality": "assessment",
+      "canonical_concept": "dyspepsia",
+      "verification_status": "unconfirmed",
+      "clinical_status": "historical",
+      "temporality": "past",
+      "proposition_text": "The doctor suspects dyspepsia.",
+      "evidence": [
+        {
+          "turn_id": "T58",
+          "turn_speaker": "doctor",
+          "span_text": "you're welcome . right this way . all right . uh , in assessment , please summarize the patient's history briefly , and let's list her possible etiologies such as , uh , gerd , dyspepsia , esophagitis , musculoskeletal etiologies , and anxiety . uh , suspect she had an anxiety attack related to her job transition , plus or minus a contribution from her musculoskeletal etiologies . um , in the plan , include our discussion of the egd versus monderning ... monitoring for symptom . patient elected to self-monitor her symptoms and will call with any reoccurrence or change . thanks .",
+          "char_start": 5723,
+          "char_end": 6308
+        }
+      ],
+      "assertion": "historical",
+      "visit_state": "historical",
+      "linked_problem": null,
+      "event_cluster_id": "CL22"
+    },
+    {
+      "cap_id": "CAP23",
+      "cap_type": "Problem",
+      "content_source": "doctor",
+      "modality": "assessment",
+      "canonical_concept": "esophagitis",
+      "verification_status": "unconfirmed",
+      "clinical_status": "historical",
+      "temporality": "past",
+      "proposition_text": "The doctor suspects esophagitis.",
+      "evidence": [
+        {
+          "turn_id": "T58",
+          "turn_speaker": "doctor",
+          "span_text": "you're welcome . right this way . all right . uh , in assessment , please summarize the patient's history briefly , and let's list her possible etiologies such as , uh , gerd , dyspepsia , esophagitis , musculoskeletal etiologies , and anxiety . uh , suspect she had an anxiety attack related to her job transition , plus or minus a contribution from her musculoskeletal etiologies . um , in the plan , include our discussion of the egd versus monderning ... monitoring for symptom . patient elected to self-monitor her symptoms and will call with any reoccurrence or change . thanks .",
+          "char_start": 5723,
+          "char_end": 6308
+        }
+      ],
+      "assertion": "historical",
+      "visit_state": "historical",
+      "linked_problem": null,
+      "event_cluster_id": "CL2"
+    },
+    {
+      "cap_id": "CAP24",
+      "cap_type": "Problem",
+      "content_source": "doctor",
+      "modality": "assessment",
+      "canonical_concept": "anxiety",
+      "verification_status": "unconfirmed",
+      "clinical_status": "historical",
+      "temporality": "past",
+      "proposition_text": "The doctor suspects anxiety.",
+      "evidence": [
+        {
+          "turn_id": "T58",
+          "turn_speaker": "doctor",
+          "span_text": "you're welcome . right this way . all right . uh , in assessment , please summarize the patient's history briefly , and let's list her possible etiologies such as , uh , gerd , dyspepsia , esophagitis , musculoskeletal etiologies , and anxiety . uh , suspect she had an anxiety attack related to her job transition , plus or minus a contribution from her musculoskeletal etiologies . um , in the plan , include our discussion of the egd versus monderning ... monitoring for symptom . patient elected to self-monitor her symptoms and will call with any reoccurrence or change . thanks .",
+          "char_start": 5723,
+          "char_end": 6308
+        }
+      ],
+      "assertion": "historical",
+      "visit_state": "historical",
+      "linked_problem": null,
+      "event_cluster_id": "CL15"
+    },
+    {
+      "cap_id": "CAP25",
+      "cap_type": "ExamFinding",
+      "content_source": "doctor",
+      "modality": "exam",
+      "canonical_concept": "tenderness",
+      "verification_status": "confirmed",
+      "clinical_status": "active",
+      "temporality": "current",
+      "attributes": {
+        "quality": "light palpation"
+      },
+      "proposition_text": "The doctor observed mild tenderness to light palpation in the upper abdominal quadrants.",
+      "evidence": [
+        {
+          "turn_id": "T46",
+          "turn_speaker": "doctor",
+          "span_text": "okay . so we'll say you have some mild tenderness to light palpation in the upper abdominal quadrants , but everything on your exam looks normal and looks good .",
+          "char_start": 3516,
+          "char_end": 3677
+        }
+      ],
+      "assertion": "present",
+      "visit_state": "active",
+      "linked_problem": null,
+      "event_cluster_id": "CL13"
+    },
+    {
+      "cap_id": "CAP26",
+      "cap_type": "ExamFinding",
+      "content_source": "doctor",
+      "modality": "exam",
+      "canonical_concept": "normal exam findings",
+      "verification_status": "confirmed",
+      "clinical_status": "historical",
+      "temporality": "current",
+      "proposition_text": "The doctor reported normal exam findings.",
+      "evidence": [
+        {
+          "turn_id": "T46",
+          "turn_speaker": "doctor",
+          "span_text": "okay . so we'll say you have some mild tenderness to light palpation in the upper abdominal quadrants , but everything on your exam looks normal and looks good .",
+          "char_start": 3516,
+          "char_end": 3677
+        }
+      ],
+      "assertion": "historical",
+      "visit_state": "historical",
+      "linked_problem": null,
+      "event_cluster_id": "CL14"
+    },
+    {
+      "cap_id": "CAP27",
+      "cap_type": "Order",
+      "content_source": "doctor",
+      "modality": "interview",
+      "canonical_concept": "egd",
+      "verification_status": "unconfirmed",
+      "clinical_status": "planned",
+      "temporality": "future",
+      "proposition_text": "The doctor recommends an egd.",
+      "evidence": [
+        {
+          "turn_id": "T53",
+          "turn_speaker": "patient",
+          "span_text": "i'd like to hold off on the egd and wait to see if i have more symptoms .",
+          "char_start": 5161,
+          "char_end": 5234
+        }
+      ],
+      "assertion": "hypothetical",
+      "visit_state": "planned",
+      "linked_problem": null,
+      "event_cluster_id": "CL17"
+    },
+    {
+      "cap_id": "CAP28",
+      "cap_type": "Order",
+      "content_source": "doctor",
+      "modality": "interview",
+      "canonical_concept": "follow-up",
+      "verification_status": "unconfirmed",
+      "clinical_status": "planned",
+      "temporality": "future",
+      "proposition_text": "The doctor recommends follow-up.",
+      "evidence": [
+        {
+          "turn_id": "T54",
+          "turn_speaker": "doctor",
+          "span_text": "that sounds good . um , so you can call the office if you have any additional episodes of pain or any other symptoms you're concerned about . if that happens , we'll get you scheduled for an egd to take a look . if not , you can follow up with me ... follow up with me as needed for any other gi complaints .",
+          "char_start": 5244,
+          "char_end": 5552
+        }
+      ],
+      "assertion": "hypothetical",
+      "visit_state": "planned",
+      "linked_problem": null,
+      "event_cluster_id": "CL19"
+    },
+    {
+      "cap_id": "CAP29",
+      "cap_type": "MedicationStatement",
+      "content_source": "patient",
+      "modality": "interview",
+      "canonical_concept": "EKG",
+      "verification_status": "confirmed",
+      "clinical_status": "historical",
+      "temporality": "past",
+      "proposition_text": "An EKG was performed.",
+      "evidence": [
+        {
+          "turn_id": "T15",
+          "turn_speaker": "patient",
+          "span_text": "no . they ran an ekg and did blood tests , but like i said , everything was normal .",
+          "char_start": 1555,
+          "char_end": 1639
+        }
+      ],
+      "assertion": "historical",
+      "visit_state": "historical",
+      "linked_problem": null,
+      "event_cluster_id": "CL5"
+    },
+    {
+      "cap_id": "CAP30",
+      "cap_type": "MedicationStatement",
+      "content_source": "patient",
+      "modality": "interview",
+      "canonical_concept": "blood tests",
+      "verification_status": "confirmed",
+      "clinical_status": "historical",
+      "temporality": "past",
+      "proposition_text": "Blood tests were performed.",
+      "evidence": [
+        {
+          "turn_id": "T15",
+          "turn_speaker": "patient",
+          "span_text": "no . they ran an ekg and did blood tests , but like i said , everything was normal .",
+          "char_start": 1555,
+          "char_end": 1639
+        }
+      ],
+      "assertion": "historical",
+      "visit_state": "historical",
+      "linked_problem": null,
+      "event_cluster_id": "CL6"
+    },
+    {
+      "cap_id": "CAP31",
+      "cap_type": "ProblemHistory",
+      "content_source": "patient",
+      "modality": "interview",
+      "canonical_concept": "abdominal pain",
+      "verification_status": "unconfirmed",
+      "clinical_status": "historical",
+      "temporality": "past",
+      "proposition_text": "The patient experienced abdominal pain for four days.",
+      "evidence": [
+        {
+          "turn_id": "T11",
+          "turn_speaker": "patient",
+          "span_text": "no . it just it randomly . i tolerated it for four days but then had to go to the emergency room because nothing i did relieved it . they did a bunch of testing and did n't find anything .",
+          "char_start": 1054,
+          "char_end": 1242
+        }
+      ],
+      "assertion": "historical",
+      "visit_state": "historical",
+      "linked_problem": null,
+      "event_cluster_id": "CL3"
+    },
+    {
+      "cap_id": "CAP32",
+      "cap_type": "ProblemHistory",
+      "content_source": "patient",
+      "modality": "interview",
+      "canonical_concept": "chest pain",
+      "verification_status": "unconfirmed",
+      "clinical_status": "historical",
+      "temporality": "three months ago",
+      "proposition_text": "The patient's chest pain resolved three months ago.",
+      "evidence": [
+        {
+          "turn_id": "T25",
+          "turn_speaker": "patient",
+          "span_text": "yes . thankfully . the chest pain and swallowing problem got better about three days after i went to the er . but i just feel like there's something wrong .",
+          "char_start": 2222,
+          "char_end": 2378
+        }
+      ],
+      "assertion": "historical",
+      "visit_state": "historical",
+      "linked_problem": null,
+      "event_cluster_id": "CL1"
+    },
+    {
+      "cap_id": "CAP33",
+      "cap_type": "ProblemHistory",
+      "content_source": "patient",
+      "modality": "interview",
+      "canonical_concept": "heartburn",
+      "verification_status": "unconfirmed",
+      "clinical_status": "historical",
+      "temporality": "past",
+      "proposition_text": "The patient may have experienced heartburn.",
+      "evidence": [
+        {
+          "turn_id": "T19",
+          "turn_speaker": "patient",
+          "span_text": "uh , maybe . i do n't think i've ever had heartburn , so i'm not sure what that feels like .",
+          "char_start": 1878,
+          "char_end": 1970
+        }
+      ],
+      "assertion": "historical",
+      "visit_state": "historical",
+      "linked_problem": null,
+      "event_cluster_id": "CL8"
+    }
+  ],
+  "filtered_nonverifiable_units": [
+    "Is the pain worse at night?",
+    "Do you remember having any heartburn or indigestion at, at the time?",
+    "Is the swallowing problem still present?",
+    "How has the weight been?",
+    "that's good",
+    "okay",
+    "okay . if you wan na lay down here on the table for me and lets take a look at you .",
+    "okay .",
+    "so we'll say you have some mild tenderness to light palpation in the upper abdominal quadrants , but everything on your exam looks normal and looks good .",
+    "okay . good .",
+    "What is the patient's job transition?"
+  ],
+  "chunk_count": 7,
+  "rescue_used": false,
+  "rescue_attempted": false,
+  "legacy_fallback_chunk_count": 0,
+  "extraction_mode": "single_call",
+  "runtime_seconds": 66.946
+}

@@ -1,0 +1,30 @@
+{
+  "section_miscategorizations": [
+    {
+      "text": "The patient has a stent.",
+      "current_section": "O",
+      "expected_section": "A",
+      "severity": "minor",
+      "reason": "Presence of a coronary stent is an existing condition/diagnosis rather than an observed exam or test result in this encounter; it fits better as part of the problem list/assessment."
+    },
+    {
+      "text": "The patient reports a history of inferior myocardial infarction.",
+      "current_section": "O",
+      "expected_section": "S",
+      "severity": "major",
+      "reason": "This is patient-reported past history, not an observed finding or test result; placing it in Objective could mislead a reader into thinking it is a documented, clinician-verified event from this encounter."
+    },
+    {
+      "text": "He has a stent in place.",
+      "current_section": "A",
+      "expected_section": "O",
+      "severity": "minor",
+      "reason": "The stent is a concrete prior procedure/device status and is typically documented in the Objective/problem list portion of the chart rather than as part of the diagnostic impression itself."
+    }
+  ],
+  "summary_statistics": {
+    "section_appropriateness_score": 0.7,
+    "section_miscategorization_count": 3,
+    "major_section_miscategorization_count": 1
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "section_miscategorizations": [
+    {
+      "text": "The patient reports pain in their left elbow and left arm.",
+      "current_section": "O",
+      "expected_section": "S",
+      "severity": "major",
+      "reason": "This is a patient-reported symptom and belongs in the Subjective section; placing it in Objective could mislead a reader into thinking it was an exam finding."
+    },
+    {
+      "text": "The patient reports pain in their neck.",
+      "current_section": "O",
+      "expected_section": "S",
+      "severity": "major",
+      "reason": "Neck pain here is clearly reported by the patient, not documented as a physical exam finding, so it should be in the Subjective section."
+    },
+    {
+      "text": "The patient has a history of hypertension and diabetes.",
+      "current_section": "A",
+      "expected_section": "S",
+      "severity": "minor",
+      "reason": "Past medical history is typically documented in the Subjective portion; its presence in Assessment is more organizational than misleading but not ideal."
+    },
+    {
+      "text": "The patient reports anxiety.",
+      "current_section": "A",
+      "expected_section": "S",
+      "severity": "major",
+      "reason": "This is explicitly framed as a patient-reported symptom rather than the clinician's diagnostic impression, so it belongs in the Subjective section."
+    }
+  ],
+  "summary_statistics": {
+    "section_appropriateness_score": 0.7,
+    "section_miscategorization_count": 4,
+    "major_section_miscategorization_count": 3
+  }
+}

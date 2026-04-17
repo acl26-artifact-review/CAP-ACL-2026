@@ -1,0 +1,118 @@
+Case: D2N169
+
+Problem List and Visit State Tracking
+
+Problem List
+- shortness of breath | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T43,T45,T6
+  Summary: The patient reports shortness of breath.
+  ClusterId: CL1
+  TemporalProfile: current, weekend
+  Updates:
+  - CAP3: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=weekend turns=T6 :: The patient reports shortness of breath.
+  - CAP4: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T43 :: The patient reports shortness of breath.
+  - CAP5: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T45 :: The patient reports shortness of breath.
+- lightheadedness | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T10,T6
+  Summary: The patient reports feeling lightheaded.
+  ClusterId: CL2
+  TemporalProfile: afterwards, current
+  Updates:
+  - CAP6: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=afterwards turns=T6 :: The patient reports feeling lightheaded.
+  - CAP8: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T10 :: The patient reports feeling lightheaded.
+- bike ride | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T6
+  Summary: The patient took a very long bike ride on the weekend.
+  ClusterId: CL3
+  TemporalProfile: weekend
+  Updates:
+  - CAP24: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=weekend turns=T6 :: The patient took a very long bike ride on the weekend.
+- chest pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T10,T28,T9
+  Summary: The patient reports chest pain, but it eventually went away.
+  ClusterId: CL4
+  TemporalProfile: current, eventually went away
+  Updates:
+  - CAP7: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T9 :: The patient reports chest pain.
+  - CAP1: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=eventually went away turns=T10 :: The patient reports chest pain, but it eventually went away.
+  - CAP10: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T28 :: The patient reports chest pain.
+- difficulty breathing | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T10
+  Summary: The patient reports difficulty breathing.
+  ClusterId: CL5
+  TemporalProfile: current
+  Updates:
+  - CAP9: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T10 :: The patient reports difficulty breathing.
+- cough | verification_status=unconfirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T14
+  Summary: The patient had a cough with their first cold in the past year and a half.
+  ClusterId: CL6
+  TemporalProfile: past year and a half
+  Updates:
+  - CAP23: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=past year and a half turns=T14 :: The patient had a cough with their first cold in the past year and a half.
+- left hand pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T18
+  Summary: The patient reports pain in the left hand.
+  ClusterId: CL7
+  TemporalProfile: current
+  Updates:
+  - CAP2: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T18 :: The patient reports pain in the left hand.
+
+Medication Tracking
+- [MedicationState] medication | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T20
+  Summary: The patient has avoided bright lights to manage migraines.
+  ClusterId: CL8
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient has avoided bright lights to manage migraines. (T20)
+  - The patient has been taking medication for migraines. (T20)
+  Updates:
+  - CAP19: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T20 :: The patient has avoided bright lights to manage migraines.
+  - CAP20: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T20 :: The patient has been taking medication for migraines.
+- [MedicationState] imitrex | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T21
+  Summary: The patient is still taking imitrex.
+  ClusterId: CL10
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient is still taking imitrex. (T21)
+  Updates:
+  - CAP22: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T21 :: The patient is still taking imitrex.
+- [MedicationState] protonix | verification_status=confirmed | clinical_status=stable | modalities=interview | speakers=patient | evidence=T25
+  Summary: The patient's reflux is managed with protonix.
+  ClusterId: CL11
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient's reflux is managed with protonix. (T25)
+  Updates:
+  - CAP21: content_source=patient modality=interview verification_status=confirmed clinical_status=stable temporality=current turns=T25 :: The patient's reflux is managed with protonix.
+- [MedicationChange] albuterol inhaler | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T43
+  Summary: The doctor prescribes an albuterol inhaler.
+  ClusterId: CL17
+  TemporalProfile: current
+  PlannedChanges:
+  - The doctor prescribes an albuterol inhaler. (T43)
+  Updates:
+  - CAP15: content_source=doctor modality=plan verification_status=unconfirmed clinical_status=planned temporality=current turns=T43 :: The doctor prescribes an albuterol inhaler.
+
+Other Structured States
+- [TestResult] vision | verification_status=confirmed | clinical_status=stable | modalities=test_result | speakers=patient | evidence=T21
+  Summary: The patient's vision is okay.
+  ClusterId: CL9
+  TemporalProfile: current
+- [TestResult] cataract surgery | verification_status=confirmed | clinical_status=historical | modalities=test_result | speakers=patient | evidence=T28
+  Summary: The patient had cataract surgery about four and a half months ago.
+  ClusterId: CL12
+  TemporalProfile: 4.5 months ago
+- [ExamFinding] lower extremity edema | verification_status=confirmed | clinical_status=active | modalities=exam | speakers=exam | evidence=T34
+  Summary: The patient has trace lower extremity edema.
+  ClusterId: CL13
+  TemporalProfile: current
+- [ExamFinding] wheeze | verification_status=confirmed | clinical_status=active | modalities=exam | speakers=exam | evidence=T34
+  Summary: The patient has expiratory wheeze bilaterally.
+  ClusterId: CL14
+  TemporalProfile: current
+- [TestResult] chest x-ray | verification_status=confirmed | clinical_status=historical | modalities=test_result | speakers=test_result | evidence=T36
+  Summary: The chest x-ray is normal.
+  ClusterId: CL15
+  TemporalProfile: recent
+- [Plan] pulmonary referral | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T41
+  Summary: The doctor orders a pulmonary referral.
+  ClusterId: CL16
+  TemporalProfile: current
+- [Plan] follow up | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T48
+  Summary: The doctor wants to see the patient in a couple of weeks.
+  ClusterId: CL18
+  TemporalProfile: in a couple weeks

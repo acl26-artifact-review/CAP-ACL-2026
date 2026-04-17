@@ -1,0 +1,37 @@
+{
+  "section_miscategorizations": [
+    {
+      "text": "The patient's right elbow exam shows a grade 2 murmur.",
+      "current_section": "Findings",
+      "expected_section": "Findings",
+      "severity": "major",
+      "reason": "This appears to be a misplaced or erroneous phrase within the elbow exam sentence; murmurs are cardiac findings and should not be described as part of the elbow exam. It should either be removed from the elbow exam description or clearly separated as part of the heart exam finding."
+    },
+    {
+      "text": "Blood sugar levels have been between 80 and 100.",
+      "current_section": "Findings",
+      "expected_section": "History of Present Illness",
+      "severity": "minor",
+      "reason": "This is a reported home trend rather than an in-clinic measurement or lab result, so it more appropriately belongs with patient-reported history/medication state, though its placement in Findings is not highly misleading."
+    },
+    {
+      "text": "The patient denies chest pain or abdominal pain.",
+      "current_section": "Findings",
+      "expected_section": "History of Present Illness",
+      "severity": "minor",
+      "reason": "Denials of associated symptoms are typically part of the history (ROS/HPI). While often documented under exam in some styles, by the given template semantics this is better categorized as history rather than an objective finding."
+    },
+    {
+      "text": "A nurse will administer the prescriptions.",
+      "current_section": "Plan",
+      "expected_section": "Plan",
+      "severity": "minor",
+      "reason": "Administration of medications is part of the plan, but the wording is ambiguous and could be misread as a current workflow statement rather than a future action. Clarifying it as an instruction (e.g., 'Nurse to administer...') would better align with the Plan section; however, it is not substantially misleading where it is."
+    }
+  ],
+  "summary_statistics": {
+    "section_appropriateness_score": 0.8,
+    "section_miscategorization_count": 4,
+    "major_section_miscategorization_count": 1
+  }
+}

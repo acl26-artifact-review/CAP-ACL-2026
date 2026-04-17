@@ -1,0 +1,77 @@
+{
+  "events": [
+    {
+      "event_id": "CL13",
+      "event_type": "ProblemOrientedNoteBundle",
+      "canonical_concept": "diabetes",
+      "visit_state": "active",
+      "status": "uncertain",
+      "temporality": "future",
+      "speaker_source": "patient,doctor,clinician,test_result",
+      "clinical_priority": "high",
+      "title": "diabetes",
+      "event_summary": "Problem-oriented bundle for diabetes.",
+      "supporting_cap_ids": [
+        "CAP10",
+        "CAP3",
+        "CAP22",
+        "CAP9",
+        "CAP11",
+        "CAP13",
+        "CAP15",
+        "CAP14"
+      ],
+      "anchor_problem_cap_id": "CAP10",
+      "anchor_problem": "diabetes",
+      "S_cap_ids": [
+        "CAP10"
+      ],
+      "O_cap_ids": [
+        "CAP13",
+        "CAP14"
+      ],
+      "P_cap_ids": [
+        "CAP15"
+      ],
+      "supporting_evidence": [
+        "The patient reports diabetes.",
+        "The patient has a two out of six systolic murmur.",
+        "The patient's AST is elevated at 39."
+      ],
+      "current_state": [
+        "The patient reports diabetes."
+      ],
+      "planned_actions": [
+        "A cervical MRI is planned."
+      ],
+      "care_context": [
+        "The patient has decreased their smoking.",
+        "The patient smokes one to two cigarettes a day.",
+        "The patient reports hypertension."
+      ],
+      "key_slots": {
+        "source_modalities": "interview, exam, plan, test_result",
+        "temporal_profile": "current, recent, future",
+        "anchor_cluster_type": "ProblemState",
+        "anchor_primary_cap_type": "Problem",
+        "bundle_concepts": "diabetes; decreased smoking; hypertension; murmur; mri; elevated ast",
+        "history_context": "",
+        "related_factors": "The patient has decreased their smoking.; The patient smokes one to two cigarettes a day.; The patient reports hypertension.",
+        "visit_primary": "true",
+        "render_in_note": "true",
+        "assessment_fallback": "The patient has diabetes.",
+        "bundle_design": "problem_oriented_note_bundle"
+      },
+      "render_sections": [
+        "S",
+        "O",
+        "A",
+        "P",
+        "History of Present Illness",
+        "Findings",
+        "Assessment",
+        "Plan"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,155 @@
+Case: D2N039
+
+Problem List and Visit State Tracking
+
+Problem List
+- high blood pressure | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T13,T23,T3
+  Summary: The patient reports headaches when their blood pressure gets really high.
+  ClusterId: CL2
+  TemporalProfile: current, since the pandemic, when
+  Updates:
+  - CAP7: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T3 :: The patient measures blood pressure at home.
+  - CAP6: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T3 :: The patient reports feeling high blood pressure.
+  - CAP1: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=since the pandemic turns=T13 :: The patient has noticed they no longer see their blood pressures.
+  - CAP2: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=when turns=T23 :: The patient reports headaches when their blood pressure gets really high.
+- headache | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T23
+  Summary: The patient denies headaches on a regular basis.
+  ClusterId: CL7
+  TemporalProfile: regular basis
+  Updates:
+  - CAP4: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=regular basis turns=T23 :: The patient denies headaches on a regular basis.
+  - CAP9: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=regular basis turns=T23 :: The patient reports mild headaches.
+- knee pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T25,T37,T41
+  Summary: The patient reports knee pain.
+  ClusterId: CL8
+  TemporalProfile: current
+  Updates:
+  - CAP12: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T25 :: The patient reports pain.
+  - CAP10: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T37 :: The patient reports knee pain.
+  - CAP8: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T41 :: The patient reports a lot of pain.
+- swelling | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T30
+  Summary: The patient reports some swelling in their lower extremities.
+  ClusterId: CL9
+  TemporalProfile: current
+  Updates:
+  - CAP3: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T30 :: The patient reports some swelling in their lower extremities.
+- left hand pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T39
+  Summary: The patient reports pain in the left hand.
+  ClusterId: CL12
+  TemporalProfile: current
+  Updates:
+  - CAP5: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T39 :: The patient reports pain in the left hand.
+- uncontrolled hypertension | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=clinician | evidence=T40
+  Summary: The patient has uncontrolled hypertension.
+  ClusterId: CL16
+  TemporalProfile: current
+  Updates:
+  - CAP11: content_source=clinician modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T40 :: The patient has uncontrolled hypertension.
+
+Medication Tracking
+- [MedicationChange] medication | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T1
+  Summary: The patient's medications were increased again.
+  ClusterId: CL1
+  TemporalProfile: current
+  PlannedChanges:
+  - The patient's medications were increased again. (T1)
+  Updates:
+  - CAP22: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T1 :: The patient's medications were increased again.
+- [MedicationState] medication | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T10
+  Summary: The patient is using an electronic arm blood pressure recorder.
+  ClusterId: CL5
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient is using an electronic arm blood pressure recorder. (T10)
+  Updates:
+  - CAP26: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T10 :: The patient is using an electronic arm blood pressure recorder.
+- [MedicationState] carvedilol | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T34
+  Summary: The patient is taking carvedilol 25 milligrams twice a day.
+  ClusterId: CL10
+  TemporalProfile: twice daily
+  CurrentRegimens:
+  - The patient is taking carvedilol 25 milligrams twice a day. (T34)
+  Updates:
+  - CAP27: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=twice daily turns=T34 :: The patient is taking carvedilol 25 milligrams twice a day.
+- [MedicationState] norvasc | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T34
+  Summary: The patient is taking 10 milligrams of norvasc daily.
+  ClusterId: CL11
+  TemporalProfile: daily
+  CurrentRegimens:
+  - The patient is taking 10 milligrams of norvasc daily. (T34)
+  Updates:
+  - CAP29: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=daily turns=T34 :: The patient is taking 10 milligrams of norvasc daily.
+- [MedicationChange] cardura | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=clinician | evidence=T40
+  Summary: The clinician prescribed cardura 4 milligrams to be taken once a day.
+  ClusterId: CL17
+  TemporalProfile: future
+  PlannedChanges:
+  - The clinician prescribed cardura 4 milligrams to be taken once a day. (T40)
+  Updates:
+  - CAP14: content_source=clinician modality=plan verification_status=unconfirmed clinical_status=planned temporality=future turns=T40 :: The clinician prescribed cardura 4 milligrams to be taken once a day.
+
+Other Structured States
+- [TestResult] blood pressure | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T4
+  Summary: The patient's blood pressure was as high as 170 over 90.
+  ClusterId: CL3
+  TemporalProfile: recent
+- [Plan] record keeping | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T10
+  Summary: The doctor wants the patient to keep a record of their blood pressures for their next visit.
+  ClusterId: CL4
+  TemporalProfile: next visit
+- [Plan] diet | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T18
+  Summary: The doctor wants to discuss the patient's diet.
+  ClusterId: CL6
+  TemporalProfile: current
+- [Plan] decrease alcohol intake | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=clinician | evidence=T39
+  Summary: The clinician advised the patient to decrease their alcohol intake.
+  ClusterId: CL13
+  TemporalProfile: future
+- [Plan] decrease salt intake | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=clinician,doctor | evidence=T39,T40
+  Summary: The clinician advised the patient to decrease their salt intake.
+  ClusterId: CL14
+  TemporalProfile: future
+- [Plan] stop taking nonsteroidal medicines | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=clinician | evidence=T39
+  Summary: The clinician advised the patient to stop taking nonsteroidal medicines.
+  ClusterId: CL15
+  TemporalProfile: future
+- [Plan] cardura | verification_status=confirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T40
+  Summary: The doctor prescribed cardura 4 milligrams to be taken once a day.
+  ClusterId: CL18
+  TemporalProfile: future
+- [Plan] twenty four hour urine | verification_status=confirmed | clinical_status=planned | modalities=plan | speakers=clinician,doctor | evidence=T40
+  Summary: The clinician ordered a twenty four hour urine test.
+  ClusterId: CL19
+  TemporalProfile: future
+- [Plan] renal artery ultrasound | verification_status=confirmed | clinical_status=planned | modalities=plan | speakers=clinician,doctor | evidence=T40
+  Summary: The clinician ordered a renal artery ultrasound.
+  ClusterId: CL20
+  TemporalProfile: future
+- [Plan] urine collection | verification_status=confirmed | clinical_status=planned | modalities=plan | speakers=clinician,doctor | evidence=T40
+  Summary: The clinician ordered a urine collection.
+  ClusterId: CL21
+  TemporalProfile: future
+- [Plan] morning aldosterone levels | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=clinician | evidence=T40
+  Summary: The clinician ordered morning aldosterone levels.
+  ClusterId: CL22
+  TemporalProfile: future
+- [FollowUp] record blood pressures | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=clinician | evidence=T40
+  Summary: The clinician requested the patient to record their blood pressures.
+  ClusterId: CL23
+  TemporalProfile: future
+- [FollowUp] return in three weeks | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=clinician | evidence=T40
+  Summary: The clinician requested a follow-up appointment in three weeks.
+  ClusterId: CL24
+  TemporalProfile: future
+- [Plan] stop nonsteroidal medicines | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T40
+  Summary: The doctor advised the patient to stop taking nonsteroidal medicines.
+  ClusterId: CL25
+  TemporalProfile: future
+- [Plan] reduce alcohol intake | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T40
+  Summary: The doctor advised the patient to reduce alcohol intake.
+  ClusterId: CL26
+  TemporalProfile: future
+- [Plan] referral to a nutritionist | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=clinician | evidence=T40
+  Summary: The clinician referred the patient to a nutritionist.
+  ClusterId: CL27
+  TemporalProfile: future

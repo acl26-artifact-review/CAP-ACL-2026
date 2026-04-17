@@ -1,0 +1,1451 @@
+{
+  "case_id": "D2N091",
+  "method": "cap_event",
+  "template": "soap",
+  "summary_text": "S:\nThe patient reports persistent insomnia, exacerbated by travel and adjusting to the fall season, and reports trying melatonin, meditation, and stretching without relief. He also notes lingering weakness in his right knee following surgery, but otherwise denies chest pain, shortness of breath, or other concerning symptoms. He reports no issues with his multiple sclerosis medications or recent bone fractures.\n\nO:\nPhysical exam reveals a right lower extremity strength of 4 out of 5 and a right knee with arthritic changes. Vital signs are within normal limits. Lungs are clear to auscultation. Heart sounds are regular.\n\nA:\nThe patient's primary problems include chronic insomnia and persistent right knee osteoarthritis. His multiple sclerosis is currently well-controlled.\n\nP:\nOrder a refill of fosamax 1 tablet per week with 11 refills. Schedule follow-up with the neurologist. Recommend continued adherence to current MS medications.",
+  "reference_summary": "CHIEF COMPLAINT\n\nAnnual exam.\n\nHISTORY OF PRESENT ILLNESS\n\nJerry Nguyen a 54-year-old male with a past medical history significant for osteoporosis, and multiple sclerosis, who presents for an annual exam.\n\nThe patient states he has been traveling all over the country. He notes it has been a stressful summer and adjusting to everything in the fall.\n\nThe patient reports a lack of sleep. He has tried melatonin, meditation, and stretching every morning, but nothing has helped.\n\nFor treatment of his osteoporosis, he is on Fosamax. He denies any issues with his joints. He denies any recent broken bones.\n\nRegarding his multiple sclerosis, he last saw the neurologist 6 months ago. He is taking his medication and denies any issues with this. Previously, he experienced right leg weakness, however, this has resolved.\n\nHe does have some lingering issues with his right knee after previous surgery, but nothing out of the ordinary.\n\nThe patient denies any chest pain or shortness of breath.\n\nREVIEW OF SYSTEMS\n\n• Cardiovascular: Denies chest pain or dyspnea.\n• Respiratory: Denies shortness of breath.\n• Musculoskeletal: Endorses right knee discomfort.\n• Neurological: Endorses insomnia.\n\nPHYSICAL EXAMINATION\n\n• Respiratory: Lungs are clear to auscultation bilaterally. No wheezes, rales, or rhonchi.\n• Musculoskeletal: Weakness in the lower extremities, 4/5 on the right and 3/5 on the left. Reflexes are good. Arthritic changes in the right knee.\n\nRESULTS\n\nX-ray of the right knee demonstrates some arthritic changes.\n\nASSESSMENT\n\nJerry Nguyen a 54-year-old male with a past medical history significant for osteoporosis, and multiple sclerosis, who presents for an annual exam.\n\nPLAN\n\nOsteoporosis.\n• Medical Reasoning: The patient is doing well with Fosamax.\n• Medical Treatment: Continue Fosamax 1 tab per week. Eleven refills were ordered today.\n\nMultiple Sclerosis.\n• Medical Reasoning: The patient is experiencing weakness of the bilateral lower extremities. He has been seeing his neurologist on a consistent basis and has been compliant with medication.\n• Medical Treatment: He will continue to follow up with his neurologist and comply with his medication regimen.\n\nRight knee arthritis.\n• Medical Reasoning: The patient recently underwent knee surgery. A recent right knee x-ray demonstrated some arthritic changes.\n\nPatient Agreements: The patient understands and agrees with the recommended medical treatment plan.",
+  "source_cap": {
+    "atomic_propositions": [
+      {
+        "prop_id": "CAP1",
+        "cap_type": "Symptom",
+        "canonical_concept": "knee surgery",
+        "category": "Symptom",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient has a lingering issue with their knee surgery."
+      },
+      {
+        "prop_id": "CAP2",
+        "cap_type": "Symptom",
+        "canonical_concept": "pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports pain in the left hand."
+      },
+      {
+        "prop_id": "CAP3",
+        "cap_type": "Symptom",
+        "canonical_concept": "joint pain",
+        "category": "Symptom",
+        "speaker": "doctor",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports issues with their joints."
+      },
+      {
+        "prop_id": "CAP4",
+        "cap_type": "Symptom",
+        "canonical_concept": "insomnia",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports lack of sleep."
+      },
+      {
+        "prop_id": "CAP5",
+        "cap_type": "Symptom",
+        "canonical_concept": "chest pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "denies",
+        "status": "negated",
+        "visit_state": "historical",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient denies chest pain."
+      },
+      {
+        "prop_id": "CAP6",
+        "cap_type": "Symptom",
+        "canonical_concept": "insomnia",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports insomnia."
+      },
+      {
+        "prop_id": "CAP7",
+        "cap_type": "Order",
+        "canonical_concept": "refill",
+        "category": "Order",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "planned",
+        "temporality": "future",
+        "proposition_text": "The doctor will order a refill on fosamax."
+      },
+      {
+        "prop_id": "CAP8",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "fosamax",
+        "category": "MedicationStatement",
+        "speaker": "doctor",
+        "predicate": "has",
+        "status": "affirmed",
+        "visit_state": "planned",
+        "temporality": "future",
+        "proposition_text": "The doctor will continue the patient on fosamax."
+      },
+      {
+        "prop_id": "CAP9",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "fosamax",
+        "category": "MedicationStatement",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient is taking fosamax."
+      },
+      {
+        "prop_id": "CAP10",
+        "cap_type": "ProblemHistory",
+        "canonical_concept": "stress",
+        "category": "ProblemHistory",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "recent",
+        "proposition_text": "The patient reports a stressful summer."
+      }
+    ],
+    "filtered_nonverifiable_units": []
+  },
+  "event_plan": {
+    "events": [
+      {
+        "event_id": "CL1",
+        "event_type": "ProblemOrientedNoteBundle",
+        "canonical_concept": "pain",
+        "visit_state": "active",
+        "status": "affirmed",
+        "temporality": "current",
+        "speaker_source": "patient",
+        "clinical_priority": "high",
+        "title": "pain",
+        "event_summary": "Problem-oriented bundle for pain.",
+        "supporting_cap_ids": [
+          "CAP2",
+          "CAP5"
+        ],
+        "anchor_problem": "pain",
+        "S_cap_ids": [
+          "CAP5"
+        ],
+        "global_cap_ids": [
+          "CAP2"
+        ],
+        "supporting_evidence": [
+          "The patient denies chest pain."
+        ],
+        "current_state": [
+          "The patient denies chest pain."
+        ],
+        "care_context": [
+          "The patient reports pain in the left hand."
+        ],
+        "key_slots": {
+          "source_modalities": "interview",
+          "temporal_profile": "current",
+          "anchor_cluster_type": "ProblemState",
+          "anchor_primary_cap_type": "Symptom",
+          "bundle_concepts": "pain; chest pain",
+          "history_context": "",
+          "related_factors": "",
+          "visit_primary": "false",
+          "render_in_note": "false",
+          "assessment_fallback": "",
+          "bundle_design": "problem_oriented_note_bundle"
+        },
+        "render_sections": [
+          "S",
+          "O",
+          "A",
+          "P",
+          "History of Present Illness",
+          "Findings",
+          "Assessment",
+          "Plan"
+        ]
+      }
+    ]
+  },
+  "summary_cap": {
+    "atomic_propositions": [
+      {
+        "prop_id": "P1",
+        "cap_type": "Symptom",
+        "canonical_concept": "persistent insomnia",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports persistent insomnia"
+      },
+      {
+        "prop_id": "P2",
+        "cap_type": "Symptom",
+        "canonical_concept": "insomnia exacerbated travel",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports insomnia exacerbated by travel"
+      },
+      {
+        "prop_id": "P3",
+        "cap_type": "Symptom",
+        "canonical_concept": "insomnia exacerbated adjusting fall",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports insomnia exacerbated by adjusting to the fall season"
+      },
+      {
+        "prop_id": "P4",
+        "cap_type": "Symptom",
+        "canonical_concept": "trying melatonin meditation and",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports trying melatonin, meditation, and stretching without relief"
+      },
+      {
+        "prop_id": "P5",
+        "cap_type": "Finding",
+        "canonical_concept": "right knee arthritic changes",
+        "category": "Finding",
+        "speaker": "clinician",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "exam"
+        ],
+        "proposition_text": "The right knee has arthritic changes"
+      },
+      {
+        "prop_id": "P6",
+        "cap_type": "Finding",
+        "canonical_concept": "right lower extremity strength",
+        "category": "Finding",
+        "speaker": "clinician",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "exam"
+        ],
+        "proposition_text": "Right lower extremity strength is 4 out of 5"
+      },
+      {
+        "prop_id": "P7",
+        "cap_type": "Diagnosis",
+        "canonical_concept": "chronic insomnia",
+        "category": "Diagnosis",
+        "speaker": "unknown",
+        "predicate": "diagnoses",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "diagnostic"
+        ],
+        "proposition_text": "The patient has chronic insomnia"
+      },
+      {
+        "prop_id": "P8",
+        "cap_type": "Diagnosis",
+        "canonical_concept": "persistent right knee osteoarthritis",
+        "category": "Diagnosis",
+        "speaker": "unknown",
+        "predicate": "diagnoses",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "diagnostic"
+        ],
+        "proposition_text": "The patient has persistent right knee osteoarthritis"
+      },
+      {
+        "prop_id": "P9",
+        "cap_type": "MedicationPlan",
+        "canonical_concept": "order refill fosamax tablet",
+        "category": "MedicationPlan",
+        "speaker": "unknown",
+        "predicate": "prescribes",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "future",
+        "claim_type_tags": [
+          "medication"
+        ],
+        "proposition_text": "Order a refill of fosamax 1 tablet per week with 11 refills"
+      },
+      {
+        "prop_id": "P10",
+        "cap_type": "FollowUp",
+        "canonical_concept": "schedule follow-up neurologist",
+        "category": "FollowUp",
+        "speaker": "unknown",
+        "predicate": "plans",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "future",
+        "claim_type_tags": [
+          "plan"
+        ],
+        "proposition_text": "Schedule follow-up with the neurologist"
+      },
+      {
+        "prop_id": "P11",
+        "cap_type": "Recommendation",
+        "canonical_concept": "recommend continued adherence current",
+        "category": "Recommendation",
+        "speaker": "unknown",
+        "predicate": "recommends",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "plan"
+        ],
+        "proposition_text": "Recommend continued adherence to current MS medications"
+      }
+    ],
+    "filtered_nonverifiable_units": [],
+    "runtime_seconds": 21.8
+  },
+  "cap_alignment": {
+    "cap_precision": 0.18181818181818182,
+    "cap_recall": 0.2,
+    "cap_f1": 0.1904761904761905,
+    "matched_count": 2,
+    "summary_prop_count": 11,
+    "source_prop_count": 10,
+    "matched_pairs": [
+      {
+        "score": 1.0,
+        "summary_prop_id": "P1",
+        "source_prop_id": "CAP6",
+        "summary_text": "The patient reports persistent insomnia",
+        "source_text": "The patient reports insomnia."
+      },
+      {
+        "score": 0.7627,
+        "summary_prop_id": "P2",
+        "source_prop_id": "CAP4",
+        "summary_text": "The patient reports insomnia exacerbated by travel",
+        "source_text": "The patient reports lack of sleep."
+      }
+    ],
+    "unsupported_summary_props": [
+      {
+        "prop_id": "P3",
+        "cap_type": "Symptom",
+        "canonical_concept": "insomnia exacerbated adjusting fall",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports insomnia exacerbated by adjusting to the fall season"
+      },
+      {
+        "prop_id": "P4",
+        "cap_type": "Symptom",
+        "canonical_concept": "trying melatonin meditation and",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports trying melatonin, meditation, and stretching without relief"
+      },
+      {
+        "prop_id": "P5",
+        "cap_type": "Finding",
+        "canonical_concept": "right knee arthritic changes",
+        "category": "Finding",
+        "speaker": "clinician",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "exam"
+        ],
+        "proposition_text": "The right knee has arthritic changes"
+      },
+      {
+        "prop_id": "P6",
+        "cap_type": "Finding",
+        "canonical_concept": "right lower extremity strength",
+        "category": "Finding",
+        "speaker": "clinician",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "exam"
+        ],
+        "proposition_text": "Right lower extremity strength is 4 out of 5"
+      },
+      {
+        "prop_id": "P7",
+        "cap_type": "Diagnosis",
+        "canonical_concept": "chronic insomnia",
+        "category": "Diagnosis",
+        "speaker": "unknown",
+        "predicate": "diagnoses",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "diagnostic"
+        ],
+        "proposition_text": "The patient has chronic insomnia"
+      },
+      {
+        "prop_id": "P8",
+        "cap_type": "Diagnosis",
+        "canonical_concept": "persistent right knee osteoarthritis",
+        "category": "Diagnosis",
+        "speaker": "unknown",
+        "predicate": "diagnoses",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "diagnostic"
+        ],
+        "proposition_text": "The patient has persistent right knee osteoarthritis"
+      },
+      {
+        "prop_id": "P9",
+        "cap_type": "MedicationPlan",
+        "canonical_concept": "order refill fosamax tablet",
+        "category": "MedicationPlan",
+        "speaker": "unknown",
+        "predicate": "prescribes",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "future",
+        "claim_type_tags": [
+          "medication"
+        ],
+        "proposition_text": "Order a refill of fosamax 1 tablet per week with 11 refills"
+      },
+      {
+        "prop_id": "P10",
+        "cap_type": "FollowUp",
+        "canonical_concept": "schedule follow-up neurologist",
+        "category": "FollowUp",
+        "speaker": "unknown",
+        "predicate": "plans",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "future",
+        "claim_type_tags": [
+          "plan"
+        ],
+        "proposition_text": "Schedule follow-up with the neurologist"
+      },
+      {
+        "prop_id": "P11",
+        "cap_type": "Recommendation",
+        "canonical_concept": "recommend continued adherence current",
+        "category": "Recommendation",
+        "speaker": "unknown",
+        "predicate": "recommends",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "plan"
+        ],
+        "proposition_text": "Recommend continued adherence to current MS medications"
+      }
+    ],
+    "missing_source_props": [
+      {
+        "prop_id": "CAP1",
+        "cap_type": "Symptom",
+        "canonical_concept": "knee surgery",
+        "category": "Symptom",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient has a lingering issue with their knee surgery."
+      },
+      {
+        "prop_id": "CAP2",
+        "cap_type": "Symptom",
+        "canonical_concept": "pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports pain in the left hand."
+      },
+      {
+        "prop_id": "CAP3",
+        "cap_type": "Symptom",
+        "canonical_concept": "joint pain",
+        "category": "Symptom",
+        "speaker": "doctor",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports issues with their joints."
+      },
+      {
+        "prop_id": "CAP5",
+        "cap_type": "Symptom",
+        "canonical_concept": "chest pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "denies",
+        "status": "negated",
+        "visit_state": "historical",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient denies chest pain."
+      },
+      {
+        "prop_id": "CAP7",
+        "cap_type": "Order",
+        "canonical_concept": "refill",
+        "category": "Order",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "planned",
+        "temporality": "future",
+        "proposition_text": "The doctor will order a refill on fosamax."
+      },
+      {
+        "prop_id": "CAP8",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "fosamax",
+        "category": "MedicationStatement",
+        "speaker": "doctor",
+        "predicate": "has",
+        "status": "affirmed",
+        "visit_state": "planned",
+        "temporality": "future",
+        "proposition_text": "The doctor will continue the patient on fosamax."
+      },
+      {
+        "prop_id": "CAP9",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "fosamax",
+        "category": "MedicationStatement",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient is taking fosamax."
+      },
+      {
+        "prop_id": "CAP10",
+        "cap_type": "ProblemHistory",
+        "canonical_concept": "stress",
+        "category": "ProblemHistory",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "recent",
+        "proposition_text": "The patient reports a stressful summer."
+      }
+    ]
+  },
+  "reference_gpt_f1_items": {
+    "active_problems_symptoms": [
+      "right knee discomfort",
+      "insomnia",
+      "weakness in the lower extremities",
+      "osteoporosis",
+      "multiple sclerosis",
+      "weakness of the bilateral lower extremities",
+      "right knee arthritis",
+      "arthritic changes",
+      "knee surgery"
+    ],
+    "negated_findings": [
+      "Denies chest pain",
+      "Denies dyspnea",
+      "Denies shortness of breath"
+    ],
+    "uncertain_findings": [
+      "Arthritic changes in the right knee"
+    ],
+    "medication_treatment": [
+      "Fosamax 1 tab per week",
+      "Eleven refills were ordered today"
+    ],
+    "plan_followup": [
+      "follow up with his neurologist",
+      "comply with his medication regimen"
+    ],
+    "_chunk_count": [
+      "4"
+    ]
+  },
+  "summary_gpt_f1_items": {
+    "active_problems_symptoms": [
+      "persistent insomnia",
+      "lingering weakness in right knee",
+      "right knee with arthritic changes"
+    ],
+    "negated_findings": [
+      "denies chest pain",
+      "denies shortness of breath",
+      "no issues with multiple sclerosis medications",
+      "no recent bone fractures"
+    ],
+    "uncertain_findings": [],
+    "medication_treatment": [
+      "refill of fosamax 1 tablet per week with 11 refills",
+      "continued adherence to current MS medications"
+    ],
+    "plan_followup": [
+      "schedule follow-up with the neurologist"
+    ],
+    "_chunk_count": [
+      "1"
+    ]
+  },
+  "gpt_f1_alignment": {
+    "by_category": {
+      "active_problems_symptoms": {
+        "precision": 0.6666666666666666,
+        "recall": 0.2222222222222222,
+        "f1": 0.3333333333333333,
+        "matched_count": 2,
+        "pred_count": 3,
+        "ref_count": 9,
+        "matches": [
+          {
+            "score": 0.6667,
+            "pred_text": "right knee with arthritic changes",
+            "ref_text": "arthritic changes"
+          },
+          {
+            "score": 0.6667,
+            "pred_text": "persistent insomnia",
+            "ref_text": "insomnia"
+          }
+        ],
+        "unsupported_pred_items": [
+          "lingering weakness in right knee"
+        ],
+        "missing_ref_items": [
+          "right knee discomfort",
+          "weakness in the lower extremities",
+          "osteoporosis",
+          "multiple sclerosis",
+          "weakness of the bilateral lower extremities",
+          "right knee arthritis",
+          "knee surgery"
+        ]
+      },
+      "negated_findings": {
+        "precision": 0.5,
+        "recall": 0.6666666666666666,
+        "f1": 0.5714285714285715,
+        "matched_count": 2,
+        "pred_count": 4,
+        "ref_count": 3,
+        "matches": [
+          {
+            "score": 1.0,
+            "pred_text": "denies shortness of breath",
+            "ref_text": "Denies shortness of breath"
+          },
+          {
+            "score": 1.0,
+            "pred_text": "denies chest pain",
+            "ref_text": "Denies chest pain"
+          }
+        ],
+        "unsupported_pred_items": [
+          "no issues with multiple sclerosis medications",
+          "no recent bone fractures"
+        ],
+        "missing_ref_items": [
+          "Denies dyspnea"
+        ]
+      },
+      "uncertain_findings": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "matched_count": 0,
+        "pred_count": 0,
+        "ref_count": 1,
+        "matches": [],
+        "unsupported_pred_items": [],
+        "missing_ref_items": [
+          "Arthritic changes in the right knee"
+        ]
+      },
+      "medication_treatment": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "matched_count": 0,
+        "pred_count": 2,
+        "ref_count": 2,
+        "matches": [],
+        "unsupported_pred_items": [
+          "refill of fosamax 1 tablet per week with 11 refills",
+          "continued adherence to current MS medications"
+        ],
+        "missing_ref_items": [
+          "Fosamax 1 tab per week",
+          "Eleven refills were ordered today"
+        ]
+      },
+      "plan_followup": {
+        "precision": 1.0,
+        "recall": 0.5,
+        "f1": 0.6666666666666666,
+        "matched_count": 1,
+        "pred_count": 1,
+        "ref_count": 2,
+        "matches": [
+          {
+            "score": 0.75,
+            "pred_text": "schedule follow-up with the neurologist",
+            "ref_text": "follow up with his neurologist"
+          }
+        ],
+        "unsupported_pred_items": [],
+        "missing_ref_items": [
+          "comply with his medication regimen"
+        ]
+      }
+    }
+  },
+  "reference_nair_concepts": {
+    "sections": [
+      {
+        "heading": "Clinical Note",
+        "section_value": "CHIEF COMPLAINT\nAnnual exam.\nHISTORY OF PRESENT ILLNESS\nJerry Nguyen a 54-year-old male with a past medical history significant for osteoporosis, and multiple sclerosis, who presents for an annual exam.\nThe patient states he has been traveling all over the country. He notes it has been a stressful summer and adjusting to everything in the fall.\nThe patient reports a lack of sleep. He has tried melatonin, meditation, and stretching every morning, but nothing has helped.\nFor treatment of his osteoporosis, he is on Fosamax. He denies any issues with his joints. He denies any recent broken bones.\nRegarding his multiple sclerosis, he last saw the neurologist 6 months ago. He is taking his medication and denies any issues with this. Previously, he experienced right leg weakness, however, this has resolved.\nHe does have some lingering issues with his right knee after previous surgery, but nothing out of the ordinary.\nThe patient denies any chest pain or shortness of breath.",
+        "medical_concepts": [
+          "annual exam",
+          "osteoporosis",
+          "multiple sclerosis",
+          "lack of sleep",
+          "insomnia",
+          "melatonin",
+          "meditation",
+          "stretching",
+          "Fosamax",
+          "joint issues",
+          "bone fracture",
+          "neurologist",
+          "right leg weakness",
+          "right knee problem",
+          "knee surgery",
+          "chest pain",
+          "shortness of breath"
+        ]
+      },
+      {
+        "heading": "Clinical Note",
+        "section_value": "REVIEW OF SYSTEMS\n• Cardiovascular: Denies chest pain or dyspnea.\n• Respiratory: Denies shortness of breath.\n• Musculoskeletal: Endorses right knee discomfort.\n• Neurological: Endorses insomnia.\nPHYSICAL EXAMINATION\n• Respiratory: Lungs are clear to auscultation bilaterally. No wheezes, rales, or rhonchi.\n• Musculoskeletal: Weakness in the lower extremities, 4/5 on the right and 3/5 on the left. Reflexes are good. Arthritic changes in the right knee.\nRESULTS\nX-ray of the right knee demonstrates some arthritic changes.",
+        "medical_concepts": [
+          "chest pain",
+          "dyspnea",
+          "shortness of breath",
+          "right knee discomfort",
+          "insomnia",
+          "wheezes",
+          "rales",
+          "rhonchi",
+          "weakness in the lower extremities",
+          "arthritic changes in the right knee",
+          "X-ray of the right knee",
+          "arthritic changes"
+        ]
+      },
+      {
+        "heading": "Clinical Note",
+        "section_value": "ASSESSMENT\nJerry Nguyen a 54-year-old male with a past medical history significant for osteoporosis, and multiple sclerosis, who presents for an annual exam.\nPLAN\nOsteoporosis.\n• Medical Reasoning: The patient is doing well with Fosamax.\n• Medical Treatment: Continue Fosamax 1 tab per week. Eleven refills were ordered today.\nMultiple Sclerosis.\n• Medical Reasoning: The patient is experiencing weakness of the bilateral lower extremities. He has been seeing his neurologist on a consistent basis and has been compliant with medication.\n• Medical Treatment: He will continue to follow up with his neurologist and comply with his medication regimen.\nRight knee arthritis.",
+        "medical_concepts": [
+          "osteoporosis",
+          "multiple sclerosis",
+          "weakness of the bilateral lower extremities",
+          "right knee arthritis",
+          "Fosamax"
+        ]
+      },
+      {
+        "heading": "Clinical Note",
+        "section_value": "• Medical Reasoning: The patient recently underwent knee surgery. A recent right knee x-ray demonstrated some arthritic changes.\nPatient Agreements: The patient understands and agrees with the recommended medical treatment plan.",
+        "medical_concepts": [
+          "knee surgery",
+          "right knee x-ray",
+          "arthritic changes"
+        ]
+      }
+    ],
+    "medical_concepts": [
+      "annual exam",
+      "osteoporosis",
+      "multiple sclerosis",
+      "lack of sleep",
+      "insomnia",
+      "melatonin",
+      "meditation",
+      "stretching",
+      "Fosamax",
+      "joint issues",
+      "bone fracture",
+      "neurologist",
+      "right leg weakness",
+      "right knee problem",
+      "knee surgery",
+      "chest pain",
+      "shortness of breath",
+      "dyspnea",
+      "right knee discomfort",
+      "wheezes",
+      "rales",
+      "rhonchi",
+      "weakness in the lower extremities",
+      "arthritic changes in the right knee",
+      "X-ray of the right knee",
+      "arthritic changes",
+      "weakness of the bilateral lower extremities",
+      "right knee arthritis",
+      "right knee x-ray"
+    ],
+    "section_count": 4
+  },
+  "summary_nair_concepts": {
+    "sections": [
+      {
+        "heading": "S",
+        "section_value": "The patient reports persistent insomnia, exacerbated by travel and adjusting to the fall season, and reports trying melatonin, meditation, and stretching without relief. He also notes lingering weakness in his right knee following surgery, but otherwise denies chest pain, shortness of breath, or other concerning symptoms. He reports no issues with his multiple sclerosis medications or recent bone fractures.",
+        "medical_concepts": [
+          "insomnia",
+          "melatonin",
+          "meditation",
+          "stretching",
+          "weakness in right knee",
+          "knee surgery",
+          "chest pain",
+          "shortness of breath",
+          "multiple sclerosis",
+          "multiple sclerosis medications",
+          "bone fractures"
+        ]
+      },
+      {
+        "heading": "O",
+        "section_value": "Physical exam reveals a right lower extremity strength of 4 out of 5 and a right knee with arthritic changes. Vital signs are within normal limits. Lungs are clear to auscultation. Heart sounds are regular.",
+        "medical_concepts": [
+          "right lower extremity weakness",
+          "right knee arthritis",
+          "vital signs",
+          "lung auscultation",
+          "heart sounds"
+        ]
+      },
+      {
+        "heading": "A",
+        "section_value": "The patient's primary problems include chronic insomnia and persistent right knee osteoarthritis. His multiple sclerosis is currently well-controlled.",
+        "medical_concepts": [
+          "chronic insomnia",
+          "right knee osteoarthritis",
+          "multiple sclerosis"
+        ]
+      },
+      {
+        "heading": "P",
+        "section_value": "Order a refill of fosamax 1 tablet per week with 11 refills. Schedule follow-up with the neurologist. Recommend continued adherence to current MS medications.",
+        "medical_concepts": [
+          "fosamax",
+          "neurologist",
+          "multiple sclerosis",
+          "MS medications"
+        ]
+      }
+    ],
+    "medical_concepts": [
+      "insomnia",
+      "melatonin",
+      "meditation",
+      "stretching",
+      "weakness in right knee",
+      "knee surgery",
+      "chest pain",
+      "shortness of breath",
+      "multiple sclerosis",
+      "multiple sclerosis medications",
+      "bone fractures",
+      "right lower extremity weakness",
+      "right knee arthritis",
+      "vital signs",
+      "lung auscultation",
+      "heart sounds",
+      "chronic insomnia",
+      "right knee osteoarthritis",
+      "fosamax",
+      "neurologist",
+      "MS medications"
+    ],
+    "section_count": 4
+  },
+  "nair_alignment": {
+    "pred_concepts": [
+      "insomnia",
+      "melatonin",
+      "meditation",
+      "stretching",
+      "weakness in right knee",
+      "knee surgery",
+      "chest pain",
+      "shortness of breath",
+      "multiple sclerosis",
+      "multiple sclerosis medications",
+      "bone fractures",
+      "right lower extremity weakness",
+      "right knee arthritis",
+      "vital signs",
+      "lung auscultation",
+      "heart sounds",
+      "chronic insomnia",
+      "right knee osteoarthritis",
+      "fosamax",
+      "neurologist",
+      "MS medications"
+    ],
+    "ref_concepts": [
+      "annual exam",
+      "osteoporosis",
+      "multiple sclerosis",
+      "lack of sleep",
+      "insomnia",
+      "melatonin",
+      "meditation",
+      "stretching",
+      "Fosamax",
+      "joint issues",
+      "bone fracture",
+      "neurologist",
+      "right leg weakness",
+      "right knee problem",
+      "knee surgery",
+      "chest pain",
+      "shortness of breath",
+      "dyspnea",
+      "right knee discomfort",
+      "wheezes",
+      "rales",
+      "rhonchi",
+      "weakness in the lower extremities",
+      "arthritic changes in the right knee",
+      "X-ray of the right knee",
+      "arthritic changes",
+      "weakness of the bilateral lower extremities",
+      "right knee arthritis",
+      "right knee x-ray"
+    ],
+    "precision_alignment": {
+      "found_b": [
+        "insomnia",
+        "melatonin",
+        "meditation",
+        "stretching",
+        "weakness in right knee",
+        "knee surgery",
+        "chest pain",
+        "shortness of breath",
+        "multiple sclerosis",
+        "multiple sclerosis medications",
+        "bone fractures",
+        "right lower extremity weakness",
+        "right knee arthritis",
+        "lung auscultation",
+        "chronic insomnia",
+        "right knee osteoarthritis",
+        "fosamax",
+        "neurologist",
+        "MS medications"
+      ],
+      "not_found_b": [
+        "vital signs",
+        "heart sounds"
+      ],
+      "chunk_count": 1,
+      "chunk_results": [
+        {
+          "found_b": [
+            "insomnia",
+            "melatonin",
+            "meditation",
+            "stretching",
+            "weakness in right knee",
+            "knee surgery",
+            "chest pain",
+            "shortness of breath",
+            "multiple sclerosis",
+            "multiple sclerosis medications",
+            "bone fractures",
+            "right lower extremity weakness",
+            "right knee arthritis",
+            "lung auscultation",
+            "chronic insomnia",
+            "right knee osteoarthritis",
+            "fosamax",
+            "neurologist",
+            "MS medications"
+          ],
+          "not_found_b": [
+            "vital signs",
+            "heart sounds"
+          ]
+        }
+      ]
+    },
+    "recall_alignment": {
+      "found_b": [
+        "osteoporosis",
+        "multiple sclerosis",
+        "lack of sleep",
+        "insomnia",
+        "melatonin",
+        "meditation",
+        "stretching",
+        "Fosamax",
+        "joint issues",
+        "neurologist",
+        "right leg weakness",
+        "right knee problem",
+        "knee surgery",
+        "chest pain",
+        "shortness of breath",
+        "right knee discomfort",
+        "arthritic changes in the right knee",
+        "arthritic changes",
+        "right knee arthritis"
+      ],
+      "not_found_b": [
+        "annual exam",
+        "bone fracture",
+        "dyspnea",
+        "wheezes",
+        "rales",
+        "rhonchi",
+        "weakness in the lower extremities",
+        "X-ray of the right knee",
+        "weakness of the bilateral lower extremities",
+        "right knee x-ray"
+      ],
+      "chunk_count": 2,
+      "chunk_results": [
+        {
+          "found_b": [
+            "osteoporosis",
+            "multiple sclerosis",
+            "lack of sleep",
+            "insomnia",
+            "melatonin",
+            "meditation",
+            "stretching",
+            "Fosamax",
+            "joint issues",
+            "neurologist",
+            "right leg weakness",
+            "right knee problem",
+            "knee surgery",
+            "chest pain",
+            "shortness of breath",
+            "right knee discomfort",
+            "arthritic changes in the right knee"
+          ],
+          "not_found_b": [
+            "annual exam",
+            "bone fracture",
+            "dyspnea",
+            "wheezes",
+            "rales",
+            "rhonchi",
+            "weakness in the lower extremities"
+          ]
+        },
+        {
+          "found_b": [
+            "arthritic changes",
+            "right knee arthritis"
+          ],
+          "not_found_b": [
+            "X-ray of the right knee",
+            "weakness of the bilateral lower extremities",
+            "right knee x-ray"
+          ]
+        }
+      ]
+    }
+  },
+  "semantic_cap_audit": {
+    "source_cap_recall": [
+      {
+        "cap_id": "P1",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P2",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P3",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P4",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P5",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P6",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P7",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P8",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P9",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P10",
+        "judgment": "missing",
+        "reason": null
+      }
+    ],
+    "summary_cap_precision": [
+      {
+        "cap_id": "P1",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P2",
+        "judgment": "unsupported",
+        "reason": null
+      },
+      {
+        "cap_id": "P3",
+        "judgment": "unsupported",
+        "reason": null
+      },
+      {
+        "cap_id": "P4",
+        "judgment": "unsupported",
+        "reason": null
+      },
+      {
+        "cap_id": "P5",
+        "judgment": "unsupported",
+        "reason": null
+      },
+      {
+        "cap_id": "P6",
+        "judgment": "unsupported",
+        "reason": null
+      },
+      {
+        "cap_id": "P7",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P8",
+        "judgment": "unsupported",
+        "reason": null
+      },
+      {
+        "cap_id": "P9",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P10",
+        "judgment": "unsupported",
+        "reason": null
+      },
+      {
+        "cap_id": "P11",
+        "judgment": "unsupported",
+        "reason": null
+      }
+    ],
+    "metrics": {
+      "semantic_cap_precision": 0.1364,
+      "semantic_cap_recall": 0.55,
+      "semantic_cap_f1": 0.2185,
+      "semantic_cap_precision_supported_count": 0,
+      "semantic_cap_precision_partial_count": 3,
+      "semantic_cap_precision_denominator": 11,
+      "semantic_cap_recall_supported_count": 4,
+      "semantic_cap_recall_partial_count": 3,
+      "semantic_cap_recall_denominator": 10,
+      "semantic_cap_low_value_source_count": 0,
+      "semantic_cap_low_value_summary_count": 0,
+      "semantic_cap_missing_count": 3,
+      "semantic_cap_unsupported_count": 8,
+      "semantic_cap_contradicted_source_count": 0,
+      "semantic_cap_contradicted_summary_count": 0
+    }
+  },
+  "safety_judgment": null,
+  "section_judgment": {
+    "section_miscategorizations": [],
+    "summary_statistics": {
+      "section_appropriateness_score": 1.0,
+      "section_miscategorization_count": 0,
+      "major_section_miscategorization_count": 0
+    }
+  },
+  "pdsqi_judgment": {
+    "citation_applicable": 0,
+    "citation": 0,
+    "accurate": 3,
+    "thorough": 3,
+    "useful": 3,
+    "organized": 4,
+    "comprehensible": 5,
+    "succinct": 5,
+    "abstraction": 1,
+    "synthesized": 4,
+    "voice_summ": 0,
+    "voice_note": 0,
+    "pdsqi_core_mean": 3.8571
+  },
+  "llm_checklist_judgment": {
+    "content_preservation_core": 3,
+    "noise_suppression": 5,
+    "lay_expression_preservation": 3,
+    "state_update_fidelity": 3,
+    "temporality_preservation": 3,
+    "problem_evidence_linkage": 3,
+    "state_plan_separation": 3,
+    "section_organization_appropriateness": 3,
+    "overall_clinical_usability": 3,
+    "clinically_meaningful_omission": "Yes",
+    "clinically_concerning_hallucination": "Yes",
+    "checklist_a_mean": 3.6667,
+    "checklist_b_mean": 3.0,
+    "checklist_c_mean": 3.0,
+    "llm_checklist_abc_mean": 3.25,
+    "llm_checklist_mean_no_usability": 3.25,
+    "llm_checklist_total_score": 29,
+    "llm_checklist_mean": 3.2222,
+    "llm_checklist_meaningful_omission_yes": 1,
+    "llm_checklist_concerning_hallucination_yes": 1
+  },
+  "metrics": {
+    "case_id": "D2N091",
+    "method": "cap_event",
+    "template": "soap",
+    "source_cap_count": 10,
+    "event_plan_count": 1,
+    "summary_cap_count": 11,
+    "cap_matched_count": 2,
+    "cap_precision": 0.1818,
+    "cap_recall": 0.2,
+    "cap_f1": 0.1905,
+    "unsupported_summary_cap_count": 9,
+    "missing_source_cap_count": 8,
+    "summary_runtime_seconds": null,
+    "summary_cap_runtime_seconds": 21.8,
+    "event_plan_runtime_seconds": null,
+    "rouge_l_f1_vs_reference": 0.2008,
+    "token_f1_vs_reference": 0.3465,
+    "gptf1_macro_f1": 0.3143,
+    "nair_gpt_precision": 0.9048,
+    "nair_gpt_recall": 0.6552,
+    "nair_gpt_f1": 0.76,
+    "semantic_cap_precision": 0.1364,
+    "semantic_cap_recall": 0.55,
+    "semantic_cap_f1": 0.2185,
+    "hallucination_count": null,
+    "major_hallucination_count": null,
+    "omission_count": null,
+    "major_omission_count": null,
+    "section_appropriateness_score": 1.0,
+    "section_miscategorization_count": 0,
+    "major_section_miscategorization_count": 0,
+    "pdsqi_core_mean": 3.8571,
+    "pdsqi_accurate": 3,
+    "pdsqi_thorough": 3,
+    "llm_checklist_total_score": 29,
+    "llm_checklist_mean": 3.2222,
+    "llm_checklist_mean_no_usability": 3.25,
+    "checklist_a_mean": 3.6667,
+    "checklist_b_mean": 3.0,
+    "checklist_c_mean": 3.0,
+    "llm_checklist_abc_mean": 3.25,
+    "content_preservation_core": 3,
+    "noise_suppression": 5,
+    "lay_expression_preservation": 3,
+    "state_update_fidelity": 3,
+    "temporality_preservation": 3,
+    "problem_evidence_linkage": 3,
+    "state_plan_separation": 3,
+    "section_organization_appropriateness": 3,
+    "overall_clinical_usability": 3,
+    "llm_checklist_meaningful_omission_yes": 1,
+    "llm_checklist_concerning_hallucination_yes": 1,
+    "gptf1_active_problems_symptoms_precision": 0.6667,
+    "gptf1_active_problems_symptoms_recall": 0.2222,
+    "gptf1_active_problems_symptoms_f1": 0.3333,
+    "gptf1_active_problems_symptoms_pred_count": 3,
+    "gptf1_active_problems_symptoms_ref_count": 9,
+    "gptf1_negated_findings_precision": 0.5,
+    "gptf1_negated_findings_recall": 0.6667,
+    "gptf1_negated_findings_f1": 0.5714,
+    "gptf1_negated_findings_pred_count": 4,
+    "gptf1_negated_findings_ref_count": 3,
+    "gptf1_uncertain_findings_precision": 0.0,
+    "gptf1_uncertain_findings_recall": 0.0,
+    "gptf1_uncertain_findings_f1": 0.0,
+    "gptf1_uncertain_findings_pred_count": 0,
+    "gptf1_uncertain_findings_ref_count": 1,
+    "gptf1_medication_treatment_precision": 0.0,
+    "gptf1_medication_treatment_recall": 0.0,
+    "gptf1_medication_treatment_f1": 0.0,
+    "gptf1_medication_treatment_pred_count": 2,
+    "gptf1_medication_treatment_ref_count": 2,
+    "gptf1_plan_followup_precision": 1.0,
+    "gptf1_plan_followup_recall": 0.5,
+    "gptf1_plan_followup_f1": 0.6667,
+    "gptf1_plan_followup_pred_count": 1,
+    "gptf1_plan_followup_ref_count": 2,
+    "nair_pred_concept_count": 21,
+    "nair_ref_concept_count": 29,
+    "nair_precision_match_count": 19,
+    "nair_recall_match_count": 19,
+    "semantic_cap_precision_supported_count": 0,
+    "semantic_cap_precision_partial_count": 3,
+    "semantic_cap_precision_denominator": 11,
+    "semantic_cap_recall_supported_count": 4,
+    "semantic_cap_recall_partial_count": 3,
+    "semantic_cap_recall_denominator": 10,
+    "semantic_cap_low_value_source_count": 0,
+    "semantic_cap_low_value_summary_count": 0,
+    "semantic_cap_missing_count": 3,
+    "semantic_cap_unsupported_count": 8,
+    "semantic_cap_contradicted_source_count": 0,
+    "semantic_cap_contradicted_summary_count": 0,
+    "pdsqi_useful": 3,
+    "pdsqi_organized": 4,
+    "pdsqi_comprehensible": 5,
+    "pdsqi_succinct": 5,
+    "pdsqi_synthesized": 4
+  }
+}

@@ -1,0 +1,181 @@
+Case: D2N027
+
+Problem List and Visit State Tracking
+
+Problem List
+- hand pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T11,T9
+  Summary: The patient reports pain in the left hand.
+  ClusterId: CL1
+  TemporalProfile: current
+  Updates:
+  - CAP1: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T9,T11 :: The patient reports pain in the left hand.
+- valve stenosis | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T19
+  Summary: The patient is concerned about the durability of their heart valve.
+  ClusterId: CL4
+  TemporalProfile: historical
+  Updates:
+  - CAP3: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=historical turns=T19 :: The patient is concerned about the durability of their heart valve.
+- stress | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T19
+  Summary: The patient reports feeling tired.
+  ClusterId: CL5
+  TemporalProfile: current
+  Updates:
+  - CAP17: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T19 :: The patient reports feeling tired.
+- testicular nodule | verification_status=confirmed | clinical_status=active | modalities=assessment,interview | speakers=doctor,patient | evidence=T25,T46,T58
+  Summary: The right testicular nodule is about two to three millimeters.
+  ClusterId: CL6
+  TemporalProfile: current
+  Updates:
+  - CAP10: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T25 :: The patient reports a nodule on the right testicle.
+  - CAP12: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T25 :: The patient is concerned about a testicular nodule.
+  - CAP4: content_source=doctor modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T46 :: The doctor recommends evaluation of the right testicle nodule by urology.
+  - CAP9: content_source=doctor modality=assessment verification_status=confirmed clinical_status=active temporality=current turns=T58 :: The right testicular nodule is about two to three millimeters.
+- pursed lips breathing | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T25
+  Summary: The patient reports pursed lips breathing when breathing.
+  ClusterId: CL7
+  TemporalProfile: current
+  Updates:
+  - CAP11: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T25 :: The patient reports pursed lips breathing when breathing.
+- tiredness | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T25,T31
+  Summary: The patient denies tiredness is due to depression.
+  ClusterId: CL8
+  TemporalProfile: current
+  Updates:
+  - CAP13: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T25 :: The patient denies tiredness is due to depression.
+  - CAP20: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T31 :: The patient reports tiredness.
+- sleep | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T31
+  Summary: The patient reports sleeping six to seven hours.
+  ClusterId: CL9
+  TemporalProfile: current
+  Updates:
+  - CAP14: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T31 :: The patient reports sleeping six to seven hours.
+- snoring | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T33
+  Summary: The patient reports snoring.
+  ClusterId: CL10
+  TemporalProfile: current
+  Updates:
+  - CAP19: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T33 :: The patient reports snoring.
+- elevated alkaline phosphatase | verification_status=unconfirmed | clinical_status=active | modalities=assessment,unknown | speakers=doctor | evidence=T41,T56
+  Summary: The doctor has ordered an alkaline phosphatase and a GGT.
+  ClusterId: CL16
+  TemporalProfile: recent
+  Updates:
+  - CAP7: content_source=doctor modality=unknown verification_status=unconfirmed clinical_status=active temporality=recent turns=T41 :: An elevated alkaline phosphatase level was observed in recent labs.
+  - CAP8: content_source=doctor modality=assessment verification_status=unconfirmed clinical_status=active temporality=recent turns=T56 :: The doctor has ordered an alkaline phosphatase and a GGT.
+- pursed lip breathing | verification_status=confirmed | clinical_status=active | modalities=assessment,exam | speakers=doctor | evidence=T45,T54
+  Summary: The patient has been noted to purse his lips while breathing.
+  ClusterId: CL18
+  TemporalProfile: current
+  Updates:
+  - CAP15: content_source=doctor modality=exam verification_status=confirmed clinical_status=active temporality=current turns=T45 :: The doctor observed pursed lip breathing.
+  - CAP5: content_source=doctor modality=assessment verification_status=confirmed clinical_status=active temporality=current turns=T54 :: The patient has been noted to purse his lips while breathing.
+- low exhalation | verification_status=confirmed | clinical_status=active | modalities=exam | speakers=doctor | evidence=T45
+  Summary: The doctor observed low exhalation.
+  ClusterId: CL19
+  TemporalProfile: current
+  Updates:
+  - CAP18: content_source=doctor modality=exam verification_status=confirmed clinical_status=active temporality=current turns=T45 :: The doctor observed low exhalation.
+- pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T47
+  Summary: The patient reports pain.
+  ClusterId: CL22
+  TemporalProfile: current
+  Updates:
+  - CAP21: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T47 :: The patient reports pain.
+- low exhalation phase | verification_status=confirmed | clinical_status=active | modalities=assessment | speakers=doctor | evidence=T54
+  Summary: The patient's exhalation phase is low.
+  ClusterId: CL26
+  TemporalProfile: current
+  Updates:
+  - CAP16: content_source=doctor modality=assessment verification_status=confirmed clinical_status=active temporality=current turns=T54 :: The patient's exhalation phase is low.
+- fatigue | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T57
+  Summary: The patient reports feeling more fatigued at the end of the day.
+  ClusterId: CL28
+  TemporalProfile: end of the day
+  Updates:
+  - CAP2: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=end of the day turns=T57 :: The patient reports feeling more fatigued at the end of the day.
+- bicycle riding | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T57
+  Summary: The patient bicycles around 20 to 30 miles at a time.
+  ClusterId: CL29
+  TemporalProfile: current
+  Updates:
+  - CAP6: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T57 :: The patient bicycles around 20 to 30 miles at a time.
+
+Medication Tracking
+- [MedicationChange] echocardiogram | verification_status=unconfirmed | clinical_status=planned | modalities=interview | speakers=doctor | evidence=T15
+  Summary: The doctor ordered an echocardiogram.
+  ClusterId: CL3
+  TemporalProfile: future
+  PlannedChanges:
+  - The doctor ordered an echocardiogram. (T15)
+  Updates:
+  - CAP29: content_source=doctor modality=interview verification_status=unconfirmed clinical_status=planned temporality=future turns=T15 :: The doctor ordered an echocardiogram.
+- [MedicationState] clindamycin | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=doctor | evidence=T38
+  Summary: The patient is taking clindamycin prior to dental procedures.
+  ClusterId: CL11
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient is taking clindamycin prior to dental procedures. (T38)
+  Updates:
+  - CAP35: content_source=doctor modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T38 :: The patient is taking clindamycin prior to dental procedures.
+- [MedicationState] vitamin d3 | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=doctor | evidence=T38
+  Summary: The patient is currently taking vitamin D3.
+  ClusterId: CL12
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient is currently taking vitamin D3. (T38)
+  Updates:
+  - CAP36: content_source=doctor modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T38 :: The patient is currently taking vitamin D3.
+- [MedicationChange] mmr vaccine | verification_status=unconfirmed | clinical_status=planned | modalities=interview | speakers=doctor | evidence=T52
+  Summary: The doctor recommends the patient receive an MMR vaccine.
+  ClusterId: CL24
+  TemporalProfile: future
+  PlannedChanges:
+  - The doctor recommends the patient receive an MMR vaccine. (T52)
+  Updates:
+  - CAP23: content_source=doctor modality=interview verification_status=unconfirmed clinical_status=planned temporality=future turns=T52 :: The doctor recommends the patient receive an MMR vaccine.
+- [MedicationChange] shingles vaccine | verification_status=unconfirmed | clinical_status=planned | modalities=interview | speakers=doctor | evidence=T52
+  Summary: The doctor recommends the patient receive a shingles vaccine.
+  ClusterId: CL25
+  TemporalProfile: future
+  PlannedChanges:
+  - The doctor recommends the patient receive a shingles vaccine. (T52)
+  Updates:
+  - CAP24: content_source=doctor modality=interview verification_status=unconfirmed clinical_status=planned temporality=future turns=T52 :: The doctor recommends the patient receive a shingles vaccine.
+
+Other Structured States
+- [TestResult] stress test | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T14
+  Summary: The patient underwent a stress test on September 9th, 2019.
+  ClusterId: CL2
+  TemporalProfile: September 9th, 2019
+- [Plan] stress test | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T39
+  Summary: A stress test is ordered.
+  ClusterId: CL13
+  TemporalProfile: future
+- [Plan] cardiology follow-up | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T39
+  Summary: Follow-up with cardiology is recommended.
+  ClusterId: CL14
+  TemporalProfile: future
+- [Plan] echocardiogram | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T39
+  Summary: An echocardiogram is ordered.
+  ClusterId: CL15
+  TemporalProfile: future
+- [TestResult] alkaline phosphatase | verification_status=unconfirmed | clinical_status=active | modalities=interview,test_result | speakers=doctor,lab | evidence=T41,T56
+  Summary: The patient's alkaline phosphatase level is 156.
+  ClusterId: CL17
+  TemporalProfile: current, recent
+- [Plan] pulmonary function test | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T45
+  Summary: A pulmonary function test is ordered.
+  ClusterId: CL20
+  TemporalProfile: future
+- [Plan] urology referral | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T46
+  Summary: A referral to urology is placed.
+  ClusterId: CL21
+  TemporalProfile: future
+- [FollowUp] wellness visit | verification_status=unconfirmed | clinical_status=planned | modalities=interview | speakers=doctor | evidence=T49
+  Summary: The doctor recommends a wellness visit in approximately one year.
+  ClusterId: CL23
+  TemporalProfile: 1 year
+- [TestResult] gt | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=doctor | evidence=T56
+  Summary: A GT level is elevated.
+  ClusterId: CL27
+  TemporalProfile: current

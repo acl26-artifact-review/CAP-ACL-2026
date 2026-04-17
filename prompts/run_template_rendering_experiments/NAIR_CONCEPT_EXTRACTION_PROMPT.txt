@@ -1,0 +1,40 @@
+Given the following snippet of a medical dialogue summary, extract the medical
+concepts (symptoms, diseases, conditions, allergies, lab tests, etc.) present.
+
+The heading of the section from which the summary was extracted will also be
+provided.
+
+--- Example 1 ---
+Pertinent Negatives: Patient reports no fever, no chest pain, shortness of breath,
+and cough. Patient also reports having no trouble with swallowing.
+
+Medical Concepts: ["fever", "chest pain", "shortness of breath", "cough", "swallowing difficulty"]
+--- Example 1 ---
+
+--- Example 2 ---
+Pertinent Positives: Patient ongoing abdominal pain for the past 5 days, nausea,
+and some diarrhea. Patient had colonoscopy done in May 2021.
+
+Medical Concepts: ["abdominal pain", "nausea", "diarrhea", "colonoscopy"]
+--- Example 2 ---
+
+--- Example 3 ---
+Pertinent Unknowns: Patient is unsure about penicillin allergy and family history of diabetes.
+
+Medical Concepts: ["penicillin allergy", "family history of diabetes"]
+--- Example 3 ---
+
+--- Example 4 ---
+Medical History: Patient reports some seizure disorder in the past, and had last MRI on DATE_1.
+
+Medical Concepts: ["seizure disorder", "MRI"]
+--- Example 4 ---
+
+Here is the example to extract medical concepts from:
+
+{section_heading}: {section_value}
+
+Return valid JSON only:
+{{
+  "medical_concepts": []
+}}

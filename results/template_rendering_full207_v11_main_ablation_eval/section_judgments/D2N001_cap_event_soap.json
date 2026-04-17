@@ -1,0 +1,30 @@
+{
+  "section_miscategorizations": [
+    {
+      "text": "The patient's echocardiogram shows low-ish pumping function of the heart at about 45% and mitral regurgitation.",
+      "current_section": "O",
+      "expected_section": "A",
+      "severity": "minor",
+      "reason": "The exact same echocardiogram finding is repeated in the Assessment section as part of the diagnostic impression. Having it also in O is redundant and blurs the distinction between raw data and synthesized assessment, though it is not seriously misleading."
+    },
+    {
+      "text": "The patient will continue on lisinopril.",
+      "current_section": "P",
+      "expected_section": "S",
+      "severity": "major",
+      "reason": "This is a statement of the current medication regimen rather than a new change or explicit order; per instructions, ongoing medications belong in S unless framed as a treatment change or order."
+    },
+    {
+      "text": "The doctor wants the patient to take lisinopril as directed.",
+      "current_section": "P",
+      "expected_section": "P",
+      "severity": "minor",
+      "reason": "This is an explicit management instruction and belongs in P, but it is redundant with the prior statement about continuing lisinopril and could be misread as a new change rather than clarification of current therapy."
+    }
+  ],
+  "summary_statistics": {
+    "section_appropriateness_score": 0.7,
+    "section_miscategorization_count": 3,
+    "major_section_miscategorization_count": 1
+  }
+}

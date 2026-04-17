@@ -1,0 +1,30 @@
+{
+  "section_miscategorizations": [
+    {
+      "text": "The patient reports chest pain.",
+      "current_section": "Findings",
+      "expected_section": "History of Present Illness",
+      "severity": "major",
+      "reason": "Chest pain is a patient-reported symptom and belongs in the history rather than in the exam/labs findings section."
+    },
+    {
+      "text": "The patient is taking metformin at a lower dose of 500 milligrams and hydrochlorothiazide everyday.",
+      "current_section": "Plan",
+      "expected_section": "History of Present Illness",
+      "severity": "major",
+      "reason": "This describes the current outpatient medication regimen, which is part of the history/current medication state, not an action item or new order in the plan."
+    },
+    {
+      "text": "Order shoulder radiographs.",
+      "current_section": "Plan",
+      "expected_section": "Plan",
+      "severity": "minor",
+      "reason": "This appears to be a mis-ordered test (shoulder) given the documented problem is left hand pain; however, it is still correctly placed in the Plan section. This is a content accuracy issue rather than a section miscategorization."
+    }
+  ],
+  "summary_statistics": {
+    "section_appropriateness_score": 0.7,
+    "section_miscategorization_count": 3,
+    "major_section_miscategorization_count": 2
+  }
+}

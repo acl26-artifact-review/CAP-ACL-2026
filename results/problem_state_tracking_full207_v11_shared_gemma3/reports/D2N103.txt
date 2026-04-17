@@ -1,0 +1,108 @@
+Case: D2N103
+
+Problem List and Visit State Tracking
+
+Problem List
+- chest pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T6
+  Summary: The patient reports chest pains.
+  ClusterId: CL1
+  TemporalProfile: current
+  Updates:
+  - CAP2: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T6 :: The patient reports chest pains.
+- shallow breathing | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T6
+  Summary: The patient reports shallow breathing.
+  ClusterId: CL2
+  TemporalProfile: current
+  Updates:
+  - CAP3: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T6 :: The patient reports shallow breathing.
+- atrial fibrillation | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T10,T18
+  Summary: The patient has atrial fibrillation.
+  ClusterId: CL3
+  TemporalProfile: current, historical
+  Updates:
+  - CAP14: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=historical turns=T10 :: The patient has a history of atrial fibrillation.
+  - CAP5: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T18 :: The patient has atrial fibrillation.
+- mitral regurgitation | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T10
+  Summary: The patient has a history of mitral regurgitation.
+  ClusterId: CL4
+  TemporalProfile: historical
+  Updates:
+  - CAP13: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=historical turns=T10 :: The patient has a history of mitral regurgitation.
+- chest discomfort | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T10
+  Summary: The patient has a history of chest discomfort.
+  ClusterId: CL5
+  TemporalProfile: historical
+  Updates:
+  - CAP15: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=historical turns=T10 :: The patient has a history of chest discomfort.
+- diabetes | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T10
+  Summary: The patient has a history of diabetes.
+  ClusterId: CL6
+  TemporalProfile: historical
+  Updates:
+  - CAP16: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=historical turns=T10 :: The patient has a history of diabetes.
+- asthma | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T10
+  Summary: The patient has a history of asthma.
+  ClusterId: CL7
+  TemporalProfile: historical
+  Updates:
+  - CAP17: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=historical turns=T10 :: The patient has a history of asthma.
+- irritability | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T18
+  Summary: The patient reports experiencing irritability.
+  ClusterId: CL8
+  TemporalProfile: current
+  Updates:
+  - CAP4: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T18 :: The patient reports experiencing irritability.
+- pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T18
+  Summary: The patient reports pain.
+  ClusterId: CL9
+  TemporalProfile: current
+  Updates:
+  - CAP6: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T18 :: The patient reports pain.
+- left hand pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T36
+  Summary: The patient reports pain in the left hand.
+  ClusterId: CL11
+  TemporalProfile: current
+  Updates:
+  - CAP1: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T36 :: The patient reports pain in the left hand.
+
+Medication Tracking
+- [MedicationState] atenolol | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=doctor,patient | evidence=T18,T36
+  Summary: The patient is taking atenolol at 50 milligrams daily.
+  ClusterId: CL10
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient is taking atenolol. (T18)
+  - The patient is taking atenolol at 50 milligrams daily. (T36)
+  Updates:
+  - CAP12: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T18 :: The patient is taking atenolol.
+  - CAP10: content_source=doctor modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T36 :: The patient is taking atenolol at 50 milligrams daily.
+- [MedicationState] coumadin | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=doctor | evidence=T36
+  Summary: The patient is taking coumadin at 4 milligrams daily.
+  ClusterId: CL12
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient is taking coumadin at 4 milligrams daily. (T36)
+  Updates:
+  - CAP8: content_source=doctor modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T36 :: The patient is taking coumadin at 4 milligrams daily.
+- [MedicationState] lasix | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=doctor | evidence=T36
+  Summary: The patient is taking lasix at 4 milligrams daily.
+  ClusterId: CL13
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient is taking lasix at 4 milligrams daily. (T36)
+  Updates:
+  - CAP9: content_source=doctor modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T36 :: The patient is taking lasix at 4 milligrams daily.
+- [MedicationChange] lisinopril | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=doctor | evidence=T39
+  Summary: The doctor will continue the patient on lisinopril.
+  ClusterId: CL14
+  TemporalProfile: current
+  PlannedChanges:
+  - The doctor will continue the patient on lisinopril. (T39)
+  Updates:
+  - CAP11: content_source=doctor modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T39 :: The doctor will continue the patient on lisinopril.
+
+Other Structured States
+- [FollowUp] follow up | verification_status=confirmed | clinical_status=planned | modalities=interview | speakers=doctor | evidence=T43
+  Summary: The doctor recommends a follow-up in six to nine months.
+  ClusterId: CL15
+  TemporalProfile: in six to nine months

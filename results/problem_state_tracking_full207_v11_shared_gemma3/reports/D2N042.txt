@@ -1,0 +1,97 @@
+Case: D2N042
+
+Problem List and Visit State Tracking
+
+Problem List
+- ankle pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T1
+  Summary: The patient reports ankle pain.
+  ClusterId: CL1
+  TemporalProfile: current
+  Updates:
+  - CAP8: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T1 :: The patient reports ankle pain.
+- limping | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T7
+  Summary: The patient is limping.
+  ClusterId: CL2
+  TemporalProfile: current
+  Updates:
+  - CAP9: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T7 :: The patient is limping.
+- pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T11,T13,T18
+  Summary: The patient reports pain at a level of 6 out of 10.
+  ClusterId: CL4
+  TemporalProfile: current
+  Updates:
+  - CAP5: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T11 :: The pain is rated as four out of ten.
+  - CAP10: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T13 :: The patient reports pain.
+  - CAP3: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T18 :: The patient reports pain at a level of 6 out of 10.
+  - CAP4: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T18 :: The pain is rated as six out of ten without ibuprofen.
+- pain relief | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T21
+  Summary: The patient reports pain relief with ibuprofen.
+  ClusterId: CL5
+  TemporalProfile: current
+  Updates:
+  - CAP6: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T21 :: The patient reports pain relief with ibuprofen.
+- ankle injury | verification_status=confirmed | clinical_status=resolved | modalities=interview | speakers=patient | evidence=T23,T26
+  Summary: The patient has not been able to play soccer since an ankle injury.
+  ClusterId: CL6
+  TemporalProfile: past
+  Updates:
+  - CAP20: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=past turns=T23 :: The patient has a history of ankle injuries.
+  - CAP18: content_source=patient modality=interview verification_status=confirmed clinical_status=resolved temporality=past turns=T26 :: The patient has not been able to play soccer since an ankle injury.
+- soccer | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T24
+  Summary: The patient played soccer in college and a little inner marrow soccer.
+  ClusterId: CL7
+  TemporalProfile: past
+  Updates:
+  - CAP19: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=past turns=T24 :: The patient played soccer in college and a little inner marrow soccer.
+- anterior talofibular ligament sprain | verification_status=confirmed | clinical_status=active | modalities=assessment | speakers=doctor | evidence=T32
+  Summary: The doctor assesses an anterior talofibular ligament sprain.
+  ClusterId: CL8
+  TemporalProfile: current
+  Updates:
+  - CAP1: content_source=doctor modality=assessment verification_status=confirmed clinical_status=active temporality=current turns=T32 :: The doctor assesses an anterior talofibular ligament sprain.
+- right ankle sprain | verification_status=confirmed | clinical_status=active | modalities=assessment | speakers=doctor | evidence=T32
+  Summary: The doctor assesses a right ankle sprain.
+  ClusterId: CL9
+  TemporalProfile: current
+  Updates:
+  - CAP2: content_source=doctor modality=assessment verification_status=confirmed clinical_status=active temporality=current turns=T32 :: The doctor assesses a right ankle sprain.
+- right ankle pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T32
+  Summary: The patient reports right ankle pain.
+  ClusterId: CL10
+  TemporalProfile: current
+  Updates:
+  - CAP7: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T32 :: The patient reports right ankle pain.
+
+Medication Tracking
+- [MedicationState] ibuprofen | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T9
+  Summary: The patient took ibuprofen this morning.
+  ClusterId: CL3
+  TemporalProfile: current, this morning
+  CurrentRegimens:
+  - The patient took ibuprofen this morning. (T9)
+  - The patient took ibuprofen. (T9)
+  Updates:
+  - CAP16: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=this morning turns=T9 :: The patient took ibuprofen this morning.
+  - CAP17: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T9 :: The patient took ibuprofen.
+
+Other Structured States
+- [Plan] air cast | verification_status=confirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T32
+  Summary: The doctor prescribes an air cast.
+  ClusterId: CL11
+  TemporalProfile: current
+- [Plan] ice application | verification_status=confirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T32
+  Summary: The doctor recommends ice application.
+  ClusterId: CL12
+  TemporalProfile: current
+- [Plan] crutches | verification_status=confirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T32
+  Summary: The doctor orders crutches.
+  ClusterId: CL13
+  TemporalProfile: current
+- [Plan] ibuprofen | verification_status=confirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T34
+  Summary: The doctor prescribes ibuprofen.
+  ClusterId: CL14
+  TemporalProfile: current
+- [FollowUp] follow-up appointment | verification_status=confirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T34
+  Summary: The doctor schedules a follow-up appointment in 14 days.
+  ClusterId: CL15
+  TemporalProfile: 14 days

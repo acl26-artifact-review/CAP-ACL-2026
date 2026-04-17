@@ -1,0 +1,115 @@
+Case: D2N153
+
+Problem List and Visit State Tracking
+
+Problem List
+- knee injury | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T4
+  Summary: The patient injured his knee two and a half weeks ago.
+  ClusterId: CL1
+  TemporalProfile: two and a half weeks ago
+  Updates:
+  - CAP21: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=two and a half weeks ago turns=T4,T4 :: The patient injured his knee two and a half weeks ago.
+- right knee pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T7
+  Summary: The patient reports pain in the outside of his right knee.
+  ClusterId: CL2
+  TemporalProfile: current
+  Updates:
+  - CAP2: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T7 :: The patient reports pain in the outside of his right knee.
+- turning over ankle | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T10
+  Summary: The patient turned over his ankle during the injury.
+  ClusterId: CL3
+  TemporalProfile: during injury
+  Updates:
+  - CAP6: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=during injury turns=T10 :: The patient turned over his ankle during the injury.
+- clicking | verification_status=unconfirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T12,T26
+  Summary: The patient reports a clicking sensation in the knee.
+  ClusterId: CL4
+  TemporalProfile: current, during squatting
+  Updates:
+  - CAP7: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T12 :: The patient reports a clicking sensation in the knee.
+  - CAP11: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=during squatting turns=T26 :: The patient reports a clicking sensation.
+- knee pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T12
+  Summary: The patient reports knee pain.
+  ClusterId: CL5
+  TemporalProfile: current
+  Updates:
+  - CAP12: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T12 :: The patient reports knee pain.
+- pain with prolonged weight bearing | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T14
+  Summary: The patient experiences pain when standing on one foot for an extended period.
+  ClusterId: CL6
+  TemporalProfile: current
+  Updates:
+  - CAP1: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T14 :: The patient experiences pain when standing on one foot for an extended period.
+- locked sensation | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T16
+  Summary: The patient describes a feeling of being locked in the knee.
+  ClusterId: CL7
+  TemporalProfile: current
+  Updates:
+  - CAP3: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T16 :: The patient describes a feeling of being locked in the knee.
+- fear of injury | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T26
+  Summary: The patient is fearful that the clicking is an injury.
+  ClusterId: CL9
+  TemporalProfile: current
+  Updates:
+  - CAP4: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T26 :: The patient is fearful that the clicking is an injury.
+- foot pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T26,T36,T43
+  Summary: The patient has foot pain.
+  ClusterId: CL10
+  TemporalProfile: current
+  Updates:
+  - CAP9: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T26 :: The patient reports pain in the left hand.
+  - CAP13: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T36 :: The patient has foot pain.
+  - CAP16: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T43 :: The patient reports pain.
+- shoe-related numbness | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T36
+  Summary: The patient's numbness is dependent on the shoes they wear.
+  ClusterId: CL12
+  TemporalProfile: current
+  Updates:
+  - CAP5: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T36 :: The patient's numbness is dependent on the shoes they wear.
+  - CAP15: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T36 :: The patient reports numbness.
+- right foot numbness | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T36
+  Summary: The patient experiences numbness in their right foot.
+  ClusterId: CL13
+  TemporalProfile: current
+  Updates:
+  - CAP10: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T36 :: The patient experiences numbness in their right foot.
+- toe numbness | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T36
+  Summary: The patient has toe numbness.
+  ClusterId: CL14
+  TemporalProfile: current
+  Updates:
+  - CAP14: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T36 :: The patient has toe numbness.
+- toe injury | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T37
+  Summary: The patient has a history of multiple toe injuries.
+  ClusterId: CL15
+  TemporalProfile: past
+  Updates:
+  - CAP8: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=past turns=T37 :: The patient has a history of multiple toe injuries.
+
+Medication Tracking
+- [MedicationState] ibuprofen | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T20
+  Summary: The patient takes ibuprofen.
+  ClusterId: CL8
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient takes ibuprofen. (T20)
+  Updates:
+  - CAP20: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T20 :: The patient takes ibuprofen.
+- [MedicationChange] meloxicam | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T47
+  Summary: The doctor prescribes meloxicam.
+  ClusterId: CL17
+  TemporalProfile: current
+  PlannedChanges:
+  - The doctor prescribes meloxicam. (T47)
+  Updates:
+  - CAP19: content_source=doctor modality=plan verification_status=unconfirmed clinical_status=planned temporality=current turns=T47 :: The doctor prescribes meloxicam.
+
+Other Structured States
+- [Plan] bike riding | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=doctor | evidence=T28
+  Summary: The patient rides a bike.
+  ClusterId: CL11
+  TemporalProfile: current
+- [Plan] physical therapy | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T47
+  Summary: The doctor orders physical therapy.
+  ClusterId: CL16
+  TemporalProfile: current

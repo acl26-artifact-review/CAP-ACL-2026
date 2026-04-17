@@ -1,0 +1,72 @@
+{
+  "section_miscategorizations": [
+    {
+      "text": "The clinician suspects cervical radiculopathy.",
+      "current_section": "Findings",
+      "expected_section": "Assessment",
+      "severity": "major",
+      "reason": "This is a diagnostic impression/synthesis by the clinician, not an objective exam or test result, and belongs in the Assessment section."
+    },
+    {
+      "text": "Physical exam reveals tenderness at the medial epicondyle with wrist flexion.",
+      "current_section": "Findings",
+      "expected_section": "History of Present Illness",
+      "severity": "major",
+      "reason": "Tenderness on exam is already described as a patient-reported symptom in HPI; here it is explicitly labeled as a physical exam finding and should be in Findings, not HPI. (Note: in the provided note, the same content appears in HPI as patient report and in Findings as exam; the exam phrasing is correctly in Findings, but the HPI version is miscategorized.)"
+    },
+    {
+      "text": "The patient also reports pain radiating down their arm with wrist flexion and moderate tenderness at the medial epicondyle with wrist flexion and resisted pronation of the right forearm.",
+      "current_section": "History of Present Illness",
+      "expected_section": "Findings",
+      "severity": "major",
+      "reason": "This sentence describes specific provoked tenderness and pain with resisted maneuvers, which are characteristic of physical exam findings rather than typical patient-reported history, and could mislead a reader about what was actually examined."
+    },
+    {
+      "text": "The patient reports fatigue for the past two months.",
+      "current_section": "History of Present Illness",
+      "expected_section": "Assessment",
+      "severity": "minor",
+      "reason": "Fatigue is a separate, chronic issue not clearly linked to the elbow complaint; it would be more clearly organized as an additional active problem in the Assessment, though its presence in HPI is not highly misleading."
+    },
+    {
+      "text": "He denies blood in stool.",
+      "current_section": "History of Present Illness",
+      "expected_section": "Findings",
+      "severity": "minor",
+      "reason": "This is a review-of-systems-type negative finding; while often documented with HPI in some styles, under this template it aligns better with objective/ROS findings than with the focused elbow pain history."
+    },
+    {
+      "text": "The patient presents with symptoms consistent with lateral epicondylitis.",
+      "current_section": "Assessment",
+      "expected_section": "Assessment",
+      "severity": "major",
+      "reason": "The diagnostic label given (lateral epicondylitis) conflicts with the clearly medial-epicondyle-focused history and exam; while in the correct section type, the specific diagnosis text is clinically inconsistent and could mislead a reader about the problem being assessed."
+    },
+    {
+      "text": "Order an A1C test.",
+      "current_section": "Plan",
+      "expected_section": "Plan",
+      "severity": "major",
+      "reason": "Although formally a plan item, it is unrelated to the documented chief complaint and HPI (elbow pain) and appears to address a separate, undocumented problem (diabetes), which can mislead about the focus of this encounter under the given template semantics."
+    },
+    {
+      "text": "Order a referral to diabetic counseling.",
+      "current_section": "Plan",
+      "expected_section": "Plan",
+      "severity": "major",
+      "reason": "Similar to the A1C order, this is a plan for diabetes management without corresponding diabetes-related history, findings, or assessment in the appropriate sections, creating a mismatch that can confuse the reader about the visit's assessed problems."
+    },
+    {
+      "text": "Increase metformin dosage to 1000mg twice daily.",
+      "current_section": "Plan",
+      "expected_section": "Plan",
+      "severity": "major",
+      "reason": "This is a diabetes medication adjustment with no diabetes problem listed in Assessment or described in HPI/Findings; while structurally a plan item, its lack of linkage to an assessed problem makes its placement misleading in the context of this template."
+    }
+  ],
+  "summary_statistics": {
+    "section_appropriateness_score": 0.4,
+    "section_miscategorization_count": 9,
+    "major_section_miscategorization_count": 7
+  }
+}

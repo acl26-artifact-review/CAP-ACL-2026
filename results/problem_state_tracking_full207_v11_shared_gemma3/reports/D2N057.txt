@@ -1,0 +1,127 @@
+Case: D2N057
+
+Problem List and Visit State Tracking
+
+Problem List
+- foot pain | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T14,T16,T2,T22,T26,T28,T34,T46
+  Summary: The patient has foot pain.
+  ClusterId: CL1
+  TemporalProfile: current
+  Updates:
+  - CAP12: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T2 :: The patient has foot pain.
+  - CAP8: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T2 :: The patient reports pain in the left hand.
+  - CAP2: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T14,T16 :: The patient has foot pain.
+  - CAP16: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T22 :: The patient has pain.
+  - CAP5: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T26 :: The patient experiences pain when moving the big toe further down.
+  - CAP6: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T28 :: The patient experiences pain when moving the big toe further up.
+  - CAP4: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T34 :: The patient reports pain on the right side of the big toe.
+  - CAP7: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T46 :: The patient reports feeling a little bit of pain.
+- sharp pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T2
+  Summary: The patient describes a sharp stabbing pain.
+  ClusterId: CL2
+  TemporalProfile: current
+  Updates:
+  - CAP9: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T2 :: The patient describes a sharp stabbing pain.
+- big toe pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T16
+  Summary: The patient reports pain in their big toe.
+  ClusterId: CL3
+  TemporalProfile: current
+  Updates:
+  - CAP1: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T16,T16 :: The patient reports pain in their big toe.
+- plantar flexion | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T22
+  Summary: The patient can move the big toe through a range of motion.
+  ClusterId: CL5
+  TemporalProfile: current
+  Updates:
+  - CAP3: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T22 :: The patient can move the big toe through a range of motion.
+- bone spur | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T38
+  Summary: The patient reports feeling a bone spur.
+  ClusterId: CL6
+  TemporalProfile: current
+  Updates:
+  - CAP10: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T38 :: The patient reports feeling a bone spur.
+  - CAP11: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T38 :: The patient reports feeling a bone spur.
+- joint pain | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T44
+  Summary: The patient has joint pain.
+  ClusterId: CL9
+  TemporalProfile: current
+  Updates:
+  - CAP13: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T44 :: The patient has joint pain.
+- heartburn | verification_status=unconfirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T52
+  Summary: The patient may experience heartburn.
+  ClusterId: CL11
+  TemporalProfile: potential
+  Updates:
+  - CAP14: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=potential turns=T52 :: The patient may experience heartburn.
+- chest pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T54
+  Summary: The patient reports chest pain.
+  ClusterId: CL12
+  TemporalProfile: current
+  Updates:
+  - CAP15: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T54 :: The patient reports chest pain.
+
+Medication Tracking
+- [MedicationState] ibuprofen | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=doctor,patient | evidence=T19
+  Summary: The doctor takes ibuprofen twice a day.
+  ClusterId: CL4
+  TemporalProfile: current, daily
+  CurrentRegimens:
+  - The doctor takes ibuprofen twice a day. (T19)
+  - The patient takes ibuprofen. (T19)
+  Updates:
+  - CAP27: content_source=doctor modality=interview verification_status=confirmed clinical_status=active temporality=daily turns=T19 :: The doctor takes ibuprofen twice a day.
+  - CAP29: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T19 :: The patient takes ibuprofen.
+- [MedicationChange] meloxicam | verification_status=confirmed | clinical_status=planned | modalities=interview | speakers=clinician | evidence=T48
+  Summary: The patient will take meloxicam once a day.
+  ClusterId: CL10
+  TemporalProfile: daily
+  PlannedChanges:
+  - The patient will take meloxicam once a day. (T48)
+  Updates:
+  - CAP26: content_source=clinician modality=interview verification_status=confirmed clinical_status=planned temporality=daily turns=T48 :: The patient will take meloxicam once a day.
+- [MedicationChange] medicine | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T54
+  Summary: The patient should stop taking the medicine.
+  ClusterId: CL13
+  TemporalProfile: in the future
+  PlannedChanges:
+  - The patient should stop taking the medicine. (T54)
+  Updates:
+  - CAP19: content_source=doctor modality=plan verification_status=unconfirmed clinical_status=planned temporality=in the future turns=T54 :: The patient should stop taking the medicine.
+- [MedicationState] medicine | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T70
+  Summary: The patient wants to test the medicine.
+  ClusterId: CL19
+  TemporalProfile: in two weeks
+  CurrentRegimens:
+  - The patient wants to test the medicine. (T70)
+  Updates:
+  - CAP28: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=in two weeks turns=T70 :: The patient wants to test the medicine.
+
+Other Structured States
+- [Plan] x-ray | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T38
+  Summary: The patient will receive an x-ray.
+  ClusterId: CL7
+  TemporalProfile: future
+- [Plan] develop a plan | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T40
+  Summary: A plan will be developed.
+  ClusterId: CL8
+  TemporalProfile: future
+- [Plan] shot | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T58
+  Summary: The patient may have a shot.
+  ClusterId: CL14
+  TemporalProfile: future
+- [FollowUp] follow-up | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T58
+  Summary: The patient should see the doctor back in two weeks.
+  ClusterId: CL15
+  TemporalProfile: in two weeks
+- [Plan] surgery | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T60
+  Summary: The patient may have surgery to clean out the joint.
+  ClusterId: CL16
+  TemporalProfile: future
+- [Plan] fishing | verification_status=unconfirmed | clinical_status=planned | modalities=interview | speakers=patient | evidence=T69
+  Summary: The patient wants the doctor to continue working.
+  ClusterId: CL17
+  TemporalProfile: in two weeks
+- [Plan] orthotics | verification_status=unconfirmed | clinical_status=planned | modalities=interview | speakers=patient | evidence=T70
+  Summary: The patient wants to test the orthotics.
+  ClusterId: CL18
+  TemporalProfile: in two weeks

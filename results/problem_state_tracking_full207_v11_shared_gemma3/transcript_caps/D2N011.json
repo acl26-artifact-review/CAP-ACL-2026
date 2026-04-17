@@ -1,0 +1,288 @@
+{
+  "caps": [
+    {
+      "cap_id": "CAP1",
+      "cap_type": "Symptom",
+      "content_source": "patient",
+      "modality": "interview",
+      "canonical_concept": "shortness of breath",
+      "verification_status": "confirmed",
+      "clinical_status": "active",
+      "temporality": "current",
+      "proposition_text": "The patient reports shortness of breath.",
+      "evidence": [
+        {
+          "turn_id": "T5",
+          "turn_speaker": "patient",
+          "span_text": "yeah . we were doing a bunch of yard work and it was really hot over the weekend and i was short of breath and i felt a little chest pain for probably about an hour or so . so , i got a little nervous about that .",
+          "char_start": 322,
+          "char_end": 535
+        }
+      ],
+      "assertion": "present",
+      "visit_state": "active",
+      "linked_problem": null,
+      "event_cluster_id": "CL1"
+    },
+    {
+      "cap_id": "CAP2",
+      "cap_type": "Symptom",
+      "content_source": "patient",
+      "modality": "interview",
+      "canonical_concept": "chest pain",
+      "verification_status": "confirmed",
+      "clinical_status": "active",
+      "temporality": "current",
+      "proposition_text": "The patient reports chest pain.",
+      "evidence": [
+        {
+          "turn_id": "T5",
+          "turn_speaker": "patient",
+          "span_text": "yeah . we were doing a bunch of yard work and it was really hot over the weekend and i was short of breath and i felt a little chest pain for probably about an hour or so . so , i got a little nervous about that .",
+          "char_start": 322,
+          "char_end": 535
+        }
+      ],
+      "assertion": "present",
+      "visit_state": "active",
+      "linked_problem": null,
+      "event_cluster_id": "CL2"
+    },
+    {
+      "cap_id": "CAP3",
+      "cap_type": "Symptom",
+      "content_source": "patient",
+      "modality": "interview",
+      "canonical_concept": "chest pain",
+      "verification_status": "unconfirmed",
+      "clinical_status": "active",
+      "temporality": "current",
+      "proposition_text": "The patient reports chest pain.",
+      "evidence": [
+        {
+          "turn_id": "T15",
+          "turn_speaker": "patient",
+          "span_text": "uh , no , actually . not , not on my , uh , uh , on my immediate family , but i have on my cousin's side of the family .",
+          "char_start": 994,
+          "char_end": 1114
+        }
+      ],
+      "assertion": "uncertain",
+      "visit_state": "active",
+      "linked_problem": null,
+      "event_cluster_id": "CL2"
+    },
+    {
+      "cap_id": "CAP4",
+      "cap_type": "Symptom",
+      "content_source": "patient",
+      "modality": "interview",
+      "canonical_concept": "no other symptoms",
+      "verification_status": "confirmed",
+      "clinical_status": "stable",
+      "temporality": "current",
+      "proposition_text": "The patient denies other symptoms.",
+      "evidence": [
+        {
+          "turn_id": "T13",
+          "turn_speaker": "patient",
+          "span_text": "no .",
+          "char_start": 917,
+          "char_end": 921
+        }
+      ],
+      "assertion": "present",
+      "visit_state": "stable",
+      "linked_problem": null,
+      "event_cluster_id": "CL5"
+    },
+    {
+      "cap_id": "CAP5",
+      "cap_type": "Order",
+      "content_source": "doctor",
+      "modality": "plan",
+      "canonical_concept": "cardiac catheterization",
+      "verification_status": "unconfirmed",
+      "clinical_status": "planned",
+      "temporality": "future",
+      "proposition_text": "The doctor will order a cardiac catheterization.",
+      "evidence": [
+        {
+          "turn_id": "T33",
+          "turn_speaker": "doctor",
+          "span_text": "so , you know , my impression is is that you have this episode of chest pain , um , that could be related to severe hypertension or it could be related to some heart disease . so , what i'd like to go ahead and do is , number one , we'll put you on , um ... we'll change your blood pressure regimen . we'll put you on carvedilol , 25 milligrams twice a day . that helps with coronary disease as well as your pumping function of your heart . um , i wan na go ahead and order a cardiac catheterization on you and make sure that we do n't have any blockages in your heart arteries responsible for the chest pain .",
+          "char_start": 3423,
+          "char_end": 4033
+        }
+      ],
+      "assertion": "hypothetical",
+      "visit_state": "planned",
+      "linked_problem": null,
+      "event_cluster_id": "CL8"
+    },
+    {
+      "cap_id": "CAP6",
+      "cap_type": "MedicationStatement",
+      "content_source": "doctor",
+      "modality": "plan",
+      "canonical_concept": "carvedilol",
+      "verification_status": "unconfirmed",
+      "clinical_status": "planned",
+      "temporality": "future",
+      "attributes": {
+        "dose": "25 milligrams",
+        "frequency": "twice a day"
+      },
+      "proposition_text": "The doctor will prescribe carvedilol.",
+      "evidence": [
+        {
+          "turn_id": "T33",
+          "turn_speaker": "doctor",
+          "span_text": "so , you know , my impression is is that you have this episode of chest pain , um , that could be related to severe hypertension or it could be related to some heart disease . so , what i'd like to go ahead and do is , number one , we'll put you on , um ... we'll change your blood pressure regimen . we'll put you on carvedilol , 25 milligrams twice a day . that helps with coronary disease as well as your pumping function of your heart . um , i wan na go ahead and order a cardiac catheterization on you and make sure that we do n't have any blockages in your heart arteries responsible for the chest pain .",
+          "char_start": 3423,
+          "char_end": 4033
+        }
+      ],
+      "assertion": "hypothetical",
+      "visit_state": "planned",
+      "linked_problem": null,
+      "event_cluster_id": "CL9"
+    },
+    {
+      "cap_id": "CAP7",
+      "cap_type": "MedicationStatement",
+      "content_source": "doctor",
+      "modality": "plan",
+      "canonical_concept": "lisinopril",
+      "verification_status": "unconfirmed",
+      "clinical_status": "planned",
+      "temporality": "future",
+      "attributes": {
+        "dose": "10 milligrams",
+        "frequency": "a day"
+      },
+      "proposition_text": "The doctor will prescribe lisinopril.",
+      "evidence": [
+        {
+          "turn_id": "T33",
+          "turn_speaker": "doctor",
+          "span_text": "so , you know , my impression is is that you have this episode of chest pain , um , that could be related to severe hypertension or it could be related to some heart disease . so , what i'd like to go ahead and do is , number one , we'll put you on , um ... we'll change your blood pressure regimen . we'll put you on carvedilol , 25 milligrams twice a day . that helps with coronary disease as well as your pumping function of your heart . um , i wan na go ahead and order a cardiac catheterization on you and make sure that we do n't have any blockages in your heart arteries responsible for the chest pain .",
+          "char_start": 3423,
+          "char_end": 4033
+        }
+      ],
+      "assertion": "hypothetical",
+      "visit_state": "planned",
+      "linked_problem": null,
+      "event_cluster_id": "CL10"
+    },
+    {
+      "cap_id": "CAP8",
+      "cap_type": "ProblemHistory",
+      "content_source": "patient",
+      "modality": "interview",
+      "canonical_concept": "knee surgery",
+      "verification_status": "confirmed",
+      "clinical_status": "historical",
+      "temporality": "couple months ago",
+      "proposition_text": "The patient had knee surgery a couple months ago.",
+      "evidence": [
+        {
+          "turn_id": "T16",
+          "turn_speaker": "doctor",
+          "span_text": "okay . all right . all right . and , um , you know , i know that you had had the , uh , knee surgery-",
+          "char_start": 1124,
+          "char_end": 1225
+        }
+      ],
+      "assertion": "historical",
+      "visit_state": "historical",
+      "linked_problem": null,
+      "event_cluster_id": "CL6"
+    },
+    {
+      "cap_id": "CAP9",
+      "cap_type": "ProblemHistory",
+      "content_source": "patient",
+      "modality": "interview",
+      "canonical_concept": "rehab and recovery",
+      "verification_status": "confirmed",
+      "clinical_status": "historical",
+      "temporality": "recent",
+      "proposition_text": "The patient felt no problem in rehab and recovery.",
+      "evidence": [
+        {
+          "turn_id": "T19",
+          "turn_speaker": "patient",
+          "span_text": "yeah . no problem in , uh , rehab and recovery .",
+          "char_start": 1324,
+          "char_end": 1372
+        }
+      ],
+      "assertion": "historical",
+      "visit_state": "historical",
+      "linked_problem": null,
+      "event_cluster_id": "CL7"
+    },
+    {
+      "cap_id": "CAP10",
+      "cap_type": "ProblemHistory",
+      "content_source": "patient",
+      "modality": "interview",
+      "canonical_concept": "yard work",
+      "verification_status": "confirmed",
+      "clinical_status": "historical",
+      "temporality": "weekend",
+      "proposition_text": "The patient performed yard work.",
+      "evidence": [
+        {
+          "turn_id": "T5",
+          "turn_speaker": "patient",
+          "span_text": "yeah . we were doing a bunch of yard work and it was really hot over the weekend and i was short of breath and i felt a little chest pain for probably about an hour or so . so , i got a little nervous about that .",
+          "char_start": 322,
+          "char_end": 535
+        }
+      ],
+      "assertion": "historical",
+      "visit_state": "historical",
+      "linked_problem": null,
+      "event_cluster_id": "CL3"
+    },
+    {
+      "cap_id": "CAP11",
+      "cap_type": "ProblemHistory",
+      "content_source": "patient",
+      "modality": "interview",
+      "canonical_concept": "heat",
+      "verification_status": "confirmed",
+      "clinical_status": "historical",
+      "temporality": "weekend",
+      "proposition_text": "The patient experienced heat.",
+      "evidence": [
+        {
+          "turn_id": "T5",
+          "turn_speaker": "patient",
+          "span_text": "yeah . we were doing a bunch of yard work and it was really hot over the weekend and i was short of breath and i felt a little chest pain for probably about an hour or so . so , i got a little nervous about that .",
+          "char_start": 322,
+          "char_end": 535
+        }
+      ],
+      "assertion": "historical",
+      "visit_state": "historical",
+      "linked_problem": null,
+      "event_cluster_id": "CL4"
+    }
+  ],
+  "filtered_nonverifiable_units": [
+    "whose mic is on ?",
+    "Is the pain worse at night?",
+    "Hey, dragon, show me the blood pressure.",
+    "Hey, dragon, show me the ekg."
+  ],
+  "chunk_count": 4,
+  "rescue_used": false,
+  "rescue_attempted": false,
+  "legacy_fallback_chunk_count": 0,
+  "extraction_mode": "single_call",
+  "runtime_seconds": 34.097
+}

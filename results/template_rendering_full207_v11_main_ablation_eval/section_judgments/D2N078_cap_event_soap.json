@@ -1,0 +1,44 @@
+{
+  "section_miscategorizations": [
+    {
+      "text": "The patient reports some swelling and effusion in the knee.",
+      "current_section": "S",
+      "expected_section": "O",
+      "severity": "minor",
+      "reason": "Effusion is typically an observed/clinically assessed finding; however, the patient could be describing visible swelling, so this is a softer organizational issue."
+    },
+    {
+      "text": "The right knee exam reveals a grade 2 systolic ejection murmur.",
+      "current_section": "O",
+      "expected_section": "O",
+      "severity": "minor",
+      "reason": "A systolic ejection murmur is a cardiac finding and should be documented under a cardiac or general exam subsection, not within the knee exam description. This is an internal organization issue within O, not a cross-section error."
+    },
+    {
+      "text": "The patient reports no chest or abdominal pain or shortness of breath.",
+      "current_section": "O",
+      "expected_section": "S",
+      "severity": "major",
+      "reason": "This is a patient-reported review of systems statement and belongs in the Subjective section, not in Objective findings."
+    },
+    {
+      "text": "Rescribe ibuprofen 800mg twice daily.",
+      "current_section": "P",
+      "expected_section": "P",
+      "severity": "minor",
+      "reason": "The intent is a treatment order (appropriate for Plan), but the wording is ambiguous; clarifying that this is a new or continued prescription would better distinguish it from current-medication documentation."
+    },
+    {
+      "text": "Continue lisinopril 20mg daily.",
+      "current_section": "P",
+      "expected_section": "P",
+      "severity": "minor",
+      "reason": "Although this references an existing medication, it is framed as an explicit management decision (to continue), which is appropriate for the Plan; no change of section is needed, but it borders on current-medication documentation."
+    }
+  ],
+  "summary_statistics": {
+    "section_appropriateness_score": 0.8,
+    "section_miscategorization_count": 5,
+    "major_section_miscategorization_count": 1
+  }
+}

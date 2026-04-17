@@ -1,0 +1,1669 @@
+{
+  "case_id": "D2N013",
+  "method": "cap_only",
+  "template": "soap",
+  "summary_text": "S:\nThe patient reports anxiety and stress. He reports excessive sugar intake. The patient denies nausea, dizziness, fever, and chills. The patient reports pain.\n\nO:\nThe patient has trace pitting edema to the lower extremities. Blood pressure is mildly low. Heart rate is within normal limits.\n\nA:\nThe patient has newly diagnosed diabetes. The patient reports anxiety. The patient has a history of epilepsy.\n\nP:\nA hemoglobin a1c test will be ordered. The patient will continue taking keppra. The patient will continue taking metformin 500 mg twice a day.",
+  "reference_summary": "CHIEF COMPLAINT\n\nAbnormal labs.\n\nHISTORY OF PRESENT ILLNESS\n\nJohn Brooks is a 55-year-old male with a past medical history significant for anxiety and epilepsy, who presents with an abnormal lab finding.\n\nThe patient was notified by the emergency room physician that he had elevated blood sugar levels. He was started on metformin 500 mg twice daily during that time. He notes that he has going from place to place for different events and they've recently had a lot of visitors; therefore, he was not monitoring his sugar intake over the last few weeks.\n\nIn terms of his anxiety, he states he has had his moments, but now that it is almost the weekend, his symptoms have improved.\n\nRegarding his epilepsy, he has not had any seizures in a few months. He continues to take Keppra.\n\nThe patient denies chest pain, shortness of breath, vomiting, dizziness, fevers, and chills.\n\nREVIEW OF SYSTEMS\n\n• Constitutional: Denies fevers, chills.\n• Cardiovascular: Denies chest pain or dyspnea.\n• Respiratory: Denies shortness of breath.\n• Neurological: Endorses epilepsy.\n• Psychiatric: Endorses anxiety.\n\nPHYSICAL EXAMINATION\n\n• Respiratory: Lungs are clear to auscultation bilaterally. No wheezes, rales, or rhonchi.\n• Cardiovascular: Regular rate and rhythm.\n• Musculoskeletal: Trace pitting edema to the bilateral lower extremities.\n\nRESULTS\n\nHemoglobin A1c is elevated at 8.\n\nNon-fasting glucose is elevated.\n\nASSESSMENT AND PLAN\n\nJohn Brooks is a 55-year-old male with a past medical history significant for anxiety and epilepsy. He presents today with an abnormal lab finding.\n\nNewly diagnosed diabetes.\n• Medical Reasoning: His past hemoglobin A1c levels have been borderline high, but his most recent level was 8. His blood glucose level is also elevated in clinic today.\n• Additional Testing: Repeat hemoglobin A1c.\n• Medical Treatment: Continue metformin 500 mg twice daily.\n\nEpilepsy.\n• Medical Reasoning: He saw his neurologist about 3 months ago and has been asymptomatic for the past few months.\n• Medical Treatment: Continue Keppra at current dosage.\n\nPatient Agreements: The patient understands and agrees with the recommended medical treatment plan.",
+  "source_cap": {
+    "atomic_propositions": [
+      {
+        "prop_id": "CAP1",
+        "cap_type": "Problem",
+        "canonical_concept": "anxiety",
+        "category": "Problem",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "past",
+        "claim_type_tags": [
+          "temporal"
+        ],
+        "proposition_text": "The patient has a past medical history significant for anxiety."
+      },
+      {
+        "prop_id": "CAP2",
+        "cap_type": "Problem",
+        "canonical_concept": "epilepsy",
+        "category": "Problem",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "past",
+        "claim_type_tags": [
+          "temporal"
+        ],
+        "proposition_text": "The patient has a past medical history significant for epilepsy."
+      },
+      {
+        "prop_id": "CAP3",
+        "cap_type": "Problem",
+        "canonical_concept": "epilepsy",
+        "category": "Problem",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "resolved",
+        "temporality": "historical",
+        "proposition_text": "The patient has a history of epilepsy."
+      },
+      {
+        "prop_id": "CAP4",
+        "cap_type": "Symptom",
+        "canonical_concept": "high blood sugar",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports high blood sugar."
+      },
+      {
+        "prop_id": "CAP5",
+        "cap_type": "Symptom",
+        "canonical_concept": "sugar intake",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports excessive sugar intake."
+      },
+      {
+        "prop_id": "CAP6",
+        "cap_type": "Symptom",
+        "canonical_concept": "shortness of breath",
+        "category": "Symptom",
+        "speaker": "doctor",
+        "predicate": "denies",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient denies shortness of breath."
+      },
+      {
+        "prop_id": "CAP7",
+        "cap_type": "Problem",
+        "canonical_concept": "diabetes",
+        "category": "Problem",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient has newly diagnosed diabetes."
+      },
+      {
+        "prop_id": "CAP8",
+        "cap_type": "Symptom",
+        "canonical_concept": "chest pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "denies",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient denies chest pain."
+      },
+      {
+        "prop_id": "CAP9",
+        "cap_type": "Symptom",
+        "canonical_concept": "stress",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports stress."
+      },
+      {
+        "prop_id": "CAP10",
+        "cap_type": "Symptom",
+        "canonical_concept": "anxiety",
+        "category": "Symptom",
+        "speaker": "doctor",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports anxiety."
+      },
+      {
+        "prop_id": "CAP11",
+        "cap_type": "Symptom",
+        "canonical_concept": "pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports pain."
+      },
+      {
+        "prop_id": "CAP12",
+        "cap_type": "Problem",
+        "canonical_concept": "anxiety",
+        "category": "Problem",
+        "speaker": "doctor",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient reports anxiety."
+      },
+      {
+        "prop_id": "CAP13",
+        "cap_type": "Symptom",
+        "canonical_concept": "nausea",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "denies",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient denies nausea."
+      },
+      {
+        "prop_id": "CAP14",
+        "cap_type": "Symptom",
+        "canonical_concept": "dizziness",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "denies",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient denies dizziness."
+      },
+      {
+        "prop_id": "CAP15",
+        "cap_type": "Symptom",
+        "canonical_concept": "fever",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "denies",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient denies fever."
+      },
+      {
+        "prop_id": "CAP16",
+        "cap_type": "Symptom",
+        "canonical_concept": "chills",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "denies",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient denies chills."
+      },
+      {
+        "prop_id": "CAP17",
+        "cap_type": "Problem",
+        "canonical_concept": "anxiety",
+        "category": "Problem",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient reports anxiety."
+      },
+      {
+        "prop_id": "CAP18",
+        "cap_type": "Problem",
+        "canonical_concept": "epilepsy",
+        "category": "Problem",
+        "speaker": "patient",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient has epilepsy."
+      },
+      {
+        "prop_id": "CAP19",
+        "cap_type": "ExamFinding",
+        "canonical_concept": "edema",
+        "category": "ExamFinding",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient has trace pitting edema to the lower extremities."
+      },
+      {
+        "prop_id": "CAP20",
+        "cap_type": "Order",
+        "canonical_concept": "hemoglobin a1c",
+        "category": "Order",
+        "speaker": "doctor",
+        "status": "uncertain",
+        "visit_state": "planned",
+        "temporality": "future",
+        "claim_type_tags": [
+          "quantitative"
+        ],
+        "proposition_text": "A hemoglobin a1c test will be ordered."
+      },
+      {
+        "prop_id": "CAP21",
+        "cap_type": "Order",
+        "canonical_concept": "keppra",
+        "category": "Order",
+        "speaker": "doctor",
+        "predicate": "has",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient will continue taking keppra."
+      },
+      {
+        "prop_id": "CAP22",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "metformin",
+        "category": "MedicationStatement",
+        "speaker": "doctor",
+        "predicate": "has",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "medication",
+          "quantitative"
+        ],
+        "proposition_text": "The patient will continue taking metformin 500 mg twice a day."
+      },
+      {
+        "prop_id": "CAP23",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "metformin",
+        "category": "MedicationStatement",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "medication"
+        ],
+        "proposition_text": "The patient is taking metformin."
+      },
+      {
+        "prop_id": "CAP24",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "keppra",
+        "category": "MedicationStatement",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient continues on keppra."
+      }
+    ],
+    "filtered_nonverifiable_units": []
+  },
+  "event_plan": null,
+  "summary_cap": {
+    "atomic_propositions": [
+      {
+        "prop_id": "P1",
+        "cap_type": "Symptom",
+        "canonical_concept": "anxiety",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports anxiety."
+      },
+      {
+        "prop_id": "P2",
+        "cap_type": "Symptom",
+        "canonical_concept": "stress",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports stress."
+      },
+      {
+        "prop_id": "P3",
+        "cap_type": "Symptom",
+        "canonical_concept": "excessive sugar intake",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports excessive sugar intake."
+      },
+      {
+        "prop_id": "P4",
+        "cap_type": "Symptom",
+        "canonical_concept": "pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports pain."
+      },
+      {
+        "prop_id": "P5",
+        "cap_type": "Finding",
+        "canonical_concept": "trace pitting edema lower",
+        "category": "Finding",
+        "speaker": "clinician",
+        "predicate": "has",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "exam"
+        ],
+        "proposition_text": "The patient has trace pitting edema to the lower extremities."
+      },
+      {
+        "prop_id": "P6",
+        "cap_type": "Finding",
+        "canonical_concept": "blood pressure",
+        "category": "Finding",
+        "speaker": "clinician",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "exam"
+        ],
+        "proposition_text": "Blood pressure is mildly low."
+      },
+      {
+        "prop_id": "P7",
+        "cap_type": "Finding",
+        "canonical_concept": "heart rate within normal",
+        "category": "Finding",
+        "speaker": "clinician",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "exam"
+        ],
+        "proposition_text": "Heart rate is within normal limits."
+      },
+      {
+        "prop_id": "P8",
+        "cap_type": "Diagnosis",
+        "canonical_concept": "diabetes",
+        "category": "Diagnosis",
+        "speaker": "clinician",
+        "predicate": "diagnoses",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "diagnostic"
+        ],
+        "proposition_text": "The patient has newly diagnosed diabetes."
+      },
+      {
+        "prop_id": "P9",
+        "cap_type": "MedicationPlan",
+        "canonical_concept": "continue taking keppra",
+        "category": "MedicationPlan",
+        "speaker": "clinician",
+        "predicate": "prescribes",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "medication"
+        ],
+        "proposition_text": "The patient will continue taking keppra."
+      },
+      {
+        "prop_id": "P10",
+        "cap_type": "MedicationPlan",
+        "canonical_concept": "metformin",
+        "category": "MedicationPlan",
+        "speaker": "clinician",
+        "predicate": "prescribes",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "medication"
+        ],
+        "proposition_text": "The patient will continue taking metformin 500 mg twice a day."
+      },
+      {
+        "prop_id": "P11",
+        "cap_type": "TestPlan",
+        "canonical_concept": "hemoglobin a1c test ordered",
+        "category": "TestPlan",
+        "speaker": "clinician",
+        "predicate": "orders",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "future",
+        "claim_type_tags": [
+          "test"
+        ],
+        "proposition_text": "A hemoglobin a1c test will be ordered."
+      }
+    ],
+    "filtered_nonverifiable_units": [],
+    "runtime_seconds": 12.943
+  },
+  "cap_alignment": {
+    "cap_precision": 0.8181818181818182,
+    "cap_recall": 0.375,
+    "cap_f1": 0.5142857142857142,
+    "matched_count": 9,
+    "summary_prop_count": 11,
+    "source_prop_count": 24,
+    "matched_pairs": [
+      {
+        "score": 1.0,
+        "summary_prop_id": "P11",
+        "source_prop_id": "CAP20",
+        "summary_text": "A hemoglobin a1c test will be ordered.",
+        "source_text": "A hemoglobin a1c test will be ordered."
+      },
+      {
+        "score": 1.0,
+        "summary_prop_id": "P10",
+        "source_prop_id": "CAP23",
+        "summary_text": "The patient will continue taking metformin 500 mg twice a day.",
+        "source_text": "The patient is taking metformin."
+      },
+      {
+        "score": 1.0,
+        "summary_prop_id": "P9",
+        "source_prop_id": "CAP21",
+        "summary_text": "The patient will continue taking keppra.",
+        "source_text": "The patient will continue taking keppra."
+      },
+      {
+        "score": 1.0,
+        "summary_prop_id": "P8",
+        "source_prop_id": "CAP7",
+        "summary_text": "The patient has newly diagnosed diabetes.",
+        "source_text": "The patient has newly diagnosed diabetes."
+      },
+      {
+        "score": 1.0,
+        "summary_prop_id": "P5",
+        "source_prop_id": "CAP19",
+        "summary_text": "The patient has trace pitting edema to the lower extremities.",
+        "source_text": "The patient has trace pitting edema to the lower extremities."
+      },
+      {
+        "score": 1.0,
+        "summary_prop_id": "P4",
+        "source_prop_id": "CAP11",
+        "summary_text": "The patient reports pain.",
+        "source_text": "The patient reports pain."
+      },
+      {
+        "score": 1.0,
+        "summary_prop_id": "P3",
+        "source_prop_id": "CAP5",
+        "summary_text": "The patient reports excessive sugar intake.",
+        "source_text": "The patient reports excessive sugar intake."
+      },
+      {
+        "score": 1.0,
+        "summary_prop_id": "P2",
+        "source_prop_id": "CAP9",
+        "summary_text": "The patient reports stress.",
+        "source_text": "The patient reports stress."
+      },
+      {
+        "score": 1.0,
+        "summary_prop_id": "P1",
+        "source_prop_id": "CAP17",
+        "summary_text": "The patient reports anxiety.",
+        "source_text": "The patient reports anxiety."
+      }
+    ],
+    "unsupported_summary_props": [
+      {
+        "prop_id": "P6",
+        "cap_type": "Finding",
+        "canonical_concept": "blood pressure",
+        "category": "Finding",
+        "speaker": "clinician",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "exam"
+        ],
+        "proposition_text": "Blood pressure is mildly low."
+      },
+      {
+        "prop_id": "P7",
+        "cap_type": "Finding",
+        "canonical_concept": "heart rate within normal",
+        "category": "Finding",
+        "speaker": "clinician",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "exam"
+        ],
+        "proposition_text": "Heart rate is within normal limits."
+      }
+    ],
+    "missing_source_props": [
+      {
+        "prop_id": "CAP1",
+        "cap_type": "Problem",
+        "canonical_concept": "anxiety",
+        "category": "Problem",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "past",
+        "claim_type_tags": [
+          "temporal"
+        ],
+        "proposition_text": "The patient has a past medical history significant for anxiety."
+      },
+      {
+        "prop_id": "CAP2",
+        "cap_type": "Problem",
+        "canonical_concept": "epilepsy",
+        "category": "Problem",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "past",
+        "claim_type_tags": [
+          "temporal"
+        ],
+        "proposition_text": "The patient has a past medical history significant for epilepsy."
+      },
+      {
+        "prop_id": "CAP3",
+        "cap_type": "Problem",
+        "canonical_concept": "epilepsy",
+        "category": "Problem",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "resolved",
+        "temporality": "historical",
+        "proposition_text": "The patient has a history of epilepsy."
+      },
+      {
+        "prop_id": "CAP4",
+        "cap_type": "Symptom",
+        "canonical_concept": "high blood sugar",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports high blood sugar."
+      },
+      {
+        "prop_id": "CAP6",
+        "cap_type": "Symptom",
+        "canonical_concept": "shortness of breath",
+        "category": "Symptom",
+        "speaker": "doctor",
+        "predicate": "denies",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient denies shortness of breath."
+      },
+      {
+        "prop_id": "CAP8",
+        "cap_type": "Symptom",
+        "canonical_concept": "chest pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "denies",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient denies chest pain."
+      },
+      {
+        "prop_id": "CAP10",
+        "cap_type": "Symptom",
+        "canonical_concept": "anxiety",
+        "category": "Symptom",
+        "speaker": "doctor",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports anxiety."
+      },
+      {
+        "prop_id": "CAP12",
+        "cap_type": "Problem",
+        "canonical_concept": "anxiety",
+        "category": "Problem",
+        "speaker": "doctor",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient reports anxiety."
+      },
+      {
+        "prop_id": "CAP13",
+        "cap_type": "Symptom",
+        "canonical_concept": "nausea",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "denies",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient denies nausea."
+      },
+      {
+        "prop_id": "CAP14",
+        "cap_type": "Symptom",
+        "canonical_concept": "dizziness",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "denies",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient denies dizziness."
+      },
+      {
+        "prop_id": "CAP15",
+        "cap_type": "Symptom",
+        "canonical_concept": "fever",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "denies",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient denies fever."
+      },
+      {
+        "prop_id": "CAP16",
+        "cap_type": "Symptom",
+        "canonical_concept": "chills",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "denies",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient denies chills."
+      },
+      {
+        "prop_id": "CAP18",
+        "cap_type": "Problem",
+        "canonical_concept": "epilepsy",
+        "category": "Problem",
+        "speaker": "patient",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient has epilepsy."
+      },
+      {
+        "prop_id": "CAP22",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "metformin",
+        "category": "MedicationStatement",
+        "speaker": "doctor",
+        "predicate": "has",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "medication",
+          "quantitative"
+        ],
+        "proposition_text": "The patient will continue taking metformin 500 mg twice a day."
+      },
+      {
+        "prop_id": "CAP24",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "keppra",
+        "category": "MedicationStatement",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient continues on keppra."
+      }
+    ]
+  },
+  "reference_gpt_f1_items": {
+    "active_problems_symptoms": [
+      "epilepsy",
+      "anxiety"
+    ],
+    "negated_findings": [
+      "chest pain",
+      "dyspnea",
+      "shortness of breath"
+    ],
+    "uncertain_findings": [
+      "elevated hemoglobin A1c"
+    ],
+    "medication_treatment": [],
+    "plan_followup": [],
+    "_chunk_count": [
+      "4"
+    ]
+  },
+  "summary_gpt_f1_items": {
+    "active_problems_symptoms": [
+      "anxiety",
+      "stress",
+      "pain"
+    ],
+    "negated_findings": [
+      "nausea",
+      "dizziness",
+      "fever",
+      "chills"
+    ],
+    "uncertain_findings": [
+      "trace pitting edema"
+    ],
+    "medication_treatment": [
+      "keppra",
+      "metformin 500 mg twice a day"
+    ],
+    "plan_followup": [
+      "hemoglobin a1c test"
+    ],
+    "_chunk_count": [
+      "1"
+    ]
+  },
+  "gpt_f1_alignment": {
+    "by_category": {
+      "active_problems_symptoms": {
+        "precision": 0.3333333333333333,
+        "recall": 0.5,
+        "f1": 0.4,
+        "matched_count": 1,
+        "pred_count": 3,
+        "ref_count": 2,
+        "matches": [
+          {
+            "score": 1.0,
+            "pred_text": "anxiety",
+            "ref_text": "anxiety"
+          }
+        ],
+        "unsupported_pred_items": [
+          "stress",
+          "pain"
+        ],
+        "missing_ref_items": [
+          "epilepsy"
+        ]
+      },
+      "negated_findings": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "matched_count": 0,
+        "pred_count": 4,
+        "ref_count": 3,
+        "matches": [],
+        "unsupported_pred_items": [
+          "nausea",
+          "dizziness",
+          "fever",
+          "chills"
+        ],
+        "missing_ref_items": [
+          "chest pain",
+          "dyspnea",
+          "shortness of breath"
+        ]
+      },
+      "uncertain_findings": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "matched_count": 0,
+        "pred_count": 1,
+        "ref_count": 1,
+        "matches": [],
+        "unsupported_pred_items": [
+          "trace pitting edema"
+        ],
+        "missing_ref_items": [
+          "elevated hemoglobin A1c"
+        ]
+      },
+      "medication_treatment": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "matched_count": 0,
+        "pred_count": 2,
+        "ref_count": 0,
+        "matches": [],
+        "unsupported_pred_items": [
+          "keppra",
+          "metformin 500 mg twice a day"
+        ],
+        "missing_ref_items": []
+      },
+      "plan_followup": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "matched_count": 0,
+        "pred_count": 1,
+        "ref_count": 0,
+        "matches": [],
+        "unsupported_pred_items": [
+          "hemoglobin a1c test"
+        ],
+        "missing_ref_items": []
+      }
+    }
+  },
+  "reference_nair_concepts": {
+    "sections": [
+      {
+        "heading": "Clinical Note",
+        "section_value": "CHIEF COMPLAINT\nAbnormal labs.\nHISTORY OF PRESENT ILLNESS\nJohn Brooks is a 55-year-old male with a past medical history significant for anxiety and epilepsy, who presents with an abnormal lab finding.\nThe patient was notified by the emergency room physician that he had elevated blood sugar levels. He was started on metformin 500 mg twice daily during that time. He notes that he has going from place to place for different events and they've recently had a lot of visitors; therefore, he was not monitoring his sugar intake over the last few weeks.\nIn terms of his anxiety, he states he has had his moments, but now that it is almost the weekend, his symptoms have improved.\nRegarding his epilepsy, he has not had any seizures in a few months. He continues to take Keppra.\nThe patient denies chest pain, shortness of breath, vomiting, dizziness, fevers, and chills.\nREVIEW OF SYSTEMS\n• Constitutional: Denies fevers, chills.",
+        "medical_concepts": [
+          "abnormal labs",
+          "anxiety",
+          "epilepsy",
+          "elevated blood sugar",
+          "metformin",
+          "seizures",
+          "Keppra",
+          "chest pain",
+          "shortness of breath",
+          "vomiting",
+          "dizziness",
+          "fevers",
+          "chills"
+        ]
+      },
+      {
+        "heading": "Clinical Note",
+        "section_value": "• Cardiovascular: Denies chest pain or dyspnea.\n• Respiratory: Denies shortness of breath.\n• Neurological: Endorses epilepsy.\n• Psychiatric: Endorses anxiety.\nPHYSICAL EXAMINATION\n• Respiratory: Lungs are clear to auscultation bilaterally. No wheezes, rales, or rhonchi.\n• Cardiovascular: Regular rate and rhythm.\n• Musculoskeletal: Trace pitting edema to the bilateral lower extremities.\nRESULTS\nHemoglobin A1c is elevated at 8.",
+        "medical_concepts": [
+          "chest pain",
+          "dyspnea",
+          "shortness of breath",
+          "epilepsy",
+          "anxiety",
+          "wheezes",
+          "rales",
+          "rhonchi",
+          "pitting edema",
+          "lower extremity edema",
+          "Hemoglobin A1c"
+        ]
+      },
+      {
+        "heading": "Clinical Note",
+        "section_value": "Non-fasting glucose is elevated.\nASSESSMENT AND PLAN\nJohn Brooks is a 55-year-old male with a past medical history significant for anxiety and epilepsy. He presents today with an abnormal lab finding.\nNewly diagnosed diabetes.\n• Medical Reasoning: His past hemoglobin A1c levels have been borderline high, but his most recent level was 8. His blood glucose level is also elevated in clinic today.\n• Additional Testing: Repeat hemoglobin A1c.\n• Medical Treatment: Continue metformin 500 mg twice daily.\nEpilepsy.\n• Medical Reasoning: He saw his neurologist about 3 months ago and has been asymptomatic for the past few months.\n• Medical Treatment: Continue Keppra at current dosage.",
+        "medical_concepts": [
+          "non-fasting glucose",
+          "elevated glucose",
+          "abnormal lab finding",
+          "diabetes",
+          "hemoglobin A1c",
+          "borderline high hemoglobin A1c",
+          "hemoglobin A1c level 8",
+          "blood glucose level",
+          "metformin",
+          "epilepsy",
+          "neurologist",
+          "asymptomatic",
+          "Keppra",
+          "anxiety"
+        ]
+      },
+      {
+        "heading": "Clinical Note",
+        "section_value": "Patient Agreements: The patient understands and agrees with the recommended medical treatment plan.",
+        "medical_concepts": []
+      }
+    ],
+    "medical_concepts": [
+      "abnormal labs",
+      "anxiety",
+      "epilepsy",
+      "elevated blood sugar",
+      "metformin",
+      "seizures",
+      "Keppra",
+      "chest pain",
+      "shortness of breath",
+      "vomiting",
+      "dizziness",
+      "fevers",
+      "chills",
+      "dyspnea",
+      "wheezes",
+      "rales",
+      "rhonchi",
+      "pitting edema",
+      "lower extremity edema",
+      "Hemoglobin A1c",
+      "non-fasting glucose",
+      "elevated glucose",
+      "abnormal lab finding",
+      "diabetes",
+      "borderline high hemoglobin A1c",
+      "hemoglobin A1c level 8",
+      "blood glucose level",
+      "neurologist",
+      "asymptomatic"
+    ],
+    "section_count": 4
+  },
+  "summary_nair_concepts": {
+    "sections": [
+      {
+        "heading": "S",
+        "section_value": "The patient reports anxiety and stress. He reports excessive sugar intake. The patient denies nausea, dizziness, fever, and chills. The patient reports pain.",
+        "medical_concepts": [
+          "anxiety",
+          "stress",
+          "excessive sugar intake",
+          "nausea",
+          "dizziness",
+          "fever",
+          "chills",
+          "pain"
+        ]
+      },
+      {
+        "heading": "O",
+        "section_value": "The patient has trace pitting edema to the lower extremities. Blood pressure is mildly low. Heart rate is within normal limits.",
+        "medical_concepts": [
+          "pitting edema",
+          "lower extremity edema",
+          "low blood pressure",
+          "heart rate"
+        ]
+      },
+      {
+        "heading": "A",
+        "section_value": "The patient has newly diagnosed diabetes. The patient reports anxiety. The patient has a history of epilepsy.",
+        "medical_concepts": [
+          "diabetes",
+          "anxiety",
+          "epilepsy"
+        ]
+      },
+      {
+        "heading": "P",
+        "section_value": "A hemoglobin a1c test will be ordered. The patient will continue taking keppra. The patient will continue taking metformin 500 mg twice a day.",
+        "medical_concepts": [
+          "hemoglobin A1c test",
+          "Keppra",
+          "metformin 500 mg twice a day"
+        ]
+      }
+    ],
+    "medical_concepts": [
+      "anxiety",
+      "stress",
+      "excessive sugar intake",
+      "nausea",
+      "dizziness",
+      "fever",
+      "chills",
+      "pain",
+      "pitting edema",
+      "lower extremity edema",
+      "low blood pressure",
+      "heart rate",
+      "diabetes",
+      "epilepsy",
+      "hemoglobin A1c test",
+      "Keppra",
+      "metformin 500 mg twice a day"
+    ],
+    "section_count": 4
+  },
+  "nair_alignment": {
+    "pred_concepts": [
+      "anxiety",
+      "stress",
+      "excessive sugar intake",
+      "nausea",
+      "dizziness",
+      "fever",
+      "chills",
+      "pain",
+      "pitting edema",
+      "lower extremity edema",
+      "low blood pressure",
+      "heart rate",
+      "diabetes",
+      "epilepsy",
+      "hemoglobin A1c test",
+      "Keppra",
+      "metformin 500 mg twice a day"
+    ],
+    "ref_concepts": [
+      "abnormal labs",
+      "anxiety",
+      "epilepsy",
+      "elevated blood sugar",
+      "metformin",
+      "seizures",
+      "Keppra",
+      "chest pain",
+      "shortness of breath",
+      "vomiting",
+      "dizziness",
+      "fevers",
+      "chills",
+      "dyspnea",
+      "wheezes",
+      "rales",
+      "rhonchi",
+      "pitting edema",
+      "lower extremity edema",
+      "Hemoglobin A1c",
+      "non-fasting glucose",
+      "elevated glucose",
+      "abnormal lab finding",
+      "diabetes",
+      "borderline high hemoglobin A1c",
+      "hemoglobin A1c level 8",
+      "blood glucose level",
+      "neurologist",
+      "asymptomatic"
+    ],
+    "precision_alignment": {
+      "found_b": [
+        "anxiety",
+        "excessive sugar intake",
+        "dizziness",
+        "fever",
+        "chills",
+        "pain",
+        "pitting edema",
+        "lower extremity edema",
+        "diabetes",
+        "epilepsy",
+        "hemoglobin A1c test",
+        "Keppra",
+        "metformin 500 mg twice a day"
+      ],
+      "not_found_b": [
+        "stress",
+        "nausea",
+        "low blood pressure",
+        "heart rate"
+      ],
+      "chunk_count": 1,
+      "chunk_results": [
+        {
+          "found_b": [
+            "anxiety",
+            "excessive sugar intake",
+            "dizziness",
+            "fever",
+            "chills",
+            "pain",
+            "pitting edema",
+            "lower extremity edema",
+            "diabetes",
+            "epilepsy",
+            "hemoglobin A1c test",
+            "Keppra",
+            "metformin 500 mg twice a day"
+          ],
+          "not_found_b": [
+            "stress",
+            "nausea",
+            "low blood pressure",
+            "heart rate"
+          ]
+        }
+      ]
+    },
+    "recall_alignment": {
+      "found_b": [
+        "anxiety",
+        "epilepsy",
+        "metformin",
+        "Keppra",
+        "dizziness",
+        "fevers",
+        "chills",
+        "pitting edema",
+        "lower extremity edema",
+        "Hemoglobin A1c",
+        "diabetes"
+      ],
+      "not_found_b": [
+        "abnormal labs",
+        "elevated blood sugar",
+        "seizures",
+        "chest pain",
+        "shortness of breath",
+        "vomiting",
+        "dyspnea",
+        "wheezes",
+        "rales",
+        "rhonchi",
+        "non-fasting glucose",
+        "elevated glucose",
+        "abnormal lab finding",
+        "borderline high hemoglobin A1c",
+        "hemoglobin A1c level 8",
+        "blood glucose level",
+        "neurologist",
+        "asymptomatic"
+      ],
+      "chunk_count": 2,
+      "chunk_results": [
+        {
+          "found_b": [
+            "anxiety",
+            "epilepsy",
+            "metformin",
+            "Keppra",
+            "dizziness",
+            "fevers",
+            "chills",
+            "pitting edema",
+            "lower extremity edema",
+            "Hemoglobin A1c",
+            "diabetes"
+          ],
+          "not_found_b": [
+            "abnormal labs",
+            "elevated blood sugar",
+            "seizures",
+            "chest pain",
+            "shortness of breath",
+            "vomiting",
+            "dyspnea",
+            "wheezes",
+            "rales",
+            "rhonchi",
+            "non-fasting glucose",
+            "elevated glucose",
+            "abnormal lab finding"
+          ]
+        },
+        {
+          "found_b": [],
+          "not_found_b": [
+            "borderline high hemoglobin A1c",
+            "hemoglobin A1c level 8",
+            "blood glucose level",
+            "neurologist",
+            "asymptomatic"
+          ]
+        }
+      ]
+    }
+  },
+  "semantic_cap_audit": {
+    "source_cap_recall": [
+      {
+        "cap_id": "P1",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P2",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P3",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P4",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P5",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P6",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P7",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P8",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P9",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P10",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P11",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P12",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P13",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P14",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P15",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P16",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P1",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P2",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P3",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P4",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P5",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P6",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P7",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P8",
+        "judgment": "supported",
+        "reason": null
+      }
+    ],
+    "summary_cap_precision": [
+      {
+        "cap_id": "P1",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P2",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P3",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P4",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P5",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P6",
+        "judgment": "unsupported",
+        "reason": null
+      },
+      {
+        "cap_id": "P7",
+        "judgment": "unsupported",
+        "reason": null
+      },
+      {
+        "cap_id": "P8",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P9",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P10",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P11",
+        "judgment": "partial",
+        "reason": null
+      }
+    ],
+    "metrics": {
+      "semantic_cap_precision": 0.6818,
+      "semantic_cap_recall": 0.75,
+      "semantic_cap_f1": 0.7143,
+      "semantic_cap_precision_supported_count": 6,
+      "semantic_cap_precision_partial_count": 3,
+      "semantic_cap_precision_denominator": 11,
+      "semantic_cap_recall_supported_count": 16,
+      "semantic_cap_recall_partial_count": 4,
+      "semantic_cap_recall_denominator": 24,
+      "semantic_cap_low_value_source_count": 0,
+      "semantic_cap_low_value_summary_count": 0,
+      "semantic_cap_missing_count": 4,
+      "semantic_cap_unsupported_count": 2,
+      "semantic_cap_contradicted_source_count": 0,
+      "semantic_cap_contradicted_summary_count": 0
+    }
+  },
+  "safety_judgment": null,
+  "section_judgment": {
+    "section_miscategorizations": [
+      {
+        "text": "The patient reports anxiety.",
+        "current_section": "A",
+        "expected_section": "S",
+        "severity": "major",
+        "reason": "This is a patient-reported symptom and belongs in the Subjective section, not in the Assessment, where clinician diagnostic impressions and problem synthesis should be documented."
+      },
+      {
+        "text": "The patient will continue taking keppra.",
+        "current_section": "P",
+        "expected_section": "P",
+        "severity": "minor",
+        "reason": "This is a plan statement about continuing a medication and is correctly placed in the Plan; however, it implicitly references a current medication state that is not documented in S. The placement is acceptable but slightly organizationally suboptimal."
+      },
+      {
+        "text": "The patient will continue taking metformin 500 mg twice a day.",
+        "current_section": "P",
+        "expected_section": "P",
+        "severity": "minor",
+        "reason": "This is a management decision to continue an existing medication and is correctly in the Plan, though ideally the baseline current medication use would also be reflected in S. The current placement is acceptable."
+      }
+    ],
+    "summary_statistics": {
+      "section_appropriateness_score": 0.9,
+      "section_miscategorization_count": 3,
+      "major_section_miscategorization_count": 1
+    }
+  },
+  "pdsqi_judgment": {
+    "citation_applicable": 0,
+    "citation": 0,
+    "accurate": 2,
+    "thorough": 2,
+    "useful": 2,
+    "organized": 4,
+    "comprehensible": 4,
+    "succinct": 4,
+    "abstraction": 1,
+    "synthesized": 3,
+    "voice_summ": 0,
+    "voice_note": 0,
+    "pdsqi_core_mean": 3.0
+  },
+  "llm_checklist_judgment": {
+    "content_preservation_core": 3,
+    "noise_suppression": 4,
+    "lay_expression_preservation": 3,
+    "state_update_fidelity": 2,
+    "temporality_preservation": 3,
+    "problem_evidence_linkage": 3,
+    "state_plan_separation": 3,
+    "section_organization_appropriateness": 3,
+    "overall_clinical_usability": 3,
+    "clinically_meaningful_omission": "Yes",
+    "clinically_concerning_hallucination": "Yes",
+    "checklist_a_mean": 3.3333,
+    "checklist_b_mean": 2.5,
+    "checklist_c_mean": 3.0,
+    "llm_checklist_abc_mean": 3.0,
+    "llm_checklist_mean_no_usability": 3.0,
+    "llm_checklist_total_score": 27,
+    "llm_checklist_mean": 3.0,
+    "llm_checklist_meaningful_omission_yes": 1,
+    "llm_checklist_concerning_hallucination_yes": 1
+  },
+  "metrics": {
+    "case_id": "D2N013",
+    "method": "cap_only",
+    "template": "soap",
+    "source_cap_count": 24,
+    "event_plan_count": null,
+    "summary_cap_count": 11,
+    "cap_matched_count": 9,
+    "cap_precision": 0.8182,
+    "cap_recall": 0.375,
+    "cap_f1": 0.5143,
+    "unsupported_summary_cap_count": 2,
+    "missing_source_cap_count": 15,
+    "summary_runtime_seconds": null,
+    "summary_cap_runtime_seconds": 12.943,
+    "event_plan_runtime_seconds": null,
+    "rouge_l_f1_vs_reference": 0.1583,
+    "token_f1_vs_reference": 0.2686,
+    "gptf1_macro_f1": 0.08,
+    "nair_gpt_precision": 0.7647,
+    "nair_gpt_recall": 0.3793,
+    "nair_gpt_f1": 0.5071,
+    "semantic_cap_precision": 0.6818,
+    "semantic_cap_recall": 0.75,
+    "semantic_cap_f1": 0.7143,
+    "hallucination_count": null,
+    "major_hallucination_count": null,
+    "omission_count": null,
+    "major_omission_count": null,
+    "section_appropriateness_score": 0.9,
+    "section_miscategorization_count": 3,
+    "major_section_miscategorization_count": 1,
+    "pdsqi_core_mean": 3.0,
+    "pdsqi_accurate": 2,
+    "pdsqi_thorough": 2,
+    "llm_checklist_total_score": 27,
+    "llm_checklist_mean": 3.0,
+    "llm_checklist_mean_no_usability": 3.0,
+    "checklist_a_mean": 3.3333,
+    "checklist_b_mean": 2.5,
+    "checklist_c_mean": 3.0,
+    "llm_checklist_abc_mean": 3.0,
+    "content_preservation_core": 3,
+    "noise_suppression": 4,
+    "lay_expression_preservation": 3,
+    "state_update_fidelity": 2,
+    "temporality_preservation": 3,
+    "problem_evidence_linkage": 3,
+    "state_plan_separation": 3,
+    "section_organization_appropriateness": 3,
+    "overall_clinical_usability": 3,
+    "llm_checklist_meaningful_omission_yes": 1,
+    "llm_checklist_concerning_hallucination_yes": 1,
+    "gptf1_active_problems_symptoms_precision": 0.3333,
+    "gptf1_active_problems_symptoms_recall": 0.5,
+    "gptf1_active_problems_symptoms_f1": 0.4,
+    "gptf1_active_problems_symptoms_pred_count": 3,
+    "gptf1_active_problems_symptoms_ref_count": 2,
+    "gptf1_negated_findings_precision": 0.0,
+    "gptf1_negated_findings_recall": 0.0,
+    "gptf1_negated_findings_f1": 0.0,
+    "gptf1_negated_findings_pred_count": 4,
+    "gptf1_negated_findings_ref_count": 3,
+    "gptf1_uncertain_findings_precision": 0.0,
+    "gptf1_uncertain_findings_recall": 0.0,
+    "gptf1_uncertain_findings_f1": 0.0,
+    "gptf1_uncertain_findings_pred_count": 1,
+    "gptf1_uncertain_findings_ref_count": 1,
+    "gptf1_medication_treatment_precision": 0.0,
+    "gptf1_medication_treatment_recall": 0.0,
+    "gptf1_medication_treatment_f1": 0.0,
+    "gptf1_medication_treatment_pred_count": 2,
+    "gptf1_medication_treatment_ref_count": 0,
+    "gptf1_plan_followup_precision": 0.0,
+    "gptf1_plan_followup_recall": 0.0,
+    "gptf1_plan_followup_f1": 0.0,
+    "gptf1_plan_followup_pred_count": 1,
+    "gptf1_plan_followup_ref_count": 0,
+    "nair_pred_concept_count": 17,
+    "nair_ref_concept_count": 29,
+    "nair_precision_match_count": 13,
+    "nair_recall_match_count": 11,
+    "semantic_cap_precision_supported_count": 6,
+    "semantic_cap_precision_partial_count": 3,
+    "semantic_cap_precision_denominator": 11,
+    "semantic_cap_recall_supported_count": 16,
+    "semantic_cap_recall_partial_count": 4,
+    "semantic_cap_recall_denominator": 24,
+    "semantic_cap_low_value_source_count": 0,
+    "semantic_cap_low_value_summary_count": 0,
+    "semantic_cap_missing_count": 4,
+    "semantic_cap_unsupported_count": 2,
+    "semantic_cap_contradicted_source_count": 0,
+    "semantic_cap_contradicted_summary_count": 0,
+    "pdsqi_useful": 2,
+    "pdsqi_organized": 4,
+    "pdsqi_comprehensible": 4,
+    "pdsqi_succinct": 4,
+    "pdsqi_synthesized": 3
+  }
+}

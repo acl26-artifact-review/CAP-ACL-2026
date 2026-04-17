@@ -1,0 +1,139 @@
+Case: D2N195
+
+Problem List and Visit State Tracking
+
+Problem List
+- swelling | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T1
+  Summary: The patient reports swelling in the knee.
+  ClusterId: CL1
+  TemporalProfile: current
+  Updates:
+  - CAP9: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T1 :: The patient reports swelling in the knee.
+- knee pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T9
+  Summary: The patient reports pain in the left knee.
+  ClusterId: CL2
+  TemporalProfile: current
+  Updates:
+  - CAP6: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T9 :: The patient reports pain in the left knee.
+  - CAP10: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T9 :: The patient reports pain in the knee.
+- knee injury | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T9
+  Summary: The patient has a knee injury.
+  ClusterId: CL3
+  TemporalProfile: current
+  Updates:
+  - CAP15: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T9 :: The patient has a knee injury.
+- pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T13,T23,T44
+  Summary: The patient reports a pain level of four.
+  ClusterId: CL4
+  TemporalProfile: current
+  Updates:
+  - CAP11: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T13 :: The patient describes the pain as achy.
+  - CAP7: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T23 :: The patient reports a pain level of four.
+  - CAP8: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T44 :: The patient reports pain in the left hand.
+- hypertension | verification_status=confirmed | clinical_status=active | modalities=assessment,interview | speakers=doctor | evidence=T24,T29,T46
+  Summary: The doctor believes the patient has hypertension.
+  ClusterId: CL6
+  TemporalProfile: current
+  Updates:
+  - CAP4: content_source=doctor modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T24 :: The doctor is checking up on the patient's hypertension.
+  - CAP12: content_source=doctor modality=assessment verification_status=unconfirmed clinical_status=active temporality=current turns=T29 :: The doctor believes the patient has hypertension.
+  - CAP18: content_source=doctor modality=assessment verification_status=confirmed clinical_status=active temporality=current turns=T46 :: The patient has hypertension.
+- diabetes | verification_status=unconfirmed | clinical_status=active | modalities=assessment,interview | speakers=doctor | evidence=T24,T34
+  Summary: The doctor believes the patient has diabetes.
+  ClusterId: CL7
+  TemporalProfile: current
+  Updates:
+  - CAP5: content_source=doctor modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T24 :: The doctor is checking up on the patient's diabetes.
+  - CAP13: content_source=doctor modality=assessment verification_status=unconfirmed clinical_status=active temporality=current turns=T34 :: The doctor believes the patient has diabetes.
+- blood pressure | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T27
+  Summary: The patient's blood pressure is typically in the one forties to one fifties range on the top number and around eighty on the bottom number.
+  ClusterId: CL9
+  TemporalProfile: current
+  Updates:
+  - CAP1: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T27 :: The patient's blood pressure is typically in the one forties to one fifties range on the top number and around eighty on the bottom number.
+  - CAP2: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T27 :: The patient reports a blood pressure of 140 over 80.
+  - CAP3: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T27 :: The patient reports a blood pressure of 110 over 70.
+- metformin | verification_status=unconfirmed | clinical_status=active | modalities=assessment | speakers=doctor | evidence=T34
+  Summary: The patient is taking metformin.
+  ClusterId: CL10
+  TemporalProfile: current
+  Updates:
+  - CAP16: content_source=doctor modality=assessment verification_status=unconfirmed clinical_status=active temporality=current turns=T34 :: The patient is taking metformin.
+- stomach upset | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T35
+  Summary: The patient reports stomach upset.
+  ClusterId: CL12
+  TemporalProfile: current
+  Updates:
+  - CAP17: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T35 :: The patient reports stomach upset.
+- blood sugar | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T36
+  Summary: The patient reports irregular blood sugar readings.
+  ClusterId: CL13
+  TemporalProfile: current
+  Updates:
+  - CAP14: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T36 :: The patient reports irregular blood sugar readings.
+
+Medication Tracking
+- [MedicationState] tylenol | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T17
+  Summary: The patient took Tylenol yesterday.
+  ClusterId: CL5
+  TemporalProfile: yesterday
+  CurrentRegimens:
+  - The patient took Tylenol yesterday. (T17)
+  Updates:
+  - CAP24: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=yesterday turns=T17 :: The patient took Tylenol yesterday.
+- [MedicationState] norvasc | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=doctor | evidence=T24
+  Summary: The patient is taking five milligrams of norvasc daily.
+  ClusterId: CL8
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient is taking five milligrams of norvasc daily. (T24)
+  Updates:
+  - CAP23: content_source=doctor modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T24 :: The patient is taking five milligrams of norvasc daily.
+- [MedicationChange] metformin | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T34
+  Summary: The doctor wants to change the patient's medication.
+  ClusterId: CL11
+  TemporalProfile: current
+  PlannedChanges:
+  - The doctor wants to change the patient's medication. (T34)
+  Updates:
+  - CAP20: content_source=doctor modality=plan verification_status=unconfirmed clinical_status=planned temporality=current turns=T34 :: The doctor wants to change the patient's medication.
+- [MedicationChange] meloxicam | verification_status=confirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T44
+  Summary: The doctor prescribed meloxicam.
+  ClusterId: CL16
+  TemporalProfile: future
+  PlannedChanges:
+  - The doctor prescribed meloxicam. (T44)
+  Updates:
+  - CAP26: content_source=doctor modality=plan verification_status=confirmed clinical_status=planned temporality=future turns=T44 :: The doctor prescribed meloxicam.
+- [MedicationChange] norvasc | verification_status=confirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T44
+  Summary: The doctor prescribed norvasc.
+  ClusterId: CL17
+  TemporalProfile: future
+  PlannedChanges:
+  - The doctor prescribed norvasc. (T44)
+  Updates:
+  - CAP27: content_source=doctor modality=plan verification_status=confirmed clinical_status=planned temporality=future turns=T44 :: The doctor prescribed norvasc.
+- [MedicationChange] norvasta | verification_status=confirmed | clinical_status=planned | modalities=assessment | speakers=doctor | evidence=T46
+  Summary: The doctor will prescribe norvasta at a dose of 5 milligrams.
+  ClusterId: CL18
+  TemporalProfile: current
+  PlannedChanges:
+  - The doctor will prescribe norvasta at a dose of 5 milligrams. (T46)
+  - The doctor will increase the norvasta dose. (T46)
+  Updates:
+  - CAP19: content_source=doctor modality=assessment verification_status=confirmed clinical_status=planned temporality=current turns=T46 :: The doctor will prescribe norvasta at a dose of 5 milligrams.
+  - CAP21: content_source=doctor modality=assessment verification_status=confirmed clinical_status=planned temporality=current turns=T46 :: The doctor will increase the norvasta dose.
+
+Other Structured States
+- [Plan] knee immobilizer | verification_status=confirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T44
+  Summary: The doctor ordered a knee immobilizer.
+  ClusterId: CL14
+  TemporalProfile: future
+- [FollowUp] mri | verification_status=confirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T44
+  Summary: The doctor ordered an MRI.
+  ClusterId: CL15
+  TemporalProfile: future
+- [Plan] diet | verification_status=confirmed | clinical_status=planned | modalities=assessment | speakers=doctor | evidence=T46
+  Summary: The doctor will refer the patient to nutrition counseling.
+  ClusterId: CL19
+  TemporalProfile: current

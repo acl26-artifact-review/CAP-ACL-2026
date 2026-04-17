@@ -1,0 +1,168 @@
+Case: D2N140
+
+Problem List and Visit State Tracking
+
+Problem List
+- abdominal pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T30,T9
+  Summary: The patient reports abdominal pain.
+  ClusterId: CL5
+  TemporalProfile: current
+  Updates:
+  - CAP3: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T9 :: The patient reports abdominal pain.
+  - CAP6: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T30 :: The patient reports abdominal pain.
+- nausea | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T10,T47
+  Summary: The patient reports nausea.
+  ClusterId: CL6
+  TemporalProfile: current
+  Updates:
+  - CAP8: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T10 :: The patient reports nausea.
+  - CAP14: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T47 :: The patient experiences nausea.
+- cramps | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T10
+  Summary: The patient reports cramps.
+  ClusterId: CL7
+  TemporalProfile: current
+  Updates:
+  - CAP9: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T10 :: The patient reports cramps.
+- diarrhea | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T11,T17,T19,T30
+  Summary: The patient has had diarrhea in the past.
+  ClusterId: CL8
+  TemporalProfile: current, past
+  Updates:
+  - CAP10: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T11 :: The patient reports diarrhea.
+  - CAP30: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T17 :: The patient reports increased diarrhea frequency.
+  - CAP1: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=past turns=T19 :: The patient has had diarrhea in the past.
+  - CAP13: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T30 :: The patient reports diarrhea.
+- bowel movement frequency | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T13
+  Summary: The patient reports a change in bowel movement frequency.
+  ClusterId: CL9
+  TemporalProfile: current
+  Updates:
+  - CAP28: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T13 :: The patient reports a change in bowel movement frequency.
+- formed stools | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T15
+  Summary: The patient reports formed stools.
+  ClusterId: CL10
+  TemporalProfile: current
+  Updates:
+  - CAP4: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T15 :: The patient reports formed stools.
+- bloating | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T19
+  Summary: The patient reports bloating.
+  ClusterId: CL11
+  TemporalProfile: current
+  Updates:
+  - CAP11: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T19 :: The patient reports bloating.
+- alfredo sauce | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T19
+  Summary: The patient mentions eating alfredo sauce at Friday's restaurant.
+  ClusterId: CL12
+  TemporalProfile: current
+  Updates:
+  - CAP29: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T19 :: The patient mentions eating alfredo sauce at Friday's restaurant.
+- sharp pains | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T31
+  Summary: The patient reports sharp pains.
+  ClusterId: CL16
+  TemporalProfile: current
+  Updates:
+  - CAP5: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T31 :: The patient reports sharp pains.
+- fried chicken | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T31
+  Summary: The patient ate fried chicken.
+  ClusterId: CL17
+  TemporalProfile: current
+  Updates:
+  - CAP7: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T31 :: The patient ate fried chicken.
+- cramping | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T31
+  Summary: The patient reports cramping.
+  ClusterId: CL18
+  TemporalProfile: current
+  Updates:
+  - CAP12: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T31 :: The patient reports cramping.
+- portion sizes | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T34
+  Summary: The patient is concerned about portion sizes.
+  ClusterId: CL19
+  TemporalProfile: current
+  Updates:
+  - CAP2: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T34 :: The patient is concerned about portion sizes.
+
+Medication Tracking
+- [MedicationState] zofran | verification_status=confirmed | clinical_status=active | modalities=interview,unknown | speakers=clinician,doctor | evidence=T1,T49
+  Summary: Zofran was instructed.
+  ClusterId: CL1
+  TemporalProfile: current, past
+  CurrentRegimens:
+  - Zofran was instructed. (T1)
+  - The doctor advises not to take zofran ahead of time. (T49)
+  Updates:
+  - CAP25: content_source=clinician modality=interview verification_status=confirmed clinical_status=historical temporality=past turns=T1 :: Zofran was instructed.
+  - CAP18: content_source=doctor modality=unknown verification_status=confirmed clinical_status=active temporality=current turns=T49 :: The doctor advises not to take zofran ahead of time.
+- [MedicationState] bentyl | verification_status=confirmed | clinical_status=active | modalities=interview,unknown | speakers=clinician,doctor | evidence=T1,T45
+  Summary: Bentyl was recommended.
+  ClusterId: CL2
+  TemporalProfile: current
+  CurrentRegimens:
+  - Bentyl was recommended. (T1)
+  - The doctor recommends taking bentyl at a higher dose. (T45)
+  Updates:
+  - CAP27: content_source=clinician modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T1 :: Bentyl was recommended.
+  - CAP19: content_source=doctor modality=unknown verification_status=confirmed clinical_status=active temporality=current turns=T45 :: The doctor recommends taking bentyl at a higher dose.
+- [MedicationState] citrucel | verification_status=unconfirmed | clinical_status=historical | modalities=interview | speakers=clinician,patient | evidence=T1,T20
+  Summary: The patient has used citrucel in the past.
+  ClusterId: CL3
+  TemporalProfile: current, past
+  CurrentRegimens:
+  - Citrucel was recommended. (T1)
+  - The patient has used citrucel in the past. (T20)
+  Updates:
+  - CAP26: content_source=clinician modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T1 :: Citrucel was recommended.
+  - CAP20: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=past turns=T20 :: The patient has used citrucel in the past.
+- [MedicationState] reglan | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=clinician | evidence=T1
+  Summary: Reglan was prescribed.
+  ClusterId: CL4
+  TemporalProfile: past
+  CurrentRegimens:
+  - Reglan was prescribed. (T1)
+  Updates:
+  - CAP24: content_source=clinician modality=interview verification_status=confirmed clinical_status=historical temporality=past turns=T1 :: Reglan was prescribed.
+- [MedicationState] patron tequila | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T25
+  Summary: The patient prefers Patron tequila.
+  ClusterId: CL13
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient prefers Patron tequila. (T25)
+  Updates:
+  - CAP21: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T25 :: The patient prefers Patron tequila.
+- [MedicationState] dark liquor | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T25
+  Summary: The patient drinks dark liquor.
+  ClusterId: CL14
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient drinks dark liquor. (T25)
+  Updates:
+  - CAP22: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T25 :: The patient drinks dark liquor.
+- [MedicationState] martini | verification_status=unconfirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T25
+  Summary: The patient occasionally drinks martinis.
+  ClusterId: CL15
+  TemporalProfile: past
+  CurrentRegimens:
+  - The patient occasionally drinks martinis. (T25)
+  Updates:
+  - CAP23: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=past turns=T25 :: The patient occasionally drinks martinis.
+- [MedicationChange] citrucel | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T43
+  Summary: The doctor recommends taking citrucel.
+  ClusterId: CL20
+  TemporalProfile: future
+  PlannedChanges:
+  - The doctor recommends taking citrucel. (T43)
+  Updates:
+  - CAP16: content_source=doctor modality=plan verification_status=unconfirmed clinical_status=planned temporality=future turns=T43 :: The doctor recommends taking citrucel.
+- [MedicationChange] bentyl | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T43
+  Summary: The doctor recommends taking bentyl.
+  ClusterId: CL21
+  TemporalProfile: future
+  PlannedChanges:
+  - The doctor recommends taking bentyl. (T43)
+  Updates:
+  - CAP17: content_source=doctor modality=plan verification_status=unconfirmed clinical_status=planned temporality=future turns=T43 :: The doctor recommends taking bentyl.
+
+Other Structured States
+- [Plan] elavil | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T51
+  Summary: The doctor suggests considering elavil for long-term management if symptoms are persistent.
+  ClusterId: CL22
+  TemporalProfile: future

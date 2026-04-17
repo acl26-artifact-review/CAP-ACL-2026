@@ -1,0 +1,44 @@
+{
+  "section_miscategorizations": [
+    {
+      "text": "and coumadin is being taken.",
+      "current_section": "A",
+      "expected_section": "S",
+      "severity": "major",
+      "reason": "This is a current medication the patient is already taking, which belongs in the Subjective section unless framed as a treatment change or order."
+    },
+    {
+      "text": "The patient is taking coumadin at 4 milligrams daily.",
+      "current_section": "P",
+      "expected_section": "S",
+      "severity": "major",
+      "reason": "This describes an existing medication regimen rather than a new order or change, so it belongs in the Subjective section."
+    },
+    {
+      "text": "The patient is taking lasix at 4 milligrams daily.",
+      "current_section": "P",
+      "expected_section": "S",
+      "severity": "major",
+      "reason": "This is documentation of current medications, not a new plan or change, and should be in the Subjective section."
+    },
+    {
+      "text": "The patient is taking atenolol at 50 milligrams daily.",
+      "current_section": "P",
+      "expected_section": "S",
+      "severity": "major",
+      "reason": "This is an existing medication regimen and should be recorded as current therapy in the Subjective section, not in the Plan."
+    },
+    {
+      "text": "The patient has atrial fibrillation, a history of mitral regurgitation, a history of atrial fibrillation, a history of chest discomfort, a history of diabetes, a history of asthma, and coumadin is being taken.",
+      "current_section": "A",
+      "expected_section": "A and S",
+      "severity": "minor",
+      "reason": "The diagnoses and history elements are appropriate for Assessment, but the embedded medication statement about coumadin belongs in Subjective; mixing them slightly blurs section semantics."
+    }
+  ],
+  "summary_statistics": {
+    "section_appropriateness_score": 0.4,
+    "section_miscategorization_count": 5,
+    "major_section_miscategorization_count": 4
+  }
+}

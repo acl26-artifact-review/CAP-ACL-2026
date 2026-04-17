@@ -1,0 +1,1766 @@
+{
+  "case_id": "D2N011",
+  "method": "cap_event_only",
+  "template": "soap",
+  "summary_text": "S:\nThe patient reports experiencing persistent fatigue and muscle aches for the past three weeks. He states the fatigue is significantly worse on days when he has not been sleeping well. He denies fever, cough, or shortness of breath. He also reports feeling slightly depressed.\n\nO:\nBlood pressure is 128/80 mmHg. Heart rate is 72 bpm and regular. Temperature is 98.6°F. Range of motion in all major joints is full and pain-free. No swelling or redness noted.\n\nA:\nThe patient's symptoms are most consistent with chronic fatigue syndrome and possible depression.\n\nP:\nRescribe sertraline 50mg daily. Schedule follow-up in 4 weeks to assess response to medication and monitor fatigue levels. Counsel the patient on sleep hygiene and stress management techniques.",
+  "reference_summary": "HISTORY OF PRESENT ILLNESS\n\nRoger Nelson is a 62-year-old male who presents for emergency room follow-up for chest pain. The patient was doing yard work over the weekend when he began to feel short of breath and a full chest pain for approximately hour. He denies a history of chest pain. The patient notes that after he finished he felt fine. He has not had any other symptoms since that time. He denies a family history of heart disease.\n\nThe patient underwent right knee surgery a couple of months ago and has been feeling well since then. He has been in rehab and recovery. He denies chest pain while doing exercises in physical therapy for his knee.\n\nHis blood pressure was noted to be 180/95 mmHg when he visited the emergency room. He notes that his blood pressure has not been as high as usual.\n\nPHYSICAL EXAMINATION\n\nNeck\n• General Examination: I do feel a little large thyroid that is not tender. She has a carotid bruit on the right side. \n\nRespiratory\n• Auscultation of Lungs: Clear bilaterally. Cardiovascular\n• Auscultation of Heart: Regular rate and rhythm, but I do hear 3/6 systolic ejection murmur. Gastrointestinal\n• Examination of Abdomen: Soft. There is a healed scar on the right knee from prior knee surgery. Musculoskeletal\n• Examination: There is no lower extremity edema.\n\nRESULTS\n\nBlood pressure is elevated.\n\nEKG is normal.\n\nEchocardiogram demonstrates decreased ejection fraction.\n\nASSESSMENT AND PLAN\n\nThe patient is a 62-year-old male who presents for emergency room follow-up. He presented to the emergency room for chest pain and elevated blood pressure of 180/95. His EKG from the emergency room was normal, but ejection fraction on echocardiogram was abnormal. His blood pressure today was still elevated.\n\nChest pain and hypertension.\n• Medical Reasoning: Given his recent episode of blood pressure elevation and chest pain, I suspect an element of coronary artery disease as well as pumping dysfunction.\n• Medical Treatment: We will change his blood pressure regimen to carvedilol 25 mg twice a day. He should also continue lisinopril 10 mg a day and I want to see how his blood pressure does on that regimen. I also recommended cardiac catheterization on him to make sure that he does not have any blockages in his heart.\n\nPatient Agreements: The patient understands and agrees with the recommended medical treatment plan.",
+  "source_cap": {
+    "atomic_propositions": [
+      {
+        "prop_id": "CAP1",
+        "cap_type": "Symptom",
+        "canonical_concept": "shortness of breath",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports shortness of breath."
+      },
+      {
+        "prop_id": "CAP2",
+        "cap_type": "Symptom",
+        "canonical_concept": "chest pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports chest pain."
+      },
+      {
+        "prop_id": "CAP3",
+        "cap_type": "Symptom",
+        "canonical_concept": "chest pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports chest pain."
+      },
+      {
+        "prop_id": "CAP4",
+        "cap_type": "Symptom",
+        "canonical_concept": "no other symptoms",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "denies",
+        "status": "affirmed",
+        "visit_state": "stable",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient denies other symptoms."
+      },
+      {
+        "prop_id": "CAP5",
+        "cap_type": "Order",
+        "canonical_concept": "cardiac catheterization",
+        "category": "Order",
+        "speaker": "doctor",
+        "status": "uncertain",
+        "visit_state": "planned",
+        "temporality": "future",
+        "proposition_text": "The doctor will order a cardiac catheterization."
+      },
+      {
+        "prop_id": "CAP6",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "carvedilol",
+        "category": "MedicationStatement",
+        "speaker": "doctor",
+        "status": "uncertain",
+        "visit_state": "planned",
+        "temporality": "future",
+        "proposition_text": "The doctor will prescribe carvedilol."
+      },
+      {
+        "prop_id": "CAP7",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "lisinopril",
+        "category": "MedicationStatement",
+        "speaker": "doctor",
+        "status": "uncertain",
+        "visit_state": "planned",
+        "temporality": "future",
+        "proposition_text": "The doctor will prescribe lisinopril."
+      },
+      {
+        "prop_id": "CAP8",
+        "cap_type": "ProblemHistory",
+        "canonical_concept": "knee surgery",
+        "category": "ProblemHistory",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "couple months ago",
+        "proposition_text": "The patient had knee surgery a couple months ago."
+      },
+      {
+        "prop_id": "CAP9",
+        "cap_type": "ProblemHistory",
+        "canonical_concept": "rehab and recovery",
+        "category": "ProblemHistory",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "recent",
+        "proposition_text": "The patient felt no problem in rehab and recovery."
+      },
+      {
+        "prop_id": "CAP10",
+        "cap_type": "ProblemHistory",
+        "canonical_concept": "yard work",
+        "category": "ProblemHistory",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "weekend",
+        "proposition_text": "The patient performed yard work."
+      },
+      {
+        "prop_id": "CAP11",
+        "cap_type": "ProblemHistory",
+        "canonical_concept": "heat",
+        "category": "ProblemHistory",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "weekend",
+        "proposition_text": "The patient experienced heat."
+      }
+    ],
+    "filtered_nonverifiable_units": []
+  },
+  "event_plan": {
+    "events": [
+      {
+        "event_id": "E1",
+        "event_type": "SymptomCourse",
+        "canonical_concept": "shortness of breath",
+        "visit_state": "active",
+        "status": "affirmed",
+        "temporality": "current",
+        "speaker_source": "patient",
+        "clinical_priority": "medium",
+        "title": "shortness breath",
+        "event_summary": "The patient reports shortness of breath.",
+        "supporting_cap_ids": [
+          "CAP1"
+        ],
+        "anchor_problem": "shortness of breath",
+        "supporting_evidence": [
+          "The patient reports shortness of breath."
+        ],
+        "key_slots": {
+          "temporality": "current",
+          "assertion": "affirmed"
+        },
+        "render_sections": [
+          "S",
+          "History of Present Illness"
+        ]
+      },
+      {
+        "event_id": "E2",
+        "event_type": "SymptomCourse",
+        "canonical_concept": "chest pain",
+        "visit_state": "active",
+        "status": "affirmed",
+        "temporality": "current",
+        "speaker_source": "patient",
+        "clinical_priority": "medium",
+        "title": "chest pain",
+        "event_summary": "The patient reports chest pain.",
+        "supporting_cap_ids": [
+          "CAP2",
+          "CAP3"
+        ],
+        "anchor_problem": "chest pain",
+        "supporting_evidence": [
+          "The patient reports chest pain."
+        ],
+        "key_slots": {
+          "temporality": "current",
+          "assertion": "affirmed"
+        },
+        "render_sections": [
+          "S",
+          "History of Present Illness"
+        ]
+      },
+      {
+        "event_id": "E3",
+        "event_type": "SymptomCourse",
+        "canonical_concept": "no other symptoms",
+        "visit_state": "stable",
+        "status": "affirmed",
+        "temporality": "current",
+        "speaker_source": "patient",
+        "clinical_priority": "medium",
+        "title": "denies other symptoms",
+        "event_summary": "The patient denies other symptoms.",
+        "supporting_cap_ids": [
+          "CAP4"
+        ],
+        "anchor_problem": "no other symptoms",
+        "supporting_evidence": [
+          "The patient denies other symptoms."
+        ],
+        "key_slots": {
+          "temporality": "current",
+          "assertion": "affirmed"
+        },
+        "render_sections": [
+          "S",
+          "History of Present Illness"
+        ]
+      },
+      {
+        "event_id": "E4",
+        "event_type": "PMH",
+        "canonical_concept": "cardiac catheterization",
+        "visit_state": "planned",
+        "status": "uncertain",
+        "temporality": "future",
+        "speaker_source": "doctor",
+        "clinical_priority": "low",
+        "title": "order cardiac catheterization",
+        "event_summary": "The doctor will order a cardiac catheterization.",
+        "supporting_cap_ids": [
+          "CAP5"
+        ],
+        "anchor_problem": "cardiac catheterization",
+        "current_state": [
+          "The doctor will order a cardiac catheterization."
+        ],
+        "key_slots": {
+          "temporality": "future",
+          "assertion": "uncertain"
+        },
+        "render_sections": [
+          "S",
+          "History of Present Illness"
+        ]
+      },
+      {
+        "event_id": "E5",
+        "event_type": "PMH",
+        "canonical_concept": "carvedilol",
+        "visit_state": "planned",
+        "status": "uncertain",
+        "temporality": "future",
+        "speaker_source": "doctor",
+        "clinical_priority": "low",
+        "title": "prescribe carvedilol",
+        "event_summary": "The doctor will prescribe carvedilol.",
+        "supporting_cap_ids": [
+          "CAP6"
+        ],
+        "anchor_problem": "carvedilol",
+        "current_state": [
+          "The doctor will prescribe carvedilol."
+        ],
+        "key_slots": {
+          "action": "prescribe",
+          "temporality": "future",
+          "assertion": "uncertain"
+        },
+        "render_sections": [
+          "S",
+          "History of Present Illness"
+        ]
+      },
+      {
+        "event_id": "E6",
+        "event_type": "PMH",
+        "canonical_concept": "lisinopril",
+        "visit_state": "planned",
+        "status": "uncertain",
+        "temporality": "future",
+        "speaker_source": "doctor",
+        "clinical_priority": "low",
+        "title": "prescribe lisinopril",
+        "event_summary": "The doctor will prescribe lisinopril.",
+        "supporting_cap_ids": [
+          "CAP7"
+        ],
+        "anchor_problem": "lisinopril",
+        "current_state": [
+          "The doctor will prescribe lisinopril."
+        ],
+        "key_slots": {
+          "medication": "lisinopril",
+          "action": "prescribe",
+          "temporality": "future",
+          "assertion": "uncertain"
+        },
+        "render_sections": [
+          "S",
+          "History of Present Illness"
+        ]
+      },
+      {
+        "event_id": "E7",
+        "event_type": "PMH",
+        "canonical_concept": "knee surgery",
+        "visit_state": "historical",
+        "status": "affirmed",
+        "temporality": "couple months ago",
+        "speaker_source": "doctor",
+        "clinical_priority": "low",
+        "title": "knee surgery couple months",
+        "event_summary": "The patient had knee surgery a couple months ago.",
+        "supporting_cap_ids": [
+          "CAP8"
+        ],
+        "anchor_problem": "knee surgery",
+        "current_state": [
+          "The patient had knee surgery a couple months ago."
+        ],
+        "key_slots": {
+          "temporality": "couple months ago",
+          "assertion": "affirmed"
+        },
+        "render_sections": [
+          "S",
+          "History of Present Illness"
+        ]
+      },
+      {
+        "event_id": "E8",
+        "event_type": "PMH",
+        "canonical_concept": "rehab and recovery",
+        "visit_state": "historical",
+        "status": "affirmed",
+        "temporality": "recent",
+        "speaker_source": "patient",
+        "clinical_priority": "low",
+        "title": "felt problem rehab and",
+        "event_summary": "The patient felt no problem in rehab and recovery.",
+        "supporting_cap_ids": [
+          "CAP9"
+        ],
+        "anchor_problem": "rehab and recovery",
+        "current_state": [
+          "The patient felt no problem in rehab and recovery."
+        ],
+        "key_slots": {
+          "temporality": "recent",
+          "assertion": "affirmed"
+        },
+        "render_sections": [
+          "S",
+          "History of Present Illness"
+        ]
+      },
+      {
+        "event_id": "E9",
+        "event_type": "PMH",
+        "canonical_concept": "yard work",
+        "visit_state": "historical",
+        "status": "affirmed",
+        "temporality": "weekend",
+        "speaker_source": "patient",
+        "clinical_priority": "low",
+        "title": "performed yard work",
+        "event_summary": "The patient performed yard work.",
+        "supporting_cap_ids": [
+          "CAP10"
+        ],
+        "anchor_problem": "yard work",
+        "current_state": [
+          "The patient performed yard work."
+        ],
+        "key_slots": {
+          "temporality": "weekend",
+          "assertion": "affirmed"
+        },
+        "render_sections": [
+          "S",
+          "History of Present Illness"
+        ]
+      },
+      {
+        "event_id": "E10",
+        "event_type": "PMH",
+        "canonical_concept": "heat",
+        "visit_state": "historical",
+        "status": "affirmed",
+        "temporality": "weekend",
+        "speaker_source": "patient",
+        "clinical_priority": "low",
+        "title": "experienced heat",
+        "event_summary": "The patient experienced heat.",
+        "supporting_cap_ids": [
+          "CAP11"
+        ],
+        "anchor_problem": "heat",
+        "current_state": [
+          "The patient experienced heat."
+        ],
+        "key_slots": {
+          "temporality": "weekend",
+          "assertion": "affirmed"
+        },
+        "render_sections": [
+          "S",
+          "History of Present Illness"
+        ]
+      }
+    ],
+    "runtime_seconds": 0.001
+  },
+  "summary_cap": {
+    "atomic_propositions": [
+      {
+        "prop_id": "P1",
+        "cap_type": "Symptom",
+        "canonical_concept": "persistent fatigue",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports persistent fatigue."
+      },
+      {
+        "prop_id": "P2",
+        "cap_type": "Symptom",
+        "canonical_concept": "muscle aches",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports muscle aches."
+      },
+      {
+        "prop_id": "P3",
+        "cap_type": "History",
+        "canonical_concept": "muscle aches for past",
+        "category": "History",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "past",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports muscle aches for the past three weeks."
+      },
+      {
+        "prop_id": "P4",
+        "cap_type": "Symptom",
+        "canonical_concept": "fatigue significantly worse",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "worsening",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports fatigue is significantly worse."
+      },
+      {
+        "prop_id": "P5",
+        "cap_type": "Symptom",
+        "canonical_concept": "fatigue worse days when",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "worsening",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports fatigue is worse on days when he has not been sleeping well."
+      },
+      {
+        "prop_id": "P6",
+        "cap_type": "Symptom",
+        "canonical_concept": "feeling depressed",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports feeling slightly depressed."
+      },
+      {
+        "prop_id": "P7",
+        "cap_type": "Denial",
+        "canonical_concept": "denies fever",
+        "category": "Denial",
+        "speaker": "patient",
+        "predicate": "denies",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient denies fever."
+      },
+      {
+        "prop_id": "P8",
+        "cap_type": "Denial",
+        "canonical_concept": "cough",
+        "category": "Denial",
+        "speaker": "patient",
+        "predicate": "denies",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient denies cough."
+      },
+      {
+        "prop_id": "P9",
+        "cap_type": "Denial",
+        "canonical_concept": "denies shortness breath",
+        "category": "Denial",
+        "speaker": "patient",
+        "predicate": "denies",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient denies shortness of breath."
+      },
+      {
+        "prop_id": "P10",
+        "cap_type": "ExamFinding",
+        "canonical_concept": "blood pressure",
+        "category": "ExamFinding",
+        "speaker": "clinician",
+        "predicate": "shows",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "exam"
+        ],
+        "proposition_text": "Blood pressure is 128/80 mmHg."
+      },
+      {
+        "prop_id": "P11",
+        "cap_type": "ExamFinding",
+        "canonical_concept": "heart rate bpm and",
+        "category": "ExamFinding",
+        "speaker": "clinician",
+        "predicate": "shows",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "exam"
+        ],
+        "proposition_text": "Heart rate is 72 bpm and regular."
+      },
+      {
+        "prop_id": "P12",
+        "cap_type": "ExamFinding",
+        "canonical_concept": "temperature",
+        "category": "ExamFinding",
+        "speaker": "clinician",
+        "predicate": "shows",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "exam"
+        ],
+        "proposition_text": "Temperature is 98.6°F."
+      },
+      {
+        "prop_id": "P13",
+        "cap_type": "ExamFinding",
+        "canonical_concept": "pain",
+        "category": "ExamFinding",
+        "speaker": "clinician",
+        "predicate": "shows",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "exam"
+        ],
+        "proposition_text": "Range of motion in all major joints is full and pain-free."
+      },
+      {
+        "prop_id": "P14",
+        "cap_type": "Diagnosis",
+        "canonical_concept": "symptoms are most consistent",
+        "category": "Diagnosis",
+        "speaker": "clinician",
+        "predicate": "diagnoses",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "diagnostic"
+        ],
+        "proposition_text": "The patient's symptoms are most consistent with chronic fatigue syndrome and possible depression."
+      }
+    ],
+    "filtered_nonverifiable_units": [],
+    "runtime_seconds": 19.743
+  },
+  "cap_alignment": {
+    "cap_precision": 0.07142857142857142,
+    "cap_recall": 0.09090909090909091,
+    "cap_f1": 0.08,
+    "matched_count": 1,
+    "summary_prop_count": 14,
+    "source_prop_count": 11,
+    "matched_pairs": [
+      {
+        "score": 0.8333,
+        "summary_prop_id": "P9",
+        "source_prop_id": "CAP1",
+        "summary_text": "The patient denies shortness of breath.",
+        "source_text": "The patient reports shortness of breath."
+      }
+    ],
+    "unsupported_summary_props": [
+      {
+        "prop_id": "P1",
+        "cap_type": "Symptom",
+        "canonical_concept": "persistent fatigue",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports persistent fatigue."
+      },
+      {
+        "prop_id": "P2",
+        "cap_type": "Symptom",
+        "canonical_concept": "muscle aches",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports muscle aches."
+      },
+      {
+        "prop_id": "P3",
+        "cap_type": "History",
+        "canonical_concept": "muscle aches for past",
+        "category": "History",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "past",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports muscle aches for the past three weeks."
+      },
+      {
+        "prop_id": "P4",
+        "cap_type": "Symptom",
+        "canonical_concept": "fatigue significantly worse",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "worsening",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports fatigue is significantly worse."
+      },
+      {
+        "prop_id": "P5",
+        "cap_type": "Symptom",
+        "canonical_concept": "fatigue worse days when",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "worsening",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports fatigue is worse on days when he has not been sleeping well."
+      },
+      {
+        "prop_id": "P6",
+        "cap_type": "Symptom",
+        "canonical_concept": "feeling depressed",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports feeling slightly depressed."
+      },
+      {
+        "prop_id": "P7",
+        "cap_type": "Denial",
+        "canonical_concept": "denies fever",
+        "category": "Denial",
+        "speaker": "patient",
+        "predicate": "denies",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient denies fever."
+      },
+      {
+        "prop_id": "P8",
+        "cap_type": "Denial",
+        "canonical_concept": "cough",
+        "category": "Denial",
+        "speaker": "patient",
+        "predicate": "denies",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient denies cough."
+      },
+      {
+        "prop_id": "P10",
+        "cap_type": "ExamFinding",
+        "canonical_concept": "blood pressure",
+        "category": "ExamFinding",
+        "speaker": "clinician",
+        "predicate": "shows",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "exam"
+        ],
+        "proposition_text": "Blood pressure is 128/80 mmHg."
+      },
+      {
+        "prop_id": "P11",
+        "cap_type": "ExamFinding",
+        "canonical_concept": "heart rate bpm and",
+        "category": "ExamFinding",
+        "speaker": "clinician",
+        "predicate": "shows",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "exam"
+        ],
+        "proposition_text": "Heart rate is 72 bpm and regular."
+      },
+      {
+        "prop_id": "P12",
+        "cap_type": "ExamFinding",
+        "canonical_concept": "temperature",
+        "category": "ExamFinding",
+        "speaker": "clinician",
+        "predicate": "shows",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "exam"
+        ],
+        "proposition_text": "Temperature is 98.6°F."
+      },
+      {
+        "prop_id": "P13",
+        "cap_type": "ExamFinding",
+        "canonical_concept": "pain",
+        "category": "ExamFinding",
+        "speaker": "clinician",
+        "predicate": "shows",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "exam"
+        ],
+        "proposition_text": "Range of motion in all major joints is full and pain-free."
+      },
+      {
+        "prop_id": "P14",
+        "cap_type": "Diagnosis",
+        "canonical_concept": "symptoms are most consistent",
+        "category": "Diagnosis",
+        "speaker": "clinician",
+        "predicate": "diagnoses",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "diagnostic"
+        ],
+        "proposition_text": "The patient's symptoms are most consistent with chronic fatigue syndrome and possible depression."
+      }
+    ],
+    "missing_source_props": [
+      {
+        "prop_id": "CAP2",
+        "cap_type": "Symptom",
+        "canonical_concept": "chest pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports chest pain."
+      },
+      {
+        "prop_id": "CAP3",
+        "cap_type": "Symptom",
+        "canonical_concept": "chest pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports chest pain."
+      },
+      {
+        "prop_id": "CAP4",
+        "cap_type": "Symptom",
+        "canonical_concept": "no other symptoms",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "denies",
+        "status": "affirmed",
+        "visit_state": "stable",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient denies other symptoms."
+      },
+      {
+        "prop_id": "CAP5",
+        "cap_type": "Order",
+        "canonical_concept": "cardiac catheterization",
+        "category": "Order",
+        "speaker": "doctor",
+        "status": "uncertain",
+        "visit_state": "planned",
+        "temporality": "future",
+        "proposition_text": "The doctor will order a cardiac catheterization."
+      },
+      {
+        "prop_id": "CAP6",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "carvedilol",
+        "category": "MedicationStatement",
+        "speaker": "doctor",
+        "status": "uncertain",
+        "visit_state": "planned",
+        "temporality": "future",
+        "proposition_text": "The doctor will prescribe carvedilol."
+      },
+      {
+        "prop_id": "CAP7",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "lisinopril",
+        "category": "MedicationStatement",
+        "speaker": "doctor",
+        "status": "uncertain",
+        "visit_state": "planned",
+        "temporality": "future",
+        "proposition_text": "The doctor will prescribe lisinopril."
+      },
+      {
+        "prop_id": "CAP8",
+        "cap_type": "ProblemHistory",
+        "canonical_concept": "knee surgery",
+        "category": "ProblemHistory",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "couple months ago",
+        "proposition_text": "The patient had knee surgery a couple months ago."
+      },
+      {
+        "prop_id": "CAP9",
+        "cap_type": "ProblemHistory",
+        "canonical_concept": "rehab and recovery",
+        "category": "ProblemHistory",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "recent",
+        "proposition_text": "The patient felt no problem in rehab and recovery."
+      },
+      {
+        "prop_id": "CAP10",
+        "cap_type": "ProblemHistory",
+        "canonical_concept": "yard work",
+        "category": "ProblemHistory",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "weekend",
+        "proposition_text": "The patient performed yard work."
+      },
+      {
+        "prop_id": "CAP11",
+        "cap_type": "ProblemHistory",
+        "canonical_concept": "heat",
+        "category": "ProblemHistory",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "weekend",
+        "proposition_text": "The patient experienced heat."
+      }
+    ]
+  },
+  "reference_gpt_f1_items": {
+    "active_problems_symptoms": [
+      "chest pain",
+      "short of breath",
+      "high blood pressure",
+      "3/6 systolic ejection murmur",
+      "Elevated blood pressure",
+      "Abnormal echocardiogram",
+      "blood pressure",
+      "blockages in his heart"
+    ],
+    "negated_findings": [
+      "history of chest pain"
+    ],
+    "uncertain_findings": [
+      "large thyroid",
+      "Coronary artery disease",
+      "Pumping dysfunction"
+    ],
+    "medication_treatment": [
+      "carvedilol 25 mg twice a day",
+      "lisinopril 10 mg a day",
+      "cardiac catheterization"
+    ],
+    "plan_followup": [],
+    "_chunk_count": [
+      "3"
+    ]
+  },
+  "summary_gpt_f1_items": {
+    "active_problems_symptoms": [
+      "persistent fatigue",
+      "muscle aches",
+      "feeling slightly depressed"
+    ],
+    "negated_findings": [
+      "denies fever",
+      "denies cough",
+      "denies shortness of breath"
+    ],
+    "uncertain_findings": [
+      "chronic fatigue syndrome",
+      "possible depression"
+    ],
+    "medication_treatment": [
+      "Rescribe sertraline 50mg daily"
+    ],
+    "plan_followup": [
+      "schedule follow-up in 4 weeks",
+      "Counsel the patient on sleep hygiene and stress management techniques"
+    ],
+    "_chunk_count": [
+      "1"
+    ]
+  },
+  "gpt_f1_alignment": {
+    "by_category": {
+      "active_problems_symptoms": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "matched_count": 0,
+        "pred_count": 3,
+        "ref_count": 8,
+        "matches": [],
+        "unsupported_pred_items": [
+          "persistent fatigue",
+          "muscle aches",
+          "feeling slightly depressed"
+        ],
+        "missing_ref_items": [
+          "chest pain",
+          "short of breath",
+          "high blood pressure",
+          "3/6 systolic ejection murmur",
+          "Elevated blood pressure",
+          "Abnormal echocardiogram",
+          "blood pressure",
+          "blockages in his heart"
+        ]
+      },
+      "negated_findings": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "matched_count": 0,
+        "pred_count": 3,
+        "ref_count": 1,
+        "matches": [],
+        "unsupported_pred_items": [
+          "denies fever",
+          "denies cough",
+          "denies shortness of breath"
+        ],
+        "missing_ref_items": [
+          "history of chest pain"
+        ]
+      },
+      "uncertain_findings": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "matched_count": 0,
+        "pred_count": 2,
+        "ref_count": 3,
+        "matches": [],
+        "unsupported_pred_items": [
+          "chronic fatigue syndrome",
+          "possible depression"
+        ],
+        "missing_ref_items": [
+          "large thyroid",
+          "Coronary artery disease",
+          "Pumping dysfunction"
+        ]
+      },
+      "medication_treatment": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "matched_count": 0,
+        "pred_count": 1,
+        "ref_count": 3,
+        "matches": [],
+        "unsupported_pred_items": [
+          "Rescribe sertraline 50mg daily"
+        ],
+        "missing_ref_items": [
+          "carvedilol 25 mg twice a day",
+          "lisinopril 10 mg a day",
+          "cardiac catheterization"
+        ]
+      },
+      "plan_followup": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "matched_count": 0,
+        "pred_count": 2,
+        "ref_count": 0,
+        "matches": [],
+        "unsupported_pred_items": [
+          "schedule follow-up in 4 weeks",
+          "Counsel the patient on sleep hygiene and stress management techniques"
+        ],
+        "missing_ref_items": []
+      }
+    }
+  },
+  "reference_nair_concepts": {
+    "sections": [
+      {
+        "heading": "Clinical Note",
+        "section_value": "HISTORY OF PRESENT ILLNESS\nRoger Nelson is a 62-year-old male who presents for emergency room follow-up for chest pain. The patient was doing yard work over the weekend when he began to feel short of breath and a full chest pain for approximately hour. He denies a history of chest pain. The patient notes that after he finished he felt fine. He has not had any other symptoms since that time. He denies a family history of heart disease.\nThe patient underwent right knee surgery a couple of months ago and has been feeling well since then. He has been in rehab and recovery. He denies chest pain while doing exercises in physical therapy for his knee.\nHis blood pressure was noted to be 180/95 mmHg when he visited the emergency room. He notes that his blood pressure has not been as high as usual.\nPHYSICAL EXAMINATION\nNeck\n• General Examination: I do feel a little large thyroid that is not tender. She has a carotid bruit on the right side.\nRespiratory\n• Auscultation of Lungs: Clear bilaterally. Cardiovascular\n• Auscultation of Heart: Regular rate and rhythm, but I do hear 3/6 systolic ejection murmur. Gastrointestinal",
+        "medical_concepts": [
+          "chest pain",
+          "shortness of breath",
+          "family history of heart disease",
+          "right knee surgery",
+          "rehab",
+          "recovery",
+          "physical therapy",
+          "blood pressure 180/95 mmHg",
+          "hypertension",
+          "large thyroid",
+          "carotid bruit",
+          "systolic ejection murmur"
+        ]
+      },
+      {
+        "heading": "Clinical Note",
+        "section_value": "• Examination of Abdomen: Soft. There is a healed scar on the right knee from prior knee surgery. Musculoskeletal\n• Examination: There is no lower extremity edema.\nRESULTS\nBlood pressure is elevated.\nEKG is normal.\nEchocardiogram demonstrates decreased ejection fraction.\nASSESSMENT AND PLAN\nThe patient is a 62-year-old male who presents for emergency room follow-up. He presented to the emergency room for chest pain and elevated blood pressure of 180/95. His EKG from the emergency room was normal, but ejection fraction on echocardiogram was abnormal. His blood pressure today was still elevated.\nChest pain and hypertension.\n• Medical Reasoning: Given his recent episode of blood pressure elevation and chest pain, I suspect an element of coronary artery disease as well as pumping dysfunction.",
+        "medical_concepts": [
+          "abdominal examination",
+          "healed scar",
+          "knee surgery",
+          "musculoskeletal examination",
+          "lower extremity edema",
+          "blood pressure",
+          "elevated blood pressure",
+          "hypertension",
+          "EKG",
+          "normal EKG",
+          "echocardiogram",
+          "decreased ejection fraction",
+          "abnormal ejection fraction",
+          "chest pain",
+          "coronary artery disease",
+          "pumping dysfunction"
+        ]
+      },
+      {
+        "heading": "Clinical Note",
+        "section_value": "• Medical Treatment: We will change his blood pressure regimen to carvedilol 25 mg twice a day. He should also continue lisinopril 10 mg a day and I want to see how his blood pressure does on that regimen. I also recommended cardiac catheterization on him to make sure that he does not have any blockages in his heart.\nPatient Agreements: The patient understands and agrees with the recommended medical treatment plan.",
+        "medical_concepts": [
+          "blood pressure",
+          "carvedilol",
+          "lisinopril",
+          "cardiac catheterization",
+          "heart blockages"
+        ]
+      }
+    ],
+    "medical_concepts": [
+      "chest pain",
+      "shortness of breath",
+      "family history of heart disease",
+      "right knee surgery",
+      "rehab",
+      "recovery",
+      "physical therapy",
+      "blood pressure 180/95 mmHg",
+      "hypertension",
+      "large thyroid",
+      "carotid bruit",
+      "systolic ejection murmur",
+      "abdominal examination",
+      "healed scar",
+      "knee surgery",
+      "musculoskeletal examination",
+      "lower extremity edema",
+      "blood pressure",
+      "elevated blood pressure",
+      "EKG",
+      "normal EKG",
+      "echocardiogram",
+      "decreased ejection fraction",
+      "abnormal ejection fraction",
+      "coronary artery disease",
+      "pumping dysfunction",
+      "carvedilol",
+      "lisinopril",
+      "cardiac catheterization",
+      "heart blockages"
+    ],
+    "section_count": 3
+  },
+  "summary_nair_concepts": {
+    "sections": [
+      {
+        "heading": "S",
+        "section_value": "The patient reports experiencing persistent fatigue and muscle aches for the past three weeks. He states the fatigue is significantly worse on days when he has not been sleeping well. He denies fever, cough, or shortness of breath. He also reports feeling slightly depressed.",
+        "medical_concepts": [
+          "fatigue",
+          "muscle aches",
+          "fever",
+          "cough",
+          "shortness of breath",
+          "depressed mood"
+        ]
+      },
+      {
+        "heading": "O",
+        "section_value": "Blood pressure is 128/80 mmHg. Heart rate is 72 bpm and regular. Temperature is 98.6°F. Range of motion in all major joints is full and pain-free. No swelling or redness noted.",
+        "medical_concepts": [
+          "blood pressure",
+          "heart rate",
+          "temperature",
+          "range of motion",
+          "joint swelling",
+          "joint redness",
+          "joint pain"
+        ]
+      },
+      {
+        "heading": "A",
+        "section_value": "The patient's symptoms are most consistent with chronic fatigue syndrome and possible depression.",
+        "medical_concepts": [
+          "chronic fatigue syndrome",
+          "depression"
+        ]
+      },
+      {
+        "heading": "P",
+        "section_value": "Rescribe sertraline 50mg daily. Schedule follow-up in 4 weeks to assess response to medication and monitor fatigue levels. Counsel the patient on sleep hygiene and stress management techniques.",
+        "medical_concepts": [
+          "sertraline",
+          "fatigue",
+          "sleep hygiene",
+          "stress management"
+        ]
+      }
+    ],
+    "medical_concepts": [
+      "fatigue",
+      "muscle aches",
+      "fever",
+      "cough",
+      "shortness of breath",
+      "depressed mood",
+      "blood pressure",
+      "heart rate",
+      "temperature",
+      "range of motion",
+      "joint swelling",
+      "joint redness",
+      "joint pain",
+      "chronic fatigue syndrome",
+      "depression",
+      "sertraline",
+      "sleep hygiene",
+      "stress management"
+    ],
+    "section_count": 4
+  },
+  "nair_alignment": {
+    "pred_concepts": [
+      "fatigue",
+      "muscle aches",
+      "fever",
+      "cough",
+      "shortness of breath",
+      "depressed mood",
+      "blood pressure",
+      "heart rate",
+      "temperature",
+      "range of motion",
+      "joint swelling",
+      "joint redness",
+      "joint pain",
+      "chronic fatigue syndrome",
+      "depression",
+      "sertraline",
+      "sleep hygiene",
+      "stress management"
+    ],
+    "ref_concepts": [
+      "chest pain",
+      "shortness of breath",
+      "family history of heart disease",
+      "right knee surgery",
+      "rehab",
+      "recovery",
+      "physical therapy",
+      "blood pressure 180/95 mmHg",
+      "hypertension",
+      "large thyroid",
+      "carotid bruit",
+      "systolic ejection murmur",
+      "abdominal examination",
+      "healed scar",
+      "knee surgery",
+      "musculoskeletal examination",
+      "lower extremity edema",
+      "blood pressure",
+      "elevated blood pressure",
+      "EKG",
+      "normal EKG",
+      "echocardiogram",
+      "decreased ejection fraction",
+      "abnormal ejection fraction",
+      "coronary artery disease",
+      "pumping dysfunction",
+      "carvedilol",
+      "lisinopril",
+      "cardiac catheterization",
+      "heart blockages"
+    ],
+    "precision_alignment": {
+      "found_b": [
+        "shortness of breath",
+        "blood pressure"
+      ],
+      "not_found_b": [
+        "fatigue",
+        "muscle aches",
+        "fever",
+        "cough",
+        "depressed mood",
+        "heart rate",
+        "temperature",
+        "range of motion",
+        "joint swelling",
+        "joint redness",
+        "joint pain",
+        "chronic fatigue syndrome",
+        "depression",
+        "sertraline",
+        "sleep hygiene",
+        "stress management"
+      ],
+      "chunk_count": 1,
+      "chunk_results": [
+        {
+          "found_b": [
+            "shortness of breath",
+            "blood pressure"
+          ],
+          "not_found_b": [
+            "fatigue",
+            "muscle aches",
+            "fever",
+            "cough",
+            "depressed mood",
+            "heart rate",
+            "temperature",
+            "range of motion",
+            "joint swelling",
+            "joint redness",
+            "joint pain",
+            "chronic fatigue syndrome",
+            "depression",
+            "sertraline",
+            "sleep hygiene",
+            "stress management"
+          ]
+        }
+      ]
+    },
+    "recall_alignment": {
+      "found_b": [
+        "shortness of breath",
+        "blood pressure"
+      ],
+      "not_found_b": [
+        "chest pain",
+        "family history of heart disease",
+        "right knee surgery",
+        "rehab",
+        "recovery",
+        "physical therapy",
+        "blood pressure 180/95 mmHg",
+        "hypertension",
+        "large thyroid",
+        "carotid bruit",
+        "systolic ejection murmur",
+        "abdominal examination",
+        "healed scar",
+        "knee surgery",
+        "musculoskeletal examination",
+        "lower extremity edema",
+        "elevated blood pressure",
+        "EKG",
+        "normal EKG",
+        "echocardiogram",
+        "decreased ejection fraction",
+        "abnormal ejection fraction",
+        "coronary artery disease",
+        "pumping dysfunction",
+        "carvedilol",
+        "lisinopril",
+        "cardiac catheterization",
+        "heart blockages"
+      ],
+      "chunk_count": 2,
+      "chunk_results": [
+        {
+          "found_b": [
+            "shortness of breath",
+            "blood pressure"
+          ],
+          "not_found_b": [
+            "chest pain",
+            "family history of heart disease",
+            "right knee surgery",
+            "rehab",
+            "recovery",
+            "physical therapy",
+            "blood pressure 180/95 mmHg",
+            "hypertension",
+            "large thyroid",
+            "carotid bruit",
+            "systolic ejection murmur",
+            "abdominal examination",
+            "healed scar",
+            "knee surgery",
+            "musculoskeletal examination",
+            "lower extremity edema",
+            "elevated blood pressure",
+            "EKG",
+            "normal EKG",
+            "echocardiogram",
+            "decreased ejection fraction",
+            "abnormal ejection fraction"
+          ]
+        },
+        {
+          "found_b": [],
+          "not_found_b": [
+            "coronary artery disease",
+            "pumping dysfunction",
+            "carvedilol",
+            "lisinopril",
+            "cardiac catheterization",
+            "heart blockages"
+          ]
+        }
+      ]
+    }
+  },
+  "semantic_cap_audit": {
+    "source_cap_recall": [
+      {
+        "cap_id": "P1",
+        "judgment": "contradicted",
+        "reason": null
+      },
+      {
+        "cap_id": "P2",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P3",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P4",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P5",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P6",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P7",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P8",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P9",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P10",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P11",
+        "judgment": "missing",
+        "reason": null
+      }
+    ],
+    "summary_cap_precision": [
+      {
+        "cap_id": "P1",
+        "judgment": "unsupported",
+        "reason": null
+      },
+      {
+        "cap_id": "P2",
+        "judgment": "unsupported",
+        "reason": null
+      },
+      {
+        "cap_id": "P3",
+        "judgment": "unsupported",
+        "reason": null
+      },
+      {
+        "cap_id": "P4",
+        "judgment": "unsupported",
+        "reason": null
+      },
+      {
+        "cap_id": "P5",
+        "judgment": "unsupported",
+        "reason": null
+      },
+      {
+        "cap_id": "P6",
+        "judgment": "unsupported",
+        "reason": null
+      },
+      {
+        "cap_id": "P7",
+        "judgment": "unsupported",
+        "reason": null
+      },
+      {
+        "cap_id": "P8",
+        "judgment": "unsupported",
+        "reason": null
+      },
+      {
+        "cap_id": "P9",
+        "judgment": "contradicted",
+        "reason": null
+      },
+      {
+        "cap_id": "P10",
+        "judgment": "unsupported",
+        "reason": null
+      },
+      {
+        "cap_id": "P11",
+        "judgment": "unsupported",
+        "reason": null
+      },
+      {
+        "cap_id": "P12",
+        "judgment": "unsupported",
+        "reason": null
+      },
+      {
+        "cap_id": "P13",
+        "judgment": "unsupported",
+        "reason": null
+      },
+      {
+        "cap_id": "P14",
+        "judgment": "unsupported",
+        "reason": null
+      }
+    ],
+    "metrics": {
+      "semantic_cap_precision": 0.0,
+      "semantic_cap_recall": 0.0455,
+      "semantic_cap_f1": 0.0,
+      "semantic_cap_precision_supported_count": 0,
+      "semantic_cap_precision_partial_count": 0,
+      "semantic_cap_precision_denominator": 14,
+      "semantic_cap_recall_supported_count": 0,
+      "semantic_cap_recall_partial_count": 1,
+      "semantic_cap_recall_denominator": 11,
+      "semantic_cap_low_value_source_count": 0,
+      "semantic_cap_low_value_summary_count": 0,
+      "semantic_cap_missing_count": 9,
+      "semantic_cap_unsupported_count": 13,
+      "semantic_cap_contradicted_source_count": 1,
+      "semantic_cap_contradicted_summary_count": 1
+    }
+  },
+  "safety_judgment": null,
+  "section_judgment": {
+    "section_miscategorizations": [],
+    "summary_statistics": {
+      "section_appropriateness_score": 1.0,
+      "section_miscategorization_count": 0,
+      "major_section_miscategorization_count": 0
+    }
+  },
+  "pdsqi_judgment": {
+    "citation_applicable": 0,
+    "citation": 0,
+    "accurate": 1,
+    "thorough": 1,
+    "useful": 1,
+    "organized": 3,
+    "comprehensible": 4,
+    "succinct": 4,
+    "abstraction": 1,
+    "synthesized": 1,
+    "voice_summ": 0,
+    "voice_note": 0,
+    "pdsqi_core_mean": 2.1429
+  },
+  "llm_checklist_judgment": {
+    "content_preservation_core": 1,
+    "noise_suppression": 4,
+    "lay_expression_preservation": 1,
+    "state_update_fidelity": 1,
+    "temporality_preservation": 1,
+    "problem_evidence_linkage": 1,
+    "state_plan_separation": 2,
+    "section_organization_appropriateness": 2,
+    "overall_clinical_usability": 1,
+    "clinically_meaningful_omission": "Yes",
+    "clinically_concerning_hallucination": "Yes",
+    "checklist_a_mean": 2.0,
+    "checklist_b_mean": 1.0,
+    "checklist_c_mean": 1.6667,
+    "llm_checklist_abc_mean": 1.625,
+    "llm_checklist_mean_no_usability": 1.625,
+    "llm_checklist_total_score": 14,
+    "llm_checklist_mean": 1.5556,
+    "llm_checklist_meaningful_omission_yes": 1,
+    "llm_checklist_concerning_hallucination_yes": 1
+  },
+  "metrics": {
+    "case_id": "D2N011",
+    "method": "cap_event_only",
+    "template": "soap",
+    "source_cap_count": 11,
+    "event_plan_count": 10,
+    "summary_cap_count": 14,
+    "cap_matched_count": 1,
+    "cap_precision": 0.0714,
+    "cap_recall": 0.0909,
+    "cap_f1": 0.08,
+    "unsupported_summary_cap_count": 13,
+    "missing_source_cap_count": 10,
+    "summary_runtime_seconds": null,
+    "summary_cap_runtime_seconds": 19.743,
+    "event_plan_runtime_seconds": 0.001,
+    "rouge_l_f1_vs_reference": 0.131,
+    "token_f1_vs_reference": 0.2197,
+    "gptf1_macro_f1": 0.0,
+    "nair_gpt_precision": 0.1111,
+    "nair_gpt_recall": 0.0667,
+    "nair_gpt_f1": 0.0833,
+    "semantic_cap_precision": 0.0,
+    "semantic_cap_recall": 0.0455,
+    "semantic_cap_f1": 0.0,
+    "hallucination_count": null,
+    "major_hallucination_count": null,
+    "omission_count": null,
+    "major_omission_count": null,
+    "section_appropriateness_score": 1.0,
+    "section_miscategorization_count": 0,
+    "major_section_miscategorization_count": 0,
+    "pdsqi_core_mean": 2.1429,
+    "pdsqi_accurate": 1,
+    "pdsqi_thorough": 1,
+    "llm_checklist_total_score": 14,
+    "llm_checklist_mean": 1.5556,
+    "llm_checklist_mean_no_usability": 1.625,
+    "checklist_a_mean": 2.0,
+    "checklist_b_mean": 1.0,
+    "checklist_c_mean": 1.6667,
+    "llm_checklist_abc_mean": 1.625,
+    "content_preservation_core": 1,
+    "noise_suppression": 4,
+    "lay_expression_preservation": 1,
+    "state_update_fidelity": 1,
+    "temporality_preservation": 1,
+    "problem_evidence_linkage": 1,
+    "state_plan_separation": 2,
+    "section_organization_appropriateness": 2,
+    "overall_clinical_usability": 1,
+    "llm_checklist_meaningful_omission_yes": 1,
+    "llm_checklist_concerning_hallucination_yes": 1,
+    "gptf1_active_problems_symptoms_precision": 0.0,
+    "gptf1_active_problems_symptoms_recall": 0.0,
+    "gptf1_active_problems_symptoms_f1": 0.0,
+    "gptf1_active_problems_symptoms_pred_count": 3,
+    "gptf1_active_problems_symptoms_ref_count": 8,
+    "gptf1_negated_findings_precision": 0.0,
+    "gptf1_negated_findings_recall": 0.0,
+    "gptf1_negated_findings_f1": 0.0,
+    "gptf1_negated_findings_pred_count": 3,
+    "gptf1_negated_findings_ref_count": 1,
+    "gptf1_uncertain_findings_precision": 0.0,
+    "gptf1_uncertain_findings_recall": 0.0,
+    "gptf1_uncertain_findings_f1": 0.0,
+    "gptf1_uncertain_findings_pred_count": 2,
+    "gptf1_uncertain_findings_ref_count": 3,
+    "gptf1_medication_treatment_precision": 0.0,
+    "gptf1_medication_treatment_recall": 0.0,
+    "gptf1_medication_treatment_f1": 0.0,
+    "gptf1_medication_treatment_pred_count": 1,
+    "gptf1_medication_treatment_ref_count": 3,
+    "gptf1_plan_followup_precision": 0.0,
+    "gptf1_plan_followup_recall": 0.0,
+    "gptf1_plan_followup_f1": 0.0,
+    "gptf1_plan_followup_pred_count": 2,
+    "gptf1_plan_followup_ref_count": 0,
+    "nair_pred_concept_count": 18,
+    "nair_ref_concept_count": 30,
+    "nair_precision_match_count": 2,
+    "nair_recall_match_count": 2,
+    "semantic_cap_precision_supported_count": 0,
+    "semantic_cap_precision_partial_count": 0,
+    "semantic_cap_precision_denominator": 14,
+    "semantic_cap_recall_supported_count": 0,
+    "semantic_cap_recall_partial_count": 1,
+    "semantic_cap_recall_denominator": 11,
+    "semantic_cap_low_value_source_count": 0,
+    "semantic_cap_low_value_summary_count": 0,
+    "semantic_cap_missing_count": 9,
+    "semantic_cap_unsupported_count": 13,
+    "semantic_cap_contradicted_source_count": 1,
+    "semantic_cap_contradicted_summary_count": 1,
+    "pdsqi_useful": 1,
+    "pdsqi_organized": 3,
+    "pdsqi_comprehensible": 4,
+    "pdsqi_succinct": 4,
+    "pdsqi_synthesized": 1
+  }
+}

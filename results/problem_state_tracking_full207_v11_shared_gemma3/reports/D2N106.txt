@@ -1,0 +1,121 @@
+Case: D2N106
+
+Problem List and Visit State Tracking
+
+Problem List
+- left hand pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T3
+  Summary: The patient reports pain in the left hand.
+  ClusterId: CL1
+  TemporalProfile: current
+  Updates:
+  - CAP2: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T3 :: The patient reports pain in the left hand.
+- breathing difficulty | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T13
+  Summary: The patient reports difficulty breathing.
+  ClusterId: CL2
+  TemporalProfile: current
+  Updates:
+  - CAP11: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T13 :: The patient reports difficulty breathing.
+- dyspnea | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T17
+  Summary: The patient has dyspnea.
+  ClusterId: CL3
+  TemporalProfile: current
+  Updates:
+  - CAP16: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T17 :: The patient has dyspnea.
+- shortness of breath | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T20
+  Summary: The patient reports increased shortness of breath.
+  ClusterId: CL5
+  TemporalProfile: current, sudden
+  Updates:
+  - CAP4: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T20 :: The patient reports increased shortness of breath.
+  - CAP5: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=sudden turns=T20 :: The patient reports sudden shortness of breath.
+- allergies | verification_status=unconfirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T24,T47
+  Summary: The patient believes allergies may be the cause.
+  ClusterId: CL6
+  TemporalProfile: mostly, past
+  Updates:
+  - CAP3: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=mostly turns=T24 :: The patient believes allergies may be the cause.
+  - CAP7: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=past turns=T47 :: The patient denies having any past allergies.
+- diarrhea | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T37
+  Summary: The patient reports diarrhea.
+  ClusterId: CL9
+  TemporalProfile: current
+  Updates:
+  - CAP17: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T37 :: The patient reports diarrhea.
+  - CAP18: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T37 :: The patient reports diarrhea.
+- heavy drinking | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T39
+  Summary: The patient reports heavy drinking.
+  ClusterId: CL10
+  TemporalProfile: current
+  Updates:
+  - CAP14: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T39 :: The patient reports heavy drinking.
+- lip or throat swelling | verification_status=unconfirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T40
+  Summary: The patient denies lip or throat swelling.
+  ClusterId: CL11
+  TemporalProfile: past
+  Updates:
+  - CAP6: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=past turns=T40 :: The patient denies lip or throat swelling.
+- symptoms | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T45
+  Summary: The patient has noticed symptoms in all three situations.
+  ClusterId: CL12
+  TemporalProfile: current
+  Updates:
+  - CAP1: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T45 :: The patient has noticed symptoms in all three situations.
+- allergy | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T47,T59
+  Summary: The patient reports newly diagnosed allergic asthma.
+  ClusterId: CL13
+  TemporalProfile: current
+  Updates:
+  - CAP8: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T47 :: The patient reports newly diagnosed allergic asthma.
+  - CAP15: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T59 :: The patient reports having allergies.
+- asthma | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=doctor | evidence=T57
+  Summary: The patient has newly diagnosed asthma.
+  ClusterId: CL17
+  TemporalProfile: current
+  Updates:
+  - CAP10: content_source=doctor modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T57 :: The patient has newly diagnosed asthma.
+
+Medication Tracking
+- [MedicationState] inhaler | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T31
+  Summary: The patient uses an inhaler.
+  ClusterId: CL8
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient uses an inhaler. (T31)
+  Updates:
+  - CAP24: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T31 :: The patient uses an inhaler.
+- [MedicationChange] albuterol inhaler | verification_status=unconfirmed | clinical_status=planned | modalities=interview | speakers=doctor | evidence=T55
+  Summary: The doctor prescribes an albuterol inhaler.
+  ClusterId: CL14
+  TemporalProfile: current
+  PlannedChanges:
+  - The doctor prescribes an albuterol inhaler. (T55)
+  Updates:
+  - CAP19: content_source=doctor modality=interview verification_status=unconfirmed clinical_status=planned temporality=current turns=T55 :: The doctor prescribes an albuterol inhaler.
+- [MedicationChange] singulair | verification_status=confirmed | clinical_status=planned | modalities=interview,unknown | speakers=doctor | evidence=T55
+  Summary: The doctor prescribes singulair.
+  ClusterId: CL15
+  TemporalProfile: current
+  PlannedChanges:
+  - The doctor prescribes singulair. (T55)
+  - The doctor prescribes singulair ten milligrams. (T55)
+  Updates:
+  - CAP21: content_source=doctor modality=interview verification_status=unconfirmed clinical_status=planned temporality=current turns=T55 :: The doctor prescribes singulair.
+  - CAP23: content_source=doctor modality=unknown verification_status=confirmed clinical_status=planned temporality=current turns=T55 :: The doctor prescribes singulair ten milligrams.
+- [MedicationState] albuterol inhaler | verification_status=confirmed | clinical_status=active | modalities=unknown | speakers=doctor | evidence=T55
+  Summary: The doctor prescribes continued use of albuterol inhaler.
+  ClusterId: CL16
+  TemporalProfile: current
+  CurrentRegimens:
+  - The doctor prescribes continued use of albuterol inhaler. (T55)
+  Updates:
+  - CAP22: content_source=doctor modality=unknown verification_status=confirmed clinical_status=active temporality=current turns=T55 :: The doctor prescribes continued use of albuterol inhaler.
+
+Other Structured States
+- [Plan] allergy testing | verification_status=unconfirmed | clinical_status=planned | modalities=interview | speakers=doctor | evidence=T59
+  Summary: The doctor orders allergy testing.
+  ClusterId: CL18
+  TemporalProfile: current
+- [FollowUp] skin testing | verification_status=unconfirmed | clinical_status=planned | modalities=interview | speakers=doctor | evidence=T61
+  Summary: The doctor schedules skin testing.
+  ClusterId: CL19
+  TemporalProfile: next week

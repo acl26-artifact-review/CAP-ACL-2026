@@ -1,0 +1,1735 @@
+{
+  "case_id": "D2N061",
+  "method": "cluster2sent",
+  "template": "soap",
+  "summary_text": "S:\nThe patient reports a right knee injury seven days ago, with ongoing swelling and pain. He describes pain with palpation on the medial aspect of the right knee and decreased range of motion. He reports hearing or feeling a pop in his knee during the injury. The patient used ice and an ACE wrap following the injury. He is currently taking 500 mg of metformin twice daily and checks his blood sugars every morning at home. He reports using motrin or advil for pain and swelling.\n\nO:\nThe right knee x-ray shows a small amount of effusion but no fractures. Physical exam reveals ecchymosis and swelling on the inside of the right knee and fluid in the knee. Palpation elicits pain on the medial aspect of the right knee. Range of motion is limited. The varus and valgus stress tests are negative.\n\nA:\nThe patient likely has a medial collateral ligament strain based on the mechanism of injury and examination findings. The effusion and medial pain suggest ligamentous injury.\n\nP:\nRescribe meloxicam 15 mg daily for pain and swelling. Provide a right knee brace for a few days. Refer for physical therapy. Schedule a follow-up appointment in seven days for reevaluation and consider a CT scan or MRI if swelling persists or symptoms worsen. Advise the patient to discontinue nonsteroidal medications. Instruct the patient to continue monitoring blood sugars daily and to contact their PCP if they experience significant increases due to inactivity. Schedule a return visit in seven days for reevaluation.",
+  "reference_summary": "CHIEF COMPLAINT\n\nRight knee pain.\n\nHISTORY OF PRESENT ILLNESS\n\nVirginia Phillips is a pleasant 53-year-old female who presents to the clinic today for the evaluation of right knee pain. The onset of her pain began 7 days ago, when she was playing basketball and another player ran into her. She states that she fell to the ground and landed on her side. She denies hearing or feeling a pop at the time of the injury. The patient localizes her pain to the medial aspect of her knee. She used ice and an ACE wrap right after the injury. Today, she notes that she has been doing exercises, ice, and Mobic for pain control.\n\nMEDICAL HISTORY\n\nThe patient reports she is a diabetic who takes her blood sugar every morning.\n\nSOCIAL HISTORY\n\nPatient reports that she plays basketball at the Y for fun.\n\nMEDICATIONS\n\nPatient reports that she takes metformin 500 mg twice a day.\n\nREVIEW OF SYSTEMS\n\nMusculoskeletal: Reports right knee pain.\n\nPHYSICAL EXAM\n\nMSK: Examination of the right knee: No pain to palpation of the lateral aspect of the right knee. Pain with palpation on the medial aspect of the knee. Ecchymosis and swelling on the medial aspect of the knee. Effusion is appreciated. Decreased ROM. Negative varus and valgus stress test.\n\nRESULTS\n\nX-rays of the right knee taken in office today reveal the bony alignment in good position. There is no evidence of any fractures. There is effusion present.\n\nASSESSMENT\n\nRight knee pain, possible medial collateral ligament strain.\n\nPLAN\n\nAfter reviewing the patient's examination and radiographic findings today, I have had a lengthy discussion with the patient in regard to her current symptoms. I have prescribed the patient meloxicam 15 mg once a day to treat the pain and swelling. She was advised to stop taking any anti-inflammatory such as Motrin or Advil. I have also recommended that the patient attend formal physical therapy to strengthen her right knee. I have also advised her to continue to use the ACE wrap and wear a right knee brace for a few days. She should continue light walking with her brace on. The patient was advised to stop basketball until she follows up in 7 days.\n\nRegarding her diabetes, she should continue to monitor her blood sugars daily. She should reach out to her primary care physician if she sees an increase in her blood sugars due to loss of activity.\n\nINSTRUCTIONS\n\nThe patient will follow up with me in 7 days to check on her progress. If her swelling has not improved, we will consider obtaining a CT or MRI of the right knee to evaluate for a possible medial collateral ligament strain.",
+  "source_cap": {
+    "atomic_propositions": [
+      {
+        "prop_id": "CAP1",
+        "cap_type": "Problem",
+        "canonical_concept": "knee injury",
+        "category": "Problem",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "7 days ago",
+        "claim_type_tags": [
+          "quantitative"
+        ],
+        "proposition_text": "The patient sustained a knee injury 7 days ago."
+      },
+      {
+        "prop_id": "CAP2",
+        "cap_type": "Symptom",
+        "canonical_concept": "swelling",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports swelling in the right knee."
+      },
+      {
+        "prop_id": "CAP3",
+        "cap_type": "Symptom",
+        "canonical_concept": "pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports pain in the left hand."
+      },
+      {
+        "prop_id": "CAP4",
+        "cap_type": "Symptom",
+        "canonical_concept": "knee pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports pain in the knee."
+      },
+      {
+        "prop_id": "CAP5",
+        "cap_type": "Symptom",
+        "canonical_concept": "pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports pain on the inside."
+      },
+      {
+        "prop_id": "CAP6",
+        "cap_type": "Symptom",
+        "canonical_concept": "fall",
+        "category": "Symptom",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "past",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient fell to the ground."
+      },
+      {
+        "prop_id": "CAP7",
+        "cap_type": "Problem",
+        "canonical_concept": "knee injury",
+        "category": "Problem",
+        "speaker": "patient",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient has a knee injury."
+      },
+      {
+        "prop_id": "CAP8",
+        "cap_type": "Symptom",
+        "canonical_concept": "knee pain",
+        "category": "Symptom",
+        "speaker": "doctor",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports knee pain."
+      },
+      {
+        "prop_id": "CAP9",
+        "cap_type": "Problem",
+        "canonical_concept": "diabetes",
+        "category": "Problem",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient is diabetic."
+      },
+      {
+        "prop_id": "CAP10",
+        "cap_type": "Order",
+        "canonical_concept": "imaging",
+        "category": "Order",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "planned",
+        "temporality": "in 7 days",
+        "proposition_text": "The doctor will consider ordering a CT scan or MRI of the knee if needed."
+      },
+      {
+        "prop_id": "CAP11",
+        "cap_type": "Order",
+        "canonical_concept": "knee examination",
+        "category": "Order",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "planned",
+        "temporality": "in 7 days",
+        "claim_type_tags": [
+          "quantitative",
+          "temporal"
+        ],
+        "proposition_text": "The doctor will schedule a follow-up appointment in 7 days."
+      },
+      {
+        "prop_id": "CAP12",
+        "cap_type": "MedicationRequest",
+        "canonical_concept": "discharge",
+        "category": "MedicationRequest",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "planned",
+        "temporality": "discharge",
+        "proposition_text": "The doctor will discharge the patient."
+      },
+      {
+        "prop_id": "CAP13",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "metformin",
+        "category": "MedicationStatement",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "medication",
+          "quantitative"
+        ],
+        "proposition_text": "The patient takes metformin 500 milligrams twice a day."
+      }
+    ],
+    "filtered_nonverifiable_units": []
+  },
+  "event_plan": null,
+  "summary_cap": {
+    "atomic_propositions": [
+      {
+        "prop_id": "P1",
+        "cap_type": "Symptom",
+        "canonical_concept": "pain:knee",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports right knee pain."
+      },
+      {
+        "prop_id": "P2",
+        "cap_type": "Symptom",
+        "canonical_concept": "ongoing swelling",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports ongoing swelling."
+      },
+      {
+        "prop_id": "P3",
+        "cap_type": "Finding",
+        "canonical_concept": "pain:knee",
+        "category": "Finding",
+        "speaker": "clinician",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "exam"
+        ],
+        "proposition_text": "Palpation elicits pain on the medial aspect of the right knee."
+      },
+      {
+        "prop_id": "P4",
+        "cap_type": "Finding",
+        "canonical_concept": "range motion limited",
+        "category": "Finding",
+        "speaker": "clinician",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "exam"
+        ],
+        "proposition_text": "Range of motion is limited."
+      },
+      {
+        "prop_id": "P5",
+        "cap_type": "Finding",
+        "canonical_concept": "ecchymosis and swelling are",
+        "category": "Finding",
+        "speaker": "clinician",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "exam"
+        ],
+        "proposition_text": "Ecchymosis and swelling are present on the inside of the right knee."
+      },
+      {
+        "prop_id": "P6",
+        "cap_type": "Finding",
+        "canonical_concept": "fluid present knee",
+        "category": "Finding",
+        "speaker": "clinician",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "exam"
+        ],
+        "proposition_text": "Fluid is present in the knee."
+      },
+      {
+        "prop_id": "P7",
+        "cap_type": "History",
+        "canonical_concept": "right knee injury seven",
+        "category": "History",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "past",
+        "claim_type_tags": [
+          "history"
+        ],
+        "proposition_text": "The patient reports a right knee injury seven days ago."
+      },
+      {
+        "prop_id": "P8",
+        "cap_type": "Symptom",
+        "canonical_concept": "hearing feeling pop his",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports hearing or feeling a pop in his knee during the injury."
+      },
+      {
+        "prop_id": "P9",
+        "cap_type": "MedicationPlan",
+        "canonical_concept": "metformin",
+        "category": "MedicationPlan",
+        "speaker": "patient",
+        "predicate": "takes",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "medication"
+        ],
+        "proposition_text": "The patient is currently taking 500 mg of metformin twice daily."
+      },
+      {
+        "prop_id": "P10",
+        "cap_type": "MedicationPlan",
+        "canonical_concept": "pain",
+        "category": "MedicationPlan",
+        "speaker": "patient",
+        "predicate": "uses",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "medication"
+        ],
+        "proposition_text": "The patient uses motrin or advil for pain and swelling."
+      },
+      {
+        "prop_id": "P11",
+        "cap_type": "TestResult",
+        "canonical_concept": "right knee x-ray shows",
+        "category": "TestResult",
+        "speaker": "clinician",
+        "predicate": "shows",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "test"
+        ],
+        "proposition_text": "The right knee x-ray shows a small amount of effusion."
+      },
+      {
+        "prop_id": "P12",
+        "cap_type": "Diagnosis",
+        "canonical_concept": "likely medial collateral ligament",
+        "category": "Diagnosis",
+        "speaker": "clinician",
+        "predicate": "diagnoses",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "diagnostic"
+        ],
+        "proposition_text": "The patient likely has a medial collateral ligament strain."
+      },
+      {
+        "prop_id": "P13",
+        "cap_type": "MedicationPlan",
+        "canonical_concept": "prescribes meloxicam daily",
+        "category": "MedicationPlan",
+        "speaker": "clinician",
+        "predicate": "prescribes",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "medication"
+        ],
+        "proposition_text": "The clinician prescribes meloxicam 15 mg daily."
+      },
+      {
+        "prop_id": "P14",
+        "cap_type": "Plan",
+        "canonical_concept": "instructs discontinue nonsteroidal medications",
+        "category": "Plan",
+        "speaker": "clinician",
+        "predicate": "instructs",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "plan"
+        ],
+        "proposition_text": "The clinician instructs the patient to discontinue nonsteroidal medications."
+      },
+      {
+        "prop_id": "P15",
+        "cap_type": "Plan",
+        "canonical_concept": "instructs continue monitoring blood",
+        "category": "Plan",
+        "speaker": "clinician",
+        "predicate": "instructs",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "plan"
+        ],
+        "proposition_text": "The clinician instructs the patient to continue monitoring blood sugars daily."
+      },
+      {
+        "prop_id": "P16",
+        "cap_type": "FollowUpPlan",
+        "canonical_concept": "plans follow-up appointment seven",
+        "category": "FollowUpPlan",
+        "speaker": "clinician",
+        "predicate": "plans",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "future",
+        "claim_type_tags": [
+          "plan"
+        ],
+        "proposition_text": "The clinician plans a follow-up appointment in seven days for reevaluation."
+      },
+      {
+        "prop_id": "P17",
+        "cap_type": "Referral",
+        "canonical_concept": "refers for physical therapy",
+        "category": "Referral",
+        "speaker": "clinician",
+        "predicate": "refers",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "future",
+        "claim_type_tags": [
+          "plan"
+        ],
+        "proposition_text": "The clinician refers for physical therapy."
+      },
+      {
+        "prop_id": "P18",
+        "cap_type": "TestPlan",
+        "canonical_concept": "orders scan mri swelling",
+        "category": "TestPlan",
+        "speaker": "clinician",
+        "predicate": "orders",
+        "status": "uncertain",
+        "visit_state": "uncertain",
+        "temporality": "future",
+        "claim_type_tags": [
+          "plan"
+        ],
+        "proposition_text": "The clinician orders a CT scan or MRI if swelling persists or symptoms worsen."
+      },
+      {
+        "prop_id": "P19",
+        "cap_type": "Problem",
+        "canonical_concept": "pain",
+        "category": "Problem",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports pain and swelling."
+      },
+      {
+        "prop_id": "P20",
+        "cap_type": "Finding",
+        "canonical_concept": "right knee brace provided",
+        "category": "Finding",
+        "speaker": "clinician",
+        "predicate": "notes",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "exam"
+        ],
+        "proposition_text": "The clinician notes a right knee brace is provided."
+      },
+      {
+        "prop_id": "P21",
+        "cap_type": "FollowUpPlan",
+        "canonical_concept": "plans return visit seven",
+        "category": "FollowUpPlan",
+        "speaker": "clinician",
+        "predicate": "plans",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "future",
+        "claim_type_tags": [
+          "plan"
+        ],
+        "proposition_text": "The clinician plans a return visit in seven days for reevaluation."
+      }
+    ],
+    "filtered_nonverifiable_units": [],
+    "runtime_seconds": 34.028
+  },
+  "cap_alignment": {
+    "cap_precision": 0.3333333333333333,
+    "cap_recall": 0.5384615384615384,
+    "cap_f1": 0.41176470588235287,
+    "matched_count": 7,
+    "summary_prop_count": 21,
+    "source_prop_count": 13,
+    "matched_pairs": [
+      {
+        "score": 1.0,
+        "summary_prop_id": "P19",
+        "source_prop_id": "CAP5",
+        "summary_text": "The patient reports pain and swelling.",
+        "source_text": "The patient reports pain on the inside."
+      },
+      {
+        "score": 1.0,
+        "summary_prop_id": "P10",
+        "source_prop_id": "CAP3",
+        "summary_text": "The patient uses motrin or advil for pain and swelling.",
+        "source_text": "The patient reports pain in the left hand."
+      },
+      {
+        "score": 1.0,
+        "summary_prop_id": "P9",
+        "source_prop_id": "CAP13",
+        "summary_text": "The patient is currently taking 500 mg of metformin twice daily.",
+        "source_text": "The patient takes metformin 500 milligrams twice a day."
+      },
+      {
+        "score": 1.0,
+        "summary_prop_id": "P3",
+        "source_prop_id": "CAP8",
+        "summary_text": "Palpation elicits pain on the medial aspect of the right knee.",
+        "source_text": "The patient reports knee pain."
+      },
+      {
+        "score": 1.0,
+        "summary_prop_id": "P1",
+        "source_prop_id": "CAP4",
+        "summary_text": "The patient reports right knee pain.",
+        "source_text": "The patient reports pain in the knee."
+      },
+      {
+        "score": 0.8903,
+        "summary_prop_id": "P2",
+        "source_prop_id": "CAP2",
+        "summary_text": "The patient reports ongoing swelling.",
+        "source_text": "The patient reports swelling in the right knee."
+      },
+      {
+        "score": 0.8349,
+        "summary_prop_id": "P7",
+        "source_prop_id": "CAP1",
+        "summary_text": "The patient reports a right knee injury seven days ago.",
+        "source_text": "The patient sustained a knee injury 7 days ago."
+      }
+    ],
+    "unsupported_summary_props": [
+      {
+        "prop_id": "P4",
+        "cap_type": "Finding",
+        "canonical_concept": "range motion limited",
+        "category": "Finding",
+        "speaker": "clinician",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "exam"
+        ],
+        "proposition_text": "Range of motion is limited."
+      },
+      {
+        "prop_id": "P5",
+        "cap_type": "Finding",
+        "canonical_concept": "ecchymosis and swelling are",
+        "category": "Finding",
+        "speaker": "clinician",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "exam"
+        ],
+        "proposition_text": "Ecchymosis and swelling are present on the inside of the right knee."
+      },
+      {
+        "prop_id": "P6",
+        "cap_type": "Finding",
+        "canonical_concept": "fluid present knee",
+        "category": "Finding",
+        "speaker": "clinician",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "exam"
+        ],
+        "proposition_text": "Fluid is present in the knee."
+      },
+      {
+        "prop_id": "P8",
+        "cap_type": "Symptom",
+        "canonical_concept": "hearing feeling pop his",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports hearing or feeling a pop in his knee during the injury."
+      },
+      {
+        "prop_id": "P11",
+        "cap_type": "TestResult",
+        "canonical_concept": "right knee x-ray shows",
+        "category": "TestResult",
+        "speaker": "clinician",
+        "predicate": "shows",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "test"
+        ],
+        "proposition_text": "The right knee x-ray shows a small amount of effusion."
+      },
+      {
+        "prop_id": "P12",
+        "cap_type": "Diagnosis",
+        "canonical_concept": "likely medial collateral ligament",
+        "category": "Diagnosis",
+        "speaker": "clinician",
+        "predicate": "diagnoses",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "diagnostic"
+        ],
+        "proposition_text": "The patient likely has a medial collateral ligament strain."
+      },
+      {
+        "prop_id": "P13",
+        "cap_type": "MedicationPlan",
+        "canonical_concept": "prescribes meloxicam daily",
+        "category": "MedicationPlan",
+        "speaker": "clinician",
+        "predicate": "prescribes",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "medication"
+        ],
+        "proposition_text": "The clinician prescribes meloxicam 15 mg daily."
+      },
+      {
+        "prop_id": "P14",
+        "cap_type": "Plan",
+        "canonical_concept": "instructs discontinue nonsteroidal medications",
+        "category": "Plan",
+        "speaker": "clinician",
+        "predicate": "instructs",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "plan"
+        ],
+        "proposition_text": "The clinician instructs the patient to discontinue nonsteroidal medications."
+      },
+      {
+        "prop_id": "P15",
+        "cap_type": "Plan",
+        "canonical_concept": "instructs continue monitoring blood",
+        "category": "Plan",
+        "speaker": "clinician",
+        "predicate": "instructs",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "plan"
+        ],
+        "proposition_text": "The clinician instructs the patient to continue monitoring blood sugars daily."
+      },
+      {
+        "prop_id": "P16",
+        "cap_type": "FollowUpPlan",
+        "canonical_concept": "plans follow-up appointment seven",
+        "category": "FollowUpPlan",
+        "speaker": "clinician",
+        "predicate": "plans",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "future",
+        "claim_type_tags": [
+          "plan"
+        ],
+        "proposition_text": "The clinician plans a follow-up appointment in seven days for reevaluation."
+      },
+      {
+        "prop_id": "P17",
+        "cap_type": "Referral",
+        "canonical_concept": "refers for physical therapy",
+        "category": "Referral",
+        "speaker": "clinician",
+        "predicate": "refers",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "future",
+        "claim_type_tags": [
+          "plan"
+        ],
+        "proposition_text": "The clinician refers for physical therapy."
+      },
+      {
+        "prop_id": "P18",
+        "cap_type": "TestPlan",
+        "canonical_concept": "orders scan mri swelling",
+        "category": "TestPlan",
+        "speaker": "clinician",
+        "predicate": "orders",
+        "status": "uncertain",
+        "visit_state": "uncertain",
+        "temporality": "future",
+        "claim_type_tags": [
+          "plan"
+        ],
+        "proposition_text": "The clinician orders a CT scan or MRI if swelling persists or symptoms worsen."
+      },
+      {
+        "prop_id": "P20",
+        "cap_type": "Finding",
+        "canonical_concept": "right knee brace provided",
+        "category": "Finding",
+        "speaker": "clinician",
+        "predicate": "notes",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "exam"
+        ],
+        "proposition_text": "The clinician notes a right knee brace is provided."
+      },
+      {
+        "prop_id": "P21",
+        "cap_type": "FollowUpPlan",
+        "canonical_concept": "plans return visit seven",
+        "category": "FollowUpPlan",
+        "speaker": "clinician",
+        "predicate": "plans",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "future",
+        "claim_type_tags": [
+          "plan"
+        ],
+        "proposition_text": "The clinician plans a return visit in seven days for reevaluation."
+      }
+    ],
+    "missing_source_props": [
+      {
+        "prop_id": "CAP6",
+        "cap_type": "Symptom",
+        "canonical_concept": "fall",
+        "category": "Symptom",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "past",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient fell to the ground."
+      },
+      {
+        "prop_id": "CAP7",
+        "cap_type": "Problem",
+        "canonical_concept": "knee injury",
+        "category": "Problem",
+        "speaker": "patient",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient has a knee injury."
+      },
+      {
+        "prop_id": "CAP9",
+        "cap_type": "Problem",
+        "canonical_concept": "diabetes",
+        "category": "Problem",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient is diabetic."
+      },
+      {
+        "prop_id": "CAP10",
+        "cap_type": "Order",
+        "canonical_concept": "imaging",
+        "category": "Order",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "planned",
+        "temporality": "in 7 days",
+        "proposition_text": "The doctor will consider ordering a CT scan or MRI of the knee if needed."
+      },
+      {
+        "prop_id": "CAP11",
+        "cap_type": "Order",
+        "canonical_concept": "knee examination",
+        "category": "Order",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "planned",
+        "temporality": "in 7 days",
+        "claim_type_tags": [
+          "quantitative",
+          "temporal"
+        ],
+        "proposition_text": "The doctor will schedule a follow-up appointment in 7 days."
+      },
+      {
+        "prop_id": "CAP12",
+        "cap_type": "MedicationRequest",
+        "canonical_concept": "discharge",
+        "category": "MedicationRequest",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "planned",
+        "temporality": "discharge",
+        "proposition_text": "The doctor will discharge the patient."
+      }
+    ]
+  },
+  "reference_gpt_f1_items": {
+    "active_problems_symptoms": [
+      "diabetes",
+      "increase in blood sugars",
+      "swelling"
+    ],
+    "negated_findings": [],
+    "uncertain_findings": [
+      "medial collateral ligament strain"
+    ],
+    "medication_treatment": [],
+    "plan_followup": [
+      "follow up in 7 days",
+      "CT or MRI of the right knee"
+    ],
+    "_chunk_count": [
+      "3"
+    ]
+  },
+  "summary_gpt_f1_items": {
+    "active_problems_symptoms": [],
+    "negated_findings": [],
+    "uncertain_findings": [],
+    "medication_treatment": [],
+    "plan_followup": [],
+    "_chunk_count": [
+      "1"
+    ]
+  },
+  "gpt_f1_alignment": {
+    "by_category": {
+      "active_problems_symptoms": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "matched_count": 0,
+        "pred_count": 0,
+        "ref_count": 3,
+        "matches": [],
+        "unsupported_pred_items": [],
+        "missing_ref_items": [
+          "diabetes",
+          "increase in blood sugars",
+          "swelling"
+        ]
+      },
+      "negated_findings": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "matched_count": 0,
+        "pred_count": 0,
+        "ref_count": 0,
+        "matches": [],
+        "unsupported_pred_items": [],
+        "missing_ref_items": []
+      },
+      "uncertain_findings": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "matched_count": 0,
+        "pred_count": 0,
+        "ref_count": 1,
+        "matches": [],
+        "unsupported_pred_items": [],
+        "missing_ref_items": [
+          "medial collateral ligament strain"
+        ]
+      },
+      "medication_treatment": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "matched_count": 0,
+        "pred_count": 0,
+        "ref_count": 0,
+        "matches": [],
+        "unsupported_pred_items": [],
+        "missing_ref_items": []
+      },
+      "plan_followup": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "matched_count": 0,
+        "pred_count": 0,
+        "ref_count": 2,
+        "matches": [],
+        "unsupported_pred_items": [],
+        "missing_ref_items": [
+          "follow up in 7 days",
+          "CT or MRI of the right knee"
+        ]
+      }
+    }
+  },
+  "reference_nair_concepts": {
+    "sections": [
+      {
+        "heading": "Clinical Note",
+        "section_value": "CHIEF COMPLAINT\nRight knee pain.\nHISTORY OF PRESENT ILLNESS\nVirginia Phillips is a pleasant 53-year-old female who presents to the clinic today for the evaluation of right knee pain. The onset of her pain began 7 days ago, when she was playing basketball and another player ran into her. She states that she fell to the ground and landed on her side. She denies hearing or feeling a pop at the time of the injury. The patient localizes her pain to the medial aspect of her knee. She used ice and an ACE wrap right after the injury. Today, she notes that she has been doing exercises, ice, and Mobic for pain control.\nMEDICAL HISTORY\nThe patient reports she is a diabetic who takes her blood sugar every morning.\nSOCIAL HISTORY\nPatient reports that she plays basketball at the Y for fun.\nMEDICATIONS\nPatient reports that she takes metformin 500 mg twice a day.",
+        "medical_concepts": [
+          "right knee pain",
+          "knee injury",
+          "medial knee pain",
+          "diabetic",
+          "diabetes",
+          "blood sugar",
+          "metformin",
+          "Mobic",
+          "ACE wrap",
+          "ice"
+        ]
+      },
+      {
+        "heading": "Clinical Note",
+        "section_value": "REVIEW OF SYSTEMS\nMusculoskeletal: Reports right knee pain.\nPHYSICAL EXAM\nMSK: Examination of the right knee: No pain to palpation of the lateral aspect of the right knee. Pain with palpation on the medial aspect of the knee. Ecchymosis and swelling on the medial aspect of the knee. Effusion is appreciated. Decreased ROM. Negative varus and valgus stress test.\nRESULTS\nX-rays of the right knee taken in office today reveal the bony alignment in good position. There is no evidence of any fractures. There is effusion present.\nASSESSMENT\nRight knee pain, possible medial collateral ligament strain.\nPLAN\nAfter reviewing the patient's examination and radiographic findings today, I have had a lengthy discussion with the patient in regard to her current symptoms. I have prescribed the patient meloxicam 15 mg once a day to treat the pain and swelling. She was advised to stop taking any anti-inflammatory such as Motrin or Advil. I have also recommended that the patient attend formal physical therapy to strengthen her right knee. I have also advised her to continue to use the ACE wrap and wear a right knee brace for a few days. She should continue light walking with her brace on. The patient was advised to stop basketball until she follows up in 7 days.",
+        "medical_concepts": [
+          "right knee pain",
+          "knee pain",
+          "pain to palpation",
+          "medial knee pain",
+          "ecchymosis",
+          "knee swelling",
+          "knee effusion",
+          "decreased range of motion",
+          "varus stress test",
+          "valgus stress test",
+          "X-ray",
+          "bony alignment",
+          "fracture",
+          "medial collateral ligament strain",
+          "meloxicam",
+          "anti-inflammatory",
+          "Motrin",
+          "Advil",
+          "physical therapy",
+          "ACE wrap"
+        ]
+      },
+      {
+        "heading": "Clinical Note",
+        "section_value": "Regarding her diabetes, she should continue to monitor her blood sugars daily. She should reach out to her primary care physician if she sees an increase in her blood sugars due to loss of activity.\nINSTRUCTIONS\nThe patient will follow up with me in 7 days to check on her progress. If her swelling has not improved, we will consider obtaining a CT or MRI of the right knee to evaluate for a possible medial collateral ligament strain.",
+        "medical_concepts": [
+          "diabetes",
+          "blood sugar",
+          "swelling",
+          "CT",
+          "MRI",
+          "medial collateral ligament strain"
+        ]
+      }
+    ],
+    "medical_concepts": [
+      "right knee pain",
+      "knee injury",
+      "medial knee pain",
+      "diabetic",
+      "diabetes",
+      "blood sugar",
+      "metformin",
+      "Mobic",
+      "ACE wrap",
+      "ice",
+      "knee pain",
+      "pain to palpation",
+      "ecchymosis",
+      "knee swelling",
+      "knee effusion",
+      "decreased range of motion",
+      "varus stress test",
+      "valgus stress test",
+      "X-ray",
+      "bony alignment",
+      "fracture",
+      "medial collateral ligament strain",
+      "meloxicam",
+      "anti-inflammatory",
+      "Motrin",
+      "Advil",
+      "physical therapy",
+      "swelling",
+      "CT",
+      "MRI"
+    ],
+    "section_count": 3
+  },
+  "summary_nair_concepts": {
+    "sections": [
+      {
+        "heading": "S",
+        "section_value": "The patient reports a right knee injury seven days ago, with ongoing swelling and pain. He describes pain with palpation on the medial aspect of the right knee and decreased range of motion. He reports hearing or feeling a pop in his knee during the injury. The patient used ice and an ACE wrap following the injury. He is currently taking 500 mg of metformin twice daily and checks his blood sugars every morning at home. He reports using motrin or advil for pain and swelling.",
+        "medical_concepts": [
+          "right knee injury",
+          "knee swelling",
+          "knee pain",
+          "pain with palpation",
+          "medial right knee pain",
+          "decreased range of motion",
+          "popping sensation in knee",
+          "ice therapy",
+          "ACE wrap",
+          "metformin 500 mg twice daily",
+          "blood sugar monitoring",
+          "motrin",
+          "advil",
+          "pain",
+          "swelling"
+        ]
+      },
+      {
+        "heading": "O",
+        "section_value": "The right knee x-ray shows a small amount of effusion but no fractures. Physical exam reveals ecchymosis and swelling on the inside of the right knee and fluid in the knee. Palpation elicits pain on the medial aspect of the right knee. Range of motion is limited. The varus and valgus stress tests are negative.",
+        "medical_concepts": [
+          "right knee x-ray",
+          "effusion",
+          "fracture",
+          "ecchymosis",
+          "swelling",
+          "joint effusion",
+          "knee pain",
+          "limited range of motion",
+          "varus stress test",
+          "valgus stress test"
+        ]
+      },
+      {
+        "heading": "A",
+        "section_value": "The patient likely has a medial collateral ligament strain based on the mechanism of injury and examination findings. The effusion and medial pain suggest ligamentous injury.",
+        "medical_concepts": [
+          "medial collateral ligament strain",
+          "effusion",
+          "medial pain",
+          "ligamentous injury"
+        ]
+      },
+      {
+        "heading": "P",
+        "section_value": "Rescribe meloxicam 15 mg daily for pain and swelling. Provide a right knee brace for a few days. Refer for physical therapy. Schedule a follow-up appointment in seven days for reevaluation and consider a CT scan or MRI if swelling persists or symptoms worsen. Advise the patient to discontinue nonsteroidal medications. Instruct the patient to continue monitoring blood sugars daily and to contact their PCP if they experience significant increases due to inactivity. Schedule a return visit in seven days for reevaluation.",
+        "medical_concepts": [
+          "meloxicam",
+          "pain",
+          "swelling",
+          "knee brace",
+          "physical therapy",
+          "CT scan",
+          "MRI",
+          "nonsteroidal medications",
+          "blood sugars",
+          "inactivity"
+        ]
+      }
+    ],
+    "medical_concepts": [
+      "right knee injury",
+      "knee swelling",
+      "knee pain",
+      "pain with palpation",
+      "medial right knee pain",
+      "decreased range of motion",
+      "popping sensation in knee",
+      "ice therapy",
+      "ACE wrap",
+      "metformin 500 mg twice daily",
+      "blood sugar monitoring",
+      "motrin",
+      "advil",
+      "pain",
+      "swelling",
+      "right knee x-ray",
+      "effusion",
+      "fracture",
+      "ecchymosis",
+      "joint effusion",
+      "limited range of motion",
+      "varus stress test",
+      "valgus stress test",
+      "medial collateral ligament strain",
+      "medial pain",
+      "ligamentous injury",
+      "meloxicam",
+      "knee brace",
+      "physical therapy",
+      "CT scan",
+      "MRI",
+      "nonsteroidal medications",
+      "blood sugars",
+      "inactivity"
+    ],
+    "section_count": 4
+  },
+  "nair_alignment": {
+    "pred_concepts": [
+      "right knee injury",
+      "knee swelling",
+      "knee pain",
+      "pain with palpation",
+      "medial right knee pain",
+      "decreased range of motion",
+      "popping sensation in knee",
+      "ice therapy",
+      "ACE wrap",
+      "metformin 500 mg twice daily",
+      "blood sugar monitoring",
+      "motrin",
+      "advil",
+      "pain",
+      "swelling",
+      "right knee x-ray",
+      "effusion",
+      "fracture",
+      "ecchymosis",
+      "joint effusion",
+      "limited range of motion",
+      "varus stress test",
+      "valgus stress test",
+      "medial collateral ligament strain",
+      "medial pain",
+      "ligamentous injury",
+      "meloxicam",
+      "knee brace",
+      "physical therapy",
+      "CT scan",
+      "MRI",
+      "nonsteroidal medications",
+      "blood sugars",
+      "inactivity"
+    ],
+    "ref_concepts": [
+      "right knee pain",
+      "knee injury",
+      "medial knee pain",
+      "diabetic",
+      "diabetes",
+      "blood sugar",
+      "metformin",
+      "Mobic",
+      "ACE wrap",
+      "ice",
+      "knee pain",
+      "pain to palpation",
+      "ecchymosis",
+      "knee swelling",
+      "knee effusion",
+      "decreased range of motion",
+      "varus stress test",
+      "valgus stress test",
+      "X-ray",
+      "bony alignment",
+      "fracture",
+      "medial collateral ligament strain",
+      "meloxicam",
+      "anti-inflammatory",
+      "Motrin",
+      "Advil",
+      "physical therapy",
+      "swelling",
+      "CT",
+      "MRI"
+    ],
+    "precision_alignment": {
+      "found_b": [
+        "right knee injury",
+        "knee swelling",
+        "knee pain",
+        "pain with palpation",
+        "medial right knee pain",
+        "decreased range of motion",
+        "ice therapy",
+        "ACE wrap",
+        "metformin 500 mg twice daily",
+        "blood sugar monitoring",
+        "motrin",
+        "advil",
+        "pain",
+        "swelling",
+        "right knee x-ray",
+        "effusion",
+        "fracture",
+        "ecchymosis",
+        "joint effusion",
+        "limited range of motion",
+        "varus stress test",
+        "valgus stress test",
+        "medial collateral ligament strain",
+        "medial pain",
+        "ligamentous injury",
+        "meloxicam",
+        "knee brace",
+        "physical therapy",
+        "CT scan",
+        "MRI",
+        "nonsteroidal medications",
+        "blood sugars",
+        "inactivity"
+      ],
+      "not_found_b": [
+        "popping sensation in knee"
+      ],
+      "chunk_count": 2,
+      "chunk_results": [
+        {
+          "found_b": [
+            "right knee injury",
+            "knee swelling",
+            "knee pain",
+            "pain with palpation",
+            "medial right knee pain",
+            "decreased range of motion",
+            "ice therapy",
+            "ACE wrap",
+            "metformin 500 mg twice daily",
+            "blood sugar monitoring",
+            "motrin",
+            "advil",
+            "pain",
+            "swelling",
+            "right knee x-ray",
+            "effusion",
+            "fracture",
+            "ecchymosis",
+            "joint effusion",
+            "limited range of motion",
+            "varus stress test",
+            "valgus stress test",
+            "medial collateral ligament strain"
+          ],
+          "not_found_b": [
+            "popping sensation in knee"
+          ]
+        },
+        {
+          "found_b": [
+            "medial pain",
+            "ligamentous injury",
+            "meloxicam",
+            "knee brace",
+            "physical therapy",
+            "CT scan",
+            "MRI",
+            "nonsteroidal medications",
+            "blood sugars",
+            "inactivity"
+          ],
+          "not_found_b": []
+        }
+      ]
+    },
+    "recall_alignment": {
+      "found_b": [
+        "right knee pain",
+        "knee injury",
+        "medial knee pain",
+        "diabetes",
+        "blood sugar",
+        "metformin",
+        "Mobic",
+        "ACE wrap",
+        "ice",
+        "knee pain",
+        "pain to palpation",
+        "ecchymosis",
+        "knee swelling",
+        "knee effusion",
+        "decreased range of motion",
+        "varus stress test",
+        "valgus stress test",
+        "X-ray",
+        "fracture",
+        "medial collateral ligament strain",
+        "meloxicam",
+        "anti-inflammatory",
+        "Motrin",
+        "Advil",
+        "physical therapy",
+        "swelling",
+        "MRI"
+      ],
+      "not_found_b": [
+        "diabetic",
+        "bony alignment",
+        "CT"
+      ],
+      "chunk_count": 2,
+      "chunk_results": [
+        {
+          "found_b": [
+            "right knee pain",
+            "knee injury",
+            "medial knee pain",
+            "diabetes",
+            "blood sugar",
+            "metformin",
+            "Mobic",
+            "ACE wrap",
+            "ice",
+            "knee pain",
+            "pain to palpation",
+            "ecchymosis",
+            "knee swelling",
+            "knee effusion",
+            "decreased range of motion",
+            "varus stress test",
+            "valgus stress test",
+            "X-ray",
+            "fracture",
+            "medial collateral ligament strain",
+            "meloxicam",
+            "anti-inflammatory"
+          ],
+          "not_found_b": [
+            "diabetic",
+            "bony alignment"
+          ]
+        },
+        {
+          "found_b": [
+            "Motrin",
+            "Advil",
+            "physical therapy",
+            "swelling",
+            "MRI"
+          ],
+          "not_found_b": [
+            "CT"
+          ]
+        }
+      ]
+    }
+  },
+  "semantic_cap_audit": {
+    "source_cap_recall": [
+      {
+        "cap_id": "P1",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P2",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P3",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P4",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P5",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P6",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P7",
+        "judgment": "contradicted",
+        "reason": null
+      },
+      {
+        "cap_id": "P8",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P9",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P10",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P11",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P12",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P13",
+        "judgment": "supported",
+        "reason": null
+      }
+    ],
+    "summary_cap_precision": [
+      {
+        "cap_id": "P1",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P2",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P3",
+        "judgment": "unsupported",
+        "reason": null
+      },
+      {
+        "cap_id": "P4",
+        "judgment": "unsupported",
+        "reason": null
+      },
+      {
+        "cap_id": "P5",
+        "judgment": "unsupported",
+        "reason": null
+      },
+      {
+        "cap_id": "P6",
+        "judgment": "unsupported",
+        "reason": null
+      },
+      {
+        "cap_id": "P7",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P8",
+        "judgment": "unsupported",
+        "reason": null
+      },
+      {
+        "cap_id": "P9",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P10",
+        "judgment": "unsupported",
+        "reason": null
+      },
+      {
+        "cap_id": "P11",
+        "judgment": "unsupported",
+        "reason": null
+      },
+      {
+        "cap_id": "P12",
+        "judgment": "unsupported",
+        "reason": null
+      },
+      {
+        "cap_id": "P13",
+        "judgment": "unsupported",
+        "reason": null
+      },
+      {
+        "cap_id": "P14",
+        "judgment": "unsupported",
+        "reason": null
+      },
+      {
+        "cap_id": "P15",
+        "judgment": "unsupported",
+        "reason": null
+      },
+      {
+        "cap_id": "P16",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P1",
+        "judgment": "unsupported",
+        "reason": null
+      },
+      {
+        "cap_id": "P2",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P3",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P4",
+        "judgment": "unsupported",
+        "reason": null
+      },
+      {
+        "cap_id": "P5",
+        "judgment": "supported",
+        "reason": null
+      }
+    ],
+    "metrics": {
+      "semantic_cap_precision": 0.2619,
+      "semantic_cap_recall": 0.6538,
+      "semantic_cap_f1": 0.374,
+      "semantic_cap_precision_supported_count": 3,
+      "semantic_cap_precision_partial_count": 5,
+      "semantic_cap_precision_denominator": 21,
+      "semantic_cap_recall_supported_count": 7,
+      "semantic_cap_recall_partial_count": 3,
+      "semantic_cap_recall_denominator": 13,
+      "semantic_cap_low_value_source_count": 0,
+      "semantic_cap_low_value_summary_count": 0,
+      "semantic_cap_missing_count": 2,
+      "semantic_cap_unsupported_count": 13,
+      "semantic_cap_contradicted_source_count": 1,
+      "semantic_cap_contradicted_summary_count": 0
+    }
+  },
+  "safety_judgment": null,
+  "section_judgment": {
+    "section_miscategorizations": [
+      {
+        "text": "Schedule a follow-up appointment in seven days for reevaluation and consider a CT scan or MRI if swelling persists or symptoms worsens.",
+        "current_section": "P",
+        "expected_section": "P",
+        "severity": "minor",
+        "reason": "The content is appropriate for the Plan section, but this statement is redundant with the subsequent 'Schedule a return visit in seven days for reevaluation.' This is an organizational issue rather than a true section miscategorization, and does not substantially distort meaning."
+      }
+    ],
+    "summary_statistics": {
+      "section_appropriateness_score": 0.9,
+      "section_miscategorization_count": 1,
+      "major_section_miscategorization_count": 0
+    }
+  },
+  "pdsqi_judgment": {
+    "citation_applicable": 0,
+    "citation": 0,
+    "accurate": 2,
+    "thorough": 3,
+    "useful": 3,
+    "organized": 4,
+    "comprehensible": 4,
+    "succinct": 4,
+    "abstraction": 1,
+    "synthesized": 3,
+    "voice_summ": 0,
+    "voice_note": 0,
+    "pdsqi_core_mean": 3.2857
+  },
+  "llm_checklist_judgment": {
+    "content_preservation_core": 4,
+    "noise_suppression": 5,
+    "lay_expression_preservation": 3,
+    "state_update_fidelity": 2,
+    "temporality_preservation": 4,
+    "problem_evidence_linkage": 4,
+    "state_plan_separation": 4,
+    "section_organization_appropriateness": 4,
+    "overall_clinical_usability": 3,
+    "clinically_meaningful_omission": "Yes",
+    "clinically_concerning_hallucination": "Yes",
+    "checklist_a_mean": 4.0,
+    "checklist_b_mean": 3.0,
+    "checklist_c_mean": 4.0,
+    "llm_checklist_abc_mean": 3.75,
+    "llm_checklist_mean_no_usability": 3.75,
+    "llm_checklist_total_score": 33,
+    "llm_checklist_mean": 3.6667,
+    "llm_checklist_meaningful_omission_yes": 1,
+    "llm_checklist_concerning_hallucination_yes": 1
+  },
+  "metrics": {
+    "case_id": "D2N061",
+    "method": "cluster2sent",
+    "template": "soap",
+    "source_cap_count": 13,
+    "event_plan_count": null,
+    "summary_cap_count": 21,
+    "cap_matched_count": 7,
+    "cap_precision": 0.3333,
+    "cap_recall": 0.5385,
+    "cap_f1": 0.4118,
+    "unsupported_summary_cap_count": 14,
+    "missing_source_cap_count": 6,
+    "summary_runtime_seconds": null,
+    "summary_cap_runtime_seconds": 34.028,
+    "event_plan_runtime_seconds": null,
+    "rouge_l_f1_vs_reference": 0.2614,
+    "token_f1_vs_reference": 0.5,
+    "gptf1_macro_f1": 0.0,
+    "nair_gpt_precision": 0.9706,
+    "nair_gpt_recall": 0.9,
+    "nair_gpt_f1": 0.934,
+    "semantic_cap_precision": 0.2619,
+    "semantic_cap_recall": 0.6538,
+    "semantic_cap_f1": 0.374,
+    "hallucination_count": null,
+    "major_hallucination_count": null,
+    "omission_count": null,
+    "major_omission_count": null,
+    "section_appropriateness_score": 0.9,
+    "section_miscategorization_count": 1,
+    "major_section_miscategorization_count": 0,
+    "pdsqi_core_mean": 3.2857,
+    "pdsqi_accurate": 2,
+    "pdsqi_thorough": 3,
+    "llm_checklist_total_score": 33,
+    "llm_checklist_mean": 3.6667,
+    "llm_checklist_mean_no_usability": 3.75,
+    "checklist_a_mean": 4.0,
+    "checklist_b_mean": 3.0,
+    "checklist_c_mean": 4.0,
+    "llm_checklist_abc_mean": 3.75,
+    "content_preservation_core": 4,
+    "noise_suppression": 5,
+    "lay_expression_preservation": 3,
+    "state_update_fidelity": 2,
+    "temporality_preservation": 4,
+    "problem_evidence_linkage": 4,
+    "state_plan_separation": 4,
+    "section_organization_appropriateness": 4,
+    "overall_clinical_usability": 3,
+    "llm_checklist_meaningful_omission_yes": 1,
+    "llm_checklist_concerning_hallucination_yes": 1,
+    "gptf1_active_problems_symptoms_precision": 0.0,
+    "gptf1_active_problems_symptoms_recall": 0.0,
+    "gptf1_active_problems_symptoms_f1": 0.0,
+    "gptf1_active_problems_symptoms_pred_count": 0,
+    "gptf1_active_problems_symptoms_ref_count": 3,
+    "gptf1_negated_findings_precision": 0.0,
+    "gptf1_negated_findings_recall": 0.0,
+    "gptf1_negated_findings_f1": 0.0,
+    "gptf1_negated_findings_pred_count": 0,
+    "gptf1_negated_findings_ref_count": 0,
+    "gptf1_uncertain_findings_precision": 0.0,
+    "gptf1_uncertain_findings_recall": 0.0,
+    "gptf1_uncertain_findings_f1": 0.0,
+    "gptf1_uncertain_findings_pred_count": 0,
+    "gptf1_uncertain_findings_ref_count": 1,
+    "gptf1_medication_treatment_precision": 0.0,
+    "gptf1_medication_treatment_recall": 0.0,
+    "gptf1_medication_treatment_f1": 0.0,
+    "gptf1_medication_treatment_pred_count": 0,
+    "gptf1_medication_treatment_ref_count": 0,
+    "gptf1_plan_followup_precision": 0.0,
+    "gptf1_plan_followup_recall": 0.0,
+    "gptf1_plan_followup_f1": 0.0,
+    "gptf1_plan_followup_pred_count": 0,
+    "gptf1_plan_followup_ref_count": 2,
+    "nair_pred_concept_count": 34,
+    "nair_ref_concept_count": 30,
+    "nair_precision_match_count": 33,
+    "nair_recall_match_count": 27,
+    "semantic_cap_precision_supported_count": 3,
+    "semantic_cap_precision_partial_count": 5,
+    "semantic_cap_precision_denominator": 21,
+    "semantic_cap_recall_supported_count": 7,
+    "semantic_cap_recall_partial_count": 3,
+    "semantic_cap_recall_denominator": 13,
+    "semantic_cap_low_value_source_count": 0,
+    "semantic_cap_low_value_summary_count": 0,
+    "semantic_cap_missing_count": 2,
+    "semantic_cap_unsupported_count": 13,
+    "semantic_cap_contradicted_source_count": 1,
+    "semantic_cap_contradicted_summary_count": 0,
+    "pdsqi_useful": 3,
+    "pdsqi_organized": 4,
+    "pdsqi_comprehensible": 4,
+    "pdsqi_succinct": 4,
+    "pdsqi_synthesized": 3
+  }
+}

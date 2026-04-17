@@ -1,0 +1,86 @@
+Case: D2N194
+
+Problem List and Visit State Tracking
+
+Problem List
+- left shoulder pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T1
+  Summary: The patient reports left shoulder pain.
+  ClusterId: CL1
+  TemporalProfile: current
+  Updates:
+  - CAP10: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T1 :: The patient reports left shoulder pain.
+- basement renovation | verification_status=unconfirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T3
+  Summary: The patient has been renovating their basement.
+  ClusterId: CL2
+  TemporalProfile: past few weeks
+  Updates:
+  - CAP17: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=past few weeks turns=T3 :: The patient has been renovating their basement.
+- trauma | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T5
+  Summary: The patient denies any trauma.
+  ClusterId: CL3
+  TemporalProfile: past three weeks
+  Updates:
+  - CAP11: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=past three weeks turns=T5 :: The patient denies any trauma.
+- aches and pains | verification_status=unconfirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T9
+  Summary: The patient has had aches and pains.
+  ClusterId: CL4
+  TemporalProfile: here and there
+  Updates:
+  - CAP9: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=here and there turns=T9 :: The patient has had aches and pains.
+- pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T13,T15,T19,T27
+  Summary: The patient's pain waxes and wanes, particularly when lying on their left side.
+  ClusterId: CL5
+  TemporalProfile: constant, current, wax and wane
+  Updates:
+  - CAP1: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=wax and wane turns=T13 :: The patient's pain waxes and wanes, particularly when lying on their left side.
+  - CAP3: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=constant turns=T15 :: The patient reports pain that is always present and worsens with pressure.
+  - CAP4: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T19 :: The patient experiences pain when lying directly on their left side.
+  - CAP7: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T19 :: The patient reports pain in the left shoulder.
+  - CAP5: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T27 :: The patient reports a pain level of 7 without any tylenol.
+  - CAP6: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T27 :: The patient reports a pain level of 2-3 with tylenol.
+- left hand pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T36
+  Summary: The patient reports pain in the left hand.
+  ClusterId: CL8
+  TemporalProfile: current
+  Updates:
+  - CAP8: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T36 :: The patient reports pain in the left hand.
+- rotator cuff tendinopathy | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=doctor | evidence=T38
+  Summary: The patient's left shoulder pain is most likely due to rotator cuff tendinopathy.
+  ClusterId: CL9
+  TemporalProfile: current
+  Updates:
+  - CAP2: content_source=doctor modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T38 :: The patient's left shoulder pain is most likely due to rotator cuff tendinopathy.
+
+Medication Tracking
+- [MedicationState] every six to eight hours | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T21
+  Summary: The patient takes extra strength tylenol every six to eight hours.
+  ClusterId: CL6
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient takes extra strength tylenol every six to eight hours. (T21)
+  Updates:
+  - CAP13: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T21 :: The patient takes extra strength tylenol every six to eight hours.
+- [MedicationState] extra strength tylenol | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T21
+  Summary: The patient is taking extra strength tylenol.
+  ClusterId: CL7
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient is taking extra strength tylenol. (T21)
+  - The patient is taking tylenol. (T21)
+  Updates:
+  - CAP14: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T21 :: The patient is taking extra strength tylenol.
+  - CAP16: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T21 :: The patient is taking tylenol.
+- [MedicationChange] tylenol | verification_status=unconfirmed | clinical_status=planned | modalities=interview | speakers=doctor | evidence=T38
+  Summary: The patient should take tylenol p.r.n.
+  ClusterId: CL11
+  TemporalProfile: future
+  PlannedChanges:
+  - The patient should take tylenol p.r.n. (T38)
+  Updates:
+  - CAP15: content_source=doctor modality=interview verification_status=unconfirmed clinical_status=planned temporality=future turns=T38 :: The patient should take tylenol p.r.n.
+
+Other Structured States
+- [Plan] mri | verification_status=unconfirmed | clinical_status=planned | modalities=interview | speakers=doctor | evidence=T38
+  Summary: A cervical MRI is planned.
+  ClusterId: CL10
+  TemporalProfile: future

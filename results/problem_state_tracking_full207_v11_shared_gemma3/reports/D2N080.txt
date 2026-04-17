@@ -1,0 +1,117 @@
+Case: D2N080
+
+Problem List and Visit State Tracking
+
+Problem List
+- left knee pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T14,T2,T27,T3,T4,T49,T56,T58,T9
+  Summary: The patient reports intermittent left knee pain.
+  ClusterId: CL1
+  TemporalProfile: current, intermittent, short duration
+  Updates:
+  - CAP5: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=intermittent turns=T2,T4 :: The patient has knee pain.
+  - CAP4: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=intermittent turns=T3,T4 :: The patient reports intermittent left knee pain.
+  - CAP12: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T9 :: The patient has a knee.
+  - CAP9: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=short duration turns=T14 :: The patient's pain lasts only a short time.
+  - CAP15: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T14 :: The patient reports pain.
+  - CAP13: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T27 :: The patient reports knee pain.
+  - CAP14: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T49 :: The patient has knee pain.
+  - CAP10: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T56 :: The patient reports pain in the left hand.
+  - CAP11: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T58 :: The patient reports pain in the left knee.
+- giving out | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T3
+  Summary: The patient describes a sensation of 'giving out' in the left knee.
+  ClusterId: CL2
+  TemporalProfile: intermittent
+  Updates:
+  - CAP6: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=intermittent turns=T3 :: The patient describes a sensation of 'giving out' in the left knee.
+- holding grocery carts | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T3
+  Summary: The patient uses holding grocery carts to stabilize the knee.
+  ClusterId: CL3
+  TemporalProfile: current
+  Updates:
+  - CAP7: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=current turns=T3 :: The patient uses holding grocery carts to stabilize the knee.
+- interference | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T19
+  Summary: The patient's pain does not interfere with daily activities.
+  ClusterId: CL4
+  TemporalProfile: current
+  Updates:
+  - CAP8: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T19 :: The patient's pain does not interfere with daily activities.
+- no pain | verification_status=confirmed | clinical_status=resolved | modalities=interview | speakers=patient | evidence=T27
+  Summary: The patient denies pain.
+  ClusterId: CL6
+  TemporalProfile: current
+  Updates:
+  - CAP16: content_source=patient modality=interview verification_status=confirmed clinical_status=resolved temporality=current turns=T27 :: The patient denies pain.
+- arthritis | verification_status=confirmed | clinical_status=active | modalities=assessment | speakers=doctor | evidence=T58
+  Summary: The doctor believes the patient has arthritis in the left knee.
+  ClusterId: CL9
+  TemporalProfile: current
+  Updates:
+  - CAP1: content_source=doctor modality=assessment verification_status=confirmed clinical_status=active temporality=current turns=T58 :: The doctor believes the patient has arthritis in the left knee.
+- hypertension | verification_status=confirmed | clinical_status=active | modalities=assessment | speakers=doctor | evidence=T58
+  Summary: The doctor believes the patient has hypertension.
+  ClusterId: CL10
+  TemporalProfile: current
+  Updates:
+  - CAP3: content_source=doctor modality=assessment verification_status=confirmed clinical_status=active temporality=current turns=T58 :: The doctor believes the patient has hypertension.
+- diabetes mellitus | verification_status=confirmed | clinical_status=active | modalities=assessment | speakers=doctor | evidence=T60
+  Summary: The doctor believes the patient has diabetes mellitus.
+  ClusterId: CL15
+  TemporalProfile: current
+  Updates:
+  - CAP2: content_source=doctor modality=assessment verification_status=confirmed clinical_status=active temporality=current turns=T60 :: The doctor believes the patient has diabetes mellitus.
+
+Medication Tracking
+- [MedicationState] metformin | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T48
+  Summary: The patient is taking metformin.
+  ClusterId: CL7
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient is taking metformin. (T48)
+  Updates:
+  - CAP24: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T48 :: The patient is taking metformin.
+- [MedicationState] blood pressure medicine | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T49
+  Summary: The patient is taking blood pressure medicine.
+  ClusterId: CL8
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient is taking blood pressure medicine. (T49)
+  Updates:
+  - CAP23: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T49 :: The patient is taking blood pressure medicine.
+- [MedicationState] meloxicam | verification_status=confirmed | clinical_status=active | modalities=plan | speakers=doctor | evidence=T58
+  Summary: The doctor prescribes meloxicam at 15 mg daily.
+  ClusterId: CL12
+  TemporalProfile: current
+  CurrentRegimens:
+  - The doctor prescribes meloxicam at 15 mg daily. (T58)
+  Updates:
+  - CAP21: content_source=doctor modality=plan verification_status=confirmed clinical_status=active temporality=current turns=T58 :: The doctor prescribes meloxicam at 15 mg daily.
+- [MedicationState] lisinopril | verification_status=confirmed | clinical_status=active | modalities=plan | speakers=doctor | evidence=T58
+  Summary: The doctor continues lisinopril at 20 mg daily.
+  ClusterId: CL13
+  TemporalProfile: current
+  CurrentRegimens:
+  - The doctor continues lisinopril at 20 mg daily. (T58)
+  Updates:
+  - CAP22: content_source=doctor modality=plan verification_status=confirmed clinical_status=active temporality=current turns=T58 :: The doctor continues lisinopril at 20 mg daily.
+
+Other Structured States
+- [Plan] cane | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T26
+  Summary: The doctor suggests a cane in case.
+  ClusterId: CL5
+  TemporalProfile: future
+- [Plan] echocardiogram | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T58
+  Summary: The doctor orders an echocardiogram.
+  ClusterId: CL11
+  TemporalProfile: future
+- [Plan] physical therapy | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T58
+  Summary: The doctor recommends physical therapy.
+  ClusterId: CL14
+  TemporalProfile: future
+- [TestResult] hemoglobin a1c | verification_status=unconfirmed | clinical_status=planned | modalities=test_result | speakers=doctor | evidence=T60
+  Summary: The doctor orders a hemoglobin A1C test.
+  ClusterId: CL16
+  TemporalProfile: future
+- [TestResult] lipid panel | verification_status=unconfirmed | clinical_status=planned | modalities=test_result | speakers=doctor | evidence=T60
+  Summary: The doctor orders a lipid panel.
+  ClusterId: CL17
+  TemporalProfile: future

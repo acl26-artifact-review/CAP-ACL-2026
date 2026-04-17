@@ -1,0 +1,44 @@
+{
+  "section_miscategorizations": [
+    {
+      "text": "The patient's Xeljanz dose is 11 milligrams.",
+      "current_section": "O",
+      "expected_section": "S",
+      "severity": "major",
+      "reason": "This is a statement of the patient's current medication regimen, not a new order or change, so it belongs in the subjective/current-medication history rather than objective findings."
+    },
+    {
+      "text": "The patient is taking Xeljanz and Celebrex.",
+      "current_section": "O",
+      "expected_section": "S",
+      "severity": "major",
+      "reason": "This describes existing medications the patient is on, which per instructions belong in the Subjective section unless framed as a treatment change or order."
+    },
+    {
+      "text": "A cervical x-ray is planned.",
+      "current_section": "O",
+      "expected_section": "P",
+      "severity": "major",
+      "reason": "A planned imaging study is a management action/order and should be documented in the Plan, not as an already-performed objective finding."
+    },
+    {
+      "text": "The patient should prop their feet up.",
+      "current_section": "A",
+      "expected_section": "P",
+      "severity": "major",
+      "reason": "This is a treatment recommendation (management action) and belongs in the Plan rather than the Assessment."
+    },
+    {
+      "text": "Inflammation in the knee is noted.",
+      "current_section": "A",
+      "expected_section": "O",
+      "severity": "minor",
+      "reason": "This is essentially an observed physical finding; while it can be part of the assessment, it more naturally fits under objective exam findings and its current placement slightly blurs exam vs. impression."
+    }
+  ],
+  "summary_statistics": {
+    "section_appropriateness_score": 0.6,
+    "section_miscategorization_count": 5,
+    "major_section_miscategorization_count": 4
+  }
+}

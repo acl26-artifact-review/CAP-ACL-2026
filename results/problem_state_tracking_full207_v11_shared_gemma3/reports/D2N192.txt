@@ -1,0 +1,163 @@
+Case: D2N192
+
+Problem List and Visit State Tracking
+
+Problem List
+- abdominal pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T2
+  Summary: The patient reports abdominal pain.
+  ClusterId: CL1
+  TemporalProfile: current
+  Updates:
+  - CAP12: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T2 :: The patient reports abdominal pain.
+- pain worsening | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T3
+  Summary: The patient reports that the pain is getting worse.
+  ClusterId: CL2
+  TemporalProfile: current
+  Updates:
+  - CAP8: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T3 :: The patient reports that the pain is getting worse.
+- pain severity | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T5
+  Summary: The patient reports that the pain can be as high as a seven or eight.
+  ClusterId: CL3
+  TemporalProfile: current
+  Updates:
+  - CAP1: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T5 :: The patient reports that the pain can be as high as a seven or eight.
+  - CAP3: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T5 :: The patient reports pain is generally around a four or five on a scale.
+- meal-related pain worsening | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T9
+  Summary: The patient reports that the pain worsens after a meal.
+  ClusterId: CL4
+  TemporalProfile: current
+  Updates:
+  - CAP7: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T9 :: The patient reports that the pain worsens after a meal.
+- pain radiating | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T11
+  Summary: The patient reports that the pain may radiate to the left.
+  ClusterId: CL5
+  TemporalProfile: current
+  Updates:
+  - CAP5: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T11 :: The patient reports that the pain may radiate to the left.
+- pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T17
+  Summary: The patient reports pain
+  ClusterId: CL6
+  TemporalProfile: current
+  Updates:
+  - CAP14: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T17 :: The patient reports pain
+- nausea | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T23
+  Summary: The patient reports nausea.
+  ClusterId: CL7
+  TemporalProfile: current
+  Updates:
+  - CAP15: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T23 :: The patient reports nausea.
+- fatigue | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T23
+  Summary: The patient reports fatigue.
+  ClusterId: CL8
+  TemporalProfile: current
+  Updates:
+  - CAP16: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T23 :: The patient reports fatigue.
+- migraine | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T28,T29
+  Summary: The patient has had recent migraines.
+  ClusterId: CL9
+  TemporalProfile: rare, recent
+  Updates:
+  - CAP11: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=recent turns=T28 :: The patient has had recent migraines.
+  - CAP13: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=rare turns=T29 :: The patient reports rare migraines.
+- infection | verification_status=unconfirmed | clinical_status=historical | modalities=interview,unknown | speakers=doctor | evidence=T46
+  Summary: The doctor suspects an infection in the gallbladder may be contributing to the abdominal pain.
+  ClusterId: CL14
+  TemporalProfile: current
+  Updates:
+  - CAP2: content_source=doctor modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T46 :: The doctor suspects an infection in the gallbladder may be contributing to the abdominal pain.
+  - CAP4: content_source=doctor modality=unknown verification_status=unconfirmed clinical_status=historical temporality=current turns=T46 :: An infection in the gallbladder is considered a possible cause of abdominal pain.
+- gallstones | verification_status=unconfirmed | clinical_status=historical | modalities=interview,unknown | speakers=doctor | evidence=T46
+  Summary: The doctor suspects gallstones may be contributing to the abdominal pain.
+  ClusterId: CL15
+  TemporalProfile: current
+  Updates:
+  - CAP6: content_source=doctor modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T46 :: The doctor suspects gallstones may be contributing to the abdominal pain.
+  - CAP9: content_source=doctor modality=unknown verification_status=unconfirmed clinical_status=historical temporality=current turns=T46 :: Gallstones are considered a possible cause of abdominal pain.
+- right upper quadrant tenderness | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T46
+  Summary: The patient reports right upper quadrant tenderness.
+  ClusterId: CL16
+  TemporalProfile: current
+  Updates:
+  - CAP10: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T46 :: The patient reports right upper quadrant tenderness.
+
+Medication Tracking
+- [MedicationState] sumatriptan | verification_status=confirmed | clinical_status=active | modalities=interview,plan | speakers=doctor,patient | evidence=T28,T29,T48
+  Summary: The doctor prescribed sumatriptan as needed for breakthrough migraine pain.
+  ClusterId: CL10
+  TemporalProfile: as needed, current, ongoing
+  CurrentRegimens:
+  - The patient is taking sumatriptan as needed. (T28)
+  - The patient takes sumatriptan occasionally. (T29)
+  - The doctor prescribed sumatriptan as needed for breakthrough migraine pain. (T48)
+  Updates:
+  - CAP31: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T28 :: The patient is taking sumatriptan as needed.
+  - CAP33: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=as needed turns=T29 :: The patient takes sumatriptan occasionally.
+  - CAP28: content_source=doctor modality=plan verification_status=confirmed clinical_status=active temporality=ongoing turns=T48 :: The doctor prescribed sumatriptan as needed for breakthrough migraine pain.
+- [MedicationState] excedrin migraine | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T29
+  Summary: The patient is using excedrin migraine when needed.
+  ClusterId: CL11
+  TemporalProfile: current, when needed
+  CurrentRegimens:
+  - The patient is using excedrin migraine when needed. (T29)
+  - The patient uses excedrin migraine when needed. (T29)
+  Updates:
+  - CAP29: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T29 :: The patient is using excedrin migraine when needed.
+  - CAP32: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=when needed turns=T29 :: The patient uses excedrin migraine when needed.
+- [MedicationChange] lisinopril | verification_status=confirmed | clinical_status=active | modalities=plan | speakers=doctor | evidence=T40
+  Summary: A refill of lisinopril is requested.
+  ClusterId: CL12
+  TemporalProfile: current
+  PlannedChanges:
+  - A refill of lisinopril is requested. (T40)
+  Updates:
+  - CAP21: content_source=doctor modality=plan verification_status=confirmed clinical_status=active temporality=current turns=T40 :: A refill of lisinopril is requested.
+- [MedicationState] lisinopril | verification_status=confirmed | clinical_status=active | modalities=plan | speakers=doctor | evidence=T48
+  Summary: The doctor prescribed lisinopril 20 milligrams per day.
+  ClusterId: CL26
+  TemporalProfile: ongoing
+  CurrentRegimens:
+  - The doctor prescribed lisinopril 20 milligrams per day. (T48)
+  Updates:
+  - CAP30: content_source=doctor modality=plan verification_status=confirmed clinical_status=active temporality=ongoing turns=T48 :: The doctor prescribed lisinopril 20 milligrams per day.
+
+Other Structured States
+- [ExamFinding] murmur | verification_status=confirmed | clinical_status=active | modalities=exam | speakers=doctor | evidence=T44
+  Summary: A grade 3 systolic ejection murmur is heard.
+  ClusterId: CL13
+  TemporalProfile: current
+- [Plan] right upper quadrant ultrasound | verification_status=confirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T46
+  Summary: The doctor ordered a right upper quadrant ultrasound.
+  ClusterId: CL17
+  TemporalProfile: today
+- [Plan] c-reactive protein | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T46
+  Summary: The doctor ordered a c-reactive protein test.
+  ClusterId: CL18
+  TemporalProfile: today
+- [Plan] complete blood count | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T46
+  Summary: The doctor ordered a complete blood count.
+  ClusterId: CL19
+  TemporalProfile: today
+- [Plan] pregnancy test | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T46
+  Summary: The doctor ordered a pregnancy test.
+  ClusterId: CL20
+  TemporalProfile: today
+- [ExamFinding] murphy's sign | verification_status=unconfirmed | clinical_status=historical | modalities=exam | speakers=doctor | evidence=T46
+  Summary: A Murphys sign is equivocal.
+  ClusterId: CL21
+  TemporalProfile: current
+- [Plan] blood tests | verification_status=confirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T46
+  Summary: Blood tests are ordered.
+  ClusterId: CL22
+  TemporalProfile: today
+- [Plan] follow-up | verification_status=confirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T46
+  Summary: Follow-up is scheduled.
+  ClusterId: CL23
+  TemporalProfile: today
+- [Plan] diet | verification_status=confirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T46
+  Summary: The patient is advised to refrain from eating.
+  ClusterId: CL24
+  TemporalProfile: current
+- [ExamFinding] fever | verification_status=unconfirmed | clinical_status=historical | modalities=exam | speakers=doctor | evidence=T47
+  Summary: The patient reports chills.
+  ClusterId: CL25
+  TemporalProfile: current

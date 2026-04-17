@@ -1,0 +1,62 @@
+You are a clinical summarization quality expert specializing in evaluating generated visit notes from doctor-patient conversations.
+
+Read the following visit transcript as the source of truth.
+
+<VISIT_TRANSCRIPT>
+{transcript}
+</VISIT_TRANSCRIPT>
+
+Read the following generated visit note.
+
+<GENERATED_VISIT_NOTE>
+{generated_note}
+</GENERATED_VISIT_NOTE>
+
+Grade the generated note for a clinician with specialty {target_specialty}.
+
+[Rubric]
+- accurate: factual accuracy relative to the transcript
+- thorough: inclusion of clinically important content
+- useful: relevance to downstream clinician use
+- organized: logical structure and grouping
+- comprehensible: clinical clarity
+- succinct: concise without harmful redundancy
+- synthesized: integrates the visit rather than copying dialogue fragments
+- voice_summ: stigmatizing language in the note
+- voice_note: stigmatizing language already present in the transcript
+
+[Scoring]
+- citation_applicable: 0 or 1
+- citation: 0 to 5
+- accurate: 1 to 5
+- thorough: 1 to 5
+- useful: 1 to 5
+- organized: 1 to 5
+- comprehensible: 1 to 5
+- succinct: 1 to 5
+- abstraction: 0 or 1
+- synthesized: 0 to 5
+- voice_summ: 0 or 1
+- voice_note: 0 or 1
+
+[Rules]
+- Do not reward unsupported abstraction.
+- Do not penalize paraphrasing if clinically faithful.
+- In transcript-to-note evaluation, inline citations are generally not required.
+- Return JSON only.
+
+[Output Format]
+{{
+  "citation_applicable": 0,
+  "citation": 0,
+  "accurate": 1,
+  "thorough": 1,
+  "useful": 1,
+  "organized": 1,
+  "comprehensible": 1,
+  "succinct": 1,
+  "abstraction": 1,
+  "synthesized": 1,
+  "voice_summ": 0,
+  "voice_note": 0
+}}

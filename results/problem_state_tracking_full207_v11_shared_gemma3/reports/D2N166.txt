@@ -1,0 +1,183 @@
+Case: D2N166
+
+Problem List and Visit State Tracking
+
+Problem List
+- low back pain | verification_status=confirmed | clinical_status=worsening | modalities=interview | speakers=patient | evidence=T1,T11,T24,T33,T35,T56
+  Summary: The patient reports sharp low back pain.
+  ClusterId: CL1
+  TemporalProfile: current, past
+  Updates:
+  - CAP33: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T1 :: The patient has a history of back pain.
+  - CAP5: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T11 :: The patient reports sharp low back pain.
+  - CAP7: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T11 :: The patient reports low back pain.
+  - CAP3: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T24 :: The patient reports pain in the left hand.
+  - CAP1: content_source=patient modality=interview verification_status=unconfirmed clinical_status=worsening temporality=current turns=T33 :: The patient feels they do not want to be as active as they were previously.
+  - CAP8: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=past turns=T35 :: The patient's father has back pain.
+  - CAP23: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T56 :: The patient reports pain.
+- lifting | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T3
+  Summary: The patient reports lifting a box of books before the pain started.
+  ClusterId: CL2
+  TemporalProfile: past
+  Updates:
+  - CAP32: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=past turns=T3 :: The patient reports lifting a box of books before the pain started.
+- aching | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T9
+  Summary: The patient describes the pain as aching.
+  ClusterId: CL3
+  TemporalProfile: current
+  Updates:
+  - CAP6: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T9 :: The patient describes the pain as aching.
+- sharp pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T9
+  Summary: The patient reports sharp pain.
+  ClusterId: CL4
+  TemporalProfile: current
+  Updates:
+  - CAP14: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T9 :: The patient reports sharp pain.
+- aching pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T12
+  Summary: The patient reports aching pain.
+  ClusterId: CL5
+  TemporalProfile: current
+  Updates:
+  - CAP15: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T12 :: The patient reports aching pain.
+- shooting pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T12
+  Summary: The patient reports shooting pain.
+  ClusterId: CL6
+  TemporalProfile: current
+  Updates:
+  - CAP16: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T12 :: The patient reports shooting pain.
+- numbness | verification_status=unconfirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T16
+  Summary: The patient denies numbness.
+  ClusterId: CL7
+  TemporalProfile: current
+  Updates:
+  - CAP20: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=current turns=T16 :: The patient denies numbness.
+- tingling | verification_status=unconfirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T16
+  Summary: The patient denies tingling.
+  ClusterId: CL8
+  TemporalProfile: current
+  Updates:
+  - CAP21: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=current turns=T16 :: The patient denies tingling.
+- weakness | verification_status=unconfirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T20
+  Summary: The patient denies weakness.
+  ClusterId: CL9
+  TemporalProfile: current
+  Updates:
+  - CAP22: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=current turns=T20 :: The patient denies weakness.
+- surgery discussion | verification_status=unconfirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T28
+  Summary: No one has discussed surgery with the patient.
+  ClusterId: CL12
+  TemporalProfile: future
+  Updates:
+  - CAP4: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=future turns=T28 :: No one has discussed surgery with the patient.
+- sedentary job | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T31
+  Summary: The patient has a sedentary job.
+  ClusterId: CL13
+  TemporalProfile: current
+  Updates:
+  - CAP9: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T31 :: The patient has a sedentary job.
+- spinal condition | verification_status=unconfirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T35
+  Summary: The patient's father has spine conditions.
+  ClusterId: CL14
+  TemporalProfile: past
+  Updates:
+  - CAP10: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=past turns=T35 :: The patient's father has spine conditions.
+- smoking | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T37
+  Summary: The patient does not smoke.
+  ClusterId: CL15
+  TemporalProfile: current
+  Updates:
+  - CAP17: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T37 :: The patient does not smoke.
+- lumbar paravertebral tenderness | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T52
+  Summary: The patient reports lumbar paravertebral tenderness.
+  ClusterId: CL16
+  TemporalProfile: current
+  Updates:
+  - CAP11: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T52 :: The patient reports lumbar paravertebral tenderness.
+- midline tenderness | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T52
+  Summary: The patient reports midline tenderness.
+  ClusterId: CL17
+  TemporalProfile: current
+  Updates:
+  - CAP18: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T52 :: The patient reports midline tenderness.
+- lumbar back pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T62
+  Summary: The patient reports lumbar back pain.
+  ClusterId: CL18
+  TemporalProfile: current
+  Updates:
+  - CAP12: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T62 :: The patient reports lumbar back pain.
+- herniated disk | verification_status=confirmed | clinical_status=active | modalities=assessment | speakers=doctor | evidence=T62
+  Summary: The patient has a herniated disk.
+  ClusterId: CL19
+  TemporalProfile: current
+  Updates:
+  - CAP13: content_source=doctor modality=assessment verification_status=confirmed clinical_status=active temporality=current turns=T62 :: The patient has a herniated disk.
+- nerve impingement | verification_status=confirmed | clinical_status=active | modalities=assessment | speakers=doctor | evidence=T62
+  Summary: The patient has nerve impingement.
+  ClusterId: CL20
+  TemporalProfile: current
+  Updates:
+  - CAP19: content_source=doctor modality=assessment verification_status=confirmed clinical_status=active temporality=current turns=T62 :: The patient has nerve impingement.
+- radiculopathy | verification_status=confirmed | clinical_status=active | modalities=assessment | speakers=doctor | evidence=T62
+  Summary: The patient has radiculopathy.
+  ClusterId: CL21
+  TemporalProfile: current
+  Updates:
+  - CAP24: content_source=doctor modality=assessment verification_status=confirmed clinical_status=active temporality=current turns=T62 :: The patient has radiculopathy.
+- injection | verification_status=unconfirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T68
+  Summary: The patient is concerned about risks associated with an injection.
+  ClusterId: CL26
+  TemporalProfile: associated with
+  Updates:
+  - CAP2: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=associated with turns=T68 :: The patient is concerned about risks associated with an injection.
+
+Medication Tracking
+- [MedicationState] ibuprofen | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T25
+  Summary: The patient tried to take some ibuprofen.
+  ClusterId: CL10
+  TemporalProfile: past
+  CurrentRegimens:
+  - The patient tried to take some ibuprofen. (T25)
+  Updates:
+  - CAP30: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=past turns=T25 :: The patient tried to take some ibuprofen.
+- [MedicationState] tylenol | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T25
+  Summary: The patient tried to take some Tylenol.
+  ClusterId: CL11
+  TemporalProfile: past
+  CurrentRegimens:
+  - The patient tried to take some Tylenol. (T25)
+  Updates:
+  - CAP31: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=past turns=T25 :: The patient tried to take some Tylenol.
+- [MedicationChange] spinal injection | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T62
+  Summary: A spinal injection is recommended.
+  ClusterId: CL22
+  TemporalProfile: today
+  PlannedChanges:
+  - A spinal injection is recommended. (T62)
+  Updates:
+  - CAP26: content_source=doctor modality=plan verification_status=unconfirmed clinical_status=planned temporality=today turns=T62 :: A spinal injection is recommended.
+- [MedicationChange] strong nsaid | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T62
+  Summary: A strong nsaid is prescribed.
+  ClusterId: CL23
+  TemporalProfile: today
+  PlannedChanges:
+  - A strong nsaid is prescribed. (T62)
+  Updates:
+  - CAP27: content_source=doctor modality=plan verification_status=unconfirmed clinical_status=planned temporality=today turns=T62 :: A strong nsaid is prescribed.
+- [MedicationChange] corticosteroid | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T62
+  Summary: A corticosteroid is prescribed.
+  ClusterId: CL24
+  TemporalProfile: today
+  PlannedChanges:
+  - A corticosteroid is prescribed. (T62)
+  Updates:
+  - CAP28: content_source=doctor modality=plan verification_status=unconfirmed clinical_status=planned temporality=today turns=T62 :: A corticosteroid is prescribed.
+
+Other Structured States
+- [Plan] fluoroscopy | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T62
+  Summary: Fluoroscopy is ordered.
+  ClusterId: CL25
+  TemporalProfile: today
+- [Plan] paperwork | verification_status=confirmed | clinical_status=planned | modalities=assessment | speakers=doctor | evidence=T68
+  Summary: The doctor will provide the patient with paperwork.
+  ClusterId: CL27
+  TemporalProfile: future

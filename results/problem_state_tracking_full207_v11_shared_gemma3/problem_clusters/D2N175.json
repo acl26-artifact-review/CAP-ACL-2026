@@ -1,0 +1,611 @@
+{
+  "clusters": [
+    {
+      "cluster_id": "CL1",
+      "cluster_type": "ProblemState",
+      "canonical_concept": "chest pain",
+      "primary_cap_type": "Symptom",
+      "source_cap_types": [
+        "Symptom"
+      ],
+      "final_verification_status": "unconfirmed",
+      "clinical_status": "active",
+      "final_assertion": "uncertain",
+      "visit_state": "active",
+      "source_speakers": [
+        "patient"
+      ],
+      "source_modalities": [
+        "interview"
+      ],
+      "temporal_profile": [
+        "current"
+      ],
+      "evidence_turn_ids": [
+        "T3"
+      ],
+      "supporting_cap_ids": [
+        "CAP9"
+      ],
+      "cluster_summary": "The patient denies chest pain.",
+      "salience_score": 10,
+      "is_low_value": false,
+      "updates": [
+        {
+          "cap_id": "CAP9",
+          "content_source": "patient",
+          "modality": "interview",
+          "verification_status": "unconfirmed",
+          "clinical_status": "active",
+          "assertion": "uncertain",
+          "visit_state": "active",
+          "temporality": "current",
+          "turn_ids": [
+            "T3"
+          ],
+          "proposition_text": "The patient denies chest pain."
+        }
+      ]
+    },
+    {
+      "cluster_id": "CL2",
+      "cluster_type": "ProblemState",
+      "canonical_concept": "diabetes",
+      "primary_cap_type": "Problem",
+      "source_cap_types": [
+        "Problem"
+      ],
+      "final_verification_status": "confirmed",
+      "clinical_status": "active",
+      "final_assertion": "present",
+      "visit_state": "active",
+      "source_speakers": [
+        "patient"
+      ],
+      "source_modalities": [
+        "interview"
+      ],
+      "temporal_profile": [
+        "history"
+      ],
+      "evidence_turn_ids": [
+        "T6"
+      ],
+      "supporting_cap_ids": [
+        "CAP3"
+      ],
+      "cluster_summary": "The patient has a history of diabetes.",
+      "salience_score": 10,
+      "is_low_value": false,
+      "updates": [
+        {
+          "cap_id": "CAP3",
+          "content_source": "patient",
+          "modality": "interview",
+          "verification_status": "confirmed",
+          "clinical_status": "active",
+          "assertion": "present",
+          "visit_state": "active",
+          "temporality": "history",
+          "turn_ids": [
+            "T6"
+          ],
+          "proposition_text": "The patient has a history of diabetes."
+        }
+      ]
+    },
+    {
+      "cluster_id": "CL3",
+      "cluster_type": "ProblemState",
+      "canonical_concept": "abnormal lab",
+      "primary_cap_type": "Problem",
+      "source_cap_types": [
+        "Problem"
+      ],
+      "final_verification_status": "unconfirmed",
+      "clinical_status": "active",
+      "final_assertion": "uncertain",
+      "visit_state": "active",
+      "source_speakers": [
+        "patient"
+      ],
+      "source_modalities": [
+        "interview"
+      ],
+      "temporal_profile": [
+        "recent"
+      ],
+      "evidence_turn_ids": [
+        "T6"
+      ],
+      "supporting_cap_ids": [
+        "CAP4"
+      ],
+      "cluster_summary": "The patient has an abnormal lab result.",
+      "salience_score": 10,
+      "is_low_value": false,
+      "updates": [
+        {
+          "cap_id": "CAP4",
+          "content_source": "patient",
+          "modality": "interview",
+          "verification_status": "unconfirmed",
+          "clinical_status": "active",
+          "assertion": "uncertain",
+          "visit_state": "active",
+          "temporality": "recent",
+          "turn_ids": [
+            "T6"
+          ],
+          "proposition_text": "The patient has an abnormal lab result."
+        }
+      ]
+    },
+    {
+      "cluster_id": "CL4",
+      "cluster_type": "ProblemState",
+      "canonical_concept": "high blood sugar",
+      "primary_cap_type": "Symptom",
+      "source_cap_types": [
+        "Symptom"
+      ],
+      "final_verification_status": "confirmed",
+      "clinical_status": "active",
+      "final_assertion": "present",
+      "visit_state": "active",
+      "source_speakers": [
+        "patient"
+      ],
+      "source_modalities": [
+        "interview"
+      ],
+      "temporal_profile": [
+        "recent"
+      ],
+      "evidence_turn_ids": [
+        "T8"
+      ],
+      "supporting_cap_ids": [
+        "CAP7"
+      ],
+      "cluster_summary": "The patient reports elevated blood sugars.",
+      "salience_score": 10,
+      "is_low_value": false,
+      "updates": [
+        {
+          "cap_id": "CAP7",
+          "content_source": "patient",
+          "modality": "interview",
+          "verification_status": "confirmed",
+          "clinical_status": "active",
+          "assertion": "present",
+          "visit_state": "active",
+          "temporality": "recent",
+          "turn_ids": [
+            "T8"
+          ],
+          "proposition_text": "The patient reports elevated blood sugars."
+        }
+      ]
+    },
+    {
+      "cluster_id": "CL5",
+      "cluster_type": "MedicationState",
+      "canonical_concept": "metformin",
+      "primary_cap_type": "MedicationStatement",
+      "source_cap_types": [
+        "MedicationStatement"
+      ],
+      "final_verification_status": "confirmed",
+      "clinical_status": "active",
+      "final_assertion": "present",
+      "visit_state": "active",
+      "source_speakers": [
+        "doctor"
+      ],
+      "source_modalities": [
+        "interview"
+      ],
+      "temporal_profile": [
+        "current"
+      ],
+      "evidence_turn_ids": [
+        "T11"
+      ],
+      "supporting_cap_ids": [
+        "CAP13",
+        "CAP14"
+      ],
+      "cluster_summary": "The patient's metformin dose is 100 mg daily.",
+      "salience_score": 8,
+      "is_low_value": false,
+      "updates": [
+        {
+          "cap_id": "CAP13",
+          "content_source": "doctor",
+          "modality": "interview",
+          "verification_status": "confirmed",
+          "clinical_status": "active",
+          "assertion": "present",
+          "visit_state": "active",
+          "temporality": "current",
+          "turn_ids": [
+            "T11"
+          ],
+          "proposition_text": "The patient's metformin dose is 100 mg daily."
+        },
+        {
+          "cap_id": "CAP14",
+          "content_source": "doctor",
+          "modality": "interview",
+          "verification_status": "confirmed",
+          "clinical_status": "active",
+          "assertion": "present",
+          "visit_state": "active",
+          "temporality": "current",
+          "turn_ids": [
+            "T11"
+          ],
+          "proposition_text": "The patient is currently taking metformin."
+        }
+      ],
+      "current_regimens": [
+        {
+          "proposition_text": "The patient's metformin dose is 100 mg daily.",
+          "turn_ids": [
+            "T11"
+          ],
+          "attributes": {}
+        },
+        {
+          "proposition_text": "The patient is currently taking metformin.",
+          "turn_ids": [
+            "T11"
+          ],
+          "attributes": {}
+        }
+      ]
+    },
+    {
+      "cluster_id": "CL6",
+      "cluster_type": "Plan",
+      "canonical_concept": "adjust medication",
+      "primary_cap_type": "Order",
+      "source_cap_types": [
+        "Order"
+      ],
+      "final_verification_status": "unconfirmed",
+      "clinical_status": "planned",
+      "final_assertion": "hypothetical",
+      "visit_state": "planned",
+      "source_speakers": [
+        "doctor"
+      ],
+      "source_modalities": [
+        "plan"
+      ],
+      "temporal_profile": [
+        "future"
+      ],
+      "evidence_turn_ids": [
+        "T17"
+      ],
+      "supporting_cap_ids": [
+        "CAP12"
+      ],
+      "cluster_summary": "The doctor plans to adjust the patient's medication.",
+      "salience_score": 9,
+      "is_low_value": false,
+      "updates": [
+        {
+          "cap_id": "CAP12",
+          "content_source": "doctor",
+          "modality": "plan",
+          "verification_status": "unconfirmed",
+          "clinical_status": "planned",
+          "assertion": "hypothetical",
+          "visit_state": "planned",
+          "temporality": "future",
+          "turn_ids": [
+            "T17"
+          ],
+          "proposition_text": "The doctor plans to adjust the patient's medication."
+        }
+      ]
+    },
+    {
+      "cluster_id": "CL7",
+      "cluster_type": "ProblemState",
+      "canonical_concept": "knee pain",
+      "primary_cap_type": "Problem",
+      "source_cap_types": [
+        "Problem",
+        "Symptom"
+      ],
+      "final_verification_status": "unconfirmed",
+      "clinical_status": "resolved",
+      "final_assertion": "uncertain",
+      "visit_state": "resolved",
+      "source_speakers": [
+        "patient"
+      ],
+      "source_modalities": [
+        "interview"
+      ],
+      "temporal_profile": [
+        "current",
+        "past"
+      ],
+      "evidence_turn_ids": [
+        "T19",
+        "T25",
+        "T36",
+        "T47"
+      ],
+      "supporting_cap_ids": [
+        "CAP1",
+        "CAP2",
+        "CAP10",
+        "CAP11"
+      ],
+      "cluster_summary": "The patient reports knee pain from prior surgery.",
+      "salience_score": 10,
+      "is_low_value": false,
+      "updates": [
+        {
+          "cap_id": "CAP1",
+          "content_source": "patient",
+          "modality": "interview",
+          "verification_status": "confirmed",
+          "clinical_status": "active",
+          "assertion": "present",
+          "visit_state": "active",
+          "temporality": "current",
+          "turn_ids": [
+            "T19"
+          ],
+          "proposition_text": "The patient reports pain in the left hand."
+        },
+        {
+          "cap_id": "CAP2",
+          "content_source": "patient",
+          "modality": "interview",
+          "verification_status": "confirmed",
+          "clinical_status": "resolved",
+          "assertion": "present",
+          "visit_state": "resolved",
+          "temporality": "past",
+          "turn_ids": [
+            "T25"
+          ],
+          "proposition_text": "The patient reports knee pain from prior surgery."
+        },
+        {
+          "cap_id": "CAP10",
+          "content_source": "patient",
+          "modality": "interview",
+          "verification_status": "confirmed",
+          "clinical_status": "active",
+          "assertion": "present",
+          "visit_state": "active",
+          "temporality": "current",
+          "turn_ids": [
+            "T36"
+          ],
+          "proposition_text": "The patient reports pain."
+        },
+        {
+          "cap_id": "CAP11",
+          "content_source": "patient",
+          "modality": "interview",
+          "verification_status": "unconfirmed",
+          "clinical_status": "active",
+          "assertion": "uncertain",
+          "visit_state": "active",
+          "temporality": "current",
+          "turn_ids": [
+            "T47"
+          ],
+          "proposition_text": "The patient reports pain."
+        }
+      ]
+    },
+    {
+      "cluster_id": "CL8",
+      "cluster_type": "ProblemState",
+      "canonical_concept": "hyperglycemia",
+      "primary_cap_type": "Problem",
+      "source_cap_types": [
+        "Problem"
+      ],
+      "final_verification_status": "confirmed",
+      "clinical_status": "active",
+      "final_assertion": "present",
+      "visit_state": "active",
+      "source_speakers": [
+        "patient"
+      ],
+      "source_modalities": [
+        "interview"
+      ],
+      "temporal_profile": [
+        "current"
+      ],
+      "evidence_turn_ids": [
+        "T19"
+      ],
+      "supporting_cap_ids": [
+        "CAP5"
+      ],
+      "cluster_summary": "The patient reports an elevated A1c level.",
+      "salience_score": 10,
+      "is_low_value": false,
+      "updates": [
+        {
+          "cap_id": "CAP5",
+          "content_source": "patient",
+          "modality": "interview",
+          "verification_status": "confirmed",
+          "clinical_status": "active",
+          "assertion": "present",
+          "visit_state": "active",
+          "temporality": "current",
+          "turn_ids": [
+            "T19"
+          ],
+          "proposition_text": "The patient reports an elevated A1c level."
+        }
+      ]
+    },
+    {
+      "cluster_id": "CL9",
+      "cluster_type": "ProblemState",
+      "canonical_concept": "elevated blood sugar",
+      "primary_cap_type": "Symptom",
+      "source_cap_types": [
+        "Symptom"
+      ],
+      "final_verification_status": "confirmed",
+      "clinical_status": "active",
+      "final_assertion": "present",
+      "visit_state": "active",
+      "source_speakers": [
+        "patient"
+      ],
+      "source_modalities": [
+        "interview"
+      ],
+      "temporal_profile": [
+        "recent"
+      ],
+      "evidence_turn_ids": [
+        "T19"
+      ],
+      "supporting_cap_ids": [
+        "CAP8"
+      ],
+      "cluster_summary": "The patient reports elevated blood sugar.",
+      "salience_score": 10,
+      "is_low_value": false,
+      "updates": [
+        {
+          "cap_id": "CAP8",
+          "content_source": "patient",
+          "modality": "interview",
+          "verification_status": "confirmed",
+          "clinical_status": "active",
+          "assertion": "present",
+          "visit_state": "active",
+          "temporality": "recent",
+          "turn_ids": [
+            "T19"
+          ],
+          "proposition_text": "The patient reports elevated blood sugar."
+        }
+      ]
+    },
+    {
+      "cluster_id": "CL10",
+      "cluster_type": "ProblemState",
+      "canonical_concept": "high blood pressure",
+      "primary_cap_type": "Problem",
+      "source_cap_types": [
+        "Problem"
+      ],
+      "final_verification_status": "confirmed",
+      "clinical_status": "stable",
+      "final_assertion": "present",
+      "visit_state": "stable",
+      "source_speakers": [
+        "patient"
+      ],
+      "source_modalities": [
+        "interview"
+      ],
+      "temporal_profile": [
+        "current"
+      ],
+      "evidence_turn_ids": [
+        "T23"
+      ],
+      "supporting_cap_ids": [
+        "CAP6"
+      ],
+      "cluster_summary": "The patient reports stable high blood pressure.",
+      "salience_score": 10,
+      "is_low_value": false,
+      "updates": [
+        {
+          "cap_id": "CAP6",
+          "content_source": "patient",
+          "modality": "interview",
+          "verification_status": "confirmed",
+          "clinical_status": "stable",
+          "assertion": "present",
+          "visit_state": "stable",
+          "temporality": "current",
+          "turn_ids": [
+            "T23"
+          ],
+          "proposition_text": "The patient reports stable high blood pressure."
+        }
+      ]
+    },
+    {
+      "cluster_id": "CL11",
+      "cluster_type": "MedicationState",
+      "canonical_concept": "lisinopril",
+      "primary_cap_type": "MedicationStatement",
+      "source_cap_types": [
+        "MedicationStatement"
+      ],
+      "final_verification_status": "confirmed",
+      "clinical_status": "active",
+      "final_assertion": "present",
+      "visit_state": "active",
+      "source_speakers": [
+        "patient"
+      ],
+      "source_modalities": [
+        "interview"
+      ],
+      "temporal_profile": [
+        "current"
+      ],
+      "evidence_turn_ids": [
+        "T23"
+      ],
+      "supporting_cap_ids": [
+        "CAP15"
+      ],
+      "cluster_summary": "The patient is taking lisinopril.",
+      "salience_score": 8,
+      "is_low_value": false,
+      "updates": [
+        {
+          "cap_id": "CAP15",
+          "content_source": "patient",
+          "modality": "interview",
+          "verification_status": "confirmed",
+          "clinical_status": "active",
+          "assertion": "present",
+          "visit_state": "active",
+          "temporality": "current",
+          "turn_ids": [
+            "T23"
+          ],
+          "proposition_text": "The patient is taking lisinopril."
+        }
+      ],
+      "current_regimens": [
+        {
+          "proposition_text": "The patient is taking lisinopril.",
+          "turn_ids": [
+            "T23"
+          ],
+          "attributes": {}
+        }
+      ]
+    }
+  ]
+}

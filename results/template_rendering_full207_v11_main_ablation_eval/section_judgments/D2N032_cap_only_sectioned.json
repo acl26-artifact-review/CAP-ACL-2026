@@ -1,0 +1,30 @@
+{
+  "section_miscategorizations": [
+    {
+      "text": "The patient reports back pain.",
+      "current_section": "Findings",
+      "expected_section": "History of Present Illness",
+      "severity": "major",
+      "reason": "This is a patient-reported symptom rather than an exam or objective finding, so it belongs in the history rather than the findings section."
+    },
+    {
+      "text": "The patient is allergic to percocet, vicodin, and regulun.",
+      "current_section": "History of Present Illness",
+      "expected_section": "Findings",
+      "severity": "minor",
+      "reason": "Allergies are typically documented in a separate allergies or objective data section; placing them in HPI is acceptable but slightly disorganized relative to the defined section semantics."
+    },
+    {
+      "text": "The patient is 5'6",
+      "current_section": "History of Present Illness",
+      "expected_section": "Findings",
+      "severity": "minor",
+      "reason": "Height is an objective vital/measurement and more appropriately belongs in the findings section rather than the symptom-focused HPI."
+    }
+  ],
+  "summary_statistics": {
+    "section_appropriateness_score": 0.9,
+    "section_miscategorization_count": 3,
+    "major_section_miscategorization_count": 1
+  }
+}

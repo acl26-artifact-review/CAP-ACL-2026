@@ -1,0 +1,108 @@
+Case: D2N014
+
+Problem List and Visit State Tracking
+
+Problem List
+- heart attack | verification_status=unconfirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T5
+  Summary: The patient reports a previous concern about a possible heart attack.
+  ClusterId: CL1
+  TemporalProfile: past
+  Updates:
+  - CAP2: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=past turns=T5 :: The patient reports a previous concern about a possible heart attack.
+- shortness of breath | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T5
+  Summary: The patient reports shortness of breath.
+  ClusterId: CL2
+  TemporalProfile: current
+  Updates:
+  - CAP7: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T5 :: The patient reports shortness of breath.
+- heat and humidity | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T5
+  Summary: The patient reports playing tennis in hot and humid conditions.
+  ClusterId: CL4
+  TemporalProfile: past
+  Updates:
+  - CAP19: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=past turns=T5 :: The patient reports playing tennis in hot and humid conditions.
+- tennis playing | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T5
+  Summary: The patient reports playing tennis.
+  ClusterId: CL5
+  TemporalProfile: past
+  Updates:
+  - CAP20: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=past turns=T5 :: The patient reports playing tennis.
+- dizziness | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T7
+  Summary: The patient reports dizziness.
+  ClusterId: CL6
+  TemporalProfile: current
+  Updates:
+  - CAP12: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T7 :: The patient reports dizziness.
+- pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T19,T9
+  Summary: The patient reports pain in the left hand.
+  ClusterId: CL7
+  TemporalProfile: current
+  Updates:
+  - CAP13: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T9 :: The patient reports pain.
+  - CAP6: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T19 :: The patient reports pain in the left hand.
+- salty foods | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T11
+  Summary: The patient admits to occasionally consuming salty foods.
+  ClusterId: CL8
+  TemporalProfile: current
+  Updates:
+  - CAP5: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T11 :: The patient admits to occasionally consuming salty foods.
+- cataract | verification_status=confirmed | clinical_status=resolved | modalities=interview | speakers=patient | evidence=T12
+  Summary: The patient had a cataract removed.
+  ClusterId: CL9
+  TemporalProfile: past
+  Updates:
+  - CAP9: content_source=patient modality=interview verification_status=confirmed clinical_status=resolved temporality=past turns=T12 :: The patient had a cataract removed.
+- vision problems | verification_status=confirmed | clinical_status=resolved | modalities=interview | speakers=patient | evidence=T16
+  Summary: The patient reports no vision problems.
+  ClusterId: CL10
+  TemporalProfile: past
+  Updates:
+  - CAP10: content_source=patient modality=interview verification_status=confirmed clinical_status=resolved temporality=past turns=T16 :: The patient reports no vision problems.
+- skin cancer | verification_status=confirmed | clinical_status=resolved | modalities=assessment,interview | speakers=doctor,patient | evidence=T18,T34
+  Summary: The patient has skin cancer.
+  ClusterId: CL11
+  TemporalProfile: 5 months ago, current, past
+  Updates:
+  - CAP3: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=5 months ago turns=T18 :: The patient had a skin cancer removed five months ago.
+  - CAP8: content_source=patient modality=interview verification_status=confirmed clinical_status=resolved temporality=past turns=T18 :: The patient had skin cancer removed.
+  - CAP11: content_source=doctor modality=assessment verification_status=confirmed clinical_status=active temporality=current turns=T34 :: The patient has skin cancer.
+- high blood pressure | verification_status=confirmed | clinical_status=active | modalities=unknown | speakers=doctor | evidence=T24
+  Summary: A report in the emergency room indicated high blood pressure.
+  ClusterId: CL13
+  TemporalProfile: emergency room report
+  Updates:
+  - CAP4: content_source=doctor modality=unknown verification_status=confirmed clinical_status=active temporality=emergency room report turns=T24 :: A report in the emergency room indicated high blood pressure.
+- heart failure | verification_status=confirmed | clinical_status=active | modalities=assessment | speakers=doctor | evidence=T38
+  Summary: The doctor believes the patient's shortness of breath is an exacerbation of heart failure.
+  ClusterId: CL17
+  TemporalProfile: current
+  Updates:
+  - CAP1: content_source=doctor modality=assessment verification_status=confirmed clinical_status=active temporality=current turns=T38 :: The doctor believes the patient's shortness of breath is an exacerbation of heart failure.
+
+Medication Tracking
+- [MedicationState] heart failure medications | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T5
+  Summary: The patient reports taking heart failure medications.
+  ClusterId: CL3
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient reports taking heart failure medications. (T5)
+  Updates:
+  - CAP18: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T5 :: The patient reports taking heart failure medications.
+
+Other Structured States
+- [ExamFinding] high blood pressure | verification_status=confirmed | clinical_status=active | modalities=exam | speakers=doctor | evidence=T22
+  Summary: The doctor observed high blood pressure.
+  ClusterId: CL12
+  TemporalProfile: now
+- [TestResult] left ventricular hypertrophy | verification_status=confirmed | clinical_status=historical | modalities=test_result | speakers=dragon | evidence=T32
+  Summary: The echocardiogram shows left ventricular hypertrophy.
+  ClusterId: CL14
+  TemporalProfile: current
+- [TestResult] stable echocardiogram | verification_status=confirmed | clinical_status=historical | modalities=test_result | speakers=dragon | evidence=T32
+  Summary: The echocardiogram pumping function is stable.
+  ClusterId: CL15
+  TemporalProfile: current
+- [TestResult] stable ecg | verification_status=confirmed | clinical_status=historical | modalities=test_result | speakers=dragon | evidence=T32
+  Summary: The ECG is stable.
+  ClusterId: CL16
+  TemporalProfile: current

@@ -1,0 +1,108 @@
+Case: D2N158
+
+Problem List and Visit State Tracking
+
+Problem List
+- abdominal pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T0,T15,T19,T21
+  Summary: The patient reports abdominal pain on both sides of the upper abdomen.
+  ClusterId: CL1
+  TemporalProfile: current, past one week
+  Updates:
+  - CAP5: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=past one week turns=T0 :: The patient reports abdominal pain.
+  - CAP8: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T15 :: The patient reports abdominal pain.
+  - CAP9: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T15 :: The patient has abdominal pain.
+  - CAP1: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T21,T19 :: The patient reports abdominal pain on both sides of the upper abdomen.
+- diabetes type two | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T0
+  Summary: The patient has a history of diabetes type two.
+  ClusterId: CL2
+  TemporalProfile: longstanding history
+  Updates:
+  - CAP18: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=longstanding history turns=T0 :: The patient has a history of diabetes type two.
+- asthma | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T0
+  Summary: The patient has a history of asthma.
+  ClusterId: CL3
+  TemporalProfile: longstanding history
+  Updates:
+  - CAP20: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=longstanding history turns=T0 :: The patient has a history of asthma.
+- drinking too much coffee | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T1
+  Summary: The patient has been drinking too much coffee lately.
+  ClusterId: CL4
+  TemporalProfile: lately
+  Updates:
+  - CAP19: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=lately turns=T1 :: The patient has been drinking too much coffee lately.
+- nausea | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T7,T9
+  Summary: The patient reports experiencing nausea.
+  ClusterId: CL5
+  TemporalProfile: on and off, past week, this week
+  Updates:
+  - CAP6: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=on and off turns=T7 :: The patient reports experiencing nausea.
+  - CAP7: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=past week turns=T9 :: The patient reports experiencing nausea.
+  - CAP11: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=this week turns=T9 :: The patient reports nausea.
+- vomiting | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T7
+  Summary: The patient reports vomiting.
+  ClusterId: CL6
+  TemporalProfile: couple of times
+  Updates:
+  - CAP10: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=couple of times turns=T7 :: The patient reports vomiting.
+- exercise-induced pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T21
+  Summary: The patient experiences a spike in abdominal pain during exercise.
+  ClusterId: CL7
+  TemporalProfile: current
+  Updates:
+  - CAP2: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T21 :: The patient experiences a spike in abdominal pain during exercise.
+- diabetes | verification_status=confirmed | clinical_status=stable | modalities=interview | speakers=patient | evidence=T24
+  Summary: The patient has diabetes.
+  ClusterId: CL8
+  TemporalProfile: current
+  Updates:
+  - CAP12: content_source=patient modality=interview verification_status=confirmed clinical_status=stable temporality=current turns=T24 :: The patient has diabetes.
+- spicy food | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T33
+  Summary: The patient has been eating a lot of spicy food.
+  ClusterId: CL12
+  TemporalProfile: current
+  Updates:
+  - CAP3: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T33 :: The patient has been eating a lot of spicy food.
+- gastritis | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T35
+  Summary: The patient suspects gastritis is contributing to their symptoms.
+  ClusterId: CL13
+  TemporalProfile: current
+  Updates:
+  - CAP4: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T35 :: The patient suspects gastritis is contributing to their symptoms.
+- pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T35
+  Summary: The patient reports pain.
+  ClusterId: CL14
+  TemporalProfile: current
+  Updates:
+  - CAP13: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T35 :: The patient reports pain.
+
+Medication Tracking
+- [MedicationChange] metformin | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=doctor | evidence=T26
+  Summary: The doctor increased the metformin dosage to 500 milligrams twice per day.
+  ClusterId: CL9
+  TemporalProfile: current
+  PlannedChanges:
+  - The doctor increased the metformin dosage to 500 milligrams twice per day. (T26)
+  Updates:
+  - CAP15: content_source=doctor modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T26 :: The doctor increased the metformin dosage to 500 milligrams twice per day.
+- [MedicationState] flovent | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T28
+  Summary: The patient is taking flovent twice a day.
+  ClusterId: CL10
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient is taking flovent twice a day. (T28)
+  Updates:
+  - CAP16: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T28 :: The patient is taking flovent twice a day.
+- [MedicationState] albuterol | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T28
+  Summary: The patient is taking albuterol as needed.
+  ClusterId: CL11
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient is taking albuterol as needed. (T28)
+  Updates:
+  - CAP17: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T28 :: The patient is taking albuterol as needed.
+
+Other Structured States
+- [Plan] cut back on spices | verification_status=confirmed | clinical_status=planned | modalities=interview | speakers=doctor | evidence=T35
+  Summary: The doctor recommends cutting back on spicy food.
+  ClusterId: CL15
+  TemporalProfile: future

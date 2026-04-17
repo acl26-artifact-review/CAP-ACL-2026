@@ -1,0 +1,200 @@
+Case: D2N068
+
+Problem List and Visit State Tracking
+
+Problem List
+- left hand pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T3
+  Summary: The patient reports pain in the left hand.
+  ClusterId: CL1
+  TemporalProfile: current
+  Updates:
+  - CAP2: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T3 :: The patient reports pain in the left hand.
+- fluid retention | verification_status=confirmed | clinical_status=active | modalities=assessment | speakers=doctor | evidence=T3
+  Summary: The doctor believes the patient is retaining fluid.
+  ClusterId: CL2
+  TemporalProfile: current
+  Updates:
+  - CAP3: content_source=doctor modality=assessment verification_status=confirmed clinical_status=active temporality=current turns=T3 :: The doctor believes the patient is retaining fluid.
+- shortness of breath | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T25,T3
+  Summary: The patient reports feeling short of breath.
+  ClusterId: CL3
+  TemporalProfile: current
+  Updates:
+  - CAP7: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T3 :: The patient reports shortness of breath.
+  - CAP8: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T3 :: The patient reports shortness of breath.
+  - CAP5: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T25 :: The patient reports feeling short of breath.
+- lightheadedness | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T3,T9
+  Summary: The patient reports experiencing lightheadedness.
+  ClusterId: CL4
+  TemporalProfile: current
+  Updates:
+  - CAP10: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T3 :: The patient reports experiencing lightheadedness.
+  - CAP12: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T9 :: The patient reports experiencing lightheadedness.
+- seasonal changes | verification_status=unconfirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T3
+  Summary: The patient reports seasonal changes.
+  ClusterId: CL5
+  TemporalProfile: current
+  Updates:
+  - CAP38: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=current turns=T3 :: The patient reports seasonal changes.
+- congestive heart failure | verification_status=confirmed | clinical_status=active | modalities=assessment | speakers=doctor | evidence=T5
+  Summary: The doctor believes the patient has congestive heart failure.
+  ClusterId: CL6
+  TemporalProfile: current
+  Updates:
+  - CAP1: content_source=doctor modality=assessment verification_status=confirmed clinical_status=active temporality=current turns=T5 :: The doctor believes the patient has congestive heart failure.
+- out of sorts | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T9
+  Summary: The patient reports feeling 'out of sorts'.
+  ClusterId: CL7
+  TemporalProfile: current
+  Updates:
+  - CAP4: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T9 :: The patient reports feeling 'out of sorts'.
+- fatigue | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T38,T9
+  Summary: The patient reports feeling fatigued.
+  ClusterId: CL8
+  TemporalProfile: current
+  Updates:
+  - CAP9: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T9 :: The patient reports feeling fatigued.
+  - CAP11: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T9 :: The patient reports feeling fatigued.
+  - CAP39: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T9 :: The patient reports fatigue.
+  - CAP16: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T38 :: The patient reports fatigue.
+- lack of energy | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T9
+  Summary: The patient reports a lack of energy.
+  ClusterId: CL9
+  TemporalProfile: current
+  Updates:
+  - CAP33: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T9 :: The patient reports a lack of energy.
+  - CAP36: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T9 :: The patient reports a lack of energy.
+- feeling out of it | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T9
+  Summary: The patient reports feeling 'out of it'.
+  ClusterId: CL10
+  TemporalProfile: current
+  Updates:
+  - CAP34: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T9 :: The patient reports feeling 'out of it'.
+- construction on own | verification_status=unconfirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T9
+  Summary: The patient reports construction on their own.
+  ClusterId: CL11
+  TemporalProfile: current
+  Updates:
+  - CAP35: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=current turns=T9 :: The patient reports construction on their own.
+- bloating | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T17
+  Summary: The patient reports experiencing bloating.
+  ClusterId: CL12
+  TemporalProfile: current
+  Updates:
+  - CAP13: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T17 :: The patient reports experiencing bloating.
+- chest pain | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T23
+  Summary: The patient reports slight cramps.
+  ClusterId: CL14
+  TemporalProfile: current
+  Updates:
+  - CAP14: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T23 :: The patient reports slight cramps.
+- cough | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T25
+  Summary: The patient reports a slight cough.
+  ClusterId: CL15
+  TemporalProfile: current
+  Updates:
+  - CAP6: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T25 :: The patient reports a slight cough.
+- cold | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T25
+  Summary: The patient suspects a cold.
+  ClusterId: CL16
+  TemporalProfile: current
+  Updates:
+  - CAP15: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T25 :: The patient suspects a cold.
+- healthy food intake | verification_status=unconfirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T25
+  Summary: The patient has struggled with healthy food intake.
+  ClusterId: CL17
+  TemporalProfile: past year
+  Updates:
+  - CAP32: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=past year turns=T25 :: The patient has struggled with healthy food intake.
+- heart failure | verification_status=unconfirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T25
+  Summary: The patient has had heart failure.
+  ClusterId: CL18
+  TemporalProfile: past year
+  Updates:
+  - CAP37: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=past year turns=T25 :: The patient has had heart failure.
+- dizziness | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T40
+  Summary: The patient reports dizziness.
+  ClusterId: CL19
+  TemporalProfile: current
+  Updates:
+  - CAP17: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T40 :: The patient reports dizziness.
+- nausea | verification_status=refuted | clinical_status=historical | modalities=interview | speakers=patient | evidence=T43
+  Summary: The patient denies nausea.
+  ClusterId: CL20
+  TemporalProfile: past
+  Updates:
+  - CAP18: content_source=patient modality=interview verification_status=refuted clinical_status=historical temporality=past turns=T43 :: The patient denies nausea.
+- diarrhea | verification_status=refuted | clinical_status=historical | modalities=interview | speakers=patient | evidence=T43
+  Summary: The patient denies diarrhea.
+  ClusterId: CL21
+  TemporalProfile: past
+  Updates:
+  - CAP19: content_source=patient modality=interview verification_status=refuted clinical_status=historical temporality=past turns=T43 :: The patient denies diarrhea.
+
+Medication Tracking
+- [MedicationState] taking medications | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T17
+  Summary: The patient reports taking medications.
+  ClusterId: CL13
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient reports taking medications. (T17)
+  Updates:
+  - CAP31: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T17 :: The patient reports taking medications.
+- [MedicationChange] lasix | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T62
+  Summary: The doctor wants to increase the lasix dose to 80 mg once a day.
+  ClusterId: CL30
+  TemporalProfile: future
+  PlannedChanges:
+  - The doctor wants to increase the lasix dose to 80 mg once a day. (T62)
+  Updates:
+  - CAP29: content_source=doctor modality=plan verification_status=unconfirmed clinical_status=planned temporality=future turns=T62 :: The doctor wants to increase the lasix dose to 80 mg once a day.
+- [MedicationState] lisinopril | verification_status=unconfirmed | clinical_status=active | modalities=plan | speakers=doctor | evidence=T73
+  Summary: The doctor continues lisinopril 20 mg daily.
+  ClusterId: CL32
+  TemporalProfile: current
+  CurrentRegimens:
+  - The doctor continues lisinopril 20 mg daily. (T73)
+  Updates:
+  - CAP30: content_source=doctor modality=plan verification_status=unconfirmed clinical_status=active temporality=current turns=T73 :: The doctor continues lisinopril 20 mg daily.
+
+Other Structured States
+- [ExamFinding] systolic ejection murmur | verification_status=confirmed | clinical_status=historical | modalities=exam | speakers=doctor | evidence=T46
+  Summary: A grade 3 out of 6 systolic ejection murmur is present.
+  ClusterId: CL22
+  TemporalProfile: past
+- [ExamFinding] physical exam | verification_status=confirmed | clinical_status=active | modalities=exam | speakers=doctor | evidence=T46
+  Summary: The doctor will perform a quick physical exam.
+  ClusterId: CL23
+  TemporalProfile: current
+- [ExamFinding] jugular venous distention | verification_status=confirmed | clinical_status=active | modalities=exam | speakers=doctor | evidence=T52
+  Summary: Jugular venous distention is present to approximately 8 centimeters.
+  ClusterId: CL24
+  TemporalProfile: present
+- [ExamFinding] pitting edema | verification_status=confirmed | clinical_status=active | modalities=exam | speakers=doctor | evidence=T52
+  Summary: 1+ pitting edema is present in the lower extremities.
+  ClusterId: CL25
+  TemporalProfile: present
+- [ExamFinding] fine crackles | verification_status=confirmed | clinical_status=active | modalities=exam | speakers=doctor | evidence=T52
+  Summary: Fine crackles are present in the lungs.
+  ClusterId: CL26
+  TemporalProfile: present
+- [TestResult] echocardiogram | verification_status=confirmed | clinical_status=historical | modalities=test_result | speakers=doctor | evidence=T62
+  Summary: The echocardiogram was performed four months ago.
+  ClusterId: CL27
+  TemporalProfile: 4 months ago
+- [TestResult] reduced heart pumping function | verification_status=confirmed | clinical_status=active | modalities=test_result | speakers=doctor | evidence=T62
+  Summary: The echocardiogram shows reduced heart pumping function.
+  ClusterId: CL28
+  TemporalProfile: current
+- [TestResult] leaky mitral valve | verification_status=confirmed | clinical_status=active | modalities=test_result | speakers=doctor | evidence=T62
+  Summary: The echocardiogram shows a leaky mitral valve.
+  ClusterId: CL29
+  TemporalProfile: current
+- [Plan] echocardiogram | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T66
+  Summary: The doctor orders an echocardiogram.
+  ClusterId: CL31
+  TemporalProfile: future
+- [Plan] blood pressure monitoring | verification_status=unconfirmed | clinical_status=historical | modalities=plan | speakers=doctor | evidence=T73
+  Summary: The doctor instructs the patient to monitor blood pressure at home and report elevated readings.
+  ClusterId: CL33
+  TemporalProfile: current

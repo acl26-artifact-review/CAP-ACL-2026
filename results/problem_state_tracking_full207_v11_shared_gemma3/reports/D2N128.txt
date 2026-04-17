@@ -1,0 +1,101 @@
+Case: D2N128
+
+Problem List and Visit State Tracking
+
+Problem List
+- osteoarthritis | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T5
+  Summary: The patient reports osteoarthritis flares.
+  ClusterId: CL1
+  TemporalProfile: lately
+  Updates:
+  - CAP4: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=lately turns=T5 :: The patient reports osteoarthritis flares.
+  - CAP6: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=lately turns=T5 :: The patient has osteoarthritis.
+- elbow pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T9
+  Summary: The patient reports pain in the right elbow.
+  ClusterId: CL2
+  TemporalProfile: current
+  Updates:
+  - CAP1: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T9 :: The patient reports pain in the right elbow.
+  - CAP5: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T9 :: The patient reports elbow pain.
+- numbness | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T15
+  Summary: The patient experiences numbness.
+  ClusterId: CL3
+  TemporalProfile: during typing
+  Updates:
+  - CAP7: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=during typing turns=T15 :: The patient experiences numbness.
+- gout | verification_status=confirmed | clinical_status=stable | modalities=interview,unknown | speakers=doctor,patient | evidence=T17,T28
+  Summary: The doctor's impression is that gout is stable.
+  ClusterId: CL6
+  TemporalProfile: 3 months ago, current
+  Updates:
+  - CAP18: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=3 months ago turns=T17 :: The patient has a history of gout.
+  - CAP2: content_source=doctor modality=unknown verification_status=confirmed clinical_status=stable temporality=current turns=T28 :: The doctor's impression is that gout is stable.
+- stiffness | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T27
+  Summary: The patient reports stiffness.
+  ClusterId: CL7
+  TemporalProfile: current
+  Updates:
+  - CAP9: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T27 :: The patient reports stiffness.
+- pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T28
+  Summary: The patient reports pain in the left hand.
+  ClusterId: CL8
+  TemporalProfile: current
+  Updates:
+  - CAP3: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T28 :: The patient reports pain in the left hand.
+  - CAP8: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T28 :: The patient reports pain.
+
+Medication Tracking
+- [MedicationState] clobetasol | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T15
+  Summary: The patient is taking clobetasol.
+  ClusterId: CL4
+  TemporalProfile: currently
+  CurrentRegimens:
+  - The patient is taking clobetasol. (T15)
+  Updates:
+  - CAP14: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=currently turns=T15 :: The patient is taking clobetasol.
+- [MedicationState] medication | verification_status=confirmed | clinical_status=resolved | modalities=interview | speakers=patient | evidence=T15
+  Summary: The medication controlled the gout.
+  ClusterId: CL5
+  TemporalProfile: since flare-up
+  CurrentRegimens:
+  - The medication controlled the gout. (T15)
+  Updates:
+  - CAP15: content_source=patient modality=interview verification_status=confirmed clinical_status=resolved temporality=since flare-up turns=T15 :: The medication controlled the gout.
+- [MedicationChange] colchicine | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T28
+  Summary: The doctor orders colchicine 0.6 milligrams twice a day as needed for gout flare-ups.
+  ClusterId: CL10
+  TemporalProfile: current
+  PlannedChanges:
+  - The doctor orders colchicine 0.6 milligrams twice a day as needed for gout flare-ups. (T28)
+  Updates:
+  - CAP12: content_source=doctor modality=plan verification_status=unconfirmed clinical_status=planned temporality=current turns=T28 :: The doctor orders colchicine 0.6 milligrams twice a day as needed for gout flare-ups.
+- [MedicationChange] meloxicam | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T28
+  Summary: The doctor prescribes meloxicam 15 milligrams once a day for pain and swelling.
+  ClusterId: CL11
+  TemporalProfile: current
+  PlannedChanges:
+  - The doctor prescribes meloxicam 15 milligrams once a day for pain and swelling. (T28)
+  Updates:
+  - CAP13: content_source=doctor modality=plan verification_status=unconfirmed clinical_status=planned temporality=current turns=T28 :: The doctor prescribes meloxicam 15 milligrams once a day for pain and swelling.
+- [MedicationState] colchicine | verification_status=confirmed | clinical_status=active | modalities=plan | speakers=doctor | evidence=T28
+  Summary: The doctor prescribes colchicine.
+  ClusterId: CL12
+  TemporalProfile: current
+  CurrentRegimens:
+  - The doctor prescribes colchicine. (T28)
+  Updates:
+  - CAP16: content_source=doctor modality=plan verification_status=confirmed clinical_status=active temporality=current turns=T28 :: The doctor prescribes colchicine.
+- [MedicationState] meloxicam | verification_status=confirmed | clinical_status=active | modalities=plan | speakers=doctor | evidence=T28
+  Summary: The doctor prescribes meloxicam.
+  ClusterId: CL13
+  TemporalProfile: current
+  CurrentRegimens:
+  - The doctor prescribes meloxicam. (T28)
+  Updates:
+  - CAP17: content_source=doctor modality=plan verification_status=confirmed clinical_status=active temporality=current turns=T28 :: The doctor prescribes meloxicam.
+
+Other Structured States
+- [Plan] right elbow x-ray | verification_status=confirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T28
+  Summary: The doctor orders a right elbow x-ray.
+  ClusterId: CL9
+  TemporalProfile: current, future

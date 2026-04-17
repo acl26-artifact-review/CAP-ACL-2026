@@ -1,0 +1,122 @@
+Case: D2N096
+
+Problem List and Visit State Tracking
+
+Problem List
+- left shoulder pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T13,T19,T3,T64,T7
+  Summary: The patient reports pain with any movement on their left shoulder.
+  ClusterId: CL1
+  TemporalProfile: current
+  Updates:
+  - CAP4: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T3 :: The patient reports left shoulder pain.
+  - CAP9: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T7 :: The patient reports pain.
+  - CAP7: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T13 :: The patient experiences pain.
+  - CAP1: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T19 :: The patient reports pain with any movement on their left shoulder.
+  - CAP8: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T64 :: The patient reports pain.
+- left hand pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T9
+  Summary: The patient reports pain in the left hand.
+  ClusterId: CL2
+  TemporalProfile: current
+  Updates:
+  - CAP2: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T9 :: The patient reports pain in the left hand.
+- gymnastics class | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T11
+  Summary: The patient was in gymnastics class.
+  ClusterId: CL5
+  TemporalProfile: past, past week
+  Updates:
+  - CAP23: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=past week turns=T11 :: The patient was in gymnastics class.
+  - CAP24: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=past turns=T11 :: The patient was in gymnastics class.
+- toppled over | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T13
+  Summary: The patient toppled over into a weird position.
+  ClusterId: CL6
+  TemporalProfile: past
+  Updates:
+  - CAP21: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=past turns=T13 :: The patient toppled over into a weird position.
+- pain started | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T13
+  Summary: The patient's pain started after toppling over.
+  ClusterId: CL7
+  TemporalProfile: past
+  Updates:
+  - CAP22: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=past turns=T13 :: The patient's pain started after toppling over.
+- risk | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T33
+  Summary: The patient is restricted from carrying heavy weights.
+  ClusterId: CL13
+  TemporalProfile: current
+  Updates:
+  - CAP3: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T33 :: The patient is restricted from carrying heavy weights.
+- hand pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T52
+  Summary: The patient reports hand pain.
+  ClusterId: CL14
+  TemporalProfile: current
+  Updates:
+  - CAP6: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T52 :: The patient reports hand pain.
+- pain reliever | verification_status=confirmed | clinical_status=planned | modalities=interview | speakers=patient | evidence=T64
+  Summary: The patient should take pain reliever.
+  ClusterId: CL17
+  TemporalProfile: after three weeks
+  Updates:
+  - CAP5: content_source=patient modality=interview verification_status=confirmed clinical_status=planned temporality=after three weeks turns=T64 :: The patient should take pain reliever.
+
+Medication Tracking
+- [MedicationState] pain medications | verification_status=refuted | clinical_status=historical | modalities=interview | speakers=patient | evidence=T9
+  Summary: The patient did not take pain medications.
+  ClusterId: CL3
+  TemporalProfile: past few days
+  CurrentRegimens:
+  - The patient did not take pain medications. (T9)
+  Updates:
+  - CAP19: content_source=patient modality=interview verification_status=refuted clinical_status=historical temporality=past few days turns=T9 :: The patient did not take pain medications.
+- [MedicationState] tylenol | verification_status=unconfirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T9
+  Summary: The patient took tylenol.
+  ClusterId: CL4
+  TemporalProfile: past few days
+  CurrentRegimens:
+  - The patient took tylenol. (T9)
+  Updates:
+  - CAP20: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=past few days turns=T9 :: The patient took tylenol.
+- [MedicationChange] ibuprofen | verification_status=confirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T28
+  Summary: The doctor suggests continuing the use of ibuprofen at 600 mg three times a day for a week.
+  ClusterId: CL8
+  TemporalProfile: within a week
+  PlannedChanges:
+  - The doctor suggests continuing the use of ibuprofen at 600 mg three times a day for a week. (T28)
+  Updates:
+  - CAP14: content_source=doctor modality=plan verification_status=confirmed clinical_status=planned temporality=within a week turns=T28 :: The doctor suggests continuing the use of ibuprofen at 600 mg three times a day for a week.
+- [MedicationState] ibuprofen | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=doctor | evidence=T28
+  Summary: The doctor suggests continuing use of ibuprofen at 600 mg three times a day for one week.
+  ClusterId: CL9
+  TemporalProfile: current
+  CurrentRegimens:
+  - The doctor suggests continuing use of ibuprofen at 600 mg three times a day for one week. (T28)
+  Updates:
+  - CAP15: content_source=doctor modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T28 :: The doctor suggests continuing use of ibuprofen at 600 mg three times a day for one week.
+
+Other Structured States
+- [FollowUp] ibuprofen | verification_status=confirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T28
+  Summary: The doctor recommends a follow-up in one week.
+  ClusterId: CL10
+  TemporalProfile: within a week
+- [Plan] ice | verification_status=confirmed | clinical_status=planned | modalities=interview | speakers=doctor | evidence=T32
+  Summary: The doctor recommends using an ice pack to relieve pain.
+  ClusterId: CL11
+  TemporalProfile: current
+- [Plan] heat pad | verification_status=confirmed | clinical_status=planned | modalities=interview | speakers=doctor | evidence=T32
+  Summary: The doctor recommends using a heat pad to relieve pain.
+  ClusterId: CL12
+  TemporalProfile: current
+- [Plan] use right hand | verification_status=confirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T52
+  Summary: The patient should use their right hand instead.
+  ClusterId: CL15
+  TemporalProfile: next 3-4 weeks
+- [FollowUp] follow-up | verification_status=confirmed | clinical_status=planned | modalities=interview | speakers=doctor | evidence=T58
+  Summary: The patient should come back to see the doctor if the pain is still there.
+  ClusterId: CL16
+  TemporalProfile: after three weeks
+- [FollowUp] follow_up | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T68
+  Summary: Let's see how you're doing in the next three weeks.
+  ClusterId: CL18
+  TemporalProfile: in 3 weeks
+- [Plan] medication | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T70
+  Summary: Order medications and procedures as discussed.
+  ClusterId: CL19
+  TemporalProfile: future

@@ -1,0 +1,130 @@
+Case: D2N196
+
+Problem List and Visit State Tracking
+
+Problem List
+- elevated blood pressure | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=doctor,patient | evidence=T3,T32,T8
+  Summary: The patient's blood pressure is elevated.
+  ClusterId: CL1
+  TemporalProfile: current
+  Updates:
+  - CAP1: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T8,T3 :: The patient's blood pressure is elevated.
+  - CAP3: content_source=doctor modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T32 :: The doctor believes the patient's blood pressure is out of control.
+- lightheadedness | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T13,T3,T5
+  Summary: The patient reports feeling lightheaded.
+  ClusterId: CL2
+  TemporalProfile: current
+  Updates:
+  - CAP2: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T3,T5 :: The patient reports feeling lightheaded.
+  - CAP12: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T13 :: The patient feels lightheaded.
+- chest heaviness | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T9
+  Summary: The patient reports sometimes a little heaviness in my chest.
+  ClusterId: CL3
+  TemporalProfile: current
+  Updates:
+  - CAP4: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T9 :: The patient reports sometimes a little heaviness in my chest.
+  - CAP9: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T9 :: The patient reports chest heaviness.
+- headache | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T11
+  Summary: The patient reports a slight headache.
+  ClusterId: CL4
+  TemporalProfile: current
+  Updates:
+  - CAP8: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T11 :: The patient reports a slight headache.
+  - CAP11: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T11 :: The patient reports headaches.
+- dizziness | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T11
+  Summary: The patient reports feeling lightheaded.
+  ClusterId: CL5
+  TemporalProfile: current
+  Updates:
+  - CAP10: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T11 :: The patient reports feeling lightheaded.
+- osteoarthritis | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=doctor,patient | evidence=T28
+  Summary: The doctor identifies osteoarthritis as a third problem.
+  ClusterId: CL8
+  TemporalProfile: current
+  Updates:
+  - CAP7: content_source=doctor modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T28 :: The doctor identifies osteoarthritis as a third problem.
+  - CAP13: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T28 :: The patient has osteoarthritis.
+- left hand pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T29
+  Summary: The patient reports pain in the left hand.
+  ClusterId: CL9
+  TemporalProfile: current
+  Updates:
+  - CAP5: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T29 :: The patient reports pain in the left hand.
+- hyperlipidemia | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=doctor | evidence=T32
+  Summary: The doctor identifies hyperlipidemia as a second problem.
+  ClusterId: CL10
+  TemporalProfile: current
+  Updates:
+  - CAP6: content_source=doctor modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T32 :: The doctor identifies hyperlipidemia as a second problem.
+
+Medication Tracking
+- [MedicationState] lisinopril | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T18
+  Summary: The patient is taking lisinopril twice daily.
+  ClusterId: CL6
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient is taking lisinopril twice daily. (T18)
+  - The patient is taking lisinopril. (T18)
+  Updates:
+  - CAP23: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T18 :: The patient is taking lisinopril twice daily.
+  - CAP25: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T18 :: The patient is taking lisinopril.
+- [MedicationState] atorvastatin | verification_status=confirmed | clinical_status=active | modalities=interview,plan | speakers=doctor | evidence=T26,T32
+  Summary: The doctor is continuing the atorvastatin medication.
+  ClusterId: CL7
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient is taking atorvastatin. (T26)
+  - The doctor is continuing the atorvastatin medication. (T32)
+  Updates:
+  - CAP26: content_source=doctor modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T26 :: The patient is taking atorvastatin.
+  - CAP24: content_source=doctor modality=plan verification_status=confirmed clinical_status=active temporality=current turns=T32 :: The doctor is continuing the atorvastatin medication.
+- [MedicationChange] blood pressure measurements | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T32
+  Summary: The doctor wants the patient to check blood pressure measurements twice a day for two weeks.
+  ClusterId: CL11
+  TemporalProfile: future
+  PlannedChanges:
+  - The doctor wants the patient to check blood pressure measurements twice a day for two weeks. (T32)
+  Updates:
+  - CAP14: content_source=doctor modality=plan verification_status=unconfirmed clinical_status=planned temporality=future turns=T32 :: The doctor wants the patient to check blood pressure measurements twice a day for two weeks.
+- [MedicationChange] lisinopril | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T32
+  Summary: The doctor is increasing the lisinopril dosage to 60 milligrams twice per day.
+  ClusterId: CL12
+  TemporalProfile: future
+  PlannedChanges:
+  - The doctor is increasing the lisinopril dosage to 60 milligrams twice per day. (T32)
+  Updates:
+  - CAP15: content_source=doctor modality=plan verification_status=unconfirmed clinical_status=planned temporality=future turns=T32 :: The doctor is increasing the lisinopril dosage to 60 milligrams twice per day.
+- [MedicationChange] hydrochlorothiazide | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T32
+  Summary: The doctor is adding hydrochlorothiazide at a dosage of 25 milligrams per day.
+  ClusterId: CL13
+  TemporalProfile: future
+  PlannedChanges:
+  - The doctor is adding hydrochlorothiazide at a dosage of 25 milligrams per day. (T32)
+  Updates:
+  - CAP16: content_source=doctor modality=plan verification_status=unconfirmed clinical_status=planned temporality=future turns=T32 :: The doctor is adding hydrochlorothiazide at a dosage of 25 milligrams per day.
+
+Other Structured States
+- [Plan] stay active | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T32
+  Summary: The doctor recommends the patient to stay active as best as possible.
+  ClusterId: CL14
+  TemporalProfile: future
+- [TestResult] cbc with differential | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T32
+  Summary: The doctor orders a CBC with differential.
+  ClusterId: CL15
+  TemporalProfile: future
+- [TestResult] comprehensive metabolic panel | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T32
+  Summary: The doctor orders a comprehensive metabolic panel.
+  ClusterId: CL16
+  TemporalProfile: future
+- [TestResult] cholesterol panel | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T32
+  Summary: The doctor orders a cholesterol panel.
+  ClusterId: CL17
+  TemporalProfile: future
+- [TestResult] urinalysis | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T32
+  Summary: The doctor orders a urinalysis.
+  ClusterId: CL18
+  TemporalProfile: future
+- [FollowUp] follow-up appointment | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T32
+  Summary: The doctor wants to see the patient in four weeks.
+  ClusterId: CL19
+  TemporalProfile: future

@@ -1,0 +1,30 @@
+{
+  "section_miscategorizations": [
+    {
+      "text": "Given the chest pain and elevated troponin, a mild heart attack cannot be ruled out.",
+      "current_section": "A",
+      "expected_section": "O",
+      "severity": "major",
+      "reason": "Chest pain was never documented in the Subjective section, and elevated troponin was not documented in the Objective section; introducing them only in the Assessment blurs the distinction between observed data and diagnostic reasoning and could mislead a reader about what was actually found versus inferred."
+    },
+    {
+      "text": "EKG shows no acute ST-segment changes but reveals a slightly elevated troponin level.",
+      "current_section": "O",
+      "expected_section": "O",
+      "severity": "minor",
+      "reason": "Troponin is a lab result and belongs in Objective, but pairing it syntactically as part of the EKG finding is slightly confusing; however, it does not substantially distort section meaning."
+    },
+    {
+      "text": "Order an EKG and cardiac enzymes (troponin, CK-MB).",
+      "current_section": "P",
+      "expected_section": "P",
+      "severity": "minor",
+      "reason": "This is correctly a plan item, but it conflicts with the Objective section where an EKG and troponin results are already documented as completed; the temporal inconsistency may confuse readers about what is planned versus already done, though the section placement itself is appropriate."
+    }
+  ],
+  "summary_statistics": {
+    "section_appropriateness_score": 0.6,
+    "section_miscategorization_count": 3,
+    "major_section_miscategorization_count": 1
+  }
+}

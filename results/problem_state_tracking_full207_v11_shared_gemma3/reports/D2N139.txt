@@ -1,0 +1,124 @@
+Case: D2N139
+
+Problem List and Visit State Tracking
+
+Problem List
+- chest pain | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T4
+  Summary: The patient reports chest pain.
+  ClusterId: CL1
+  TemporalProfile: current
+  Updates:
+  - CAP8: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T4 :: The patient reports chest pain.
+- coffee consumption | verification_status=unconfirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T4
+  Summary: The patient consumed several cups of coffee and no breakfast on the day of the event.
+  ClusterId: CL2
+  TemporalProfile: march
+  Updates:
+  - CAP22: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=march turns=T4 :: The patient consumed several cups of coffee and no breakfast on the day of the event.
+- panic attack | verification_status=unconfirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T4
+  Summary: The patient believes the event was likely a panic attack.
+  ClusterId: CL3
+  TemporalProfile: march
+  Updates:
+  - CAP23: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=march turns=T4 :: The patient believes the event was likely a panic attack.
+- hypertension | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T10,T63
+  Summary: The patient has a history of hypertension.
+  ClusterId: CL4
+  TemporalProfile: current, family, since childhood
+  Updates:
+  - CAP5: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=since childhood turns=T10 :: The patient has a history of hypertension.
+  - CAP24: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=family turns=T10 :: The patient's family has a history of hypertension.
+  - CAP9: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T63 :: The patient reports secondary hypertension.
+- high blood pressure | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=doctor,patient | evidence=T22,T24,T45
+  Summary: The patient is attempting to lower their blood pressure.
+  ClusterId: CL5
+  TemporalProfile: current
+  Updates:
+  - CAP1: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T22 :: The patient reports blood pressure readings of 146 to 155.
+  - CAP2: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T24 :: The patient is attempting to lower their blood pressure.
+  - CAP6: content_source=doctor modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T45 :: The patient has high blood pressure.
+- treadmill | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T30
+  Summary: The patient tries to walk on the treadmill.
+  ClusterId: CL7
+  TemporalProfile: current
+  Updates:
+  - CAP4: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T30 :: The patient tries to walk on the treadmill.
+- left hand pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T32
+  Summary: The patient reports pain in the left hand.
+  ClusterId: CL8
+  TemporalProfile: current
+  Updates:
+  - CAP3: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T32 :: The patient reports pain in the left hand.
+  - CAP10: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T32 :: The patient reports pain.
+- swelling | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T41
+  Summary: The patient reports swelling.
+  ClusterId: CL9
+  TemporalProfile: current
+  Updates:
+  - CAP11: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T41 :: The patient reports swelling.
+- resistant hypertension | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T75
+  Summary: Mr. Roberts presents with resistant hypertension.
+  ClusterId: CL14
+  TemporalProfile: current
+  Updates:
+  - CAP7: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T75 :: Mr. Roberts presents with resistant hypertension.
+
+Medication Tracking
+- [MedicationChange] spironolactone | verification_status=confirmed | clinical_status=planned | modalities=interview | speakers=doctor | evidence=T47,T63,T75
+  Summary: Spironolactone will be added to Mr. Roberts' regimen.
+  ClusterId: CL10
+  TemporalProfile: future
+  PlannedChanges:
+  - Spironolactone will be tried. (T47)
+  - The doctor will prescribe spironolactone. (T63)
+  - Spironolactone will be added to Mr. Roberts' regimen. (T75)
+  Updates:
+  - CAP20: content_source=doctor modality=interview verification_status=unconfirmed clinical_status=planned temporality=future turns=T47 :: Spironolactone will be tried.
+  - CAP19: content_source=doctor modality=interview verification_status=confirmed clinical_status=planned temporality=future turns=T63 :: The doctor will prescribe spironolactone.
+  - CAP18: content_source=doctor modality=interview verification_status=confirmed clinical_status=planned temporality=future turns=T75 :: Spironolactone will be added to Mr. Roberts' regimen.
+- [MedicationChange] resistant hypertension clinic | verification_status=unconfirmed | clinical_status=planned | modalities=interview | speakers=doctor | evidence=T63
+  Summary: The patient will be referred to the resistant hypertension clinic.
+  ClusterId: CL12
+  TemporalProfile: future
+  PlannedChanges:
+  - The patient will be referred to the resistant hypertension clinic. (T63)
+  Updates:
+  - CAP17: content_source=doctor modality=interview verification_status=unconfirmed clinical_status=planned temporality=future turns=T63 :: The patient will be referred to the resistant hypertension clinic.
+- [MedicationChange] carvedilol | verification_status=unconfirmed | clinical_status=planned | modalities=interview | speakers=doctor | evidence=T75
+  Summary: Carvedilol is being considered.
+  ClusterId: CL17
+  TemporalProfile: future
+  PlannedChanges:
+  - Carvedilol is being considered. (T75)
+  Updates:
+  - CAP21: content_source=doctor modality=interview verification_status=unconfirmed clinical_status=planned temporality=future turns=T75 :: Carvedilol is being considered.
+
+Other Structured States
+- [Plan] dash eating plan | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T27
+  Summary: The doctor will provide information on the dash eating plan.
+  ClusterId: CL6
+  TemporalProfile: future
+- [TestResult] blood pressure | verification_status=unconfirmed | clinical_status=historical | modalities=interview | speakers=doctor | evidence=T63
+  Summary: The patient will have their blood pressure checked.
+  ClusterId: CL11
+  TemporalProfile: future
+- [Plan] renal denervation | verification_status=unconfirmed | clinical_status=planned | modalities=interview | speakers=doctor | evidence=T72
+  Summary: The doctor will consider renal denervation.
+  ClusterId: CL13
+  TemporalProfile: future
+- [Plan] blood pressure check | verification_status=confirmed | clinical_status=planned | modalities=interview | speakers=doctor | evidence=T75
+  Summary: A blood pressure check will be performed.
+  ClusterId: CL15
+  TemporalProfile: in two weeks
+- [Plan] metabolic panel | verification_status=confirmed | clinical_status=planned | modalities=interview | speakers=doctor | evidence=T75
+  Summary: A metabolic panel will be ordered.
+  ClusterId: CL16
+  TemporalProfile: in two weeks
+- [Plan] spironolactone side effects | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=doctor | evidence=T75
+  Summary: The potential side effects of spironolactone, including gynecomastia and electrolyte disturbances, were discussed with the patient.
+  ClusterId: CL18
+  TemporalProfile: current
+- [Plan] carvedilol side effects | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=doctor | evidence=T75
+  Summary: The potential side effects of carvedilol, including erectile dysfunction, were discussed with the patient.
+  ClusterId: CL19
+  TemporalProfile: current

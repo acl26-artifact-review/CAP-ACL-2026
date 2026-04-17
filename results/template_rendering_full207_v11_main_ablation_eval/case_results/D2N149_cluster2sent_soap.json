@@ -1,0 +1,1605 @@
+{
+  "case_id": "D2N149",
+  "method": "cluster2sent",
+  "template": "soap",
+  "summary_text": "S:\nThe patient reports experiencing shortness of breath upon exertion, with a history of coughing up blood. He also reports intermittent episodes of high blood sugar, occasionally experiencing both high and low readings, and has been inconsistently taking his norvasc. He describes a past knee problem with no current swelling. He reports waking up with shortness of breath and feeling short of breath when he returns home.\n\nO:\nXygen saturation is 94% on clinic pulse oximetry. No jugular vein distention, no cervical lymphadenopathy, no carotid bruits. Lung exam reveals bilateral fine crackles and rhonchi. Heart exam reveals a two-plus systolic ejection murmur. Lower extremity exam reveals one plus nonpitting edema bilaterally. Hemoglobin A1c was 7.0% previously.\n\nA:\nThe patient is a 57-year-old male presenting with shortness of breath, cough with blood, and elevated blood sugar. He has a history of diabetes, hypertension, and asthma. A chest x-ray and blood work are indicated to evaluate for potential pneumonia or pulmonary embolism.\n\nP:\nOrder a chest x-ray and blood work, including a CBC and CMP. Send the patient to the emergency department for a CT scan of the chest to evaluate for blood clots. Increase metformin to 750mg twice daily. Hold norvasc until blood pressure is better controlled. Schedule a follow-up appointment in three weeks to discuss diabetes management.",
+  "reference_summary": "CHIEF COMPLAINT\n\nShortness of breath with hemoptysis.\n\nMEDICAL HISTORY\n\nPatient reports history of diabetes, hypertension, and asthma. He also has a long history of knee pain.\n\nMEDICATIONS\n\nPatient reports taking metformin and Norvasc.\n\nREVIEW OF SYSTEMS\n\nConstitutional: Denies fever.\nHENT: Denies bleeding gums.\nRespiratory: Reports shortness of breath, hemoptysis.\nMusculoskeletal: Reports knee pain. Denies lower extremity edema.\nHematologic/Lymphatic: Denies bruising.\n\nVITALS\n\nPulse oxygenation: 94 percent. Blood pressure: 120/70 mm Hg.\n\nPHYSICAL EXAM\n\nNeck\n- General Examination: Neck is supple. No JVD. No carotid bruits.\n\nRespiratory\n- Auscultation of Lungs: Some rales and rhonchi, more on the right. No wheezing right now. There is some diminished breath sounds in the right as well.\n\nCardiovascular\n- Auscultation of Heart: Regular rate. 2/6 systolic ejection murmur, unchanged from before.\n\nGastrointestinal\n- Examination of Abdomen: Soft.\n\nMusculoskeletal\n- Examination: 1+ nonpitting edema on bilateral lower extremities. No calf tenderness. Negative Homan's sign.\n\nHematology/Lymphatic/Immunology\n- Examination: No bruising.\n\nASSESSMENT AND PLAN\n\n1. Shortness of breath.\n- Medical Reasoning: The patient has been coughing up blood.\n- Patient Education and Counseling: We discussed the importance of further testing as his symptoms could be as simple as a pneumonia or something more serious.\n- Medical Treatment: I have ordered a chest x-ray, CT scan, and blood work to be done in the ER. I have instructed the patient to go into the ER immediately after this appointment and I will call ahead.\n\n2. Diabetes.\n- Medical Reasoning: The patient's blood sugar has not been well controlled.\n- Medical Treatment: I have ordered an updated A1c today. He will increase his metformin to 750 mg twice daily.\n\n3. Hypertension.\n- Medical Reasoning: His blood pressure has been running low for approximately 3 weeks. I believe this could be caused by his shortness of breath. I would like to get a better understanding of the cause of his shortness of breath prior to pursuing further treatment for his hypertension.\n- Medical Treatment: At this time, he will discontinue the use of Norvasc.\n\nPatient Agreements: The patient understands and agrees with the recommended medical treatment plan.\n\nINSTRUCTIONS\n\nWe will have him follow up in about 3 weeks to just discuss his diabetes and further treatment recommendations.",
+  "source_cap": {
+    "atomic_propositions": [
+      {
+        "prop_id": "CAP1",
+        "cap_type": "Problem",
+        "canonical_concept": "blood clot",
+        "category": "Problem",
+        "speaker": "doctor",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "potential",
+        "proposition_text": "The doctor is worried about a possible blood clot."
+      },
+      {
+        "prop_id": "CAP2",
+        "cap_type": "Symptom",
+        "canonical_concept": "pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports pain in the left hand."
+      },
+      {
+        "prop_id": "CAP3",
+        "cap_type": "Problem",
+        "canonical_concept": "shortness of breath",
+        "category": "Problem",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The doctor is concerned about shortness of breath."
+      },
+      {
+        "prop_id": "CAP4",
+        "cap_type": "Symptom",
+        "canonical_concept": "shortness of breath",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports shortness of breath."
+      },
+      {
+        "prop_id": "CAP5",
+        "cap_type": "Symptom",
+        "canonical_concept": "coughing up blood",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports coughing up blood."
+      },
+      {
+        "prop_id": "CAP6",
+        "cap_type": "Problem",
+        "canonical_concept": "shortness of breath",
+        "category": "Problem",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient has shortness of breath."
+      },
+      {
+        "prop_id": "CAP7",
+        "cap_type": "Symptom",
+        "canonical_concept": "blood",
+        "category": "Symptom",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient is coughing up blood."
+      },
+      {
+        "prop_id": "CAP8",
+        "cap_type": "Symptom",
+        "canonical_concept": "coughing up blood",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "recent",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports coughing up blood."
+      },
+      {
+        "prop_id": "CAP9",
+        "cap_type": "Symptom",
+        "canonical_concept": "shortness of breath",
+        "category": "Symptom",
+        "speaker": "doctor",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "recent",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports shortness of breath."
+      },
+      {
+        "prop_id": "CAP10",
+        "cap_type": "Problem",
+        "canonical_concept": "hemoptysis",
+        "category": "Problem",
+        "speaker": "patient",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient is experiencing hemoptysis."
+      },
+      {
+        "prop_id": "CAP11",
+        "cap_type": "Symptom",
+        "canonical_concept": "leg swelling",
+        "category": "Symptom",
+        "speaker": "doctor",
+        "predicate": "denies",
+        "status": "uncertain",
+        "visit_state": "historical",
+        "temporality": "none",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient denies leg swelling."
+      },
+      {
+        "prop_id": "CAP12",
+        "cap_type": "Symptom",
+        "canonical_concept": "bruising",
+        "category": "Symptom",
+        "speaker": "doctor",
+        "predicate": "denies",
+        "status": "uncertain",
+        "visit_state": "historical",
+        "temporality": "none",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient denies bruising."
+      },
+      {
+        "prop_id": "CAP13",
+        "cap_type": "Symptom",
+        "canonical_concept": "bleeding",
+        "category": "Symptom",
+        "speaker": "doctor",
+        "predicate": "denies",
+        "status": "uncertain",
+        "visit_state": "historical",
+        "temporality": "none",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient denies bleeding."
+      },
+      {
+        "prop_id": "CAP14",
+        "cap_type": "Symptom",
+        "canonical_concept": "coughing",
+        "category": "Symptom",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient is coughing."
+      },
+      {
+        "prop_id": "CAP15",
+        "cap_type": "Problem",
+        "canonical_concept": "pneumonia",
+        "category": "Problem",
+        "speaker": "doctor",
+        "predicate": "suspects",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "potential",
+        "proposition_text": "The doctor suspects pneumonia."
+      },
+      {
+        "prop_id": "CAP16",
+        "cap_type": "Problem",
+        "canonical_concept": "diabetes",
+        "category": "Problem",
+        "speaker": "doctor",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient has diabetes."
+      },
+      {
+        "prop_id": "CAP17",
+        "cap_type": "Order",
+        "canonical_concept": "chest x-ray",
+        "category": "Order",
+        "speaker": "doctor",
+        "status": "uncertain",
+        "visit_state": "planned",
+        "temporality": "soon",
+        "proposition_text": "A chest x-ray is ordered."
+      },
+      {
+        "prop_id": "CAP18",
+        "cap_type": "Order",
+        "canonical_concept": "cat scan",
+        "category": "Order",
+        "speaker": "doctor",
+        "status": "uncertain",
+        "visit_state": "planned",
+        "temporality": "soon",
+        "proposition_text": "A cat scan is ordered."
+      },
+      {
+        "prop_id": "CAP19",
+        "cap_type": "Order",
+        "canonical_concept": "blood testing",
+        "category": "Order",
+        "speaker": "doctor",
+        "status": "uncertain",
+        "visit_state": "planned",
+        "temporality": "soon",
+        "proposition_text": "Blood testing is ordered."
+      },
+      {
+        "prop_id": "CAP20",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "metformin",
+        "category": "MedicationStatement",
+        "speaker": "doctor",
+        "predicate": "plans",
+        "status": "affirmed",
+        "visit_state": "planned",
+        "temporality": "future",
+        "claim_type_tags": [
+          "medication",
+          "plan",
+          "quantitative"
+        ],
+        "proposition_text": "The doctor plans to increase the metformin dose from 500mg twice daily to 750mg twice daily."
+      },
+      {
+        "prop_id": "CAP21",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "metformin",
+        "category": "MedicationStatement",
+        "speaker": "doctor",
+        "predicate": "plans",
+        "status": "affirmed",
+        "visit_state": "planned",
+        "temporality": "future",
+        "claim_type_tags": [
+          "medication",
+          "plan"
+        ],
+        "proposition_text": "The doctor plans to increase the metformin dose."
+      },
+      {
+        "prop_id": "CAP22",
+        "cap_type": "ProblemHistory",
+        "canonical_concept": "knee problem",
+        "category": "ProblemHistory",
+        "speaker": "patient",
+        "status": "uncertain",
+        "visit_state": "historical",
+        "temporality": "quite some time",
+        "proposition_text": "The patient has had a knee problem for quite some time."
+      },
+      {
+        "prop_id": "CAP23",
+        "cap_type": "ProblemHistory",
+        "canonical_concept": "high blood pressure",
+        "category": "ProblemHistory",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "past",
+        "proposition_text": "The patient has a history of high blood pressure."
+      },
+      {
+        "prop_id": "CAP24",
+        "cap_type": "ProblemHistory",
+        "canonical_concept": "coughing",
+        "category": "ProblemHistory",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "three weeks",
+        "proposition_text": "The patient has been coughing for three weeks."
+      },
+      {
+        "prop_id": "CAP25",
+        "cap_type": "ProblemHistory",
+        "canonical_concept": "diabetes",
+        "category": "ProblemHistory",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "past",
+        "proposition_text": "The patient has a history of diabetes."
+      },
+      {
+        "prop_id": "CAP26",
+        "cap_type": "ProblemHistory",
+        "canonical_concept": "asthma",
+        "category": "ProblemHistory",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "past",
+        "proposition_text": "The patient has a history of asthma."
+      },
+      {
+        "prop_id": "CAP27",
+        "cap_type": "ProblemHistory",
+        "canonical_concept": "travel history",
+        "category": "ProblemHistory",
+        "speaker": "doctor",
+        "status": "uncertain",
+        "visit_state": "historical",
+        "temporality": "recent",
+        "proposition_text": "The patient has a recent travel history."
+      }
+    ],
+    "filtered_nonverifiable_units": []
+  },
+  "event_plan": null,
+  "summary_cap": {
+    "atomic_propositions": [],
+    "filtered_nonverifiable_units": [],
+    "runtime_seconds": 0.541
+  },
+  "cap_alignment": {
+    "cap_precision": 0.0,
+    "cap_recall": 0.0,
+    "cap_f1": 0.0,
+    "matched_count": 0,
+    "summary_prop_count": 0,
+    "source_prop_count": 27,
+    "matched_pairs": [],
+    "unsupported_summary_props": [],
+    "missing_source_props": [
+      {
+        "prop_id": "CAP1",
+        "cap_type": "Problem",
+        "canonical_concept": "blood clot",
+        "category": "Problem",
+        "speaker": "doctor",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "potential",
+        "proposition_text": "The doctor is worried about a possible blood clot."
+      },
+      {
+        "prop_id": "CAP2",
+        "cap_type": "Symptom",
+        "canonical_concept": "pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports pain in the left hand."
+      },
+      {
+        "prop_id": "CAP3",
+        "cap_type": "Problem",
+        "canonical_concept": "shortness of breath",
+        "category": "Problem",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The doctor is concerned about shortness of breath."
+      },
+      {
+        "prop_id": "CAP4",
+        "cap_type": "Symptom",
+        "canonical_concept": "shortness of breath",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports shortness of breath."
+      },
+      {
+        "prop_id": "CAP5",
+        "cap_type": "Symptom",
+        "canonical_concept": "coughing up blood",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports coughing up blood."
+      },
+      {
+        "prop_id": "CAP6",
+        "cap_type": "Problem",
+        "canonical_concept": "shortness of breath",
+        "category": "Problem",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient has shortness of breath."
+      },
+      {
+        "prop_id": "CAP7",
+        "cap_type": "Symptom",
+        "canonical_concept": "blood",
+        "category": "Symptom",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient is coughing up blood."
+      },
+      {
+        "prop_id": "CAP8",
+        "cap_type": "Symptom",
+        "canonical_concept": "coughing up blood",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "recent",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports coughing up blood."
+      },
+      {
+        "prop_id": "CAP9",
+        "cap_type": "Symptom",
+        "canonical_concept": "shortness of breath",
+        "category": "Symptom",
+        "speaker": "doctor",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "recent",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports shortness of breath."
+      },
+      {
+        "prop_id": "CAP10",
+        "cap_type": "Problem",
+        "canonical_concept": "hemoptysis",
+        "category": "Problem",
+        "speaker": "patient",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient is experiencing hemoptysis."
+      },
+      {
+        "prop_id": "CAP11",
+        "cap_type": "Symptom",
+        "canonical_concept": "leg swelling",
+        "category": "Symptom",
+        "speaker": "doctor",
+        "predicate": "denies",
+        "status": "uncertain",
+        "visit_state": "historical",
+        "temporality": "none",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient denies leg swelling."
+      },
+      {
+        "prop_id": "CAP12",
+        "cap_type": "Symptom",
+        "canonical_concept": "bruising",
+        "category": "Symptom",
+        "speaker": "doctor",
+        "predicate": "denies",
+        "status": "uncertain",
+        "visit_state": "historical",
+        "temporality": "none",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient denies bruising."
+      },
+      {
+        "prop_id": "CAP13",
+        "cap_type": "Symptom",
+        "canonical_concept": "bleeding",
+        "category": "Symptom",
+        "speaker": "doctor",
+        "predicate": "denies",
+        "status": "uncertain",
+        "visit_state": "historical",
+        "temporality": "none",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient denies bleeding."
+      },
+      {
+        "prop_id": "CAP14",
+        "cap_type": "Symptom",
+        "canonical_concept": "coughing",
+        "category": "Symptom",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient is coughing."
+      },
+      {
+        "prop_id": "CAP15",
+        "cap_type": "Problem",
+        "canonical_concept": "pneumonia",
+        "category": "Problem",
+        "speaker": "doctor",
+        "predicate": "suspects",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "potential",
+        "proposition_text": "The doctor suspects pneumonia."
+      },
+      {
+        "prop_id": "CAP16",
+        "cap_type": "Problem",
+        "canonical_concept": "diabetes",
+        "category": "Problem",
+        "speaker": "doctor",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient has diabetes."
+      },
+      {
+        "prop_id": "CAP17",
+        "cap_type": "Order",
+        "canonical_concept": "chest x-ray",
+        "category": "Order",
+        "speaker": "doctor",
+        "status": "uncertain",
+        "visit_state": "planned",
+        "temporality": "soon",
+        "proposition_text": "A chest x-ray is ordered."
+      },
+      {
+        "prop_id": "CAP18",
+        "cap_type": "Order",
+        "canonical_concept": "cat scan",
+        "category": "Order",
+        "speaker": "doctor",
+        "status": "uncertain",
+        "visit_state": "planned",
+        "temporality": "soon",
+        "proposition_text": "A cat scan is ordered."
+      },
+      {
+        "prop_id": "CAP19",
+        "cap_type": "Order",
+        "canonical_concept": "blood testing",
+        "category": "Order",
+        "speaker": "doctor",
+        "status": "uncertain",
+        "visit_state": "planned",
+        "temporality": "soon",
+        "proposition_text": "Blood testing is ordered."
+      },
+      {
+        "prop_id": "CAP20",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "metformin",
+        "category": "MedicationStatement",
+        "speaker": "doctor",
+        "predicate": "plans",
+        "status": "affirmed",
+        "visit_state": "planned",
+        "temporality": "future",
+        "claim_type_tags": [
+          "medication",
+          "plan",
+          "quantitative"
+        ],
+        "proposition_text": "The doctor plans to increase the metformin dose from 500mg twice daily to 750mg twice daily."
+      },
+      {
+        "prop_id": "CAP21",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "metformin",
+        "category": "MedicationStatement",
+        "speaker": "doctor",
+        "predicate": "plans",
+        "status": "affirmed",
+        "visit_state": "planned",
+        "temporality": "future",
+        "claim_type_tags": [
+          "medication",
+          "plan"
+        ],
+        "proposition_text": "The doctor plans to increase the metformin dose."
+      },
+      {
+        "prop_id": "CAP22",
+        "cap_type": "ProblemHistory",
+        "canonical_concept": "knee problem",
+        "category": "ProblemHistory",
+        "speaker": "patient",
+        "status": "uncertain",
+        "visit_state": "historical",
+        "temporality": "quite some time",
+        "proposition_text": "The patient has had a knee problem for quite some time."
+      },
+      {
+        "prop_id": "CAP23",
+        "cap_type": "ProblemHistory",
+        "canonical_concept": "high blood pressure",
+        "category": "ProblemHistory",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "past",
+        "proposition_text": "The patient has a history of high blood pressure."
+      },
+      {
+        "prop_id": "CAP24",
+        "cap_type": "ProblemHistory",
+        "canonical_concept": "coughing",
+        "category": "ProblemHistory",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "three weeks",
+        "proposition_text": "The patient has been coughing for three weeks."
+      },
+      {
+        "prop_id": "CAP25",
+        "cap_type": "ProblemHistory",
+        "canonical_concept": "diabetes",
+        "category": "ProblemHistory",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "past",
+        "proposition_text": "The patient has a history of diabetes."
+      },
+      {
+        "prop_id": "CAP26",
+        "cap_type": "ProblemHistory",
+        "canonical_concept": "asthma",
+        "category": "ProblemHistory",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "past",
+        "proposition_text": "The patient has a history of asthma."
+      },
+      {
+        "prop_id": "CAP27",
+        "cap_type": "ProblemHistory",
+        "canonical_concept": "travel history",
+        "category": "ProblemHistory",
+        "speaker": "doctor",
+        "status": "uncertain",
+        "visit_state": "historical",
+        "temporality": "recent",
+        "proposition_text": "The patient has a recent travel history."
+      }
+    ]
+  },
+  "reference_gpt_f1_items": {
+    "active_problems_symptoms": [],
+    "negated_findings": [],
+    "uncertain_findings": [],
+    "medication_treatment": [],
+    "plan_followup": [],
+    "_chunk_count": [
+      "5"
+    ],
+    "_parse_failures": [
+      "{\"chunk_index\": 1, \"stage\": \"call_llm\", \"error\": \"LLM call failed after retries: Error code: 404\"}",
+      "{\"chunk_index\": 2, \"stage\": \"call_llm\", \"error\": \"LLM call failed after retries: Error code: 404\"}",
+      "{\"chunk_index\": 3, \"stage\": \"call_llm\", \"error\": \"LLM call failed after retries: Error code: 404\"}",
+      "{\"chunk_index\": 4, \"stage\": \"call_llm\", \"error\": \"LLM call failed after retries: Error code: 404\"}",
+      "{\"chunk_index\": 5, \"stage\": \"call_llm\", \"error\": \"LLM call failed after retries: Error code: 404\"}"
+    ]
+  },
+  "summary_gpt_f1_items": {
+    "active_problems_symptoms": [],
+    "negated_findings": [],
+    "uncertain_findings": [],
+    "medication_treatment": [],
+    "plan_followup": [],
+    "_chunk_count": [
+      "1"
+    ],
+    "_parse_failures": [
+      "{\"chunk_index\": 1, \"stage\": \"call_llm\", \"error\": \"LLM call failed after retries: Error code: 404\"}"
+    ]
+  },
+  "gpt_f1_alignment": {
+    "by_category": {
+      "active_problems_symptoms": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "matched_count": 0,
+        "pred_count": 0,
+        "ref_count": 0,
+        "matches": [],
+        "unsupported_pred_items": [],
+        "missing_ref_items": []
+      },
+      "negated_findings": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "matched_count": 0,
+        "pred_count": 0,
+        "ref_count": 0,
+        "matches": [],
+        "unsupported_pred_items": [],
+        "missing_ref_items": []
+      },
+      "uncertain_findings": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "matched_count": 0,
+        "pred_count": 0,
+        "ref_count": 0,
+        "matches": [],
+        "unsupported_pred_items": [],
+        "missing_ref_items": []
+      },
+      "medication_treatment": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "matched_count": 0,
+        "pred_count": 0,
+        "ref_count": 0,
+        "matches": [],
+        "unsupported_pred_items": [],
+        "missing_ref_items": []
+      },
+      "plan_followup": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "matched_count": 0,
+        "pred_count": 0,
+        "ref_count": 0,
+        "matches": [],
+        "unsupported_pred_items": [],
+        "missing_ref_items": []
+      }
+    }
+  },
+  "reference_nair_concepts": {
+    "sections": [
+      {
+        "heading": "Clinical Note",
+        "section_value": "CHIEF COMPLAINT\nShortness of breath with hemoptysis.\nMEDICAL HISTORY\nPatient reports history of diabetes, hypertension, and asthma. He also has a long history of knee pain.\nMEDICATIONS\nPatient reports taking metformin and Norvasc.\nREVIEW OF SYSTEMS\nConstitutional: Denies fever.\nHENT: Denies bleeding gums.\nRespiratory: Reports shortness of breath, hemoptysis.",
+        "medical_concepts": [
+          "shortness of breath",
+          "hemoptysis",
+          "diabetes",
+          "hypertension",
+          "asthma",
+          "knee pain",
+          "metformin",
+          "Norvasc",
+          "fever",
+          "bleeding gums"
+        ]
+      },
+      {
+        "heading": "Clinical Note",
+        "section_value": "Musculoskeletal: Reports knee pain. Denies lower extremity edema.\nHematologic/Lymphatic: Denies bruising.\nVITALS\nPulse oxygenation: 94 percent. Blood pressure: 120/70 mm Hg.\nPHYSICAL EXAM\nNeck\n- General Examination: Neck is supple. No JVD. No carotid bruits.\nRespiratory\n- Auscultation of Lungs: Some rales and rhonchi, more on the right. No wheezing right now. There is some diminished breath sounds in the right as well.\nCardiovascular",
+        "medical_concepts": [
+          "knee pain",
+          "lower extremity edema",
+          "bruising",
+          "pulse oximetry",
+          "blood pressure",
+          "jugular venous distention",
+          "carotid bruits",
+          "rales",
+          "rhonchi",
+          "wheezing",
+          "diminished breath sounds"
+        ]
+      },
+      {
+        "heading": "Clinical Note",
+        "section_value": "- Auscultation of Heart: Regular rate. 2/6 systolic ejection murmur, unchanged from before.\nGastrointestinal\n- Examination of Abdomen: Soft.\nMusculoskeletal\n- Examination: 1+ nonpitting edema on bilateral lower extremities. No calf tenderness. Negative Homan's sign.\nHematology/Lymphatic/Immunology\n- Examination: No bruising.\nASSESSMENT AND PLAN\n1. Shortness of breath.\n- Medical Reasoning: The patient has been coughing up blood.",
+        "medical_concepts": [
+          "auscultation of heart",
+          "systolic ejection murmur",
+          "examination of abdomen",
+          "nonpitting edema",
+          "bilateral lower extremities",
+          "calf tenderness",
+          "Homan's sign",
+          "bruising",
+          "shortness of breath",
+          "coughing up blood"
+        ]
+      },
+      {
+        "heading": "Clinical Note",
+        "section_value": "- Patient Education and Counseling: We discussed the importance of further testing as his symptoms could be as simple as a pneumonia or something more serious.\n- Medical Treatment: I have ordered a chest x-ray, CT scan, and blood work to be done in the ER. I have instructed the patient to go into the ER immediately after this appointment and I will call ahead.\n2. Diabetes.\n- Medical Reasoning: The patient's blood sugar has not been well controlled.\n- Medical Treatment: I have ordered an updated A1c today. He will increase his metformin to 750 mg twice daily.\n3. Hypertension.\n- Medical Reasoning: His blood pressure has been running low for approximately 3 weeks. I believe this could be caused by his shortness of breath. I would like to get a better understanding of the cause of his shortness of breath prior to pursuing further treatment for his hypertension.\n- Medical Treatment: At this time, he will discontinue the use of Norvasc.\nPatient Agreements: The patient understands and agrees with the recommended medical treatment plan.\nINSTRUCTIONS",
+        "medical_concepts": [
+          "pneumonia",
+          "chest x-ray",
+          "CT scan",
+          "blood work",
+          "diabetes",
+          "blood sugar",
+          "A1c",
+          "metformin",
+          "hypertension",
+          "blood pressure low",
+          "shortness of breath",
+          "Norvasc"
+        ]
+      },
+      {
+        "heading": "Clinical Note",
+        "section_value": "We will have him follow up in about 3 weeks to just discuss his diabetes and further treatment recommendations.",
+        "medical_concepts": [
+          "diabetes"
+        ]
+      }
+    ],
+    "medical_concepts": [
+      "shortness of breath",
+      "hemoptysis",
+      "diabetes",
+      "hypertension",
+      "asthma",
+      "knee pain",
+      "metformin",
+      "Norvasc",
+      "fever",
+      "bleeding gums",
+      "lower extremity edema",
+      "bruising",
+      "pulse oximetry",
+      "blood pressure",
+      "jugular venous distention",
+      "carotid bruits",
+      "rales",
+      "rhonchi",
+      "wheezing",
+      "diminished breath sounds",
+      "auscultation of heart",
+      "systolic ejection murmur",
+      "examination of abdomen",
+      "nonpitting edema",
+      "bilateral lower extremities",
+      "calf tenderness",
+      "Homan's sign",
+      "coughing up blood",
+      "pneumonia",
+      "chest x-ray",
+      "CT scan",
+      "blood work",
+      "blood sugar",
+      "A1c",
+      "blood pressure low"
+    ],
+    "section_count": 5
+  },
+  "summary_nair_concepts": {
+    "sections": [
+      {
+        "heading": "S",
+        "section_value": "The patient reports experiencing shortness of breath upon exertion, with a history of coughing up blood. He also reports intermittent episodes of high blood sugar, occasionally experiencing both high and low readings, and has been inconsistently taking his norvasc. He describes a past knee problem with no current swelling. He reports waking up with shortness of breath and feeling short of breath when he returns home.",
+        "medical_concepts": [
+          "shortness of breath on exertion",
+          "hemoptysis",
+          "high blood sugar",
+          "hyperglycemia",
+          "hypoglycemia",
+          "norvasc",
+          "knee problem",
+          "joint swelling",
+          "paroxysmal nocturnal dyspnea",
+          "shortness of breath"
+        ]
+      },
+      {
+        "heading": "O",
+        "section_value": "Xygen saturation is 94% on clinic pulse oximetry. No jugular vein distention, no cervical lymphadenopathy, no carotid bruits. Lung exam reveals bilateral fine crackles and rhonchi. Heart exam reveals a two-plus systolic ejection murmur. Lower extremity exam reveals one plus nonpitting edema bilaterally. Hemoglobin A1c was 7.0% previously.",
+        "medical_concepts": [
+          "oxygen saturation",
+          "jugular vein distention",
+          "cervical lymphadenopathy",
+          "carotid bruits",
+          "lung crackles",
+          "rhonchi",
+          "systolic ejection murmur",
+          "lower extremity edema",
+          "nonpitting edema",
+          "hemoglobin A1c"
+        ]
+      },
+      {
+        "heading": "A",
+        "section_value": "The patient is a 57-year-old male presenting with shortness of breath, cough with blood, and elevated blood sugar. He has a history of diabetes, hypertension, and asthma. A chest x-ray and blood work are indicated to evaluate for potential pneumonia or pulmonary embolism.",
+        "medical_concepts": [
+          "shortness of breath",
+          "cough with blood",
+          "hemoptysis",
+          "elevated blood sugar",
+          "diabetes",
+          "hypertension",
+          "asthma",
+          "chest x-ray",
+          "blood work",
+          "pneumonia",
+          "pulmonary embolism"
+        ]
+      },
+      {
+        "heading": "P",
+        "section_value": "Order a chest x-ray and blood work, including a CBC and CMP. Send the patient to the emergency department for a CT scan of the chest to evaluate for blood clots. Increase metformin to 750mg twice daily. Hold norvasc until blood pressure is better controlled. Schedule a follow-up appointment in three weeks to discuss diabetes management.",
+        "medical_concepts": [
+          "chest x-ray",
+          "blood work",
+          "CBC",
+          "CMP",
+          "CT scan of the chest",
+          "blood clots",
+          "metformin",
+          "norvasc",
+          "blood pressure",
+          "diabetes"
+        ]
+      }
+    ],
+    "medical_concepts": [
+      "shortness of breath on exertion",
+      "hemoptysis",
+      "high blood sugar",
+      "hyperglycemia",
+      "hypoglycemia",
+      "norvasc",
+      "knee problem",
+      "joint swelling",
+      "paroxysmal nocturnal dyspnea",
+      "shortness of breath",
+      "oxygen saturation",
+      "jugular vein distention",
+      "cervical lymphadenopathy",
+      "carotid bruits",
+      "lung crackles",
+      "rhonchi",
+      "systolic ejection murmur",
+      "lower extremity edema",
+      "nonpitting edema",
+      "hemoglobin A1c",
+      "cough with blood",
+      "elevated blood sugar",
+      "diabetes",
+      "hypertension",
+      "asthma",
+      "chest x-ray",
+      "blood work",
+      "pneumonia",
+      "pulmonary embolism",
+      "CBC",
+      "CMP",
+      "CT scan of the chest",
+      "blood clots",
+      "metformin",
+      "blood pressure"
+    ],
+    "section_count": 4
+  },
+  "nair_alignment": {
+    "pred_concepts": [
+      "shortness of breath on exertion",
+      "hemoptysis",
+      "high blood sugar",
+      "hyperglycemia",
+      "hypoglycemia",
+      "norvasc",
+      "knee problem",
+      "joint swelling",
+      "paroxysmal nocturnal dyspnea",
+      "shortness of breath",
+      "oxygen saturation",
+      "jugular vein distention",
+      "cervical lymphadenopathy",
+      "carotid bruits",
+      "lung crackles",
+      "rhonchi",
+      "systolic ejection murmur",
+      "lower extremity edema",
+      "nonpitting edema",
+      "hemoglobin A1c",
+      "cough with blood",
+      "elevated blood sugar",
+      "diabetes",
+      "hypertension",
+      "asthma",
+      "chest x-ray",
+      "blood work",
+      "pneumonia",
+      "pulmonary embolism",
+      "CBC",
+      "CMP",
+      "CT scan of the chest",
+      "blood clots",
+      "metformin",
+      "blood pressure"
+    ],
+    "ref_concepts": [
+      "shortness of breath",
+      "hemoptysis",
+      "diabetes",
+      "hypertension",
+      "asthma",
+      "knee pain",
+      "metformin",
+      "Norvasc",
+      "fever",
+      "bleeding gums",
+      "lower extremity edema",
+      "bruising",
+      "pulse oximetry",
+      "blood pressure",
+      "jugular venous distention",
+      "carotid bruits",
+      "rales",
+      "rhonchi",
+      "wheezing",
+      "diminished breath sounds",
+      "auscultation of heart",
+      "systolic ejection murmur",
+      "examination of abdomen",
+      "nonpitting edema",
+      "bilateral lower extremities",
+      "calf tenderness",
+      "Homan's sign",
+      "coughing up blood",
+      "pneumonia",
+      "chest x-ray",
+      "CT scan",
+      "blood work",
+      "blood sugar",
+      "A1c",
+      "blood pressure low"
+    ],
+    "precision_alignment": {
+      "found_b": [
+        "hemoptysis",
+        "high blood sugar",
+        "hyperglycemia",
+        "norvasc",
+        "knee problem",
+        "shortness of breath",
+        "oxygen saturation",
+        "jugular vein distention",
+        "carotid bruits",
+        "lung crackles",
+        "rhonchi",
+        "systolic ejection murmur",
+        "lower extremity edema",
+        "nonpitting edema",
+        "hemoglobin A1c",
+        "cough with blood",
+        "elevated blood sugar",
+        "diabetes",
+        "hypertension",
+        "asthma",
+        "chest x-ray",
+        "blood work",
+        "pneumonia",
+        "CT scan of the chest",
+        "metformin",
+        "blood pressure"
+      ],
+      "not_found_b": [
+        "shortness of breath on exertion",
+        "hypoglycemia",
+        "joint swelling",
+        "paroxysmal nocturnal dyspnea",
+        "cervical lymphadenopathy",
+        "pulmonary embolism",
+        "CBC",
+        "CMP",
+        "blood clots"
+      ],
+      "chunk_count": 2,
+      "chunk_results": [
+        {
+          "found_b": [
+            "hemoptysis",
+            "high blood sugar",
+            "hyperglycemia",
+            "norvasc",
+            "knee problem",
+            "shortness of breath",
+            "oxygen saturation",
+            "jugular vein distention",
+            "carotid bruits",
+            "lung crackles",
+            "rhonchi",
+            "systolic ejection murmur",
+            "lower extremity edema",
+            "nonpitting edema",
+            "hemoglobin A1c",
+            "cough with blood",
+            "elevated blood sugar",
+            "diabetes",
+            "hypertension"
+          ],
+          "not_found_b": [
+            "shortness of breath on exertion",
+            "joint swelling",
+            "paroxysmal nocturnal dyspnea",
+            "cervical lymphadenopathy",
+            "hypoglycemia"
+          ]
+        },
+        {
+          "found_b": [
+            "asthma",
+            "chest x-ray",
+            "blood work",
+            "pneumonia",
+            "CT scan of the chest",
+            "metformin",
+            "blood pressure"
+          ],
+          "not_found_b": [
+            "pulmonary embolism",
+            "CBC",
+            "CMP",
+            "blood clots"
+          ]
+        }
+      ]
+    },
+    "recall_alignment": {
+      "found_b": [
+        "shortness of breath",
+        "hemoptysis",
+        "diabetes",
+        "hypertension",
+        "asthma",
+        "metformin",
+        "Norvasc",
+        "lower extremity edema",
+        "pulse oximetry",
+        "blood pressure",
+        "carotid bruits",
+        "rhonchi",
+        "systolic ejection murmur",
+        "nonpitting edema",
+        "coughing up blood",
+        "pneumonia",
+        "chest x-ray",
+        "CT scan",
+        "blood work",
+        "blood sugar",
+        "A1c"
+      ],
+      "not_found_b": [
+        "knee pain",
+        "fever",
+        "bleeding gums",
+        "bruising",
+        "jugular venous distention",
+        "rales",
+        "wheezing",
+        "diminished breath sounds",
+        "auscultation of heart",
+        "examination of abdomen",
+        "bilateral lower extremities",
+        "calf tenderness",
+        "Homan's sign",
+        "blood pressure low"
+      ],
+      "chunk_count": 2,
+      "chunk_results": [
+        {
+          "found_b": [
+            "shortness of breath",
+            "hemoptysis",
+            "diabetes",
+            "hypertension",
+            "asthma",
+            "metformin",
+            "Norvasc",
+            "lower extremity edema",
+            "pulse oximetry",
+            "blood pressure",
+            "carotid bruits",
+            "rhonchi",
+            "systolic ejection murmur",
+            "nonpitting edema"
+          ],
+          "not_found_b": [
+            "knee pain",
+            "fever",
+            "bleeding gums",
+            "bruising",
+            "jugular venous distention",
+            "rales",
+            "wheezing",
+            "diminished breath sounds",
+            "auscultation of heart",
+            "examination of abdomen"
+          ]
+        },
+        {
+          "found_b": [
+            "coughing up blood",
+            "pneumonia",
+            "chest x-ray",
+            "CT scan",
+            "blood work",
+            "blood sugar",
+            "A1c"
+          ],
+          "not_found_b": [
+            "bilateral lower extremities",
+            "calf tenderness",
+            "Homan's sign",
+            "blood pressure low"
+          ]
+        }
+      ]
+    }
+  },
+  "semantic_cap_audit": {
+    "source_cap_recall": [
+      {
+        "cap_id": "P1",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P2",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P3",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P4",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P5",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P6",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P7",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P8",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P9",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P10",
+        "judgment": "contradicted",
+        "reason": null
+      },
+      {
+        "cap_id": "P11",
+        "judgment": "contradicted",
+        "reason": null
+      },
+      {
+        "cap_id": "P12",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P13",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P14",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P15",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P16",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P1",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P2",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P3",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P4",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P5",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P6",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P7",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P8",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P9",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P10",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P11",
+        "judgment": "missing",
+        "reason": null
+      }
+    ],
+    "summary_cap_precision": [],
+    "metrics": {
+      "semantic_cap_precision": 0.0,
+      "semantic_cap_recall": 0.6296,
+      "semantic_cap_f1": 0.0,
+      "semantic_cap_precision_supported_count": 0,
+      "semantic_cap_precision_partial_count": 0,
+      "semantic_cap_precision_denominator": 0,
+      "semantic_cap_recall_supported_count": 14,
+      "semantic_cap_recall_partial_count": 6,
+      "semantic_cap_recall_denominator": 27,
+      "semantic_cap_low_value_source_count": 0,
+      "semantic_cap_low_value_summary_count": 0,
+      "semantic_cap_missing_count": 5,
+      "semantic_cap_unsupported_count": 0,
+      "semantic_cap_contradicted_source_count": 2,
+      "semantic_cap_contradicted_summary_count": 0
+    }
+  },
+  "safety_judgment": null,
+  "section_judgment": {
+    "section_miscategorizations": [
+      {
+        "text": "A chest x-ray and blood work are indicated to evaluate for potential pneumonia or pulmonary embolism.",
+        "current_section": "A",
+        "expected_section": "P",
+        "severity": "major",
+        "reason": "This sentence describes specific diagnostic tests to be obtained (chest x-ray and blood work), which are explicit management actions/orders and belong in the Plan rather than the Assessment."
+      }
+    ],
+    "summary_statistics": {
+      "section_appropriateness_score": 0.9,
+      "section_miscategorization_count": 1,
+      "major_section_miscategorization_count": 1
+    }
+  },
+  "pdsqi_judgment": {
+    "citation_applicable": 0,
+    "citation": 0,
+    "accurate": 3,
+    "thorough": 3,
+    "useful": 3,
+    "organized": 4,
+    "comprehensible": 4,
+    "succinct": 4,
+    "abstraction": 1,
+    "synthesized": 3,
+    "voice_summ": 0,
+    "voice_note": 0,
+    "pdsqi_core_mean": 3.4286
+  },
+  "llm_checklist_judgment": {
+    "content_preservation_core": 4,
+    "noise_suppression": 5,
+    "lay_expression_preservation": 3,
+    "state_update_fidelity": 3,
+    "temporality_preservation": 4,
+    "problem_evidence_linkage": 4,
+    "state_plan_separation": 4,
+    "section_organization_appropriateness": 4,
+    "overall_clinical_usability": 4,
+    "clinically_meaningful_omission": "Yes",
+    "clinically_concerning_hallucination": "Yes",
+    "checklist_a_mean": 4.0,
+    "checklist_b_mean": 3.5,
+    "checklist_c_mean": 4.0,
+    "llm_checklist_abc_mean": 3.875,
+    "llm_checklist_mean_no_usability": 3.875,
+    "llm_checklist_total_score": 35,
+    "llm_checklist_mean": 3.8889,
+    "llm_checklist_meaningful_omission_yes": 1,
+    "llm_checklist_concerning_hallucination_yes": 1
+  },
+  "metrics": {
+    "case_id": "D2N149",
+    "method": "cluster2sent",
+    "template": "soap",
+    "source_cap_count": 27,
+    "event_plan_count": null,
+    "summary_cap_count": 0,
+    "cap_matched_count": 0,
+    "cap_precision": 0.0,
+    "cap_recall": 0.0,
+    "cap_f1": 0.0,
+    "unsupported_summary_cap_count": 0,
+    "missing_source_cap_count": 27,
+    "summary_runtime_seconds": null,
+    "summary_cap_runtime_seconds": 0.541,
+    "event_plan_runtime_seconds": null,
+    "rouge_l_f1_vs_reference": 0.2222,
+    "token_f1_vs_reference": 0.4103,
+    "gptf1_macro_f1": 0.0,
+    "nair_gpt_precision": 0.7429,
+    "nair_gpt_recall": 0.6,
+    "nair_gpt_f1": 0.6638,
+    "semantic_cap_precision": 0.0,
+    "semantic_cap_recall": 0.6296,
+    "semantic_cap_f1": 0.0,
+    "hallucination_count": null,
+    "major_hallucination_count": null,
+    "omission_count": null,
+    "major_omission_count": null,
+    "section_appropriateness_score": 0.9,
+    "section_miscategorization_count": 1,
+    "major_section_miscategorization_count": 1,
+    "pdsqi_core_mean": 3.4286,
+    "pdsqi_accurate": 3,
+    "pdsqi_thorough": 3,
+    "llm_checklist_total_score": 35,
+    "llm_checklist_mean": 3.8889,
+    "llm_checklist_mean_no_usability": 3.875,
+    "checklist_a_mean": 4.0,
+    "checklist_b_mean": 3.5,
+    "checklist_c_mean": 4.0,
+    "llm_checklist_abc_mean": 3.875,
+    "content_preservation_core": 4,
+    "noise_suppression": 5,
+    "lay_expression_preservation": 3,
+    "state_update_fidelity": 3,
+    "temporality_preservation": 4,
+    "problem_evidence_linkage": 4,
+    "state_plan_separation": 4,
+    "section_organization_appropriateness": 4,
+    "overall_clinical_usability": 4,
+    "llm_checklist_meaningful_omission_yes": 1,
+    "llm_checklist_concerning_hallucination_yes": 1,
+    "gptf1_active_problems_symptoms_precision": 0.0,
+    "gptf1_active_problems_symptoms_recall": 0.0,
+    "gptf1_active_problems_symptoms_f1": 0.0,
+    "gptf1_active_problems_symptoms_pred_count": 0,
+    "gptf1_active_problems_symptoms_ref_count": 0,
+    "gptf1_negated_findings_precision": 0.0,
+    "gptf1_negated_findings_recall": 0.0,
+    "gptf1_negated_findings_f1": 0.0,
+    "gptf1_negated_findings_pred_count": 0,
+    "gptf1_negated_findings_ref_count": 0,
+    "gptf1_uncertain_findings_precision": 0.0,
+    "gptf1_uncertain_findings_recall": 0.0,
+    "gptf1_uncertain_findings_f1": 0.0,
+    "gptf1_uncertain_findings_pred_count": 0,
+    "gptf1_uncertain_findings_ref_count": 0,
+    "gptf1_medication_treatment_precision": 0.0,
+    "gptf1_medication_treatment_recall": 0.0,
+    "gptf1_medication_treatment_f1": 0.0,
+    "gptf1_medication_treatment_pred_count": 0,
+    "gptf1_medication_treatment_ref_count": 0,
+    "gptf1_plan_followup_precision": 0.0,
+    "gptf1_plan_followup_recall": 0.0,
+    "gptf1_plan_followup_f1": 0.0,
+    "gptf1_plan_followup_pred_count": 0,
+    "gptf1_plan_followup_ref_count": 0,
+    "nair_pred_concept_count": 35,
+    "nair_ref_concept_count": 35,
+    "nair_precision_match_count": 26,
+    "nair_recall_match_count": 21,
+    "semantic_cap_precision_supported_count": 0,
+    "semantic_cap_precision_partial_count": 0,
+    "semantic_cap_precision_denominator": 0,
+    "semantic_cap_recall_supported_count": 14,
+    "semantic_cap_recall_partial_count": 6,
+    "semantic_cap_recall_denominator": 27,
+    "semantic_cap_low_value_source_count": 0,
+    "semantic_cap_low_value_summary_count": 0,
+    "semantic_cap_missing_count": 5,
+    "semantic_cap_unsupported_count": 0,
+    "semantic_cap_contradicted_source_count": 2,
+    "semantic_cap_contradicted_summary_count": 0,
+    "pdsqi_useful": 3,
+    "pdsqi_organized": 4,
+    "pdsqi_comprehensible": 4,
+    "pdsqi_succinct": 4,
+    "pdsqi_synthesized": 3
+  }
+}

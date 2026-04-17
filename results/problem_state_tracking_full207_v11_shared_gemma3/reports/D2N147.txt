@@ -1,0 +1,85 @@
+Case: D2N147
+
+Problem List and Visit State Tracking
+
+Problem List
+- football | verification_status=unconfirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T3
+  Summary: The patient was previously a football player.
+  ClusterId: CL1
+  TemporalProfile: past
+  Updates:
+  - CAP9: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=past turns=T3 :: The patient was previously a football player.
+- shoulder pain | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T17,T19,T20,T25,T29,T45,T5,T57
+  Summary: The patient reports pain in the left shoulder.
+  ClusterId: CL2
+  TemporalProfile: current
+  Updates:
+  - CAP5: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T5 :: The patient reports pain in the right shoulder.
+  - CAP3: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T17,T19 :: The patient has shoulder pain.
+  - CAP4: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T20,T25 :: The patient is experiencing pain.
+  - CAP6: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T20 :: The patient reports pain in the left hand.
+  - CAP1: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T29,T29 :: The patient reports pain in the left shoulder.
+  - CAP12: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T29 :: The patient reports shoulder pain.
+  - CAP15: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T45 :: The patient reports pain.
+  - CAP16: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T57 :: The patient reports pain.
+- shoulder injury | verification_status=unconfirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T5
+  Summary: The patient sustained a shoulder injury.
+  ClusterId: CL3
+  TemporalProfile: past 4 days
+  Updates:
+  - CAP2: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=past 4 days turns=T5,T5 :: The patient sustained a shoulder injury.
+- numbness | verification_status=unconfirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T13
+  Summary: The patient denies numbness in their fingers.
+  ClusterId: CL4
+  TemporalProfile: past
+  Updates:
+  - CAP10: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=past turns=T13 :: The patient denies numbness in their fingers.
+- appendectomy | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T33
+  Summary: The patient had an appendectomy approximately three to four years ago.
+  ClusterId: CL6
+  TemporalProfile: 3-4 years ago
+  Updates:
+  - CAP18: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=3-4 years ago turns=T33 :: The patient had an appendectomy approximately three to four years ago.
+- headache | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T37
+  Summary: The patient reports a headache.
+  ClusterId: CL7
+  TemporalProfile: current
+  Updates:
+  - CAP13: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T37 :: The patient reports a headache.
+- fever | verification_status=refuted | clinical_status=historical | modalities=interview | speakers=patient | evidence=T37
+  Summary: The patient denies fever.
+  ClusterId: CL8
+  TemporalProfile: since this happened
+  Updates:
+  - CAP14: content_source=patient modality=interview verification_status=refuted clinical_status=historical temporality=since this happened turns=T37 :: The patient denies fever.
+- fracture | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=doctor | evidence=T50
+  Summary: The patient needs to have this fracture healed.
+  ClusterId: CL9
+  TemporalProfile: future
+  Updates:
+  - CAP7: content_source=doctor modality=interview verification_status=confirmed clinical_status=active temporality=future turns=T50 :: The patient needs to have this fracture healed.
+- flag football | verification_status=confirmed | clinical_status=planned | modalities=interview | speakers=doctor | evidence=T52
+  Summary: The doctor suggests flag football in the future.
+  ClusterId: CL10
+  TemporalProfile: future
+  Updates:
+  - CAP8: content_source=doctor modality=interview verification_status=confirmed clinical_status=planned temporality=future turns=T52 :: The doctor suggests flag football in the future.
+- avoid tackle football | verification_status=confirmed | clinical_status=planned | modalities=interview | speakers=doctor | evidence=T52
+  Summary: The doctor recommends avoiding tackle football.
+  ClusterId: CL11
+  TemporalProfile: future
+  Updates:
+  - CAP11: content_source=doctor modality=interview verification_status=confirmed clinical_status=planned temporality=future turns=T52 :: The doctor recommends avoiding tackle football.
+
+Medication Tracking
+- [MedicationState] tylenol | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T21
+  Summary: The patient is taking tylenol for the pain.
+  ClusterId: CL5
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient is taking tylenol for the pain. (T21)
+  Updates:
+  - CAP17: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T21 :: The patient is taking tylenol for the pain.
+
+Other Structured States
+- None

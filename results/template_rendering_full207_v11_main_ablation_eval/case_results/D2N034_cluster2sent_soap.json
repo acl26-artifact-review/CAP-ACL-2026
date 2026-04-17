@@ -1,0 +1,1477 @@
+{
+  "case_id": "D2N034",
+  "method": "cluster2sent",
+  "template": "soap",
+  "summary_text": "S:\nThe patient reports left shoulder pain for the past three weeks, exacerbated by reaching and overhead activities, and relieved by Tylenol. He denies numbness or tingling in his arm or fingers. He has not previously experienced shoulder pain. He has not tried physical therapy before. He has not used ice packs.\n\nO:\nPhysical exam reveals limited active and passive range of motion in the left shoulder with tenderness to palpation. Capillary refill is less than three seconds in the left arm. Neurological exam is intact. X-ray of the shoulder is normal.\n\nA:\nThe patient's symptoms are most likely due to rotator cuff tendinopathy. There are no acute findings suggesting other causes of shoulder pain.\n\nP:\nI am referring the patient to physical therapy for approximately six to eight weeks. The patient can continue taking Tylenol as needed. I will consider a steroid injection if symptoms do not improve.",
+  "reference_summary": "CHIEF COMPLAINT\n\nLeft shoulder pain.\n\nHISTORY OF PRESENT ILLNESS\n\nAlan Mitchell is a pleasant 69-year-old male who presents to the clinic today for the evaluation of left shoulder pain. The onset of his pain began 3 weeks ago, without any improvement. He denies any specific injury; however, he has been renovating his basement and putting in a new ceiling. He does not recall hitting or falling onto the left shoulder. The patient states he is very active and has experienced left shoulder pain before that usually resolves with Tylenol.\n\nThe patient reports significant pain with reaching, lifting, and overhead activities. The pain is constant. He states the pain is primarily located in the left shoulder and denies it radiates down into the left arm. The patient also reports difficulty sleeping secondary to the pain. He denies any numbness or tingling in his left arm or fingers. He has been taking Tylenol for pain, which provides partial relief. He initially iced his shoulder but has not iced it recently. The patient denies he has done any physical therapy.\n\nREVIEW OF SYSTEMS\n\nMusculoskeletal: Reports left shoulder pain. Neurological: Denies numbness or tingling.\n\nVITALS\n\nAll vital signs are within the normal limits.\n\nPHYSICAL EXAM\n\nMSK: Examination of the left shoulder: Limited active and passive ROM. Tenderness over the greater tuberosity of the humerus. No tenderness at the sternoclavicular or AC joints. Good hand grip. Neurovascularly intact distally. Capillary refill is less than 3 seconds. Sensation is intact to light touch distally.\n\nRESULTS\n\nX-rays of the left shoulder were obtained and reviewed today. These are normal and reveal no fracture or bony abnormalities.\n\nASSESSMENT\n\nLeft shoulder pain, likely rotator cuff tendinopathy.\n\nPLAN\n\nAfter reviewing the patient's examination and radiographic findings today, I have had a lengthy discussion with him regarding his current symptoms. I have explained that his x-rays did not reveal any signs of a fracture. I have recommended that we obtain an MRI of the left shoulder to evaluate for possible rotator cuff tendinopathy. The patient was provided with a referral to formal physical therapy. He will engage in a 6-to-8-week course in order to strengthen his left shoulder. I have also advised him to take Tylenol as needed for pain. If his symptoms do not improve, we may consider a steroid injection to the left shoulder.\n\nINSTRUCTIONS\n\nThe patient will follow up with me once the MRI results are available for review and further discussion.",
+  "source_cap": {
+    "atomic_propositions": [
+      {
+        "prop_id": "CAP1",
+        "cap_type": "Problem",
+        "canonical_concept": "shoulder injury",
+        "category": "Problem",
+        "speaker": "patient",
+        "status": "uncertain",
+        "visit_state": "historical",
+        "temporality": "past 3 weeks",
+        "proposition_text": "The patient has a history of shoulder pain."
+      },
+      {
+        "prop_id": "CAP2",
+        "cap_type": "Symptom",
+        "canonical_concept": "shoulder pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports left shoulder pain."
+      },
+      {
+        "prop_id": "CAP3",
+        "cap_type": "Problem",
+        "canonical_concept": "rotator cuff tendinopathy",
+        "category": "Problem",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "causal"
+        ],
+        "proposition_text": "The doctor assesses the patient's symptoms as likely due to a rotator cuff tendinopathy."
+      },
+      {
+        "prop_id": "CAP4",
+        "cap_type": "Problem",
+        "canonical_concept": "basement work",
+        "category": "Problem",
+        "speaker": "patient",
+        "status": "uncertain",
+        "visit_state": "historical",
+        "temporality": "recent",
+        "proposition_text": "The patient has been doing work in the basement."
+      },
+      {
+        "prop_id": "CAP5",
+        "cap_type": "Symptom",
+        "canonical_concept": "left hand pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports pain in the left hand."
+      },
+      {
+        "prop_id": "CAP6",
+        "cap_type": "Symptom",
+        "canonical_concept": "shoulder pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports pain in their shoulder."
+      },
+      {
+        "prop_id": "CAP7",
+        "cap_type": "Symptom",
+        "canonical_concept": "pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient describes the pain as constant."
+      },
+      {
+        "prop_id": "CAP8",
+        "cap_type": "Problem",
+        "canonical_concept": "shoulder pain",
+        "category": "Problem",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient reports shoulder pain."
+      },
+      {
+        "prop_id": "CAP9",
+        "cap_type": "Order",
+        "canonical_concept": "steroid injection",
+        "category": "Order",
+        "speaker": "patient",
+        "status": "uncertain",
+        "visit_state": "planned",
+        "temporality": "if symptoms do not improve",
+        "proposition_text": "The doctor may consider a steroid injection of the shoulder if the patient's symptoms do not improve."
+      },
+      {
+        "prop_id": "CAP10",
+        "cap_type": "Order",
+        "canonical_concept": "physical therapy",
+        "category": "Order",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "planned",
+        "temporality": "6 to 8 weeks",
+        "proposition_text": "The doctor is referring the patient to physical therapy for approximately six to eight weeks."
+      },
+      {
+        "prop_id": "CAP11",
+        "cap_type": "ExamFinding",
+        "canonical_concept": "tenderness",
+        "category": "ExamFinding",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient has tenderness of the greater tuberosity of the humerus."
+      },
+      {
+        "prop_id": "CAP12",
+        "cap_type": "ExamFinding",
+        "canonical_concept": "no tenderness",
+        "category": "ExamFinding",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient has no tenderness at the sternoclavicular or acromioclavicular joints."
+      },
+      {
+        "prop_id": "CAP13",
+        "cap_type": "ExamFinding",
+        "canonical_concept": "limited active and passive range of motion",
+        "category": "ExamFinding",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient has limited active and passive range of motion."
+      },
+      {
+        "prop_id": "CAP14",
+        "cap_type": "Order",
+        "canonical_concept": "MRI",
+        "category": "Order",
+        "speaker": "doctor",
+        "predicate": "orders",
+        "status": "uncertain",
+        "visit_state": "planned",
+        "temporality": "future",
+        "claim_type_tags": [
+          "plan"
+        ],
+        "proposition_text": "The doctor orders an MRI of the left shoulder."
+      },
+      {
+        "prop_id": "CAP15",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "tylenol",
+        "category": "MedicationStatement",
+        "speaker": "patient",
+        "status": "uncertain",
+        "visit_state": "planned",
+        "temporality": "future",
+        "proposition_text": "The doctor does not prescribe anything else for the pain, as it's working pretty good."
+      },
+      {
+        "prop_id": "CAP16",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "tylenol",
+        "category": "MedicationStatement",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The doctor does not need to prescribe anything else for the pain."
+      },
+      {
+        "prop_id": "CAP17",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "tylenol",
+        "category": "MedicationStatement",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient has not taken anything for the pain recently."
+      },
+      {
+        "prop_id": "CAP18",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "tylenol",
+        "category": "MedicationStatement",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient has not taken anything for the pain."
+      },
+      {
+        "prop_id": "CAP19",
+        "cap_type": "Counseling",
+        "canonical_concept": "physical therapy",
+        "category": "Counseling",
+        "speaker": "patient",
+        "predicate": "recommends",
+        "status": "uncertain",
+        "visit_state": "planned",
+        "temporality": "future",
+        "claim_type_tags": [
+          "plan"
+        ],
+        "proposition_text": "The doctor recommends physical therapy for approximately six to eight weeks."
+      }
+    ],
+    "filtered_nonverifiable_units": []
+  },
+  "event_plan": null,
+  "summary_cap": {
+    "atomic_propositions": [
+      {
+        "prop_id": "P1",
+        "cap_type": "Symptom",
+        "canonical_concept": "pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports left shoulder pain"
+      },
+      {
+        "prop_id": "P2",
+        "cap_type": "History",
+        "canonical_concept": "pain",
+        "category": "History",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "past",
+        "claim_type_tags": [
+          "history"
+        ],
+        "proposition_text": "The patient reports left shoulder pain for the past three weeks"
+      },
+      {
+        "prop_id": "P3",
+        "cap_type": "Symptom",
+        "canonical_concept": "pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports left shoulder pain exacerbated by reaching and overhead activities"
+      },
+      {
+        "prop_id": "P4",
+        "cap_type": "Symptom",
+        "canonical_concept": "pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports left shoulder pain relieved by Tylenol"
+      },
+      {
+        "prop_id": "P5",
+        "cap_type": "Denial",
+        "canonical_concept": "sensory change",
+        "category": "Denial",
+        "speaker": "patient",
+        "predicate": "denies",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "safety_relevant"
+        ],
+        "proposition_text": "The patient denies numbness or tingling in his arm or fingers"
+      },
+      {
+        "prop_id": "P6",
+        "cap_type": "History",
+        "canonical_concept": "pain",
+        "category": "History",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "historical",
+        "temporality": "past",
+        "claim_type_tags": [
+          "history"
+        ],
+        "proposition_text": "The patient has not previously experienced shoulder pain"
+      },
+      {
+        "prop_id": "P7",
+        "cap_type": "Denial",
+        "canonical_concept": "not tried physical therapy",
+        "category": "Denial",
+        "speaker": "patient",
+        "predicate": "denies",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "medication"
+        ],
+        "proposition_text": "The patient has not tried physical therapy before"
+      },
+      {
+        "prop_id": "P8",
+        "cap_type": "Denial",
+        "canonical_concept": "not used ice packs",
+        "category": "Denial",
+        "speaker": "patient",
+        "predicate": "denies",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "medication"
+        ],
+        "proposition_text": "The patient has not used ice packs"
+      },
+      {
+        "prop_id": "P9",
+        "cap_type": "ExamFinding",
+        "canonical_concept": "physical exam reveals limited",
+        "category": "ExamFinding",
+        "speaker": "clinician",
+        "predicate": "reveals",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "exam"
+        ],
+        "proposition_text": "Physical exam reveals limited active and passive range of motion in the left shoulder"
+      },
+      {
+        "prop_id": "P10",
+        "cap_type": "Finding",
+        "canonical_concept": "physical exam reveals tenderness",
+        "category": "Finding",
+        "speaker": "clinician",
+        "predicate": "reveals",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "exam"
+        ],
+        "proposition_text": "Physical exam reveals tenderness to palpation in the left shoulder"
+      },
+      {
+        "prop_id": "P11",
+        "cap_type": "Finding",
+        "canonical_concept": "capillary refill less than",
+        "category": "Finding",
+        "speaker": "clinician",
+        "predicate": "reveals",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "exam"
+        ],
+        "proposition_text": "Capillary refill is less than three seconds in the left arm"
+      },
+      {
+        "prop_id": "P12",
+        "cap_type": "ExamFinding",
+        "canonical_concept": "neurological exam intact",
+        "category": "ExamFinding",
+        "speaker": "clinician",
+        "predicate": "reveals",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "exam"
+        ],
+        "proposition_text": "Neurological exam is intact"
+      },
+      {
+        "prop_id": "P13",
+        "cap_type": "TestResult",
+        "canonical_concept": "x-ray shoulder normal",
+        "category": "TestResult",
+        "speaker": "test_result",
+        "predicate": "shows",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "diagnostic"
+        ],
+        "proposition_text": "X-ray of the shoulder is normal"
+      }
+    ],
+    "filtered_nonverifiable_units": [],
+    "runtime_seconds": 21.692
+  },
+  "cap_alignment": {
+    "cap_precision": 0.46153846153846156,
+    "cap_recall": 0.3157894736842105,
+    "cap_f1": 0.37499999999999994,
+    "matched_count": 6,
+    "summary_prop_count": 13,
+    "source_prop_count": 19,
+    "matched_pairs": [
+      {
+        "score": 1.0,
+        "summary_prop_id": "P6",
+        "source_prop_id": "CAP7",
+        "summary_text": "The patient has not previously experienced shoulder pain",
+        "source_text": "The patient describes the pain as constant."
+      },
+      {
+        "score": 1.0,
+        "summary_prop_id": "P1",
+        "source_prop_id": "CAP2",
+        "summary_text": "The patient reports left shoulder pain",
+        "source_text": "The patient reports left shoulder pain."
+      },
+      {
+        "score": 0.8946,
+        "summary_prop_id": "P4",
+        "source_prop_id": "CAP6",
+        "summary_text": "The patient reports left shoulder pain relieved by Tylenol",
+        "source_text": "The patient reports pain in their shoulder."
+      },
+      {
+        "score": 0.818,
+        "summary_prop_id": "P3",
+        "source_prop_id": "CAP8",
+        "summary_text": "The patient reports left shoulder pain exacerbated by reaching and overhead activities",
+        "source_text": "The patient reports shoulder pain."
+      },
+      {
+        "score": 0.6992,
+        "summary_prop_id": "P2",
+        "source_prop_id": "CAP5",
+        "summary_text": "The patient reports left shoulder pain for the past three weeks",
+        "source_text": "The patient reports pain in the left hand."
+      },
+      {
+        "score": 0.6667,
+        "summary_prop_id": "P7",
+        "source_prop_id": "CAP10",
+        "summary_text": "The patient has not tried physical therapy before",
+        "source_text": "The doctor is referring the patient to physical therapy for approximately six to eight weeks."
+      }
+    ],
+    "unsupported_summary_props": [
+      {
+        "prop_id": "P5",
+        "cap_type": "Denial",
+        "canonical_concept": "sensory change",
+        "category": "Denial",
+        "speaker": "patient",
+        "predicate": "denies",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "safety_relevant"
+        ],
+        "proposition_text": "The patient denies numbness or tingling in his arm or fingers"
+      },
+      {
+        "prop_id": "P8",
+        "cap_type": "Denial",
+        "canonical_concept": "not used ice packs",
+        "category": "Denial",
+        "speaker": "patient",
+        "predicate": "denies",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "medication"
+        ],
+        "proposition_text": "The patient has not used ice packs"
+      },
+      {
+        "prop_id": "P9",
+        "cap_type": "ExamFinding",
+        "canonical_concept": "physical exam reveals limited",
+        "category": "ExamFinding",
+        "speaker": "clinician",
+        "predicate": "reveals",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "exam"
+        ],
+        "proposition_text": "Physical exam reveals limited active and passive range of motion in the left shoulder"
+      },
+      {
+        "prop_id": "P10",
+        "cap_type": "Finding",
+        "canonical_concept": "physical exam reveals tenderness",
+        "category": "Finding",
+        "speaker": "clinician",
+        "predicate": "reveals",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "exam"
+        ],
+        "proposition_text": "Physical exam reveals tenderness to palpation in the left shoulder"
+      },
+      {
+        "prop_id": "P11",
+        "cap_type": "Finding",
+        "canonical_concept": "capillary refill less than",
+        "category": "Finding",
+        "speaker": "clinician",
+        "predicate": "reveals",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "exam"
+        ],
+        "proposition_text": "Capillary refill is less than three seconds in the left arm"
+      },
+      {
+        "prop_id": "P12",
+        "cap_type": "ExamFinding",
+        "canonical_concept": "neurological exam intact",
+        "category": "ExamFinding",
+        "speaker": "clinician",
+        "predicate": "reveals",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "exam"
+        ],
+        "proposition_text": "Neurological exam is intact"
+      },
+      {
+        "prop_id": "P13",
+        "cap_type": "TestResult",
+        "canonical_concept": "x-ray shoulder normal",
+        "category": "TestResult",
+        "speaker": "test_result",
+        "predicate": "shows",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "diagnostic"
+        ],
+        "proposition_text": "X-ray of the shoulder is normal"
+      }
+    ],
+    "missing_source_props": [
+      {
+        "prop_id": "CAP1",
+        "cap_type": "Problem",
+        "canonical_concept": "shoulder injury",
+        "category": "Problem",
+        "speaker": "patient",
+        "status": "uncertain",
+        "visit_state": "historical",
+        "temporality": "past 3 weeks",
+        "proposition_text": "The patient has a history of shoulder pain."
+      },
+      {
+        "prop_id": "CAP3",
+        "cap_type": "Problem",
+        "canonical_concept": "rotator cuff tendinopathy",
+        "category": "Problem",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "causal"
+        ],
+        "proposition_text": "The doctor assesses the patient's symptoms as likely due to a rotator cuff tendinopathy."
+      },
+      {
+        "prop_id": "CAP4",
+        "cap_type": "Problem",
+        "canonical_concept": "basement work",
+        "category": "Problem",
+        "speaker": "patient",
+        "status": "uncertain",
+        "visit_state": "historical",
+        "temporality": "recent",
+        "proposition_text": "The patient has been doing work in the basement."
+      },
+      {
+        "prop_id": "CAP9",
+        "cap_type": "Order",
+        "canonical_concept": "steroid injection",
+        "category": "Order",
+        "speaker": "patient",
+        "status": "uncertain",
+        "visit_state": "planned",
+        "temporality": "if symptoms do not improve",
+        "proposition_text": "The doctor may consider a steroid injection of the shoulder if the patient's symptoms do not improve."
+      },
+      {
+        "prop_id": "CAP11",
+        "cap_type": "ExamFinding",
+        "canonical_concept": "tenderness",
+        "category": "ExamFinding",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient has tenderness of the greater tuberosity of the humerus."
+      },
+      {
+        "prop_id": "CAP12",
+        "cap_type": "ExamFinding",
+        "canonical_concept": "no tenderness",
+        "category": "ExamFinding",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient has no tenderness at the sternoclavicular or acromioclavicular joints."
+      },
+      {
+        "prop_id": "CAP13",
+        "cap_type": "ExamFinding",
+        "canonical_concept": "limited active and passive range of motion",
+        "category": "ExamFinding",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient has limited active and passive range of motion."
+      },
+      {
+        "prop_id": "CAP14",
+        "cap_type": "Order",
+        "canonical_concept": "MRI",
+        "category": "Order",
+        "speaker": "doctor",
+        "predicate": "orders",
+        "status": "uncertain",
+        "visit_state": "planned",
+        "temporality": "future",
+        "claim_type_tags": [
+          "plan"
+        ],
+        "proposition_text": "The doctor orders an MRI of the left shoulder."
+      },
+      {
+        "prop_id": "CAP15",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "tylenol",
+        "category": "MedicationStatement",
+        "speaker": "patient",
+        "status": "uncertain",
+        "visit_state": "planned",
+        "temporality": "future",
+        "proposition_text": "The doctor does not prescribe anything else for the pain, as it's working pretty good."
+      },
+      {
+        "prop_id": "CAP16",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "tylenol",
+        "category": "MedicationStatement",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The doctor does not need to prescribe anything else for the pain."
+      },
+      {
+        "prop_id": "CAP17",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "tylenol",
+        "category": "MedicationStatement",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient has not taken anything for the pain recently."
+      },
+      {
+        "prop_id": "CAP18",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "tylenol",
+        "category": "MedicationStatement",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient has not taken anything for the pain."
+      },
+      {
+        "prop_id": "CAP19",
+        "cap_type": "Counseling",
+        "canonical_concept": "physical therapy",
+        "category": "Counseling",
+        "speaker": "patient",
+        "predicate": "recommends",
+        "status": "uncertain",
+        "visit_state": "planned",
+        "temporality": "future",
+        "claim_type_tags": [
+          "plan"
+        ],
+        "proposition_text": "The doctor recommends physical therapy for approximately six to eight weeks."
+      }
+    ]
+  },
+  "reference_gpt_f1_items": {
+    "active_problems_symptoms": [],
+    "negated_findings": [],
+    "uncertain_findings": [],
+    "medication_treatment": [],
+    "plan_followup": [],
+    "_chunk_count": [
+      "2"
+    ]
+  },
+  "summary_gpt_f1_items": {
+    "active_problems_symptoms": [
+      "left shoulder pain",
+      "limited active and passive range of motion in the left shoulder",
+      "tenderness to palpation",
+      "less than three seconds in the left arm",
+      "rotator cuff tendinopathy"
+    ],
+    "negated_findings": [
+      "numbness or tingling in his arm or fingers",
+      "previously experienced shoulder pain",
+      "has not tried physical therapy before",
+      "has not used ice packs"
+    ],
+    "uncertain_findings": [],
+    "medication_treatment": [
+      "Tylenol as needed",
+      "steroid injection"
+    ],
+    "plan_followup": [
+      "referring the patient to physical therapy for approximately six to eight weeks"
+    ],
+    "_chunk_count": [
+      "1"
+    ]
+  },
+  "gpt_f1_alignment": {
+    "by_category": {
+      "active_problems_symptoms": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "matched_count": 0,
+        "pred_count": 5,
+        "ref_count": 0,
+        "matches": [],
+        "unsupported_pred_items": [
+          "left shoulder pain",
+          "limited active and passive range of motion in the left shoulder",
+          "tenderness to palpation",
+          "less than three seconds in the left arm",
+          "rotator cuff tendinopathy"
+        ],
+        "missing_ref_items": []
+      },
+      "negated_findings": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "matched_count": 0,
+        "pred_count": 4,
+        "ref_count": 0,
+        "matches": [],
+        "unsupported_pred_items": [
+          "numbness or tingling in his arm or fingers",
+          "previously experienced shoulder pain",
+          "has not tried physical therapy before",
+          "has not used ice packs"
+        ],
+        "missing_ref_items": []
+      },
+      "uncertain_findings": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "matched_count": 0,
+        "pred_count": 0,
+        "ref_count": 0,
+        "matches": [],
+        "unsupported_pred_items": [],
+        "missing_ref_items": []
+      },
+      "medication_treatment": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "matched_count": 0,
+        "pred_count": 2,
+        "ref_count": 0,
+        "matches": [],
+        "unsupported_pred_items": [
+          "Tylenol as needed",
+          "steroid injection"
+        ],
+        "missing_ref_items": []
+      },
+      "plan_followup": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "matched_count": 0,
+        "pred_count": 1,
+        "ref_count": 0,
+        "matches": [],
+        "unsupported_pred_items": [
+          "referring the patient to physical therapy for approximately six to eight weeks"
+        ],
+        "missing_ref_items": []
+      }
+    }
+  },
+  "reference_nair_concepts": {
+    "sections": [
+      {
+        "heading": "Clinical Note",
+        "section_value": "CHIEF COMPLAINT\nLeft shoulder pain.\nHISTORY OF PRESENT ILLNESS\nAlan Mitchell is a pleasant 69-year-old male who presents to the clinic today for the evaluation of left shoulder pain. The onset of his pain began 3 weeks ago, without any improvement. He denies any specific injury; however, he has been renovating his basement and putting in a new ceiling. He does not recall hitting or falling onto the left shoulder. The patient states he is very active and has experienced left shoulder pain before that usually resolves with Tylenol.\nThe patient reports significant pain with reaching, lifting, and overhead activities. The pain is constant. He states the pain is primarily located in the left shoulder and denies it radiates down into the left arm. The patient also reports difficulty sleeping secondary to the pain. He denies any numbness or tingling in his left arm or fingers. He has been taking Tylenol for pain, which provides partial relief. He initially iced his shoulder but has not iced it recently. The patient denies he has done any physical therapy.\nREVIEW OF SYSTEMS\nMusculoskeletal: Reports left shoulder pain. Neurological: Denies numbness or tingling.\nVITALS\nAll vital signs are within the normal limits.\nPHYSICAL EXAM",
+        "medical_concepts": [
+          "left shoulder pain",
+          "shoulder pain",
+          "difficulty sleeping",
+          "numbness",
+          "tingling",
+          "Tylenol",
+          "physical therapy",
+          "vital signs"
+        ]
+      },
+      {
+        "heading": "Clinical Note",
+        "section_value": "MSK: Examination of the left shoulder: Limited active and passive ROM. Tenderness over the greater tuberosity of the humerus. No tenderness at the sternoclavicular or AC joints. Good hand grip. Neurovascularly intact distally. Capillary refill is less than 3 seconds. Sensation is intact to light touch distally.\nRESULTS\nX-rays of the left shoulder were obtained and reviewed today. These are normal and reveal no fracture or bony abnormalities.\nASSESSMENT\nLeft shoulder pain, likely rotator cuff tendinopathy.\nPLAN\nAfter reviewing the patient's examination and radiographic findings today, I have had a lengthy discussion with him regarding his current symptoms. I have explained that his x-rays did not reveal any signs of a fracture. I have recommended that we obtain an MRI of the left shoulder to evaluate for possible rotator cuff tendinopathy. The patient was provided with a referral to formal physical therapy. He will engage in a 6-to-8-week course in order to strengthen his left shoulder. I have also advised him to take Tylenol as needed for pain. If his symptoms do not improve, we may consider a steroid injection to the left shoulder.\nINSTRUCTIONS\nThe patient will follow up with me once the MRI results are available for review and further discussion.",
+        "medical_concepts": [
+          "limited range of motion",
+          "tenderness over the greater tuberosity of the humerus",
+          "sternoclavicular joint tenderness",
+          "acromioclavicular joint tenderness",
+          "hand grip strength",
+          "neurovascularly intact distally",
+          "capillary refill",
+          "sensation to light touch",
+          "x-ray of the left shoulder",
+          "fracture",
+          "bony abnormalities",
+          "left shoulder pain",
+          "rotator cuff tendinopathy",
+          "MRI of the left shoulder",
+          "physical therapy",
+          "Tylenol",
+          "steroid injection"
+        ]
+      }
+    ],
+    "medical_concepts": [
+      "left shoulder pain",
+      "shoulder pain",
+      "difficulty sleeping",
+      "numbness",
+      "tingling",
+      "Tylenol",
+      "physical therapy",
+      "vital signs",
+      "limited range of motion",
+      "tenderness over the greater tuberosity of the humerus",
+      "sternoclavicular joint tenderness",
+      "acromioclavicular joint tenderness",
+      "hand grip strength",
+      "neurovascularly intact distally",
+      "capillary refill",
+      "sensation to light touch",
+      "x-ray of the left shoulder",
+      "fracture",
+      "bony abnormalities",
+      "rotator cuff tendinopathy",
+      "MRI of the left shoulder",
+      "steroid injection"
+    ],
+    "section_count": 2
+  },
+  "summary_nair_concepts": {
+    "sections": [
+      {
+        "heading": "S",
+        "section_value": "The patient reports left shoulder pain for the past three weeks, exacerbated by reaching and overhead activities, and relieved by Tylenol. He denies numbness or tingling in his arm or fingers. He has not previously experienced shoulder pain. He has not tried physical therapy before. He has not used ice packs.",
+        "medical_concepts": [
+          "left shoulder pain",
+          "shoulder pain",
+          "numbness",
+          "tingling",
+          "physical therapy",
+          "ice packs",
+          "Tylenol"
+        ]
+      },
+      {
+        "heading": "O",
+        "section_value": "Physical exam reveals limited active and passive range of motion in the left shoulder with tenderness to palpation. Capillary refill is less than three seconds in the left arm. Neurological exam is intact. X-ray of the shoulder is normal.",
+        "medical_concepts": [
+          "limited range of motion of left shoulder",
+          "tenderness to palpation",
+          "capillary refill",
+          "neurological exam",
+          "X-ray of the shoulder"
+        ]
+      },
+      {
+        "heading": "A",
+        "section_value": "The patient's symptoms are most likely due to rotator cuff tendinopathy. There are no acute findings suggesting other causes of shoulder pain.",
+        "medical_concepts": [
+          "rotator cuff tendinopathy",
+          "shoulder pain"
+        ]
+      },
+      {
+        "heading": "P",
+        "section_value": "I am referring the patient to physical therapy for approximately six to eight weeks. The patient can continue taking Tylenol as needed. I will consider a steroid injection if symptoms do not improve.",
+        "medical_concepts": [
+          "physical therapy",
+          "Tylenol",
+          "steroid injection"
+        ]
+      }
+    ],
+    "medical_concepts": [
+      "left shoulder pain",
+      "shoulder pain",
+      "numbness",
+      "tingling",
+      "physical therapy",
+      "ice packs",
+      "Tylenol",
+      "limited range of motion of left shoulder",
+      "tenderness to palpation",
+      "capillary refill",
+      "neurological exam",
+      "X-ray of the shoulder",
+      "rotator cuff tendinopathy",
+      "steroid injection"
+    ],
+    "section_count": 4
+  },
+  "nair_alignment": {
+    "pred_concepts": [
+      "left shoulder pain",
+      "shoulder pain",
+      "numbness",
+      "tingling",
+      "physical therapy",
+      "ice packs",
+      "Tylenol",
+      "limited range of motion of left shoulder",
+      "tenderness to palpation",
+      "capillary refill",
+      "neurological exam",
+      "X-ray of the shoulder",
+      "rotator cuff tendinopathy",
+      "steroid injection"
+    ],
+    "ref_concepts": [
+      "left shoulder pain",
+      "shoulder pain",
+      "difficulty sleeping",
+      "numbness",
+      "tingling",
+      "Tylenol",
+      "physical therapy",
+      "vital signs",
+      "limited range of motion",
+      "tenderness over the greater tuberosity of the humerus",
+      "sternoclavicular joint tenderness",
+      "acromioclavicular joint tenderness",
+      "hand grip strength",
+      "neurovascularly intact distally",
+      "capillary refill",
+      "sensation to light touch",
+      "x-ray of the left shoulder",
+      "fracture",
+      "bony abnormalities",
+      "rotator cuff tendinopathy",
+      "MRI of the left shoulder",
+      "steroid injection"
+    ],
+    "precision_alignment": {
+      "found_b": [
+        "left shoulder pain",
+        "shoulder pain",
+        "numbness",
+        "tingling",
+        "physical therapy",
+        "Tylenol",
+        "limited range of motion of left shoulder",
+        "tenderness to palpation",
+        "capillary refill",
+        "X-ray of the shoulder",
+        "rotator cuff tendinopathy",
+        "steroid injection"
+      ],
+      "not_found_b": [
+        "ice packs",
+        "neurological exam"
+      ],
+      "chunk_count": 1,
+      "chunk_results": [
+        {
+          "found_b": [
+            "left shoulder pain",
+            "shoulder pain",
+            "numbness",
+            "tingling",
+            "physical therapy",
+            "Tylenol",
+            "limited range of motion of left shoulder",
+            "tenderness to palpation",
+            "capillary refill",
+            "X-ray of the shoulder",
+            "rotator cuff tendinopathy",
+            "steroid injection"
+          ],
+          "not_found_b": [
+            "ice packs",
+            "neurological exam"
+          ]
+        }
+      ]
+    },
+    "recall_alignment": {
+      "found_b": [
+        "left shoulder pain",
+        "shoulder pain",
+        "numbness",
+        "tingling",
+        "Tylenol",
+        "physical therapy",
+        "limited range of motion",
+        "capillary refill",
+        "x-ray of the left shoulder",
+        "rotator cuff tendinopathy",
+        "steroid injection"
+      ],
+      "not_found_b": [
+        "difficulty sleeping",
+        "vital signs",
+        "tenderness over the greater tuberosity of the humerus",
+        "sternoclavicular joint tenderness",
+        "acromioclavicular joint tenderness",
+        "hand grip strength",
+        "neurovascularly intact distally",
+        "sensation to light touch",
+        "fracture",
+        "bony abnormalities",
+        "MRI of the left shoulder"
+      ],
+      "chunk_count": 1,
+      "chunk_results": [
+        {
+          "found_b": [
+            "left shoulder pain",
+            "shoulder pain",
+            "numbness",
+            "tingling",
+            "Tylenol",
+            "physical therapy",
+            "limited range of motion",
+            "capillary refill",
+            "x-ray of the left shoulder",
+            "rotator cuff tendinopathy",
+            "steroid injection"
+          ],
+          "not_found_b": [
+            "difficulty sleeping",
+            "vital signs",
+            "tenderness over the greater tuberosity of the humerus",
+            "sternoclavicular joint tenderness",
+            "acromioclavicular joint tenderness",
+            "hand grip strength",
+            "neurovascularly intact distally",
+            "sensation to light touch",
+            "fracture",
+            "bony abnormalities",
+            "MRI of the left shoulder"
+          ]
+        }
+      ]
+    }
+  },
+  "semantic_cap_audit": {
+    "source_cap_recall": [
+      {
+        "cap_id": "P1",
+        "judgment": "contradicted",
+        "reason": null
+      },
+      {
+        "cap_id": "P2",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P3",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P4",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P5",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P6",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P7",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P8",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P9",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P10",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P11",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P12",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P13",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P14",
+        "judgment": "missing",
+        "reason": null
+      },
+      {
+        "cap_id": "P15",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P16",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P1",
+        "judgment": "contradicted",
+        "reason": null
+      },
+      {
+        "cap_id": "P2",
+        "judgment": "contradicted",
+        "reason": null
+      },
+      {
+        "cap_id": "P3",
+        "judgment": "partial",
+        "reason": null
+      }
+    ],
+    "summary_cap_precision": [
+      {
+        "cap_id": "P1",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P2",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P3",
+        "judgment": "unsupported",
+        "reason": null
+      },
+      {
+        "cap_id": "P4",
+        "judgment": "unsupported",
+        "reason": null
+      },
+      {
+        "cap_id": "P5",
+        "judgment": "unsupported",
+        "reason": null
+      },
+      {
+        "cap_id": "P6",
+        "judgment": "contradicted",
+        "reason": null
+      },
+      {
+        "cap_id": "P7",
+        "judgment": "unsupported",
+        "reason": null
+      },
+      {
+        "cap_id": "P8",
+        "judgment": "unsupported",
+        "reason": null
+      },
+      {
+        "cap_id": "P9",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P10",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P11",
+        "judgment": "unsupported",
+        "reason": null
+      },
+      {
+        "cap_id": "P12",
+        "judgment": "unsupported",
+        "reason": null
+      },
+      {
+        "cap_id": "P13",
+        "judgment": "unsupported",
+        "reason": null
+      }
+    ],
+    "metrics": {
+      "semantic_cap_precision": 0.2308,
+      "semantic_cap_recall": 0.5263,
+      "semantic_cap_f1": 0.3209,
+      "semantic_cap_precision_supported_count": 2,
+      "semantic_cap_precision_partial_count": 2,
+      "semantic_cap_precision_denominator": 13,
+      "semantic_cap_recall_supported_count": 8,
+      "semantic_cap_recall_partial_count": 4,
+      "semantic_cap_recall_denominator": 19,
+      "semantic_cap_low_value_source_count": 0,
+      "semantic_cap_low_value_summary_count": 0,
+      "semantic_cap_missing_count": 4,
+      "semantic_cap_unsupported_count": 8,
+      "semantic_cap_contradicted_source_count": 3,
+      "semantic_cap_contradicted_summary_count": 1
+    }
+  },
+  "safety_judgment": null,
+  "section_judgment": {
+    "section_miscategorizations": [],
+    "summary_statistics": {
+      "section_appropriateness_score": 1.0,
+      "section_miscategorization_count": 0,
+      "major_section_miscategorization_count": 0
+    }
+  },
+  "pdsqi_judgment": {
+    "citation_applicable": 0,
+    "citation": 0,
+    "accurate": 3,
+    "thorough": 3,
+    "useful": 3,
+    "organized": 5,
+    "comprehensible": 5,
+    "succinct": 5,
+    "abstraction": 1,
+    "synthesized": 4,
+    "voice_summ": 0,
+    "voice_note": 0,
+    "pdsqi_core_mean": 4.0
+  },
+  "llm_checklist_judgment": {
+    "content_preservation_core": 4,
+    "noise_suppression": 5,
+    "lay_expression_preservation": 3,
+    "state_update_fidelity": 3,
+    "temporality_preservation": 4,
+    "problem_evidence_linkage": 4,
+    "state_plan_separation": 4,
+    "section_organization_appropriateness": 4,
+    "overall_clinical_usability": 4,
+    "clinically_meaningful_omission": "Yes",
+    "clinically_concerning_hallucination": "Yes",
+    "checklist_a_mean": 4.0,
+    "checklist_b_mean": 3.5,
+    "checklist_c_mean": 4.0,
+    "llm_checklist_abc_mean": 3.875,
+    "llm_checklist_mean_no_usability": 3.875,
+    "llm_checklist_total_score": 35,
+    "llm_checklist_mean": 3.8889,
+    "llm_checklist_meaningful_omission_yes": 1,
+    "llm_checklist_concerning_hallucination_yes": 1
+  },
+  "metrics": {
+    "case_id": "D2N034",
+    "method": "cluster2sent",
+    "template": "soap",
+    "source_cap_count": 19,
+    "event_plan_count": null,
+    "summary_cap_count": 13,
+    "cap_matched_count": 6,
+    "cap_precision": 0.4615,
+    "cap_recall": 0.3158,
+    "cap_f1": 0.375,
+    "unsupported_summary_cap_count": 7,
+    "missing_source_cap_count": 13,
+    "summary_runtime_seconds": null,
+    "summary_cap_runtime_seconds": 21.692,
+    "event_plan_runtime_seconds": null,
+    "rouge_l_f1_vs_reference": 0.2593,
+    "token_f1_vs_reference": 0.4085,
+    "gptf1_macro_f1": 0.0,
+    "nair_gpt_precision": 0.8571,
+    "nair_gpt_recall": 0.5,
+    "nair_gpt_f1": 0.6316,
+    "semantic_cap_precision": 0.2308,
+    "semantic_cap_recall": 0.5263,
+    "semantic_cap_f1": 0.3209,
+    "hallucination_count": null,
+    "major_hallucination_count": null,
+    "omission_count": null,
+    "major_omission_count": null,
+    "section_appropriateness_score": 1.0,
+    "section_miscategorization_count": 0,
+    "major_section_miscategorization_count": 0,
+    "pdsqi_core_mean": 4.0,
+    "pdsqi_accurate": 3,
+    "pdsqi_thorough": 3,
+    "llm_checklist_total_score": 35,
+    "llm_checklist_mean": 3.8889,
+    "llm_checklist_mean_no_usability": 3.875,
+    "checklist_a_mean": 4.0,
+    "checklist_b_mean": 3.5,
+    "checklist_c_mean": 4.0,
+    "llm_checklist_abc_mean": 3.875,
+    "content_preservation_core": 4,
+    "noise_suppression": 5,
+    "lay_expression_preservation": 3,
+    "state_update_fidelity": 3,
+    "temporality_preservation": 4,
+    "problem_evidence_linkage": 4,
+    "state_plan_separation": 4,
+    "section_organization_appropriateness": 4,
+    "overall_clinical_usability": 4,
+    "llm_checklist_meaningful_omission_yes": 1,
+    "llm_checklist_concerning_hallucination_yes": 1,
+    "gptf1_active_problems_symptoms_precision": 0.0,
+    "gptf1_active_problems_symptoms_recall": 0.0,
+    "gptf1_active_problems_symptoms_f1": 0.0,
+    "gptf1_active_problems_symptoms_pred_count": 5,
+    "gptf1_active_problems_symptoms_ref_count": 0,
+    "gptf1_negated_findings_precision": 0.0,
+    "gptf1_negated_findings_recall": 0.0,
+    "gptf1_negated_findings_f1": 0.0,
+    "gptf1_negated_findings_pred_count": 4,
+    "gptf1_negated_findings_ref_count": 0,
+    "gptf1_uncertain_findings_precision": 0.0,
+    "gptf1_uncertain_findings_recall": 0.0,
+    "gptf1_uncertain_findings_f1": 0.0,
+    "gptf1_uncertain_findings_pred_count": 0,
+    "gptf1_uncertain_findings_ref_count": 0,
+    "gptf1_medication_treatment_precision": 0.0,
+    "gptf1_medication_treatment_recall": 0.0,
+    "gptf1_medication_treatment_f1": 0.0,
+    "gptf1_medication_treatment_pred_count": 2,
+    "gptf1_medication_treatment_ref_count": 0,
+    "gptf1_plan_followup_precision": 0.0,
+    "gptf1_plan_followup_recall": 0.0,
+    "gptf1_plan_followup_f1": 0.0,
+    "gptf1_plan_followup_pred_count": 1,
+    "gptf1_plan_followup_ref_count": 0,
+    "nair_pred_concept_count": 14,
+    "nair_ref_concept_count": 22,
+    "nair_precision_match_count": 12,
+    "nair_recall_match_count": 11,
+    "semantic_cap_precision_supported_count": 2,
+    "semantic_cap_precision_partial_count": 2,
+    "semantic_cap_precision_denominator": 13,
+    "semantic_cap_recall_supported_count": 8,
+    "semantic_cap_recall_partial_count": 4,
+    "semantic_cap_recall_denominator": 19,
+    "semantic_cap_low_value_source_count": 0,
+    "semantic_cap_low_value_summary_count": 0,
+    "semantic_cap_missing_count": 4,
+    "semantic_cap_unsupported_count": 8,
+    "semantic_cap_contradicted_source_count": 3,
+    "semantic_cap_contradicted_summary_count": 1,
+    "pdsqi_useful": 3,
+    "pdsqi_organized": 5,
+    "pdsqi_comprehensible": 5,
+    "pdsqi_succinct": 5,
+    "pdsqi_synthesized": 4
+  }
+}

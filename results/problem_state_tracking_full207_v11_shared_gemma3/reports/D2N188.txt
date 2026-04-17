@@ -1,0 +1,103 @@
+Case: D2N188
+
+Problem List and Visit State Tracking
+
+Problem List
+- numbness | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T9
+  Summary: The patient reports numbness.
+  ClusterId: CL1
+  TemporalProfile: current
+  Updates:
+  - CAP12: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T9 :: The patient reports numbness.
+- outer ankle pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T11,T12,T13
+  Summary: The patient's pain is in the outer ankle.
+  ClusterId: CL2
+  TemporalProfile: current
+  Updates:
+  - CAP9: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T11 :: The patient reports pain in their ankle.
+  - CAP1: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T13,T12 :: The patient's pain is in the outer ankle.
+  - CAP2: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T13,T13 :: The patient has ankle pain.
+- tingling | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T15
+  Summary: The patient reports tingling.
+  ClusterId: CL3
+  TemporalProfile: current
+  Updates:
+  - CAP13: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T15 :: The patient reports tingling.
+- limping | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T26
+  Summary: The patient reports limping.
+  ClusterId: CL4
+  TemporalProfile: current
+  Updates:
+  - CAP14: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T26 :: The patient reports limping.
+- crack | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T33
+  Summary: The patient heard a crackling sound.
+  ClusterId: CL6
+  TemporalProfile: current
+  Updates:
+  - CAP10: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T33 :: The patient heard a crackling sound.
+- mountain biking | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T36
+  Summary: The patient has been mountain biking for three years.
+  ClusterId: CL7
+  TemporalProfile: past
+  Updates:
+  - CAP7: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=past turns=T36 :: The patient has been mountain biking for three years.
+- hand pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T37
+  Summary: The patient reports hand pain.
+  ClusterId: CL8
+  TemporalProfile: current
+  Updates:
+  - CAP11: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T37 :: The patient reports hand pain.
+- fever | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T49,T50
+  Summary: The patient reports a fever.
+  ClusterId: CL9
+  TemporalProfile: current
+  Updates:
+  - CAP3: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T50,T49 :: The patient reports a fever.
+- pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T49,T54
+  Summary: The patient reports pain.
+  ClusterId: CL10
+  TemporalProfile: current
+  Updates:
+  - CAP4: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T49,T49 :: The patient reports pain.
+  - CAP5: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T54 :: The patient reports pain to palpation of the right lateral malleolus.
+- ankle sprain | verification_status=confirmed | clinical_status=active | modalities=assessment | speakers=doctor | evidence=T56
+  Summary: The doctor believes the patient has an acute right ankle sprain.
+  ClusterId: CL11
+  TemporalProfile: acute
+  Updates:
+  - CAP6: content_source=doctor modality=assessment verification_status=confirmed clinical_status=active temporality=acute turns=T56 :: The doctor believes the patient has an acute right ankle sprain.
+  - CAP8: content_source=doctor modality=assessment verification_status=confirmed clinical_status=active temporality=acute turns=T56 :: The doctor assesses an acute right ankle sprain.
+
+Medication Tracking
+- [MedicationState] tylenol | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T27
+  Summary: The patient took Tylenol.
+  ClusterId: CL5
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient took Tylenol. (T27)
+  Updates:
+  - CAP23: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T27 :: The patient took Tylenol.
+- [MedicationChange] meloxicam | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T56
+  Summary: The doctor prescribes meloxicam fifteen milligrams once a day.
+  ClusterId: CL13
+  TemporalProfile: daily, once a day
+  PlannedChanges:
+  - The doctor prescribes meloxicam fifteen milligrams once a day. (T56)
+  - The doctor prescribes meloxicam. (T56)
+  Updates:
+  - CAP16: content_source=doctor modality=plan verification_status=unconfirmed clinical_status=planned temporality=daily turns=T56 :: The doctor prescribes meloxicam fifteen milligrams once a day.
+  - CAP20: content_source=doctor modality=plan verification_status=unconfirmed clinical_status=planned temporality=once a day turns=T56 :: The doctor prescribes meloxicam.
+
+Other Structured States
+- [Plan] ice application | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T56
+  Summary: The doctor recommends icing the area for twenty minutes five times a day.
+  ClusterId: CL12
+  TemporalProfile: immediately, short-term
+- [Plan] air cast | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T56
+  Summary: The doctor orders an air cast.
+  ClusterId: CL14
+  TemporalProfile: immediate, immediately
+- [Plan] crutches | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T56
+  Summary: The doctor orders crutches.
+  ClusterId: CL15
+  TemporalProfile: immediate, immediately

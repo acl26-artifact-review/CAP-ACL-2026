@@ -1,0 +1,1486 @@
+{
+  "case_id": "D2N052",
+  "method": "cluster2sent",
+  "template": "soap",
+  "summary_text": "S:\nThe patient reports experiencing right-sided back pain for approximately one week and has noted blood in his urine. He describes the pain as persistent and reports some nausea. He denies vomiting, fever, or chills. He took ibuprofen for the pain, which provided some relief.\n\nO:\nThe patient's vital signs are within normal limits. Physical examination reveals mild tenderness to palpation in the right flank and cVA near the flank tenderness. A CT scan revealed a 0.5 cm stone in the proximal right ureter with no evidence of hydronephrosis.\n\nA:\nThe patient is diagnosed with a right-sided kidney stone. The stone is located in the proximal right ureter.\n\nP:\nThe patient should drink as much as possible to facilitate stone passage. Prescribe ibuprofen 800 mg as needed for pain. Order a BMP, urinalysis, and urine culture. If indicated, initiate antibiotics based on urinalysis results. Schedule a follow-up appointment in one to two weeks to assess progress and discuss further treatment options, including lithotripsy if necessary.",
+  "reference_summary": "HISTORY OF PRESENT ILLNESS\n\nAnna Diaz is a pleasant 29-year-old female who presents to the clinic today for the evaluation of right-sided back pain.\n\nFor approximately 1 week, the patient has been experiencing constant right-sided back pain that radiates down to her lower right side, as well as hematuria and nausea. Her primary care physician was concerned for possible kidney stones and subsequently referred her here for further evaluation. She denies any pain with urination or vomiting, but admits that she has likely not been drinking enough water. The only treatment she has tried so far is ibuprofen with minimal pain relief. Although she denies any personal history of kidney stones prior to this occurrence, she explains that her father has had kidney stones in the past.\n\nREVIEW OF SYSTEMS\n\nConstitutional: Negative for fever.\nGastrointestinal: Positive for nausea. Negative for vomiting.\nGenitourinary: Positive for hematuria\n\nVITALS\n\nVitals are normal.\nBlood pressure is normal.\nHeart rate is normal.\n\nPHYSICAL EXAM\n\nGI/GU: Mild pain and tenderness to palpation of the abdomen. No rebound or guarding. There is CVA located near her flank with tenderness on the right.\n\nRESULTS\n\nCT scan of the abdomen was reviewed today and revealed a kidney stone measuring 0.5 cm in size, located in the proximal right ureter. There is no evidence of hydronephrosis.\n\nASSESSMENT\n\nKidney stone, right side.\n\nPLAN\n\nAfter reviewing the patient's examination and CT results, I discussed the findings with the patient. The CT scan revealed a 0.5 cm kidney stone in the proximal right ureter. I advised her to drink plenty of fluids, as much as possible, to help facilitate passing of the stone. She was provided with a urine strainer so she can see if and when the stone passes. Given that over-the-counter ibuprofen is not providing significant relief, we will send in a prescription for ibuprofen 800 mg to help with her pain. I'm also going to order a BMP, urinalysis, and a urine culture for further evaluation. Depending on the results of the urinalysis, we may need to start her on antibiotics. I want to see her back in 2 weeks. If she is still symptomatic at that time, we may need to consider further treatment such as a lithotripsy. This procedure was explained to the patient.\n\nINSTRUCTIONS\n\nFollow up in 2 weeks.",
+  "source_cap": {
+    "atomic_propositions": [
+      {
+        "prop_id": "CAP1",
+        "cap_type": "Symptom",
+        "canonical_concept": "pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports pain that has moved down to their right lower side."
+      },
+      {
+        "prop_id": "CAP2",
+        "cap_type": "Symptom",
+        "canonical_concept": "back pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports back pain on their right side."
+      },
+      {
+        "prop_id": "CAP3",
+        "cap_type": "Symptom",
+        "canonical_concept": "hematuria",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports seeing blood in their urine."
+      },
+      {
+        "prop_id": "CAP4",
+        "cap_type": "Symptom",
+        "canonical_concept": "pain",
+        "category": "Symptom",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient describes the pain as constant."
+      },
+      {
+        "prop_id": "CAP5",
+        "cap_type": "Symptom",
+        "canonical_concept": "pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "denies",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient denies pain when urinating."
+      },
+      {
+        "prop_id": "CAP6",
+        "cap_type": "Symptom",
+        "canonical_concept": "pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports pain."
+      },
+      {
+        "prop_id": "CAP7",
+        "cap_type": "Symptom",
+        "canonical_concept": "nausea",
+        "category": "Symptom",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient feels nauseated."
+      },
+      {
+        "prop_id": "CAP8",
+        "cap_type": "Symptom",
+        "canonical_concept": "pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient experiences pain."
+      },
+      {
+        "prop_id": "CAP9",
+        "cap_type": "Order",
+        "canonical_concept": "urine culture",
+        "category": "Order",
+        "speaker": "doctor",
+        "predicate": "orders",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "now",
+        "claim_type_tags": [
+          "plan"
+        ],
+        "proposition_text": "The doctor orders a urine culture."
+      },
+      {
+        "prop_id": "CAP10",
+        "cap_type": "Order",
+        "canonical_concept": "BMP",
+        "category": "Order",
+        "speaker": "doctor",
+        "predicate": "orders",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "now",
+        "claim_type_tags": [
+          "plan"
+        ],
+        "proposition_text": "The doctor orders a BMP."
+      },
+      {
+        "prop_id": "CAP11",
+        "cap_type": "Order",
+        "canonical_concept": "urinalysis",
+        "category": "Order",
+        "speaker": "doctor",
+        "predicate": "orders",
+        "status": "uncertain",
+        "visit_state": "active",
+        "temporality": "now",
+        "claim_type_tags": [
+          "plan"
+        ],
+        "proposition_text": "The doctor orders a urinalysis."
+      },
+      {
+        "prop_id": "CAP12",
+        "cap_type": "MedicationRequest",
+        "canonical_concept": "ibuprofen",
+        "category": "MedicationRequest",
+        "speaker": "doctor",
+        "predicate": "prescribes",
+        "status": "uncertain",
+        "visit_state": "planned",
+        "temporality": "now",
+        "proposition_text": "The doctor prescribes ibuprofen."
+      },
+      {
+        "prop_id": "CAP13",
+        "cap_type": "Order",
+        "canonical_concept": "lithotripsy",
+        "category": "Order",
+        "speaker": "doctor",
+        "status": "uncertain",
+        "visit_state": "planned",
+        "temporality": "future",
+        "proposition_text": "The doctor considers lithotripsy."
+      },
+      {
+        "prop_id": "CAP14",
+        "cap_type": "MedicationStatement",
+        "canonical_concept": "ibuprofen",
+        "category": "MedicationStatement",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "proposition_text": "The patient took ibuprofen."
+      },
+      {
+        "prop_id": "CAP15",
+        "cap_type": "ProblemHistory",
+        "canonical_concept": "kidney stones",
+        "category": "ProblemHistory",
+        "speaker": "patient",
+        "status": "uncertain",
+        "visit_state": "historical",
+        "temporality": "past",
+        "proposition_text": "The patient's father had kidney stones."
+      }
+    ],
+    "filtered_nonverifiable_units": []
+  },
+  "event_plan": null,
+  "summary_cap": {
+    "atomic_propositions": [
+      {
+        "prop_id": "P1",
+        "cap_type": "Symptom",
+        "canonical_concept": "pain:back",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports right-sided back pain."
+      },
+      {
+        "prop_id": "P2",
+        "cap_type": "Symptom",
+        "canonical_concept": "blood his urine",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports blood in his urine."
+      },
+      {
+        "prop_id": "P3",
+        "cap_type": "Symptom",
+        "canonical_concept": "nausea",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports nausea."
+      },
+      {
+        "prop_id": "P4",
+        "cap_type": "Finding",
+        "canonical_concept": "denies vomiting",
+        "category": "Finding",
+        "speaker": "clinician",
+        "predicate": "denies",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "safety_relevant"
+        ],
+        "proposition_text": "The patient denies vomiting."
+      },
+      {
+        "prop_id": "P5",
+        "cap_type": "Finding",
+        "canonical_concept": "denies fever",
+        "category": "Finding",
+        "speaker": "clinician",
+        "predicate": "denies",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "safety_relevant"
+        ],
+        "proposition_text": "The patient denies fever."
+      },
+      {
+        "prop_id": "P6",
+        "cap_type": "Finding",
+        "canonical_concept": "denies chills",
+        "category": "Finding",
+        "speaker": "clinician",
+        "predicate": "denies",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "safety_relevant"
+        ],
+        "proposition_text": "The patient denies chills."
+      },
+      {
+        "prop_id": "P7",
+        "cap_type": "MedicationPlan",
+        "canonical_concept": "prescribes ibuprofen needed",
+        "category": "MedicationPlan",
+        "speaker": "clinician",
+        "predicate": "prescribes",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "medication"
+        ],
+        "proposition_text": "The clinician prescribes ibuprofen 800 mg as needed."
+      },
+      {
+        "prop_id": "P8",
+        "cap_type": "TestPlan",
+        "canonical_concept": "orders bmp",
+        "category": "TestPlan",
+        "speaker": "clinician",
+        "predicate": "orders",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "future",
+        "claim_type_tags": [
+          "diagnostic"
+        ],
+        "proposition_text": "The clinician orders a BMP."
+      },
+      {
+        "prop_id": "P9",
+        "cap_type": "TestPlan",
+        "canonical_concept": "orders urinalysis",
+        "category": "TestPlan",
+        "speaker": "clinician",
+        "predicate": "orders",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "future",
+        "claim_type_tags": [
+          "diagnostic"
+        ],
+        "proposition_text": "The clinician orders a urinalysis."
+      },
+      {
+        "prop_id": "P10",
+        "cap_type": "TestPlan",
+        "canonical_concept": "orders urine culture",
+        "category": "TestPlan",
+        "speaker": "clinician",
+        "predicate": "orders",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "future",
+        "claim_type_tags": [
+          "diagnostic"
+        ],
+        "proposition_text": "The clinician orders a urine culture."
+      },
+      {
+        "prop_id": "P11",
+        "cap_type": "Plan",
+        "canonical_concept": "plans initiate antibiotics based",
+        "category": "Plan",
+        "speaker": "clinician",
+        "predicate": "plans",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "future",
+        "claim_type_tags": [
+          "plan"
+        ],
+        "proposition_text": "The clinician plans to initiate antibiotics based on urinalysis results."
+      },
+      {
+        "prop_id": "P12",
+        "cap_type": "FollowUpPlan",
+        "canonical_concept": "schedules follow-up appointment one",
+        "category": "FollowUpPlan",
+        "speaker": "clinician",
+        "predicate": "plans",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "future",
+        "claim_type_tags": [
+          "plan"
+        ],
+        "proposition_text": "The clinician schedules a follow-up appointment in one to two weeks."
+      },
+      {
+        "prop_id": "P13",
+        "cap_type": "Diagnosis",
+        "canonical_concept": "diagnosed right-sided kidney stone",
+        "category": "Diagnosis",
+        "speaker": "clinician",
+        "predicate": "diagnoses",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "diagnostic"
+        ],
+        "proposition_text": "The patient is diagnosed with a right-sided kidney stone."
+      },
+      {
+        "prop_id": "P14",
+        "cap_type": "Finding",
+        "canonical_concept": "scan revealed stone proximal",
+        "category": "Finding",
+        "speaker": "clinician",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "exam"
+        ],
+        "proposition_text": "A CT scan revealed a 0.5 cm stone in the proximal right ureter."
+      }
+    ],
+    "filtered_nonverifiable_units": [],
+    "runtime_seconds": 17.115
+  },
+  "cap_alignment": {
+    "cap_precision": 0.5,
+    "cap_recall": 0.4666666666666667,
+    "cap_f1": 0.4827586206896552,
+    "matched_count": 7,
+    "summary_prop_count": 14,
+    "source_prop_count": 15,
+    "matched_pairs": [
+      {
+        "score": 1.0,
+        "summary_prop_id": "P3",
+        "source_prop_id": "CAP7",
+        "summary_text": "The patient reports nausea.",
+        "source_text": "The patient feels nauseated."
+      },
+      {
+        "score": 1.0,
+        "summary_prop_id": "P1",
+        "source_prop_id": "CAP2",
+        "summary_text": "The patient reports right-sided back pain.",
+        "source_text": "The patient reports back pain on their right side."
+      },
+      {
+        "score": 0.865,
+        "summary_prop_id": "P10",
+        "source_prop_id": "CAP9",
+        "summary_text": "The clinician orders a urine culture.",
+        "source_text": "The doctor orders a urine culture."
+      },
+      {
+        "score": 0.8033,
+        "summary_prop_id": "P9",
+        "source_prop_id": "CAP11",
+        "summary_text": "The clinician orders a urinalysis.",
+        "source_text": "The doctor orders a urinalysis."
+      },
+      {
+        "score": 0.8033,
+        "summary_prop_id": "P8",
+        "source_prop_id": "CAP10",
+        "summary_text": "The clinician orders a BMP.",
+        "source_text": "The doctor orders a BMP."
+      },
+      {
+        "score": 0.8,
+        "summary_prop_id": "P2",
+        "source_prop_id": "CAP3",
+        "summary_text": "The patient reports blood in his urine.",
+        "source_text": "The patient reports seeing blood in their urine."
+      },
+      {
+        "score": 0.595,
+        "summary_prop_id": "P7",
+        "source_prop_id": "CAP14",
+        "summary_text": "The clinician prescribes ibuprofen 800 mg as needed.",
+        "source_text": "The patient took ibuprofen."
+      }
+    ],
+    "unsupported_summary_props": [
+      {
+        "prop_id": "P4",
+        "cap_type": "Finding",
+        "canonical_concept": "denies vomiting",
+        "category": "Finding",
+        "speaker": "clinician",
+        "predicate": "denies",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "safety_relevant"
+        ],
+        "proposition_text": "The patient denies vomiting."
+      },
+      {
+        "prop_id": "P5",
+        "cap_type": "Finding",
+        "canonical_concept": "denies fever",
+        "category": "Finding",
+        "speaker": "clinician",
+        "predicate": "denies",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "safety_relevant"
+        ],
+        "proposition_text": "The patient denies fever."
+      },
+      {
+        "prop_id": "P6",
+        "cap_type": "Finding",
+        "canonical_concept": "denies chills",
+        "category": "Finding",
+        "speaker": "clinician",
+        "predicate": "denies",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "safety_relevant"
+        ],
+        "proposition_text": "The patient denies chills."
+      },
+      {
+        "prop_id": "P11",
+        "cap_type": "Plan",
+        "canonical_concept": "plans initiate antibiotics based",
+        "category": "Plan",
+        "speaker": "clinician",
+        "predicate": "plans",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "future",
+        "claim_type_tags": [
+          "plan"
+        ],
+        "proposition_text": "The clinician plans to initiate antibiotics based on urinalysis results."
+      },
+      {
+        "prop_id": "P12",
+        "cap_type": "FollowUpPlan",
+        "canonical_concept": "schedules follow-up appointment one",
+        "category": "FollowUpPlan",
+        "speaker": "clinician",
+        "predicate": "plans",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "future",
+        "claim_type_tags": [
+          "plan"
+        ],
+        "proposition_text": "The clinician schedules a follow-up appointment in one to two weeks."
+      },
+      {
+        "prop_id": "P13",
+        "cap_type": "Diagnosis",
+        "canonical_concept": "diagnosed right-sided kidney stone",
+        "category": "Diagnosis",
+        "speaker": "clinician",
+        "predicate": "diagnoses",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "diagnostic"
+        ],
+        "proposition_text": "The patient is diagnosed with a right-sided kidney stone."
+      },
+      {
+        "prop_id": "P14",
+        "cap_type": "Finding",
+        "canonical_concept": "scan revealed stone proximal",
+        "category": "Finding",
+        "speaker": "clinician",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "exam"
+        ],
+        "proposition_text": "A CT scan revealed a 0.5 cm stone in the proximal right ureter."
+      }
+    ],
+    "missing_source_props": [
+      {
+        "prop_id": "CAP1",
+        "cap_type": "Symptom",
+        "canonical_concept": "pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports pain that has moved down to their right lower side."
+      },
+      {
+        "prop_id": "CAP4",
+        "cap_type": "Symptom",
+        "canonical_concept": "pain",
+        "category": "Symptom",
+        "speaker": "doctor",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient describes the pain as constant."
+      },
+      {
+        "prop_id": "CAP5",
+        "cap_type": "Symptom",
+        "canonical_concept": "pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "denies",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient denies pain when urinating."
+      },
+      {
+        "prop_id": "CAP6",
+        "cap_type": "Symptom",
+        "canonical_concept": "pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "predicate": "reports",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient reports pain."
+      },
+      {
+        "prop_id": "CAP8",
+        "cap_type": "Symptom",
+        "canonical_concept": "pain",
+        "category": "Symptom",
+        "speaker": "patient",
+        "status": "affirmed",
+        "visit_state": "active",
+        "temporality": "current",
+        "claim_type_tags": [
+          "symptom"
+        ],
+        "proposition_text": "The patient experiences pain."
+      },
+      {
+        "prop_id": "CAP12",
+        "cap_type": "MedicationRequest",
+        "canonical_concept": "ibuprofen",
+        "category": "MedicationRequest",
+        "speaker": "doctor",
+        "predicate": "prescribes",
+        "status": "uncertain",
+        "visit_state": "planned",
+        "temporality": "now",
+        "proposition_text": "The doctor prescribes ibuprofen."
+      },
+      {
+        "prop_id": "CAP13",
+        "cap_type": "Order",
+        "canonical_concept": "lithotripsy",
+        "category": "Order",
+        "speaker": "doctor",
+        "status": "uncertain",
+        "visit_state": "planned",
+        "temporality": "future",
+        "proposition_text": "The doctor considers lithotripsy."
+      },
+      {
+        "prop_id": "CAP15",
+        "cap_type": "ProblemHistory",
+        "canonical_concept": "kidney stones",
+        "category": "ProblemHistory",
+        "speaker": "patient",
+        "status": "uncertain",
+        "visit_state": "historical",
+        "temporality": "past",
+        "proposition_text": "The patient's father had kidney stones."
+      }
+    ]
+  },
+  "reference_gpt_f1_items": {
+    "active_problems_symptoms": [],
+    "negated_findings": [],
+    "uncertain_findings": [],
+    "medication_treatment": [],
+    "plan_followup": [
+      "Follow up in 2 weeks."
+    ],
+    "_chunk_count": [
+      "3"
+    ]
+  },
+  "summary_gpt_f1_items": {
+    "active_problems_symptoms": [],
+    "negated_findings": [],
+    "uncertain_findings": [],
+    "medication_treatment": [],
+    "plan_followup": [],
+    "_chunk_count": [
+      "1"
+    ]
+  },
+  "gpt_f1_alignment": {
+    "by_category": {
+      "active_problems_symptoms": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "matched_count": 0,
+        "pred_count": 0,
+        "ref_count": 0,
+        "matches": [],
+        "unsupported_pred_items": [],
+        "missing_ref_items": []
+      },
+      "negated_findings": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "matched_count": 0,
+        "pred_count": 0,
+        "ref_count": 0,
+        "matches": [],
+        "unsupported_pred_items": [],
+        "missing_ref_items": []
+      },
+      "uncertain_findings": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "matched_count": 0,
+        "pred_count": 0,
+        "ref_count": 0,
+        "matches": [],
+        "unsupported_pred_items": [],
+        "missing_ref_items": []
+      },
+      "medication_treatment": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "matched_count": 0,
+        "pred_count": 0,
+        "ref_count": 0,
+        "matches": [],
+        "unsupported_pred_items": [],
+        "missing_ref_items": []
+      },
+      "plan_followup": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "matched_count": 0,
+        "pred_count": 0,
+        "ref_count": 1,
+        "matches": [],
+        "unsupported_pred_items": [],
+        "missing_ref_items": [
+          "Follow up in 2 weeks."
+        ]
+      }
+    }
+  },
+  "reference_nair_concepts": {
+    "sections": [
+      {
+        "heading": "Clinical Note",
+        "section_value": "HISTORY OF PRESENT ILLNESS\nAnna Diaz is a pleasant 29-year-old female who presents to the clinic today for the evaluation of right-sided back pain.\nFor approximately 1 week, the patient has been experiencing constant right-sided back pain that radiates down to her lower right side, as well as hematuria and nausea. Her primary care physician was concerned for possible kidney stones and subsequently referred her here for further evaluation. She denies any pain with urination or vomiting, but admits that she has likely not been drinking enough water. The only treatment she has tried so far is ibuprofen with minimal pain relief. Although she denies any personal history of kidney stones prior to this occurrence, she explains that her father has had kidney stones in the past.\nREVIEW OF SYSTEMS\nConstitutional: Negative for fever.\nGastrointestinal: Positive for nausea. Negative for vomiting.\nGenitourinary: Positive for hematuria\nVITALS\nVitals are normal.\nBlood pressure is normal.",
+        "medical_concepts": [
+          "right-sided back pain",
+          "hematuria",
+          "nausea",
+          "kidney stones",
+          "pain with urination",
+          "vomiting",
+          "dehydration",
+          "ibuprofen",
+          "family history of kidney stones",
+          "fever",
+          "vitals",
+          "blood pressure"
+        ]
+      },
+      {
+        "heading": "Clinical Note",
+        "section_value": "Heart rate is normal.\nPHYSICAL EXAM\nGI/GU: Mild pain and tenderness to palpation of the abdomen. No rebound or guarding. There is CVA located near her flank with tenderness on the right.\nRESULTS\nCT scan of the abdomen was reviewed today and revealed a kidney stone measuring 0.5 cm in size, located in the proximal right ureter. There is no evidence of hydronephrosis.\nASSESSMENT\nKidney stone, right side.\nPLAN\nAfter reviewing the patient's examination and CT results, I discussed the findings with the patient. The CT scan revealed a 0.5 cm kidney stone in the proximal right ureter. I advised her to drink plenty of fluids, as much as possible, to help facilitate passing of the stone. She was provided with a urine strainer so she can see if and when the stone passes. Given that over-the-counter ibuprofen is not providing significant relief, we will send in a prescription for ibuprofen 800 mg to help with her pain. I'm also going to order a BMP, urinalysis, and a urine culture for further evaluation. Depending on the results of the urinalysis, we may need to start her on antibiotics. I want to see her back in 2 weeks. If she is still symptomatic at that time, we may need to consider further treatment such as a lithotripsy. This procedure was explained to the patient.\nINSTRUCTIONS",
+        "medical_concepts": [
+          "normal heart rate",
+          "abdominal pain",
+          "abdominal tenderness",
+          "CVA tenderness",
+          "kidney stone",
+          "proximal right ureter stone",
+          "hydronephrosis",
+          "ibuprofen",
+          "BMP",
+          "urinalysis",
+          "urine culture",
+          "antibiotics",
+          "lithotripsy",
+          "CT scan of the abdomen",
+          "urine strainer"
+        ]
+      },
+      {
+        "heading": "Clinical Note",
+        "section_value": "Follow up in 2 weeks.",
+        "medical_concepts": []
+      }
+    ],
+    "medical_concepts": [
+      "right-sided back pain",
+      "hematuria",
+      "nausea",
+      "kidney stones",
+      "pain with urination",
+      "vomiting",
+      "dehydration",
+      "ibuprofen",
+      "family history of kidney stones",
+      "fever",
+      "vitals",
+      "blood pressure",
+      "normal heart rate",
+      "abdominal pain",
+      "abdominal tenderness",
+      "CVA tenderness",
+      "kidney stone",
+      "proximal right ureter stone",
+      "hydronephrosis",
+      "BMP",
+      "urinalysis",
+      "urine culture",
+      "antibiotics",
+      "lithotripsy",
+      "CT scan of the abdomen",
+      "urine strainer"
+    ],
+    "section_count": 3
+  },
+  "summary_nair_concepts": {
+    "sections": [
+      {
+        "heading": "S",
+        "section_value": "The patient reports experiencing right-sided back pain for approximately one week and has noted blood in his urine. He describes the pain as persistent and reports some nausea. He denies vomiting, fever, or chills. He took ibuprofen for the pain, which provided some relief.",
+        "medical_concepts": [
+          "right-sided back pain",
+          "back pain",
+          "hematuria",
+          "blood in urine",
+          "nausea",
+          "vomiting",
+          "fever",
+          "chills",
+          "ibuprofen"
+        ]
+      },
+      {
+        "heading": "O",
+        "section_value": "The patient's vital signs are within normal limits. Physical examination reveals mild tenderness to palpation in the right flank and cVA near the flank tenderness. A CT scan revealed a 0.5 cm stone in the proximal right ureter with no evidence of hydronephrosis.",
+        "medical_concepts": [
+          "vital signs",
+          "tenderness to palpation",
+          "right flank tenderness",
+          "costovertebral angle tenderness",
+          "CT scan",
+          "ureteral stone",
+          "proximal right ureter stone",
+          "hydronephrosis"
+        ]
+      },
+      {
+        "heading": "A",
+        "section_value": "The patient is diagnosed with a right-sided kidney stone. The stone is located in the proximal right ureter.",
+        "medical_concepts": [
+          "right-sided kidney stone",
+          "kidney stone",
+          "proximal right ureter"
+        ]
+      },
+      {
+        "heading": "P",
+        "section_value": "The patient should drink as much as possible to facilitate stone passage. Prescribe ibuprofen 800 mg as needed for pain. Order a BMP, urinalysis, and urine culture. If indicated, initiate antibiotics based on urinalysis results. Schedule a follow-up appointment in one to two weeks to assess progress and discuss further treatment options, including lithotripsy if necessary.",
+        "medical_concepts": [
+          "stone passage",
+          "ibuprofen 800 mg",
+          "pain",
+          "BMP",
+          "basic metabolic panel",
+          "urinalysis",
+          "urine culture",
+          "antibiotics",
+          "lithotripsy"
+        ]
+      }
+    ],
+    "medical_concepts": [
+      "right-sided back pain",
+      "back pain",
+      "hematuria",
+      "blood in urine",
+      "nausea",
+      "vomiting",
+      "fever",
+      "chills",
+      "ibuprofen",
+      "vital signs",
+      "tenderness to palpation",
+      "right flank tenderness",
+      "costovertebral angle tenderness",
+      "CT scan",
+      "ureteral stone",
+      "proximal right ureter stone",
+      "hydronephrosis",
+      "right-sided kidney stone",
+      "kidney stone",
+      "proximal right ureter",
+      "stone passage",
+      "ibuprofen 800 mg",
+      "pain",
+      "BMP",
+      "basic metabolic panel",
+      "urinalysis",
+      "urine culture",
+      "antibiotics",
+      "lithotripsy"
+    ],
+    "section_count": 4
+  },
+  "nair_alignment": {
+    "pred_concepts": [
+      "right-sided back pain",
+      "back pain",
+      "hematuria",
+      "blood in urine",
+      "nausea",
+      "vomiting",
+      "fever",
+      "chills",
+      "ibuprofen",
+      "vital signs",
+      "tenderness to palpation",
+      "right flank tenderness",
+      "costovertebral angle tenderness",
+      "CT scan",
+      "ureteral stone",
+      "proximal right ureter stone",
+      "hydronephrosis",
+      "right-sided kidney stone",
+      "kidney stone",
+      "proximal right ureter",
+      "stone passage",
+      "ibuprofen 800 mg",
+      "pain",
+      "BMP",
+      "basic metabolic panel",
+      "urinalysis",
+      "urine culture",
+      "antibiotics",
+      "lithotripsy"
+    ],
+    "ref_concepts": [
+      "right-sided back pain",
+      "hematuria",
+      "nausea",
+      "kidney stones",
+      "pain with urination",
+      "vomiting",
+      "dehydration",
+      "ibuprofen",
+      "family history of kidney stones",
+      "fever",
+      "vitals",
+      "blood pressure",
+      "normal heart rate",
+      "abdominal pain",
+      "abdominal tenderness",
+      "CVA tenderness",
+      "kidney stone",
+      "proximal right ureter stone",
+      "hydronephrosis",
+      "BMP",
+      "urinalysis",
+      "urine culture",
+      "antibiotics",
+      "lithotripsy",
+      "CT scan of the abdomen",
+      "urine strainer"
+    ],
+    "precision_alignment": {
+      "found_b": [
+        "right-sided back pain",
+        "back pain",
+        "hematuria",
+        "blood in urine",
+        "nausea",
+        "vomiting",
+        "fever",
+        "ibuprofen",
+        "tenderness to palpation",
+        "right flank tenderness",
+        "costovertebral angle tenderness",
+        "CT scan",
+        "ureteral stone",
+        "proximal right ureter stone",
+        "hydronephrosis",
+        "right-sided kidney stone",
+        "kidney stone",
+        "proximal right ureter",
+        "stone passage",
+        "ibuprofen 800 mg",
+        "pain",
+        "BMP",
+        "basic metabolic panel",
+        "urinalysis",
+        "urine culture",
+        "antibiotics",
+        "lithotripsy"
+      ],
+      "not_found_b": [
+        "chills",
+        "vital signs"
+      ],
+      "chunk_count": 2,
+      "chunk_results": [
+        {
+          "found_b": [
+            "right-sided back pain",
+            "back pain",
+            "hematuria",
+            "blood in urine",
+            "nausea",
+            "vomiting",
+            "fever",
+            "ibuprofen",
+            "tenderness to palpation",
+            "right flank tenderness",
+            "costovertebral angle tenderness",
+            "CT scan",
+            "ureteral stone",
+            "proximal right ureter stone",
+            "hydronephrosis",
+            "right-sided kidney stone",
+            "kidney stone",
+            "proximal right ureter",
+            "stone passage",
+            "ibuprofen 800 mg",
+            "pain",
+            "BMP"
+          ],
+          "not_found_b": [
+            "chills",
+            "vital signs"
+          ]
+        },
+        {
+          "found_b": [
+            "basic metabolic panel",
+            "urinalysis",
+            "urine culture",
+            "antibiotics",
+            "lithotripsy"
+          ],
+          "not_found_b": []
+        }
+      ]
+    },
+    "recall_alignment": {
+      "found_b": [
+        "right-sided back pain",
+        "hematuria",
+        "nausea",
+        "kidney stones",
+        "vomiting",
+        "ibuprofen",
+        "fever",
+        "vitals",
+        "CVA tenderness",
+        "kidney stone",
+        "proximal right ureter stone",
+        "hydronephrosis",
+        "BMP",
+        "urinalysis",
+        "urine culture",
+        "antibiotics",
+        "lithotripsy",
+        "CT scan of the abdomen"
+      ],
+      "not_found_b": [
+        "pain with urination",
+        "dehydration",
+        "family history of kidney stones",
+        "blood pressure",
+        "normal heart rate",
+        "abdominal pain",
+        "abdominal tenderness",
+        "urine strainer"
+      ],
+      "chunk_count": 2,
+      "chunk_results": [
+        {
+          "found_b": [
+            "right-sided back pain",
+            "hematuria",
+            "nausea",
+            "kidney stones",
+            "vomiting",
+            "ibuprofen",
+            "fever",
+            "vitals",
+            "CVA tenderness",
+            "kidney stone",
+            "proximal right ureter stone",
+            "hydronephrosis",
+            "BMP",
+            "urinalysis",
+            "urine culture",
+            "antibiotics",
+            "lithotripsy"
+          ],
+          "not_found_b": [
+            "pain with urination",
+            "dehydration",
+            "family history of kidney stones",
+            "blood pressure",
+            "normal heart rate",
+            "abdominal pain",
+            "abdominal tenderness"
+          ]
+        },
+        {
+          "found_b": [
+            "CT scan of the abdomen"
+          ],
+          "not_found_b": [
+            "urine strainer"
+          ]
+        }
+      ]
+    }
+  },
+  "semantic_cap_audit": {
+    "source_cap_recall": [
+      {
+        "cap_id": "P1",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P2",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P3",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P4",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P5",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P6",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P7",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P8",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P9",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P10",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P11",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P12",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P13",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P14",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P15",
+        "judgment": "missing",
+        "reason": null
+      }
+    ],
+    "summary_cap_precision": [
+      {
+        "cap_id": "P1",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P2",
+        "judgment": "supported",
+        "reason": null
+      },
+      {
+        "cap_id": "P3",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P4",
+        "judgment": "unsupported",
+        "reason": null
+      },
+      {
+        "cap_id": "P5",
+        "judgment": "unsupported",
+        "reason": null
+      },
+      {
+        "cap_id": "P6",
+        "judgment": "unsupported",
+        "reason": null
+      },
+      {
+        "cap_id": "P7",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P8",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P9",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P10",
+        "judgment": "partial",
+        "reason": null
+      },
+      {
+        "cap_id": "P11",
+        "judgment": "unsupported",
+        "reason": null
+      },
+      {
+        "cap_id": "P12",
+        "judgment": "unsupported",
+        "reason": null
+      },
+      {
+        "cap_id": "P13",
+        "judgment": "unsupported",
+        "reason": null
+      },
+      {
+        "cap_id": "P14",
+        "judgment": "unsupported",
+        "reason": null
+      }
+    ],
+    "metrics": {
+      "semantic_cap_precision": 0.3214,
+      "semantic_cap_recall": 0.8667,
+      "semantic_cap_f1": 0.4689,
+      "semantic_cap_precision_supported_count": 2,
+      "semantic_cap_precision_partial_count": 5,
+      "semantic_cap_precision_denominator": 14,
+      "semantic_cap_recall_supported_count": 12,
+      "semantic_cap_recall_partial_count": 2,
+      "semantic_cap_recall_denominator": 15,
+      "semantic_cap_low_value_source_count": 0,
+      "semantic_cap_low_value_summary_count": 0,
+      "semantic_cap_missing_count": 1,
+      "semantic_cap_unsupported_count": 7,
+      "semantic_cap_contradicted_source_count": 0,
+      "semantic_cap_contradicted_summary_count": 0
+    }
+  },
+  "safety_judgment": null,
+  "section_judgment": {
+    "section_miscategorizations": [],
+    "summary_statistics": {
+      "section_appropriateness_score": 1.0,
+      "section_miscategorization_count": 0,
+      "major_section_miscategorization_count": 0
+    }
+  },
+  "pdsqi_judgment": {
+    "citation_applicable": 0,
+    "citation": 0,
+    "accurate": 4,
+    "thorough": 4,
+    "useful": 4,
+    "organized": 5,
+    "comprehensible": 5,
+    "succinct": 5,
+    "abstraction": 1,
+    "synthesized": 4,
+    "voice_summ": 0,
+    "voice_note": 0,
+    "pdsqi_core_mean": 4.4286
+  },
+  "llm_checklist_judgment": {
+    "content_preservation_core": 5,
+    "noise_suppression": 5,
+    "lay_expression_preservation": 4,
+    "state_update_fidelity": 5,
+    "temporality_preservation": 5,
+    "problem_evidence_linkage": 5,
+    "state_plan_separation": 5,
+    "section_organization_appropriateness": 4,
+    "overall_clinical_usability": 5,
+    "clinically_meaningful_omission": "No",
+    "clinically_concerning_hallucination": "No",
+    "checklist_a_mean": 4.6667,
+    "checklist_b_mean": 5.0,
+    "checklist_c_mean": 4.6667,
+    "llm_checklist_abc_mean": 4.75,
+    "llm_checklist_mean_no_usability": 4.75,
+    "llm_checklist_total_score": 43,
+    "llm_checklist_mean": 4.7778,
+    "llm_checklist_meaningful_omission_yes": 0,
+    "llm_checklist_concerning_hallucination_yes": 0
+  },
+  "metrics": {
+    "case_id": "D2N052",
+    "method": "cluster2sent",
+    "template": "soap",
+    "source_cap_count": 15,
+    "event_plan_count": null,
+    "summary_cap_count": 14,
+    "cap_matched_count": 7,
+    "cap_precision": 0.5,
+    "cap_recall": 0.4667,
+    "cap_f1": 0.4828,
+    "unsupported_summary_cap_count": 7,
+    "missing_source_cap_count": 8,
+    "summary_runtime_seconds": null,
+    "summary_cap_runtime_seconds": 17.115,
+    "event_plan_runtime_seconds": null,
+    "rouge_l_f1_vs_reference": 0.302,
+    "token_f1_vs_reference": 0.4547,
+    "gptf1_macro_f1": 0.0,
+    "nair_gpt_precision": 0.931,
+    "nair_gpt_recall": 0.6923,
+    "nair_gpt_f1": 0.7941,
+    "semantic_cap_precision": 0.3214,
+    "semantic_cap_recall": 0.8667,
+    "semantic_cap_f1": 0.4689,
+    "hallucination_count": null,
+    "major_hallucination_count": null,
+    "omission_count": null,
+    "major_omission_count": null,
+    "section_appropriateness_score": 1.0,
+    "section_miscategorization_count": 0,
+    "major_section_miscategorization_count": 0,
+    "pdsqi_core_mean": 4.4286,
+    "pdsqi_accurate": 4,
+    "pdsqi_thorough": 4,
+    "llm_checklist_total_score": 43,
+    "llm_checklist_mean": 4.7778,
+    "llm_checklist_mean_no_usability": 4.75,
+    "checklist_a_mean": 4.6667,
+    "checklist_b_mean": 5.0,
+    "checklist_c_mean": 4.6667,
+    "llm_checklist_abc_mean": 4.75,
+    "content_preservation_core": 5,
+    "noise_suppression": 5,
+    "lay_expression_preservation": 4,
+    "state_update_fidelity": 5,
+    "temporality_preservation": 5,
+    "problem_evidence_linkage": 5,
+    "state_plan_separation": 5,
+    "section_organization_appropriateness": 4,
+    "overall_clinical_usability": 5,
+    "llm_checklist_meaningful_omission_yes": 0,
+    "llm_checklist_concerning_hallucination_yes": 0,
+    "gptf1_active_problems_symptoms_precision": 0.0,
+    "gptf1_active_problems_symptoms_recall": 0.0,
+    "gptf1_active_problems_symptoms_f1": 0.0,
+    "gptf1_active_problems_symptoms_pred_count": 0,
+    "gptf1_active_problems_symptoms_ref_count": 0,
+    "gptf1_negated_findings_precision": 0.0,
+    "gptf1_negated_findings_recall": 0.0,
+    "gptf1_negated_findings_f1": 0.0,
+    "gptf1_negated_findings_pred_count": 0,
+    "gptf1_negated_findings_ref_count": 0,
+    "gptf1_uncertain_findings_precision": 0.0,
+    "gptf1_uncertain_findings_recall": 0.0,
+    "gptf1_uncertain_findings_f1": 0.0,
+    "gptf1_uncertain_findings_pred_count": 0,
+    "gptf1_uncertain_findings_ref_count": 0,
+    "gptf1_medication_treatment_precision": 0.0,
+    "gptf1_medication_treatment_recall": 0.0,
+    "gptf1_medication_treatment_f1": 0.0,
+    "gptf1_medication_treatment_pred_count": 0,
+    "gptf1_medication_treatment_ref_count": 0,
+    "gptf1_plan_followup_precision": 0.0,
+    "gptf1_plan_followup_recall": 0.0,
+    "gptf1_plan_followup_f1": 0.0,
+    "gptf1_plan_followup_pred_count": 0,
+    "gptf1_plan_followup_ref_count": 1,
+    "nair_pred_concept_count": 29,
+    "nair_ref_concept_count": 26,
+    "nair_precision_match_count": 27,
+    "nair_recall_match_count": 18,
+    "semantic_cap_precision_supported_count": 2,
+    "semantic_cap_precision_partial_count": 5,
+    "semantic_cap_precision_denominator": 14,
+    "semantic_cap_recall_supported_count": 12,
+    "semantic_cap_recall_partial_count": 2,
+    "semantic_cap_recall_denominator": 15,
+    "semantic_cap_low_value_source_count": 0,
+    "semantic_cap_low_value_summary_count": 0,
+    "semantic_cap_missing_count": 1,
+    "semantic_cap_unsupported_count": 7,
+    "semantic_cap_contradicted_source_count": 0,
+    "semantic_cap_contradicted_summary_count": 0,
+    "pdsqi_useful": 4,
+    "pdsqi_organized": 5,
+    "pdsqi_comprehensible": 5,
+    "pdsqi_succinct": 5,
+    "pdsqi_synthesized": 4
+  }
+}

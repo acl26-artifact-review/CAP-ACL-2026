@@ -1,0 +1,70 @@
+Case: D2N206
+
+Problem List and Visit State Tracking
+
+Problem List
+- kidney stone | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T1,T27
+  Summary: The patient has a history of kidney stones.
+  ClusterId: CL1
+  TemporalProfile: current, previous
+  Updates:
+  - CAP8: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T1 :: The patient has a kidney stone.
+  - CAP6: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=previous turns=T27 :: The patient has a history of kidney stones.
+- testicular pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T11,T12,T15,T3,T5
+  Summary: The patient reports testicular pain in the past.
+  ClusterId: CL2
+  TemporalProfile: current, past
+  Updates:
+  - CAP1: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T3,T5 :: The patient reports pain in the right flank radiating to the groin.
+  - CAP5: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=past turns=T11 :: The patient reports testicular pain in the past.
+  - CAP9: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T12 :: The patient reports new pain.
+  - CAP2: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T15 :: The patient reports a pain score of 4 out of 10.
+- dysuria | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T8
+  Summary: The patient reports pain when urinating.
+  ClusterId: CL3
+  TemporalProfile: current
+  Updates:
+  - CAP7: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T8 :: The patient reports pain when urinating.
+- hematuria | verification_status=unconfirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T11
+  Summary: The patient reports a previous episode of hematuria.
+  ClusterId: CL4
+  TemporalProfile: past
+  Updates:
+  - CAP4: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=past turns=T11 :: The patient reports a previous episode of hematuria.
+- nausea | verification_status=refuted | clinical_status=historical | modalities=interview | speakers=patient | evidence=T20
+  Summary: The patient denies nausea.
+  ClusterId: CL6
+  TemporalProfile: past
+  Updates:
+  - CAP10: content_source=patient modality=interview verification_status=refuted clinical_status=historical temporality=past turns=T20 :: The patient denies nausea.
+- vomiting | verification_status=refuted | clinical_status=historical | modalities=interview | speakers=patient | evidence=T20
+  Summary: The patient denies vomiting.
+  ClusterId: CL7
+  TemporalProfile: past
+  Updates:
+  - CAP11: content_source=patient modality=interview verification_status=refuted clinical_status=historical temporality=past turns=T20 :: The patient denies vomiting.
+- fever | verification_status=refuted | clinical_status=historical | modalities=interview | speakers=patient | evidence=T20
+  Summary: The patient denies fever.
+  ClusterId: CL8
+  TemporalProfile: past
+  Updates:
+  - CAP12: content_source=patient modality=interview verification_status=refuted clinical_status=historical temporality=past turns=T20 :: The patient denies fever.
+- chills | verification_status=unconfirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T21
+  Summary: The patient felt like they might have had chills.
+  ClusterId: CL9
+  TemporalProfile: past
+  Updates:
+  - CAP3: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=past turns=T21 :: The patient felt like they might have had chills.
+
+Medication Tracking
+- [MedicationState] ibuprofen | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T13
+  Summary: The patient reports taking ibuprofen.
+  ClusterId: CL5
+  TemporalProfile: current
+  CurrentRegimens:
+  - The patient reports taking ibuprofen. (T13)
+  Updates:
+  - CAP13: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T13 :: The patient reports taking ibuprofen.
+
+Other Structured States
+- None

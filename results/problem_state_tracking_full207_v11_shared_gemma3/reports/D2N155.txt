@@ -1,0 +1,116 @@
+Case: D2N155
+
+Problem List and Visit State Tracking
+
+Problem List
+- foot ulcer | verification_status=unconfirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T0,T1,T3
+  Summary: The patient reports a non-healing foot ulcer.
+  ClusterId: CL1
+  TemporalProfile: 1 year ago, current
+  Updates:
+  - CAP3: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T0 :: The patient reports a non-healing foot ulcer.
+  - CAP8: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T0 :: The patient reports an ulcer.
+  - CAP24: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=1 year ago turns=T3,T1 :: The patient's ulcer has been present for approximately one year.
+- type 2 diabetes | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T1
+  Summary: The patient has type 2 diabetes.
+  ClusterId: CL2
+  TemporalProfile: current
+  Updates:
+  - CAP6: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T1 :: The patient has type 2 diabetes.
+- pain | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T1
+  Summary: The patient reports pain.
+  ClusterId: CL3
+  TemporalProfile: current
+  Updates:
+  - CAP10: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T1 :: The patient reports pain.
+- foot pain | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T13
+  Summary: The patient reports pain in their foot.
+  ClusterId: CL5
+  TemporalProfile: current
+  Updates:
+  - CAP4: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T13 :: The patient reports pain in their foot.
+- neuropathy | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T14
+  Summary: The patient has neuropathy.
+  ClusterId: CL6
+  TemporalProfile: current
+  Updates:
+  - CAP11: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T14 :: The patient has neuropathy.
+- drainage | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T15
+  Summary: The patient reports increased drainage from their foot.
+  ClusterId: CL7
+  TemporalProfile: recent
+  Updates:
+  - CAP1: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=recent turns=T15 :: The patient reports increased drainage from their foot.
+- fatigue | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T15
+  Summary: The patient reports feeling more tired.
+  ClusterId: CL8
+  TemporalProfile: recent
+  Updates:
+  - CAP7: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=recent turns=T15 :: The patient reports feeling more tired.
+- diabetes mellitus | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T18,T19
+  Summary: The patient has diabetes mellitus.
+  ClusterId: CL9
+  TemporalProfile: current
+  Updates:
+  - CAP12: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T18 :: The patient has diabetes.
+  - CAP9: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T19 :: The patient has diabetes mellitus.
+- left hand pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T23
+  Summary: The patient reports pain in the left hand.
+  ClusterId: CL11
+  TemporalProfile: current
+  Updates:
+  - CAP2: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T23 :: The patient reports pain in the left hand.
+- diabetic foot ulcer | verification_status=confirmed | clinical_status=active | modalities=assessment | speakers=doctor | evidence=T24
+  Summary: The patient has a diabetic foot ulcer.
+  ClusterId: CL12
+  TemporalProfile: current
+  Updates:
+  - CAP5: content_source=doctor modality=assessment verification_status=confirmed clinical_status=active temporality=current turns=T24 :: The patient has a diabetic foot ulcer.
+
+Medication Tracking
+- [MedicationState] keflex | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T11
+  Summary: The patient was on keflex.
+  ClusterId: CL4
+  TemporalProfile: 5 months ago
+  CurrentRegimens:
+  - The patient was on keflex. (T11)
+  Updates:
+  - CAP23: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=5 months ago turns=T11 :: The patient was on keflex.
+- [MedicationChange] colagenase ointment | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T26
+  Summary: The doctor will prescribe colagenase ointment.
+  ClusterId: CL16
+  TemporalProfile: future
+  PlannedChanges:
+  - The doctor will prescribe colagenase ointment. (T26)
+  Updates:
+  - CAP22: content_source=doctor modality=plan verification_status=unconfirmed clinical_status=planned temporality=future turns=T26 :: The doctor will prescribe colagenase ointment.
+
+Other Structured States
+- [TestResult] a1c | verification_status=confirmed | clinical_status=historical | modalities=exam,test_result | speakers=exam,patient | evidence=T19
+  Summary: The patient's last A1c was about ten.
+  ClusterId: CL10
+  TemporalProfile: historical, past
+- [TestResult] ankle brachial index | verification_status=unconfirmed | clinical_status=planned | modalities=exam | speakers=exam | evidence=T24
+  Summary: An ankle brachial index will be ordered.
+  ClusterId: CL13
+  TemporalProfile: future
+- [Plan] surgical shoe | verification_status=unconfirmed | clinical_status=planned | modalities=interview,plan | speakers=doctor | evidence=T26,T28
+  Summary: The doctor will order a surgical shoe.
+  ClusterId: CL14
+  TemporalProfile: future
+- [FollowUp] follow-up appointment | verification_status=unconfirmed | clinical_status=planned | modalities=plan | speakers=doctor | evidence=T26
+  Summary: The doctor will schedule a follow-up appointment in two weeks.
+  ClusterId: CL15
+  TemporalProfile: future
+- [Plan] avoid pressure | verification_status=unconfirmed | clinical_status=planned | modalities=interview | speakers=doctor | evidence=T28
+  Summary: The doctor does not want you to put much pressure on the area.
+  ClusterId: CL17
+  TemporalProfile: future
+- [Plan] debridement | verification_status=unconfirmed | clinical_status=planned | modalities=interview | speakers=doctor | evidence=T28
+  Summary: The doctor may do another debridement of the ulcer.
+  ClusterId: CL18
+  TemporalProfile: future
+- [FollowUp] follow-up visit | verification_status=unconfirmed | clinical_status=planned | modalities=interview | speakers=doctor | evidence=T30
+  Summary: The doctor will see the patient back in two weeks.
+  ClusterId: CL19
+  TemporalProfile: in two weeks

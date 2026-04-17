@@ -1,0 +1,103 @@
+Case: D2N163
+
+Problem List and Visit State Tracking
+
+Problem List
+- hypercholesterolemia | verification_status=unconfirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T0,T15,T27
+  Summary: The patient's grandfather and grandmother reported having hypercholesterolemia when young.
+  ClusterId: CL1
+  TemporalProfile: current, past, recent
+  Updates:
+  - CAP6: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T0 :: The patient has been diagnosed with hypercholesterolemia.
+  - CAP9: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=recent turns=T15 :: The patient reports high cholesterol.
+  - CAP2: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=past turns=T27 :: The patient's grandfather and grandmother reported having hypercholesterolemia when young.
+- bicycle riding | verification_status=confirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T5
+  Summary: The patient enjoys riding a bicycle.
+  ClusterId: CL2
+  TemporalProfile: current
+  Updates:
+  - CAP8: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=current turns=T5 :: The patient enjoys riding a bicycle.
+- left hand pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T27,T7,T9
+  Summary: The patient reports pain in the left hand.
+  ClusterId: CL3
+  TemporalProfile: current
+  Updates:
+  - CAP4: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T7 :: The patient reports pain in the left hand.
+  - CAP14: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T9 :: The patient reports pain.
+  - CAP15: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T27 :: The patient reports pain.
+- chocolate chip cookies | verification_status=unconfirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T11
+  Summary: The patient likes to eat chocolate chip cookies.
+  ClusterId: CL4
+  TemporalProfile: current, past
+  Updates:
+  - CAP5: content_source=patient modality=interview verification_status=confirmed clinical_status=historical temporality=current turns=T11 :: The patient likes to eat chocolate chip cookies.
+  - CAP13: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=past turns=T11 :: The patient likes cookies.
+- bike ride | verification_status=unconfirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T17
+  Summary: The patient went on a bike ride.
+  ClusterId: CL5
+  TemporalProfile: recent
+  Updates:
+  - CAP7: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=recent turns=T17 :: The patient went on a bike ride.
+- anemia | verification_status=unconfirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T22
+  Summary: The patient's grandfather and grandmother reported having anemia when young.
+  ClusterId: CL7
+  TemporalProfile: past
+  Updates:
+  - CAP3: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=past turns=T22 :: The patient's grandfather and grandmother reported having anemia when young.
+- hot | verification_status=unconfirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T29
+  Summary: The patient states they do not understand what is going on.
+  ClusterId: CL8
+  TemporalProfile: current
+  Updates:
+  - CAP1: content_source=patient modality=interview verification_status=unconfirmed clinical_status=active temporality=current turns=T29 :: The patient states they do not understand what is going on.
+- gender identity | verification_status=unconfirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T31
+  Summary: The patient identifies as non-gender.
+  ClusterId: CL10
+  TemporalProfile: past
+  Updates:
+  - CAP10: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=past turns=T31 :: The patient identifies as non-gender.
+- healthy | verification_status=unconfirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T33
+  Summary: The patient previously felt healthy.
+  ClusterId: CL12
+  TemporalProfile: past
+  Updates:
+  - CAP11: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=past turns=T33 :: The patient previously felt healthy.
+- chest pain | verification_status=confirmed | clinical_status=active | modalities=interview | speakers=patient | evidence=T37
+  Summary: The patient reports chest pain.
+  ClusterId: CL14
+  TemporalProfile: current
+  Updates:
+  - CAP12: content_source=patient modality=interview verification_status=confirmed clinical_status=active temporality=current turns=T37 :: The patient reports chest pain.
+- smoking | verification_status=unconfirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T37
+  Summary: The patient's parents smoked.
+  ClusterId: CL15
+  TemporalProfile: past
+  Updates:
+  - CAP16: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=past turns=T37 :: The patient's parents smoked.
+- family history of heart disease | verification_status=unconfirmed | clinical_status=historical | modalities=interview | speakers=patient | evidence=T45
+  Summary: The patient's grandfather had a heart attack.
+  ClusterId: CL16
+  TemporalProfile: past
+  Updates:
+  - CAP21: content_source=patient modality=interview verification_status=unconfirmed clinical_status=historical temporality=past turns=T45 :: The patient's grandfather had a heart attack.
+
+Medication Tracking
+- None
+
+Other Structured States
+- [TestResult] borderline cholesterol | verification_status=confirmed | clinical_status=historical | modalities=test_result | speakers=test_result | evidence=T18
+  Summary: The patient's cholesterol was borderline last year.
+  ClusterId: CL6
+  TemporalProfile: last year
+- [Plan] assessment | verification_status=unconfirmed | clinical_status=planned | modalities=interview | speakers=doctor | evidence=T30
+  Summary: The doctor will take a look at the patient.
+  ClusterId: CL9
+  TemporalProfile: future
+- [Plan] health goals | verification_status=unconfirmed | clinical_status=planned | modalities=interview | speakers=doctor | evidence=T31
+  Summary: The doctor recommends setting health goals.
+  ClusterId: CL11
+  TemporalProfile: future
+- [Plan] tips | verification_status=unconfirmed | clinical_status=planned | modalities=interview | speakers=doctor | evidence=T34
+  Summary: The doctor will provide tips to help achieve goals.
+  ClusterId: CL13
+  TemporalProfile: future

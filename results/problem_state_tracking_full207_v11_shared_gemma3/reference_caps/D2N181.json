@@ -1,0 +1,132 @@
+{
+  "caps": [
+    {
+      "cap_id": "CAP1",
+      "cap_type": "Problem",
+      "content_source": "clinician",
+      "modality": "assessment",
+      "canonical_concept": "GERD",
+      "verification_status": "unconfirmed",
+      "clinical_status": "active",
+      "temporality": "current",
+      "proposition_text": "The patient presents with a several year history of GERD.",
+      "evidence": [
+        {
+          "turn_id": "S31",
+          "turn_speaker": "note",
+          "span_text": "• GERD",
+          "char_start": 0,
+          "char_end": 6
+        }
+      ],
+      "assertion": "uncertain",
+      "visit_state": "active",
+      "linked_problem": null
+    },
+    {
+      "cap_id": "CAP2",
+      "cap_type": "Symptom",
+      "content_source": "clinician",
+      "modality": "assessment",
+      "canonical_concept": "heartburn",
+      "verification_status": "confirmed",
+      "clinical_status": "active",
+      "temporality": "current",
+      "proposition_text": "The patient primarily manifests GERD as heartburn.",
+      "evidence": [
+        {
+          "turn_id": "S30",
+          "turn_speaker": "note",
+          "span_text": "The patient presents today with a several year history of GERD that primarily manifests as heartburn and has been poorly controlled with omeprazole 40 mg twice daily. I suspect that she likely has GERD with underlying functional etiology as well. Reassuringly, she has no unintentional weight loss and denies any dysphagia. The patient has been able to identify triggers of her symptoms, including stress, spicy foods, carbonated beverages, citrus, and tomato-based foods.",
+          "char_start": 0,
+          "char_end": 472
+        }
+      ],
+      "assertion": "present",
+      "visit_state": "active",
+      "linked_problem": null
+    },
+    {
+      "cap_id": "CAP3",
+      "cap_type": "Problem",
+      "content_source": "clinician",
+      "modality": "assessment",
+      "canonical_concept": "esophageal cancer",
+      "verification_status": "confirmed",
+      "clinical_status": "active",
+      "temporality": "current",
+      "proposition_text": "The clinician assesses esophageal cancer.",
+      "evidence": [
+        {
+          "turn_id": "S16",
+          "turn_speaker": "note",
+          "span_text": "Maternal grandmother with esophageal cancer.",
+          "char_start": 0,
+          "char_end": 44
+        }
+      ],
+      "assertion": "present",
+      "visit_state": "active",
+      "linked_problem": null
+    },
+    {
+      "cap_id": "CAP4",
+      "cap_type": "Problem",
+      "content_source": "clinician",
+      "modality": "assessment",
+      "canonical_concept": "anxiety",
+      "verification_status": "confirmed",
+      "clinical_status": "active",
+      "temporality": "current",
+      "proposition_text": "The clinician assesses anxiety.",
+      "evidence": [
+        {
+          "turn_id": "S8",
+          "turn_speaker": "note",
+          "span_text": "Anxiety.",
+          "char_start": 0,
+          "char_end": 8
+        }
+      ],
+      "assertion": "present",
+      "visit_state": "active",
+      "linked_problem": null
+    },
+    {
+      "cap_id": "CAP5",
+      "cap_type": "MedicationStatement",
+      "content_source": "clinician",
+      "modality": "unknown",
+      "canonical_concept": "omeprazole",
+      "verification_status": "confirmed",
+      "clinical_status": "active",
+      "temporality": "current",
+      "proposition_text": "The patient has been taking omeprazole 40 mg twice daily.",
+      "evidence": [
+        {
+          "turn_id": "S30",
+          "turn_speaker": "note",
+          "span_text": "The patient presents today with a several year history of GERD that primarily manifests as heartburn and has been poorly controlled with omeprazole 40 mg twice daily. I suspect that she likely has GERD with underlying functional etiology as well. Reassuringly, she has no unintentional weight loss and denies any dysphagia. The patient has been able to identify triggers of her symptoms, including stress, spicy foods, carbonated beverages, citrus, and tomato-based foods.",
+          "char_start": 0,
+          "char_end": 472
+        }
+      ],
+      "assertion": "present",
+      "visit_state": "active",
+      "linked_problem": null
+    }
+  ],
+  "filtered_nonverifiable_units": [
+    "S24",
+    "S25",
+    "S26",
+    "S27",
+    "S28",
+    "S29",
+    "S30",
+    "S31"
+  ],
+  "chunk_count": 6,
+  "extraction_mode": "single_call",
+  "runtime_seconds": 20.235
+}
